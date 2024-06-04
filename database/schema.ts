@@ -1,6 +1,13 @@
-import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-export const users = sqliteTable("users", {
-  id: integer("id").primaryKey({ autoIncrement: true }),
-  username: text("username").notNull(),
+export const fundingNumbers = sqliteTable("fundingNumbers", {
+  id: text("id").primaryKey(),
+  type: text("type").notNull(),
+  activityCode: text("activityCode").notNull(),
 });
+
+export type Funding = {
+  id: string;
+  type: "RFA" | "NOT" | "";
+  activityCode: string;
+};
