@@ -1,15 +1,21 @@
 {
   "type": "module",
   "scripts": {
-    "start": "tsx ./script.ts"
+    "install-playwright": "npx playwright install chrome",
+    "start": "tsx ./run.ts",
+    "studio": "npx drizzle-kit studio",
+    "clean": "rm -rf node_modules yarn.lock && yarn cache clean && yarn install"
   },
   "dependencies": {
+    "@playwright/test": "^1.44.1",
     "better-sqlite3": "^11.0.0",
     "drizzle-orm": "^0.31.0",
+    "pdfjs-dist": "^4.3.136",
     "tsx": "^4.11.2"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.10",
+    "@types/node": "^20.14.1",
     "drizzle-kit": "^0.22.1"
   }
 }
