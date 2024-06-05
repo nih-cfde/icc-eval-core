@@ -1,18 +1,9 @@
-import { execSync } from "child_process";
-import { drizzle } from "drizzle-orm/better-sqlite3";
-import Database from "better-sqlite3";
-import { log } from "../util/log";
-import * as schema from "./schema";
-import { existsSync, unlinkSync } from "fs";
+import SQLite from "better-sqlite3";
+import { Kysely, SqliteDialect } from "kysely";
+import { Database } from "./schema";
+
 const dbLocation = "./database/local.db";
 
-log("info", "Making fresh db");
-if (existsSync(dbLocation)) unlinkSync(dbLocation);
-/** push schema to db */
-execSync("bunx drizzle-kit push");
+const dialect = new SqliteDialect({ database: new SQLite(dbLocation) });
 
-/** raw db */
-export const sqlite = new Database(dbLocation);
-
-/** db client */
-export const db = drizzle(sqlite, { schema });
+export const db = new Kysely<Database>({ dialect });
