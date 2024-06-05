@@ -8,6 +8,6 @@ export const fundingNumbers = sqliteTable("fundingNumbers", {
 
 export type Funding = {
   id: string;
-  type: "RFA" | "NOT" | "";
+  type: "RFA" | "NOT" | "OTA" | "";
   activityCode: string;
 };
