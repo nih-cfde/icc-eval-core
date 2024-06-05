@@ -1,10 +1,10 @@
 {
   "type": "module",
   "scripts": {
-    "install-playwright": "npx playwright install chrome",
+    "install-playwright": "bunx playwright install chrome",
     "start": "tsx ./run.ts",
-    "studio": "npx drizzle-kit studio",
-    "clean": "rm -rf node_modules yarn.lock && yarn cache clean && yarn install"
+    "studio": "bunx drizzle-kit studio",
+    "clean": "rm -rf node_modules bun.lockb && bun install"
   },
   "dependencies": {
     "@playwright/test": "^1.44.1",

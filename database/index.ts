@@ -9,7 +9,7 @@ const dbLocation = "./database/local.db";
 log("info", "Making fresh db");
 if (existsSync(dbLocation)) unlinkSync(dbLocation);
 /** push schema to db */
-execSync("npx drizzle-kit push");
+execSync("bunx drizzle-kit push");
 
 /** raw db */
 export const sqlite = new Database(dbLocation);
