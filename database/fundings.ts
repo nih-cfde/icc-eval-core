@@ -23,9 +23,9 @@ export const addFundings = async (fundings: Funding[]) => {
     .insertInto("funding")
     .values(fundings)
     .onConflict((oc) =>
-      oc.column("id").doUpdateSet((cb) => {
+      oc.column("id").doUpdateSet((eb) => {
         const keys = Object.keys(fundings[0]!) as (keyof Funding)[];
-        return Object.fromEntries(keys.map((key) => [key, cb.ref(key)]));
+        return Object.fromEntries(keys.map((key) => [key, eb.ref(key)]));
       })
     )
     .execute();
