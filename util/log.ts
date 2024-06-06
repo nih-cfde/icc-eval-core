@@ -28,7 +28,6 @@ export const log = (
   const indent = "  ".repeat(manualLevel ?? level);
   if (type in levels) console.log(levels[type](indent, message));
   else console.log(indent, message);
-  if (type === "error") throw Error(message);
 };
 
 /** print horizontal divider */

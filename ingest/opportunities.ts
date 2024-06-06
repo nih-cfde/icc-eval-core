@@ -1,3 +1,4 @@
+import { memoize } from "./../util/memoize";
 import { deindent, divider, indent, log, newline } from "../util/log";
 import { browserInstance } from ".";
 import { Opportunity } from "../database/opportunities";
