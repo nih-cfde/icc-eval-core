@@ -1,5 +1,5 @@
-import { addFundings } from "./database/fundings";
-import { getFundings } from "./ingest/fundings";
+import { addOpportunities } from "./database/opportunities";
+import { getOpportunities } from "./ingest/opportunities";
 
-const fundingNumbers = await getFundings();
-await addFundings(fundingNumbers);
+const opportunityNumbers = await getOpportunities();
+await addOpportunities(opportunityNumbers);

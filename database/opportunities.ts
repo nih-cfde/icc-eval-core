@@ -1,7 +1,7 @@
 import { CreateTableBuilder } from "kysely";
 import { db } from ".";
 
-export type Funding = {
+export type Opportunity = {
   id: string;
   type: "RFA" | "NOT" | "OTA" | "";
   activityCode: string;
@@ -9,22 +9,22 @@ export type Funding = {
 
 await (
   db.schema
-    .createTable("funding")
+    .createTable("opportunity")
     .ifNotExists()
     .addColumn("id", "text", (c) => c.primaryKey())
     .addColumn("type", "text", (c) => c.notNull())
     .addColumn("activityCode", "text", (c) =>
       c.notNull()
-    ) satisfies CreateTableBuilder<"funding", keyof Funding>
+    ) satisfies CreateTableBuilder<"opportunity", keyof Opportunity>
 ).execute();
 
-export const addFundings = async (fundings: Funding[]) => {
+export const addOpportunities = async (opportunities: Opportunity[]) => {
   await db
-    .insertInto("funding")
-    .values(fundings)
+    .insertInto("opportunity")
+    .values(opportunities)
     .onConflict((oc) =>
       oc.column("id").doUpdateSet((eb) => {
-        const keys = Object.keys(fundings[0]!) as (keyof Funding)[];
+        const keys = Object.keys(opportunities[0]!) as (keyof Opportunity)[];
         return Object.fromEntries(keys.map((key) => [key, eb.ref(key)]));
       })
     )

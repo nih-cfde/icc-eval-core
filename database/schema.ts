@@ -1,6 +1,6 @@
 import { Insertable } from "kysely";
-import { Funding } from "./fundings";
+import { Opportunity } from "./opportunities";
 
 export type Database = {
-  funding: Insertable<Funding>;
+  opportunity: Insertable<Opportunity>;
 };
