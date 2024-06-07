@@ -4,19 +4,17 @@ import { db } from ".";
 export type Opportunity = {
   id: string;
   type: "RFA" | "NOT" | "OTA" | "";
-  activityCode: string;
+  activity_code: string;
 };
 
-await (
-  db.schema
-    .createTable("opportunity")
-    .ifNotExists()
-    .addColumn("id", "text", (c) => c.primaryKey())
-    .addColumn("type", "text", (c) => c.notNull())
-    .addColumn("activityCode", "text", (c) =>
-      c.notNull()
-    ) satisfies CreateTableBuilder<"opportunity", keyof Opportunity>
-).execute();
+const schema: CreateTableBuilder<"opportunity", keyof Opportunity> = db.schema
+  .createTable("opportunity")
+  .ifNotExists()
+  .addColumn("id", "text", (c) => c.primaryKey())
+  .addColumn("type", "text", (c) => c.notNull())
+  .addColumn("activity_code", "text", (c) => c.notNull());
+
+await schema.execute();
 
 export const addOpportunities = async (opportunities: Opportunity[]) => {
   await db

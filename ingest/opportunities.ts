@@ -10,7 +10,7 @@ const url = "https://commonfund.nih.gov/dataecosystem/FundingOpportunities";
 const documentsSelector =
   ":text('archived funding opportunities') + ul > li > a";
 /** selector to get activity code from html opportunity document */
-const activityCodeSelector = ":text('activity code') + *";
+const activity_codeSelector = ":text('activity code') + *";
 /** regex to match opportunity number */
 const numberPattern = /(((RFA|NOT)-RM-\d+-\d+)|OTA-\d+-\d+)/i;
 
@@ -65,14 +65,14 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
       const type = getType(id);
 
       /** activity code */
-      const activityCode = await page
-        .locator(activityCodeSelector)
+      const activity_code = await page
+        .locator(activity_codeSelector)
         .innerText({ timeout: 100 })
         .catch(() => "");
 
       /** validate number */
       if (id.match(numberPattern)) {
-        opportunities.push({ id, type, activityCode });
+        opportunities.push({ id, type, activity_code });
         log("secondary", id);
       } else log("warn", `${id} does not seem like a valid opportunity number`);
     }
@@ -93,11 +93,11 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
       const type = getType(id);
 
       /** activity code */
-      const activityCode = "";
+      const activity_code = "";
 
       /** validate number */
       if (id) {
-        opportunities.push({ id, type, activityCode });
+        opportunities.push({ id, type, activity_code });
         log("secondary", id);
       } else log("warn", "Doesn't seem to have opportunity number");
     }

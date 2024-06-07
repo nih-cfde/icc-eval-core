@@ -25,7 +25,6 @@ export const request = async <Response>(
     ...options,
     body: JSON.stringify(options.body),
   });
-  console.log(options);
   const response = await fetch(request);
   if (!response.ok) throw Error(`Response for ${url.href} not OK`);
 
