@@ -1,6 +1,6 @@
-import { request } from "../util/request";
 import type { Query } from "./reporter-query";
 import type { Results } from "./reporter-results";
+import { request } from "../util/request";
 
 /** api info */
 const api = "https://api.reporter.nih.gov/v2/projects/search";

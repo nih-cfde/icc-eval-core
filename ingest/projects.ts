@@ -1,9 +1,9 @@
-import { Project } from "../database/projects";
 import { queryReporter } from "./reporter";
+import type { Project } from "../database/projects";
 
 /** get grant projects associated with funding opportunities */
 export const getProjects = async (
-  opportunities: string[]
+  opportunities: string[],
 ): Promise<Project[]> => {
   const { results } = await queryReporter({
     criteria: { opportunity_numbers: opportunities },
@@ -12,6 +12,7 @@ export const getProjects = async (
   return results.map((result) => ({
     id: result.project_num ?? "",
     name: result.project_title ?? "",
+    opportunity: result.opportunity_number ?? "",
     award_amount: result.award_amount ?? 0,
     activity_code: result.activity_code ?? "",
     agency_code: result.agency_code ?? "",

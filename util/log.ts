@@ -23,7 +23,7 @@ const levels = {
 export const log = (
   type: keyof typeof levels | "" = "",
   message: Parameters<typeof console.log>[0],
-  manualLevel?: number
+  manualLevel?: number,
 ) => {
   const indent = "  ".repeat(manualLevel ?? level);
   if (type in levels) console.log(levels[type](indent, message));

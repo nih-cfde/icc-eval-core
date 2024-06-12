@@ -1,8 +1,7 @@
-import { memoize } from "./../util/memoize";
-import { deindent, divider, indent, log, newline } from "../util/log";
 import { browserInstance } from ".";
-import { Opportunity } from "../database/opportunities";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
+import type { Opportunity } from "../database/opportunities";
+import { deindent, divider, indent, log, newline } from "../util/log";
 
 /** page to scrape */
 const url = "https://commonfund.nih.gov/dataecosystem/FundingOpportunities";
@@ -27,13 +26,13 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
   /** full list of opportunity html/pdf docs */
   const documents = await Promise.all(
     Array.from(await page.locator(documentsSelector).all()).map(
-      async (link) => await link.getAttribute("href")
-    )
+      async (link) => await link.getAttribute("href"),
+    ),
   );
 
   log(
     documents.length ? "success" : "error",
-    `Found ${documents.length.toLocaleString()} opportunity documents`
+    `Found ${documents.length.toLocaleString()} opportunity documents`,
   );
   newline();
 
@@ -41,7 +40,7 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
   const opportunities: Opportunity[] = [];
 
   /** get type of opportunity number */
-  const getType = (id: string): Opportunity["type"] => {
+  const getPrefix = (id: string): Opportunity["prefix"] => {
     if (id.startsWith("RFA")) return "RFA";
     if (id.startsWith("NOT")) return "NOT";
     if (id.startsWith("OTA")) return "OTA";
@@ -61,8 +60,8 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
       /** main opportunity number */
       const id = (await page.locator(".noticenum").innerText()).trim();
 
-      /** opportunity number type */
-      const type = getType(id);
+      /** opportunity number prefix */
+      const prefix = getPrefix(id);
 
       /** activity code */
       const activity_code = await page
@@ -72,7 +71,7 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
 
       /** validate number */
       if (id.match(numberPattern)) {
-        opportunities.push({ id, type, activity_code });
+        opportunities.push({ id, prefix, activity_code });
         log("secondary", id);
       } else log("warn", `${id} does not seem like a valid opportunity number`);
     }
@@ -89,15 +88,15 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
       /** main opportunity number */
       const id = text.match(numberPattern)?.[1] || "";
 
-      /** opportunity number type */
-      const type = getType(id);
+      /** opportunity number prefix */
+      const prefix = getPrefix(id);
 
       /** activity code */
       const activity_code = "";
 
       /** validate number */
       if (id) {
-        opportunities.push({ id, type, activity_code });
+        opportunities.push({ id, prefix, activity_code });
         log("secondary", id);
       } else log("warn", "Doesn't seem to have opportunity number");
     }
@@ -106,7 +105,7 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
 
   log(
     opportunities.length ? "success" : "error",
-    `Found ${opportunities.length.toLocaleString()} opportunity numbers`
+    `Found ${opportunities.length.toLocaleString()} opportunity numbers`,
   );
   deindent();
   newline();

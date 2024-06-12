@@ -1,7 +1,7 @@
+import { unlinkSync } from "fs";
 import SQLite from "better-sqlite3";
 import { Kysely, SqliteDialect } from "kysely";
-import { Database } from "./schema";
-import { unlinkSync } from "fs";
+import type { Database } from "./schema";
 
 const dbLocation = "./database/local.db";
 

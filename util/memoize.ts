@@ -10,7 +10,7 @@ import { log } from "./log";
 export const memoize =
   <Args extends unknown[], Return>(
     func: (...args: Args) => Promise<Return>,
-    options: Options = {}
+    options: Options = {},
   ) =>
   async (...args: Args) => {
     /** set options defaults */
@@ -60,12 +60,13 @@ const cachePath = "./util/cache.json";
 let cache: Cache = {};
 
 /** cache store */
-type Cache = {
-  [key: string]: {
+type Cache = Record<
+  string,
+  {
     timestamp: number;
     data: unknown;
-  };
-};
+  }
+>;
 
 if (process.env.NOCACHE) {
   /** clear disk cache */

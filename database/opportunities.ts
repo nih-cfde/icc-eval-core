@@ -1,9 +1,9 @@
-import { CreateTableBuilder } from "kysely";
 import { db } from ".";
+import type { CreateTableBuilder } from "kysely";
 
 export type Opportunity = {
   id: string;
-  type: "RFA" | "NOT" | "OTA" | "";
+  prefix: "RFA" | "NOT" | "OTA" | "";
   activity_code: string;
 };
 
@@ -11,7 +11,7 @@ const schema: CreateTableBuilder<"opportunity", keyof Opportunity> = db.schema
   .createTable("opportunity")
   .ifNotExists()
   .addColumn("id", "text", (c) => c.primaryKey())
-  .addColumn("type", "text", (c) => c.notNull())
+  .addColumn("prefix", "text", (c) => c.notNull())
   .addColumn("activity_code", "text", (c) => c.notNull());
 
 await schema.execute();
@@ -24,7 +24,7 @@ export const addOpportunities = async (opportunities: Opportunity[]) => {
       oc.column("id").doUpdateSet((eb) => {
         const keys = Object.keys(opportunities[0]!) as (keyof Opportunity)[];
         return Object.fromEntries(keys.map((key) => [key, eb.ref(key)]));
-      })
+      }),
     )
     .execute();
 };

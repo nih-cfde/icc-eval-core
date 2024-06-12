@@ -1,5 +1,3 @@
-import { log } from "./log";
-
 /** generic request wrapper */
 export const request = async <Response>(
   path: string,
@@ -7,7 +5,7 @@ export const request = async <Response>(
     params?: Record<string, unknown | unknown[]>;
     body?: unknown;
     parse?: "json" | "text";
-  }
+  },
 ) => {
   /** options defaults */
   options.parse ??= "json";

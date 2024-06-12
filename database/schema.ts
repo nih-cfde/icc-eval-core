@@ -1,6 +1,6 @@
-import { Insertable } from "kysely";
-import { Opportunity } from "./opportunities";
-import { Project } from "./projects";
+import type { Insertable } from "kysely";
+import type { Opportunity } from "./opportunities";
+import type { Project } from "./projects";
 
 export type Database = {
   opportunity: Insertable<Opportunity>;
