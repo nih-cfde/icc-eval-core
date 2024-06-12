@@ -5,8 +5,10 @@ type Bool = 0 | 1;
 
 export type Project = {
   id: string;
+  core_project: string;
   name: string;
   opportunity: string;
+  application: number;
   award_amount: number;
   activity_code: string;
   agency_code: string;
@@ -19,8 +21,10 @@ const schema: CreateTableBuilder<"project", keyof Project> = db.schema
   .createTable("project")
   .ifNotExists()
   .addColumn("id", "text", (c) => c.primaryKey())
+  .addColumn("core_project", "text", (c) => c.notNull())
   .addColumn("name", "text", (c) => c.notNull())
   .addColumn("opportunity", "text", (c) => c.references("opportunity.id"))
+  .addColumn("application", "integer", (c) => c.notNull())
   .addColumn("award_amount", "integer", (c) => c.notNull())
   .addColumn("activity_code", "text", (c) => c.notNull())
   .addColumn("agency_code", "text", (c) => c.notNull())

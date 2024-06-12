@@ -10,7 +10,7 @@
  *    of enum", "make all properties optional"
  */
 
-export type Query = {
+export type ProjectsQuery = {
   search_id?: string;
   criteria?: Criteria;
   include_fields?: string[];

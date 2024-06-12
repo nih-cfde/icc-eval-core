@@ -1,8 +1,10 @@
+export type Params = Record<string, unknown | unknown[]>;
+
 /** generic request wrapper */
 export const request = async <Response>(
-  path: string,
+  path: string | URL,
   options: Omit<RequestInit, "body"> & {
-    params?: Record<string, unknown | unknown[]>;
+    params?: Params;
     body?: unknown;
     parse?: "json" | "text";
   },

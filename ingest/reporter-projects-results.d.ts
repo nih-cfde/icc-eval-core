@@ -13,7 +13,7 @@
 //   .then((r) => r.json())
 //   .then(console.log);
 
-export type Results = {
+export type ProjectsResults = {
   meta: Meta;
   results: Result[];
 };
