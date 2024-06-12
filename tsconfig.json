@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "esModuleInterop": true,
     "isolatedModules": true,
     "lib": ["ESNext"],
     "module": "ESNext",
@@ -10,10 +11,8 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ESNext"
+    "resolveJsonModule": true
   },
+  "extends": "@tsconfig/node22/tsconfig.json",
   "include": ["*"]
 }
