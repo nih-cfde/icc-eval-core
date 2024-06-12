@@ -1,7 +1,7 @@
 import { browserInstance } from ".";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
-import type { Opportunity } from "../database/opportunities";
-import { deindent, divider, indent, log, newline } from "../util/log";
+import type { Opportunity } from "@/database/opportunities";
+import { deindent, divider, indent, log, newline } from "@/util/log";
 
 /** page to scrape */
 const url = "https://commonfund.nih.gov/dataecosystem/FundingOpportunities";

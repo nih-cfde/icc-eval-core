@@ -1,5 +1,6 @@
 import { addOpportunities } from "./database/opportunities";
 import { addProjects } from "./database/projects";
+import { addPublications } from "./database/publications";
 import { getOpportunities } from "./ingest/opportunities";
 import { getProjects } from "./ingest/projects";
 import { getPublications } from "./ingest/publications";
@@ -19,4 +20,4 @@ const publications = await memoize(getPublications)(
   projects.map((project) => project.core_project),
 );
 
-console.log(publications);
+await addPublications(publications);

@@ -1,5 +1,5 @@
 import playwright from "playwright";
-import { deindent, indent, log } from "../util/log";
+import { deindent, indent, log } from "@/util/log";
 
 /** start browser instance, run function */
 export const browserInstance = async () => {

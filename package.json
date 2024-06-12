@@ -5,7 +5,9 @@
     "start": "tsx ./run.ts",
     "explore": "open '/Applications/Beekeeper Studio.app' --args $(pwd)/database/local.db",
     "lint": "FIX=true ./lint.sh",
+    "test": "yarn test:lint && yarn test:types",
     "test:lint": "./lint.sh",
+    "test:types": "tsc --noemit",
     "clean": "rm -rf node_modules yarn.lock && yarn cache clean && yarn install"
   },
   "dependencies": {
@@ -28,6 +30,7 @@
     "eslint-plugin-prettier": "^5.1.3",
     "prettier": "^3.3.2",
     "prettier-plugin-jsdoc": "^1.3.0",
+    "tsc": "^2.0.4",
     "typescript": "^5.4.5"
   }
 }

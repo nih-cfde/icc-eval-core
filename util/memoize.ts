@@ -1,6 +1,6 @@
 import { createHash } from "crypto";
 import { existsSync, readFileSync, unlinkSync, writeFileSync } from "fs";
-import { log } from "./log";
+import { log } from "@/util/log";
 
 /**
  * make simple persistent disk cache with function memoization and per-func ttl.
@@ -14,7 +14,7 @@ export const memoize =
   ) =>
   async (...args: Args) => {
     /** set options defaults */
-    options.maxAge ??= 60;
+    options.maxAge ??= 24 * 60 * 60;
 
     /** get cache key unique to function and arguments */
     const key = func.name + func.toString() + JSON.stringify(args);
@@ -26,7 +26,7 @@ export const memoize =
     /** current timestamp */
     const now = Date.now();
     /** is cached entry expired */
-    const expired = now - cached?.timestamp > options.maxAge * 1000;
+    const expired = now - (cached?.timestamp ?? 0) > options.maxAge * 1000;
 
     /** return value */
     let result: Return;

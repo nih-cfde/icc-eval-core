@@ -1,8 +1,9 @@
+import { db } from ".";
 import type { CreateTableBuilder } from "kysely";
-import { db } from "./index";
 
 type Bool = 0 | 1;
 
+/** grant project */
 export type Project = {
   id: string;
   core_project: string;
@@ -17,6 +18,7 @@ export type Project = {
   is_active: Bool;
 };
 
+/** project table */
 const schema: CreateTableBuilder<"project", keyof Project> = db.schema
   .createTable("project")
   .ifNotExists()
@@ -34,6 +36,7 @@ const schema: CreateTableBuilder<"project", keyof Project> = db.schema
 
 await schema.execute();
 
+/** add projects to db */
 export const addProjects = async (projects: Project[]) => {
   await db
     .insertInto("project")

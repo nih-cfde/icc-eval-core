@@ -1,12 +1,14 @@
 import { db } from ".";
 import type { CreateTableBuilder } from "kysely";
 
+/** funding opportunity */
 export type Opportunity = {
   id: string;
   prefix: "RFA" | "NOT" | "OTA" | "";
   activity_code: string;
 };
 
+/** opportunity table */
 const schema: CreateTableBuilder<"opportunity", keyof Opportunity> = db.schema
   .createTable("opportunity")
   .ifNotExists()
@@ -16,6 +18,7 @@ const schema: CreateTableBuilder<"opportunity", keyof Opportunity> = db.schema
 
 await schema.execute();
 
+/** add opportunities to db */
 export const addOpportunities = async (opportunities: Opportunity[]) => {
   await db
     .insertInto("opportunity")

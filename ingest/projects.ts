@@ -1,7 +1,7 @@
-import { queryReporter } from "./reporter";
-import type { ProjectsQuery } from "./reporter-projects-query";
-import type { ProjectsResults } from "./reporter-projects-results";
-import type { Project } from "../database/projects";
+import { queryReporter } from "@/api/reporter";
+import type { ProjectsQuery } from "@/api/reporter-projects-query";
+import type { ProjectsResults } from "@/api/reporter-projects-results";
+import type { Project } from "@/database/projects";
 
 /** get grant projects associated with funding opportunities */
 export const getProjects = async (

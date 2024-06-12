@@ -26,7 +26,7 @@ export const log = (
   manualLevel?: number,
 ) => {
   const indent = "  ".repeat(manualLevel ?? level);
-  if (type in levels) console.log(levels[type](indent, message));
+  if (type && type in levels) console.log(levels[type](indent, message));
   else console.log(indent, message);
 };
 
