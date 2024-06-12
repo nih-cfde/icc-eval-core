@@ -1,5 +1,6 @@
-import { db } from ".";
 import type { CreateTableBuilder } from "kysely";
+import { log } from "@/util/log";
+import { db } from ".";
 
 /** publication */
 export type Publication = {
@@ -20,6 +21,7 @@ await schema.execute();
 
 /** add publications to db */
 export const addPublications = async (publications: Publication[]) => {
+  log("info", "Adding publications to db");
   await db
     .insertInto("publication")
     .values(publications)

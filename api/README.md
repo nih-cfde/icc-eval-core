@@ -1,6 +1,6 @@
-This folder contains code to interact with third party APIs and generated TypeScript definitions for requests/responses (query/results).
+This folder contains code to interact with third party APIs and TypeScript definitions for requests/responses (query/results).
 
-# Generate types
+# How to generate types
 
 ## RePORTER
 
@@ -12,7 +12,7 @@ This folder contains code to interact with third party APIs and generated TypeSc
 
 ### Results
 
-1. Run script below in browser dev tools
+1. Run script below in browser dev console
 1. Convert to TypeScript schema same way as above
 
 ```js
@@ -22,6 +22,19 @@ fetch("https://api.reporter.nih.gov/v2/projects/search", {
   headers: { Accept: "application/json", "Content-Type": "application/json" },
   body: JSON.stringify({ criteria: {}, limit: 500 }),
 })
+  .then((r) => r.json())
+  .then(console.log);
+```
+
+## iCite
+
+### Results
+
+1. Run script below in browser dev console
+1. Convert to TypeScript schema same way as above
+
+```js
+fetch("https://icite.od.nih.gov/api/pubs")
   .then((r) => r.json())
   .then(console.log);
 ```

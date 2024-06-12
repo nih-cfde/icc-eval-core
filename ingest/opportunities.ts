@@ -1,24 +1,23 @@
-import { browserInstance } from ".";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import type { Opportunity } from "@/database/opportunities";
-import { deindent, divider, indent, log, newline } from "@/util/log";
+import { deindent, indent, log, newline } from "@/util/log";
+import { browserInstance } from ".";
 
 /** page to scrape */
 const url = "https://commonfund.nih.gov/dataecosystem/FundingOpportunities";
-/** selector to get list of links to opportunity documents */
+/** selector to get list of links to present and past opportunity documents */
 const documentsSelector =
-  ":text('archived funding opportunities') + ul > li > a";
+  "table td:first-child > a, :text('archived funding opportunities') + ul > li > a";
 /** selector to get activity code from html opportunity document */
 const activity_codeSelector = ":text('activity code') + *";
 /** regex to match opportunity number */
 const numberPattern = /(((RFA|NOT)-RM-\d+-\d+)|OTA-\d+-\d+)/i;
 
+/** get common fund funding opportunities, past and present */
 export const getOpportunities = async (): Promise<Opportunity[]> => {
-  const { page, browser } = await browserInstance();
+  log("info", "Getting opportunities");
 
-  divider();
-  indent();
-  log("info", "Getting opportunity numbers");
+  const { page, browser } = await browserInstance();
 
   /** list of current and archived opportunities */
   await page.goto(url);
@@ -105,10 +104,8 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
 
   log(
     opportunities.length ? "success" : "error",
-    `Found ${opportunities.length.toLocaleString()} opportunity numbers`,
+    `Found ${opportunities.length.toLocaleString()} opportunities`,
   );
-  deindent();
-  newline();
 
   await browser.close();
 

@@ -3,10 +3,10 @@ import type { Params } from "@/util/request";
 
 /**
  * https://api.reporter.nih.gov/
+ *
  * https://api.reporter.nih.gov/documents/Data%20Elements%20for%20RePORTER%20Project%20API_V2.pdf
  */
 
-/** api info */
 const api = "https://api.reporter.nih.gov/v2/ENDPOINT/search";
 const headers = new Headers();
 headers.set("Accept", "application/json");

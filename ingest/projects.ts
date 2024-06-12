@@ -2,14 +2,22 @@ import { queryReporter } from "@/api/reporter";
 import type { ProjectsQuery } from "@/api/reporter-projects-query";
 import type { ProjectsResults } from "@/api/reporter-projects-results";
 import type { Project } from "@/database/projects";
+import { log } from "@/util/log";
 
 /** get grant projects associated with funding opportunities */
 export const getProjects = async (
   opportunities: string[],
 ): Promise<Project[]> => {
+  log("info", "Getting projects");
+
   const { results } = await queryReporter<ProjectsQuery, ProjectsResults>(
     "projects",
     { criteria: { opportunity_numbers: opportunities } },
+  );
+
+  log(
+    results.length ? "success" : "error",
+    `Found ${results.length.toLocaleString()} projects`,
   );
 
   return results.map((result) => ({
