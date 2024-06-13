@@ -5,14 +5,8 @@ import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
 import type { PublicationsResults } from "@/api/reporter-publications-results.d";
 import type { Publication } from "@/database/publications";
 import { log, newline } from "@/util/log";
-
-/** temporary shim, node v22 types (with new Set functions) not out yet */
-declare global {
-  // eslint-disable-next-line
-  interface Set<T> {
-    difference: (set: Set<T>) => Set<T>;
-  }
-}
+/** temporary manual import for new Set method type defs */
+import "typescript/lib/lib.esnext.collection";
 
 /** get publications associated with grant projects */
 export const getPublications = async (
