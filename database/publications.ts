@@ -7,6 +7,15 @@ export type Publication = {
   id: number;
   core_project: string;
   application: number;
+  title: string;
+  authors: string;
+  journal: string;
+  year: number;
+  modified: string;
+  doi: string;
+  relative_citation_ratio: number;
+  citations: number;
+  citations_per_year: number;
 };
 
 /** publication table */
@@ -15,7 +24,16 @@ const schema: CreateTableBuilder<"publication", keyof Publication> = db.schema
   .ifNotExists()
   .addColumn("id", "integer", (c) => c.primaryKey())
   .addColumn("core_project", "text", (c) => c.notNull())
-  .addColumn("application", "integer", (c) => c.notNull());
+  .addColumn("application", "integer", (c) => c.notNull())
+  .addColumn("title", "text", (c) => c.notNull())
+  .addColumn("authors", "text", (c) => c.notNull())
+  .addColumn("journal", "text", (c) => c.notNull())
+  .addColumn("year", "integer", (c) => c.notNull())
+  .addColumn("modified", "text", (c) => c.notNull())
+  .addColumn("doi", "text", (c) => c.notNull())
+  .addColumn("relative_citation_ratio", "real", (c) => c.notNull())
+  .addColumn("citations", "real", (c) => c.notNull())
+  .addColumn("citations_per_year", "real", (c) => c.notNull());
 
 await schema.execute();
 

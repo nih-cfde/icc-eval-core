@@ -20,6 +20,7 @@ export const getProjects = async (
     `Found ${results.length.toLocaleString()} projects`,
   );
 
+  /** transform data into desired format, with fallbacks */
   return results.map((result) => ({
     id: result.project_num ?? "",
     core_project: result.core_project_num ?? "",

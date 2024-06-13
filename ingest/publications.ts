@@ -1,4 +1,5 @@
 import { queryIcite } from "@/api/icite";
+import type { Datum } from "@/api/icite-results";
 import { queryReporter } from "@/api/reporter";
 import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
 import type { PublicationsResults } from "@/api/reporter-publications-results.d";
@@ -60,9 +61,30 @@ export const getPublications = async (
     log("error", "Number of RePORTER and iCite pubs don't match");
   }
 
-  return reporterResults.map((result) => ({
-    id: result.pmid ?? 0,
-    core_project: result.coreproject ?? "",
-    application: result.applid ?? 0,
-  }));
+  /** quick lookup of extra info from icite results by id */
+  const extrasLookup: Record<
+    NonNullable<Datum["pmid"]>,
+    Omit<Datum, "pmid">
+  > = Object.fromEntries(iciteResults.map(({ pmid, ...rest }) => [pmid, rest]));
+
+  /** transform data into desired format, with fallbacks */
+  return reporterResults.map((result) => {
+    const extras = extrasLookup[result.pmid ?? 0];
+    return {
+      id: result.pmid ?? 0,
+      core_project: result.coreproject ?? "",
+      application: result.applid ?? 0,
+      title: extras?.title ?? "",
+      authors: extras?.authors ?? "",
+      journal: extras?.journal ?? "",
+      year: extras?.year ?? 0,
+      modified: extras?.last_modified
+        ? new Date(extras.last_modified).toISOString()
+        : "",
+      doi: extras?.doi ?? "",
+      relative_citation_ratio: extras?.relative_citation_ratio ?? 0,
+      citations: extras?.citation_count ?? 0,
+      citations_per_year: extras?.citations_per_year ?? 0,
+    };
+  });
 };
