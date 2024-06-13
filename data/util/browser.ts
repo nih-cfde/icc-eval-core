@@ -1,7 +1,7 @@
 import playwright from "playwright";
 import { deindent, indent, log } from "@/util/log";
 
-/** start browser instance, run function */
+/** start browser instance */
 export const browserInstance = async () => {
   /** set up browser instance, page, etc */
   const browser = await playwright.chromium.launch();
