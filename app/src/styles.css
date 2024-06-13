@@ -1,0 +1,45 @@
+:root {
+  --accent: #1b577b;
+  --dark: #162f3f;
+
+  --regular: 400;
+  --bold: 600;
+
+  --shadow: 0 0 5px -2px #00000020, 1px 3px 10px -2px #00000020;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: var(--bold);
+}
+
+b,
+strong {
+  font-weight: var(--bold);
+}
+
+a {
+  color: currentColor;
+}
