@@ -3,7 +3,7 @@
   "scripts": {
     "playwright": "npx playwright install chrome",
     "start": "tsx ./run.ts",
-    "debug-db": "open '/Applications/Beekeeper Studio.app' --args $(pwd)/database/local.db",
+    "preview-db": "open '/Applications/Beekeeper Studio.app' --args $(pwd)/database/local.db",
     "lint": "FIX=true ./lint.sh",
     "test:lint": "./lint.sh",
     "test:types": "tsc --noemit",
