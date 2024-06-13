@@ -10,8 +10,13 @@ const { VITE_TITLE: title } = import.meta.env;
 
 <style scoped>
 header {
-  background: var(--dark);
-  color: white;
   padding: 20px;
+  background: var(--theme-dark);
+  color: white;
+}
+
+header a {
+  color: currentColor;
+  text-decoration: none;
 }
 </style>

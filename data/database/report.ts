@@ -30,5 +30,5 @@ export const generateReport = async () => {
     },
   };
 
-  writeFileSync(reportPath, JSON.stringify(data, null, 2));
+  writeFileSync(reportPath, JSON.stringify(data));
 };

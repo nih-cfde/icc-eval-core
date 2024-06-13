@@ -1,6 +1,6 @@
 :root {
-  --accent: #1b577b;
-  --dark: #162f3f;
+  --theme: #0078c2;
+  --theme-dark: #162f3f;
 
   --regular: 400;
   --bold: 600;
@@ -10,6 +10,8 @@
 
 * {
   font-family: "Open Sans", sans-serif;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 
 body {
@@ -41,5 +43,15 @@ strong {
 }
 
 a {
-  color: currentColor;
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 3px;
+  gap: 5px;
+  background: transparent;
+  color: var(--theme);
+  transition-property: color, background;
+}
+
+a:hover {
+  background: #80808080;
 }
