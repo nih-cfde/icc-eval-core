@@ -8,7 +8,7 @@ import { log } from "@/util/log";
 export const getProjects = async (
   opportunities: string[],
 ): Promise<Project[]> => {
-  log("info", "Getting projects");
+  log("Getting projects");
 
   const { results } = await queryReporter<ProjectsQuery, ProjectsResults>(
     "projects",
@@ -16,8 +16,8 @@ export const getProjects = async (
   );
 
   log(
-    results.length ? "success" : "error",
     `Found ${results.length.toLocaleString()} projects`,
+    results.length ? "success" : "error",
   );
 
   /** transform data into desired format, with fallbacks */

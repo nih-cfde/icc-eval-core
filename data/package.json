@@ -3,11 +3,11 @@
   "scripts": {
     "playwright": "npx playwright install chrome",
     "start": "tsx ./run.ts",
-    "explore": "open '/Applications/Beekeeper Studio.app' --args $(pwd)/database/local.db",
+    "debug-db": "open '/Applications/Beekeeper Studio.app' --args $(pwd)/database/local.db",
     "lint": "FIX=true ./lint.sh",
-    "test": "yarn test:lint && yarn test:types",
     "test:lint": "./lint.sh",
     "test:types": "tsc --noemit",
+    "test": "yarn test:lint && yarn test:types",
     "clean": "rm -rf node_modules yarn.lock && yarn cache clean && yarn install"
   },
   "dependencies": {

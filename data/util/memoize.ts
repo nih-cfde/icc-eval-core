@@ -33,7 +33,7 @@ export const memoize =
 
     /** if cached value valid */
     if (cached && !expired) {
-      log("secondary", `Used cached return value for ${func.name}()`);
+      log(`Using memoized return value for ${func.name}()`, "secondary");
       /** use cached value */
       result = cached.data as Return;
     } else {

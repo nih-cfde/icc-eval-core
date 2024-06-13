@@ -11,7 +11,7 @@ export const deindent = () => level > 0 && level--;
 
 /** log levels */
 const levels = {
-  /** general info */
+  /** default level */
   info: chalk.cyan,
   /** less important info */
   secondary: chalk.gray,
@@ -23,22 +23,24 @@ const levels = {
   error: chalk.red,
 } as const;
 
+type Message = Parameters<typeof console.log>[0];
+
 /** log message */
 export const log = (
+  message: Message,
   type: keyof typeof levels | "" = "",
-  message: Parameters<typeof console.log>[0],
   manualLevel?: number,
 ) => {
   const indent = "  ".repeat(manualLevel ?? level);
-  if (type && type in levels) console.log(levels[type](indent, message));
-  else console.log(indent, message);
+  const color = type && type in levels ? levels[type] : levels.info;
+  console.log(color(indent, message));
   if (type === "error") throw Error(message);
 };
 
 /** print horizontal divider. use as major/higher-level divider. */
 export const divider = () => {
   newline();
-  log("secondary", "--------------------", 0);
+  log("--------------------", "secondary", 0);
   newline();
 };
 
@@ -51,4 +53,11 @@ export const diskLog = (data: unknown, filename?: string) => {
   filename ??= String(Date.now());
   mkdirSync("./logs", { recursive: true });
   writeFileSync(`./logs/${filename}.json`, string);
+};
+
+/** log all CLI output through our log */
+export const wrapLog = (message: Message) => {
+  indent();
+  log(message, "secondary");
+  deindent();
 };

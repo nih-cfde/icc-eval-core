@@ -1,5 +1,5 @@
 import playwright from "playwright";
-import { deindent, indent, log } from "@/util/log";
+import { wrapLog } from "@/util/log";
 
 /** start browser instance */
 export const browserInstance = async () => {
@@ -8,10 +8,6 @@ export const browserInstance = async () => {
   const context = await browser.newContext();
   const page = await context.newPage();
   /** pass page console logs to cli logs */
-  page.on("console", (msg) => {
-    indent();
-    log("secondary", msg.text());
-    deindent();
-  });
+  page.on("console", wrapLog);
   return { browser, page };
 };

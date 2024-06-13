@@ -7,13 +7,9 @@ import { computed, provide } from "vue";
 import VChart, { THEME_KEY } from "vue-echarts";
 import type { EChartsOption } from "echarts";
 import { PieChart } from "echarts/charts";
-import {
-  LegendComponent,
-  TitleComponent,
-  TooltipComponent,
-} from "echarts/components";
+import { LegendComponent, TitleComponent } from "echarts/components";
 import { use } from "echarts/core";
-import { CanvasRenderer } from "echarts/renderers";
+import { SVGRenderer } from "echarts/renderers";
 
 type Props = {
   title: string;
@@ -22,18 +18,14 @@ type Props = {
 
 const props = defineProps<Props>();
 
-use([
-  CanvasRenderer,
-  PieChart,
-  TitleComponent,
-  TooltipComponent,
-  LegendComponent,
-]);
+use([SVGRenderer, PieChart, TitleComponent, LegendComponent]);
 
 provide(THEME_KEY, "light");
 
 const option = computed(() => {
   const options: EChartsOption = {};
+
+  options.animation = false;
 
   options.title = {
     text: props.title,
@@ -53,7 +45,7 @@ const option = computed(() => {
       name: "",
       type: "pie",
       radius: "50%",
-      center: ["50%", "60%"],
+      center: ["50%", "65%"],
       data: Object.entries(props.data).map(([key, value]) => ({
         value,
         name: key || "none",
@@ -67,7 +59,6 @@ const option = computed(() => {
 
 <style scoped>
 .chart {
-  max-height: 500px;
   box-shadow: var(--shadow);
 }
 </style>

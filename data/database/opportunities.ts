@@ -21,7 +21,7 @@ await schema.execute();
 
 /** add opportunities to db */
 export const addOpportunities = async (opportunities: Opportunity[]) => {
-  log("info", "Adding opportunities to db");
+  log("Adding opportunities to db");
   await db
     .insertInto("opportunity")
     .values(opportunities)

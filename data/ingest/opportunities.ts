@@ -15,7 +15,7 @@ const numberPattern = /(((RFA|NOT)-RM-\d+-\d+)|OTA-\d+-\d+)/i;
 
 /** get common fund funding opportunities, past and present */
 export const getOpportunities = async (): Promise<Opportunity[]> => {
-  log("info", "Getting opportunities");
+  log("Getting opportunities");
 
   const { page, browser } = await browserInstance();
 
@@ -30,8 +30,8 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
   );
 
   log(
-    documents.length ? "success" : "error",
     `Found ${documents.length.toLocaleString()} opportunity documents`,
+    documents.length ? "success" : "error",
   );
   newline();
 
@@ -49,7 +49,7 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
   for (const document of documents) {
     if (!document) continue;
 
-    log("info", `Opportunity document ${document.split(/\/|\\/).pop()}`);
+    log(`Opportunity document ${document.split(/\/|\\/).pop()}`);
     indent();
 
     /** html document */
@@ -71,8 +71,8 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
       /** validate number */
       if (id.match(numberPattern)) {
         opportunities.push({ id, prefix, activity_code });
-        log("secondary", id);
-      } else log("warn", `${id} does not seem like a valid opportunity number`);
+        log(id, "secondary");
+      } else log(`${id} does not seem like a valid opportunity number`, "warn");
     }
 
     /** pdf document */
@@ -96,15 +96,15 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
       /** validate number */
       if (id) {
         opportunities.push({ id, prefix, activity_code });
-        log("secondary", id);
-      } else log("warn", "Doesn't seem to have opportunity number");
+        log(id, "secondary");
+      } else log("Doesn't seem to have opportunity number", "warn");
     }
     deindent();
   }
 
   log(
-    opportunities.length ? "success" : "error",
     `Found ${opportunities.length.toLocaleString()} opportunities`,
+    opportunities.length ? "success" : "error",
   );
 
   await browser.close();

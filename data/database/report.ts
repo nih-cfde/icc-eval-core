@@ -2,7 +2,7 @@ import { exec, execSync } from "child_process";
 import { writeFileSync } from "fs";
 import { chdir } from "process";
 import { browserInstance } from "@/util/browser";
-import { log } from "@/util/log";
+import { deindent, indent, log } from "@/util/log";
 import { db } from ".";
 
 const appPath = "../app";
@@ -12,7 +12,10 @@ const hostPattern = /http:\/\/(localhost|(\d+\.\d+\.\d+\.\d+)):\d\d\d\d/;
 
 /** collate data from db for generating report */
 export const generateReport = async () => {
-  log("info", "Generating report data");
+  log("Generating report data");
+
+  indent();
+  log("Collating data");
 
   const opportunityPrefixes = await db
     .selectFrom("opportunity")
@@ -41,29 +44,45 @@ export const generateReport = async () => {
 
   /** run app */
   chdir(appPath);
-  execSync("yarn install");
-  const dev = exec("yarn dev");
+  log("Running dev server");
+  const dev = exec("yarn dev", () => null);
 
   /** wait for dev server to be ready */
-  const host = await new Promise<string>((resolve) =>
+  const host = await new Promise<string>((resolve, reject) => {
     dev.stdout?.on("data", (chunk: string) => {
       const [host] = chunk.match(hostPattern) ?? [];
       if (host) resolve(host);
-    }),
-  );
+    });
+    setTimeout(() => reject("Waiting for dev server timed out"), 30 * 1000);
+  });
+  log(`Running on ${host}`);
 
   /** go to dev server */
   const { browser, page } = await browserInstance();
   await page.goto(host);
 
   /** wait for app to render */
+  log("Rendering app");
+  await page.emulateMedia({ media: "print" });
   await page.waitForSelector("footer");
 
+  /** force page resize event for e.g. autoresizing charts */
+  await page.setViewportSize({ width: 8.5 * 96, height: 11 * 96 });
+
+  /** wait for animations to finish */
+  await page.waitForTimeout(1000);
+
   /** print pdf */
-  await page.emulateMedia({ media: "print" });
+  log(`Printing PDF`);
   await page.pdf({ path: pdfPath, format: "letter" });
+
+  /** open preview of pdf locally */
+  execSync(`open ${pdfPath}`);
 
   /** close app */
   await browser.close();
   dev.kill();
+
+  log("Generated PDF", "success");
+  deindent();
 };

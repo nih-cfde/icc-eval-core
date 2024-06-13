@@ -10,7 +10,7 @@ import { log, newline } from "@/util/log";
 export const getPublications = async (
   coreProjects: string[],
 ): Promise<Publication[]> => {
-  log("info", "Getting publications");
+  log("Getting publications");
 
   /** get publications associated with grant projects */
   const { results: reporterResults } = await queryReporter<
@@ -20,12 +20,12 @@ export const getPublications = async (
   const reporterSet = new Set(reporterResults.map((result) => result.pmid));
 
   log(
-    reporterResults.length ? "success" : "error",
     `Found ${reporterSet.size.toLocaleString()} unique (${reporterResults.length.toLocaleString()} total) publications`,
+    reporterResults.length ? "success" : "error",
   );
   newline();
 
-  log("info", "Getting publication citation data");
+  log("Getting publication citation data");
 
   /** get extra info about publications */
   const { data: iciteResults } = await queryIcite(
@@ -36,8 +36,8 @@ export const getPublications = async (
   const iciteSet = new Set(iciteResults.map((result) => result.pmid));
 
   log(
-    iciteResults.length ? "success" : "error",
     `Found ${iciteResults.length.toLocaleString()} unique (${iciteSet.size.toLocaleString()} total) publication metadata`,
+    iciteResults.length ? "success" : "error",
   );
 
   /** validate */
@@ -50,9 +50,9 @@ export const getPublications = async (
     notInIcite.size ||
     notInReporter.size
   ) {
-    log("secondary", `Not in iCite: ${notInIcite}`);
-    log("secondary", `Not in RePORTER: ${notInReporter}`);
-    log("error", "Number of RePORTER and iCite pubs don't match");
+    log(`Not in iCite: ${notInIcite}`, "secondary");
+    log(`Not in RePORTER: ${notInReporter}`, "secondary");
+    log("Number of RePORTER and iCite pubs don't match", "error");
   }
 
   /** quick lookup of extra info from icite results by id */

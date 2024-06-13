@@ -39,7 +39,7 @@ await schema.execute();
 
 /** add publications to db */
 export const addPublications = async (publications: Publication[]) => {
-  log("info", "Adding publications to db");
+  log("Adding publications to db");
   await db
     .insertInto("publication")
     .values(publications)
