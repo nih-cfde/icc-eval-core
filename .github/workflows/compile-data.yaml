@@ -1,0 +1,42 @@
+name: Compile data
+
+on:
+  workflow_dispatch:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - if: runner.debug == '1'
+        uses: mxschmitt/action-tmate@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "yarn"
+
+      - name: Install /data packages
+        run: yarn install
+        working-directory: ./data
+
+      - name: Install /app packages
+        run: yarn install
+        working-directory: ./app
+
+      - name: Install Playwright
+        run: yarn playwright
+        working-directory: ./data
+
+      - name: Compile report
+        run: yarn compile
+        working-directory: ./data
+
+      - name: Commit results
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Update compiled data"

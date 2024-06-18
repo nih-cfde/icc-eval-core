@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    "@ianvs/prettier-plugin-sort-imports",
+    "./node_modules/prettier-plugin-jsdoc/dist/index.js"
+  ],
+  "importOrder": ["^[a-zA-Z]", "^@[a-zA-Z]", "^@/", "^."],
+  "jsdocCapitalizeDescription": false,
+  "htmlWhitespaceSensitivity": "strict"
+}

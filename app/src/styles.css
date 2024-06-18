@@ -1,0 +1,58 @@
+:root {
+  --theme: #0078c2;
+  --theme-dark: #162f3f;
+
+  --regular: 400;
+  --bold: 600;
+
+  --shadow: 0 0 5px -2px #00000020, 1px 3px 10px -2px #00000020;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+body {
+  margin: 0;
+  line-height: 2;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: var(--bold);
+}
+
+b,
+strong {
+  font-weight: var(--bold);
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 3px;
+  gap: 5px;
+  background: transparent;
+  color: var(--theme);
+  transition-property: color, background;
+}
+
+a:hover {
+  background: #80808080;
+}
