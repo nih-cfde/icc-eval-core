@@ -1,7 +1,6 @@
 <template>
   <footer>
     <div class="row">
-      <a href="report.pdf" target="_blank">PDF<Download /></a>
       <a href="https://github.com/nih-cfde/icc-eval-core" target="_blank">
         Learn more<External />
       </a>
@@ -12,7 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import Download from "@/assets/download.svg";
 import External from "@/assets/external.svg";
 </script>
 

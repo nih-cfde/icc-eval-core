@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "playwright": "npx playwright install chrome",
-    "compile": "tsx ./run.ts",
+    "compile": "tsx ./compile.ts",
     "preview-db": "open '/Applications/Beekeeper Studio.app' --args $(pwd)/database/local.db",
     "lint": "FIX=true ./lint.sh",
     "test:lint": "./lint.sh",

@@ -12,6 +12,7 @@
   - `/database` - Types, schemas, and functions for getting/setting data in the database.
     And the raw SQLite database itself.
   - `/ingest` - Functions for scraping or requesting data from webpages or APIs and transforming it into a common db format.
+  - `/report` - Functions for collating and generating reports.
   - `/util` - Small-scope general purpose functions.
 
 # Process

@@ -14,7 +14,8 @@
     "echarts": "^5.5.0",
     "lodash": "^4.17.21",
     "vue": "^3.4.27",
-    "vue-echarts": "^6.7.3"
+    "vue-echarts": "^6.7.3",
+    "vue-router": "4.3.0"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
