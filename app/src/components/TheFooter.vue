@@ -33,11 +33,18 @@ footer a {
   text-decoration: none;
 }
 
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 20px;
+  text-align: center;
 }
 </style>

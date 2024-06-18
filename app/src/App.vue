@@ -27,7 +27,7 @@ const activityCodes = Object.fromEntries(
 <style scoped>
 .charts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
   grid-auto-rows: minmax(200px, calc(11in * 0.35));
   gap: 40px;
 }
