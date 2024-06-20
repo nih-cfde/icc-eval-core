@@ -22,11 +22,12 @@ footer {
   justify-content: space-between;
   padding: 20px;
   gap: 20px;
-  background: var(--theme-dark);
+  background: var(--theme);
   color: white;
 }
 
 footer a {
+  padding: 2px 5px;
   color: currentColor;
   text-decoration: none;
 }
@@ -37,6 +38,11 @@ footer a {
   }
 }
 
+@media print {
+  footer {
+    display: none;
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;

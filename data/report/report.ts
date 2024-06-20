@@ -62,7 +62,7 @@ export const generateReport = async () => {
 
     /** wait for app to render */
     await page.emulateMedia({ media: "print" });
-    await page.waitForSelector("footer");
+    await page.waitForSelector("main");
 
     /** force page resize event for e.g. auto-resizing charts */
     await page.setViewportSize({ width: 8.5 * 96, height: 11 * 96 });
@@ -71,7 +71,11 @@ export const generateReport = async () => {
     await page.waitForTimeout(1000);
 
     /** print pdf */
-    await page.pdf({ path: `${pdfPath}/${filename}.pdf`, format: "letter" });
+    await page.pdf({
+      path: `${pdfPath}/${filename}.pdf`,
+      format: "letter",
+      landscape: true,
+    });
   }
 
   /** open preview of pdfs locally */

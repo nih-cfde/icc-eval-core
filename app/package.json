@@ -11,6 +11,8 @@
     "clean": "rm -rf node_modules yarn.lock && yarn cache clean && yarn install"
   },
   "dependencies": {
+    "@tanstack/vue-table": "^8.17.3",
+    "@vueuse/core": "^10.11.0",
     "echarts": "^5.5.0",
     "lodash": "^4.17.21",
     "vue": "^3.4.27",

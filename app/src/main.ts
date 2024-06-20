@@ -3,10 +3,12 @@ import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
 import PageHome from "./pages/PageHome.vue";
 import PageProject from "./pages/PageProject.vue";
+import PageProjects from "./pages/PageProjects.vue";
 import "./styles.css";
 
 const routes = [
   { path: "/", component: PageHome },
+  { path: "/projects", component: PageProjects },
   { path: "/project/:project", component: PageProject },
 ];
 

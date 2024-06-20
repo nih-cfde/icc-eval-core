@@ -46,7 +46,7 @@ defineSlots<Slots>();
   appearance: none;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: 8px 15px;
   gap: 10px;
   border-radius: var(--rounded);
   background: var(--theme);
@@ -57,6 +57,12 @@ defineSlots<Slots>();
 }
 
 .button:hover {
-  background: var(--theme-dark);
+  background: var(--gray);
+}
+
+@media print {
+  .button {
+    display: none;
+  }
 }
 </style>

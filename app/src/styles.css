@@ -1,9 +1,8 @@
 :root {
-  --theme: #0078c2;
-  --theme-dark: #162f3f;
+  --theme: #25668e;
 
   --dark-gray: #334155;
-  --gray: #64748b;
+  --gray: #94a3b8;
   --light-gray: #e2e8f0;
 
   --content: 1200px;
@@ -17,6 +16,7 @@
 }
 
 * {
+  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -39,7 +39,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px max(40px, (100% - var(--content)) / 2);
+  /* padding: 40px max(40px, (100% - var(--content)) / 2); */
+  padding: 40px;
   gap: 40px;
 }
 
@@ -47,8 +48,31 @@ h1,
 h2,
 h3,
 h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   margin: 0;
+  gap: 0.75em;
+  color: var(--theme);
   font-weight: var(--bold);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+h4 {
+  font-size: 1.1rem;
 }
 
 b,
@@ -59,32 +83,38 @@ strong {
 a {
   display: inline-flex;
   align-items: center;
-  padding: 1px 3px;
+  padding: 0 2px;
   gap: 5px;
+  border-radius: calc(var(--rounded) / 2);
   background: transparent;
   color: var(--theme);
+  overflow-wrap: anywhere;
   transition: var(--fast);
   transition-property: color, background;
 }
 
 a:hover {
-  background: #80808080;
+  background: var(--dark-gray);
+  color: white;
 }
 
-.table-wrapper {
-  max-width: 100%;
-  overflow-x: auto;
-  border-radius: var(--rounded);
-  box-shadow: var(--shadow);
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
 }
 
 @media print {
-  .table-wrapper {
-    display: contents;
-  }
-
   table {
     width: 100%;
+    table-layout: fixed;
+  }
+
+  th,
+  td {
+    overflow-wrap: anywhere;
   }
 }
 
@@ -103,10 +133,47 @@ th {
 
 th,
 td {
-  padding: 10px 20px;
+  padding: 0;
   text-align: left;
 }
 
 tbody tr {
   border-bottom: solid 1px var(--light-gray);
+}
+
+.scrollable-left::before,
+.scrollable-right::after {
+  --fade: 30px;
+  display: block;
+  position: sticky;
+  width: var(--fade);
+  height: 9999px;
+  margin-top: -9999px;
+  margin-left: -var(--fade);
+  inset: 0;
+  content: "";
+}
+
+@media print {
+  .scrollable-left::before,
+  .scrollable-right::after {
+    display: none;
+  }
+}
+
+.scrollable-left::before {
+  background: linear-gradient(
+    to right,
+    var(--light-gray) 0,
+    transparent var(--fade)
+  );
+}
+
+.scrollable-right::after {
+  left: calc(100% - var(--fade));
+  background: linear-gradient(
+    to left,
+    var(--light-gray) 0,
+    transparent var(--fade)
+  );
 }
