@@ -14,5 +14,5 @@
     "resolveJsonModule": true
   },
   "extends": "@tsconfig/node22/tsconfig.json",
-  "include": ["*"]
+  "include": ["*", "*/*"]
 }

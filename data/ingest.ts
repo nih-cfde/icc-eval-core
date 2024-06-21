@@ -1,10 +1,10 @@
+import { exec } from "child_process";
 import { addOpportunities } from "@/database/opportunities";
 import { addProjects } from "@/database/projects";
 import { addPublications } from "@/database/publications";
 import { getOpportunities } from "@/ingest/opportunities";
 import { getProjects } from "@/ingest/projects";
 import { getPublications } from "@/ingest/publications";
-import { generateReport } from "@/report/report";
 import { deindent, divider, indent } from "@/util/log";
 import { memoize } from "@/util/memoize";
 
@@ -42,7 +42,6 @@ indent();
 await addPublications(publications);
 deindent();
 
-divider();
-indent();
-await generateReport();
-deindent();
+/** open preview */
+if (!process.env.CI)
+  exec("open '/Applications/Beekeeper Studio.app' --args $(pwd)/$DB_PATH");

@@ -7,4 +7,4 @@ if [ "$FIX" ]; then
 fi
 
 bun eslint . --ext .ts $eslintArgs
-bun prettier **/*.ts $prettierArgs --no-error-on-unmatched-pattern
+bun prettier **/*.{ts,md} $prettierArgs --no-error-on-unmatched-pattern

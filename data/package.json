@@ -2,8 +2,9 @@
   "type": "module",
   "scripts": {
     "playwright": "npx playwright install chrome",
-    "compile": "tsx ./compile.ts",
-    "preview-db": "open '/Applications/Beekeeper Studio.app' --args $(pwd)/database/local.db",
+    "ingest": "CLEAR_DB=true tsx --env-file=.env ./ingest.ts",
+    "collate": "tsx --env-file=.env ./collate.ts",
+    "print": "tsx --env-file=.env ./print.ts",
     "lint": "FIX=true ./lint.sh",
     "test:lint": "./lint.sh",
     "test:types": "tsc --noemit",

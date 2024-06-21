@@ -13,6 +13,8 @@
   --shadow: 0 0 5px -2px #00000020, 1px 3px 10px -2px #33415520;
   --rounded: 5px;
   --fast: 0.1s ease-in-out;
+
+  --loose: 2;
 }
 
 * {
@@ -22,7 +24,7 @@
 
 body {
   margin: 0;
-  line-height: 1.5;
+  line-height: var(--compact);
 }
 
 #app {
@@ -104,6 +106,12 @@ button {
   background: none;
   font: inherit;
   cursor: pointer;
+}
+
+p {
+  max-width: var(--content);
+  margin: 0;
+  line-height: var(--loose);
 }
 
 @media print {

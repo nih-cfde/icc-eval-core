@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1><img src="@/assets/icon.png" alt="" />{{ title }}</h1>
 
     <nav>
       <RouterLink to="/">Home</RouterLink>
@@ -21,18 +21,19 @@ header {
   justify-content: space-between;
   padding: 20px;
   gap: 20px;
-  background: var(--theme);
-  color: white;
+  background: var(--light-gray);
+}
+
+header img {
+  height: 2em;
 }
 
 header h1 {
   width: unset;
-  color: currentColor;
 }
 
 header a {
   padding: 2px 5px;
-  color: currentColor;
   text-decoration: none;
 }
 

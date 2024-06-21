@@ -1,10 +1,10 @@
-name: Compile data
+name: Run tests
 
 on:
-  workflow_dispatch:
+  pull_request:
 
 jobs:
-  compile:
+  pipeline:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,25 +18,20 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-          cache: "yarn"
+          cache: yarn
 
       - name: Install /data packages
         run: yarn install
+        working-directory: ./data
+
+      - name: Run /data tests
+        run: yarn test
         working-directory: ./data
 
       - name: Install /app packages
         run: yarn install
         working-directory: ./app
 
-      - name: Install Playwright
-        run: yarn playwright
-        working-directory: ./data
-
-      - name: Compile report
-        run: yarn compile
-        working-directory: ./data
-
-      - name: Commit results
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Update compiled data"
+      - name: Run /app tests
+        run: yarn test
+        working-directory: ./app

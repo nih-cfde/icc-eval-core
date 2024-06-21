@@ -22,13 +22,11 @@ footer {
   justify-content: space-between;
   padding: 20px;
   gap: 20px;
-  background: var(--theme);
-  color: white;
+  background: var(--light-gray);
 }
 
 footer a {
   padding: 2px 5px;
-  color: currentColor;
   text-decoration: none;
 }
 
