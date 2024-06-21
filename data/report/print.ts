@@ -1,9 +1,9 @@
 import { exec } from "child_process";
-import { kebabCase } from "lodash-es";
+import { mkdirSync, rmSync } from "fs";
 import { browserInstance } from "@/util/browser";
 import { indent, log, progress } from "@/util/log";
 
-const { PDF_PATH } = process.env;
+const { PDF_PATH = "" } = process.env;
 
 /** regex pattern for where dashboard app is run in dev mode */
 const hostPattern = /http:\/\/(localhost|(\d+\.\d+\.\d+\.\d+)):\d\d\d\d/;
@@ -16,6 +16,10 @@ export const printReports = async (
   log("Printing reports");
   indent();
   log("Running dev server");
+
+  /** clear folder */
+  rmSync(PDF_PATH, { force: true, recursive: true });
+  mkdirSync(PDF_PATH);
 
   /** run app */
   const dev = exec("yarn --cwd $APP_PATH dev", () => null);
@@ -39,7 +43,10 @@ export const printReports = async (
     if (typeof value === "string") {
       /** make filename from route */
       route = value;
-      filename = kebabCase(value);
+      filename = value
+        .replace(/^\//, "")
+        .replace(/\/$/, "")
+        .replaceAll("/", "_");
     } else {
       /** explicit route and filename */
       route = value.route;
