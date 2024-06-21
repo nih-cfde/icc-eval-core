@@ -34,7 +34,9 @@ body {
 }
 
 main {
+  display: flex;
   flex-grow: 1;
+  flex-direction: column;
 }
 
 section {
@@ -44,6 +46,14 @@ section {
   /* padding: 40px max(40px, (100% - var(--content)) / 2); */
   padding: 40px;
   gap: 40px;
+}
+
+section:nth-child(odd) {
+  background: #f8f8f8;
+}
+
+section:last-child {
+  flex-grow: 1;
 }
 
 h1,
@@ -149,6 +159,8 @@ tbody tr {
   border-bottom: solid 1px var(--light-gray);
 }
 
+/** gradients to indicate scrollability */
+
 .scrollable-left::before,
 .scrollable-right::after {
   --fade: 30px;
@@ -184,4 +196,27 @@ tbody tr {
     var(--light-gray) 0,
     transparent var(--fade)
   );
+}
+
+/** simple two-col auto-sized table of key/value pairs */
+
+.mini-table {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-auto-rows: min-content;
+  max-width: calc(var(--content) / 2);
+  gap: 10px 20px;
+  text-align: left;
+}
+
+.mini-table > :nth-child(odd) {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  color: var(--dark-gray);
+  font-weight: var(--bold);
+}
+
+.mini-table > :nth-child(even) {
 }

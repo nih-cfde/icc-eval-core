@@ -4,7 +4,7 @@
 
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/projects">Projects</RouterLink>
+      <RouterLink to="/core-projects">Core Projects</RouterLink>
     </nav>
   </header>
 </template>

@@ -36,7 +36,7 @@
       </thead>
 
       <tbody>
-        <tr v-for="row in table.getRowModel().rows.slice(0, 10)" :key="row.id">
+        <tr v-for="row in table.getRowModel().rows" :key="row.id">
           <td v-for="cell in row.getVisibleCells()" :key="cell.id">
             <div
               class="td"
@@ -157,6 +157,10 @@ const table = useVueTable({
   getFacetedMinMaxValues: getFacetedMinMaxValues(),
   initialState: {
     sorting: props.sort,
+    pagination: {
+      pageIndex: 0,
+      pageSize: 999999,
+    },
   },
 });
 </script>
