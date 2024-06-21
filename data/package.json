@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "playwright": "npx playwright install chrome",
+    "install-playwright": "npx playwright install chrome",
     "ingest": "CLEAR_DB=true tsx --env-file=.env ./ingest.ts",
     "collate": "tsx --env-file=.env ./collate.ts",
     "print": "tsx --env-file=.env ./print.ts",
@@ -9,7 +9,7 @@
     "test:lint": "./lint.sh",
     "test:types": "tsc --noemit",
     "test": "yarn test:lint && yarn test:types",
-    "clean": "rm -rf node_modules yarn.lock && yarn cache clean && yarn install"
+    "clean": "rm -rf node_modules yarn.lock && yarn cache clean"
   },
   "dependencies": {
     "@playwright/test": "^1.44.1",

@@ -23,19 +23,10 @@ jobs:
             app/yarn.lock
             data/yarn.lock
 
-      - name: Install /data packages
-        run: yarn install
-        working-directory: ./data
+      - name: Install packages
+        run: ./run.sh --install
 
-      - name: Install /app packages
-        run: yarn install
-        working-directory: ./app
-
-      - name: Install Playwright
-        run: yarn playwright
-        working-directory: ./data
-
-      - name: Process data
+      - name: Run pipeline
         run: ./run.sh
 
       - name: Commit results

@@ -8,7 +8,7 @@
     "test:types": "tsc --noemit",
     "test": "yarn test:lint && yarn test:types",
     "preview": "vite preview",
-    "clean": "rm -rf node_modules yarn.lock && yarn cache clean && yarn install"
+    "clean": "rm -rf node_modules yarn.lock && yarn cache clean"
   },
   "dependencies": {
     "@tanstack/vue-table": "^8.17.3",

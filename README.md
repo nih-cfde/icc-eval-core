@@ -1,7 +1,7 @@
 # Requirements
 
-- Node v22+
-- Yarn v1 ("classic")
+- [Node](https://nodejs.org/) v22+
+- [Yarn](https://classic.yarnpkg.com/) v1 ("classic")
 
 # Terminology
 
@@ -40,19 +40,18 @@ The automated steps in this repo are generally as follows:
 
 ## Commands
 
+Use `run.sh` to conveniently run multiple commands across subdirectories.
+Examples:
+
 ```shell
-# run all steps in order
+# install all packages
+./run.sh --install
+
+# run pipeline
 ./run.sh
 
-# run just ingest step
-./run.sh --ingest
-
-# run just collate step
-./run.sh --collate
-
-# run just print step
-./run.sh --print
-
-# run local preview of webapp
-./run.sh --app
+# run tests
+./run.sh --test
 ```
+
+See script source for all available flags.
