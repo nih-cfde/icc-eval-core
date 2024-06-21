@@ -44,8 +44,8 @@ Use `run.sh` to conveniently run multiple commands across subdirectories.
 Examples:
 
 ```shell
-# install all packages
-./run.sh --install
+# install all dependencies
+./run.sh --install-all
 
 # run pipeline
 ./run.sh
