@@ -7,7 +7,19 @@ import PageHome from "./pages/PageHome.vue";
 import "./styles.css";
 
 const routes = [
-  { path: "/", component: PageHome },
+  {
+    name: "Home",
+    path: "/",
+    component: PageHome,
+    beforeEnter: () => {
+      const url = window.sessionStorage.redirect as string;
+      if (url) {
+        console.debug("Redirecting to:", url);
+        window.sessionStorage.removeItem("redirect");
+        return url;
+      }
+    },
+  },
   { path: "/core-projects", component: PageCoreProjects },
   { path: "/core-project/:id", component: PageCoreProject },
 ];
