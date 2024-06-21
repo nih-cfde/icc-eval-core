@@ -46,7 +46,9 @@
         {{ truncate(row.title, { length: 40 }) }}
       </template>
       <template #authors="{ row }">
-        {{ carve(row.authors, 2).join(", ") }}
+        <template v-for="(author, index) of carve(row.authors, 2)" :key="index">
+          {{ author }}<br />
+        </template>
       </template>
       <template #modified="{ row }">
         {{

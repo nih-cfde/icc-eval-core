@@ -101,8 +101,9 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   useVueTable,
+  type Row as TanstackRow,
 } from "@tanstack/vue-table";
-import type { RowData, SortingState } from "@tanstack/vue-table";
+import type { RowData, SortingFn, SortingState } from "@tanstack/vue-table";
 import SortDown from "@/assets/sort-down.svg";
 import SortUp from "@/assets/sort-up.svg";
 import Sort from "@/assets/sort.svg";
@@ -128,6 +129,24 @@ const { ref: scroll } = useScrollable();
 
 const columnHelper = createColumnHelper<Row>();
 
+/** custom sorting function */
+const sortingFunction: SortingFn<Row> = (
+  a: TanstackRow<Row>,
+  b: TanstackRow<Row>,
+  columnId: string,
+) => {
+  /** get row values */
+  const aValue = a.getValue<Required<unknown>>(columnId);
+  const bValue = b.getValue<Required<unknown>>(columnId);
+  /** compare arrays by length */
+  const aCompare = Array.isArray(aValue) ? aValue.length : aValue;
+  const bCompare = Array.isArray(bValue) ? bValue.length : bValue;
+  /** basic compare */
+  if (aCompare < bCompare) return -1;
+  if (aCompare > bCompare) return 1;
+  return 0;
+};
+
 /** column definitions */
 const columns = props.cols.map((col) =>
   columnHelper.accessor((row: Row) => row[col.key], {
@@ -137,6 +156,8 @@ const columns = props.cols.map((col) =>
     header: col.name,
     /** sortable */
     enableSorting: true,
+    /** sorting function */
+    sortingFn: sortingFunction,
     /** extra metadata */
     meta: {
       colProp: col,

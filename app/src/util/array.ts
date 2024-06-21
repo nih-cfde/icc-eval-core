@@ -4,5 +4,8 @@ export const carve = (array: unknown[], limit: number) => {
   if (reduce <= 0) return array;
   const start = Math.ceil(array.length / 2 - reduce / 2);
   const end = Math.ceil(array.length / 2 + reduce / 2);
-  return array.slice(0, start).concat(["..."]).concat(array.slice(end));
+  return array
+    .slice(0, start)
+    .concat([`...${reduce} more...`])
+    .concat(array.slice(end));
 };
