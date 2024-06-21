@@ -20,8 +20,8 @@ jobs:
           node-version: "22"
           cache: yarn
           cache-dependency-path: |
-            app/yarn.lock"
-            "data/yarn.lock"
+            app/yarn.lock
+            data/yarn.lock
 
       - name: Install /data packages
         run: yarn install
