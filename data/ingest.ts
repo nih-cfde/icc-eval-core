@@ -8,6 +8,8 @@ import { getPublications } from "@/ingest/publications";
 import { deindent, divider, indent } from "@/util/log";
 import { memoize } from "@/util/memoize";
 
+const { CI, OPEN } = process.env;
+
 divider();
 indent();
 const opportunities = await memoize(getOpportunities)();
@@ -43,5 +45,5 @@ await addPublications(publications);
 deindent();
 
 /** open preview */
-if (!process.env.CI)
+if (OPEN && !CI)
   exec("open '/Applications/Beekeeper Studio.app' --args $(pwd)/$DB_PATH");

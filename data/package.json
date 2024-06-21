@@ -2,9 +2,9 @@
   "type": "module",
   "scripts": {
     "install-playwright": "npx playwright install chrome",
-    "ingest": "CLEAR_DB=true tsx --env-file=.env ./ingest.ts",
-    "collate": "tsx --env-file=.env ./collate.ts",
-    "print": "tsx --env-file=.env ./print.ts",
+    "ingest": "CLEAR_DB=true OPEN=true tsx --env-file=.env ./ingest.ts",
+    "collate": "OPEN=true tsx --env-file=.env ./collate.ts",
+    "print": "OPEN=true tsx --env-file=.env ./print.ts",
     "lint": "FIX=true ./lint.sh",
     "test:lint": "./lint.sh",
     "test:types": "tsc --noemit",

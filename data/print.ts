@@ -3,6 +3,8 @@ import { getCoreProjects } from "@/database/report";
 import { printReports } from "@/report/print";
 import { deindent, divider, indent } from "@/util/log";
 
+const { CI, OPEN } = process.env;
+
 divider();
 indent();
 const coreProjects = Object.keys(await getCoreProjects()).map(
@@ -12,4 +14,4 @@ await printReports(coreProjects);
 deindent();
 
 /** open preview */
-if (!process.env.CI) execSync("open $PDF_PATH");
+if (OPEN && !CI) execSync("open $PDF_PATH");

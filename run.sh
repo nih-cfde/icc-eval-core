@@ -1,40 +1,48 @@
+data="yarn --cwd ./data/"
+app="yarn --cwd ./app/"
+
 # run individual pipeline step
 if [[ $* == *--ingest* ]]; then
-  yarn --cwd ./data/ ingest
+  $data ingest
 elif [[ $* == *--collate* ]]; then
-  yarn --cwd ./data/ collate
+  $data collate
 elif [[ $* == *--print* ]]; then
-  yarn --cwd ./data/ print
+  $data print
 elif [[ $* == *--app* ]]; then
-  yarn --cwd ./app/ dev
+  $app dev
+
+# install packages
+elif [[ $* == *--install* ]]; then
+  $data install
+  $app install
 
 # install packages and other dependenices
-elif [[ $* == *--install* ]]; then
-  yarn --cwd ./data/ install-playwright
-  yarn --cwd ./data/ install
-  yarn --cwd ./app/ install
+elif [[ $* == *--install-all* ]]; then
+  $data install-playwright
+  $data install
+  $app install
 
 # run tests
 elif [[ $* == *--test* ]]; then
-  yarn --cwd ./data/ test
-  yarn --cwd ./app/ test
+  $data test
+  $app test
 
 # run lint
 elif [[ $* == *--lint* ]]; then
-  yarn --cwd ./data/ lint
-  yarn --cwd ./app/ lint
+  $data lint
+  $app lint
 
 # hard uninstall packages
-elif [[ $* == *--install* ]]; then
-  yarn --cwd ./data/ clean
-  yarn --cwd ./app/ clean
+elif [[ $* == *--clean* ]]; then
+  $data clean
+  $app clean
 
 # run all pipeline steps
 else
-  yarn --cwd ./data/ ingest
-  yarn --cwd ./data/ collate
-  yarn --cwd ./data/ print
+  $data ingest
+  $data collate
+  $data print
   if [[ ! -z "$CI" ]]; then
-    yarn --cwd ./app/ dev
+    $app dev
   fi
 fi
