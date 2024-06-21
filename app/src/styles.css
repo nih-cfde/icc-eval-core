@@ -96,7 +96,7 @@ a {
 }
 
 a:hover {
-  background: var(--dark-gray);
+  background: var(--theme);
   color: white;
 }
 

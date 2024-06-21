@@ -57,7 +57,8 @@ defineSlots<Slots>();
 }
 
 .button:hover {
-  background: var(--gray);
+  background: var(--light-gray);
+  color: var(--theme);
 }
 
 @media print {
