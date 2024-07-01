@@ -1,8 +1,9 @@
 <template>
   <component
-    :is="component"
-    :to="to"
-    :href="to"
+    :is="external ? 'a' : 'RouterLink'"
+    class="link"
+    :to="external ? undefined : to"
+    :href="external ? to : undefined"
     :target="external ? '_blank' : ''"
   >
     <slot />
@@ -11,10 +12,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, useAttrs } from "vue";
 import External from "@/assets/external.svg";
 
 type Props = {
+  /** internal route or external url to link to */
   to: string;
 };
 
@@ -26,7 +28,14 @@ type Slots = {
 
 defineSlots<Slots>();
 
-const external = computed(() => props.to.startsWith("http"));
-
-const component = computed(() => (external.value ? "a" : "RouterLink"));
+/** is link to internal route or external url */
+const external = computed(
+  () => props.to.startsWith("http") || "download" in useAttrs(),
+);
 </script>
+
+<style scoped>
+.link > svg + svg {
+  display: none;
+}
+</style>

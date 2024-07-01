@@ -1,11 +1,12 @@
 <template>
-  <component :is="component" class="button" :href="to" :to="to" @click="click">
+  <component :is="component" class="button" :to="to" @click="click">
     <slot />
   </component>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
+import AppLink from "@/components/AppLink.vue";
 
 type Props = {
   /** text to show */
@@ -16,8 +17,6 @@ type Props = {
   to?: string;
   /** on click action */
   click?: () => unknown;
-  /** whether link is a download link */
-  download?: boolean;
 };
 
 const props = withDefaults(defineProps<Props>(), {
@@ -29,9 +28,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 /** type of component to render */
-const component = computed(() =>
-  props.to ? (props.download ? "a" : "RouterLink") : "button",
-);
+const component = computed(() => (props.to ? AppLink : "button"));
 
 type Slots = {
   default: () => unknown;
