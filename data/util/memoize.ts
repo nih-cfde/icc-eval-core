@@ -68,7 +68,7 @@ type Cache = Record<
   }
 >;
 
-if (process.env.NOCACHE) {
+if (process.env.NO_CACHE) {
   /** clear disk cache */
   unlinkSync(cachePath);
 } else {

@@ -3,6 +3,7 @@ import { db } from ".";
 
 export const getCoreProjects = async () => {
   const publicationsPerCoreProject = await getPublicationsPerCoreProject();
+
   return mapValues(
     groupBy(
       await db.selectFrom("project").selectAll().execute(),
