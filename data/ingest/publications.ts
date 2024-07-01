@@ -41,9 +41,7 @@ export const getPublications = async (
   );
 
   /** validate */
-  // @ts-expect-error type defs for new Set methods coming in TS v5.5
   const notInIcite = reporterSet.difference(iciteSet);
-  // @ts-expect-error type defs for new Set methods coming in TS v5.5
   const notInReporter = iciteSet.difference(reporterSet);
   if (
     reporterSet.size !== iciteSet.size ||

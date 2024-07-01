@@ -1,0 +1,30 @@
+name: Run tests
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - if: runner.debug == '1'
+        uses: mxschmitt/action-tmate@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: yarn
+          cache-dependency-path: |
+            app/yarn.lock
+            data/yarn.lock
+
+      - name: Install packages
+        run: ./run.sh --install
+
+      - name: Run tests
+        run: ./run.sh --test

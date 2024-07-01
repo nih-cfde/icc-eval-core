@@ -1,16 +1,17 @@
-import { existsSync, unlinkSync } from "fs";
+import { rmSync } from "fs";
 import SQLite from "better-sqlite3";
 import { Kysely, SqliteDialect } from "kysely";
 import type { Database } from "./schema";
 
-const dbLocation = "./database/local.db";
+const { CLEAR_DB, DB_PATH = "" } = process.env;
 
 /**
  * while still prototyping and size of data still small, start db from scratch
  * every time instead of writing migrations
  */
-if (existsSync(dbLocation)) unlinkSync(dbLocation);
+if (CLEAR_DB) rmSync(DB_PATH, { force: true });
 
-const dialect = new SqliteDialect({ database: new SQLite(dbLocation) });
+const database = new SQLite(DB_PATH);
+const dialect = new SqliteDialect({ database });
 
 export const db = new Kysely<Database>({ dialect });
