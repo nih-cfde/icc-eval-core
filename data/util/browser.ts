@@ -2,13 +2,13 @@ import playwright from "playwright";
 import { deindent, indent, log } from "@/util/log";
 
 /** start browser instance */
-export const browserInstance = async () => {
+export const browserInstance = async (timeout = 5 * 1000) => {
   /** set up browser instance, page, etc */
   const browser = await playwright.chromium.launch();
   const context = await browser.newContext();
 
   /** options */
-  context.setDefaultTimeout(5 * 1000);
+  context.setDefaultTimeout(timeout);
 
   /** create new browser tab */
   const newPage = async (

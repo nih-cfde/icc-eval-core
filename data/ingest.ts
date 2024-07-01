@@ -6,7 +6,7 @@ import { getJournals } from "@/ingest/journals";
 import { getOpportunities } from "@/ingest/opportunities";
 import { getProjects } from "@/ingest/projects";
 import { getPublications } from "@/ingest/publications";
-import { divider } from "@/util/log";
+import { diskLog, divider } from "@/util/log";
 import { memoize } from "@/util/memoize";
 
 const { CI, OPEN } = process.env;
@@ -35,9 +35,11 @@ await addPublications(publications);
 
 divider("Getting journals");
 
-await memoize(getJournals)(
+const journals = await memoize(getJournals)(
   publications.map((publication) => publication.journal),
 );
+
+diskLog(journals, "journals");
 
 /** open preview */
 if (OPEN && !CI)

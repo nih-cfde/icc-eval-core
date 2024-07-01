@@ -7,14 +7,14 @@ import { allSettled } from "@/util/request";
 /** page to scrape */
 const searchUrl = "https://www.scimagojr.com/journalsearch.php?q=";
 /** selector to get first search result journal name */
-const nameSelector = ".search_results > a > .jrnlname";
+const nameSelector = ".jrnlname";
 
 /** get journal info */
 export const getJournals = async (journals: string[]): Promise<Journal[]> => {
   /** de-dupe */
   journals = uniq(journals);
 
-  const { browser, newPage } = await browserInstance();
+  const { browser, newPage } = await browserInstance(30 * 1000);
 
   log(`Getting ${journals.length.toLocaleString()} journals`);
 
@@ -22,11 +22,8 @@ export const getJournals = async (journals: string[]): Promise<Journal[]> => {
   const { results, errors } = await allSettled(journals, async (journal) => {
     /** get full journal name from abbreviated name via journal search */
     const page = await newPage();
-    await page.goto(searchUrl + journal.replaceAll(" ", "+"), {
-      timeout: 30 * 1000,
-    });
-    const name = await (await page.locator(nameSelector)).innerText();
-
+    await page.goto(searchUrl + journal.replaceAll(" ", "+"));
+    const name = await page.locator(nameSelector).first().innerText();
     return name;
   });
 

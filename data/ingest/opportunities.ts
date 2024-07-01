@@ -11,7 +11,7 @@ const opportunitiesUrl =
 const documentsSelector =
   "table td:first-child > a, :text('archived funding opportunities') + ul > li > a";
 /** selector to get activity code from html opportunity document */
-const activity_codeSelector = ":text('activity code') + *";
+const activityCodeSelector = ":text('activity code') + *";
 /** regex to match opportunity number */
 const numberPattern = /(((RFA|NOT)-RM-\d+-\d+)|OTA-\d+-\d+)/i;
 
@@ -64,7 +64,8 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
 
         /** activity code */
         const activity_code = await page
-          .locator(activity_codeSelector)
+          .locator(activityCodeSelector)
+          .first()
           .innerText({ timeout: 100 })
           .catch(() => "");
 
