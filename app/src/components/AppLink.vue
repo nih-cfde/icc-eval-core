@@ -3,7 +3,7 @@
     :is="external ? 'a' : 'RouterLink'"
     class="link"
     :to="external ? undefined : to"
-    :href="external ? to : undefined"
+    :href="to"
     :target="external ? '_blank' : ''"
   >
     <slot />
