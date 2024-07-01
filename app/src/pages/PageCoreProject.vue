@@ -25,14 +25,11 @@
     >
       <template #id="{ row }">
         <span>
-          <a
-            :href="`https://pubmed.ncbi.nlm.nih.gov/${row.id}`"
-            target="_blank"
-          >
+          <AppLink :to="`https://pubmed.ncbi.nlm.nih.gov/${row.id}`">
             {{ row.id }}
-          </a>
+          </AppLink>
           <br />
-          <a :href="`https://doi.org/${row.doi}`" target="_blank">DOI</a>
+          <AppLink :to="`https://doi.org/${row.doi}`">DOI</AppLink>
         </span>
       </template>
 
@@ -46,7 +43,10 @@
         {{ truncate(row.title, { length: 40 }) }}
       </template>
       <template #authors="{ row }">
-        <template v-for="(author, index) of carve(row.authors, 2)" :key="index">
+        <template
+          v-for="(author, _index) of carve(row.authors, 2)"
+          :key="_index"
+        >
           {{ author }}<br />
         </template>
       </template>
@@ -74,6 +74,7 @@ import Book from "@/assets/book.svg";
 import Download from "@/assets/download.svg";
 import Microscope from "@/assets/microscope.svg";
 import AppButton from "@/components/AppButton.vue";
+import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import coreProjects from "@/data/core-projects.json";
 import publicationsPerCoreProject from "@/data/publications-per-core-project.json";

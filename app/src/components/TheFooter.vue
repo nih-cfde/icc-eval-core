@@ -1,9 +1,9 @@
 <template>
   <footer>
     <div class="row">
-      <a href="https://github.com/nih-cfde/icc-eval-core" target="_blank">
-        Learn more<External />
-      </a>
+      <AppLink to="https://github.com/nih-cfde/icc-eval-core">
+        Learn more
+      </AppLink>
     </div>
 
     <div class="row">Developed with support from NIH Award U54 OD036472</div>
@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import External from "@/assets/external.svg";
+import AppLink from "@/components/AppLink.vue";
 </script>
 
 <style scoped>
