@@ -33,8 +33,7 @@
 import { sum } from "lodash";
 import Microscope from "@/assets/microscope.svg";
 import AppButton from "@/components/AppButton.vue";
-import coreProjects from "@/data/core-projects.json";
+import coreProjects from "~/core-projects.json";
 
-/** convert data from object to array */
-const rows = Object.values(coreProjects);
+const rows = coreProjects;
 </script>

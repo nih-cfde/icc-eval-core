@@ -1,7 +1,7 @@
-import { uniq } from "lodash-es";
-import type { Journal } from "@/database/journals";
-import { browserInstance } from "@/util/browser";
-import { log } from "@/util/log";
+import { uniq, uniqBy } from "lodash-es";
+import { newPage } from "@/util/browser";
+import { saveJson } from "@/util/file";
+import { deindent, indent, log } from "@/util/log";
 import { allSettled } from "@/util/request";
 
 /** page to scrape */
@@ -10,37 +10,49 @@ const searchUrl = "https://www.scimagojr.com/journalsearch.php?q=";
 const nameSelector = ".jrnlname";
 
 /** get journal info */
-export const getJournals = async (journals: string[]): Promise<Journal[]> => {
+export const getJournals = async (journalIds: string[]) => {
   /** de-dupe */
-  journals = uniq(journals);
+  journalIds = uniq(journalIds);
 
-  const { browser, newPage } = await browserInstance(30 * 1000);
+  log(`Getting ${journalIds.length.toLocaleString()} journals`);
 
-  log(`Getting ${journals.length.toLocaleString()} journals`);
-
+  indent();
   /** run in parallel */
-  const { results, errors } = await allSettled(journals, async (journal) => {
-    /** get full journal name from abbreviated name via journal search */
-    const page = await newPage();
-    await page.goto(searchUrl + journal.replaceAll(" ", "+"));
-    const name = await page.locator(nameSelector).first().innerText();
-    return name;
-  });
+  let { results: journals, errors: journalErrors } = await allSettled(
+    journalIds,
+    async (journalId) => {
+      /** get full journal name from abbreviated name via journal search */
+      const page = await newPage();
+      await page.goto(searchUrl + journalId.replaceAll(" ", "+"));
+      const name = await page.locator(nameSelector).first().innerText();
+      return name;
+    },
+    (journal) => log(journal, "start"),
+    (_, result) => log(result, "success"),
+    (journal) => log(journal, "warn"),
+  );
+  deindent();
 
-  await browser.close();
+  /** de-dupe */
+  journals = uniqBy(journals, (journal) => journal.value);
 
   /** make map of abbreviated name to full name */
   const names: Record<string, string> = {};
-  for (const result of results) names[result.input] = result.value;
+  for (const result of journals) names[result.input] = result.value;
 
-  if (results.length)
-    log(`Got ${results.length.toLocaleString()} journals`, "success");
-  if (errors.length)
-    log(`Problem getting ${errors.length.toLocaleString()} journals`, "warn");
+  if (journals.length)
+    log(`Got ${journals.length.toLocaleString()} journals`, "success");
+  if (journalErrors.length)
+    log(
+      `Problem getting ${journalErrors.length.toLocaleString()} journals`,
+      "warn",
+    );
 
   /** transform data into desired format, with fallbacks */
-  return journals.map((journal) => ({
-    id: journal,
-    name: names[journal] ?? "",
+  const transformedJournals = journals.map(({ input, value: journal }) => ({
+    id: input,
+    name: journal ?? input,
   }));
+
+  return transformedJournals;
 };

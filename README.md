@@ -12,30 +12,22 @@
 
 - `/app` - Live dashboard webapp made with Vue.
   Also used for rendering PDF reports.
-- `/data` - All other functionality involving ingesting, transforming, and storing data.
-  - `/api` - Types and functions for getting raw, as-is data from third-party APIs.
-  - `/database` - Types, schemas, and functions for getting/setting data in the database.
-    And the raw database itself†.
-  - `/ingest` - Functions for scraping or requesting data from webpages or APIs and transforming it into a common db format.
-  - `/report` - Functions specific to making reports, e.g. printing, collating.
+- `/data` - All other functionality involving data, e.g. ingesting/collating/etc.
+  - `/api` - Types and functions for getting raw data from third-party APIs.
+  - `/raw` - Raw data gathered from third-party sources (for provenance).
+  - `/ingest` - Functions for scraping webpages and calling APIs, and collating that data into a common format.
+  - `/output` - Collated data.
+  - `/print` - Functions specific to making printed reports.
   - `/util` - Small-scope general purpose functions.
-
-† For now, the database is a **public** SQLite database stored in this repo.
-The method of storing secret information is to-be-determined.
 
 # Pipeline
 
 The automated steps in this repo are generally as follows:
 
-1. "Ingest"
-   1. Gather funding opportunity numbers (and related metadata) from NIH public documents.
-   1. Transform and pare down opportunity info into a common format.
-   1. Add transformed info to the database.
-   1. Repeat previous steps in order of dependency (e.g. opportunity number -> grant numbers) to get all needed info.
-1. "Collate"
-   1. Pick out high-level info from database in format best for reports.
-1. "Print"
-   1. Run webapp to render each _page_ report to _PDF_ report.
+1. Gather funding opportunity numbers (and related metadata) from NIH public documents.
+1. Collate opportunity data into a common format.
+1. Repeat previous steps in order of dependency (e.g. opportunity number -> grant numbers) to get all needed info.
+1. Run webapp, which imports collated data, to render each _page_ report to _PDF_ report.
 1. Live webapp and PDFs deploy publicly automatically.
 
 ## Commands

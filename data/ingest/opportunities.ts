@@ -1,7 +1,8 @@
+import { uniq, uniqBy } from "lodash-es";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
-import type { Opportunity } from "@/database/opportunities";
-import { browserInstance } from "@/util/browser";
-import { log } from "@/util/log";
+import { newPage } from "@/util/browser";
+import { saveJson } from "@/util/file";
+import { deindent, indent, log } from "@/util/log";
 import { allSettled } from "@/util/request";
 
 /** page to scrape */
@@ -16,15 +17,15 @@ const activityCodeSelector = ":text('activity code') + *";
 const numberPattern = /(((RFA|NOT)-RM-\d+-\d+)|OTA-\d+-\d+)/i;
 
 /** get common fund funding opportunities, past and present */
-export const getOpportunities = async (): Promise<Opportunity[]> => {
-  const { browser, newPage } = await browserInstance();
-  const page = await newPage();
+export const getOpportunities = async () => {
+  log(`Scraping ${opportunitiesUrl}`, "start");
 
   /** list of current and archived opportunities */
+  const page = await newPage();
   await page.goto(opportunitiesUrl);
 
   /** full list of opportunity html/pdf docs */
-  const { results: documents } = await allSettled(
+  let { results: documents } = await allSettled(
     Array.from(await page.locator(documentsSelector).all()),
     async (link) => {
       const href = await link.getAttribute("href");
@@ -33,21 +34,25 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
     },
   );
 
+  /** de-dupe */
+  documents = uniq(documents);
+
   log(
     `Found ${documents.length.toLocaleString()} opportunity documents`,
     documents.length ? "success" : "error",
   );
 
   /** get prefix of opportunity number */
-  const getPrefix = (id: string): Opportunity["prefix"] => {
+  const getPrefix = (id: string) => {
     if (id.startsWith("RFA")) return "RFA";
     if (id.startsWith("NOT")) return "NOT";
     if (id.startsWith("OTA")) return "OTA";
     return "";
   };
 
+  indent();
   /** run in parallel */
-  const { results: opportunities } = await allSettled(
+  let { results: opportunities, errors: opportunityErrors } = await allSettled(
     documents.map((document) => document.value),
     async (document) => {
       const page = await newPage();
@@ -100,14 +105,32 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
 
       throw Error("Invalid document extension");
     },
+    (document) => log(document, "start"),
+    (_, result) => log(result.id, "success"),
+    (document) => log(document, "warn"),
   );
+  deindent();
 
-  await browser.close();
+  /** de-dupe */
+  opportunities = uniqBy(opportunities, (item) => item.value.id);
 
+  if (opportunityErrors.length) {
+    log(
+      `Problem getting ${opportunityErrors.length.toLocaleString()} opportunities`,
+      "warn",
+    );
+    indent();
+    for (const error of opportunityErrors) log(error.value, "warn");
+    deindent();
+  }
   log(
     `Found ${opportunities.length.toLocaleString()} opportunities`,
     opportunities.length ? "success" : "error",
   );
 
-  return opportunities.map((opportunity) => opportunity.value);
+  const transformedOpportunities = opportunities.map(
+    (opportunity) => opportunity.value,
+  );
+
+  return transformedOpportunities;
 };

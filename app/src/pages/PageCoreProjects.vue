@@ -42,10 +42,9 @@
 import { truncate } from "lodash";
 import Microscope from "@/assets/microscope.svg";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
-import coreProjects from "@/data/core-projects.json";
+import coreProjects from "~/core-projects.json";
 
-/** convert data from object to array */
-const rows = Object.values(coreProjects);
+const rows = coreProjects;
 
 /** table column definitions */
 const cols: Cols<typeof rows> = [

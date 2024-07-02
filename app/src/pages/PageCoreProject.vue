@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2><Microscope />Core Project {{ coreProject.id }}</h2>
+    <h2><Microscope />Core Project {{ id }}</h2>
   </section>
 
   <section>
@@ -78,32 +78,29 @@ import Microscope from "@/assets/microscope.svg";
 import AppButton from "@/components/AppButton.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
-import coreProjects from "@/data/core-projects.json";
-import publicationsPerCoreProject from "@/data/publications-per-core-project.json";
 import { carve } from "@/util/array";
+import coreProjects from "~/core-projects.json";
+import publications from "~/publications.json";
 
 const { params } = useRoute();
 
 /** currently viewed core project id */
-const coreProject = computed(
-  () =>
-    coreProjects[
-      (Array.isArray(params.id)
-        ? params.id[0]
-        : params.id) as keyof typeof coreProjects
-    ],
+const id = computed(() =>
+  Array.isArray(params.id) ? params.id[0] : params.id,
 );
 
 /** set tab title */
 const { VITE_TITLE } = import.meta.env;
-useTitle(computed(() => `${coreProject.value.id} | ${VITE_TITLE}`));
+useTitle(computed(() => `${id.value} | ${VITE_TITLE}`));
+
+/** currently viewed core project (details) */
+const coreProject = computed(
+  () => coreProjects.find((coreProject) => coreProject.id === id.value)!,
+);
 
 /** convert data from object to array */
-const rows = computed(
-  () =>
-    publicationsPerCoreProject[
-      coreProject.value.id as keyof typeof publicationsPerCoreProject
-    ] ?? [],
+const rows = computed(() =>
+  publications.filter((publication) => publication.core_project === id.value),
 );
 
 /** table column definitions */

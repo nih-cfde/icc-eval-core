@@ -1,17 +1,12 @@
-import { execSync } from "child_process";
-import { getCoreProjects } from "@/database/report";
-import { printReports } from "@/report/print";
+import coreProjects from "@/output/core-projects.json";
+import { printReports } from "@/print/print";
+import { browser } from "@/util/browser";
 import { divider } from "@/util/log";
-
-const { CI, OPEN } = process.env;
-
-const coreProjects = Object.keys(await getCoreProjects()).map(
-  (coreProject) => `/core-project/${coreProject}`,
-);
 
 divider("Printing reports");
 
-await printReports(coreProjects);
+await printReports(
+  coreProjects.map((coreProject) => `/core-project/${coreProject.id}`),
+);
 
-/** open preview */
-if (OPEN && !CI) execSync("open $PDF_PATH");
+await browser.close();

@@ -3,7 +3,6 @@
   "scripts": {
     "install-playwright": "npx playwright install chrome",
     "ingest": "tsx --env-file=.env ./ingest.ts",
-    "collate": "tsx --env-file=.env ./collate.ts",
     "print": "tsx --env-file=.env ./print.ts",
     "lint": "FIX=true ./lint.sh",
     "test:lint": "./lint.sh",

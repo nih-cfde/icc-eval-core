@@ -1,7 +1,7 @@
 import { exec } from "child_process";
 import { mkdirSync, rmSync } from "fs";
-import { browserInstance } from "@/util/browser";
-import { log } from "@/util/log";
+import { newPage } from "@/util/browser";
+import { deindent, indent, log } from "@/util/log";
 import { allSettled } from "@/util/request";
 
 const { PDF_PATH = "" } = process.env;
@@ -18,7 +18,7 @@ export const printReports = async (
 
   /** clear folder */
   rmSync(PDF_PATH, { force: true, recursive: true });
-  mkdirSync(PDF_PATH);
+  mkdirSync(PDF_PATH, { recursive: true });
 
   /** run app */
   const dev = exec("yarn --cwd $APP_PATH dev", () => null);
@@ -34,10 +34,9 @@ export const printReports = async (
 
   log(`Running on ${host}`);
 
-  const { browser, newPage } = await browserInstance();
-
   log(`Printing ${pages.length.toLocaleString()} pages`);
 
+  indent();
   /** run in parallel */
   const { results, errors } = await allSettled(
     pages,
@@ -49,8 +48,10 @@ export const printReports = async (
         .replaceAll("/", "_");
 
       /** go to route that shows report */
+      const url = host + route;
+      log(url, "start");
       const page = await newPage();
-      await page.goto(host + route);
+      await page.goto(url);
 
       /** wait for app to render */
       await page.emulateMedia({ media: "print" });
@@ -69,14 +70,19 @@ export const printReports = async (
         landscape: true,
       });
     },
+    (route) => log(route, "start"),
+    (route) => log(route, "success"),
+    (route) => log(route, "warn"),
   );
+  deindent();
 
   /** close app */
   dev.kill();
-  await browser.close();
 
   if (results.length)
     log(`Printed ${results.length.toLocaleString()} PDFs`, "success");
-  if (errors.length)
+  if (errors.length) {
+    for (const error of errors) log(error.value, "warn");
     log(`Error printing ${errors.length.toLocaleString()} PDFs`, "error");
+  }
 };

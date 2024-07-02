@@ -44,8 +44,26 @@ export const allSettled = async <Input, Result>(
   input: Input[],
   /** async func to run on each array item */
   promise: (input: Input) => Promise<Result>,
+  /** func to run on each promise start */
+  onStart?: (input: Input) => void,
+  /** func to run on each promise success */
+  onSuccess?: (input: Input, result: Result) => void,
+  /** func to run on each promise error */
+  onError?: (input: Input, error: string) => void,
 ) => {
-  const settled = await Promise.allSettled(input.map(promise));
+  const settled = await Promise.allSettled(
+    input.map(async (input) => {
+      try {
+        onStart?.(input);
+        const result = await promise(input);
+        onSuccess?.(input, result);
+        return result;
+      } catch (error) {
+        onError?.(input, String(error));
+        throw error;
+      }
+    }),
+  );
 
   /** use flatMap to filter and map at same time with easier type safety */
 

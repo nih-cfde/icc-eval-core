@@ -1,13 +1,12 @@
-import { mkdirSync, writeFileSync } from "fs";
 import chalk from "chalk";
 
 /** indent level */
-let indentCount = 0;
+let indentCount = 1;
 
 /** increase log indent level */
 export const indent = () => indentCount < 5 && indentCount++;
 /** decrease log indent level */
-export const deindent = () => indentCount > 0 && indentCount--;
+export const deindent = () => indentCount > 1 && indentCount--;
 
 /** log levels */
 const levels = {
@@ -17,6 +16,8 @@ const levels = {
   primary: { color: chalk.magenta, icon: "" },
   /** less important info */
   secondary: { color: chalk.gray, icon: "" },
+  /** starting some process */
+  start: { color: chalk.gray, icon: "⋯" },
   /** success */
   success: { color: chalk.green, icon: "✓" },
   /** needs attention */
@@ -52,14 +53,6 @@ export const divider = (message: Message) => {
 
 /** print newline. use as minor/lower-level divider. */
 export const newline = () => log("", "", 0);
-
-/** save large data to log file */
-export const diskLog = (data: unknown, filename?: string) => {
-  const string = JSON.stringify(data, null, 2);
-  filename ??= String(Date.now());
-  mkdirSync("./logs", { recursive: true });
-  writeFileSync(`./logs/${filename}.json`, string);
-};
 
 /** progress bar */
 export const progress = (message: Message, percent: number) => {

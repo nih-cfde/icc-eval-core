@@ -22,7 +22,8 @@
     "noFallthroughCasesInSwitch": true,
 
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "~/*": ["../data/output/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.vue"],

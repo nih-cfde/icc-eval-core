@@ -4,8 +4,6 @@ app="yarn --cwd ./app/"
 # run individual pipeline step
 if [[ $* == *--ingest* ]]; then
   $data ingest
-elif [[ $* == *--collate* ]]; then
-  $data collate
 elif [[ $* == *--print* ]]; then
   $data print
 elif [[ $* == *--app* ]]; then
@@ -40,9 +38,8 @@ elif [[ $* == *--clean* ]]; then
 # run all pipeline steps
 else
   $data ingest
-  $data collate
   $data print
-  if [[ ! -z "$CI" ]]; then
+  if [[ -z "$CI" ]]; then
     $app dev
   fi
 fi

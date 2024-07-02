@@ -1,46 +1,50 @@
-import { exec } from "child_process";
-import { addOpportunities } from "@/database/opportunities";
-import { addProjects } from "@/database/projects";
-import { addPublications } from "@/database/publications";
+import { mkdirSync, rmSync } from "fs";
 import { getJournals } from "@/ingest/journals";
 import { getOpportunities } from "@/ingest/opportunities";
 import { getProjects } from "@/ingest/projects";
 import { getPublications } from "@/ingest/publications";
-import { diskLog, divider } from "@/util/log";
-import { memoize } from "@/util/memoize";
+import { browser } from "@/util/browser";
+import { saveJson } from "@/util/file";
+import { divider } from "@/util/log";
 
-const { CI, OPEN } = process.env;
+const { DATA_PATH = "" } = process.env;
 
-divider("Getting opportunities");
+divider("Opportunities");
 
-const opportunities = await memoize(getOpportunities)();
+const opportunities = await getOpportunities();
 
-await addOpportunities(opportunities);
+divider("Projects");
 
-divider("Getting projects");
-
-const projects = await memoize(getProjects)(
+let { coreProjects, projects } = await getProjects(
   opportunities.map((opportunity) => opportunity.id),
 );
 
-await addProjects(projects);
+divider("Publications");
 
-divider("Getting publications");
-
-const publications = await memoize(getPublications)(
+const publications = await getPublications(
   projects.map((project) => project.core_project),
 );
+for (const coreProject of coreProjects)
+  coreProject.publications = publications.filter(
+    (publication) => publication.core_project === coreProject.id,
+  ).length;
 
-await addPublications(publications);
+divider("Journals");
 
-divider("Getting journals");
-
-const journals = await memoize(getJournals)(
+const journals = await getJournals(
   publications.map((publication) => publication.journal),
 );
 
-diskLog(journals, "journals");
+divider("Saving");
 
-/** open preview */
-if (OPEN && !CI)
-  exec("open '/Applications/Beekeeper Studio.app' --args $(pwd)/$DB_PATH");
+/** clear folder */
+rmSync(DATA_PATH, { force: true, recursive: true });
+mkdirSync(DATA_PATH, { recursive: true });
+
+saveJson(opportunities, "opportunities");
+saveJson(coreProjects, "core-projects");
+saveJson(projects, "projects");
+saveJson(publications, "publications");
+saveJson(journals, "journals");
+
+await browser.close();
