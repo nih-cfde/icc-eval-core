@@ -8,20 +8,22 @@
 
     <div class="mini-table">
       <span>Projects</span>
-      <span>{{
-        sum(rows.map((row) => row.projects.length)).toLocaleString()
-      }}</span>
+      <span>
+        {{ sum(rows.map((row) => row.projects.length)).toLocaleString() }}
+      </span>
       <span>Awards</span>
-      <span>{{
-        sum(rows.map((row) => row.award_amount)).toLocaleString(undefined, {
-          style: "currency",
-          currency: "USD",
-        })
-      }}</span>
+      <span>
+        {{
+          sum(rows.map((row) => row.award_amount)).toLocaleString(undefined, {
+            style: "currency",
+            currency: "USD",
+          })
+        }}
+      </span>
       <span>Publications</span>
-      <span>{{
-        sum(rows.map((row) => row.publications)).toLocaleString()
-      }}</span>
+      <span>
+        {{ sum(rows.map((row) => row.publications)).toLocaleString() }}
+      </span>
     </div>
     <AppButton to="/core-projects"><Microscope />Core Projects</AppButton>
   </section>
@@ -34,8 +36,5 @@ import AppButton from "@/components/AppButton.vue";
 import coreProjects from "@/data/core-projects.json";
 
 /** convert data from object to array */
-const rows = Object.entries(coreProjects).map(([id, rest]) => ({
-  id,
-  ...rest,
-}));
+const rows = Object.values(coreProjects);
 </script>
