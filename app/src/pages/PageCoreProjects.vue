@@ -13,6 +13,10 @@
         <RouterLink :to="`/core-project/${row.id}`">{{ row.id }}</RouterLink>
       </template>
 
+      <template #name="{ row }">
+        {{ truncate(row.name, { length: 50 }) }}
+      </template>
+
       <template #projects="{ row }">
         {{ row.projects.length.toLocaleString() }}
       </template>
@@ -35,15 +39,13 @@
 </template>
 
 <script setup lang="ts">
+import { truncate } from "lodash";
 import Microscope from "@/assets/microscope.svg";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import coreProjects from "@/data/core-projects.json";
 
 /** convert data from object to array */
-const rows = Object.entries(coreProjects).map(([id, rest]) => ({
-  id,
-  ...rest,
-}));
+const rows = Object.values(coreProjects);
 
 /** table column definitions */
 const cols: Cols<typeof rows> = [
@@ -51,6 +53,17 @@ const cols: Cols<typeof rows> = [
     slot: "id",
     key: "id",
     name: "ID",
+  },
+  {
+    slot: "name",
+    key: "name",
+    name: "Name",
+  },
+  {
+    slot: "activity-code",
+    key: "activity_code",
+    name: "Activity Code",
+    style: { justifyContent: "center" },
   },
   {
     slot: "projects",

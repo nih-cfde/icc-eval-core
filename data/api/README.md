@@ -12,6 +12,7 @@ This folder contains code to interact with third party APIs and TypeScript defin
 
 ### Results
 
+1. Go to https://api.reporter.nih.gov in browser
 1. Run script below in browser dev console
 1. Convert to TypeScript schema same way as above
 

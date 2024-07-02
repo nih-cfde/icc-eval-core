@@ -1,15 +1,17 @@
 <template>
   <section>
-    <h2><Microscope />Core Project {{ coreProject }}</h2>
+    <h2><Microscope />Core Project {{ coreProject.id }}</h2>
   </section>
 
   <section>
     <div class="mini-table">
+      <span>Name</span>
+      <span>{{ coreProject.name }}</span>
       <span>Projects</span>
-      <span>{{ coreProjects[coreProject].projects.join(", ") }}</span>
+      <span>{{ coreProject.projects.join(", ") }}</span>
       <span>Award</span>
       <span>{{
-        coreProjects[coreProject].award_amount.toLocaleString(undefined, {
+        coreProject.award_amount.toLocaleString(undefined, {
           style: "currency",
           currency: "USD",
         })
@@ -82,12 +84,14 @@ import { carve } from "@/util/array";
 
 const { params } = useRoute();
 
-/** currently viewed core project */
+/** currently viewed core project id */
 const coreProject = computed(
   () =>
-    (Array.isArray(params.id)
-      ? params.id[0]
-      : params.id) as keyof typeof publicationsPerCoreProject,
+    coreProjects[
+      (Array.isArray(params.id)
+        ? params.id[0]
+        : params.id) as keyof typeof coreProjects
+    ],
 );
 
 /** set tab title */
@@ -96,7 +100,10 @@ useTitle(computed(() => `${coreProject.value} | ${VITE_TITLE}`));
 
 /** convert data from object to array */
 const rows = computed(
-  () => publicationsPerCoreProject[coreProject.value] ?? [],
+  () =>
+    publicationsPerCoreProject[
+      coreProject.value.id as keyof typeof publicationsPerCoreProject
+    ] ?? [],
 );
 
 /** table column definitions */

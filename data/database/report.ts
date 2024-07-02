@@ -9,6 +9,9 @@ export const getCoreProjects = async () => {
       "core_project",
     ),
     (projects, coreProject) => ({
+      id: coreProject,
+      name: projects[0]?.name ?? "",
+      activity_code: projects[0]?.activity_code ?? "",
       projects: projects.map((project) => project.id),
       award_amount: sum(projects.map((project) => project.award_amount)),
       publications: publicationsPerCoreProject[coreProject]?.length ?? 0,
