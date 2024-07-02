@@ -96,7 +96,7 @@ const coreProject = computed(
 
 /** set tab title */
 const { VITE_TITLE } = import.meta.env;
-useTitle(computed(() => `${coreProject.value} | ${VITE_TITLE}`));
+useTitle(computed(() => `${coreProject.value.id} | ${VITE_TITLE}`));
 
 /** convert data from object to array */
 const rows = computed(
