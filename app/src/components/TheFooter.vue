@@ -1,10 +1,9 @@
 <template>
   <footer>
     <div class="row">
-      <a href="report.pdf" target="_blank">PDF<Download /></a>
-      <a href="https://github.com/nih-cfde/icc-eval-core" target="_blank">
-        Learn more<External />
-      </a>
+      <AppLink to="https://github.com/nih-cfde/icc-eval-core">
+        Learn more
+      </AppLink>
     </div>
 
     <div class="row">Developed with support from NIH Award U54 OD036472</div>
@@ -12,8 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import Download from "@/assets/download.svg";
-import External from "@/assets/external.svg";
+import AppLink from "@/components/AppLink.vue";
 </script>
 
 <style scoped>
@@ -24,12 +22,11 @@ footer {
   justify-content: space-between;
   padding: 20px;
   gap: 20px;
-  background: var(--theme-dark);
-  color: white;
+  background: var(--light-gray);
 }
 
 footer a {
-  color: currentColor;
+  padding: 2px 5px;
   text-decoration: none;
 }
 
@@ -39,6 +36,11 @@ footer a {
   }
 }
 
+@media print {
+  footer {
+    display: none;
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;

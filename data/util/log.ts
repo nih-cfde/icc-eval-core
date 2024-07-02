@@ -55,9 +55,13 @@ export const diskLog = (data: unknown, filename?: string) => {
   writeFileSync(`./logs/${filename}.json`, string);
 };
 
-/** log all CLI output through our log */
-export const wrapLog = (message: Message) => {
-  indent();
-  log(message, "secondary");
-  deindent();
+/** progress bar */
+export const progress = (message: Message, key: string, obj: object) => {
+  const chars = 10;
+  const index =
+    (Array.isArray(obj) ? Number(key) : Object.keys(obj).indexOf(key)) + 1;
+  const length = Array.isArray(obj) ? obj.length : Object.keys(obj).length;
+  const percent = index / length;
+  const bar = "▓".repeat(chars * percent) + "░".repeat(chars * (1 - percent));
+  log(`${message} ${bar} (${index} of ${length})`);
 };

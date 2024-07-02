@@ -6,5 +6,5 @@ if [ "$FIX" ]; then
   prettierArgs="--write"
 fi
 
-bun eslint . --ext .ts $eslintArgs
-bun prettier **/*.ts $prettierArgs --no-error-on-unmatched-pattern
+yarn eslint . --ext .ts $eslintArgs
+yarn prettier **/*.{ts,md} $prettierArgs --no-error-on-unmatched-pattern

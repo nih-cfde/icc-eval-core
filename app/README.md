@@ -9,3 +9,4 @@
 | `yarn test:lint`  | Check linting and formatting |
 | `yarn test:types` | Check types                  |
 | `yarn test`       | Run all tests above          |
+| `yarn clean`      | Hard uninstall packages      |
