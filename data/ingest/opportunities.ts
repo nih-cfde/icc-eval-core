@@ -1,44 +1,44 @@
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import type { Opportunity } from "@/database/opportunities";
 import { browserInstance } from "@/util/browser";
-import { deindent, indent, log, newline } from "@/util/log";
+import { log } from "@/util/log";
+import { allSettled } from "@/util/request";
 
 /** page to scrape */
-const url = "https://commonfund.nih.gov/dataecosystem/FundingOpportunities";
+const opportunitiesUrl =
+  "https://commonfund.nih.gov/dataecosystem/FundingOpportunities";
 /** selector to get list of links to present and past opportunity documents */
 const documentsSelector =
   "table td:first-child > a, :text('archived funding opportunities') + ul > li > a";
 /** selector to get activity code from html opportunity document */
-const activity_codeSelector = ":text('activity code') + *";
+const activityCodeSelector = ":text('activity code') + *";
 /** regex to match opportunity number */
 const numberPattern = /(((RFA|NOT)-RM-\d+-\d+)|OTA-\d+-\d+)/i;
 
 /** get common fund funding opportunities, past and present */
 export const getOpportunities = async (): Promise<Opportunity[]> => {
-  log("Getting opportunities");
-
-  const { page, browser } = await browserInstance();
+  const { browser, newPage } = await browserInstance();
+  const page = await newPage();
 
   /** list of current and archived opportunities */
-  await page.goto(url);
+  await page.goto(opportunitiesUrl);
 
   /** full list of opportunity html/pdf docs */
-  const documents = await Promise.all(
-    Array.from(await page.locator(documentsSelector).all()).map(
-      async (link) => await link.getAttribute("href"),
-    ),
+  const { results: documents } = await allSettled(
+    Array.from(await page.locator(documentsSelector).all()),
+    async (link) => {
+      const href = await link.getAttribute("href");
+      if (href) return href;
+      else throw Error("No href");
+    },
   );
 
   log(
     `Found ${documents.length.toLocaleString()} opportunity documents`,
     documents.length ? "success" : "error",
   );
-  newline();
 
-  /** full list of opportunity numbers */
-  const opportunities: Opportunity[] = [];
-
-  /** get type of opportunity number */
+  /** get prefix of opportunity number */
   const getPrefix = (id: string): Opportunity["prefix"] => {
     if (id.startsWith("RFA")) return "RFA";
     if (id.startsWith("NOT")) return "NOT";
@@ -46,68 +46,68 @@ export const getOpportunities = async (): Promise<Opportunity[]> => {
     return "";
   };
 
-  for (const document of documents) {
-    if (!document) continue;
+  /** run in parallel */
+  const { results: opportunities } = await allSettled(
+    documents.map((document) => document.value),
+    async (document) => {
+      const page = await newPage();
 
-    log(`Opportunity document ${document.split(/\/|\\/).pop()}`);
-    indent();
+      /** html document */
+      if (document.endsWith(".html")) {
+        await page.goto(document);
 
-    /** html document */
-    if (document.endsWith("html")) {
-      await page.goto(document);
+        /** main opportunity number */
+        const id = (await page.locator(".noticenum").innerText()).trim();
 
-      /** main opportunity number */
-      const id = (await page.locator(".noticenum").innerText()).trim();
+        /** opportunity number prefix */
+        const prefix = getPrefix(id);
 
-      /** opportunity number prefix */
-      const prefix = getPrefix(id);
+        /** activity code */
+        const activity_code = await page
+          .locator(activityCodeSelector)
+          .first()
+          .innerText({ timeout: 100 })
+          .catch(() => "");
 
-      /** activity code */
-      const activity_code = await page
-        .locator(activity_codeSelector)
-        .innerText({ timeout: 100 })
-        .catch(() => "");
+        /** validate number */
+        if (id.match(numberPattern)) return { id, prefix, activity_code };
+        else throw Error(`${id} does not seem like a valid opportunity number`);
+      }
 
-      /** validate number */
-      if (id.match(numberPattern)) {
-        opportunities.push({ id, prefix, activity_code });
-        log(id, "secondary");
-      } else log(`${id} does not seem like a valid opportunity number`, "warn");
-    }
+      /** pdf document */
+      if (document.endsWith(".pdf")) {
+        /** parse pdf */
+        const pdf = await getDocument(new URL(document, opportunitiesUrl).href)
+          .promise;
+        const firstPage = await pdf.getPage(1);
+        const text = (await firstPage.getTextContent()).items
+          .map((item) => ("str" in item ? item.str : ""))
+          .join("");
 
-    /** pdf document */
-    if (document.endsWith(".pdf")) {
-      /** parse pdf */
-      const pdf = await getDocument(new URL(document, url).href).promise;
-      const firstPage = await pdf.getPage(1);
-      const text = (await firstPage.getTextContent()).items
-        .map((item) => ("str" in item ? item.str : ""))
-        .join("");
+        /** main opportunity number */
+        const id = text.match(numberPattern)?.[1] || "";
 
-      /** main opportunity number */
-      const id = text.match(numberPattern)?.[1] || "";
+        /** opportunity number prefix */
+        const prefix = getPrefix(id);
 
-      /** opportunity number prefix */
-      const prefix = getPrefix(id);
+        /** activity code */
+        const activity_code = "";
 
-      /** activity code */
-      const activity_code = "";
+        /** validate number */
+        if (id) return { id, prefix, activity_code };
+        else throw Error("Doesn't seem to have opportunity number");
+      }
 
-      /** validate number */
-      if (id) {
-        opportunities.push({ id, prefix, activity_code });
-        log(id, "secondary");
-      } else log("Doesn't seem to have opportunity number", "warn");
-    }
-    deindent();
-  }
+      throw Error("Invalid document extension");
+    },
+  );
+
+  await browser.close();
 
   log(
     `Found ${opportunities.length.toLocaleString()} opportunities`,
     opportunities.length ? "success" : "error",
   );
 
-  await browser.close();
-
-  return opportunities;
+  return opportunities.map((opportunity) => opportunity.value);
 };

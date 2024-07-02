@@ -68,13 +68,13 @@ type Cache = Record<
   }
 >;
 
-if (process.env.NOCACHE) {
-  /** clear disk cache */
-  unlinkSync(cachePath);
-} else {
+if (process.env.CACHE) {
   /** load disk cache into memory cache */
   if (existsSync(cachePath))
     cache = JSON.parse(readFileSync(cachePath, "utf-8")) as Cache;
+} else {
+  /** clear disk cache */
+  unlinkSync(cachePath);
 }
 
 /** save memory cache to disk cache */

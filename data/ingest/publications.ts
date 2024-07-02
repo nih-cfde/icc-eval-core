@@ -1,16 +1,18 @@
+import { uniq } from "lodash-es";
 import { queryIcite } from "@/api/icite";
 import type { Datum } from "@/api/icite-results";
 import { queryReporter } from "@/api/reporter";
 import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
 import type { PublicationsResults } from "@/api/reporter-publications-results.d";
 import type { Publication } from "@/database/publications";
-import { log, newline } from "@/util/log";
+import { log } from "@/util/log";
 
 /** get publications associated with grant projects */
 export const getPublications = async (
   coreProjects: string[],
 ): Promise<Publication[]> => {
-  log("Getting publications");
+  /** de-dupe */
+  coreProjects = uniq(coreProjects);
 
   /** get publications associated with grant projects */
   const { results: reporterResults } = await queryReporter<
@@ -23,7 +25,6 @@ export const getPublications = async (
     `Found ${reporterSet.size.toLocaleString()} unique (${reporterResults.length.toLocaleString()} total) publications`,
     reporterResults.length ? "success" : "error",
   );
-  newline();
 
   log("Getting publication citation data");
 
@@ -34,6 +35,12 @@ export const getPublications = async (
       .filter((id): id is number => !!id),
   );
   const iciteSet = new Set(iciteResults.map((result) => result.pmid));
+
+  /** quick lookup of extra info from icite results by id */
+  const extrasLookup: Record<
+    NonNullable<Datum["pmid"]>,
+    Omit<Datum, "pmid">
+  > = Object.fromEntries(iciteResults.map(({ pmid, ...rest }) => [pmid, rest]));
 
   log(
     `Found ${iciteResults.length.toLocaleString()} unique (${iciteSet.size.toLocaleString()} total) publication metadata`,
@@ -52,12 +59,6 @@ export const getPublications = async (
     log(`Not in RePORTER: ${notInReporter}`, "secondary");
     log("Number of RePORTER and iCite pubs don't match", "error");
   }
-
-  /** quick lookup of extra info from icite results by id */
-  const extrasLookup: Record<
-    NonNullable<Datum["pmid"]>,
-    Omit<Datum, "pmid">
-  > = Object.fromEntries(iciteResults.map(({ pmid, ...rest }) => [pmid, rest]));
 
   /** transform data into desired format, with fallbacks */
   return reporterResults.map((result) => {

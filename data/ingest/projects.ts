@@ -1,3 +1,4 @@
+import { uniq } from "lodash-es";
 import { queryReporter } from "@/api/reporter";
 import type { ProjectsQuery } from "@/api/reporter-projects-query";
 import type { ProjectsResults } from "@/api/reporter-projects-results";
@@ -8,7 +9,8 @@ import { log } from "@/util/log";
 export const getProjects = async (
   opportunities: string[],
 ): Promise<Project[]> => {
-  log("Getting projects");
+  /** de-dupe */
+  opportunities = uniq(opportunities);
 
   const { results } = await queryReporter<ProjectsQuery, ProjectsResults>(
     "projects",

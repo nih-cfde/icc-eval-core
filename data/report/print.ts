@@ -1,7 +1,8 @@
 import { exec } from "child_process";
 import { mkdirSync, rmSync } from "fs";
 import { browserInstance } from "@/util/browser";
-import { indent, log, progress } from "@/util/log";
+import { log } from "@/util/log";
+import { allSettled } from "@/util/request";
 
 const { PDF_PATH = "" } = process.env;
 
@@ -11,10 +12,8 @@ const hostPattern = /http:\/\/(localhost|(\d+\.\d+\.\d+\.\d+)):\d\d\d\d/;
 /** render dashboard reports to PDF */
 export const printReports = async (
   /** dashboard pages to render as reports */
-  pages: (string | { route: string; filename: string })[],
+  pages: string[],
 ) => {
-  log("Printing reports");
-  indent();
   log("Running dev server");
 
   /** clear folder */
@@ -30,55 +29,54 @@ export const printReports = async (
       const [host] = chunk.match(hostPattern) ?? [];
       if (host) resolve(host);
     });
-    setTimeout(() => reject("Waiting for dev server timed out"), 30 * 1000);
+    setTimeout(() => reject("Waiting for dev server timed out"), 5 * 1000);
   });
+
   log(`Running on ${host}`);
 
-  /** go to dev server */
-  const { browser, page } = await browserInstance();
+  const { browser, newPage } = await browserInstance();
 
-  for (const [key, value] of Object.entries(pages)) {
-    let route = "";
-    let filename = "";
-    if (typeof value === "string") {
+  log(`Printing ${pages.length.toLocaleString()} pages`);
+
+  /** run in parallel */
+  const { results, errors } = await allSettled(
+    pages,
+    async (route: (typeof pages)[number]) => {
       /** make filename from route */
-      route = value;
-      filename = value
+      const filename = route
         .replace(/^\//, "")
         .replace(/\/$/, "")
         .replaceAll("/", "_");
-    } else {
-      /** explicit route and filename */
-      route = value.route;
-      filename = value.filename;
-    }
 
-    progress(`Printing ${route}`, key, pages);
+      /** go to route that shows report */
+      const page = await newPage();
+      await page.goto(host + route);
 
-    /** go to route that shows report */
-    await page.goto(host + route);
+      /** wait for app to render */
+      await page.emulateMedia({ media: "print" });
+      await page.waitForSelector("main");
 
-    /** wait for app to render */
-    await page.emulateMedia({ media: "print" });
-    await page.waitForSelector("main");
+      /** force page resize event for e.g. auto-resizing charts */
+      await page.setViewportSize({ width: 8.5 * 96, height: 11 * 96 });
 
-    /** force page resize event for e.g. auto-resizing charts */
-    await page.setViewportSize({ width: 8.5 * 96, height: 11 * 96 });
+      /** wait for animations to finish */
+      await page.waitForTimeout(1000);
 
-    /** wait for animations to finish */
-    await page.waitForTimeout(1000);
-
-    /** print pdf */
-    await page.pdf({
-      path: `${PDF_PATH}/${filename}.pdf`,
-      format: "letter",
-      landscape: true,
-    });
-  }
+      /** print pdf */
+      await page.pdf({
+        path: `${PDF_PATH}/${filename}.pdf`,
+        format: "letter",
+        landscape: true,
+      });
+    },
+  );
 
   /** close app */
-  await browser.close();
   dev.kill();
+  await browser.close();
 
-  log(`Printed ${pages.length} PDFs`, "success");
+  if (results.length)
+    log(`Printed ${results.length.toLocaleString()} PDFs`, "success");
+  if (errors.length)
+    log(`Error printing ${errors.length.toLocaleString()} PDFs`, "error");
 };
