@@ -2,7 +2,10 @@ import { sum, uniq, uniqBy } from "lodash-es";
 import { queryReporter } from "@/api/reporter";
 import type { ProjectsQuery } from "@/api/reporter-projects-query";
 import type { ProjectsResults } from "@/api/reporter-projects-results";
+import { saveJson } from "@/util/file";
 import { log } from "@/util/log";
+
+const { RAW_PATH } = process.env;
 
 /** get grant projects associated with funding opportunities */
 export const getProjects = async (opportunities: string[]) => {
@@ -15,6 +18,8 @@ export const getProjects = async (opportunities: string[]) => {
     ProjectsQuery,
     ProjectsResults
   >("projects", { criteria: { opportunity_numbers: opportunities } });
+
+  saveJson(projects, RAW_PATH, "projects-reporter");
 
   /** de-dupe */
   projects = uniqBy(projects, (project) => project.project_num);

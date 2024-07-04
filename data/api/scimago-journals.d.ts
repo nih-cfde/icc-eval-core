@@ -1,0 +1,26 @@
+export type Rank = {
+  Rank: number;
+  Sourceid: number;
+  Title: string;
+  Type: string;
+  Issn: string;
+  SJR: number;
+  "SJR Best Quartile": string;
+  "H index": number;
+  "Total Docs. (2023)": number;
+  "Total Docs. (3years)": number;
+  "Total Refs.": number;
+  "Total Cites (3years)": number;
+  "Citable Docs. (3years)": number;
+  "Cites / Doc. (2years)": number;
+  "Ref. / Doc.": number;
+  "%Female": number;
+  Overton: number;
+  SDG: number;
+  Country: string;
+  Region: string;
+  Publisher: string;
+  Coverage: string;
+  Categories: string;
+  Areas: string;
+};

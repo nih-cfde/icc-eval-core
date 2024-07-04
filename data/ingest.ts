@@ -1,13 +1,14 @@
-import { mkdirSync, rmSync } from "fs";
 import { getJournals } from "@/ingest/journals";
 import { getOpportunities } from "@/ingest/opportunities";
 import { getProjects } from "@/ingest/projects";
 import { getPublications } from "@/ingest/publications";
 import { browser } from "@/util/browser";
-import { saveJson } from "@/util/file";
+import { clearFolder, saveJson } from "@/util/file";
 import { divider } from "@/util/log";
 
-const { DATA_PATH = "" } = process.env;
+const { RAW_PATH, OUTPUT_PATH } = process.env;
+
+clearFolder(RAW_PATH);
 
 divider("Opportunities");
 
@@ -15,7 +16,7 @@ const opportunities = await getOpportunities();
 
 divider("Projects");
 
-let { coreProjects, projects } = await getProjects(
+const { coreProjects, projects } = await getProjects(
   opportunities.map((opportunity) => opportunity.id),
 );
 
@@ -37,14 +38,13 @@ const journals = await getJournals(
 
 divider("Saving");
 
-/** clear folder */
-rmSync(DATA_PATH, { force: true, recursive: true });
-mkdirSync(DATA_PATH, { recursive: true });
+clearFolder(OUTPUT_PATH);
 
-saveJson(opportunities, "opportunities");
-saveJson(coreProjects, "core-projects");
-saveJson(projects, "projects");
-saveJson(publications, "publications");
-saveJson(journals, "journals");
+/** save output data */
+saveJson(opportunities, OUTPUT_PATH, "opportunities");
+saveJson(coreProjects, OUTPUT_PATH, "core-projects");
+saveJson(projects, OUTPUT_PATH, "projects");
+saveJson(publications, OUTPUT_PATH, "publications");
+saveJson(journals, OUTPUT_PATH, "journals");
 
 await browser.close();

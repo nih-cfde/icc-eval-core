@@ -1,10 +1,9 @@
 import { exec } from "child_process";
-import { mkdirSync, rmSync } from "fs";
 import { newPage } from "@/util/browser";
 import { deindent, indent, log } from "@/util/log";
 import { allSettled } from "@/util/request";
 
-const { PDF_PATH = "" } = process.env;
+const { PDF_PATH } = process.env;
 
 /** regex pattern for where dashboard app is run in dev mode */
 const hostPattern = /http:\/\/(localhost|(\d+\.\d+\.\d+\.\d+)):\d\d\d\d/;
@@ -15,10 +14,6 @@ export const printReports = async (
   pages: string[],
 ) => {
   log("Running dev server");
-
-  /** clear folder */
-  rmSync(PDF_PATH, { force: true, recursive: true });
-  mkdirSync(PDF_PATH, { recursive: true });
 
   /** run app */
   const dev = exec("yarn --cwd $APP_PATH dev", () => null);

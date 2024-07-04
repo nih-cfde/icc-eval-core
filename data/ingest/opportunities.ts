@@ -1,7 +1,6 @@
 import { uniq, uniqBy } from "lodash-es";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { newPage } from "@/util/browser";
-import { saveJson } from "@/util/file";
 import { deindent, indent, log } from "@/util/log";
 import { allSettled } from "@/util/request";
 

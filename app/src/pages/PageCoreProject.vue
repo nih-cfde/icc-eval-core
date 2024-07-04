@@ -80,6 +80,7 @@ import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { carve } from "@/util/array";
 import coreProjects from "~/core-projects.json";
+import journals from "~/journals.json";
 import publications from "~/publications.json";
 
 const { params } = useRoute();
@@ -98,9 +99,22 @@ const coreProject = computed(
   () => coreProjects.find((coreProject) => coreProject.id === id.value)!,
 );
 
-/** convert data from object to array */
 const rows = computed(() =>
-  publications.filter((publication) => publication.core_project === id.value),
+  /** get publication matching this core project */
+  publications
+    .filter((publication) => publication.core_project === id.value)
+    .map((publication) => {
+      /** look up journal matching this publication */
+      const journal = journals.find(
+        (journal) => journal.id === publication.journal,
+      );
+      /** include journal info */
+      return {
+        ...publication,
+        rank: journal?.rank ?? 0,
+        journal: journal?.name ?? publication.journal,
+      };
+    }),
 );
 
 /** table column definitions */
@@ -116,6 +130,12 @@ const cols: Cols<typeof rows.value> = [
     name: "RCR",
     style: { justifyContent: "center" },
     attrs: { title: "Relative Citation Ratio" },
+  },
+  {
+    key: "rank",
+    name: "SJR",
+    style: { justifyContent: "center" },
+    attrs: { title: "Scimago Journal Rank" },
   },
   {
     slot: "citations",

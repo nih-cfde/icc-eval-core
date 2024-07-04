@@ -74,7 +74,7 @@ export const allSettled = async <Input, Result>(
   );
   const errors = settled.flatMap((result, index) =>
     result.status === "rejected"
-      ? [{ input: input[index]!, value: result.reason }]
+      ? [{ input: input[index]!, value: result.reason as Error }]
       : [],
   );
 
