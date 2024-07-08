@@ -4,10 +4,7 @@ import type { Datum } from "@/api/icite-results";
 import { queryReporter } from "@/api/reporter";
 import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
 import type { PublicationsResults } from "@/api/reporter-publications-results.d";
-import { saveJson } from "@/util/file";
 import { log } from "@/util/log";
-
-const { RAW_PATH } = process.env;
 
 /** get publications associated with core projects */
 export const getPublications = async (coreProjects: string[]) => {
@@ -25,8 +22,6 @@ export const getPublications = async (coreProjects: string[]) => {
     PublicationsResults
   >("publications", { criteria: { core_project_nums: coreProjects } });
 
-  saveJson(reporterResults, RAW_PATH, "publications-reporter");
-
   /** de-dupe */
   reporterResults = uniqBy(reporterResults, (result) => result.pmid);
 
@@ -41,8 +36,6 @@ export const getPublications = async (coreProjects: string[]) => {
       .map((result) => result.pmid)
       .filter((id): id is number => !!id),
   );
-
-  saveJson(reporterResults, RAW_PATH, "publications-icite");
 
   /** de-dupe */
   iciteResults = uniqBy(iciteResults, (result) => result.pmid);

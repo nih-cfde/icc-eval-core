@@ -1,4 +1,4 @@
-import { readFileSync } from "fs";
+import { existsSync, readFileSync } from "fs";
 import { parse } from "csv-parse/sync";
 import { uniq, uniqBy } from "lodash-es";
 import type { Rank } from "@/api/scimago-journals";
@@ -20,20 +20,25 @@ export const getJournals = async (journalIds: string[]) => {
   /** de-dupe */
   journalIds = uniq(journalIds);
 
-  log(`Downloading from ${ranksUrl}`);
+  const rankDataPath = `${RAW_PATH}/journals-scimago.csv`;
 
   /** download raw data */
-  const page = await newPage();
-  await page.goto(ranksUrl);
-  const downloadPromise = page.waitForEvent("download", { timeout: 30 * 1000 });
-  await page.getByText("Download data").click();
-  const download = await downloadPromise;
-  await download.saveAs(`${RAW_PATH}/journals-scimago.csv`);
+  if (!existsSync(rankDataPath)) {
+    log(`Downloading from ${ranksUrl}`);
+    const page = await newPage();
+    await page.goto(ranksUrl, { timeout: 30 * 1000 });
+    const downloadPromise = page.waitForEvent("download", {
+      timeout: 30 * 1000,
+    });
+    await page.getByText("Download data").click();
+    const download = await downloadPromise;
+    await download.saveAs(rankDataPath);
+  }
 
   log(`Parsing CSV`);
 
   /** parse raw data */
-  const rankData = parse(readFileSync(await download.path()), {
+  const rankData = parse(readFileSync(rankDataPath), {
     columns: true,
     delimiter: ";",
     skipEmptyLines: true,

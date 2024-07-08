@@ -1,3 +1,4 @@
+import { getRepos } from "@/ingest/github";
 import { getJournals } from "@/ingest/journals";
 import { getOpportunities } from "@/ingest/opportunities";
 import { getProjects } from "@/ingest/projects";
@@ -6,10 +7,7 @@ import { browser } from "@/util/browser";
 import { clearFolder, saveJson } from "@/util/file";
 import { divider } from "@/util/log";
 
-const { RAW_PATH, OUTPUT_PATH } = process.env;
-
-/** clear existing raw data */
-clearFolder(RAW_PATH);
+const { OUTPUT_PATH } = process.env;
 
 divider("Opportunities");
 
@@ -36,6 +34,12 @@ divider("Journals");
 const journals = await getJournals(
   publications.map((publication) => publication.journal),
 );
+
+divider("GitHub");
+
+const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
+
+console.log(repos);
 
 divider("Saving");
 

@@ -2,8 +2,8 @@
   "type": "module",
   "scripts": {
     "install-playwright": "playwright install chrome",
-    "ingest": "tsx --env-file=.env ./ingest.ts",
-    "print": "tsx --env-file=.env ./print.ts",
+    "ingest": "tsx --env-file=.env --env-file=.env.local ./ingest.ts",
+    "print": "tsx --env-file=.env --env-file=.env.local ./print.ts",
     "lint": "eslint . --fix && prettier **/*.{ts,md} --write",
     "test:lint": "eslint . && prettier **/*.{ts,md} --check",
     "test:types": "tsc --noemit",
@@ -15,6 +15,7 @@
     "chalk": "^5.3.0",
     "csv": "^6.3.9",
     "lodash-es": "^4.17.21",
+    "octokit": "^4.0.2",
     "pdfjs-dist": "^4.4.168",
     "tsx": "^4.16.2"
   },

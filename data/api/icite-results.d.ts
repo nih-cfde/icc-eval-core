@@ -1,4 +1,4 @@
-export type IciteResults = {
+export type Results = {
   meta: Meta;
   links: Links;
   data: Datum[];
