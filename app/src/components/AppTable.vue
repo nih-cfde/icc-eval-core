@@ -209,7 +209,7 @@ const table = useVueTable({
 }
 
 .icon-inactive {
-  color: var(--gray);
+  color: var(--light-gray);
 }
 
 .icon-active {

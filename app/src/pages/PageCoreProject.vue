@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2><Microscope />Core Project {{ id }}</h2>
+    <h1><Microscope />Core Project {{ id }}</h1>
   </section>
 
   <section>
@@ -60,10 +60,6 @@
         }}
       </template>
     </AppTable>
-
-    <AppButton :to="`/pdfs/${coreProject}.pdf`" download target="_blank"
-      >PDF<Download
-    /></AppButton>
   </section>
 </template>
 
@@ -73,9 +69,7 @@ import { useRoute } from "vue-router";
 import { truncate } from "lodash";
 import { useTitle } from "@vueuse/core";
 import Book from "@/assets/book.svg";
-import Download from "@/assets/download.svg";
 import Microscope from "@/assets/microscope.svg";
-import AppButton from "@/components/AppButton.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { carve } from "@/util/array";
@@ -99,6 +93,7 @@ const coreProject = computed(
   () => coreProjects.find((coreProject) => coreProject.id === id.value)!,
 );
 
+/** table row data */
 const rows = computed(() =>
   /** get publication matching this core project */
   publications

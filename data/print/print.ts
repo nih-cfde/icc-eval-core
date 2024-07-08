@@ -5,15 +5,19 @@ import { allSettled } from "@/util/request";
 
 const { PDF_PATH } = process.env;
 
+/** us letter size, landscape, in css units */
+const width = 11 * 96;
+const height = 8.5 * 96;
+
 /** regex pattern for where dashboard app is run in dev mode */
 const hostPattern = /http:\/\/(localhost|(\d+\.\d+\.\d+\.\d+)):\d\d\d\d/;
 
 /** render dashboard reports to PDF */
 export const printReports = async (
   /** dashboard pages to render as reports */
-  pages: string[],
+  pages: { route: string; filename: string }[],
 ) => {
-  log("Running dev server");
+  log("Running app");
 
   /** run app */
   const dev = exec("yarn --cwd $APP_PATH dev", () => null);
@@ -35,13 +39,7 @@ export const printReports = async (
   /** run in parallel */
   const { results, errors } = await allSettled(
     pages,
-    async (route: (typeof pages)[number]) => {
-      /** make filename from route */
-      const filename = route
-        .replace(/^\//, "")
-        .replace(/\/$/, "")
-        .replaceAll("/", "_");
-
+    async ({ route, filename }: (typeof pages)[number]) => {
       /** go to route that shows report */
       const url = host + route;
       log(url, "start");
@@ -53,21 +51,23 @@ export const printReports = async (
       await page.waitForSelector("main");
 
       /** force page resize event for e.g. auto-resizing charts */
-      await page.setViewportSize({ width: 8.5 * 96, height: 11 * 96 });
+      await page.setViewportSize({ width, height });
 
-      /** wait for animations to finish */
-      await page.waitForTimeout(1000);
+      /** wait for rendering, layout shifts, animations, etc. to finish */
+      await page.waitForTimeout(2000);
 
       /** print pdf */
       await page.pdf({
         path: `${PDF_PATH}/${filename}.pdf`,
         format: "letter",
         landscape: true,
+        width,
+        height,
       });
     },
-    (route) => log(route, "start"),
-    (route) => log(route, "success"),
-    (route) => log(route, "warn"),
+    (page) => log(page.route, "start"),
+    (page) => log(page.route, "success"),
+    (page) => log(page.route, "warn"),
   );
   deindent();
 

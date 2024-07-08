@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2><Microscope />Core Projects</h2>
+    <h1><Microscope />Core Projects</h1>
   </section>
 
   <section>
@@ -10,7 +10,7 @@
       :sort="[{ id: 'award_amount', desc: true }]"
     >
       <template #id="{ row }">
-        <RouterLink :to="`/core-project/${row.id}`">{{ row.id }}</RouterLink>
+        <AppLink :to="`/core-project/${row.id}`">{{ row.id }}</AppLink>
       </template>
 
       <template #name="{ row }">
@@ -41,9 +41,11 @@
 <script setup lang="ts">
 import { truncate } from "lodash";
 import Microscope from "@/assets/microscope.svg";
+import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import coreProjects from "~/core-projects.json";
 
+/** table row data */
 const rows = coreProjects;
 
 /** table column definitions */

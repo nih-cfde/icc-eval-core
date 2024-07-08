@@ -2,9 +2,10 @@ import playwright from "playwright";
 import { deindent, indent, log } from "@/util/log";
 
 /** set up browser instance, page, etc */
-export const browser = await playwright.chromium.launch();
+export const browser = await playwright.chromium.launch({ headless: true });
 export const context = await browser.newContext();
 
+/** options */
 context.setDefaultTimeout(10 * 1000);
 
 /** create new browser tab */

@@ -6,6 +6,7 @@ import PageCoreProjects from "./pages/PageCoreProjects.vue";
 import PageHome from "./pages/PageHome.vue";
 import "./styles.css";
 
+/** app pages */
 const routes = [
   {
     name: "Home",

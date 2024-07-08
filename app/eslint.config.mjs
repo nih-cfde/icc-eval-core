@@ -31,6 +31,10 @@ export default [
       "prefer-const": ["error", { destructuring: "all" }],
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-imports": "error",
+      "vuejs-accessibility/label-has-for": [
+        "error",
+        { required: { some: ["nesting", "id"] } },
+      ],
     },
     files: ["**/*.ts", "**/*.vue"],
   },

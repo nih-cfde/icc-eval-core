@@ -8,6 +8,7 @@ import { divider } from "@/util/log";
 
 const { RAW_PATH, OUTPUT_PATH } = process.env;
 
+/** clear existing raw data */
 clearFolder(RAW_PATH);
 
 divider("Opportunities");
@@ -38,6 +39,7 @@ const journals = await getJournals(
 
 divider("Saving");
 
+/** clear existing output data */
 clearFolder(OUTPUT_PATH);
 
 /** save output data */
