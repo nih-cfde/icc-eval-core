@@ -28,6 +28,7 @@ export default [
     },
     rules: {
       "prettier/prettier": "warn",
+      "no-unused-vars": "warn",
       "prefer-const": ["error", { destructuring: "all" }],
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-imports": "error",

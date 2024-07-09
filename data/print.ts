@@ -7,7 +7,7 @@ import { divider } from "@/util/log";
 const { OUTPUT_PATH, PDF_PATH } = process.env;
 
 /** clear existing pdfs */
-clearFolder(PDF_PATH);
+// clearFolder(PDF_PATH);
 
 divider("Printing reports");
 

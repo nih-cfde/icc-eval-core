@@ -42,7 +42,7 @@ const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
 divider("Saving");
 
 /** clear existing output data */
-clearFolder(OUTPUT_PATH);
+// clearFolder(OUTPUT_PATH);
 
 /** save output data */
 saveJson(opportunities, OUTPUT_PATH, "opportunities");
