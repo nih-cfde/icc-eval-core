@@ -45,10 +45,19 @@
         <span>Software</span>
         <span>
           {{ projectRepos.length.toLocaleString() }} repositories<br />
-          {{ sumBy(projectRepos, "stars").toLocaleString() }} stars<br />
-          {{ sumBy(projectRepos, "forks").toLocaleString() }} forks<br />
-          {{ sumBy(projectRepos, "watchers").toLocaleString() }} watchers<br />
-          {{ sumBy(projectRepos, "issues").toLocaleString() }} open issues<br />
+          <template v-if="projectRepos.length">
+            {{
+              sumBy(projectRepos, (repo) => repo.stars.length).toLocaleString()
+            }}
+            stars<br />
+            {{ sumBy(projectRepos, "watchers").toLocaleString() }}
+            watchers<br />
+            {{
+              sumBy(projectRepos, (repo) => repo.forks.length).toLocaleString()
+            }}
+            forks<br />
+            {{ sumBy(projectRepos, "issues").toLocaleString() }} open issues<br />
+          </template>
         </span>
       </div>
     </div>
@@ -86,14 +95,18 @@
       </template>
     </AppTable>
 
-    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+    <template v-if="Object.keys(publicationsOverTime).length > 1">
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
-    <AppLineChart
-      class="chart"
-      :title="cumulative ? 'Cumulative Publications' : 'Publications Per Year'"
-      :data="publicationsOverTime"
-      :cumulative="cumulative"
-    />
+      <AppLineChart
+        class="chart"
+        :title="
+          cumulative ? 'Cumulative Publications' : 'Publications Per Year'
+        "
+        :data="publicationsOverTime"
+        :cumulative="cumulative"
+      />
+    </template>
   </section>
 
   <section>
@@ -112,6 +125,25 @@
         ({{ ago(row.modified) }})
       </template>
     </AppTable>
+
+    <template v-if="Object.keys(starsOverTime).length > 1">
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+      <div class="charts">
+        <AppLineChart
+          class="chart"
+          :title="cumulative ? 'Cumulative Stars' : 'Stars Per Year'"
+          :data="starsOverTime"
+          :cumulative="cumulative"
+        />
+        <AppLineChart
+          class="chart"
+          :title="cumulative ? 'Cumulative Forks' : 'Forks Per Year'"
+          :data="forksOverTime"
+          :cumulative="cumulative"
+        />
+      </div>
+    </template>
   </section>
 </template>
 
@@ -133,14 +165,14 @@ import journals from "~/journals.json";
 import publications from "~/publications.json";
 import repos from "~/repos.json";
 
-const { params } = useRoute();
+const route = useRoute();
 
 /** whether charts should be shown in cumulative mode */
 const cumulative = ref(true);
 
 /** currently viewed core project id */
 const id = computed(() =>
-  Array.isArray(params.id) ? params.id[0] : params.id,
+  Array.isArray(route.params.id) ? route.params.id[0] : route.params.id,
 );
 
 /** set tab title */
@@ -232,7 +264,6 @@ const publicationsOverTime = computed(() =>
   overTime(
     publications.filter((publication) => publication.core_project === id.value),
     "year",
-    (d) => d.length,
   ),
 );
 
@@ -277,4 +308,26 @@ const repoCols: Cols<typeof projectRepos.value> = [
     name: "Language",
   },
 ];
+
+/** star chart data */
+const starsOverTime = computed(() =>
+  overTime(
+    repos
+      .filter((repo) => repo.core_project === id.value)
+      .map((repo) => repo.stars)
+      .flat(),
+    (d) => new Date(d).getUTCFullYear(),
+  ),
+);
+
+/** fork chart data */
+const forksOverTime = computed(() =>
+  overTime(
+    repos
+      .filter((repo) => repo.core_project === id.value)
+      .map((repo) => repo.forks)
+      .flat(),
+    (d) => new Date(d).getUTCFullYear(),
+  ),
+);
 </script>

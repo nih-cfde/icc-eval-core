@@ -27,7 +27,10 @@ const chart = ref<ComponentInstance<typeof VChart>>();
 const { width, height } = useElementSize(() => chart.value?.root);
 watchEffect(() => {
   /** manually resize */
-  chart.value?.resize({ width: width.value, height: height.value });
+  chart.value?.resize({
+    width: width.value ?? 200,
+    height: height.value ?? 200,
+  });
 });
 
 type Props = {

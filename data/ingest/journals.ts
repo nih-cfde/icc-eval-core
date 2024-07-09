@@ -47,6 +47,7 @@ export const getJournals = async (journalIds: string[]) => {
     try {
       return readFileSync(rankDataPath);
     } catch (error) {
+      error;
       return "";
     }
   })();

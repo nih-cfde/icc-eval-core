@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable */
 namespace NodeJS {
   type ProcessEnv = {
     readonly RAW_PATH: string;

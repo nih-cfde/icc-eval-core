@@ -183,7 +183,7 @@ tbody tr {
 .charts {
   display: grid;
   --cols: 3;
-  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   place-content: center;
   place-items: center;
   width: 100%;
@@ -194,18 +194,6 @@ tbody tr {
 .charts > * {
   aspect-ratio: 4 / 3;
   max-width: calc(var(--content) / 2);
-}
-
-@media (max-width: 1000px) {
-  .charts {
-    --cols: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .charts {
-    --cols: 1;
-  }
 }
 
 /** simple two-col auto-sized table of key/value pairs */
@@ -278,7 +266,8 @@ tbody tr {
 }
 
 .vue-echarts-inner {
-  display: contents !important;
+  width: unset !important;
+  height: unset !important;
 }
 
 .vue-echarts-inner > div {

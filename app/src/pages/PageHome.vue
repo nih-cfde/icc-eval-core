@@ -108,10 +108,8 @@ const projects = rawProjects.map((raw) => ({
 const cumulative = ref(true);
 
 /** chart number of projects over time */
-const projectsOverTime = overTime(
-  projects,
-  (d) => d.date_start.getUTCFullYear(),
-  (d) => d.length,
+const projectsOverTime = overTime(projects, (d) =>
+  d.date_start.getUTCFullYear(),
 );
 
 /** chart award amount over time */
@@ -122,5 +120,5 @@ const awardsOverTime = overTime(
 );
 
 /** chart number of publications over time */
-const publicationsOverTime = overTime(publications, "year", (d) => d.length);
+const publicationsOverTime = overTime(publications, "year");
 </script>

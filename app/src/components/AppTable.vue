@@ -63,6 +63,10 @@
             </div>
           </td>
         </tr>
+
+        <tr v-if="!table.getRowModel().rows.length">
+          <td class="empty" :colspan="cols.length">No data</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -247,5 +251,11 @@ const cellStyle = (col?: Cols[number]) => ({
   .icon-active {
     display: none;
   }
+}
+
+.empty {
+  padding: 5px;
+  color: var(--gray);
+  text-align: center;
 }
 </style>
