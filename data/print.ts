@@ -1,13 +1,10 @@
 import coreProjects from "@/output/core-projects.json";
 import { printReports } from "@/print/print";
 import { browser } from "@/util/browser";
-import { clearFolder, saveJson } from "@/util/file";
+import { saveJson } from "@/util/file";
 import { divider } from "@/util/log";
 
-const { OUTPUT_PATH, PDF_PATH } = process.env;
-
-/** clear existing pdfs */
-// clearFolder(PDF_PATH);
+const { OUTPUT_PATH } = process.env;
 
 divider("Printing reports");
 

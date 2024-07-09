@@ -17,10 +17,6 @@
         {{ truncate(row.name, { length: 50 }) }}
       </template>
 
-      <template #projects="{ row }">
-        {{ row.projects.length.toLocaleString() }}
-      </template>
-
       <template #award-amount="{ row }">
         {{
           row.award_amount.toLocaleString(undefined, {
@@ -29,10 +25,6 @@
             notation: "compact",
           })
         }}
-      </template>
-
-      <template #publications="{ row }">
-        {{ row.publications.toLocaleString() }}
       </template>
     </AppTable>
   </section>
@@ -54,36 +46,34 @@ const cols: Cols<typeof rows> = [
     slot: "id",
     key: "id",
     name: "ID",
+    align: "left",
   },
   {
     slot: "name",
     key: "name",
     name: "Name",
+    align: "left",
   },
   {
     slot: "activity-code",
     key: "activity_code",
     name: "Activity Code",
-    style: { justifyContent: "center" },
   },
   {
     slot: "projects",
     key: "projects",
     name: "Projects",
-    style: { justifyContent: "center" },
   },
   {
     slot: "award-amount",
     key: "award_amount",
     name: "Award",
-    style: { justifyContent: "center" },
     attrs: { title: "Total award amount across all projects" },
   },
   {
     slot: "publications",
     key: "publications",
     name: "Publications",
-    style: { justifyContent: "center" },
   },
 ];
 </script>

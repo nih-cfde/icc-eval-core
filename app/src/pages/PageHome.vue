@@ -4,7 +4,7 @@
   </section>
 
   <section>
-    <h3>Totals</h3>
+    <h2>Totals</h2>
 
     <div class="mini-table">
       <div>
@@ -47,8 +47,10 @@
         </span>
       </div>
     </div>
+  </section>
 
-    <h3>Over Time</h3>
+  <section>
+    <h2>Over Time</h2>
 
     <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 

@@ -4,17 +4,26 @@
   </section>
 
   <section>
-    <h3>Details</h3>
+    <h2>Details</h2>
 
     <div class="mini-table">
+      <div>
+        <span>Projects</span>
+        <span>
+          <template
+            v-for="(project, _index) of coreProject.projects"
+            :key="_index"
+          >
+            {{ project }}<br />
+          </template>
+        </span>
+      </div>
+
       <div>
         <span>Name</span>
         <span>{{ coreProject.name }}</span>
       </div>
-      <div>
-        <span>Projects</span>
-        <span>{{ coreProject.projects.join(", ") }}</span>
-      </div>
+
       <div>
         <span>Award</span>
         <span>
@@ -26,17 +35,31 @@
           }}
         </span>
       </div>
+
       <div>
         <span>Publications</span>
         <span>{{ publications.length.toLocaleString() }}</span>
       </div>
-    </div>
 
-    <h3>Publications</h3>
+      <div>
+        <span>Software</span>
+        <span>
+          {{ projectRepos.length.toLocaleString() }} repositories<br />
+          {{ sumBy(projectRepos, "stars").toLocaleString() }} stars<br />
+          {{ sumBy(projectRepos, "forks").toLocaleString() }} forks<br />
+          {{ sumBy(projectRepos, "watchers").toLocaleString() }} watchers<br />
+          {{ sumBy(projectRepos, "issues").toLocaleString() }} open issues<br />
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
 
     <AppTable
-      :cols="cols"
-      :rows="rows"
+      :cols="publicationCols"
+      :rows="projectPublications"
       :sort="[{ id: 'relative_citation_ratio', desc: true }]"
     >
       <template #id="{ row }">
@@ -49,15 +72,10 @@
         </span>
       </template>
 
-      <template #citations="{ row }">
-        {{ row.citations.toLocaleString() }}
-      </template>
-      <template #citations_per_year="{ row }">
-        {{ row.citations_per_year.toLocaleString() }}
-      </template>
       <template #title="{ row }">
         {{ truncate(row.title, { length: 40 }) }}
       </template>
+
       <template #authors="{ row }">
         <template
           v-for="(author, _index) of carve(row.authors, 2)"
@@ -65,13 +83,6 @@
         >
           {{ author }}<br />
         </template>
-      </template>
-      <template #modified="{ row }">
-        {{
-          new Date(row.modified).toLocaleString(undefined, {
-            dateStyle: "medium",
-          })
-        }}
       </template>
     </AppTable>
 
@@ -84,12 +95,30 @@
       :cumulative="cumulative"
     />
   </section>
+
+  <section>
+    <h2>Repositories</h2>
+
+    <AppTable :cols="repoCols" :rows="projectRepos">
+      <template #name="{ row }">
+        <AppLink :to="`https://github.com/${row.owner}/${row.name}`"
+          >{{ row.owner }}/{{ row.name }}</AppLink
+        >
+      </template>
+
+      <template #modified="{ row }">
+        {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
+        <br />
+        ({{ ago(row.modified) }})
+      </template>
+    </AppTable>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { truncate } from "lodash";
+import { sumBy, truncate } from "lodash";
 import { useTitle } from "@vueuse/core";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
@@ -98,9 +127,11 @@ import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { carve } from "@/util/array";
 import { overTime } from "@/util/data";
+import { ago } from "@/util/string";
 import coreProjects from "~/core-projects.json";
 import journals from "~/journals.json";
 import publications from "~/publications.json";
+import repos from "~/repos.json";
 
 const { params } = useRoute();
 
@@ -121,8 +152,8 @@ const coreProject = computed(
   () => coreProjects.find((coreProject) => coreProject.id === id.value)!,
 );
 
-/** table row data */
-const rows = computed(() =>
+/** publication table row data */
+const projectPublications = computed(() =>
   /** get publication matching this core project */
   publications
     .filter((publication) => publication.core_project === id.value)
@@ -134,53 +165,52 @@ const rows = computed(() =>
       /** include journal info */
       return {
         ...publication,
+        year: String(publication.year),
+        modified: new Date(publication.modified),
         rank: journal?.rank ?? 0,
         journal: journal?.name ?? publication.journal,
       };
     }),
 );
 
-/** table column definitions */
-const cols: Cols<typeof rows.value> = [
+/** publication table column definitions */
+const publicationCols: Cols<typeof projectPublications.value> = [
   {
     slot: "id",
     key: "id",
     name: "ID",
+    align: "left",
     style: { whiteSpace: "nowrap" },
-  },
-  {
-    key: "relative_citation_ratio",
-    name: "RCR",
-    style: { justifyContent: "center" },
-    attrs: { title: "Relative Citation Ratio" },
-  },
-  {
-    key: "rank",
-    name: "SJR",
-    style: { justifyContent: "center" },
-    attrs: { title: "Scimago Journal Rank" },
-  },
-  {
-    slot: "citations",
-    key: "citations",
-    name: "Citations",
-    style: { justifyContent: "center" },
-  },
-  {
-    slot: "citations_per_year",
-    key: "citations_per_year",
-    name: "Cit./year",
-    style: { justifyContent: "center" },
   },
   {
     slot: "title",
     key: "title",
     name: "Title",
+    align: "left",
   },
   {
     slot: "authors",
     key: "authors",
     name: "Authors",
+    align: "left",
+  },
+  {
+    key: "relative_citation_ratio",
+    name: "RCR",
+    attrs: { title: "Relative Citation Ratio" },
+  },
+  {
+    key: "rank",
+    name: "SJR",
+    attrs: { title: "Scimago Journal Rank" },
+  },
+  {
+    key: "citations",
+    name: "Citations",
+  },
+  {
+    key: "citations_per_year",
+    name: "Cit./year",
   },
   {
     key: "journal",
@@ -189,16 +219,15 @@ const cols: Cols<typeof rows.value> = [
   {
     key: "year",
     name: "Published",
-    style: { justifyContent: "center" },
   },
   {
     slot: "modified",
     key: "modified",
     name: "Updated",
-    style: { justifyContent: "center" },
   },
 ];
 
+/** publication chart data */
 const publicationsOverTime = computed(() =>
   overTime(
     publications.filter((publication) => publication.core_project === id.value),
@@ -206,4 +235,46 @@ const publicationsOverTime = computed(() =>
     (d) => d.length,
   ),
 );
+
+/** repo table row data */
+const projectRepos = computed(() =>
+  repos
+    .filter((repo) => repo.core_project === id.value)
+    .map((repo) => ({ ...repo, modified: new Date(repo.modified) })),
+);
+
+/** repo table column definitions */
+const repoCols: Cols<typeof projectRepos.value> = [
+  {
+    slot: "name",
+    key: "id",
+    name: "Name",
+    align: "left",
+  },
+  {
+    key: "stars",
+    name: "Stars",
+  },
+  {
+    key: "forks",
+    name: "Forks",
+  },
+  {
+    key: "watchers",
+    name: "Watchers",
+  },
+  {
+    key: "issues",
+    name: "Open Issues",
+  },
+  {
+    slot: "modified",
+    key: "modified",
+    name: "Updated",
+  },
+  {
+    key: "language",
+    name: "Language",
+  },
+];
 </script>

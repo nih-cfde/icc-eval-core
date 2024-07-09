@@ -13,7 +13,10 @@
           >
             <button
               class="th"
-              :style="header.column.columnDef.meta?.colProp.style"
+              :style="{
+                ...cellStyle(header.column.columnDef.meta?.colProp),
+                ...header.column.columnDef.meta?.colProp.style,
+              }"
               v-bind="header.column.columnDef.meta?.colProp.attrs"
               @click="header.column.getToggleSortingHandler()?.($event)"
             >
@@ -40,7 +43,10 @@
           <td v-for="cell in row.getVisibleCells()" :key="cell.id">
             <div
               class="td"
-              :style="cell.column.columnDef.meta?.colProp.style"
+              :style="{
+                ...cellStyle(cell.column.columnDef.meta?.colProp),
+                ...cell.column.columnDef.meta?.colProp.style,
+              }"
               v-bind="cell.column.columnDef.meta?.colProp.attrs"
             >
               <slot
@@ -51,11 +57,9 @@
                 :name="cell.column.columnDef.meta?.colProp.slot"
                 :row="row.original"
               />
-              <FlexRender
-                v-else
-                :render="cell.column.columnDef.cell"
-                :props="cell.getContext()"
-              />
+              <template v-else>
+                {{ defaultFormat(cell.getValue()) }}
+              </template>
             </div>
           </td>
         </tr>
@@ -67,13 +71,15 @@
 <script lang="ts">
 type Cell = Record<string, unknown>;
 
-export type Cols<Rows extends Cell[]> = {
-  /** key of row object to access as cell value */
+export type Cols<Rows extends Cell[] = Cell[]> = {
+  /** key of row object to access as default cell value */
   key: Extract<keyof Rows[number], string>;
   /** slot name for custom cell rendering */
   slot?: string;
   /** label for header */
   name: string;
+  /** horizontal alignment */
+  align?: "left" | "center" | "right";
   /** cell attributes */
   attrs?: HTMLAttributes;
   /** cell style */
@@ -183,6 +189,26 @@ const table = useVueTable({
       pageSize: 999999,
     },
   },
+});
+
+/** default cell formatter based on inferred type */
+const defaultFormat = (cell: unknown) => {
+  if (typeof cell === "number") return cell.toLocaleString();
+  if (Array.isArray(cell)) return cell.length.toLocaleString();
+  if (cell instanceof Date)
+    return cell.toLocaleString(undefined, { dateStyle: "medium" });
+  if (!cell) return "-";
+  return cell;
+};
+
+/** get cell style from col definition */
+const cellStyle = (col?: Cols[number]) => ({
+  textAlign: col?.align ?? "center",
+  justifyContent: {
+    left: "flex-start",
+    center: "center",
+    right: "flex-end",
+  }[col?.align ?? "center"],
 });
 </script>
 

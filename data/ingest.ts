@@ -4,7 +4,7 @@ import { getOpportunities } from "@/ingest/opportunities";
 import { getProjects } from "@/ingest/projects";
 import { getPublications } from "@/ingest/publications";
 import { browser } from "@/util/browser";
-import { clearFolder, saveJson } from "@/util/file";
+import { saveJson } from "@/util/file";
 import { divider } from "@/util/log";
 
 const { OUTPUT_PATH } = process.env;
@@ -40,9 +40,6 @@ divider("GitHub");
 const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
 
 divider("Saving");
-
-/** clear existing output data */
-// clearFolder(OUTPUT_PATH);
 
 /** save output data */
 saveJson(opportunities, OUTPUT_PATH, "opportunities");
