@@ -4,6 +4,15 @@
     "id": 275234614,
     "owner": "vincerubinetti",
     "name": "svg-to-png",
+    "description": "Convert SVG to PNG right in your browser, reliably and correctly",
+    "commits": [
+      "2023-07-21T03:14:52Z",
+      "2023-07-02T16:33:06Z",
+      "2023-07-02T04:59:40Z",
+      "2023-07-02T04:05:50Z",
+      "2023-07-02T03:58:35Z",
+      "2020-09-15T19:17:13Z"
+    ],
     "stars": [
       "2021-09-24T09:27:49Z",
       "2021-10-18T01:14:03Z",
@@ -107,14 +116,22 @@
       "2021-10-18T01:14:08Z"
     ],
     "issues": 0,
+    "created": "2020-06-26T19:43:06Z",
     "modified": "2023-07-21T03:15:33Z",
-    "language": "TypeScript"
+    "language": "TypeScript",
+    "license": "MIT License"
   },
   {
     "core_project": "U54OD036472",
     "id": 808664915,
     "owner": "nih-cfde",
     "name": "icc-eval-core",
+    "description": "(WIP) Tools for collecting and reporting CFDE metrics",
+    "commits": [
+      "2024-07-02T19:11:08Z",
+      "2024-06-18T18:06:10Z",
+      "2024-05-31T14:46:26Z"
+    ],
     "stars": [
       "2024-07-09T19:05:31Z"
     ],
@@ -123,7 +140,9 @@
       "2024-07-09T19:06:04Z"
     ],
     "issues": 8,
+    "created": "2024-05-31T14:46:25Z",
     "modified": "2024-07-09T21:13:48Z",
-    "language": "TypeScript"
+    "language": "TypeScript",
+    "license": ""
   }
 ]

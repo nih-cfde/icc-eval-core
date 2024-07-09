@@ -82,12 +82,19 @@ export const getRepos = async (coreProjects: string[]) => {
       id: repo.id,
       owner: repo.owner?.login ?? "",
       name: repo.name,
+      description: repo.description ?? "",
+      commits: repo.commits.map(
+        (commit) =>
+          commit.commit.committer?.date ?? commit.commit.author?.date ?? "",
+      ),
       stars: repo.stars.map((star) => star.starred_at ?? ""),
       watchers: repo.watchers,
       forks: repo.forks.map((fork) => fork.created_at ?? ""),
       issues: repo.open_issues,
+      created: repo.created_at,
       modified: repo.pushed_at,
-      language: repo.language,
+      language: repo.language ?? "",
+      license: repo.license?.name ?? "",
     }));
 
   return transformedRepos;

@@ -100,6 +100,7 @@ declare module "@tanstack/vue-table" {
 
 <script setup lang="ts" generic="Rows extends Cell[]">
 import { type CSSProperties, type HTMLAttributes, type VNode } from "vue";
+import { truncate } from "lodash";
 import {
   createColumnHelper,
   FlexRender,
@@ -202,6 +203,7 @@ const defaultFormat = (cell: unknown) => {
   if (cell instanceof Date)
     return cell.toLocaleString(undefined, { dateStyle: "medium" });
   if (!cell) return "-";
+  if (typeof cell === "string") return truncate(cell, { length: 100 });
   return cell;
 };
 

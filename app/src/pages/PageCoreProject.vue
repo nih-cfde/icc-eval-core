@@ -81,10 +81,6 @@
         </span>
       </template>
 
-      <template #title="{ row }">
-        {{ truncate(row.title, { length: 40 }) }}
-      </template>
-
       <template #authors="{ row }">
         <template
           v-for="(author, _index) of carve(row.authors, 2)"
@@ -126,31 +122,35 @@
       </template>
     </AppTable>
 
-    <template v-if="Object.keys(starsOverTime).length > 1">
-      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
-      <div class="charts">
-        <AppLineChart
-          class="chart"
-          :title="cumulative ? 'Cumulative Stars' : 'Stars Per Year'"
-          :data="starsOverTime"
-          :cumulative="cumulative"
-        />
-        <AppLineChart
-          class="chart"
-          :title="cumulative ? 'Cumulative Forks' : 'Forks Per Year'"
-          :data="forksOverTime"
-          :cumulative="cumulative"
-        />
-      </div>
-    </template>
+    <div class="charts">
+      <AppLineChart
+        class="chart"
+        :title="cumulative ? 'Cumulative Commits' : 'Commits Per Year'"
+        :data="commitsOverTime"
+        :cumulative="cumulative"
+      />
+      <AppLineChart
+        class="chart"
+        :title="cumulative ? 'Cumulative Stars' : 'Stars Per Year'"
+        :data="starsOverTime"
+        :cumulative="cumulative"
+      />
+      <AppLineChart
+        class="chart"
+        :title="cumulative ? 'Cumulative Forks' : 'Forks Per Year'"
+        :data="forksOverTime"
+        :cumulative="cumulative"
+      />
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { sumBy, truncate } from "lodash";
+import { sumBy } from "lodash";
 import { useTitle } from "@vueuse/core";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
@@ -215,7 +215,6 @@ const publicationCols: Cols<typeof projectPublications.value> = [
     style: { whiteSpace: "nowrap" },
   },
   {
-    slot: "title",
     key: "title",
     name: "Title",
     align: "left",
@@ -283,6 +282,15 @@ const repoCols: Cols<typeof projectRepos.value> = [
     align: "left",
   },
   {
+    key: "description",
+    name: "Description",
+    align: "left",
+  },
+  {
+    key: "commits",
+    name: "Commits",
+  },
+  {
     key: "stars",
     name: "Stars",
   },
@@ -308,6 +316,17 @@ const repoCols: Cols<typeof projectRepos.value> = [
     name: "Language",
   },
 ];
+
+/** commit chart data */
+const commitsOverTime = computed(() =>
+  overTime(
+    repos
+      .filter((repo) => repo.core_project === id.value)
+      .map((repo) => repo.commits)
+      .flat(),
+    (d) => new Date(d).getUTCFullYear(),
+  ),
+);
 
 /** star chart data */
 const starsOverTime = computed(() =>
