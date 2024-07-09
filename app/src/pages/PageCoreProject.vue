@@ -38,7 +38,7 @@
 
       <div>
         <span>Publications</span>
-        <span>{{ publications.length.toLocaleString() }}</span>
+        <span>{{ projectPublications.length.toLocaleString() }}</span>
       </div>
 
       <div>
