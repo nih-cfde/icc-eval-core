@@ -4,9 +4,9 @@ import { log } from "@/util/log";
 
 const { GITHUB_TOKEN } = process.env;
 
-/** number of times to try after being rate limited */
-const tries = 5;
-/** multiply wait time for extra safety */
+/** number of times to retry after being rate limited */
+const retries = 4;
+/** multiply retry wait time for extra safety */
 const waitFactor = 2;
 
 if (!GITHUB_TOKEN)
@@ -26,7 +26,7 @@ export const octokit = new withPlugins({
     onRateLimit: (retryAfter, options, octokit, retryCount) => {
       log(`Request quota exhausted for request`, "warn");
 
-      if (retryCount < tries) {
+      if (retryCount <= retries) {
         log(`Retrying in ${retryAfter}s, retry ${retryCount + 1}`, "warn");
         return true;
       }

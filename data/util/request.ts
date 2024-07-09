@@ -1,4 +1,8 @@
+import { loadJson, saveJson } from "@/util/file";
+
 export type Params = Record<string, unknown | unknown[]>;
+
+const { RAW_PATH } = process.env;
 
 /** generic request wrapper */
 export const request = async <Response>(
@@ -50,7 +54,19 @@ export const allSettled = async <Input, Result>(
   onSuccess?: (input: Input, result: Result) => void,
   /** func to run on each promise error */
   onError?: (input: Input, error: string) => void,
+  /** raw filename */
+  filename?: string,
 ) => {
+  /** if raw data already exists, return that without querying */
+  if (filename) {
+    const raw = await loadJson<Result[]>(RAW_PATH, filename);
+    if (raw)
+      return {
+        results: raw.map((r, index) => ({ input: input[index]!, value: r })),
+        errors: [],
+      };
+  }
+
   const settled = await Promise.allSettled(
     input.map(async (input) => {
       try {
@@ -77,6 +93,14 @@ export const allSettled = async <Input, Result>(
       ? [{ input: input[index]!, value: result.reason as Error }]
       : [],
   );
+
+  /** save raw data */
+  if (filename)
+    saveJson(
+      results.map((result) => result.value),
+      RAW_PATH,
+      filename,
+    );
 
   return { results, errors };
 };

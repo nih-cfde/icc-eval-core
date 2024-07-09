@@ -2,8 +2,10 @@ import { mkdirSync, rmSync, writeFileSync } from "fs";
 import { readFile } from "fs/promises";
 
 /** save json data to file */
-export const saveJson = (data: unknown, path: string, filename: string) =>
-  writeFileSync(`${path}/${filename}.json`, JSON.stringify(data));
+export const saveJson = (data: unknown, path: string, filename: string) => {
+  mkdirSync(path, { recursive: true });
+  writeFileSync(`${path}/${filename}.json`, JSON.stringify(data, null, 2));
+};
 
 /** load json data from file */
 export const loadJson = async <Data>(path: string, filename: string) => {

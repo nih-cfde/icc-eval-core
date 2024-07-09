@@ -39,8 +39,6 @@ divider("GitHub");
 
 const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
 
-console.log(repos);
-
 divider("Saving");
 
 /** clear existing output data */
@@ -52,5 +50,6 @@ saveJson(coreProjects, OUTPUT_PATH, "core-projects");
 saveJson(projects, OUTPUT_PATH, "projects");
 saveJson(publications, OUTPUT_PATH, "publications");
 saveJson(journals, OUTPUT_PATH, "journals");
+saveJson(repos, OUTPUT_PATH, "repos");
 
 await browser.close();

@@ -15,30 +15,44 @@ const searchUrl = "https://www.scimagojr.com/journalsearch.php?q=";
 /** selector to get first search result journal name */
 const nameSelector = ".jrnlname";
 
+/** increase timeout for slow scimago site */
+const options = { timeout: 30 * 1000 };
+
 /** get journal info */
 export const getJournals = async (journalIds: string[]) => {
   /** de-dupe */
   journalIds = uniq(journalIds);
 
-  const rankDataPath = `${RAW_PATH}/journals-scimago.csv`;
+  const rankDataPath = `${RAW_PATH}/scimago-journals.csv`;
 
   /** download raw data */
   if (!existsSync(rankDataPath)) {
-    log(`Downloading from ${ranksUrl}`);
-    const page = await newPage();
-    await page.goto(ranksUrl, { timeout: 30 * 1000 });
-    const downloadPromise = page.waitForEvent("download", {
-      timeout: 30 * 1000,
-    });
-    await page.getByText("Download data").click();
-    const download = await downloadPromise;
-    await download.saveAs(rankDataPath);
+    try {
+      log(`Downloading from ${ranksUrl}`);
+      const page = await newPage();
+      await page.goto(ranksUrl, options);
+      const downloadPromise = page.waitForEvent("download", options);
+      await page.getByText("Download data").click(options);
+      const download = await downloadPromise;
+      await download.saveAs(rankDataPath);
+    } catch (error) {
+      log(error, "warn");
+    }
   }
 
   log(`Parsing CSV`);
 
+  /** read local rank data file contents */
+  const rankDataContents = (() => {
+    try {
+      return readFileSync(rankDataPath);
+    } catch (error) {
+      return "";
+    }
+  })();
+
   /** parse raw data */
-  const rankData = parse(readFileSync(rankDataPath), {
+  const rankData = parse(rankDataContents, {
     columns: true,
     delimiter: ";",
     skipEmptyLines: true,
@@ -64,8 +78,8 @@ export const getJournals = async (journalIds: string[]) => {
     async (journalId) => {
       /** get full journal name from abbreviated name/id via journal search */
       const page = await newPage();
-      await page.goto(searchUrl + journalId.replaceAll(" ", "+"));
-      const name = await page.locator(nameSelector).first().innerText();
+      await page.goto(searchUrl + journalId.replaceAll(" ", "+"), options);
+      const name = await page.locator(nameSelector).first().innerText(options);
       const rank = rankLookup[name];
       if (!rank) throw Error("No matching rank");
       return rank;
@@ -73,6 +87,7 @@ export const getJournals = async (journalIds: string[]) => {
     (journal) => log(journal, "start"),
     (_, result) => log(result.Title, "success"),
     (journal) => log(journal, "warn"),
+    "scimago-journals",
   );
   deindent();
 

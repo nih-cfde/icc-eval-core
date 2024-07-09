@@ -1,48 +1,51 @@
-import type { components } from "@octokit/openapi-types";
 import { octokit } from "@/api/github";
-import { loadJson, saveJson } from "@/util/file";
 import { deindent, indent, log } from "@/util/log";
 import { allSettled } from "@/util/request";
 
-const { RAW_PATH } = process.env;
-
 export const getRepos = async (coreProjects: string[]) => {
-  /** filename for raw data */
-  const filename = "github-repos";
+  log(
+    `Getting repos for ${coreProjects.length.toLocaleString()} core projects`,
+  );
 
-  /** extract types of rest results */
-  type SearchResult = components["schemas"]["repo-search-result-item"] & {
-    core_project: string;
-  };
+  indent();
+  /** run in parallel */
+  const { results: repos, errors: repoErrors } = await allSettled(
+    coreProjects,
+    async (coreProject) => {
+      const repos = (
+        await octokit.rest.search.repos({ q: `topic:${coreProject}` })
+      ).data.items;
+      return repos.map((repo) => ({ core_project: coreProject, ...repo }));
+    },
+    (coreProject) => log(coreProject, "start"),
+    (coreProject, repos) =>
+      log(`${coreProject} (${repos.length.toLocaleString()} repos)`, "success"),
+    (coreProject) => log(coreProject, "warn"),
+    "github-repos",
+  );
+  deindent();
 
-  let repoResults: SearchResult[] = [];
+  if (repos.length)
+    log(`Got ${repos.length.toLocaleString()} repos`, "success");
+  if (repoErrors.length)
+    log(`Problem getting ${repoErrors.length.toLocaleString()} repos`, "warn");
 
-  /** if raw data already exists, return that without querying */
-  const raw = await loadJson<SearchResult[]>(RAW_PATH, filename);
-  if (raw) repoResults = raw;
-  else {
-    indent();
-    /** run in parallel */
-    const { results } = await allSettled(
-      coreProjects,
-      async (coreProject) => {
-        const repo = (
-          await octokit.rest.search.repos({ q: `topic:${coreProject}` })
-        ).data.items[0];
-        if (!repo) throw Error("Repo not found");
-        return { ...repo, core_project: coreProject };
-      },
-      (coreProject) => log(coreProject, "start"),
-      (coreProject) => log(coreProject, "success"),
-      (coreProject) => log(coreProject, "warn"),
-    );
-    deindent();
+  /** transform data into desired format, with fallbacks */
+  const transformedRepos = repos
+    .map((repo) => repo.value)
+    .flat()
+    .map((repo) => ({
+      core_project: repo.core_project,
+      id: repo.id,
+      owner: repo.owner?.name ?? repo.owner?.login,
+      name: repo.name,
+      stars: repo.stargazers_count,
+      forks: repo.forks,
+      watchers: repo.watchers,
+      issues: repo.open_issues,
+      modified: repo.pushed_at,
+      language: repo.language,
+    }));
 
-    repoResults = results.map((repoResult) => repoResult.value);
-  }
-
-  /** save raw data */
-  saveJson(repoResults, RAW_PATH, filename);
-
-  return repoResults;
+  return transformedRepos;
 };
