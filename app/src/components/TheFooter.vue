@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="row">
-      <AppLink v-if="pdf" :to="`/pdfs/${pdf}.pdf`" download target="_blank"
+      <AppLink v-if="pdf" :to="`/pdfs/${pdf}.pdf`" :new-tab="true"
         >PDF of this page<Download
       /></AppLink>
 

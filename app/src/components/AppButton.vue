@@ -9,23 +9,13 @@ import { computed } from "vue";
 import AppLink from "@/components/AppLink.vue";
 
 type Props = {
-  /** text to show */
-  text?: string;
-  /** icon to show */
-  icon?: string;
   /** location to link to */
   to?: string;
   /** on click action */
   click?: () => unknown;
 };
 
-const props = withDefaults(defineProps<Props>(), {
-  text: "",
-  icon: "",
-  to: "",
-  click: undefined,
-  download: undefined,
-});
+const props = defineProps<Props>();
 
 /** type of component to render */
 const component = computed(() => (props.to ? AppLink : "button"));
