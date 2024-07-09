@@ -4,21 +4,35 @@
   </section>
 
   <section>
+    <h3>Details</h3>
+
     <div class="mini-table">
-      <span>Name</span>
-      <span>{{ coreProject.name }}</span>
-      <span>Projects</span>
-      <span>{{ coreProject.projects.join(", ") }}</span>
-      <span>Award</span>
-      <span>{{
-        coreProject.award_amount.toLocaleString(undefined, {
-          style: "currency",
-          currency: "USD",
-        })
-      }}</span>
+      <div>
+        <span>Name</span>
+        <span>{{ coreProject.name }}</span>
+      </div>
+      <div>
+        <span>Projects</span>
+        <span>{{ coreProject.projects.join(", ") }}</span>
+      </div>
+      <div>
+        <span>Award</span>
+        <span>
+          {{
+            coreProject.award_amount.toLocaleString(undefined, {
+              style: "currency",
+              currency: "USD",
+            })
+          }}
+        </span>
+      </div>
+      <div>
+        <span>Publications</span>
+        <span>{{ publications.length.toLocaleString() }}</span>
+      </div>
     </div>
 
-    <h3><Book />Publications ({{ rows.length.toLocaleString() }})</h3>
+    <h3>Publications</h3>
 
     <AppTable
       :cols="cols"
@@ -60,24 +74,38 @@
         }}
       </template>
     </AppTable>
+
+    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+    <AppLineChart
+      class="chart"
+      :title="cumulative ? 'Cumulative Publications' : 'Publications Per Year'"
+      :data="publicationsOverTime"
+      :cumulative="cumulative"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { truncate } from "lodash";
 import { useTitle } from "@vueuse/core";
-import Book from "@/assets/book.svg";
 import Microscope from "@/assets/microscope.svg";
+import AppCheckbox from "@/components/AppCheckbox.vue";
+import AppLineChart from "@/components/AppLineChart.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { carve } from "@/util/array";
+import { overTime } from "@/util/data";
 import coreProjects from "~/core-projects.json";
 import journals from "~/journals.json";
 import publications from "~/publications.json";
 
 const { params } = useRoute();
+
+/** whether charts should be shown in cumulative mode */
+const cumulative = ref(true);
 
 /** currently viewed core project id */
 const id = computed(() =>
@@ -170,4 +198,12 @@ const cols: Cols<typeof rows.value> = [
     style: { justifyContent: "center" },
   },
 ];
+
+const publicationsOverTime = computed(() =>
+  overTime(
+    publications.filter((publication) => publication.core_project === id.value),
+    "year",
+    (d) => d.length,
+  ),
+);
 </script>

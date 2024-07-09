@@ -190,8 +190,10 @@ tbody tr {
   gap: 20px;
 }
 
+.chart,
 .charts > * {
   aspect-ratio: 4 / 3;
+  max-width: calc(var(--content) / 2);
 }
 
 @media (max-width: 1000px) {
@@ -210,17 +212,20 @@ tbody tr {
 
 .mini-table {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-auto-rows: min-content;
-  max-width: calc(var(--content) / 2);
-  gap: 10px 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  place-content: center;
+  max-width: 100%;
+  gap: 20px 30px;
   text-align: left;
 }
 
-.mini-table > :nth-child(odd) {
+.mini-table > div {
   display: flex;
-  align-items: center;
-  align-self: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mini-table > div > span:nth-child(odd) {
   gap: 10px;
   color: var(--gray);
   font-weight: var(--bold);

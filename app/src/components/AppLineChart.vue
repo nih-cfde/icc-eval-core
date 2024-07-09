@@ -84,7 +84,7 @@ const option = computed(() => {
       type: "line",
       data: props.cumulative
         ? Object.values(props.data).map((_, index) =>
-            sum(Object.values(props.data).slice(0, index)),
+            sum(Object.values(props.data).slice(0, index + 1)),
           )
         : Object.values(props.data),
     },
