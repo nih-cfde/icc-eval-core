@@ -315,6 +315,10 @@ const repoCols: Cols<typeof projectRepos.value> = [
     key: "language",
     name: "Language",
   },
+  {
+    key: "license",
+    name: "License",
+  },
 ];
 
 /** commit chart data */
