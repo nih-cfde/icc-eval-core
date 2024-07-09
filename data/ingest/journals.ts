@@ -10,6 +10,8 @@ const { RAW_PATH } = process.env;
 
 /** ranks url */
 const ranksUrl = "https://www.scimagojr.com/journalrank.php";
+/** raw data download text */
+const downloadText = "Download data";
 /** page to scrape */
 const searchUrl = "https://www.scimagojr.com/journalsearch.php?q=";
 /** selector to get first search result journal name */
@@ -31,9 +33,8 @@ export const getJournals = async (journalIds: string[]) => {
       log(`Downloading from ${ranksUrl}`);
       const page = await newPage();
       await page.goto(ranksUrl, options);
-      const downloadPromise = page.waitForEvent("download", options);
-      await page.getByText("Download data").click(options);
-      const download = await downloadPromise;
+      await page.getByText(downloadText).click(options);
+      const download = await page.waitForEvent("download", options);
       await download.saveAs(rankDataPath);
     } catch (error) {
       log(error, "warn");
