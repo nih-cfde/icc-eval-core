@@ -33,8 +33,13 @@ export const getJournals = async (journalIds: string[]) => {
       log(`Downloading from ${ranksUrl}`);
       const page = await newPage();
       await page.goto(ranksUrl, options);
+      /** https://playwright.dev/docs/downloads */
+      const downloadPromise = page
+        .waitForEvent("download", options)
+        /** https://github.com/microsoft/playwright/issues/21206 */
+        .catch((error) => log(error, "warn"));
       await page.getByText(downloadText).click(options);
-      const download = await page.waitForEvent("download", options);
+      const download = await downloadPromise;
       await download.saveAs(rankDataPath);
     } catch (error) {
       log(error, "warn");
