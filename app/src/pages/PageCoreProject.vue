@@ -47,6 +47,13 @@
           {{ projectRepos.length.toLocaleString() }} repositories<br />
           <template v-if="projectRepos.length">
             {{
+              sumBy(
+                projectRepos,
+                (repo) => repo.commits.length,
+              ).toLocaleString()
+            }}
+            commits<br />
+            {{
               sumBy(projectRepos, (repo) => repo.stars.length).toLocaleString()
             }}
             stars<br />
@@ -318,6 +325,14 @@ const repoCols: Cols<typeof projectRepos.value> = [
   {
     key: "license",
     name: "License",
+  },
+  {
+    key: "readme",
+    name: "Readme",
+  },
+  {
+    key: "contributing",
+    name: "Contributing",
   },
 ];
 

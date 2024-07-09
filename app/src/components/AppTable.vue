@@ -196,12 +196,13 @@ const table = useVueTable({
   },
 });
 
-/** default cell formatter based on inferred type */
+/** default cell formatter based on detected type */
 const defaultFormat = (cell: unknown) => {
   if (typeof cell === "number") return cell.toLocaleString();
   if (Array.isArray(cell)) return cell.length.toLocaleString();
   if (cell instanceof Date)
     return cell.toLocaleString(undefined, { dateStyle: "medium" });
+  if (typeof cell === "boolean") return cell ? "✓" : "✗";
   if (!cell) return "-";
   if (typeof cell === "string") return truncate(cell, { length: 100 });
   return cell;
@@ -220,7 +221,8 @@ const cellStyle = (col?: Cols[number]) => ({
 
 <style scoped>
 .scroll {
-  max-width: 100%;
+  width: calc(100vw - 100px);
+  max-width: max-content;
   overflow-x: auto;
   border-radius: var(--rounded);
 }

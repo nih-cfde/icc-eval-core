@@ -1,4 +1,10 @@
-import { octokit } from "@/api/github";
+import {
+  fileExists,
+  getCommits,
+  getForks,
+  getStars,
+  searchRepos,
+} from "@/api/github";
 import { deindent, indent, log } from "@/util/log";
 import { allSettled } from "@/util/request";
 
@@ -13,51 +19,51 @@ export const getRepos = async (coreProjects: string[]) => {
     coreProjects,
     async (coreProject) => {
       /** search for all repos tagged with core project number */
-      const repos = (
-        await octokit.rest.search.repos({ q: `topic:${coreProject}` })
-      ).data.items;
+      const repos = await searchRepos(coreProject);
 
       /** for each repo */
       return await Promise.all(
-        repos.map(async (repo) => ({
-          /** associated core project number */
-          core_project: coreProject,
+        repos.map(async (repo) => {
+          const owner = repo.owner?.login ?? "";
+          const name = repo.name;
 
-          /** top-level repo details */
-          ...repo,
+          return {
+            /** associated core project number */
+            core_project: coreProject,
 
-          /** get all commits in repo */
-          commits: await octokit.paginate(octokit.rest.repos.listCommits, {
-            owner: repo.owner?.login ?? "",
-            repo: repo.name,
-            per_page: 100,
-          }),
+            /** top-level repo details */
+            ...repo,
 
-          /** get all stars of repo */
-          stars: await octokit.paginate(
-            octokit.rest.activity.listStargazersForRepo,
-            {
-              owner: repo.owner?.login ?? "",
-              repo: repo.name,
-              per_page: 100,
-              /** https://docs.github.com/en/rest/activity/starring?apiVersion=2022-11-28#list-stargazers */
-              headers: { accept: "application/vnd.github.star+json" },
-            },
-          ),
+            /** get all commits in repo */
+            commits: await getCommits(owner, name),
 
-          /** get all watchers of repo */
-          /**
-           * watchers over time not possible
-           * https://stackoverflow.com/questions/71090557/github-api-number-of-watch-over-time
-           */
+            /** get all stars of repo */
+            stars: await getStars(owner, name),
 
-          /** get all forks of repo */
-          forks: await octokit.paginate(octokit.rest.repos.listForks, {
-            owner: repo.owner?.login ?? "",
-            repo: repo.name,
-            per_page: 100,
-          }),
-        })),
+            /** get all watchers of repo */
+            /**
+             * watchers over time not possible
+             * https://stackoverflow.com/questions/71090557/github-api-number-of-watch-over-time
+             */
+
+            /** get all forks of repo */
+            forks: await getForks(owner, name),
+
+            /** get presence of readme.md */
+            readme: await fileExists(
+              repo.owner?.login ?? "",
+              repo.name,
+              "README.md",
+            ),
+
+            /** get presence of contributing.md */
+            contributing: await fileExists(
+              repo.owner?.login ?? "",
+              repo.name,
+              "CONTRIBUTING.md",
+            ),
+          };
+        }),
       );
     },
     (coreProject) => log(coreProject, "start"),
@@ -95,6 +101,8 @@ export const getRepos = async (coreProjects: string[]) => {
       modified: repo.pushed_at,
       language: repo.language ?? "",
       license: repo.license?.name ?? "",
+      readme: repo.readme,
+      contributing: repo.contributing,
     }));
 
   return transformedRepos;

@@ -4056,7 +4056,9 @@
             "site_admin": false
           }
         }
-      ]
+      ],
+      "readme": true,
+      "contributing": false
     },
     {
       "core_project": "U54OD036472",
@@ -4127,13 +4129,13 @@
       "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
       "created_at": "2024-05-31T14:46:25Z",
       "updated_at": "2024-07-09T19:05:31Z",
-      "pushed_at": "2024-07-09T21:13:48Z",
+      "pushed_at": "2024-07-09T22:19:29Z",
       "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
       "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
       "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
       "svn_url": "https://github.com/nih-cfde/icc-eval-core",
       "homepage": "",
-      "size": 8099,
+      "size": 9080,
       "stargazers_count": 1,
       "watchers_count": 1,
       "language": "TypeScript",
@@ -4533,7 +4535,9 @@
             "site_admin": false
           }
         }
-      ]
+      ],
+      "readme": true,
+      "contributing": false
     }
   ],
   [],

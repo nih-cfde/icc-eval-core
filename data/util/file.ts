@@ -3,6 +3,8 @@ import { readFile } from "fs/promises";
 
 /** save json data to file */
 export const saveJson = (data: unknown, path: string, filename: string) => {
+  /** don't save if empty data (preserve existing data) */
+  if (Array.isArray(data) && !data.length) return;
   mkdirSync(path, { recursive: true });
   writeFileSync(`${path}/${filename}.json`, JSON.stringify(data, null, 2));
 };
