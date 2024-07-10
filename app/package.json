@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "lint": "eslint . --fix && prettier **/*.{ts,vue,css,html,md} --write",
     "test:lint": "eslint . && prettier **/*.{ts,vue,css,html,md} --check",
     "test:types": "tsc --noemit",

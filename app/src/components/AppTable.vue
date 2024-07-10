@@ -105,7 +105,7 @@ import {
   type HTMLAttributes,
   type VNode,
 } from "vue";
-import { cloneDeep, truncate } from "lodash";
+import { truncate } from "lodash";
 import {
   createColumnHelper,
   FlexRender,
