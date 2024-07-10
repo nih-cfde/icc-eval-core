@@ -1,9 +1,10 @@
 :root {
   --theme: #25668e;
 
-  --dark-gray: #334155;
-  --gray: #64748b;
-  --light-gray: #94a3b8;
+  --off-black: #334155;
+  --dark-gray: #64748b;
+  --gray: #94a3b8;
+  --light-gray: #cbd5e1;
   --off-white: #e2e8f0;
 
   --content: 1200px;
@@ -72,7 +73,7 @@ h4 {
   width: 100%;
   margin: 0;
   gap: 0.75em;
-  color: var(--gray);
+  color: var(--dark-gray);
   font-weight: var(--bold);
   text-align: center;
 }
@@ -145,6 +146,10 @@ p {
   line-height: var(--loose);
 }
 
+svg {
+  flex-shrink: 0;
+}
+
 @media print {
   table {
     width: 100% !important;
@@ -215,7 +220,7 @@ tbody tr {
 
 .mini-table > div > span:nth-child(odd) {
   gap: 10px;
-  color: var(--gray);
+  color: var(--dark-gray);
   font-weight: var(--bold);
 }
 

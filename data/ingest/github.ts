@@ -1,6 +1,7 @@
 import {
   fileExists,
   getCommits,
+  getDependencies,
   getForks,
   getStars,
   searchRepos,
@@ -18,6 +19,9 @@ export const getRepos = async (coreProjects: string[]) => {
   const { results: repos, errors: repoErrors } = await allSettled(
     coreProjects,
     async (coreProject) => {
+      /** TEMPORARY, to not query repos that aren't tagged yet */
+      if (coreProject.toLowerCase() !== "u54od036472") throw Error("Skip");
+
       /** search for all repos tagged with core project number */
       const repos = await searchRepos(coreProject);
 
@@ -50,18 +54,13 @@ export const getRepos = async (coreProjects: string[]) => {
             forks: await getForks(owner, name),
 
             /** get presence of readme.md */
-            readme: await fileExists(
-              repo.owner?.login ?? "",
-              repo.name,
-              "README.md",
-            ),
+            readme: await fileExists(owner, name, "README.md"),
 
             /** get presence of contributing.md */
-            contributing: await fileExists(
-              repo.owner?.login ?? "",
-              repo.name,
-              "CONTRIBUTING.md",
-            ),
+            contributing: await fileExists(owner, name, "CONTRIBUTING.md"),
+
+            /** get dependencies */
+            dependencies: await getDependencies(owner, name),
           };
         }),
       );
@@ -103,6 +102,7 @@ export const getRepos = async (coreProjects: string[]) => {
       license: repo.license?.name ?? "",
       readme: repo.readme,
       contributing: repo.contributing,
+      dependencies: repo.dependencies.packages.length,
     }));
 
   return transformedRepos;

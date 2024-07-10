@@ -1,9 +1,15 @@
 <template>
   <footer>
     <div class="row">
-      <AppLink v-if="pdf" :to="`/pdfs/${pdf}.pdf`" :new-tab="true"
-        >PDF of this page<Download
-      /></AppLink>
+      <AppLink
+        v-if="pdf"
+        :to="`/pdfs/${pdf}.pdf`"
+        :new-tab="true"
+        :external="true"
+      >
+        PDF of this page
+        <Download />
+      </AppLink>
 
       <AppLink to="https://github.com/nih-cfde/icc-eval-core">
         Learn more

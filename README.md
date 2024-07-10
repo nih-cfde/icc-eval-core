@@ -14,7 +14,7 @@
   Also used for rendering PDF reports.
 - `/data` - All other functionality involving data, e.g. ingesting/collating/etc.
   - `/api` - Types and functions for getting raw data from third-party APIs.
-  - `/raw` - Raw data gathered from third-party sources (for provenance).
+  - `/raw` - Raw data gathered from third-party sources (for provenance and caching).
   - `/ingest` - Functions for scraping webpages and calling APIs, and collating that data into a common format.
   - `/output` - Collated data.
   - `/print` - Functions specific to making printed reports.

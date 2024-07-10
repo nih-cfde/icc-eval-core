@@ -115,7 +115,11 @@
   <section>
     <h2>Repositories</h2>
 
-    <AppTable :cols="repoCols" :rows="projectRepos">
+    <AppTable
+      :cols="repoCols"
+      :rows="projectRepos"
+      :sort="[{ id: 'stars', desc: true }]"
+    >
       <template #name="{ row }">
         <AppLink :to="`https://github.com/${row.owner}/${row.name}`"
           >{{ row.owner }}/{{ row.name }}</AppLink
@@ -129,28 +133,30 @@
       </template>
     </AppTable>
 
-    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+    <template v-if="projectRepos.length">
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
-    <div class="charts">
-      <AppLineChart
-        class="chart"
-        :title="cumulative ? 'Cumulative Commits' : 'Commits Per Year'"
-        :data="commitsOverTime"
-        :cumulative="cumulative"
-      />
-      <AppLineChart
-        class="chart"
-        :title="cumulative ? 'Cumulative Stars' : 'Stars Per Year'"
-        :data="starsOverTime"
-        :cumulative="cumulative"
-      />
-      <AppLineChart
-        class="chart"
-        :title="cumulative ? 'Cumulative Forks' : 'Forks Per Year'"
-        :data="forksOverTime"
-        :cumulative="cumulative"
-      />
-    </div>
+      <div class="charts">
+        <AppLineChart
+          class="chart"
+          :title="cumulative ? 'Cumulative Commits' : 'Commits Per Year'"
+          :data="commitsOverTime"
+          :cumulative="cumulative"
+        />
+        <AppLineChart
+          class="chart"
+          :title="cumulative ? 'Cumulative Stars' : 'Stars Per Year'"
+          :data="starsOverTime"
+          :cumulative="cumulative"
+        />
+        <AppLineChart
+          class="chart"
+          :title="cumulative ? 'Cumulative Forks' : 'Forks Per Year'"
+          :data="forksOverTime"
+          :cumulative="cumulative"
+        />
+      </div>
+    </template>
   </section>
 </template>
 
@@ -333,6 +339,10 @@ const repoCols: Cols<typeof projectRepos.value> = [
   {
     key: "contributing",
     name: "Contributing",
+  },
+  {
+    key: "dependencies",
+    name: "Dependencies",
   },
 ];
 

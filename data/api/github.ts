@@ -96,3 +96,8 @@ export const fileExists = async (owner: string, name: string, path: string) => {
     );
   }
 };
+
+/** get dependency graph */
+export const getDependencies = async (owner: string, name: string) =>
+  (await octokit.rest.dependencyGraph.exportSbom({ owner, repo: name })).data
+    .sbom;

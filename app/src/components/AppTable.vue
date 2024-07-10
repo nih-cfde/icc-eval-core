@@ -99,7 +99,12 @@ declare module "@tanstack/vue-table" {
 </script>
 
 <script setup lang="ts" generic="Rows extends Cell[]">
-import { type CSSProperties, type HTMLAttributes, type VNode } from "vue";
+import {
+  computed,
+  type CSSProperties,
+  type HTMLAttributes,
+  type VNode,
+} from "vue";
 import { truncate } from "lodash";
 import {
   createColumnHelper,
@@ -159,27 +164,34 @@ const sortingFunction: SortingFn<Row> = (
 };
 
 /** column definitions */
-const columns = props.cols.map((col) =>
-  columnHelper.accessor((row: Row) => row[col.key], {
-    /** unique column id */
-    id: col.key,
-    /** name */
-    header: col.name,
-    /** sortable */
-    enableSorting: true,
-    /** sorting function */
-    sortingFn: sortingFunction,
-    /** extra metadata */
-    meta: {
-      colProp: col,
-    },
-  }),
+const columns = computed(() =>
+  props.cols.map((col) =>
+    columnHelper.accessor((row: Row) => row[col.key], {
+      /** unique column id */
+      id: col.key,
+      /** name */
+      header: col.name,
+      /** sortable */
+      enableSorting: true,
+      /** sorting function */
+      sortingFn: sortingFunction,
+      /** extra metadata */
+      meta: {
+        colProp: col,
+      },
+    }),
+  ),
 );
 
 /** tanstack table api */
 const table = useVueTable({
-  data: props.rows,
-  columns,
+  /** https://github.com/TanStack/table/discussions/4455 */
+  get data() {
+    return props.rows;
+  },
+  get columns() {
+    return columns.value;
+  },
   getCoreRowModel: getCoreRowModel(),
   getFilteredRowModel: getFilteredRowModel(),
   getPaginationRowModel: getPaginationRowModel(),
@@ -259,7 +271,7 @@ const cellStyle = (col?: Cols[number]) => ({
 
 .empty {
   padding: 5px;
-  color: var(--gray);
+  color: var(--dark-gray);
   text-align: center;
 }
 </style>
