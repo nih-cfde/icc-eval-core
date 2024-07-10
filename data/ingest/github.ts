@@ -74,9 +74,15 @@ export const getRepos = async (coreProjects: string[]) => {
   deindent();
 
   if (repos.length)
-    log(`Got ${repos.length.toLocaleString()} repos`, "success");
+    log(
+      `Got repos for ${repos.length.toLocaleString()} core projects`,
+      "success",
+    );
   if (repoErrors.length)
-    log(`Problem getting ${repoErrors.length.toLocaleString()} repos`, "warn");
+    log(
+      `Problem getting repos for ${repoErrors.length.toLocaleString()} core projects`,
+      "warn",
+    );
 
   /** transform data into desired format, with fallbacks */
   const transformedRepos = repos
@@ -102,7 +108,19 @@ export const getRepos = async (coreProjects: string[]) => {
       license: repo.license?.name ?? "",
       readme: repo.readme,
       contributing: repo.contributing,
-      dependencies: repo.dependencies.packages.length,
+      dependencies: Object.fromEntries(
+        repo.dependencies.repository.dependencyGraphManifests?.nodes?.map(
+          (node) => [
+            /**
+             * get manifest file path (e.g. requirements.txt, yarn.lock).
+             * format: /OWNER/REPO/blob/BRANCH/PATH-TO-FILE
+             */
+            (node?.blobPath ?? "").split("/").slice(5).join("/"),
+            /** number of dependencies */
+            node?.dependenciesCount ?? 0,
+          ],
+        ) ?? [],
+      ),
     }));
 
   return transformedRepos;

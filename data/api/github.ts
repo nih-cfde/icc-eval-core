@@ -1,4 +1,5 @@
 import { Octokit, type RequestError } from "octokit";
+import { type Repository } from "@octokit/graphql-schema";
 import { throttling } from "@octokit/plugin-throttling";
 import { log } from "@/util/log";
 
@@ -97,7 +98,32 @@ export const fileExists = async (owner: string, name: string, path: string) => {
   }
 };
 
+/**
+ * graph ql query to get dependency count. need to include "dependencies" too,
+ * or else "dependenciesCount" will be 0.
+ */
+const dependencyQuery = `
+  query dependencyTree($owner: String!, $repo: String!) {
+    repository(owner: $owner, name: $repo) {
+      dependencyGraphManifests {
+        nodes {
+          blobPath
+          dependenciesCount
+          dependencies {
+            nodes {
+              packageName
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 /** get dependency graph */
 export const getDependencies = async (owner: string, name: string) =>
-  (await octokit.rest.dependencyGraph.exportSbom({ owner, repo: name })).data
-    .sbom;
+  /** https://github.com/orgs/community/discussions/118753 */
+  octokit.graphql<{ repository: Repository }>(dependencyQuery, {
+    owner,
+    repo: name,
+  });

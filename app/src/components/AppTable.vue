@@ -211,11 +211,14 @@ const table = useVueTable({
 /** default cell formatter based on detected type */
 const defaultFormat = (cell: unknown) => {
   if (typeof cell === "number") return cell.toLocaleString();
+  if (typeof cell === "boolean") return cell ? "✓" : "✗";
+  /** if falsey (except 0 and false) */
+  if (!cell) return "-";
   if (Array.isArray(cell)) return cell.length.toLocaleString();
   if (cell instanceof Date)
     return cell.toLocaleString(undefined, { dateStyle: "medium" });
-  if (typeof cell === "boolean") return cell ? "✓" : "✗";
-  if (!cell) return "-";
+  if (typeof cell === "object")
+    return Object.keys(cell).length.toLocaleString();
   if (typeof cell === "string") return truncate(cell, { length: 100 });
   return cell;
 };

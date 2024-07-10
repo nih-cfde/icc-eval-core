@@ -120,9 +120,13 @@
     "modified": "2023-07-21T03:15:33Z",
     "language": "TypeScript",
     "license": "MIT License",
-    "readme": false,
+    "readme": true,
     "contributing": false,
-    "dependencies": 449
+    "dependencies": {
+      "package.json": 31,
+      "yarn.lock": 446,
+      ".github/workflows/deploy.yaml": 2
+    }
   },
   {
     "core_project": "U54OD036472",
@@ -144,11 +148,18 @@
     ],
     "issues": 8,
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-07-09T22:59:00Z",
+    "modified": "2024-07-10T00:04:14Z",
     "language": "TypeScript",
     "license": "",
     "readme": true,
     "contributing": false,
-    "dependencies": 441
+    "dependencies": {
+      "app/package.json": 26,
+      "app/yarn.lock": 349,
+      "data/package.json": 20,
+      "data/yarn.lock": 336,
+      ".github/workflows/pipeline.yaml": 4,
+      ".github/workflows/test.yaml": 3
+    }
   }
 ]
