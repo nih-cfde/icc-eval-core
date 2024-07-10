@@ -175,6 +175,8 @@ const columns = computed(() =>
       enableSorting: true,
       /** sorting function */
       sortingFn: sortingFunction,
+      /** put nullish values lower */
+      sortUndefined: -1,
       /** extra metadata */
       meta: {
         colProp: col,
@@ -183,29 +185,13 @@ const columns = computed(() =>
   ),
 );
 
-/**
- * fix weird tanstack table reactivity bug where if accessing undefined object
- * key, custom sorting fn doesn't run
- */
-const _rows = computed(() => {
-  /** row with all possible object keys at least defined */
-  const blankRow = Object.fromEntries(
-    props.cols.map((col) => col.key).map((key) => [key, ""]),
-  );
-
-  return props.rows.map((row) => ({
-    /** start with blank row */
-    ...cloneDeep(blankRow),
-    /** add actual row data */
-    ...row,
-  }));
-});
+/** note: https://github.com/TanStack/table/issues/5653 */
 
 /** tanstack table api */
 const table = useVueTable({
   /** https://github.com/TanStack/table/discussions/4455 */
   get data() {
-    return _rows.value;
+    return props.rows;
   },
   get columns() {
     return columns.value;
