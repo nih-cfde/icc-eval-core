@@ -5,7 +5,7 @@
     "build": "vite build",
     "lint": "eslint . --fix && prettier **/*.{ts,vue,css,html,md} --write",
     "test:lint": "eslint . && prettier **/*.{ts,vue,css,html,md} --check",
-    "test:types": "tsc --noemit",
+    "test:types": "vue-tsc",
     "test": "yarn test:lint && yarn test:types",
     "preview": "vite preview",
     "clean": "rm -rf node_modules yarn.lock && yarn cache clean"

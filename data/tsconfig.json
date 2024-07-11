@@ -8,6 +8,8 @@
     "noEmit": true,
     "noErrorTruncation": true,
     "noUncheckedIndexedAccess": true,
+    "strict": true,
+
     "paths": {
       "@/*": ["./*"]
     },
