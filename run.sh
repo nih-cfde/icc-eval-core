@@ -9,16 +9,16 @@ elif [[ $* == *--print* ]]; then
 elif [[ $* == *--app* ]]; then
   $app dev
 
-# install packages and other dependenices
-elif [[ $* == *--install-all* ]]; then
+# install just packages
+elif [[ $* == *--install-packages* ]]; then
   $data install
   $app install
-  $data install-playwright
 
-# install packages
+# install packages and other dependenices
 elif [[ $* == *--install* ]]; then
   $data install
   $app install
+  $data --silent install-playwright
 
 # run tests
 elif [[ $* == *--test* ]]; then

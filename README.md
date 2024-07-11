@@ -1,49 +1,58 @@
-# Requirements
+## Requirements
 
 - [Node](https://nodejs.org/) v22+
 - [Yarn](https://classic.yarnpkg.com/) v1 ("classic")
 
-# Terminology
+## Pipeline
 
-- `webapp` - Live, interactive website that provides access to all reports.
-- `report` - Info about a particular project/publication/whatever, _either_ as a webapp _page_ or a printed _PDF_.
+The automated steps in this repo are roughly as follows:
 
-# Repo Content
+1. _Ingest_
+   1. Get _raw_ data from an external resource, either by scraping an HTML page, downloading and parsing a PDF or CSV, or making a request to an API.
+   1. Save _raw_ data exactly as-is for provenance and caching.
+   1. Collate most important information from _raw_ data into common high-level _output_ data format suited to making desired reports.
+   1. Repeat previous steps in order of dependency (e.g. opportunity number -> grant numbers) until all needed info is gathered.
+1. _Print_
+   1. Run webapp (interactive dashboard that provides access to all reports).
+   1. Import _output_ data from _ingest_, and do some minimal final processing (e.g. combine journal info with each publication listing).
+   1. Render select webapp _pages_ (e.g. `/core-project/abc123`) to PDF _reports_.
+1. Deploy webapp and PDFs to live, public web addresses.
 
-- `/app` - Live dashboard webapp made with Vue.
-  Also used for rendering PDF reports.
-- `/data` - All other functionality involving data, e.g. ingesting/collating/etc.
-  - `/api` - Types and functions for getting raw data from third-party APIs.
-  - `/raw` - Raw data gathered from third-party sources (for provenance and caching).
+## Repo Content
+
+- `/app` - Dashboard webapp made with Vue.
+  Also used for generating PDF reports.
+  - `/public/pdfs` - Outputted PDF reports.
+- `/data` - All other functionality involving data (e.g. ingesting/collating/etc).
+  - `/api` - Types and functions for getting raw data from external APIs.
+  - `/raw` - Raw data gathered from external sources.
+    Primarily for provenance, but also acts as ingest cache (delete files to re-fetch from external providers).
   - `/ingest` - Functions for scraping webpages and calling APIs, and collating that data into a common format.
-  - `/output` - Collated data.
+  - `/output` - Collated data in format for making desired reports.
   - `/print` - Functions specific to making printed reports.
   - `/util` - Small-scope general purpose functions.
 
-# Pipeline
+## Technology
 
-The automated steps in this repo are generally as follows:
+- TypeScript - Language used to provide type-safety from beginning to end of pipeline.
+- Playwright - Tool used for scraping public web pages and rendering webapp _page_ reports to PDFs.
+- Netlify - Service used for hosting webapp (and PR previews).
+- Octokit - Library used for conveniently interacting with GitHub APIs.
 
-1. Gather funding opportunity numbers (and related metadata) from NIH public documents.
-1. Collate opportunity data into a common format.
-1. Repeat previous steps in order of dependency (e.g. opportunity number -> grant numbers) to get all needed info.
-1. Run webapp, which imports collated data, to render each _page_ report to _PDF_ report.
-1. Live webapp and PDFs deploy publicly automatically.
+The ingest pipeline is optimized wherever possible and appropriate.
+Things like network requests and rendering are parallelized (e.g. PDF reports are printed simultaneously in separate tabs of the same Playwright browser instance).
+External resources are cached in their _raw_ format to speed up subsequent runs, and to avoid being rate-limited or blocked by those providers.
 
 ## Commands
 
-Use `run.sh` to conveniently run multiple commands across subdirectories.
-Examples:
+Use `./run.sh` with flags to run specific steps or tasks in this repo:
 
-```shell
-# install all dependencies
-./run.sh --install-all
-
-# run pipeline
-./run.sh
-
-# run tests
-./run.sh --test
-```
-
-See script source for all available flags.
+| Flag        | Description                                                    |
+| ----------- | -------------------------------------------------------------- |
+| `--install` | Install packages and dependencies                              |
+| `--ingest`  | Run "ingest" pipeline step                                     |
+| `--print`   | Run "print" pipeline step                                      |
+| no flag     | Run pipeline steps in order                                    |
+| `--app`     | Run webapp in dev mode                                         |
+| `--test`    | Run all tests (type-checking, linting/formatting checks, etc.) |
+| `--lint`    | Auto-fix linting/formatting                                    |

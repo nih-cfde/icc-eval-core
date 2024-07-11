@@ -24,7 +24,7 @@ jobs:
             data/yarn.lock
 
       - name: Install packages
-        run: ./run.sh --install
+        run: ./run.sh --install-packages
 
       - name: Run tests
         run: ./run.sh --test
