@@ -4,23 +4,21 @@ app="yarn --cwd ./app/"
 # run individual pipeline step
 if [[ $* == *--ingest* ]]; then
   $data ingest
-elif [[ $* == *--collate* ]]; then
-  $data collate
 elif [[ $* == *--print* ]]; then
   $data print
 elif [[ $* == *--app* ]]; then
   $app dev
 
-# install packages
-elif [[ $* == *--install* ]]; then
+# install just packages
+elif [[ $* == *--install-packages* ]]; then
   $data install
   $app install
 
 # install packages and other dependenices
-elif [[ $* == *--install-all* ]]; then
-  $data install-playwright
+elif [[ $* == *--install* ]]; then
   $data install
   $app install
+  $data --silent install-playwright
 
 # run tests
 elif [[ $* == *--test* ]]; then
@@ -40,9 +38,8 @@ elif [[ $* == *--clean* ]]; then
 # run all pipeline steps
 else
   $data ingest
-  $data collate
   $data print
-  if [[ ! -z "$CI" ]]; then
+  if [[ -z "$CI" ]]; then
     $app dev
   fi
 fi

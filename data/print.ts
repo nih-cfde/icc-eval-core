@@ -1,17 +1,29 @@
-import { execSync } from "child_process";
-import { getCoreProjects } from "@/database/report";
-import { printReports } from "@/report/print";
-import { deindent, divider, indent } from "@/util/log";
+import coreProjects from "@/output/core-projects.json";
+import { printReports } from "@/print/print";
+import { browser } from "@/util/browser";
+import { saveJson } from "@/util/file";
+import { divider } from "@/util/log";
 
-const { CI, OPEN } = process.env;
+const { OUTPUT_PATH } = process.env;
 
-divider();
-indent();
-const coreProjects = Object.keys(await getCoreProjects()).map(
-  (coreProject) => `/core-project/${coreProject}`,
+divider("Printing reports");
+
+/** app pages to print */
+const pages = [{ route: "/", filename: "Program" }].concat(
+  coreProjects.map((coreProject) => ({
+    route: `/core-project/${coreProject.id}`,
+    filename: `Core Project ${coreProject.id}`,
+  })),
 );
-await printReports(coreProjects);
-deindent();
 
-/** open preview */
-if (OPEN && !CI) execSync("open $PDF_PATH");
+/** print reports */
+await printReports(pages);
+
+/** record list of pdfs */
+saveJson(
+  Object.fromEntries(pages.map((page) => [page.route, page.filename])),
+  OUTPUT_PATH,
+  "pdfs",
+);
+
+await browser.close();

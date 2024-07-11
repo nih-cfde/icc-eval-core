@@ -11,9 +11,8 @@ export const useScrollable = () => {
   const { arrivedState } = useScroll(element);
 
   /** set css class on/off */
-  function setClass(_class: string, on: boolean) {
+  const setClass = (_class: string, on: boolean) =>
     element.value?.classList?.[on ? "remove" : "add"](_class);
-  }
 
   /** set classes */
   watchEffect(() => {
@@ -24,10 +23,10 @@ export const useScrollable = () => {
   });
 
   /** force table scroll to update */
-  async function updateScroll() {
+  const updateScroll = async () => {
     await nextTick();
     element.value?.dispatchEvent(new Event("scroll"));
-  }
+  };
 
   /** update scroll on some events that might affect element's scrollWidth/Height */
   onMounted(updateScroll);

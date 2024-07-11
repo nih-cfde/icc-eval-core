@@ -1,5 +1,5 @@
 import { createHash } from "crypto";
-import { existsSync, readFileSync, unlinkSync, writeFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync } from "fs";
 import { log } from "@/util/log";
 
 /**
@@ -68,14 +68,9 @@ type Cache = Record<
   }
 >;
 
-if (process.env.NOCACHE) {
-  /** clear disk cache */
-  unlinkSync(cachePath);
-} else {
-  /** load disk cache into memory cache */
-  if (existsSync(cachePath))
-    cache = JSON.parse(readFileSync(cachePath, "utf-8")) as Cache;
-}
+/** load disk cache into memory cache */
+if (existsSync(cachePath))
+  cache = JSON.parse(readFileSync(cachePath, "utf-8")) as Cache;
 
 /** save memory cache to disk cache */
 const saveCache = () => writeFileSync(cachePath, JSON.stringify(cache));

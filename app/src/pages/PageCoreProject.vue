@@ -1,28 +1,81 @@
 <template>
   <section>
-    <h2><Microscope />Core Project {{ coreProject.id }}</h2>
+    <h1><Microscope />Core Project {{ id }}</h1>
   </section>
 
   <section>
-    <div class="mini-table">
-      <span>Name</span>
-      <span>{{ coreProject.name }}</span>
-      <span>Projects</span>
-      <span>{{ coreProject.projects.join(", ") }}</span>
-      <span>Award</span>
-      <span>{{
-        coreProject.award_amount.toLocaleString(undefined, {
-          style: "currency",
-          currency: "USD",
-        })
-      }}</span>
-    </div>
+    <h2>Details</h2>
 
-    <h3><Book />Publications ({{ rows.length.toLocaleString() }})</h3>
+    <div class="mini-table">
+      <div>
+        <span>Projects</span>
+        <span>
+          <template
+            v-for="(project, _index) of coreProject.projects"
+            :key="_index"
+          >
+            {{ project }}<br />
+          </template>
+        </span>
+      </div>
+
+      <div>
+        <span>Name</span>
+        <span>{{ coreProject.name }}</span>
+      </div>
+
+      <div>
+        <span>Award</span>
+        <span>
+          {{
+            coreProject.award_amount.toLocaleString(undefined, {
+              style: "currency",
+              currency: "USD",
+            })
+          }}
+        </span>
+      </div>
+
+      <div>
+        <span>Publications</span>
+        <span>{{ projectPublications.length.toLocaleString() }}</span>
+      </div>
+
+      <div>
+        <span>Software</span>
+        <span>
+          {{ projectRepos.length.toLocaleString() }} repositories<br />
+          <template v-if="projectRepos.length">
+            {{
+              sumBy(
+                projectRepos,
+                (repo) => repo.commits.length,
+              ).toLocaleString()
+            }}
+            commits<br />
+            {{
+              sumBy(projectRepos, (repo) => repo.stars.length).toLocaleString()
+            }}
+            stars<br />
+            {{ sumBy(projectRepos, "watchers").toLocaleString() }}
+            watchers<br />
+            {{
+              sumBy(projectRepos, (repo) => repo.forks.length).toLocaleString()
+            }}
+            forks<br />
+            {{ sumBy(projectRepos, "issues").toLocaleString() }} open issues<br />
+          </template>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
 
     <AppTable
-      :cols="cols"
-      :rows="rows"
+      :cols="publicationCols"
+      :rows="projectPublications"
       :sort="[{ id: 'relative_citation_ratio', desc: true }]"
     >
       <template #id="{ row }">
@@ -35,15 +88,6 @@
         </span>
       </template>
 
-      <template #citations="{ row }">
-        {{ row.citations.toLocaleString() }}
-      </template>
-      <template #citations_per_year="{ row }">
-        {{ row.citations_per_year.toLocaleString() }}
-      </template>
-      <template #title="{ row }">
-        {{ truncate(row.title, { length: 40 }) }}
-      </template>
       <template #authors="{ row }">
         <template
           v-for="(author, _index) of carve(row.authors, 2)"
@@ -52,95 +96,181 @@
           {{ author }}<br />
         </template>
       </template>
+    </AppTable>
+
+    <template v-if="Object.keys(publicationsOverTime).length > 1">
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+      <AppLineChart
+        class="chart"
+        :title="
+          cumulative ? 'Cumulative Publications' : 'Publications Per Year'
+        "
+        :data="publicationsOverTime"
+        :cumulative="cumulative"
+      />
+    </template>
+  </section>
+
+  <section>
+    <h2>Repositories</h2>
+
+    <AppTable
+      :cols="repoCols"
+      :rows="projectRepos"
+      :sort="[{ id: 'stars', desc: true }]"
+    >
+      <template #name="{ row }">
+        <AppLink :to="`https://github.com/${row.owner}/${row.name}`"
+          >{{ row.owner }}/{{ row.name }}</AppLink
+        >
+      </template>
+
       <template #modified="{ row }">
-        {{
-          new Date(row.modified).toLocaleString(undefined, {
-            dateStyle: "medium",
-          })
-        }}
+        {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
+        <br />
+        ({{ ago(row.modified) }})
       </template>
     </AppTable>
 
-    <AppButton :to="`/pdfs/${coreProject}.pdf`" download target="_blank"
-      >PDF<Download
-    /></AppButton>
+    <template v-if="projectRepos.length">
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+      <div class="charts">
+        <AppLineChart
+          class="chart"
+          :title="cumulative ? 'Cumulative Commits' : 'Commits Per Year'"
+          :data="commitsOverTime"
+          :cumulative="cumulative"
+        />
+        <AppLineChart
+          class="chart"
+          :title="cumulative ? 'Cumulative Stars' : 'Stars Per Year'"
+          :data="starsOverTime"
+          :cumulative="cumulative"
+        />
+        <AppLineChart
+          class="chart"
+          :title="cumulative ? 'Cumulative Forks' : 'Forks Per Year'"
+          :data="forksOverTime"
+          :cumulative="cumulative"
+        />
+      </div>
+    </template>
+  </section>
+
+  <section v-if="projectDependencies.length">
+    <h2>Dependencies</h2>
+
+    <AppTable
+      :cols="dependencyCols"
+      :rows="projectDependencies"
+      :sort="[{ id: 'package.json', desc: true }]"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { truncate } from "lodash";
+import { sum, sumBy, uniq } from "lodash";
 import { useTitle } from "@vueuse/core";
-import Book from "@/assets/book.svg";
-import Download from "@/assets/download.svg";
 import Microscope from "@/assets/microscope.svg";
-import AppButton from "@/components/AppButton.vue";
+import AppCheckbox from "@/components/AppCheckbox.vue";
+import AppLineChart from "@/components/AppLineChart.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
-import coreProjects from "@/data/core-projects.json";
-import publicationsPerCoreProject from "@/data/publications-per-core-project.json";
 import { carve } from "@/util/array";
+import { overTime } from "@/util/data";
+import { ago } from "@/util/string";
+import coreProjects from "~/core-projects.json";
+import journals from "~/journals.json";
+import publications from "~/publications.json";
+import rawRepos from "~/repos.json";
 
-const { params } = useRoute();
+type Repo = Omit<(typeof rawRepos)[number], "dependencies"> & {
+  dependencies: Record<string, number | undefined>;
+};
+
+const repos = rawRepos as Repo[];
+
+const route = useRoute();
+
+/** whether charts should be shown in cumulative mode */
+const cumulative = ref(true);
 
 /** currently viewed core project id */
-const coreProject = computed(
-  () =>
-    coreProjects[
-      (Array.isArray(params.id)
-        ? params.id[0]
-        : params.id) as keyof typeof coreProjects
-    ],
+const id = computed(() =>
+  Array.isArray(route.params.id) ? route.params.id[0] : route.params.id,
 );
 
 /** set tab title */
 const { VITE_TITLE } = import.meta.env;
-useTitle(computed(() => `${coreProject.value.id} | ${VITE_TITLE}`));
+useTitle(computed(() => `${id.value} | ${VITE_TITLE}`));
 
-/** convert data from object to array */
-const rows = computed(
-  () =>
-    publicationsPerCoreProject[
-      coreProject.value.id as keyof typeof publicationsPerCoreProject
-    ] ?? [],
+/** currently viewed core project (details) */
+const coreProject = computed(
+  () => coreProjects.find((coreProject) => coreProject.id === id.value)!,
 );
 
-/** table column definitions */
-const cols: Cols<typeof rows.value> = [
+/** publication table row data */
+const projectPublications = computed(() =>
+  /** get publication matching this core project */
+  publications
+    .filter((publication) => publication.core_project === id.value)
+    .map((publication) => {
+      /** look up journal matching this publication */
+      const journal = journals.find(
+        (journal) => journal.id === publication.journal,
+      );
+      /** include journal info */
+      return {
+        ...publication,
+        year: String(publication.year),
+        modified: new Date(publication.modified),
+        rank: journal?.rank ?? 0,
+        journal: journal?.name ?? publication.journal,
+      };
+    }),
+);
+
+/** publication table column definitions */
+const publicationCols: Cols<typeof projectPublications.value> = [
   {
     slot: "id",
     key: "id",
     name: "ID",
+    align: "left",
     style: { whiteSpace: "nowrap" },
   },
   {
-    key: "relative_citation_ratio",
-    name: "RCR",
-    style: { justifyContent: "center" },
-    attrs: { title: "Relative Citation Ratio" },
-  },
-  {
-    slot: "citations",
-    key: "citations",
-    name: "Citations",
-    style: { justifyContent: "center" },
-  },
-  {
-    slot: "citations_per_year",
-    key: "citations_per_year",
-    name: "Cit./year",
-    style: { justifyContent: "center" },
-  },
-  {
-    slot: "title",
     key: "title",
     name: "Title",
+    align: "left",
   },
   {
     slot: "authors",
     key: "authors",
     name: "Authors",
+    align: "left",
+  },
+  {
+    key: "relative_citation_ratio",
+    name: "RCR",
+    attrs: { title: "Relative Citation Ratio" },
+  },
+  {
+    key: "rank",
+    name: "SJR",
+    attrs: { title: "Scimago Journal Rank" },
+  },
+  {
+    key: "citations",
+    name: "Citations",
+  },
+  {
+    key: "citations_per_year",
+    name: "Cit./year",
   },
   {
     key: "journal",
@@ -149,13 +279,153 @@ const cols: Cols<typeof rows.value> = [
   {
     key: "year",
     name: "Published",
-    style: { justifyContent: "center" },
   },
   {
     slot: "modified",
     key: "modified",
     name: "Updated",
-    style: { justifyContent: "center" },
   },
 ];
+
+/** publication chart data */
+const publicationsOverTime = computed(() =>
+  overTime(
+    publications.filter((publication) => publication.core_project === id.value),
+    "year",
+  ),
+);
+
+/** repo table row data */
+const projectRepos = computed(() =>
+  repos
+    .filter((repo) => repo.core_project === id.value)
+    .map((repo) => ({
+      ...repo,
+      modified: new Date(repo.modified),
+      dependency_total: sum(Object.values(repo.dependencies)),
+    })),
+);
+
+/** repo table column definitions */
+const repoCols: Cols<typeof projectRepos.value> = [
+  {
+    slot: "name",
+    key: "id",
+    name: "Name",
+    align: "left",
+  },
+  {
+    key: "description",
+    name: "Description",
+    align: "left",
+  },
+  {
+    key: "commits",
+    name: "Commits",
+  },
+  {
+    key: "stars",
+    name: "Stars",
+  },
+  {
+    key: "forks",
+    name: "Forks",
+  },
+  {
+    key: "watchers",
+    name: "Watchers",
+  },
+  {
+    key: "issues",
+    name: "Open Issues",
+  },
+  {
+    slot: "modified",
+    key: "modified",
+    name: "Updated",
+  },
+  {
+    key: "language",
+    name: "Language",
+  },
+  {
+    key: "license",
+    name: "License",
+  },
+  {
+    key: "readme",
+    name: "Readme",
+  },
+  {
+    key: "contributing",
+    name: "Contributing",
+  },
+  {
+    slot: "dependencies",
+    key: "dependency_total",
+    name: "Dependencies",
+  },
+];
+
+/** commit chart data */
+const commitsOverTime = computed(() =>
+  overTime(
+    repos
+      .filter((repo) => repo.core_project === id.value)
+      .map((repo) => repo.commits)
+      .flat(),
+    (d) => new Date(d).getUTCFullYear(),
+  ),
+);
+
+/** star chart data */
+const starsOverTime = computed(() =>
+  overTime(
+    repos
+      .filter((repo) => repo.core_project === id.value)
+      .map((repo) => repo.stars)
+      .flat(),
+    (d) => new Date(d).getUTCFullYear(),
+  ),
+);
+
+/** fork chart data */
+const forksOverTime = computed(() =>
+  overTime(
+    repos
+      .filter((repo) => repo.core_project === id.value)
+      .map((repo) => repo.forks)
+      .flat(),
+    (d) => new Date(d).getUTCFullYear(),
+  ),
+);
+
+/** dependency table row data */
+const projectDependencies = computed(() =>
+  projectRepos.value.map(
+    (repo): Record<string, string | number> => ({
+      name: `${repo.owner}/${repo.name}`,
+      ...repo.dependencies,
+    }),
+  ),
+);
+
+/** dependency table column definitions */
+const dependencyCols = computed<Cols<typeof projectDependencies.value>>(() => [
+  /** name of repo */
+  {
+    slot: "name",
+    key: "name",
+    name: "Name",
+    align: "left",
+  },
+  /** make col for each dependency manifest */
+  ...uniq(
+    projectRepos.value.map((repo) => Object.keys(repo.dependencies)).flat(),
+  )
+    /** except for github actions */
+    .filter((path) => !path.match(/\.github\/workflows\/.*\.ya?ml$/i))
+    /** make table col def */
+    .map((path) => ({ key: path, name: path })),
+]);
 </script>

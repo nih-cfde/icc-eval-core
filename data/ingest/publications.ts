@@ -1,46 +1,59 @@
+import { uniq, uniqBy } from "lodash-es";
 import { queryIcite } from "@/api/icite";
 import type { Datum } from "@/api/icite-results";
 import { queryReporter } from "@/api/reporter";
 import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
 import type { PublicationsResults } from "@/api/reporter-publications-results.d";
-import type { Publication } from "@/database/publications";
-import { log, newline } from "@/util/log";
+import { log } from "@/util/log";
 
-/** get publications associated with grant projects */
-export const getPublications = async (
-  coreProjects: string[],
-): Promise<Publication[]> => {
-  log("Getting publications");
+/** get publications associated with core projects */
+export const getPublications = async (coreProjects: string[]) => {
+  /** de-dupe */
+  coreProjects = uniq(coreProjects);
 
-  /** get publications associated with grant projects */
-  const { results: reporterResults } = await queryReporter<
+  log(
+    `Getting publications for ${coreProjects.length.toLocaleString()} core projects`,
+    "start",
+  );
+
+  /** get publications associated with core projects */
+  let { results: reporterResults } = await queryReporter<
     PublicationsQuery,
     PublicationsResults
   >("publications", { criteria: { core_project_nums: coreProjects } });
-  const reporterSet = new Set(reporterResults.map((result) => result.pmid));
+
+  /** de-dupe */
+  reporterResults = uniqBy(reporterResults, (result) => result.pmid);
 
   log(
-    `Found ${reporterSet.size.toLocaleString()} unique (${reporterResults.length.toLocaleString()} total) publications`,
+    `Found ${reporterResults.length.toLocaleString()} publications`,
     reporterResults.length ? "success" : "error",
   );
-  newline();
-
-  log("Getting publication citation data");
 
   /** get extra info about publications */
-  const { data: iciteResults } = await queryIcite(
+  let { data: iciteResults } = await queryIcite(
     reporterResults
       .map((result) => result.pmid)
       .filter((id): id is number => !!id),
   );
-  const iciteSet = new Set(iciteResults.map((result) => result.pmid));
+
+  /** de-dupe */
+  iciteResults = uniqBy(iciteResults, (result) => result.pmid);
 
   log(
-    `Found ${iciteResults.length.toLocaleString()} unique (${iciteSet.size.toLocaleString()} total) publication metadata`,
+    `Found ${iciteResults.length.toLocaleString()} publication metadata`,
     iciteResults.length ? "success" : "error",
   );
 
+  /** quick lookup of extra info from icite results by id */
+  const extrasLookup: Record<
+    NonNullable<Datum["pmid"]>,
+    Omit<Datum, "pmid">
+  > = Object.fromEntries(iciteResults.map(({ pmid, ...rest }) => [pmid, rest]));
+
   /** validate */
+  const reporterSet = new Set(reporterResults.map((result) => result.pmid));
+  const iciteSet = new Set(iciteResults.map((result) => result.pmid));
   const notInIcite = reporterSet.difference(iciteSet);
   const notInReporter = iciteSet.difference(reporterSet);
   if (
@@ -53,21 +66,17 @@ export const getPublications = async (
     log("Number of RePORTER and iCite pubs don't match", "error");
   }
 
-  /** quick lookup of extra info from icite results by id */
-  const extrasLookup: Record<
-    NonNullable<Datum["pmid"]>,
-    Omit<Datum, "pmid">
-  > = Object.fromEntries(iciteResults.map(({ pmid, ...rest }) => [pmid, rest]));
-
   /** transform data into desired format, with fallbacks */
-  return reporterResults.map((result) => {
+  const transformedPublications = reporterResults.map((result) => {
     const extras = extrasLookup[result.pmid ?? 0];
     return {
       id: result.pmid ?? 0,
       core_project: result.coreproject ?? "",
       application: result.applid ?? 0,
       title: extras?.title ?? "",
-      authors: extras?.authors ?? "",
+      authors: (extras?.authors ?? "")
+        .split(",")
+        .map((string) => string.trim()),
       journal: extras?.journal ?? "",
       year: extras?.year ?? 0,
       modified: extras?.last_modified
@@ -79,4 +88,6 @@ export const getPublications = async (
       citations_per_year: extras?.citations_per_year ?? 0,
     };
   });
+
+  return transformedPublications;
 };

@@ -1,40 +1,124 @@
 <template>
   <section>
-    <h2>Home</h2>
+    <h1>Home</h1>
   </section>
 
   <section>
-    <h3>Total CFDE Stats</h3>
+    <h2>Totals</h2>
 
     <div class="mini-table">
-      <span>Projects</span>
-      <span>
-        {{ sum(rows.map((row) => row.projects.length)).toLocaleString() }}
-      </span>
-      <span>Awards</span>
-      <span>
-        {{
-          sum(rows.map((row) => row.award_amount)).toLocaleString(undefined, {
-            style: "currency",
-            currency: "USD",
-          })
-        }}
-      </span>
-      <span>Publications</span>
-      <span>
-        {{ sum(rows.map((row) => row.publications)).toLocaleString() }}
-      </span>
+      <div>
+        <span>Core Projects</span>
+        <span>
+          {{ coreProjects.length.toLocaleString() }}
+        </span>
+      </div>
+
+      <div>
+        <span>Projects</span>
+        <span>
+          {{
+            sum(coreProjects.map((row) => row.projects.length)).toLocaleString()
+          }}
+        </span>
+      </div>
+
+      <div>
+        <span>Awards</span>
+        <span>
+          {{
+            sum(coreProjects.map((row) => row.award_amount)).toLocaleString(
+              undefined,
+              {
+                style: "currency",
+                currency: "USD",
+              },
+            )
+          }}
+        </span>
+      </div>
+
+      <div>
+        <span>Publications</span>
+        <span>
+          {{
+            sum(coreProjects.map((row) => row.publications)).toLocaleString()
+          }}
+        </span>
+      </div>
     </div>
-    <AppButton to="/core-projects"><Microscope />Core Projects</AppButton>
+  </section>
+
+  <section>
+    <h2>Over Time</h2>
+
+    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+    <div class="charts">
+      <AppLineChart
+        :title="cumulative ? 'Cumulative Projects' : 'Projects Per Year'"
+        :data="projectsOverTime"
+        :cumulative="cumulative"
+      />
+
+      <AppLineChart
+        :title="
+          cumulative ? 'Cumulative Award Amount' : 'Award Amount Per Year'
+        "
+        :data="awardsOverTime"
+        :cumulative="cumulative"
+        :y-format="
+          (value) =>
+            value.toLocaleString(undefined, {
+              style: 'currency',
+              currency: 'USD',
+              notation: 'compact',
+            })
+        "
+      />
+
+      <AppLineChart
+        :title="
+          cumulative ? 'Cumulative Publications' : 'Publications Per Year'
+        "
+        :data="publicationsOverTime"
+        :cumulative="cumulative"
+      />
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { sum } from "lodash";
-import Microscope from "@/assets/microscope.svg";
-import AppButton from "@/components/AppButton.vue";
-import coreProjects from "@/data/core-projects.json";
+import { ref } from "vue";
+import { sum, sumBy } from "lodash";
+import AppCheckbox from "@/components/AppCheckbox.vue";
+import AppLineChart from "@/components/AppLineChart.vue";
+import { overTime } from "@/util/data";
+import coreProjects from "~/core-projects.json";
+import rawProjects from "~/projects.json";
+import publications from "~/publications.json";
 
-/** convert data from object to array */
-const rows = Object.values(coreProjects);
+/** parse dates */
+const projects = rawProjects.map((raw) => ({
+  ...raw,
+  date_start: new Date(raw.date_start),
+}));
+
+/** whether charts should be shown in cumulative mode */
+const cumulative = ref(true);
+
+/** chart number of projects over time */
+const projectsOverTime = overTime(projects, (d) =>
+  d.date_start.getUTCFullYear(),
+);
+
+/** chart award amount over time */
+const awardsOverTime = overTime(
+  projects,
+  (d) => d.date_start.getUTCFullYear(),
+  (d) => sumBy(d, "award_amount"),
+);
+
+/** chart number of publications over time */
+const publicationsOverTime = overTime(publications, "year");
 </script>

@@ -6,6 +6,7 @@
     "module": "ESNext",
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "noErrorTruncation": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -17,12 +18,11 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
 
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "~/*": ["../data/output/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.vue"],

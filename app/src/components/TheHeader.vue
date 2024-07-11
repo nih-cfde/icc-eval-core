@@ -1,15 +1,22 @@
 <template>
   <header>
-    <h1><img src="@/assets/icon.png" alt="" />{{ title }}</h1>
+    <div class="title">
+      <img src="@/assets/icon.png" alt="" />
+      <AppLink to="/">
+        {{ title }}
+      </AppLink>
+    </div>
 
     <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/core-projects">Core Projects</RouterLink>
+      <AppLink to="/">Home</AppLink>
+      <AppLink to="/core-projects">Core Projects</AppLink>
     </nav>
   </header>
 </template>
 
 <script setup lang="ts">
+import AppLink from "@/components/AppLink.vue";
+
 const { VITE_TITLE: title } = import.meta.env;
 </script>
 
@@ -21,15 +28,18 @@ header {
   justify-content: space-between;
   padding: 20px;
   gap: 20px;
-  background: var(--light-gray);
+  background: var(--off-white);
 }
 
-header img {
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+}
+
+.title img {
   height: 2em;
-}
-
-header h1 {
-  width: unset;
 }
 
 header a {
@@ -49,7 +59,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 

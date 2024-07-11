@@ -13,7 +13,10 @@
           >
             <button
               class="th"
-              :style="header.column.columnDef.meta?.colProp.style"
+              :style="{
+                ...cellStyle(header.column.columnDef.meta?.colProp),
+                ...header.column.columnDef.meta?.colProp.style,
+              }"
               v-bind="header.column.columnDef.meta?.colProp.attrs"
               @click="header.column.getToggleSortingHandler()?.($event)"
             >
@@ -40,7 +43,10 @@
           <td v-for="cell in row.getVisibleCells()" :key="cell.id">
             <div
               class="td"
-              :style="cell.column.columnDef.meta?.colProp.style"
+              :style="{
+                ...cellStyle(cell.column.columnDef.meta?.colProp),
+                ...cell.column.columnDef.meta?.colProp.style,
+              }"
               v-bind="cell.column.columnDef.meta?.colProp.attrs"
             >
               <slot
@@ -51,13 +57,15 @@
                 :name="cell.column.columnDef.meta?.colProp.slot"
                 :row="row.original"
               />
-              <FlexRender
-                v-else
-                :render="cell.column.columnDef.cell"
-                :props="cell.getContext()"
-              />
+              <template v-else>
+                {{ defaultFormat(cell.getValue()) }}
+              </template>
             </div>
           </td>
+        </tr>
+
+        <tr v-if="!table.getRowModel().rows.length">
+          <td class="empty" :colspan="cols.length">No data</td>
         </tr>
       </tbody>
     </table>
@@ -67,13 +75,15 @@
 <script lang="ts">
 type Cell = Record<string, unknown>;
 
-export type Cols<Rows extends Cell[]> = {
-  /** key of row object to access as cell value */
+export type Cols<Rows extends Cell[] = Cell[]> = {
+  /** key of row object to access as default cell value */
   key: Extract<keyof Rows[number], string>;
   /** slot name for custom cell rendering */
   slot?: string;
   /** label for header */
   name: string;
+  /** horizontal alignment */
+  align?: "left" | "center" | "right";
   /** cell attributes */
   attrs?: HTMLAttributes;
   /** cell style */
@@ -89,7 +99,13 @@ declare module "@tanstack/vue-table" {
 </script>
 
 <script setup lang="ts" generic="Rows extends Cell[]">
-import { type CSSProperties, type HTMLAttributes, type VNode } from "vue";
+import {
+  computed,
+  type CSSProperties,
+  type HTMLAttributes,
+  type VNode,
+} from "vue";
+import { truncate } from "lodash";
 import {
   createColumnHelper,
   FlexRender,
@@ -148,27 +164,38 @@ const sortingFunction: SortingFn<Row> = (
 };
 
 /** column definitions */
-const columns = props.cols.map((col) =>
-  columnHelper.accessor((row: Row) => row[col.key], {
-    /** unique column id */
-    id: col.key,
-    /** name */
-    header: col.name,
-    /** sortable */
-    enableSorting: true,
-    /** sorting function */
-    sortingFn: sortingFunction,
-    /** extra metadata */
-    meta: {
-      colProp: col,
-    },
-  }),
+const columns = computed(() =>
+  props.cols.map((col) =>
+    columnHelper.accessor((row: Row) => row[col.key], {
+      /** unique column id */
+      id: col.key,
+      /** name */
+      header: col.name,
+      /** sortable */
+      enableSorting: true,
+      /** sorting function */
+      sortingFn: sortingFunction,
+      /** put nullish values lower */
+      sortUndefined: -1,
+      /** extra metadata */
+      meta: {
+        colProp: col,
+      },
+    }),
+  ),
 );
+
+/** note: https://github.com/TanStack/table/issues/5653 */
 
 /** tanstack table api */
 const table = useVueTable({
-  data: props.rows,
-  columns,
+  /** https://github.com/TanStack/table/discussions/4455 */
+  get data() {
+    return props.rows;
+  },
+  get columns() {
+    return columns.value;
+  },
   getCoreRowModel: getCoreRowModel(),
   getFilteredRowModel: getFilteredRowModel(),
   getPaginationRowModel: getPaginationRowModel(),
@@ -184,11 +211,37 @@ const table = useVueTable({
     },
   },
 });
+
+/** default cell formatter based on detected type */
+const defaultFormat = (cell: unknown) => {
+  if (typeof cell === "number") return cell.toLocaleString();
+  if (typeof cell === "boolean") return cell ? "✓" : "✗";
+  /** if falsey (except 0 and false) */
+  if (!cell) return "-";
+  if (Array.isArray(cell)) return cell.length.toLocaleString();
+  if (cell instanceof Date)
+    return cell.toLocaleString(undefined, { dateStyle: "medium" });
+  if (typeof cell === "object")
+    return Object.keys(cell).length.toLocaleString();
+  if (typeof cell === "string") return truncate(cell, { length: 100 });
+  return cell;
+};
+
+/** get cell style from col definition */
+const cellStyle = (col?: Cols[number]) => ({
+  textAlign: col?.align ?? "center",
+  justifyContent: {
+    left: "flex-start",
+    center: "center",
+    right: "flex-end",
+  }[col?.align ?? "center"],
+});
 </script>
 
 <style scoped>
 .scroll {
-  max-width: 100%;
+  width: calc(100vw - 100px);
+  max-width: max-content;
   overflow-x: auto;
   border-radius: var(--rounded);
 }
@@ -209,7 +262,7 @@ const table = useVueTable({
 }
 
 .icon-inactive {
-  color: var(--gray);
+  color: var(--light-gray);
 }
 
 .icon-active {
@@ -221,5 +274,11 @@ const table = useVueTable({
   .icon-active {
     display: none;
   }
+}
+
+.empty {
+  padding: 5px;
+  color: var(--dark-gray);
+  text-align: center;
 }
 </style>
