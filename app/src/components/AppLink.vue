@@ -1,9 +1,9 @@
 <template>
   <component
-    :is="external ? 'a' : 'RouterLink'"
+    :is="component"
+    :to="component === 'RouterLink' ? to : undefined"
+    :href="component === 'a' ? to : undefined"
     class="link"
-    :to="external ? undefined : to"
-    :href="to"
     :target="(external && newTab !== false) || newTab === true ? '_blank' : ''"
   >
     <slot />
@@ -13,6 +13,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
+import { useRouter } from "vue-router";
 import External from "@/assets/external.svg";
 
 type Props = {
@@ -34,6 +35,13 @@ type Slots = {
 };
 
 defineSlots<Slots>();
+
+const router = useRouter();
+
+/** what component to use */
+const component = computed(() =>
+  router.resolve(props.to).name ? "RouterLink" : "a",
+);
 
 /** is link to internal route or external url */
 const external = computed(() => props.external ?? props.to.startsWith("http"));

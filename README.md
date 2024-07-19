@@ -1,3 +1,50 @@
+# CFDE ICC Evaluation Core
+
+## Overview
+
+The [Common Fund Data Ecosystem (CFDE)](https://commonfund.nih.gov/dataecosystem) is an effort to bring together knowledge across [Common Fund](https://commonfund.nih.gov/) programs into a cohesive resource.
+The Integration and Coordination Center (ICC) is a center within the CFDE responsible for, among other things, evaluating the activities of Common Fund programs.
+
+This repository is a place to:
+
+- View a high-level evaluation of Common Fund program activity (e.g. projects over time, dollars awarded, # of publications produced, etc.).
+- Submit details about your Common Fund project to be included in the above.
+- Maintain code used to coordinate the above.
+
+The evaluation can be viewed as a live webapp dashboard or as separate PDF reports.
+
+[🖱️ The Webapp](cfde-eval.netlify.app)
+
+[📜 PDF Reports](cfde-eval.netlify.app/reports)
+
+## Submit your project
+
+We are able to get most details about Common Fund projects automatically from NIH resources, but there are some pieces of info that you must submit manually so that we have everything we need to create the evaluation.
+
+If you have a project under the Common Fund, please follow the instructions in the sections below as applicable.
+
+### Submit software repositories
+
+Repositories ("repos") are places for storing, tracking changes to, and collaborating on software.
+
+Currently, we only take submissions of software kept in _public_ GitHub.com repos.
+Private repos and other platforms such as GitLab aren't supported yet.
+
+1. Find all GitHub repos that are associated with your project.
+   1. If you're unsure where to find these, ask members of your project about any software that was written in support of it, and where the code for the software resides.
+1. "Tag" each repo with the project.
+   1. See [GitHub's instructions for tagging repos](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) for reference.
+   1. On the main page of the repo, click on the gear ⚙ next to "About".
+   1. Under "Topics", type in your _core project number_†, e.g. `U54OD036472` (case-insensitive).
+
+[This repository itself](https://github.com/nih-cfde/icc-eval-core) has been [tagged with its core project number](https://github.com/topics/u54od036472), so use it as a reference.
+
+† Do not confuse this with a (sub) "project" number, which is longer, e.g. `1U54OD036472-01`.
+
+---
+
+# Development
+
 ## Requirements
 
 - [Node](https://nodejs.org/) v22+
@@ -13,7 +60,7 @@ The automated steps in this repo are roughly as follows:
    1. Collate most important information from _raw_ data into common high-level _output_ data format suited to making desired reports.
    1. Repeat previous steps in order of dependency (e.g. opportunity number -> grant numbers) until all needed info is gathered.
 1. _Print_
-   1. Run webapp (interactive dashboard that provides access to all reports).
+   1. Run webapp.
    1. Import _output_ data from _ingest_, and do some minimal final processing (e.g. combine journal info with each publication listing).
    1. Render select webapp _pages_ (e.g. `/core-project/abc123`) to PDF _reports_.
 1. Deploy webapp and PDFs to live, public web addresses.

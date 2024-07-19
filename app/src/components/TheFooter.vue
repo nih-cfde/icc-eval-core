@@ -26,39 +26,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed } from "vue";
 import { useRoute } from "vue-router";
 import Download from "@/assets/download.svg";
 import AppLink from "@/components/AppLink.vue";
+import { pdfs } from "@/pages/reports";
 
 const route = useRoute();
 
-/** list of pdf files */
-const pdfs = ref<Record<string, string>>({});
-
 /** download link for pre-generated pdf file associated with this route */
 const pdf = computed(() => pdfs.value[route.fullPath]);
-
-onMounted(async () => {
-  try {
-    /**
-     * get list of pdf files. safely import dynamically to not fail build if
-     * import does not exist.
-     */
-    pdfs.value =
-      (
-        await Object.values(
-          import.meta.glob<
-            boolean,
-            string,
-            { default: Record<string, string> }
-          >("~/pdfs.json"),
-        )[0]?.()
-      )?.default ?? {};
-  } catch (error) {
-    console.error("Couldn't load PDF list");
-  }
-});
 </script>
 
 <style scoped>

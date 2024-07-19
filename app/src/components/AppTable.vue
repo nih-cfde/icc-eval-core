@@ -215,7 +215,7 @@ const table = useVueTable({
 /** default cell formatter based on detected type */
 const defaultFormat = (cell: unknown) => {
   if (typeof cell === "number") return cell.toLocaleString();
-  if (typeof cell === "boolean") return cell ? "✓" : "✗";
+  if (typeof cell === "boolean") return cell ? "✓ Yes" : "✗ No";
   /** if falsey (except 0 and false) */
   if (!cell) return "-";
   if (Array.isArray(cell)) return cell.length.toLocaleString();

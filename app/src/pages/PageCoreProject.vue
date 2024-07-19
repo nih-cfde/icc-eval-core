@@ -6,7 +6,7 @@
   <section>
     <h2>Details</h2>
 
-    <div class="mini-table">
+    <div class="details">
       <div>
         <span>Projects</span>
         <span>
@@ -98,6 +98,17 @@
       </template>
     </AppTable>
 
+    <div class="mini-table">
+      <span>RCR</span>
+      <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
+        >Relative Citation Ratio</AppLink
+      >
+      <span>SJR</span>
+      <AppLink to="https://www.scimagojr.com/journalrank.php"
+        >Scimago Journal Rank</AppLink
+      >
+    </div>
+
     <template v-if="Object.keys(publicationsOverTime).length > 1">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -132,6 +143,19 @@
         ({{ ago(row.modified) }})
       </template>
     </AppTable>
+
+    <div class="notes">
+      <p>Notes</p>
+      <p>
+        Only the <code>main</code> (or default) branch is considered (e.g. for #
+        of commits).
+      </p>
+      <p>
+        # of dependencies is totaled from all manifests in repo, direct and
+        transitive, e.g.
+        <code>package.json</code> + <code>package-lock.json</code>.
+      </p>
+    </div>
 
     <template v-if="projectRepos.length">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
@@ -257,12 +281,10 @@ const publicationCols: Cols<typeof projectPublications.value> = [
   {
     key: "relative_citation_ratio",
     name: "RCR",
-    attrs: { title: "Relative Citation Ratio" },
   },
   {
     key: "rank",
     name: "SJR",
-    attrs: { title: "Scimago Journal Rank" },
   },
   {
     key: "citations",
