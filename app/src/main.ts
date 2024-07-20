@@ -10,7 +10,6 @@ import "./styles.css";
 /** app pages */
 const routes = [
   {
-    name: "Home",
     path: "/",
     component: PageHome,
     beforeEnter: () => {
