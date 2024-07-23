@@ -122,7 +122,7 @@ a {
   border-radius: calc(var(--rounded) / 2);
   background: transparent;
   color: var(--theme);
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   transition: var(--fast);
   transition-property: color, background;
 }
@@ -150,38 +150,31 @@ svg {
   flex-shrink: 0;
 }
 
-@media print {
-  table {
-    width: 100% !important;
-  }
-
-  th,
-  td {
-    overflow-wrap: anywhere;
-  }
-}
-
 table {
   border-collapse: collapse;
   overflow-wrap: break-word;
 }
 
 th {
+  background: var(--off-white);
   font-weight: var(--bold);
 }
 
-th {
-  background: var(--off-white);
+tr {
+  border-bottom: solid 1px var(--off-white);
 }
 
 th,
 td {
+  max-width: 25vw;
   padding: 0;
   text-align: left;
 }
 
-tbody tr {
-  border-bottom: solid 1px var(--off-white);
+@media print {
+  table {
+    width: 100% !important;
+  }
 }
 
 .charts {

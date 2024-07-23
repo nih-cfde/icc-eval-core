@@ -73,9 +73,37 @@
     <h2>Repositories</h2>
 
     <AppTable
-      :cols="repoCols"
+      :cols="repoColsA"
       :rows="projectRepos"
-      :sort="[{ id: 'stars', desc: true }]"
+      :sort="[{ id: 'id', desc: true }]"
+    >
+      <template #name="{ row }">
+        <AppLink :to="`https://github.com/${row.owner}/${row.name}`"
+          >{{ row.owner }}/{{ row.name }}</AppLink
+        >
+      </template>
+
+      <template #issues="{ row }">
+        {{ row.closed_issues.toLocaleString() }} ☑<br />
+        {{ row.open_issues.toLocaleString() }} ☐<br />
+      </template>
+
+      <template #pull-requests="{ row }">
+        {{ row.closed_pull_requests.toLocaleString() }} ☑<br />
+        {{ row.open_pull_requests.toLocaleString() }} ☐<br />
+      </template>
+
+      <template #modified="{ row }">
+        {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
+        <br />
+        ({{ ago(row.modified) }})
+      </template>
+    </AppTable>
+
+    <AppTable
+      :cols="repoColsB"
+      :rows="projectRepos"
+      :sort="[{ id: 'id', desc: true }]"
     >
       <template #name="{ row }">
         <AppLink :to="`https://github.com/${row.owner}/${row.name}`"
@@ -153,22 +181,12 @@
       </div>
     </template>
   </section>
-
-  <section v-if="projectDependencies.length">
-    <h2>Dependencies</h2>
-
-    <AppTable
-      :cols="dependencyCols"
-      :rows="projectDependencies"
-      :sort="[{ id: 'package.json', desc: true }]"
-    />
-  </section>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { sum, sumBy, uniq } from "lodash";
+import { sum, sumBy } from "lodash";
 import { useTitle } from "@vueuse/core";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
@@ -310,7 +328,6 @@ const publicationCols: Cols<typeof projectPublications.value> = [
     slot: "modified",
     key: "modified",
     name: "Updated",
-    style: { whiteSpace: "nowrap" },
   },
 ];
 
@@ -329,11 +346,12 @@ const projectRepos = computed(() =>
       pull_request_time_open: span(repo.pull_request_time_open),
       modified: new Date(repo.modified),
       dependency_total: sum(Object.values(repo.dependencies)),
+      ...repo.dependencies,
     })),
 );
 
 /** repo table column definitions */
-const repoCols: Cols<typeof projectRepos.value> = [
+const repoColsA: Cols<typeof projectRepos.value> = [
   {
     slot: "name",
     key: "id",
@@ -361,23 +379,13 @@ const repoCols: Cols<typeof projectRepos.value> = [
     key: "issues",
     slot: "issues",
     name: "Issues",
-    align: "left",
     style: { whiteSpace: "nowrap" },
-  },
-  {
-    key: "issue_time_open",
-    name: "Issue Open",
   },
   {
     key: "pull_requests",
     slot: "pull-requests",
     name: "PRs",
-    align: "left",
     style: { whiteSpace: "nowrap" },
-  },
-  {
-    key: "pull_request_time_open",
-    name: "PR Open",
   },
   {
     key: "commits",
@@ -387,11 +395,26 @@ const repoCols: Cols<typeof projectRepos.value> = [
     key: "contributors",
     name: "Contrib.",
   },
+];
+const repoColsB: Cols<typeof projectRepos.value> = [
+  {
+    slot: "name",
+    key: "id",
+    name: "Name",
+    align: "left",
+  },
   {
     slot: "modified",
     key: "modified",
     name: "Updated",
-    style: { whiteSpace: "nowrap" },
+  },
+  {
+    key: "issue_time_open",
+    name: "Issue Open",
+  },
+  {
+    key: "pull_request_time_open",
+    name: "PR Open",
   },
   {
     key: "language",
@@ -413,6 +436,11 @@ const repoCols: Cols<typeof projectRepos.value> = [
     slot: "dependencies",
     key: "dependency_total",
     name: "Dependencies",
+    attrs: (row) => ({
+      title: Object.entries(row?.dependencies ?? {})
+        .map(([key, value]) => `${key}: ${value}`)
+        .join("\n"),
+    }),
   },
 ];
 
@@ -458,33 +486,4 @@ const commitsOverTime = computed(() =>
     new Date(d).getUTCFullYear(),
   ),
 );
-
-/** dependency table row data */
-const projectDependencies = computed(() =>
-  projectRepos.value.map(
-    (repo): Record<string, string | number> => ({
-      name: `${repo.owner}/${repo.name}`,
-      ...repo.dependencies,
-    }),
-  ),
-);
-
-/** dependency table column definitions */
-const dependencyCols = computed<Cols<typeof projectDependencies.value>>(() => [
-  /** name of repo */
-  {
-    slot: "name",
-    key: "name",
-    name: "Name",
-    align: "left",
-  },
-  /** make col for each dependency manifest */
-  ...uniq(
-    projectRepos.value.map((repo) => Object.keys(repo.dependencies)).flat(),
-  )
-    /** except for github actions */
-    .filter((path) => !path.match(/\.github\/workflows\/.*\.ya?ml$/i))
-    /** make table col def */
-    .map((path) => ({ key: path, name: path })),
-]);
 </script>
