@@ -5,6 +5,7 @@ import { queryReporter } from "@/api/reporter";
 import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
 import type { PublicationsResults } from "@/api/reporter-publications-results.d";
 import { log } from "@/util/log";
+import { query } from "@/util/request";
 
 /** get publications associated with core projects */
 export const getPublications = async (coreProjects: string[]) => {
@@ -17,43 +18,60 @@ export const getPublications = async (coreProjects: string[]) => {
   );
 
   /** get publications associated with core projects */
-  let { results: reporterResults } = await queryReporter<
-    PublicationsQuery,
-    PublicationsResults
-  >("publications", { criteria: { core_project_nums: coreProjects } });
+  const reporter = await query(
+    () =>
+      queryReporter<PublicationsQuery, PublicationsResults>("publications", {
+        criteria: { core_project_nums: coreProjects },
+      }),
+    "reporter-publications",
+  );
+  if (reporter instanceof Error) throw log(reporter, "error");
+  let { results: reporterPublications } = reporter;
 
   /** de-dupe */
-  reporterResults = uniqBy(reporterResults, (result) => result.pmid);
+  reporterPublications = uniqBy(reporterPublications, (result) => result.pmid);
 
   log(
-    `Found ${reporterResults.length.toLocaleString()} publications`,
-    reporterResults.length ? "success" : "error",
+    `Found ${reporterPublications.length.toLocaleString()} publications`,
+    reporterPublications.length ? "success" : "error",
   );
 
   /** get extra info about publications */
-  let { data: iciteResults } = await queryIcite(
-    reporterResults
-      .map((result) => result.pmid)
-      .filter((id): id is number => !!id),
+  const icite = await query(
+    () =>
+      queryIcite(
+        reporterPublications
+          .map((result) => result.pmid)
+          .filter((id): id is number => !!id),
+      ),
+    "icite",
   );
+  if (icite instanceof Error) throw log(icite, "error");
+  let { data: icitePublications } = icite;
+
+  if (icitePublications instanceof Error) throw log(icitePublications, "error");
 
   /** de-dupe */
-  iciteResults = uniqBy(iciteResults, (result) => result.pmid);
+  icitePublications = uniqBy(icitePublications, (result) => result.pmid);
 
   log(
-    `Found ${iciteResults.length.toLocaleString()} publication metadata`,
-    iciteResults.length ? "success" : "error",
+    `Found ${icitePublications.length.toLocaleString()} publication metadata`,
+    icitePublications.length ? "success" : "error",
   );
 
   /** quick lookup of extra info from icite results by id */
   const extrasLookup: Record<
     NonNullable<Datum["pmid"]>,
     Omit<Datum, "pmid">
-  > = Object.fromEntries(iciteResults.map(({ pmid, ...rest }) => [pmid, rest]));
+  > = Object.fromEntries(
+    icitePublications.map(({ pmid, ...rest }) => [pmid, rest]),
+  );
 
   /** validate */
-  const reporterSet = new Set(reporterResults.map((result) => result.pmid));
-  const iciteSet = new Set(iciteResults.map((result) => result.pmid));
+  const reporterSet = new Set(
+    reporterPublications.map((result) => result.pmid),
+  );
+  const iciteSet = new Set(icitePublications.map((result) => result.pmid));
   const notInIcite = reporterSet.difference(iciteSet);
   const notInReporter = iciteSet.difference(reporterSet);
   if (
@@ -61,13 +79,16 @@ export const getPublications = async (coreProjects: string[]) => {
     notInIcite.size ||
     notInReporter.size
   ) {
-    log(`Not in iCite: ${notInIcite}`, "secondary");
-    log(`Not in RePORTER: ${notInReporter}`, "secondary");
+    log(`Not in iCite: ${Array.from(notInIcite).join(", ")}`, "secondary");
+    log(
+      `Not in RePORTER: ${Array.from(notInReporter).join(", ")}`,
+      "secondary",
+    );
     log("Number of RePORTER and iCite pubs don't match", "error");
   }
 
   /** transform data into desired format, with fallbacks */
-  const transformedPublications = reporterResults.map((result) => {
+  const transformedPublications = reporterPublications.map((result) => {
     const extras = extrasLookup[result.pmid ?? 0];
     return {
       id: result.pmid ?? 0,

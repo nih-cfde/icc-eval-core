@@ -16,7 +16,6 @@ export const loadJson = async <Data>(path: string, filename: string) => {
       await readFile(`${path}/${filename}.json`, "utf-8"),
     ) as Data;
   } catch (error) {
-    error;
     return null;
   }
 };

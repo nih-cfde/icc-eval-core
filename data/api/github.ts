@@ -79,12 +79,14 @@ export const getForks = (owner: string, name: string) =>
   });
 
 /** get issues for repo */
-export const getIssues = (owner: string, name: string) =>
-  octokit.paginate(octokit.rest.issues.list, {
-    owner,
-    repo: name,
-    state: "all",
-  });
+export const getIssues = async (owner: string, name: string) =>
+  (
+    await octokit.paginate(octokit.rest.issues.listForRepo, {
+      owner,
+      repo: name,
+      state: "all",
+    })
+  ).filter((issue) => !issue.pull_request);
 
 /** get pull requests for repo */
 export const getPullRequests = (owner: string, name: string) =>

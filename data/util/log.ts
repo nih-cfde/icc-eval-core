@@ -33,7 +33,7 @@ export const log = (
   message: Message,
   level: keyof typeof levels | "" = "",
   manualIndent?: number,
-) => {
+): string => {
   const indent = "    ".repeat(manualIndent ?? indentCount);
   const { color, icon } =
     level && level in levels ? levels[level] : levels.default;

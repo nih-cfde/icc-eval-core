@@ -6,3 +6,9 @@ const timeAgo = new TimeAgo("en-US");
 
 /** get relative time format */
 export const ago = (date: Date) => timeAgo.format(date);
+
+export const span = (seconds: number) =>
+  timeAgo
+    .format(Date.now() - seconds * 1000)
+    .replace("ago", "")
+    .trim();

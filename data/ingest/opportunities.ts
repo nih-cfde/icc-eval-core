@@ -2,7 +2,7 @@ import { uniq, uniqBy } from "lodash-es";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { newPage } from "@/util/browser";
 import { deindent, indent, log } from "@/util/log";
-import { allSettled } from "@/util/request";
+import { queryMulti } from "@/util/request";
 
 /** page to scrape */
 const opportunitiesUrl =
@@ -24,7 +24,7 @@ export const getOpportunities = async () => {
   await page.goto(opportunitiesUrl);
 
   /** full list of opportunity html/pdf docs */
-  let { results: documents } = await allSettled(
+  let { results: documents } = await queryMulti(
     Array.from(await page.locator(documentsSelector).all()),
     async (link) => {
       const href = await link.getAttribute("href");
@@ -51,7 +51,7 @@ export const getOpportunities = async () => {
 
   indent();
   /** run in parallel */
-  let { results: opportunities, errors: opportunityErrors } = await allSettled(
+  let { results: opportunities, errors: opportunityErrors } = await queryMulti(
     documents.map((document) => document.value),
     async (document) => {
       const page = await newPage();

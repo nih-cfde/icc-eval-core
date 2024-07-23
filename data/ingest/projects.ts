@@ -3,6 +3,7 @@ import { queryReporter } from "@/api/reporter";
 import type { ProjectsQuery } from "@/api/reporter-projects-query";
 import type { ProjectsResults } from "@/api/reporter-projects-results";
 import { log } from "@/util/log";
+import { query } from "@/util/request";
 
 /** get grant projects associated with funding opportunities */
 export const getProjects = async (opportunities: string[]) => {
@@ -11,10 +12,15 @@ export const getProjects = async (opportunities: string[]) => {
     "start",
   );
 
-  let { results: projects } = await queryReporter<
-    ProjectsQuery,
-    ProjectsResults
-  >("projects", { criteria: { opportunity_numbers: opportunities } });
+  const reporter = await query(
+    () =>
+      queryReporter<ProjectsQuery, ProjectsResults>("projects", {
+        criteria: { opportunity_numbers: opportunities },
+      }),
+    "reporter-projects",
+  );
+  if (reporter instanceof Error) throw log(reporter, "error");
+  let { results: projects } = reporter;
 
   /** de-dupe */
   projects = uniqBy(projects, (project) => project.project_num);

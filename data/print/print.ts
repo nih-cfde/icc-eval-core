@@ -1,7 +1,7 @@
 import { exec } from "child_process";
 import { newPage } from "@/util/browser";
 import { deindent, indent, log } from "@/util/log";
-import { allSettled } from "@/util/request";
+import { queryMulti } from "@/util/request";
 
 const { PDF_PATH } = process.env;
 
@@ -37,7 +37,7 @@ export const printReports = async (
 
   indent();
   /** run in parallel */
-  const { results, errors } = await allSettled(
+  const { results, errors } = await queryMulti(
     pages,
     async ({ route, filename }: (typeof pages)[number]) => {
       /** go to route that shows report */

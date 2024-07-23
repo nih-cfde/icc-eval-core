@@ -4,7 +4,7 @@ import { uniq, uniqBy } from "lodash-es";
 import type { Rank } from "@/api/scimago-journals";
 import { newPage } from "@/util/browser";
 import { deindent, indent, log } from "@/util/log";
-import { allSettled } from "@/util/request";
+import { queryMulti } from "@/util/request";
 
 const { RAW_PATH } = process.env;
 
@@ -37,7 +37,9 @@ export const getJournals = async (journalIds: string[]) => {
       const downloadPromise = page
         .waitForEvent("download", options)
         /** https://github.com/microsoft/playwright/issues/21206 */
-        .catch((error) => log(error, "warn"));
+        .catch((error) => {
+          throw log(error, "warn");
+        });
       await page.getByText(downloadText).click(options);
       const download = await downloadPromise;
       await download.saveAs(rankDataPath);
@@ -53,7 +55,6 @@ export const getJournals = async (journalIds: string[]) => {
     try {
       return readFileSync(rankDataPath);
     } catch (error) {
-      error;
       return "";
     }
   })();
@@ -80,7 +81,7 @@ export const getJournals = async (journalIds: string[]) => {
 
   indent();
   /** run in parallel */
-  let { results: journals, errors: journalErrors } = await allSettled(
+  let { results: journals, errors: journalErrors } = await queryMulti(
     journalIds,
     async (journalId) => {
       /** get full journal name from abbreviated name/id via journal search */

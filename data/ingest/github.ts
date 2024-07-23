@@ -1,3 +1,4 @@
+import { meanBy } from "lodash-es";
 import {
   fileExists,
   getCommits,
@@ -10,7 +11,7 @@ import {
   searchRepos,
 } from "@/api/github";
 import { deindent, indent, log } from "@/util/log";
-import { allSettled } from "@/util/request";
+import { queryMulti } from "@/util/request";
 
 export const getRepos = async (coreProjects: string[]) => {
   log(
@@ -19,7 +20,7 @@ export const getRepos = async (coreProjects: string[]) => {
 
   indent();
   /** run in parallel */
-  const { results: repos, errors: repoErrors } = await allSettled(
+  const { results: repos, errors: repoErrors } = await queryMulti(
     coreProjects,
     async (coreProject) => {
       /** TEMPORARY, to not query repos that aren't tagged yet */
@@ -37,41 +38,20 @@ export const getRepos = async (coreProjects: string[]) => {
           return {
             /** associated core project number */
             core_project: coreProject,
-
-            /** top-level details */
+            /** base top-level details */
             ...repo,
-
-            /** get all commits */
-            commits: await getCommits(owner, name),
-
-            /** get all stars */
             stars: await getStars(owner, name),
-
-            /** get all watchers */
             /**
              * watchers over time not possible
              * https://stackoverflow.com/questions/71090557/github-api-number-of-watch-over-time
              */
-
-            /** get all forks */
             forks: await getForks(owner, name),
-
-            /** get all issues */
             issues: await getIssues(owner, name),
-
-            /** get all pull requests */
             pull_requests: await getPullRequests(owner, name),
-
-            /** get presence of readme.md */
-            readme: await fileExists(owner, name, "README.md"),
-
-            /** get presence of contributing.md */
-            contributing: await fileExists(owner, name, "CONTRIBUTING.md"),
-
-            /** get contributors */
+            commits: await getCommits(owner, name),
             contributors: await getContributors(owner, name),
-
-            /** get dependencies */
+            readme: await fileExists(owner, name, "README.md"),
+            contributing: await fileExists(owner, name, "CONTRIBUTING.md"),
             dependencies: await getDependencies(owner, name),
           };
         }),
@@ -96,6 +76,34 @@ export const getRepos = async (coreProjects: string[]) => {
       "warn",
     );
 
+  type Issue = (typeof repos)[number]["value"][number]["issues"][number];
+  type PullRequest =
+    (typeof repos)[number]["value"][number]["pull_requests"][number];
+
+  /** transform issue (or pull request, which gh considers sub-type of issue) */
+  const mapIssue = (issue: Issue | PullRequest) => ({
+    state: issue.state,
+    state_reason: "state_reason" in issue ? issue.state_reason : "",
+    created: issue.created_at,
+    updated: issue.updated_at,
+    closed: issue.closed_at,
+    labels: issue.labels.map((label) =>
+      typeof label === "string" ? label : label.name,
+    ),
+  });
+
+  /** get average open time for issue/pr */
+  const getOpenTime = (issues: (Issue | PullRequest)[]) =>
+    Math.round(
+      meanBy(
+        issues,
+        (issue) =>
+          (new Date(issue.closed_at ?? Date.now()).getTime() -
+            new Date(issue.created_at).getTime()) /
+          1000,
+      ),
+    );
+
   /** transform data into desired format, with fallbacks */
   const transformedRepos = repos
     .map((repo) => repo.value)
@@ -106,31 +114,29 @@ export const getRepos = async (coreProjects: string[]) => {
       owner: repo.owner?.login ?? "",
       name: repo.name,
       description: repo.description ?? "",
+      stars: repo.stars.map((star) => star.starred_at ?? ""),
+      watchers: repo.watchers,
+      forks: repo.forks.map((fork) => fork.created_at ?? ""),
+      issues: repo.issues.map(mapIssue),
+      open_issues: repo.issues.filter((issue) => issue.state === "open").length,
+      closed_issues: repo.issues.filter((issue) => issue.state === "closed")
+        .length,
+      issue_time_open: getOpenTime(repo.issues),
+      pull_requests: repo.pull_requests.map(mapIssue),
+      open_pull_requests: repo.pull_requests.filter(
+        (pull_request) => pull_request.state === "open",
+      ).length,
+      closed_pull_requests: repo.pull_requests.filter(
+        (pull_request) => pull_request.state === "closed",
+      ).length,
+      pull_request_time_open: getOpenTime(repo.pull_requests),
       commits: repo.commits.map(
         (commit) =>
           commit.commit.committer?.date ?? commit.commit.author?.date ?? "",
       ),
-      stars: repo.stars.map((star) => star.starred_at ?? ""),
-      watchers: repo.watchers,
-      forks: repo.forks.map((fork) => fork.created_at ?? ""),
-      issues: repo.issues.map((issue) => ({
-        state: issue.state,
-        state_reason: issue.state_reason,
-        created: issue.created_at,
-        updated: issue.updated_at,
-        closed: issue.closed_at,
-        labels: issue.labels.map((label) =>
-          typeof label === "string" ? label : label.name,
-        ),
-      })),
-      pull_requests: repo.pull_requests.map((pull_request) => ({
-        state: pull_request.state,
-        created: pull_request.created_at,
-        updated: pull_request.updated_at,
-        closed: pull_request.closed_at,
-        labels: pull_request.labels.map((label) =>
-          typeof label === "string" ? label : label.name,
-        ),
+      contributors: repo.contributors.map((contributor) => ({
+        name: contributor.login ?? contributor.name ?? "",
+        contributions: contributor.contributions,
       })),
       created: repo.created_at,
       modified: repo.pushed_at,
@@ -138,10 +144,6 @@ export const getRepos = async (coreProjects: string[]) => {
       license: repo.license?.name ?? "",
       readme: repo.readme,
       contributing: repo.contributing,
-      contributors: repo.contributors.map((contributor) => ({
-        name: contributor.login ?? contributor.name ?? "",
-        contributions: contributor.contributions,
-      })),
       dependencies: Object.fromEntries(
         repo.dependencies.repository.dependencyGraphManifests?.nodes?.map(
           (node) => [

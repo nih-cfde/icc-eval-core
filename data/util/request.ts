@@ -2,7 +2,7 @@ import { loadJson, saveJson } from "@/util/file";
 
 export type Params = Record<string, unknown | unknown[]>;
 
-const { RAW_PATH } = process.env;
+const { RAW_PATH, NOCACHE } = process.env;
 
 /** generic request wrapper */
 export const request = async <Response>(
@@ -38,13 +38,40 @@ export const request = async <Response>(
     if (options.parse === "text") return (await response.text()) as Response;
     throw Error();
   } catch (error) {
-    error;
     throw Error(`Couldn't parse ${url.pathname} as ${options.parse}`);
   }
 };
 
-/** allSettled, with conveniences */
-export const allSettled = async <Input, Result>(
+/** run query, with extra conveniences */
+export const query = async <Result>(
+  /** async func to run */
+  promise: () => Promise<Result>,
+  /** raw filename */
+  filename?: string,
+) => {
+  /** if raw data already exists, return that without querying */
+  if (filename) {
+    const raw = await loadJson<Result>(RAW_PATH, filename);
+    if (raw && !NOCACHE) return raw;
+  }
+
+  let result: Result | undefined;
+
+  /** try to run async func */
+  try {
+    result = await promise();
+  } catch (error) {
+    return error as Error;
+  }
+
+  /** save raw data */
+  if (filename && result) saveJson(result, RAW_PATH, filename);
+
+  return result;
+};
+
+/** run multiple queries in parallel, with extra conveniences */
+export const queryMulti = async <Input, Result>(
   /** array of things */
   input: Input[],
   /** async func to run on each array item */
@@ -61,7 +88,7 @@ export const allSettled = async <Input, Result>(
   /** if raw data already exists, return that without querying */
   if (filename) {
     const raw = await loadJson<Result[]>(RAW_PATH, filename);
-    if (raw)
+    if (raw && !NOCACHE)
       return {
         results: raw.map((r, index) => ({ input: input[index]!, value: r })),
         errors: [],
