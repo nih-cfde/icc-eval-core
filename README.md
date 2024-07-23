@@ -19,9 +19,8 @@ The evaluation can be viewed as a live webapp dashboard or as separate PDF repor
 
 ## Submit your project
 
-We are able to get most details about Common Fund projects automatically from NIH resources, but there are some pieces of info that you must submit manually so that we have everything we need to create the evaluation.
-
-If you have a project under the Common Fund, please follow the instructions in the sections below as applicable.
+We gather most details about Common Fund projects automatically from NIH resources, but there are some pieces of info that require manual actions to be integrated.
+If you would like your project to be included in the dashboard to the fullest extent, please follow the instructions in the sections below as applicable.
 
 ### Submit software repositories
 
