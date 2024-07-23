@@ -1,8 +1,11 @@
 import {
   fileExists,
   getCommits,
+  getContributors,
   getDependencies,
   getForks,
+  getIssues,
+  getPullRequests,
   getStars,
   searchRepos,
 } from "@/api/github";
@@ -35,29 +38,38 @@ export const getRepos = async (coreProjects: string[]) => {
             /** associated core project number */
             core_project: coreProject,
 
-            /** top-level repo details */
+            /** top-level details */
             ...repo,
 
-            /** get all commits in repo */
+            /** get all commits */
             commits: await getCommits(owner, name),
 
-            /** get all stars of repo */
+            /** get all stars */
             stars: await getStars(owner, name),
 
-            /** get all watchers of repo */
+            /** get all watchers */
             /**
              * watchers over time not possible
              * https://stackoverflow.com/questions/71090557/github-api-number-of-watch-over-time
              */
 
-            /** get all forks of repo */
+            /** get all forks */
             forks: await getForks(owner, name),
+
+            /** get all issues */
+            issues: await getIssues(owner, name),
+
+            /** get all pull requests */
+            pull_requests: await getPullRequests(owner, name),
 
             /** get presence of readme.md */
             readme: await fileExists(owner, name, "README.md"),
 
             /** get presence of contributing.md */
             contributing: await fileExists(owner, name, "CONTRIBUTING.md"),
+
+            /** get contributors */
+            contributors: await getContributors(owner, name),
 
             /** get dependencies */
             dependencies: await getDependencies(owner, name),
@@ -101,13 +113,35 @@ export const getRepos = async (coreProjects: string[]) => {
       stars: repo.stars.map((star) => star.starred_at ?? ""),
       watchers: repo.watchers,
       forks: repo.forks.map((fork) => fork.created_at ?? ""),
-      issues: repo.open_issues,
+      issues: repo.issues.map((issue) => ({
+        state: issue.state,
+        state_reason: issue.state_reason,
+        created: issue.created_at,
+        updated: issue.updated_at,
+        closed: issue.closed_at,
+        labels: issue.labels.map((label) =>
+          typeof label === "string" ? label : label.name,
+        ),
+      })),
+      pull_requests: repo.pull_requests.map((pull_request) => ({
+        state: pull_request.state,
+        created: pull_request.created_at,
+        updated: pull_request.updated_at,
+        closed: pull_request.closed_at,
+        labels: pull_request.labels.map((label) =>
+          typeof label === "string" ? label : label.name,
+        ),
+      })),
       created: repo.created_at,
       modified: repo.pushed_at,
       language: repo.language ?? "",
       license: repo.license?.name ?? "",
       readme: repo.readme,
       contributing: repo.contributing,
+      contributors: repo.contributors.map((contributor) => ({
+        name: contributor.login ?? contributor.name ?? "",
+        contributions: contributor.contributions,
+      })),
       dependencies: Object.fromEntries(
         repo.dependencies.repository.dependencyGraphManifests?.nodes?.map(
           (node) => [

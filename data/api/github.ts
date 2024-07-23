@@ -78,6 +78,22 @@ export const getForks = (owner: string, name: string) =>
     per_page: maxPage,
   });
 
+/** get issues for repo */
+export const getIssues = (owner: string, name: string) =>
+  octokit.paginate(octokit.rest.issues.list, {
+    owner,
+    repo: name,
+    state: "all",
+  });
+
+/** get pull requests for repo */
+export const getPullRequests = (owner: string, name: string) =>
+  octokit.paginate(octokit.rest.pulls.list, {
+    owner,
+    repo: name,
+    state: "all",
+  });
+
 /** check whether file exists in repo */
 export const fileExists = async (owner: string, name: string, path: string) => {
   try {
@@ -97,6 +113,10 @@ export const fileExists = async (owner: string, name: string, path: string) => {
     );
   }
 };
+
+/** get contributors */
+export const getContributors = async (owner: string, name: string) =>
+  octokit.paginate(octokit.rest.repos.listContributors, { owner, repo: name });
 
 /**
  * graph ql query to get dependency count. need to include "dependencies" too,
