@@ -7,7 +7,7 @@ The Integration and Coordination Center (ICC) is a center within the CFDE respon
 
 This repository is a place to:
 
-- View a high-level evaluation of Common Fund program activity (e.g. projects over time, dollars awarded, # of publications produced, etc.).
+- View a high-level dashboard of Common Fund and CFDE activities (e.g. projects over time, dollars awarded, # of publications produced, etc.).
 - Submit details about your Common Fund project to be included in the above.
 - Maintain code used to coordinate the above.
 
