@@ -3,7 +3,7 @@
 ## Overview
 
 The [Common Fund Data Ecosystem (CFDE)](https://commonfund.nih.gov/dataecosystem) is an effort to bring together knowledge across [Common Fund](https://commonfund.nih.gov/) programs into a cohesive resource.
-The Integration and Coordination Center (ICC) is a center within the CFDE responsible for, among other things, evaluating the activities of Common Fund programs.
+The Integration and Coordination Center (ICC) is a center within the CFDE responsible for, among other things, reporting on the impact and influence of the CFDE.
 
 This repository is a place to:
 
