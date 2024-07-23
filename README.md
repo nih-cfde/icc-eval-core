@@ -11,9 +11,9 @@ This repository is a place to:
 - Ensure your project is fully included in the dashboard by aligning with our ingest process.
 - Maintain code used to coordinate the above.
 
-The evaluation can be viewed as a live webapp dashboard or as separate PDF reports.
+You can view the information as a live webapp dashboard or as separate PDF reports.
 
-[🖱️ The Webapp](cfde-eval.netlify.app)
+[🖱️ The Dashboard Webapp](cfde-eval.netlify.app)
 
 [📜 PDF Reports](cfde-eval.netlify.app/reports)
 
@@ -56,13 +56,13 @@ The automated steps in this repo are roughly as follows:
 1. _Ingest_
    1. Get _raw_ data from an external resource, either by scraping an HTML page, downloading and parsing a PDF or CSV, or making a request to an API.
    1. Save _raw_ data exactly as-is for provenance and caching.
-   1. Collate most important information from _raw_ data into common high-level _output_ data format suited to making desired reports.
+   1. Collate most important information from _raw_ data into common high-level _output_ data format suited to making desired dashboard _pages_ and PDF _reports_.
    1. Repeat previous steps in order of dependency (e.g. opportunity number -> grant numbers) until all needed info is gathered.
 1. _Print_
-   1. Run webapp.
+   1. Run dashboard webapp.
    1. Import _output_ data from _ingest_, and do some minimal final processing (e.g. combine journal info with each publication listing).
-   1. Render select webapp _pages_ (e.g. `/core-project/abc123`) to PDF _reports_.
-1. Deploy webapp and PDFs to live, public web addresses.
+   1. Render select dashboard _pages_ (e.g. `/core-project/abc123`) to PDF _reports_.
+1. Deploy dashboard and PDFs to live, public web addresses.
 
 ## Repo Content
 
@@ -81,8 +81,8 @@ The automated steps in this repo are roughly as follows:
 ## Technology
 
 - TypeScript - Language used to provide type-safety from beginning to end of pipeline.
-- Playwright - Tool used for scraping public web pages and rendering webapp _page_ reports to PDFs.
-- Netlify - Service used for hosting webapp (and PR previews).
+- Playwright - Tool used for scraping public web pages and rendering dashboard _pages_ to PDF _reports_.
+- Netlify - Service used for hosting dashboard webapp (and PR previews).
 - Octokit - Library used for conveniently interacting with GitHub APIs.
 
 The ingest pipeline is optimized wherever possible and appropriate.
