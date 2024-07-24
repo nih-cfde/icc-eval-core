@@ -3,6 +3,7 @@
     <h1><Microscope />Core Project {{ id }}</h1>
   </section>
 
+  <!-- details -->
   <section>
     <h2>Details</h2>
 
@@ -21,9 +22,11 @@
     </div>
   </section>
 
+  <!-- publications -->
   <section>
     <h2>Publications</h2>
 
+    <!-- table -->
     <AppTable
       :cols="publicationCols"
       :rows="projectPublications"
@@ -44,7 +47,8 @@
           v-for="(author, _index) of carve(row.authors, 2)"
           :key="_index"
         >
-          {{ author }}<br />
+          {{ author }}
+          <br />
         </template>
       </template>
 
@@ -55,6 +59,7 @@
       </template>
     </AppTable>
 
+    <!-- charts -->
     <template v-if="Object.keys(publicationsOverTime).length > 1">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -69,9 +74,11 @@
     </template>
   </section>
 
+  <!-- repos -->
   <section>
     <h2>Repositories</h2>
 
+    <!-- main details -->
     <AppTable
       :cols="repoColsA"
       :rows="projectRepos"
@@ -84,13 +91,15 @@
       </template>
 
       <template #issues="{ row }">
-        {{ row.closed_issues.toLocaleString() }} ☑<br />
-        {{ row.open_issues.toLocaleString() }} ☐<br />
+        {{ row.closed_issues.toLocaleString() }} ✔
+        <br />
+        {{ row.open_issues.toLocaleString() }} ◯
       </template>
 
       <template #pull-requests="{ row }">
-        {{ row.closed_pull_requests.toLocaleString() }} ☑<br />
-        {{ row.open_pull_requests.toLocaleString() }} ☐<br />
+        {{ row.closed_pull_requests.toLocaleString() }} ✔
+        <br />
+        {{ row.open_pull_requests.toLocaleString() }} ◯
       </template>
 
       <template #modified="{ row }">
@@ -100,6 +109,7 @@
       </template>
     </AppTable>
 
+    <!-- extra details -->
     <AppTable
       :cols="repoColsB"
       :rows="projectRepos"
@@ -111,30 +121,29 @@
         >
       </template>
 
-      <template #issues="{ row }">
-        {{ row.open_issues.toLocaleString() }} open<br />
-        {{ row.closed_issues.toLocaleString() }} closed<br />
-      </template>
-
-      <template #pull-requests="{ row }">
-        {{ row.open_pull_requests.toLocaleString() }} open<br />
-        {{ row.closed_pull_requests.toLocaleString() }} closed<br />
-      </template>
-
       <template #modified="{ row }">
         {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
         <br />
         ({{ ago(row.modified) }})
       </template>
+
+      <template #topics="{ row }">
+        {{ row.topics.join(" ") }}
+      </template>
     </AppTable>
 
+    <!-- notes -->
     <div class="mini-table">
       <div>
         <span>PR</span>
         <span>Pull (change) request</span>
       </div>
       <div>
-        <span>Issue/PR Open</span>
+        <span>✔/◯</span>
+        <span>Closed/open</span>
+      </div>
+      <div>
+        <span>Avg Issue/PR</span>
         <span
           >Average time issues/pull requests stay open for before being
           closed</span
@@ -142,6 +151,7 @@
       </div>
     </div>
 
+    <!-- charts -->
     <template v-if="projectRepos.length">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -404,17 +414,23 @@ const repoColsB: Cols<typeof projectRepos.value> = [
     align: "left",
   },
   {
+    slot: "topics",
+    key: "topics",
+    name: "Topics",
+    align: "left",
+  },
+  {
     slot: "modified",
     key: "modified",
     name: "Updated",
   },
   {
     key: "issue_time_open",
-    name: "Issue Open",
+    name: "Avg Issue",
   },
   {
     key: "pull_request_time_open",
-    name: "PR Open",
+    name: "Avg PR",
   },
   {
     key: "language",

@@ -114,6 +114,7 @@ export const getRepos = async (coreProjects: string[]) => {
       owner: repo.owner?.login ?? "",
       name: repo.name,
       description: repo.description ?? "",
+      topics: repo.topics ?? [],
       stars: repo.stars.map((star) => star.starred_at ?? ""),
       watchers: repo.watchers,
       forks: repo.forks.map((fork) => fork.created_at ?? ""),
