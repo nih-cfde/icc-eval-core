@@ -1,4 +1,4 @@
-import { meanBy } from "lodash-es";
+import { meanBy, orderBy } from "lodash-es";
 import {
   fileExists,
   getCommits,
@@ -6,6 +6,7 @@ import {
   getDependencies,
   getForks,
   getIssues,
+  getLanguages,
   getPullRequests,
   getStars,
   searchRepos,
@@ -50,6 +51,7 @@ export const getRepos = async (coreProjects: string[]) => {
             pull_requests: await getPullRequests(owner, name),
             commits: await getCommits(owner, name),
             contributors: await getContributors(owner, name),
+            languages: await getLanguages(owner, name),
             readme: await fileExists(owner, name, "README.md"),
             contributing: await fileExists(owner, name, "CONTRIBUTING.md"),
             dependencies: await getDependencies(owner, name),
@@ -85,7 +87,7 @@ export const getRepos = async (coreProjects: string[]) => {
     state: issue.state,
     state_reason: "state_reason" in issue ? issue.state_reason : "",
     created: issue.created_at,
-    updated: issue.updated_at,
+    modified: issue.updated_at,
     closed: issue.closed_at,
     labels: issue.labels.map((label) =>
       typeof label === "string" ? label : label.name,
@@ -114,7 +116,9 @@ export const getRepos = async (coreProjects: string[]) => {
       owner: repo.owner?.login ?? "",
       name: repo.name,
       description: repo.description ?? "",
-      topics: repo.topics ?? [],
+      topics: (repo.topics ?? []).filter(
+        (topic) => !topic.match(new RegExp(repo.core_project, "i")),
+      ),
       stars: repo.stars.map((star) => star.starred_at ?? ""),
       watchers: repo.watchers,
       forks: repo.forks.map((fork) => fork.created_at ?? ""),
@@ -139,9 +143,16 @@ export const getRepos = async (coreProjects: string[]) => {
         name: contributor.login ?? contributor.name ?? "",
         contributions: contributor.contributions,
       })),
+      languages: orderBy(
+        Object.entries(repo.languages).map(([language, count]) => ({
+          language,
+          count,
+        })),
+        ["count"],
+        ["desc"],
+      ),
       created: repo.created_at,
       modified: repo.pushed_at,
-      language: repo.language ?? "",
       license: repo.license?.name ?? "",
       readme: repo.readme,
       contributing: repo.contributing,

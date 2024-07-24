@@ -116,9 +116,18 @@ export const fileExists = async (owner: string, name: string, path: string) => {
   }
 };
 
-/** get contributors */
-export const getContributors = async (owner: string, name: string) =>
+/** get contributors to repo */
+export const getContributors = (owner: string, name: string) =>
   octokit.paginate(octokit.rest.repos.listContributors, { owner, repo: name });
+
+/** get programming languages used in repo */
+export const getLanguages = async (owner: string, name: string) =>
+  (
+    await octokit.rest.repos.listLanguages({
+      owner,
+      repo: name,
+    })
+  ).data;
 
 /**
  * graph ql query to get dependency count. need to include "dependencies" too,
@@ -143,7 +152,7 @@ const dependencyQuery = `
 `;
 
 /** get dependency graph */
-export const getDependencies = async (owner: string, name: string) =>
+export const getDependencies = (owner: string, name: string) =>
   /** https://github.com/orgs/community/discussions/118753 */
   octokit.graphql<{ repository: Repository }>(dependencyQuery, {
     owner,

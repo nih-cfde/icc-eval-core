@@ -128,7 +128,16 @@
       </template>
 
       <template #topics="{ row }">
-        {{ row.topics.join(" ") }}
+        {{ limit(row.topics, 5).join(" ") }}
+      </template>
+
+      <template #languages="{ row }">
+        {{
+          limit(
+            row.languages.map(({ language }) => language),
+            5,
+          ).join(" ")
+        }}
       </template>
     </AppTable>
 
@@ -203,9 +212,9 @@ import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppLineChart from "@/components/AppLineChart.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
-import { carve } from "@/util/array";
+import { carve, limit } from "@/util/array";
 import { overTime } from "@/util/data";
-import { ago, span } from "@/util/string";
+import { ago, printObject, span } from "@/util/string";
 import coreProjects from "~/core-projects.json";
 import journals from "~/journals.json";
 import publications from "~/publications.json";
@@ -416,13 +425,13 @@ const repoColsB: Cols<typeof projectRepos.value> = [
   {
     slot: "topics",
     key: "topics",
-    name: "Topics",
+    name: "Tags",
     align: "left",
   },
   {
     slot: "modified",
     key: "modified",
-    name: "Updated",
+    name: "Last Commit",
   },
   {
     key: "issue_time_open",
@@ -433,8 +442,14 @@ const repoColsB: Cols<typeof projectRepos.value> = [
     name: "Avg PR",
   },
   {
-    key: "language",
-    name: "Language",
+    slot: "languages",
+    key: "languages",
+    name: "Languages",
+    attrs: (row) => ({
+      title: row?.languages
+        .map(({ language, count }) => `${language}: ${count}`)
+        .join("\n"),
+    }),
   },
   {
     key: "license",
@@ -453,9 +468,7 @@ const repoColsB: Cols<typeof projectRepos.value> = [
     key: "dependency_total",
     name: "Dependencies",
     attrs: (row) => ({
-      title: Object.entries(row?.dependencies ?? {})
-        .map(([key, value]) => `${key}: ${value}`)
-        .join("\n"),
+      title: printObject(row?.dependencies),
     }),
   },
 ];
