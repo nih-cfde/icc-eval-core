@@ -54,6 +54,7 @@ main {
 section {
   display: flex;
   flex-direction: column;
+  /* align-items: flex-start; */
   align-items: center;
   padding: 40px max(40px, (100% - var(--content)) / 2);
   gap: 40px;
@@ -238,7 +239,7 @@ td {
 .mini-table {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
+  gap: 10px 20px;
 }
 
 .mini-table > :nth-child(odd) {

@@ -248,10 +248,10 @@ const cellAttrs = (col?: Cols[number], row?: Row) => {
 
 <style scoped>
 .scroll {
-  width: calc(100vw - 100px);
+  /* width: calc(100vw - 100px); */
   max-width: max-content;
   overflow-x: auto;
-  border-radius: var(--rounded);
+  border-radius: var(--rounded) var(--rounded) 0 0;
 }
 
 @media print {
