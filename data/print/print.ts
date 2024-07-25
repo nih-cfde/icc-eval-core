@@ -36,13 +36,11 @@ export const printReports = async (
   log(`Printing ${pages.length.toLocaleString()} pages`);
 
   indent();
-  /** run in parallel */
+
   const { results, errors } = await queryMulti(
-    pages,
-    async ({ route, filename }: (typeof pages)[number]) => {
+    pages.map(async ({ route, filename }: (typeof pages)[number]) => {
       /** go to route that shows report */
       const url = host + route;
-      log(url, "start");
       const page = await newPage();
       await page.goto(url);
 
@@ -64,10 +62,7 @@ export const printReports = async (
         width,
         height,
       });
-    },
-    (page) => log(page.route, "start"),
-    (page) => log(page.route, "success"),
-    (page) => log(page.route, "warn"),
+    }),
   );
   deindent();
 
@@ -77,7 +72,7 @@ export const printReports = async (
   if (results.length)
     log(`Printed ${results.length.toLocaleString()} PDFs`, "success");
   if (errors.length) {
-    for (const error of errors) log(error.value, "warn");
+    for (const error of errors) log(error, "warn");
     log(`Error printing ${errors.length.toLocaleString()} PDFs`, "error");
   }
 };

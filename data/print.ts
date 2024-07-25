@@ -1,7 +1,7 @@
 import coreProjects from "@/output/core-projects.json";
 import { printReports } from "@/print/print";
 import { browser } from "@/util/browser";
-import { saveJson } from "@/util/file";
+import { saveFile } from "@/util/file";
 import { divider } from "@/util/log";
 
 const { OUTPUT_PATH } = process.env;
@@ -20,10 +20,10 @@ const pages = [{ route: "/", filename: "Program" }].concat(
 await printReports(pages);
 
 /** record list of pdfs */
-saveJson(
+saveFile(
   Object.fromEntries(pages.map((page) => [page.route, page.filename])),
   OUTPUT_PATH,
-  "pdfs",
+  "pdfs.json",
 );
 
 await browser.close();

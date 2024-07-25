@@ -18,46 +18,48 @@ export const getPublications = async (coreProjects: string[]) => {
   );
 
   /** get publications associated with core projects */
-  const reporter = await query(
+  const { result: reporter, error: reporterError } = await query(
     () =>
       queryReporter<PublicationsQuery, PublicationsResults>("publications", {
         criteria: { core_project_nums: coreProjects },
       }),
-    "reporter-publications",
+    "reporter-publication.json",
   );
-  if (reporter instanceof Error) throw log(reporter, "error");
-  let { results: reporterPublications } = reporter;
+
+  /** extract results */
+  let reporterPublications = reporter?.results ?? [];
 
   /** de-dupe */
   reporterPublications = uniqBy(reporterPublications, (result) => result.pmid);
 
   log(
-    `Found ${reporterPublications.length.toLocaleString()} publications`,
+    `Got ${reporterPublications.length.toLocaleString()} publications`,
     reporterPublications.length ? "success" : "error",
   );
+  if (reporterError) log("Error getting publications", "error");
 
   /** get extra info about publications */
-  const icite = await query(
+  const { result: icite, error: iciteError } = await query(
     () =>
       queryIcite(
         reporterPublications
           .map((result) => result.pmid)
           .filter((id): id is number => !!id),
       ),
-    "icite",
+    "icite.json",
   );
-  if (icite instanceof Error) throw log(icite, "error");
-  let { data: icitePublications } = icite;
 
-  if (icitePublications instanceof Error) throw log(icitePublications, "error");
+  /** extract results */
+  let icitePublications = icite?.data ?? [];
 
   /** de-dupe */
   icitePublications = uniqBy(icitePublications, (result) => result.pmid);
 
   log(
-    `Found ${icitePublications.length.toLocaleString()} publication metadata`,
+    `Got ${icitePublications.length.toLocaleString()} publication metadata`,
     icitePublications.length ? "success" : "error",
   );
+  if (iciteError) throw log("Error getting publication metadata", "error");
 
   /** quick lookup of extra info from icite results by id */
   const extrasLookup: Record<

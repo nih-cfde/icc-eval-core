@@ -1,4 +1,5 @@
-import { loadJson, saveJson } from "@/util/file";
+import { loadFile, saveFile, type Filename } from "@/util/file";
+import { status } from "@/util/log";
 
 export type Params = Record<string, unknown | unknown[]>;
 
@@ -42,93 +43,81 @@ export const request = async <Response>(
   }
 };
 
-/** run query, with extra conveniences */
+/** run query, with caching and extra conveniences */
 export const query = async <Result>(
   /** async func to run */
   promise: () => Promise<Result>,
   /** raw filename */
-  filename?: string,
-) => {
+  filename?: Filename,
+): Promise<{ result?: Result; error?: Error }> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const raw = await loadJson<Result>(RAW_PATH, filename);
-    if (raw && !NOCACHE) return raw;
+    const raw = await loadFile<Result>(RAW_PATH, filename);
+    if (raw && !NOCACHE) return { result: raw };
   }
 
-  let result: Result | undefined;
+  let result: Result;
 
   /** try to run async func */
   try {
     result = await promise();
   } catch (error) {
-    return error as Error;
+    return { error: error as Error };
   }
 
   /** save raw data */
-  if (filename && result) saveJson(result, RAW_PATH, filename);
+  if (filename && result) saveFile(result, RAW_PATH, filename);
 
-  return result;
+  return { result };
 };
 
-/** run multiple queries in parallel, with extra conveniences */
-export const queryMulti = async <Input, Result>(
-  /** array of things */
-  input: Input[],
-  /** async func to run on each array item */
-  promise: (input: Input) => Promise<Result>,
-  /** func to run on each promise start */
-  onStart?: (input: Input) => void,
-  /** func to run on each promise success */
-  onSuccess?: (input: Input, result: Result) => void,
-  /** func to run on each promise error */
-  onError?: (input: Input, error: string) => void,
-  /** raw filename */
-  filename?: string,
-) => {
+/** run multiple queries in parallel, with caching and extra conveniences */
+export const queryMulti = async <Result>(
+  /** async funcs to run */
+  promises: Promise<Result>[],
+  /** raw (cache) filename */
+  filename?: Filename,
+): Promise<{
+  results: Result[];
+  errors: (Error & { index: number })[];
+}> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const raw = await loadJson<Result[]>(RAW_PATH, filename);
-    if (raw && !NOCACHE)
-      return {
-        results: raw.map((r, index) => ({ input: input[index]!, value: r })),
-        errors: [],
-      };
+    const raw = await loadFile<Result[]>(RAW_PATH, filename);
+    if (raw && !NOCACHE) return { results: raw, errors: [] };
   }
 
+  /** status bar */
+  const bar = status(promises.length);
+
+  /** run promises */
   const settled = await Promise.allSettled(
-    input.map(async (input) => {
+    promises.map(async (promise, index) => {
       try {
-        onStart?.(input);
-        const result = await promise(input);
-        onSuccess?.(input, result);
+        const result = await promise;
+        bar.set(index, "success");
         return result;
       } catch (error) {
-        onError?.(input, String(error));
+        bar.set(index, "error");
         throw error;
       }
     }),
   );
 
-  /** use flatMap to filter and map at same time with easier type safety */
+  bar.done();
 
-  const results = settled.flatMap((result, index) =>
-    result.status === "fulfilled"
-      ? [{ input: input[index]!, value: result.value }]
-      : [],
+  /** use flatMap to filter and map at same time with easier type safety */
+  const results = settled.flatMap((result) =>
+    result.status === "fulfilled" ? [result.value] : [],
   );
   const errors = settled.flatMap((result, index) =>
     result.status === "rejected"
-      ? [{ input: input[index]!, value: result.reason as Error }]
+      ? [{ ...(result.reason as Error), index }]
       : [],
   );
 
   /** save raw data */
-  if (filename)
-    saveJson(
-      results.map((result) => result.value),
-      RAW_PATH,
-      filename,
-    );
+  if (filename) saveFile(results, RAW_PATH, filename);
 
   return { results, errors };
 };

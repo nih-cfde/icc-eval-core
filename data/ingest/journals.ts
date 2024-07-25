@@ -1,12 +1,10 @@
-import { existsSync, readFileSync } from "fs";
-import { parse } from "csv-parse/sync";
+import { parse } from "path";
 import { uniq, uniqBy } from "lodash-es";
 import type { Rank } from "@/api/scimago-journals";
 import { newPage } from "@/util/browser";
+import { loadFile } from "@/util/file";
 import { deindent, indent, log } from "@/util/log";
-import { queryMulti } from "@/util/request";
-
-const { RAW_PATH } = process.env;
+import { query, queryMulti } from "@/util/request";
 
 /** ranks url */
 const ranksUrl = "https://www.scimagojr.com/journalrank.php";
@@ -18,19 +16,20 @@ const searchUrl = "https://www.scimagojr.com/journalsearch.php?q=";
 const nameSelector = ".jrnlname";
 
 /** increase timeout for slow scimago site */
-const options = { timeout: 30 * 1000 };
+const options = { timeout: 60 * 1000 };
 
 /** get journal info */
 export const getJournals = async (journalIds: string[]) => {
   /** de-dupe */
   journalIds = uniq(journalIds);
 
-  const rankDataPath = `${RAW_PATH}/scimago-journals.csv`;
+  log(`Getting ${journalIds.length.toLocaleString()} journals`, "start");
 
-  /** download raw data */
-  if (!existsSync(rankDataPath)) {
-    try {
-      log(`Downloading from ${ranksUrl}`);
+  log(`Downloading from ${ranksUrl}`);
+
+  /** get journal rank data */
+  const { result: ranks = [], error: ranksError } = await query<Rank[]>(
+    async () => {
       const page = await newPage();
       await page.goto(ranksUrl, options);
       /** https://playwright.dev/docs/downloads */
@@ -42,85 +41,64 @@ export const getJournals = async (journalIds: string[]) => {
         });
       await page.getByText(downloadText).click(options);
       const download = await downloadPromise;
-      await download.saveAs(rankDataPath);
-    } catch (error) {
-      log(error, "warn");
-    }
-  }
-
-  log(`Parsing CSV`);
-
-  /** read local rank data file contents */
-  const rankDataContents = (() => {
-    try {
-      return readFileSync(rankDataPath);
-    } catch (error) {
-      return "";
-    }
-  })();
-
-  /** parse raw data */
-  const rankData = parse(rankDataContents, {
-    columns: true,
-    delimiter: ";",
-    skipEmptyLines: true,
-    relaxQuotes: true,
-    cast: (value) => {
-      const asNumber = Number(value.replace(",", "."));
-      if (Number.isNaN(asNumber)) return value;
-      else return asNumber;
+      const path = parse(await download.path());
+      const ranks = await loadFile<Rank[]>(path.dir, path.base as ".csv");
+      return ranks ?? [];
     },
-  }) as Rank[];
-
-  log(`Getting ${journalIds.length.toLocaleString()} journals`);
-
-  /** convert to map for faster lookup */
-  const rankLookup = Object.fromEntries(
-    rankData.map((value) => [value.Title, value]),
+    "scimago-journals.csv",
   );
 
+  console.log(ranksError);
+
+  log(
+    `Got ${ranks.length.toLocaleString()} journal ranks`,
+    ranks.length ? "success" : "error",
+  );
+  if (ranksError) throw log("Error getting journal ranks", "error");
+
+  log("Getting journal names");
+
   indent();
-  /** run in parallel */
-  let { results: journals, errors: journalErrors } = await queryMulti(
-    journalIds,
-    async (journalId) => {
-      /** get full journal name from abbreviated name/id via journal search */
+
+  let { results: names, errors: nameErrors } = await queryMulti(
+    journalIds.map(async (id) => {
       const page = await newPage();
-      await page.goto(searchUrl + journalId.replaceAll(" ", "+"), options);
+      await page.goto(searchUrl + id.replaceAll(" ", "+"), options);
+      /** get full journal name from abbreviated name/id via journal search */
       const name = await page.locator(nameSelector).first().innerText(options);
-      const rank = rankLookup[name];
-      if (!rank) throw Error("No matching rank");
-      return rank;
-    },
-    (journal) => log(journal, "start"),
-    (_, result) => log(result.Title, "success"),
-    (journal) => log(journal, "warn"),
-    "scimago-journals",
+      return { id, name };
+    }),
+    "scimago-journals.json",
   );
   deindent();
 
   /** de-dupe */
-  journals = uniqBy(journals, (journal) => journal.value.Title);
+  names = uniqBy(names, "Title");
 
-  if (journals.length)
-    log(`Got ${journals.length.toLocaleString()} journals`, "success");
-  if (journalErrors.length)
-    log(
-      `Problem getting ${journalErrors.length.toLocaleString()} journals`,
-      "warn",
-    );
+  if (names.length)
+    log(`Got ${names.length.toLocaleString()} names`, "success");
+  if (nameErrors.length)
+    log(`Problem getting ${nameErrors.length.toLocaleString()} names`, "warn");
+
+  /** create lookups for efficiency */
+  const rankLookup = Object.fromEntries(
+    ranks.map((value) => [value.Title, value]),
+  );
+  const nameLookup = Object.fromEntries(
+    names.map(({ id, name }) => [id, name]),
+  );
 
   /** transform data into desired format, with fallbacks */
-  const transformedJournals = journals
-    .map(({ input, value: journal }) => ({
-      id: input,
-      name: journal.Title,
-      rank: journal.SJR,
+  const transformedJournals = names
+    .map(({ id, name }) => ({
+      id,
+      name,
+      rank: rankLookup[nameLookup[id] ?? ""]?.SJR ?? 0,
     }))
     .concat(
-      ...journalErrors.map((value) => ({
-        id: value.input,
-        name: "",
+      nameErrors.map((error) => ({
+        id: journalIds[error.index]!,
+        name: journalIds[error.index]!,
         rank: 0,
       })),
     );

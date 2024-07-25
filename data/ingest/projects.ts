@@ -12,23 +12,26 @@ export const getProjects = async (opportunities: string[]) => {
     "start",
   );
 
-  const reporter = await query(
+  /** get projects associated with opportunities */
+  const { result: reporter, error: reporterError } = await query(
     () =>
       queryReporter<ProjectsQuery, ProjectsResults>("projects", {
         criteria: { opportunity_numbers: opportunities },
       }),
-    "reporter-projects",
+    "reporter-projects.json",
   );
-  if (reporter instanceof Error) throw log(reporter, "error");
-  let { results: projects } = reporter;
+
+  /** extract results */
+  let projects = reporter?.results ?? [];
 
   /** de-dupe */
   projects = uniqBy(projects, (project) => project.project_num);
 
   log(
-    `Found ${projects.length.toLocaleString()} projects`,
+    `Got ${projects.length.toLocaleString()} projects`,
     projects.length ? "success" : "error",
   );
+  if (reporterError) throw log("Error getting projects", "error");
 
   /** transform data into desired format, with fallbacks */
   const transformedProjects = projects.map((project) => ({

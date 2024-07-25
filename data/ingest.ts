@@ -4,7 +4,7 @@ import { getOpportunities } from "@/ingest/opportunities";
 import { getProjects } from "@/ingest/projects";
 import { getPublications } from "@/ingest/publications";
 import { browser } from "@/util/browser";
-import { saveJson } from "@/util/file";
+import { saveFile } from "@/util/file";
 import { divider } from "@/util/log";
 
 const { OUTPUT_PATH } = process.env;
@@ -42,11 +42,11 @@ const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
 divider("Saving");
 
 /** save output data */
-saveJson(opportunities, OUTPUT_PATH, "opportunities");
-saveJson(coreProjects, OUTPUT_PATH, "core-projects");
-saveJson(projects, OUTPUT_PATH, "projects");
-saveJson(publications, OUTPUT_PATH, "publications");
-saveJson(journals, OUTPUT_PATH, "journals");
-saveJson(repos, OUTPUT_PATH, "repos");
+saveFile(opportunities, OUTPUT_PATH, "opportunities.json");
+saveFile(coreProjects, OUTPUT_PATH, "core-projects.json");
+saveFile(projects, OUTPUT_PATH, "projects.json");
+saveFile(publications, OUTPUT_PATH, "publications.json");
+saveFile(journals, OUTPUT_PATH, "journals.json");
+saveFile(repos, OUTPUT_PATH, "repos.json");
 
 await browser.close();
