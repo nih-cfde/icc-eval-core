@@ -6,7 +6,7 @@
   <section>
     <h2>Totals</h2>
 
-    <div class="mini-table">
+    <div class="details">
       <div>
         <span>Core Projects</span>
         <span>

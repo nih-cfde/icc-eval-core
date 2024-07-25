@@ -4,12 +4,12 @@ import App from "./App.vue";
 import PageCoreProject from "./pages/PageCoreProject.vue";
 import PageCoreProjects from "./pages/PageCoreProjects.vue";
 import PageHome from "./pages/PageHome.vue";
+import PageReports from "./pages/PageReports.vue";
 import "./styles.css";
 
 /** app pages */
 const routes = [
   {
-    name: "Home",
     path: "/",
     component: PageHome,
     beforeEnter: () => {
@@ -21,6 +21,7 @@ const routes = [
       }
     },
   },
+  { path: "/reports", component: PageReports },
   { path: "/core-projects", component: PageCoreProjects },
   { path: "/core-project/:id", component: PageCoreProject },
 ];
