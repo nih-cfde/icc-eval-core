@@ -339,12 +339,10 @@ const publicationCols: Cols<typeof projectPublications.value> = [
   {
     key: "relative_citation_ratio",
     name: "RCR",
-    attrs: { title: "Relative Citation Ratio" },
   },
   {
     key: "rank",
     name: "SJR",
-    attrs: { title: "Scimago Journal Rank" },
   },
   {
     key: "citations",
