@@ -38,7 +38,7 @@ export const getJournals = async (journalIds: string[]) => {
         .waitForEvent("download", options)
         /** https://github.com/microsoft/playwright/issues/21206 */
         .catch((error) => {
-          throw log(error, "warn");
+          throw error;
         });
       await page.getByText(downloadText).click(options);
       const download = await downloadPromise;
