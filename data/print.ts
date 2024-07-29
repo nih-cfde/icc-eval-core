@@ -22,8 +22,7 @@ await printReports(pages);
 /** record list of pdfs */
 saveFile(
   Object.fromEntries(pages.map((page) => [page.route, page.filename])),
-  OUTPUT_PATH,
-  "pdfs.json",
+  `${OUTPUT_PATH}/pdfs.json`,
 );
 
 await browser.close();

@@ -42,11 +42,11 @@ const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
 divider("Saving");
 
 /** save output data */
-saveFile(opportunities, OUTPUT_PATH, "opportunities.json");
-saveFile(coreProjects, OUTPUT_PATH, "core-projects.json");
-saveFile(projects, OUTPUT_PATH, "projects.json");
-saveFile(publications, OUTPUT_PATH, "publications.json");
-saveFile(journals, OUTPUT_PATH, "journals.json");
-saveFile(repos, OUTPUT_PATH, "repos.json");
+saveFile(opportunities, `${OUTPUT_PATH}/opportunities.json`);
+saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
+saveFile(projects, `${OUTPUT_PATH}/projects.json`);
+saveFile(publications, `${OUTPUT_PATH}/publications.json`);
+saveFile(journals, `${OUTPUT_PATH}/journals.json`);
+saveFile(repos, `${OUTPUT_PATH}/repos.json`);
 
 await browser.close();

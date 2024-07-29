@@ -99,9 +99,10 @@
       "2024-06-29T11:41:04Z",
       "2024-07-03T11:14:18Z",
       "2024-07-14T12:25:18Z",
-      "2024-07-25T09:16:29Z"
+      "2024-07-25T09:16:29Z",
+      "2024-07-26T10:34:37Z"
     ],
-    "watchers": 85,
+    "watchers": 86,
     "forks": [
       "2024-07-08T00:50:35Z",
       "2024-06-19T14:46:23Z",
@@ -427,13 +428,21 @@
     ],
     "open_issues": 3,
     "closed_issues": 8,
-    "issue_time_open": 2173990,
+    "issue_time_open": 2253821,
     "pull_requests": [
       {
         "state": "open",
         "state_reason": "",
+        "created": "2024-07-25T18:32:41Z",
+        "modified": "2024-07-25T18:33:14Z",
+        "closed": null,
+        "labels": []
+      },
+      {
+        "state": "open",
+        "state_reason": "",
         "created": "2024-07-24T01:02:01Z",
-        "modified": "2024-07-25T16:33:56Z",
+        "modified": "2024-07-25T22:29:38Z",
         "closed": null,
         "labels": []
       },
@@ -470,9 +479,9 @@
         "labels": []
       }
     ],
-    "open_pull_requests": 1,
+    "open_pull_requests": 2,
     "closed_pull_requests": 4,
-    "pull_request_time_open": 532471,
+    "pull_request_time_open": 540221,
     "commits": [
       "2024-07-25T15:22:29Z",
       "2024-07-11T19:44:59Z",
@@ -513,7 +522,7 @@
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-07-25T16:33:20Z",
+    "modified": "2024-07-25T22:29:15Z",
     "license": "",
     "readme": true,
     "contributing": false,

@@ -23,7 +23,7 @@ export const getPublications = async (coreProjects: string[]) => {
       queryReporter<PublicationsQuery, PublicationsResults>("publications", {
         criteria: { core_project_nums: coreProjects },
       }),
-    "reporter-publication.json",
+    "reporter-publications.json",
   );
 
   /** extract results */

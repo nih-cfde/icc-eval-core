@@ -1,5 +1,5 @@
 import { loadFile, saveFile, type Filename } from "@/util/file";
-import { status } from "@/util/log";
+import { log, status } from "@/util/log";
 
 export type Params = Record<string, unknown | unknown[]>;
 
@@ -52,8 +52,11 @@ export const query = async <Result>(
 ): Promise<{ result?: Result; error?: Error }> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const raw = await loadFile<Result>(RAW_PATH, filename);
-    if (raw && !NOCACHE) return { result: raw };
+    const raw = await loadFile<Result>(`${RAW_PATH}/${filename}`);
+    if (raw && !NOCACHE) {
+      log("Cached query result", "secondary");
+      return { result: raw };
+    }
   }
 
   let result: Result;
@@ -66,7 +69,7 @@ export const query = async <Result>(
   }
 
   /** save raw data */
-  if (filename && result) saveFile(result, RAW_PATH, filename);
+  if (filename && result) saveFile(result, `${RAW_PATH}/${filename}`);
 
   return { result };
 };
@@ -83,8 +86,11 @@ export const queryMulti = async <Result>(
 }> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const raw = await loadFile<Result[]>(RAW_PATH, filename);
-    if (raw && !NOCACHE) return { results: raw, errors: [] };
+    const raw = loadFile<Result[]>(`${RAW_PATH}/${filename}`);
+    if (raw && !NOCACHE) {
+      log("Cached query result", "secondary");
+      return { results: raw, errors: [] };
+    }
   }
 
   /** status bar */
@@ -107,17 +113,19 @@ export const queryMulti = async <Result>(
   bar.done();
 
   /** use flatMap to filter and map at same time with easier type safety */
-  const results = settled.flatMap((result) =>
-    result.status === "fulfilled" ? [result.value] : [],
-  );
-  const errors = settled.flatMap((result, index) =>
-    result.status === "rejected"
-      ? [{ ...(result.reason as Error), index }]
-      : [],
-  );
+  const results = settled
+    .filter((result) => result.status === "fulfilled")
+    .map((result) => result.value);
+  const errors = settled
+    .map((result, index) => ({ ...result, index }))
+    .filter((result) => result.status === "rejected")
+    .map((result) => {
+      const { reason, index } = result;
+      return { ...(reason as Error), index };
+    });
 
   /** save raw data */
-  if (filename) saveFile(results, RAW_PATH, filename);
+  if (filename) saveFile(results, `${RAW_PATH}/${filename}`);
 
   return { results, errors };
 };

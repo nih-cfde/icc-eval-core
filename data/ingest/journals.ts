@@ -1,4 +1,3 @@
-import { parse } from "path";
 import { uniq, uniqBy } from "lodash-es";
 import type { Rank } from "@/api/scimago-journals";
 import { newPage } from "@/util/browser";
@@ -15,9 +14,6 @@ const searchUrl = "https://www.scimagojr.com/journalsearch.php?q=";
 /** selector to get first search result journal name */
 const nameSelector = ".jrnlname";
 
-/** increase timeout for slow scimago site */
-const options = { timeout: 60 * 1000 };
-
 /** get journal info */
 export const getJournals = async (journalIds: string[]) => {
   /** de-dupe */
@@ -31,24 +27,24 @@ export const getJournals = async (journalIds: string[]) => {
   const { result: ranks = [], error: ranksError } = await query<Rank[]>(
     async () => {
       const page = await newPage();
-      await page.goto(ranksUrl, options);
+      await page.goto(ranksUrl);
       /** https://playwright.dev/docs/downloads */
       const downloadPromise = page
-        .waitForEvent("download", options)
+        .waitForEvent("download")
         /** https://github.com/microsoft/playwright/issues/21206 */
         .catch((error) => {
           throw error;
         });
-      await page.getByText(downloadText).click(options);
+      await page.getByText(downloadText).click();
       const download = await downloadPromise;
-      const path = parse(await download.path());
-      const ranks = await loadFile<Rank[]>(path.dir, path.base as ".csv");
-      return ranks ?? [];
+      const ranks = await loadFile<Rank[]>(await download.path(), "csv", {
+        delimiter: ";",
+      });
+      if (!ranks) throw Error("No ranks found");
+      return ranks;
     },
     "scimago-journals.csv",
   );
-
-  console.log(ranksError);
 
   log(
     `Got ${ranks.length.toLocaleString()} journal ranks`,
@@ -60,20 +56,23 @@ export const getJournals = async (journalIds: string[]) => {
 
   indent();
 
+  console.log("journals, before queryMulti");
   let { results: names, errors: nameErrors } = await queryMulti(
     journalIds.map(async (id) => {
+      console.log("journals, in queryMulti");
       const page = await newPage();
-      await page.goto(searchUrl + id.replaceAll(" ", "+"), options);
+      await page.goto(searchUrl + id.replaceAll(" ", "+"));
       /** get full journal name from abbreviated name/id via journal search */
-      const name = await page.locator(nameSelector).first().innerText(options);
+      const name = await page.locator(nameSelector).first().innerText();
       return { id, name };
     }),
     "scimago-journals.json",
   );
   deindent();
+  console.log("journals, after queryMulti");
 
   /** de-dupe */
-  names = uniqBy(names, "Title");
+  names = uniqBy(names, "id");
 
   if (names.length)
     log(`Got ${names.length.toLocaleString()} names`, "success");

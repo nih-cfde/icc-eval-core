@@ -39,19 +39,6 @@
     "is_active": 0
   },
   {
-    "id": "3OT2OD030161-01S3",
-    "core_project": "OT2OD030161",
-    "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
-    "opportunity": "OTA-20-005",
-    "application": 10683507,
-    "award_amount": 956227,
-    "activity_code": "OT2",
-    "agency_code": "NIH",
-    "date_start": "2020-09-23T12:09:00Z",
-    "date_end": "2023-09-22T12:09:00Z",
-    "is_active": 0
-  },
-  {
     "id": "1OT2OD030161-01",
     "core_project": "OT2OD030161",
     "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
@@ -63,6 +50,19 @@
     "date_start": "2020-09-23T12:09:00Z",
     "date_end": "2024-09-22T12:09:00Z",
     "is_active": 1
+  },
+  {
+    "id": "3OT2OD030161-01S3",
+    "core_project": "OT2OD030161",
+    "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
+    "opportunity": "OTA-20-005",
+    "application": 10683507,
+    "award_amount": 956227,
+    "activity_code": "OT2",
+    "agency_code": "NIH",
+    "date_start": "2020-09-23T12:09:00Z",
+    "date_end": "2023-09-22T12:09:00Z",
+    "is_active": 0
   },
   {
     "id": "3OT2OD030161-01S4",
@@ -104,12 +104,12 @@
     "is_active": 1
   },
   {
-    "id": "3OT2OD030545-01S3",
+    "id": "3OT2OD030545-01S4",
     "core_project": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10683509,
-    "award_amount": 554624,
+    "application": 10707603,
+    "award_amount": 700000,
     "activity_code": "OT2",
     "agency_code": "NIH",
     "date_start": "2020-09-25T12:09:00Z",
@@ -117,12 +117,12 @@
     "is_active": 0
   },
   {
-    "id": "3OT2OD030545-01S4",
+    "id": "3OT2OD030545-01S3",
     "core_project": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10707603,
-    "award_amount": 700000,
+    "application": 10683509,
+    "award_amount": 554624,
     "activity_code": "OT2",
     "agency_code": "NIH",
     "date_start": "2020-09-25T12:09:00Z",
@@ -416,19 +416,6 @@
     "is_active": 0
   },
   {
-    "id": "1OT2OD030546-01",
-    "core_project": "OT2OD030546",
-    "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 10217890,
-    "award_amount": 447013,
-    "activity_code": "OT2",
-    "agency_code": "NIH",
-    "date_start": "2020-09-23T12:09:00Z",
-    "date_end": "2024-09-22T12:09:00Z",
-    "is_active": 1
-  },
-  {
     "id": "3OT2OD030546-01S1",
     "core_project": "OT2OD030546",
     "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
@@ -440,6 +427,19 @@
     "date_start": "2020-09-23T12:09:00Z",
     "date_end": "2023-09-22T12:09:00Z",
     "is_active": 0
+  },
+  {
+    "id": "1OT2OD030546-01",
+    "core_project": "OT2OD030546",
+    "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 10217890,
+    "award_amount": 447013,
+    "activity_code": "OT2",
+    "agency_code": "NIH",
+    "date_start": "2020-09-23T12:09:00Z",
+    "date_end": "2024-09-22T12:09:00Z",
+    "is_active": 1
   },
   {
     "id": "3OT2OD030546-01S3",
@@ -975,19 +975,6 @@
     "is_active": 0
   },
   {
-    "id": "1OT2OD030544-01",
-    "core_project": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10217619,
-    "award_amount": 500000,
-    "activity_code": "OT2",
-    "agency_code": "NIH",
-    "date_start": "2020-09-23T12:09:00Z",
-    "date_end": "2024-09-22T12:09:00Z",
-    "is_active": 1
-  },
-  {
     "id": "3OT2OD030544-01S1",
     "core_project": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -999,6 +986,19 @@
     "date_start": "2020-09-23T12:09:00Z",
     "date_end": "2023-09-22T12:09:00Z",
     "is_active": 0
+  },
+  {
+    "id": "1OT2OD030544-01",
+    "core_project": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10217619,
+    "award_amount": 500000,
+    "activity_code": "OT2",
+    "agency_code": "NIH",
+    "date_start": "2020-09-23T12:09:00Z",
+    "date_end": "2024-09-22T12:09:00Z",
+    "is_active": 1
   },
   {
     "id": "3OT2OD030544-01S3",
