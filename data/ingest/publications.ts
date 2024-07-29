@@ -32,11 +32,11 @@ export const getPublications = async (coreProjects: string[]) => {
   /** de-dupe */
   reporterPublications = uniqBy(reporterPublications, (result) => result.pmid);
 
+  if (reporterError) log("Error getting publications", "error");
   log(
     `Got ${reporterPublications.length.toLocaleString()} publications`,
     reporterPublications.length ? "success" : "error",
   );
-  if (reporterError) log("Error getting publications", "error");
 
   /** get extra info about publications */
   const { result: icite, error: iciteError } = await query(
@@ -55,11 +55,11 @@ export const getPublications = async (coreProjects: string[]) => {
   /** de-dupe */
   icitePublications = uniqBy(icitePublications, (result) => result.pmid);
 
+  if (iciteError) throw log("Error getting publication metadata", "error");
   log(
     `Got ${icitePublications.length.toLocaleString()} publication metadata`,
     icitePublications.length ? "success" : "error",
   );
-  if (iciteError) throw log("Error getting publication metadata", "error");
 
   /** quick lookup of extra info from icite results by id */
   const extrasLookup: Record<

@@ -1,14 +1,12 @@
 import { uniq, uniqBy } from "lodash-es";
 import type { Rank } from "@/api/scimago-journals";
-import { newPage } from "@/util/browser";
+import { download, newPage } from "@/util/browser";
 import { loadFile } from "@/util/file";
 import { deindent, indent, log } from "@/util/log";
 import { query, queryMulti } from "@/util/request";
 
-/** ranks url */
-const ranksUrl = "https://www.scimagojr.com/journalrank.php";
-/** raw data download text */
-const downloadText = "Download data";
+/** ranks data download url */
+const ranksUrl = "https://www.scimagojr.com/journalrank.php?out=xls";
 /** page to scrape */
 const searchUrl = "https://www.scimagojr.com/journalsearch.php?q=";
 /** selector to get first search result journal name */
@@ -24,33 +22,20 @@ export const getJournals = async (journalIds: string[]) => {
   log(`Downloading from ${ranksUrl}`);
 
   /** get journal rank data */
-  const { result: ranks = [], error: ranksError } = await query<Rank[]>(
-    async () => {
-      const page = await newPage();
-      await page.goto(ranksUrl);
-      /** https://playwright.dev/docs/downloads */
-      const downloadPromise = page
-        .waitForEvent("download")
-        /** https://github.com/microsoft/playwright/issues/21206 */
-        .catch((error) => {
-          throw error;
-        });
-      await page.getByText(downloadText).click();
-      const download = await downloadPromise;
-      const ranks = await loadFile<Rank[]>(await download.path(), "csv", {
-        delimiter: ";",
-      });
-      if (!ranks) throw Error("No ranks found");
-      return ranks;
-    },
-    "scimago-journals.csv",
-  );
+  const { result: ranks = [], error: ranksError } = await query(async () => {
+    const file = await download(ranksUrl);
+    const ranks = await loadFile<Rank[]>(file, "csv", {
+      delimiter: ";",
+    });
+    if (!ranks) throw Error("No ranks found");
+    return ranks;
+  }, "scimago-journals.csv");
 
+  if (ranksError) throw log("Error getting journal ranks", "error");
   log(
     `Got ${ranks.length.toLocaleString()} journal ranks`,
     ranks.length ? "success" : "error",
   );
-  if (ranksError) throw log("Error getting journal ranks", "error");
 
   log("Getting journal names");
 
