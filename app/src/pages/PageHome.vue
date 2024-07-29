@@ -6,26 +6,26 @@
   <section>
     <h2>Totals</h2>
 
-    <div class="details">
+    <dl class="details">
       <div>
-        <span>Core Projects</span>
-        <span>
+        <dt>Core Projects</dt>
+        <dd>
           {{ coreProjects.length.toLocaleString() }}
-        </span>
+        </dd>
       </div>
 
       <div>
-        <span>Projects</span>
-        <span>
+        <dt>Projects</dt>
+        <dd>
           {{
             sum(coreProjects.map((row) => row.projects.length)).toLocaleString()
           }}
-        </span>
+        </dd>
       </div>
 
       <div>
-        <span>Awards</span>
-        <span>
+        <dt>Awards</dt>
+        <dd>
           {{
             sum(coreProjects.map((row) => row.award_amount)).toLocaleString(
               undefined,
@@ -35,18 +35,18 @@
               },
             )
           }}
-        </span>
+        </dd>
       </div>
 
       <div>
-        <span>Publications</span>
-        <span>
+        <dt>Publications</dt>
+        <dd>
           {{
             sum(coreProjects.map((row) => row.publications)).toLocaleString()
           }}
-        </span>
+        </dd>
       </div>
-    </div>
+    </dl>
   </section>
 
   <section>

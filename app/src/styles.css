@@ -154,6 +154,10 @@ code {
   font-family: var(--mono);
 }
 
+dd {
+  margin: 0;
+}
+
 /* images */
 
 svg {

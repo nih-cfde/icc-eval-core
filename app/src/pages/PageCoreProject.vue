@@ -7,22 +7,22 @@
   <section>
     <h2>Details</h2>
 
-    <div class="details">
+    <dl class="details">
       <div
         v-for="([name, ...detail], detailIndex) in details"
         :key="detailIndex"
       >
-        <span>{{ name }}</span>
-        <span>
+        <dt>{{ name }}</dt>
+        <dd>
           <template v-for="(line, lineIndex) of detail" :key="lineIndex">
             <template v-if="!(Array.isArray(line) && line[0] === '0')">
               {{ [line].flat().join(" ") }}
               <br />
             </template>
           </template>
-        </span>
+        </dd>
       </div>
-    </div>
+    </dl>
   </section>
 
   <!-- publications -->
@@ -60,16 +60,20 @@
     </AppTable>
 
     <!-- notes -->
-    <div class="mini-table">
-      <span>RCR</span>
-      <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
-        >Relative Citation Ratio</AppLink
-      >
-      <span>SJR</span>
-      <AppLink to="https://www.scimagojr.com/journalrank.php"
-        >Scimago Journal Rank</AppLink
-      >
-    </div>
+    <dl class="mini-table">
+      <dt>RCR</dt>
+      <dd>
+        <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
+          >Relative Citation Ratio</AppLink
+        >
+      </dd>
+      <dt>SJR</dt>
+      <dd>
+        <AppLink to="https://www.scimagojr.com/journalrank.php"
+          >Scimago Journal Rank</AppLink
+        >
+      </dd>
+    </dl>
 
     <!-- charts -->
     <template v-if="Object.keys(publicationsOverTime).length > 1">
@@ -154,18 +158,16 @@
     </AppTable>
 
     <!-- notes -->
-    <div class="mini-table">
-      <span>PR</span>
-      <span>Pull (change) request</span>
-      <span>✔ ◯</span>
-      <span>Closed/open</span>
-      <span>Avg Issue/PR</span>
-      <span
-        >Average time issues/pull requests stay open for before being
-        closed</span
-      >
-      <span></span>
-    </div>
+    <dl class="mini-table">
+      <dt>PR</dt>
+      <dd>Pull (change) request</dd>
+      <dt>✔ ◯</dt>
+      <dd>Closed/open</dd>
+      <dt>Avg Issue/PR</dt>
+      <dd>
+        Average time issues/pull requests stay open for before being closed
+      </dd>
+    </dl>
 
     <div class="notes">
       <p>Notes</p>
