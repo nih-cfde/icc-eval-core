@@ -61,6 +61,7 @@ export const getProjects = async (opportunities: string[]) => {
       projects: projects.map((project) => project.id),
       award_amount: sum(projects.map((project) => project.award_amount)),
       publications: 0,
+      repos: 0,
     };
   });
 

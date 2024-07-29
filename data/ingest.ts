@@ -38,6 +38,10 @@ const journals = await getJournals(
 divider("GitHub");
 
 const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
+for (const coreProject of coreProjects)
+  coreProject.repos = repos.filter(
+    (repo) => repo.core_project === coreProject.id,
+  ).length;
 
 divider("Saving");
 

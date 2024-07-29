@@ -55,12 +55,10 @@ const cols: Cols<typeof rows> = [
     align: "left",
   },
   {
-    slot: "activity-code",
     key: "activity_code",
     name: "Activity Code",
   },
   {
-    slot: "projects",
     key: "projects",
     name: "Projects",
   },
@@ -71,9 +69,12 @@ const cols: Cols<typeof rows> = [
     attrs: { title: "Total award amount across all projects" },
   },
   {
-    slot: "publications",
     key: "publications",
     name: "Publications",
+  },
+  {
+    key: "repos",
+    name: "Repositories",
   },
 ];
 </script>
