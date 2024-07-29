@@ -147,10 +147,7 @@ export const getRepos = async (coreProjects: string[]) => {
     dependencies: Object.fromEntries(
       repo.dependencies.repository.dependencyGraphManifests?.nodes?.map(
         (node) => [
-          /**
-           * get manifest file path (e.g. requirements.txt, yarn.lock). format:
-           * /OWNER/REPO/blob/BRANCH/PATH-TO-FILE
-           */
+          /** get manifest file path: /OWNER/REPO/blob/BRANCH/PATH-TO-FILE */
           (node?.blobPath ?? "").split("/").slice(5).join("/"),
           /** number of dependencies */
           node?.dependenciesCount ?? 0,

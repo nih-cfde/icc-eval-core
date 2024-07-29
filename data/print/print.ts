@@ -20,7 +20,11 @@ export const printReports = async (
   log("Running app");
 
   /** run app */
-  const dev = exec("yarn --cwd $APP_PATH dev", () => null);
+  const dev = exec(
+    "npm run --prefix $APP_PATH dev",
+    /** suppress console prints */
+    () => null,
+  );
 
   /** wait for dev server to be ready */
   const host = await new Promise<string>((resolve, reject) => {

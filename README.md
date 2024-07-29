@@ -47,7 +47,7 @@ Private repos and other platforms such as GitLab aren't supported yet.
 ## Requirements
 
 - [Node](https://nodejs.org/) v22+
-- [Yarn](https://classic.yarnpkg.com/) v1 ("classic")
+- [Bun](https://bun.sh/) (_for package management only_, as faster/smaller replacement for Yarn)
 
 ## Pipeline
 

@@ -6,9 +6,9 @@
     "lint": "eslint . --fix && prettier **/*.{ts,vue,css,html,md} --write",
     "test:lint": "eslint . && prettier **/*.{ts,vue,css,html,md} --check",
     "test:types": "vue-tsc",
-    "test": "yarn test:lint && yarn test:types",
+    "test": "npm run test:lint && npm run test:types",
     "preview": "vite preview",
-    "clean": "rm -rf node_modules yarn.lock && yarn cache clean"
+    "clean": "rm -rf node_modules bun.lockb && bun pm cache rm"
   },
   "dependencies": {
     "@tanstack/vue-table": "^8.19.2",

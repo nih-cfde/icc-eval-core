@@ -1,12 +1,12 @@
 # Commands
 
-| Command           | Action                       |
-| ----------------- | ---------------------------- |
-| `yarn install`    | Install packages             |
-| `yarn dev`        | Run local preview            |
-| `yarn build`      | Build for production         |
-| `yarn lint`       | Fix linting and formatting   |
-| `yarn test:lint`  | Check linting and formatting |
-| `yarn test:types` | Check types                  |
-| `yarn test`       | Run all tests above          |
-| `yarn clean`      | Hard uninstall packages      |
+| Command              | Action                       |
+| -------------------- | ---------------------------- |
+| `bun install`        | Install packages             |
+| `npm run dev`        | Run local preview            |
+| `npm run build`      | Build for production         |
+| `npm run lint`       | Fix linting and formatting   |
+| `npm run test:lint`  | Check linting and formatting |
+| `npm run test:types` | Check types                  |
+| `npm run test`       | Run all tests above          |
+| `npm run clean`      | Hard uninstall packages      |
