@@ -38,7 +38,7 @@ export const printReports = async (
   indent();
 
   const { results, errors } = await queryMulti(
-    pages.map(async ({ route, filename }: (typeof pages)[number]) => {
+    pages.map(({ route, filename }: (typeof pages)[number]) => async () => {
       /** go to route that shows report */
       const url = host + route;
       const page = await newPage();

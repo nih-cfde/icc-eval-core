@@ -26,7 +26,7 @@ export const getOpportunities = async () => {
   /** full list of opportunity html/pdf docs */
   let { results: documents, errors: documentErrors } = await queryMulti(
     Array.from(await page.locator(documentsSelector).all()).map(
-      async (link) => {
+      (link) => async () => {
         const href = await link.getAttribute("href");
         if (href) return href;
         else throw Error("No href");
@@ -57,7 +57,7 @@ export const getOpportunities = async () => {
   };
 
   let { results: opportunities, errors: opportunityErrors } = await queryMulti(
-    documents.map(async (document) => {
+    documents.map((document) => async () => {
       const page = await newPage();
 
       /** html document */

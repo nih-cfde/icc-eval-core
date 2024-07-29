@@ -77,7 +77,7 @@ export const query = async <Result>(
 /** run multiple queries in parallel, with caching and extra conveniences */
 export const queryMulti = async <Result>(
   /** async funcs to run */
-  promises: Promise<Result>[],
+  promises: (() => Promise<Result>)[],
   /** raw (cache) filename */
   filename?: Filename,
 ): Promise<{
@@ -100,7 +100,7 @@ export const queryMulti = async <Result>(
   const settled = await Promise.allSettled(
     promises.map(async (promise, index) => {
       try {
-        const result = await promise;
+        const result = await promise();
         bar.set(index, "success");
         return result;
       } catch (error) {

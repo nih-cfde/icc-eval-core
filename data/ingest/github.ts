@@ -22,7 +22,7 @@ export const getRepos = async (coreProjects: string[]) => {
   indent();
 
   const { results: repos, errors: repoErrors } = await queryMulti(
-    coreProjects.map(async (coreProject) => {
+    coreProjects.map((coreProject) => async () => {
       /** TEMPORARY, to not query repos that aren't tagged yet */
       if (coreProject.toLowerCase() !== "u54od036472") throw Error("Skip");
 

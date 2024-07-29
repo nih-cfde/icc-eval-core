@@ -57,7 +57,7 @@ export const getJournals = async (journalIds: string[]) => {
   indent();
 
   let { results: names, errors: nameErrors } = await queryMulti(
-    journalIds.map(async (id) => {
+    journalIds.map((id) => async () => {
       const page = await newPage();
       await page.goto(searchUrl + id.replaceAll(" ", "+"));
       /** get full journal name from abbreviated name/id via journal search */
