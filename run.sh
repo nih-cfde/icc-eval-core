@@ -7,7 +7,7 @@ if [[ $* == *--ingest* ]]; then
 elif [[ $* == *--print* ]]; then
   $data print
 elif [[ $* == *--app* ]]; then
-  $app dev
+  $app dev --open
 
 # install just packages
 elif [[ $* == *--install-packages* ]]; then
@@ -40,6 +40,6 @@ else
   $data ingest
   $data print
   if [[ -z "$CI" ]]; then
-    $app dev
+    $app dev --open
   fi
 fi

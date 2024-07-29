@@ -78,17 +78,12 @@ export const parseCsv = <Result>(
     columns: true,
     skipEmptyLines: true,
     relaxQuotes: true,
-    cast: (value, context) => {
-      if (context.header) return value;
-      const asNumber = Number(value.replaceAll(",", "."));
-      if (Number.isNaN(asNumber)) return value;
-      else return asNumber;
-    },
     ...options,
   }) as Result;
 
-const cast = (value: unknown) => String(value);
-
 /** stringify csv/tsv/etc contents */
 export const stringifyCsv = (contents: Input, options?: StringifyOptions) =>
-  stringify(contents, { cast: { number: cast }, ...options });
+  stringify(contents, {
+    header: true,
+    ...options,
+  });

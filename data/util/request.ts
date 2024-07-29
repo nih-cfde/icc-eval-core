@@ -49,7 +49,7 @@ export const query = async <Result>(
   promise: () => Promise<Result>,
   /** raw filename */
   filename?: Filename,
-): Promise<{ result?: Result; error?: Error }> => {
+): Promise<{ result?: NonNullable<Result>; error?: Error }> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
     const result = loadFile<Result>(`${RAW_PATH}/${filename}`);
@@ -64,6 +64,13 @@ export const query = async <Result>(
   /** try to run async func */
   try {
     result = await promise();
+    if (
+      result === undefined ||
+      result === null ||
+      (typeof result === "object" && !Object.keys(result).length) ||
+      (Array.isArray(result) && !result.length)
+    )
+      throw Error("No results");
   } catch (error) {
     return { error: error as Error };
   }
@@ -121,8 +128,8 @@ export const queryMulti = async <Result>(
     .filter((result) => result.status === "rejected")
     .map(({ reason, index }) => ({ ...(reason as Error), index }));
 
-  /** save raw data */
-  if (filename) saveFile(results, `${RAW_PATH}/${filename}`);
+  /** save raw data (unless no successful results) */
+  if (filename && results.length) saveFile(results, `${RAW_PATH}/${filename}`);
 
   return { results, errors };
 };

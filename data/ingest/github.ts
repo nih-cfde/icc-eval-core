@@ -63,7 +63,10 @@ export const getRepos = async (coreProjects: string[]) => {
   deindent();
 
   if (repos.length)
-    log(`Got ${repos.length.toLocaleString()} repos`, "success");
+    log(
+      `Got ${repos.length.toLocaleString()} repos`,
+      repos.length ? "success" : "error",
+    );
   if (repoErrors.length)
     log(`Problem getting ${repoErrors.length.toLocaleString()} repos`, "warn");
 

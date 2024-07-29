@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "vite --open",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --fix && prettier **/*.{ts,vue,css,html,md} --write",
     "test:lint": "eslint . && prettier **/*.{ts,vue,css,html,md} --check",

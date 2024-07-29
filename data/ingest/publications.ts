@@ -35,7 +35,7 @@ export const getPublications = async (coreProjects: string[]) => {
   if (reporterError) log("Error getting publications", "error");
   log(
     `Got ${reporterPublications.length.toLocaleString()} publications`,
-    reporterPublications.length ? "success" : "error",
+    "success",
   );
 
   /** get extra info about publications */
@@ -58,7 +58,7 @@ export const getPublications = async (coreProjects: string[]) => {
   if (iciteError) throw log("Error getting publication metadata", "error");
   log(
     `Got ${icitePublications.length.toLocaleString()} publication metadata`,
-    icitePublications.length ? "success" : "error",
+    "success",
   );
 
   /** quick lookup of extra info from icite results by id */
