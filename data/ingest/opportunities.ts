@@ -37,16 +37,16 @@ export const getOpportunities = async () => {
   /** de-dupe */
   documents = uniq(documents);
 
-  log(
-    `Got ${documents.length.toLocaleString()} opportunity documents`,
-    documents.length ? "success" : "error",
-  );
   if (documentErrors.length) {
     log(
       `Problem getting ${documentErrors.length.toLocaleString()} opportunity documents`,
       "error",
     );
   }
+  log(
+    `Got ${documents.length.toLocaleString()} opportunity documents`,
+    documents.length ? "success" : "error",
+  );
 
   /** get prefix of opportunity number */
   const getPrefix = (id: string) => {
@@ -116,16 +116,16 @@ export const getOpportunities = async () => {
   /** de-dupe */
   opportunities = uniqBy(opportunities, "id");
 
-  log(
-    `Got ${opportunities.length.toLocaleString()} opportunities`,
-    opportunities.length ? "success" : "error",
-  );
   if (opportunityErrors.length) {
     log(
       `Problem getting ${opportunityErrors.length.toLocaleString()} opportunities`,
       "error",
     );
   }
+  log(
+    `Got ${opportunities.length.toLocaleString()} opportunities`,
+    opportunities.length ? "success" : "error",
+  );
 
   return opportunities;
 };
