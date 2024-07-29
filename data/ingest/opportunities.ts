@@ -110,6 +110,7 @@ export const getOpportunities = async () => {
 
       throw Error("Invalid document extension");
     }),
+    "opportunities.json",
   );
 
   /** de-dupe */

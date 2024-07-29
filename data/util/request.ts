@@ -52,10 +52,10 @@ export const query = async <Result>(
 ): Promise<{ result?: Result; error?: Error }> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const raw = await loadFile<Result>(`${RAW_PATH}/${filename}`);
-    if (raw && !NOCACHE) {
+    const result = loadFile<Result>(`${RAW_PATH}/${filename}`);
+    if (result && !NOCACHE) {
       log("Cached query result", "secondary");
-      return { result: raw };
+      return { result };
     }
   }
 
@@ -86,10 +86,10 @@ export const queryMulti = async <Result>(
 }> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const raw = loadFile<Result[]>(`${RAW_PATH}/${filename}`);
-    if (raw && !NOCACHE) {
+    const results = loadFile<Result[]>(`${RAW_PATH}/${filename}`);
+    if (results && !NOCACHE) {
       log("Cached query result", "secondary");
-      return { results: raw, errors: [] };
+      return { results, errors: [] };
     }
   }
 
@@ -119,10 +119,7 @@ export const queryMulti = async <Result>(
   const errors = settled
     .map((result, index) => ({ ...result, index }))
     .filter((result) => result.status === "rejected")
-    .map((result) => {
-      const { reason, index } = result;
-      return { ...(reason as Error), index };
-    });
+    .map(({ reason, index }) => ({ ...(reason as Error), index }));
 
   /** save raw data */
   if (filename) saveFile(results, `${RAW_PATH}/${filename}`);

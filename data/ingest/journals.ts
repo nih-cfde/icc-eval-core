@@ -56,10 +56,8 @@ export const getJournals = async (journalIds: string[]) => {
 
   indent();
 
-  console.log("journals, before queryMulti");
   let { results: names, errors: nameErrors } = await queryMulti(
     journalIds.map(async (id) => {
-      console.log("journals, in queryMulti");
       const page = await newPage();
       await page.goto(searchUrl + id.replaceAll(" ", "+"));
       /** get full journal name from abbreviated name/id via journal search */
@@ -69,7 +67,6 @@ export const getJournals = async (journalIds: string[]) => {
     "scimago-journals.json",
   );
   deindent();
-  console.log("journals, after queryMulti");
 
   /** de-dupe */
   names = uniqBy(names, "id");

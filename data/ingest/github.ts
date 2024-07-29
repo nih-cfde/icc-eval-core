@@ -21,10 +21,8 @@ export const getRepos = async (coreProjects: string[]) => {
 
   indent();
 
-  console.log("repos, before queryMulti");
   const { results: repos, errors: repoErrors } = await queryMulti(
     coreProjects.map(async (coreProject) => {
-      console.log("repos, in queryMulti");
       /** TEMPORARY, to not query repos that aren't tagged yet */
       if (coreProject.toLowerCase() !== "u54od036472") throw Error("Skip");
 
@@ -63,7 +61,6 @@ export const getRepos = async (coreProjects: string[]) => {
     "github-repos.json",
   );
   deindent();
-  console.log("repos, after queryMulti");
 
   if (repos.length)
     log(`Got ${repos.length.toLocaleString()} repos`, "success");
