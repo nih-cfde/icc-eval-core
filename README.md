@@ -13,9 +13,9 @@ This repository is a place to:
 
 You can view the information as a live webapp dashboard or as separate PDF reports.
 
-[🖱️ The Dashboard Webapp](cfde-eval.netlify.app)
+[🖱️ The Dashboard Webapp](https://cfde-eval.netlify.app)
 
-[📜 PDF Reports](cfde-eval.netlify.app/reports)
+[📜 PDF Reports](https://cfde-eval.netlify.app/reports)
 
 ## Submit your project
 
