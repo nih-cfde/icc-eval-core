@@ -24,10 +24,8 @@ export const getJournals = async (journalIds: string[]) => {
 
   /** get journal rank data */
   const { result: ranks = [], error: ranksError } = await query(async () => {
-    const file = await download(ranksUrl);
-    return await loadFile<Rank[]>(file, "csv", {
-      delimiter: ";",
-    });
+    const path = await download(ranksUrl);
+    return await loadFile<Rank[]>(path, "csv", { delimiter: ";" });
   }, "scimago-ranks.csv");
 
   if (ranksError) throw log("Error getting journal ranks", "error");

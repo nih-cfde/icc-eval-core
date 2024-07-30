@@ -43,6 +43,13 @@ export const request = async <Response>(
   }
 };
 
+/** is empty data result */
+export const isEmpty = <Data>(data: unknown): data is undefined | null | Data =>
+  data === undefined ||
+  data === null ||
+  (typeof data === "object" && !Object.keys(data).length) ||
+  (Array.isArray(data) && !data.length);
+
 /** run query, with caching and extra conveniences */
 export const query = async <Result>(
   /** async func to run */
@@ -63,20 +70,14 @@ export const query = async <Result>(
 
   /** try to run async func */
   try {
-    result = await promise();
-    if (
-      result === undefined ||
-      result === null ||
-      (typeof result === "object" && !Object.keys(result).length) ||
-      (Array.isArray(result) && !result.length)
-    )
-      throw Error("No results");
+    result = (await promise()) as typeof result;
+    if (isEmpty<Result>(result)) throw Error("No results");
   } catch (error) {
     return { error: error as Error };
   }
 
   /** save raw data */
-  if (filename && result) saveFile(result, `${RAW_PATH}/${filename}`);
+  if (filename) saveFile(result, `${RAW_PATH}/${filename}`);
 
   return { result };
 };
