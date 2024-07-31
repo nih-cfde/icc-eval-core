@@ -1,5 +1,6 @@
 /** DRC asset lists */
 
+import type { Code, DCC, Files } from "@/api/drc";
 import { download } from "@/util/browser";
 import { loadFile } from "@/util/file";
 import { log } from "@/util/log";
@@ -18,25 +19,38 @@ const codeUrl =
 /** get info from DRC assets */
 export const getDrc = async () => {
   log("Getting DRC data coordination center list");
-  const { result: dcc } = await query(async () => {
+  const { result: dcc, error: dccError } = await query(async () => {
     const path = await download(dccUrl);
-    console.log(path);
-    return await loadFile<string>(path, "tsv");
+    return await loadFile<DCC[]>(path, "tsv");
   }, "drc-dcc.tsv");
   log("Getting DRC file list");
-  const { result: files } = await query(async () => {
+  const { result: files, error: filesError } = await query(async () => {
     const path = await download(filesUrl);
-    console.log(path);
-    return await loadFile(path, "tsv");
+    return await loadFile<Files[]>(path, "tsv");
   }, "drc-files.tsv");
   log("Getting DRC code list");
-  const { result: code } = await query(async () => {
+  const { result: code, error: codeError } = await query(async () => {
     const path = await download(codeUrl);
-    console.log(path);
-    return await loadFile(path, "tsv");
+    return await loadFile<Code[]>(path, "tsv");
   }, "drc-code.tsv");
+
+  if (dcc?.length)
+    log(
+      `Got ${dcc.length.toLocaleString()} DCCs`,
+      dcc?.length ? "success" : "error",
+    );
+  if (files?.length)
+    log(
+      `Got ${files.length.toLocaleString()} files`,
+      files?.length ? "success" : "error",
+    );
+  if (code?.length)
+    log(
+      `Got ${code.length.toLocaleString()} code`,
+      code?.length ? "success" : "error",
+    );
+  if (dccError || filesError || codeError)
+    log("Problem getting DRC assets", "error");
 
   return { dcc, files, code };
 };
-
-console.log(await getDrc());

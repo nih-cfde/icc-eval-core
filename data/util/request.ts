@@ -39,7 +39,7 @@ export const request = async <Response>(
     if (options.parse === "text") return (await response.text()) as Response;
     throw Error();
   } catch (error) {
-    throw Error(`Couldn't parse ${url.pathname} as ${options.parse}`);
+    throw Error(`Problem parsing ${url.pathname} as ${options.parse}`);
   }
 };
 

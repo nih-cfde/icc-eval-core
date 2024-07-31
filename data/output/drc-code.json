@@ -1,0 +1,882 @@
+[
+  {
+    "type": "Apps URL",
+    "name": "SenNet Data Portal",
+    "link": "https://data.sennetconsortium.org/",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "HuBMAP Entity API",
+    "link": "https://entity.api.hubmapconsortium.org/",
+    "description": "The HuBMAP Entity API is a standard RESTful web service with create, update and read operations for the standard HuBMAP provenance graph entities.",
+    "openAPISpec": "False",
+    "smartAPISpec": "True",
+    "smartAPIURL": "https://smart-api.info/ui/0065e419668f3336a40d1f5ab89c6ba3",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "SenNet Search API",
+    "link": "https://search.api.sennetconsortium.org",
+    "description": "The SenNet Search API is a thin wrapper of the Elasticsearch API. It handles data indexing and reindexing into the backend Elasticsearch. It also accepts the search query and passes through to the Elasticsearch with data access security check.",
+    "openAPISpec": "False",
+    "smartAPISpec": "True",
+    "smartAPIURL": "https://smart-api.info/ui/10ed9b5eb8ff960d4431befc591ed842",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "SenNet Entity API",
+    "link": "https://entity.api.sennetconsortium.org",
+    "description": "The SenNet Entity API is a standard RESTful web service with create, update and read operations for the standard SenNet provenance graph entities.",
+    "openAPISpec": "False",
+    "smartAPISpec": "True",
+    "smartAPIURL": "https://smart-api.info/ui/7d838c9dee0caa2f8fe57173282c5812",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Apps URL",
+    "name": "SenNet Exploration User Interface",
+    "link": "https://data.sennetconsortium.org/ccf-eui",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Apps URL",
+    "name": "LINCS Tools Marketplace",
+    "link": "https://lincsproject.org/LINCS/tools",
+    "description": "The LINCS Tools Marketplace page serves a listing of applications produced  using LINCS datasets by the LINCS consortium. ",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Apps URL",
+    "name": "SPARC Tools and Resources",
+    "link": "https://sparc.science/tools-and-resources/tools",
+    "description": "SPARC Portal page listing SPARC associated tools and resources",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "exRNA Atlas JSON-LD",
+    "link": "https://brl-bcm.stoplight.io/docs/exrna-atlas-json-api/ZG9jOjQ1Mg-overview",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "CFDE GeneReg Linked Data Hub",
+    "link": "https://genboree.org/cfde-gene-dev/ui/api-docs",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "Allele Registry",
+    "link": "https://reg.clinicalgenome.org/doc/",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "Linked Data Hub",
+    "link": "https://ldh.clinicalgenome.org/ldh/ui/api-docs",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "Variant",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/variant.ts",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "Regulatory Element",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/regulatoryElement.ts",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "Regulatory Element Info",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/regulatoryElementInfo/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "VariantInfo",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/variantinfo/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "GeneInfo",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/ldh/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "LINCS L1000 Reverse Search",
+    "link": "https://github.com/nih-cfde/playbook-partnership/tree/main/components/lincs/l1000-reverse-search",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "ETL",
+    "name": "process_mcf10a_c2m2.py",
+    "link": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_c2m2.py",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "ETL",
+    "name": "build_file_lincs2021.py",
+    "link": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/build_file_lincs2021.py",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "HuBMAP Entity API",
+    "link": "https://entity.api.hubmapconsortium.org",
+    "description": "The HuBMAP Entity API is a standard RESTful web service with create, update and read operations for the standard HuBMAP provenance graph entities.",
+    "openAPISpec": "False",
+    "smartAPISpec": "True",
+    "smartAPIURL": "https://smart-api.info/ui/0065e419668f3336a40d1f5ab89c6ba3",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "Variant",
+    "link": "https://playbook-workflow-builder.cloud/components/MyVariantInfo",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "Regulatory Element Info",
+    "link": "https://playbook-workflow-builder.cloud/components/RegulatoryElementInfo",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "VariantInfo",
+    "link": "https://playbook-workflow-builder.cloud/components/VariantInfo",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "HuBMAP Search API",
+    "link": "https://search.api.hubmapconsortium.org/v3/",
+    "description": "The HuBMAP Search API is a thin wrapper of the Elasticsearch API. It handles data indexing and reindexing into the backend Elasticsearch. It also accepts the search query and passes through to the Elasticsearch with data access security check. ",
+    "openAPISpec": "False",
+    "smartAPISpec": "True",
+    "smartAPIURL": "https://smart-api.info/ui/7aaf02b838022d564da776b03f357158",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Apps URL",
+    "name": "HuBMAP Data Portal",
+    "link": "https://portal.hubmapconsortium.org/",
+    "description": "The HuBMAP Data Portal is the central resource for discovery, visualization, and download of single-cell tissue data generated by the consortium. A standardized data curation and processing workflow ensure that only high quality is released.",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "SmartAPI URL",
+    "link": "https://smart-api.info/api/metadata/75cfc060ea7bec431a356c00c4a67c74?raw=1",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "SmartAPI URL",
+    "link": "https://smart-api.info/01",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "OpenAPI URL",
+    "link": "https://smart-api.info/",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "Enrichr API",
+    "link": "https://maayanlab.cloud/Enrichr/help#api",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "ETL",
+    "name": "LINCS ETL script",
+    "link": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_cm2.py",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "SigCom LINCS Gene Set Search Results",
+    "link": "https://playbook-workflow-builder.cloud/components/SigComLINCSGeneSetResults",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "SigCom LINCS Signature Search Results",
+    "link": "https://playbook-workflow-builder.cloud/components/SigComLINCSSignatureResults",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "SigCom LINCS Data",
+    "link": "https://smart-api.info/ui/fdb3ecfcf5006a142d3f5522930324f1",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Apps URL",
+    "name": " Human Reference Atlas",
+    "link": "https://humanatlas.io/",
+    "description": "A Human Reference Atlas (HRA) is a comprehensive, high-resolution, three-dimensional atlas of all the cells in the healthy human body. The Human Reference Atlas provides standard terminologies and data structures for describing specimens, biological structures, and spatial positions linked to existing ontologies.",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Apps URL",
+    "name": "HRA Exploration",
+    "link": "https://portal.hubmapconsortium.org/ccf-eui",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "ETL",
+    "name": "LINCS ETL Script",
+    "link": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf0a_c2m2.py",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "ETL",
+    "name": "LINCS ETL Script",
+    "link": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mf10a_c2m2.py",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "SigCom LINCS Gene Template",
+    "link": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"<GENE_NAME>\"]}",
+    "description": "Template URL for SigCom LINCS Gene",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "ETL",
+    "name": "LINCS ETL script test ",
+    "link": "https://github.com/nih-cfde/LINCS-metadata/blob/ain/scripts/process_mcf10a_c2m2.py",
+    "description": "test notification",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "SigCom LINCS Drug Template",
+    "link": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"<DRUG_NAME>\"]}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "SigCom LINCS Gene Example (ACE2)",
+    "link": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"ACE2\"]}",
+    "description": "Example entity page for ACE2 in SigCom LINCS",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "SigCom LINCS Drug Example (Imatinib)",
+    "link": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"Imatinib\"]}",
+    "description": "Example drug page for imatinib in SigCom LINCS",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "LINCS Data Portal 2.0 Template",
+    "link": "http://lincsportal.ccs.miami.edu/signatures/perturbations/<PERT_ID>",
+    "description": "Template gene page URL for LINCS Data Portal 2.0 ",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "LINCS Data Portal 2.0 Example (Imatinib)",
+    "link": "http://lincsportal.ccs.miami.edu/signatures/perturbations/16646",
+    "description": "Example drug page for imatinib (perturbation ID 16646) in LINCS Data Portal 2.0 ",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "Harmonizome Template",
+    "link": "https://maayanlab.cloud/Harmonizome/gene/<GENE_NAME>",
+    "description": "Example gene page URL template for Harmonizome",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "Harmonizome Example (ACE2)",
+    "link": "https://maayanlab.cloud/Harmonizome/gene/ACE2",
+    "description": "Example gene page for ACE2 in Harmonizome",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "Drugmonizome Template",
+    "link": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"<DRUG_NAME>\"]}",
+    "description": "Template drug page URL for Drugmonizome",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "Drugmonizome Example (Imatinib)",
+    "link": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"Imatinib\"]}",
+    "description": "Example drug page for imatinib in Drugmonizome",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "LINCS L1000 Reverse Search",
+    "link": "https://playbook-workflow-builder.cloud/components/LINCSL1000ReverseSearchDashboard",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "SigCom LINCS Gene Pages",
+    "link": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"{gene.symbol}\"]}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"ACE2\"]}"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "SigCom LINCS Drug Pages",
+    "link": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"{drug.label}\"]}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"Imatinib\"]}"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "Drugmonizome Drug Pages",
+    "link": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"{drug.label}\"]}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"Imatinib\"]}"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "Harmonizome Gene Pages",
+    "link": "https://maayanlab.cloud/Harmonizome/gene/{gene.symbol}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://maayanlab.cloud/Harmonizome/gene/ACE2"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "IDG Reactome Gene Pages",
+    "link": "https://idg.reactome.org/search/{gene.symbol}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://idg.reactome.org/search/ACE2"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "Pharos Gene Pages",
+    "link": "https://pharos.nih.gov/search?q={gene.symbol}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://pharos.nih.gov/search?q=ACE2"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "DrugCentral Drug Pages",
+    "link": "https://drugcentral.org/?q={drug.label}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://drugcentral.org/?q=imatinib"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "ZINC15 Drug Pages",
+    "link": "https://zinc15.docking.org/substances/search/?q={drug.label}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://zinc15.docking.org/substances/search/?q=imatinib"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "GlyGen Protein Pages",
+    "link": "https://www.glygen.org/protein/{protein.uniprot}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://www.glygen.org/protein/Q9BYF1"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "MetGENE Gene Pages",
+    "link": "https://bdcw.org/MetGENE/metGene.php?GeneInfoStr={gene.symbol}&GeneIDType=SYMBOL&species=hsa&anatomy=NA&disease_slim=&disease=NA",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://bdcw.org/MetGENE/metGene.php?GeneInfoStr=ACE2&GeneIDType=SYMBOL&species=hsa&anatomy=NA&disease_slim=&disease=NA"
+  },
+  {
+    "type": "Entity Page Template",
+    "name": "GTEx Portal Gene Pages",
+    "link": "https://www.gtexportal.org/home/gene/{gene.ensembl}",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": "https://www.gtexportal.org/home/gene/ENSG00000130234"
+  },
+  {
+    "type": "API",
+    "name": "SigCom LINCS Metadata",
+    "link": "https://smart-api.info/ui/75cfc060ea7bec431a356c00c4a67c74",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "Enrichr",
+    "link": "https://smart-api.info/ui/d2cd419fdeace3e941984bc542e9383f",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "L1000CDS2",
+    "link": "https://smart-api.info/ui/c6fdcbd1d6be2a51c065e18eabed4bb1",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "FAIRshake API v2",
+    "link": "https://smart-api.info/ui/8113167e81987d36b707ae4aa795b17e",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "L1000FWD",
+    "link": "https://smart-api.info/ui/235e75417247f07e5fed6acf3f345bb7",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "Harmonizome",
+    "link": "https://smart-api.info/ui/02ff8a216233cad70e56c8c34fac7c1d",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "FAIRshake",
+    "link": "https://smart-api.info/ui/c8e4c6c6633ead7ddc2ecf3dc6ac97b2",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "GTEx API",
+    "link": "https://gtexportal.org/api/v2/redoc#tag/GTEx-Portal-API-Info",
+    "description": "",
+    "openAPISpec": "False",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "GA4GH RNAget API",
+    "link": "https://ga4gh-rnaseq.github.io/schema/docs/index.html",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "Pharos Microservice API",
+    "link": "https://smart-api.info/ui/b8399f43cd71264faca4d798c793aa30",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "GlyGen API",
+    "link": "https://api.glygen.org/",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "BioCompute Object Data Base API",
+    "link": "https://biocomputeobject.org/api/docs/",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "False",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "Gene ID Conversion REST API",
+    "link": "https://smart-api.info/ui/e712b9eb07e637a00ae468f757ce2a1f",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "API",
+    "name": "MetGENE REST API",
+    "link": "https://smart-api.info/ui/342e4cec92030d74efd84b61650fb0ea",
+    "description": "",
+    "openAPISpec": "True",
+    "smartAPISpec": "True",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "ConvertedGeneID",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/ConvertedGeneID/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetENP_on_MetSet",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/MetENP_on_MetSet/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "PPI_StringDB",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/PPI_StringDB/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "GeneIDConv",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/geneidconv/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetaboliteInfo",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metaboliteInfo/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetaboliteSummary",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metabolite_summary/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetgeneMetaboliteTable",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolite_table/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetgeneMetabolites",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolites/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetGeneRxnTable",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxn_table/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetGeneRxns",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxns/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetGeneStudies",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_studies/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetGeneStudyTable",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_study_table/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetGeneSummary",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  },
+  {
+    "type": "PWB Metanodes",
+    "name": "MetGeneSummaryTable",
+    "link": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary_table/index.tsx",
+    "description": "",
+    "openAPISpec": "",
+    "smartAPISpec": "",
+    "smartAPIURL": "",
+    "entityPageExample": ""
+  }
+]
