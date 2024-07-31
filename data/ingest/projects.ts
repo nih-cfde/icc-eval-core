@@ -27,8 +27,8 @@ export const getProjects = async (opportunities: string[]) => {
   /** de-dupe */
   projects = uniqBy(projects, (project) => project.project_num);
 
-  if (reporterError) throw log("Error getting projects", "error");
   log(`Got ${projects.length.toLocaleString()} projects`, "success");
+  if (reporterError) throw log("Error getting projects", "error");
 
   /** transform data into desired format, with fallbacks */
   const transformedProjects = projects.map((project) => ({

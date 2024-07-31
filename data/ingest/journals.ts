@@ -28,8 +28,8 @@ export const getJournals = async (journalIds: string[]) => {
     return await loadFile<Rank[]>(path, "csv", { delimiter: ";" });
   }, "scimago-ranks.csv");
 
-  if (ranksError) throw log("Error getting journal ranks", "error");
   log(`Got ${ranks.length.toLocaleString()} journal ranks`, "success");
+  if (ranksError) throw log("Error getting journal ranks", "error");
 
   log("Getting journal names");
 
@@ -53,11 +53,10 @@ export const getJournals = async (journalIds: string[]) => {
   /** de-dupe */
   journals = uniqBy(journals, "id");
 
-  if (journals.length)
-    log(
-      `Got ${journals.length.toLocaleString()} journals`,
-      journals.length ? "success" : "error",
-    );
+  log(
+    `Got ${journals.length.toLocaleString()} journals`,
+    journals.length ? "success" : "error",
+  );
   if (journalErrors.length)
     log(
       `Problem getting ${journalErrors.length.toLocaleString()} journals`,

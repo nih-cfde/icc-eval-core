@@ -34,23 +34,40 @@ export const getDrc = async () => {
     return await loadFile<Code[]>(path, "tsv");
   }, "drc-code.tsv");
 
-  if (dcc?.length)
-    log(
-      `Got ${dcc.length.toLocaleString()} DCCs`,
-      dcc?.length ? "success" : "error",
-    );
-  if (files?.length)
-    log(
-      `Got ${files.length.toLocaleString()} files`,
-      files?.length ? "success" : "error",
-    );
-  if (code?.length)
-    log(
-      `Got ${code.length.toLocaleString()} code`,
-      code?.length ? "success" : "error",
-    );
+  log(
+    `Got ${dcc?.length.toLocaleString()} DCCs`,
+    dcc?.length ? "success" : "error",
+  );
+  log(
+    `Got ${files?.length.toLocaleString()} files`,
+    files?.length ? "success" : "error",
+  );
+  log(
+    `Got ${code?.length.toLocaleString()} code`,
+    code?.length ? "success" : "error",
+  );
   if (dccError || filesError || codeError)
-    log("Problem getting DRC assets", "error");
+    throw log("Problem getting DRC assets", "error");
 
-  return { dcc, files, code };
+  /** transform data into desired format, with fallbacks */
+  return {
+    dcc: dcc?.map((dcc) => ({
+      link: dcc.link,
+      modified: new Date(dcc.lastmodified ?? "").toISOString(),
+      created: new Date(dcc.created ?? "").toISOString(),
+    })),
+    files: files?.map((file) => ({
+      type: file.filetype ?? "",
+      filename: file.filename ?? "",
+      link: file.link ?? "",
+      size: Number(file.size) || 0,
+    })),
+    code: code?.map((code) => ({
+      type: code.type ?? "",
+      name: code.name ?? "",
+      link: code.link ?? "",
+      description: code.description ?? "",
+      api: code.smartAPIURL ?? "",
+    })),
+  };
 };
