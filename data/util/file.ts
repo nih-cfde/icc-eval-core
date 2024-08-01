@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
 import { parse } from "path";
 import {
   parse as csvParse,
@@ -32,6 +32,7 @@ export const downloadFile = async (
   onProgress?: (percent: number) => void,
 ) => {
   const path = `${RAW_PATH}/${filename}`;
+  if (existsSync(path)) log("Using cache", "secondary");
   await new Downloader({
     url,
     fileName: path,

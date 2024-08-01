@@ -26,7 +26,7 @@ export const getJournals = async (journalIds: string[]) => {
   const ranks = await query(async (progress) => {
     const path = await downloadFile(ranksUrl, "scimago-ranks.csv", progress);
     return await loadFile<Rank[]>(path, "csv", { delimiter: ";" });
-  });
+  }, "scimago-ranks.csv");
 
   log("Getting journal names");
 

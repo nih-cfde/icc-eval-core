@@ -59,6 +59,7 @@ export const log = (
     process.stdout.cursorTo(0);
     process.stdout.write(indent + message);
   } else {
+    process.stdout.cursorTo(0);
     console.log(indent + message);
   }
   if (level === "error") throw Error(message);
