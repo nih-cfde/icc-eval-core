@@ -4,12 +4,11 @@ import type { ProjectsQuery } from "@/api/reporter-projects-query";
 import type { ProjectsResults } from "@/api/reporter-projects-results";
 import { log } from "@/util/log";
 import { query } from "@/util/request";
+import { count } from "@/util/string";
 
 /** get grant projects associated with funding opportunities */
 export const getProjects = async (opportunities: string[]) => {
-  log(
-    `Getting projects for ${opportunities.length.toLocaleString()} opportunities`,
-  );
+  log(`Getting projects for ${count(opportunities)} opportunities`);
 
   /** get projects associated with opportunities */
   const reporter = await query(

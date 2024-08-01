@@ -2,6 +2,7 @@ import { exec } from "child_process";
 import { newPage } from "@/util/browser";
 import { log } from "@/util/log";
 import { queryMulti } from "@/util/request";
+import { count } from "@/util/string";
 
 const { PDF_PATH } = process.env;
 
@@ -37,7 +38,7 @@ export const printReports = async (
 
   log(`Running on ${host}`);
 
-  log(`Printing ${pages.length.toLocaleString()} pages`);
+  log(`Printing ${count(pages)} pages`);
 
   await queryMulti(
     pages.map(

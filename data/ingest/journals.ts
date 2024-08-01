@@ -4,6 +4,7 @@ import { newPage } from "@/util/browser";
 import { downloadFile, loadFile } from "@/util/file";
 import { log } from "@/util/log";
 import { query, queryMulti } from "@/util/request";
+import { count } from "@/util/string";
 
 /** ranks data download url */
 const ranksUrl = "https://www.scimagojr.com/journalrank.php?out=xls";
@@ -18,13 +19,17 @@ export const getJournals = async (journalIds: string[]) => {
   /** de-dupe */
   journalIds = uniq(journalIds);
 
-  log(`Getting ${journalIds.length.toLocaleString()} journals`);
+  log(`Getting ${count(journalIds)} journals`);
 
   log(`Downloading from ${ranksUrl}`);
 
   /** get journal rank data */
   const ranks = await query(async (progress) => {
-    const path = await downloadFile(ranksUrl, "scimago-ranks.csv", progress);
+    const { path } = await downloadFile(
+      ranksUrl,
+      "scimago-ranks.csv",
+      progress,
+    );
     return await loadFile<Rank[]>(path, "csv", { delimiter: ";" });
   }, "scimago-ranks.csv");
 

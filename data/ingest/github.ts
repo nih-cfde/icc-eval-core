@@ -13,14 +13,13 @@ import {
 } from "@/api/github";
 import { log } from "@/util/log";
 import { filterErrors, queryMulti } from "@/util/request";
+import { count } from "@/util/string";
 
 export const getRepos = async (coreProjects: string[]) => {
   /** de-dupe */
   coreProjects = uniq(coreProjects);
 
-  log(
-    `Getting repos for ${coreProjects.length.toLocaleString()} core projects`,
-  );
+  log(`Getting repos for ${count(coreProjects)} core projects`);
 
   const repoResults = await queryMulti(
     coreProjects.map((coreProject) => async () => {
@@ -45,7 +44,7 @@ export const getRepos = async (coreProjects: string[]) => {
   /** de-dupe */
   repos = uniqBy(repos, "id");
 
-  log(`Getting details for ${repos.length.toLocaleString()} repos`);
+  log(`Getting details for ${count(repos)} repos`);
 
   const repoDetails = await queryMulti(
     repos.map((repo) => async (progress) => {

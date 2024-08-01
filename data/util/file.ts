@@ -1,4 +1,11 @@
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
+import {
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  rmSync,
+  statSync,
+  writeFileSync,
+} from "fs";
 import { parse } from "path";
 import {
   parse as csvParse,
@@ -12,6 +19,7 @@ import {
 import { isEmpty } from "lodash-es";
 import Downloader from "nodejs-file-downloader";
 import { log } from "@/util/log";
+import { midTrunc } from "@/util/string";
 
 const { RAW_PATH, NOCACHE } = process.env;
 
@@ -32,16 +40,29 @@ export const downloadFile = async (
   onProgress?: (percent: number) => void,
 ) => {
   const path = `${RAW_PATH}/${filename}`;
-  if (existsSync(path)) log("Using cache", "secondary");
-  await new Downloader({
+
+  /** create folders if needed */
+  mkdirSync(parse(path).dir, { recursive: true });
+
+  /** will we be using existing/cached file */
+  const cached = !NOCACHE && existsSync(path);
+
+  if (cached) log(`Using cache ${midTrunc(filename, 40)}`, "secondary");
+
+  const downloader = new Downloader({
     url,
     fileName: path,
     skipExistingFileName: !NOCACHE,
     cloneFiles: false,
     maxAttempts: 3,
-    onProgress: (percentage) => onProgress?.(Number(percentage)),
-  }).download();
-  return path;
+    onProgress: (percentage) => {
+      !cached && onProgress?.(Number(percentage) / 100);
+    },
+  });
+
+  await downloader.download();
+
+  return { path, cached, stats: statSync(path) };
 };
 
 /** load data from file */
@@ -83,7 +104,9 @@ export const saveFile = (
     contents = stringifyCsv([data].flat(), { delimiter: "\t", ...options });
 
   try {
+    /** create folders if needed */
     mkdirSync(parse(path).dir, { recursive: true });
+    /** save file */
     writeFileSync(path, contents);
     return true;
   } catch (error) {

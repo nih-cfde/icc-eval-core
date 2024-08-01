@@ -1,7 +1,9 @@
-import { countBy, size, truncate } from "lodash-es";
+import { countBy, truncate } from "lodash-es";
+import pLimit from "p-limit";
 import stripAnsi from "strip-ansi";
 import { loadFile, saveFile, type Filename } from "@/util/file";
-import { format, log, progress, progressMulti } from "@/util/log";
+import { log, progress } from "@/util/log";
+import { count } from "@/util/string";
 
 export type Params = Record<string, unknown | unknown[]>;
 
@@ -52,23 +54,7 @@ export const isEmpty = (data: unknown) =>
   (typeof data === "object" && !Object.keys(data).length) ||
   (Array.isArray(data) && !data.length);
 
-/** get "size" of data */
-const getSize = (data: unknown) => {
-  try {
-    // @ts-expect-error try
-    if (data.results) return size(data.results).toLocaleString();
-    else throw Error();
-  } catch (error) {
-    try {
-      // @ts-expect-error try
-      return size(data).toLocaleString();
-    } catch (error) {
-      return "-";
-    }
-  }
-};
-
-/** run task, with caching and extra conveniences */
+/** run task, with caching, progress logging, and error catching */
 export const query = async <Result>(
   /** async func to run */
   promise: (progress: (progress: number) => void) => Promise<Result>,
@@ -79,28 +65,25 @@ export const query = async <Result>(
   if (filename) {
     const result = loadFile<Result>(`${RAW_PATH}/${filename}`);
     if (result && !NOCACHE) {
-      log(`Using cache, ${getSize(result)} items`, "secondary");
+      log(`Using cache, ${count(result)} items`, "secondary");
       return result;
     }
   }
 
   let result: Result;
 
-  /** status bar */
-  const bar = progress();
+  /** progress bar */
+  const bar = progress(1);
 
   /** try to run async func */
   try {
-    result = await promise((progress) => bar.set(progress));
+    result = await promise((progress) => bar(0, progress));
     if (isEmpty(result)) throw Error("No results");
   } catch (error) {
-    // bar.done();
     throw log(error, "error");
   }
 
-  // bar.done();
-
-  log(`Success, ${getSize(result)} items`, "success");
+  log(`Success, ${count(result)} items`, "success");
 
   /** save raw data */
   if (filename) saveFile(result, `${RAW_PATH}/${filename}`);
@@ -108,7 +91,10 @@ export const query = async <Result>(
   return result as NonNullable<Result>;
 };
 
-/** run multiple tasks in parallel, with caching and extra conveniences */
+/**
+ * run multiple tasks in parallel, with caching, max concurrency, progress
+ * logging, error catching, and formatting
+ */
 export const queryMulti = async <Result>(
   /** async funcs to run */
   promises: ((
@@ -122,35 +108,38 @@ export const queryMulti = async <Result>(
   if (filename) {
     const results = loadFile<NonNullable<Result>[]>(`${RAW_PATH}/${filename}`);
     if (results && !NOCACHE) {
-      log(`Using cache, ${getSize(results)} items`, "secondary");
+      log(`Using cache, ${count(results)} items`, "secondary");
       return results;
     }
   }
 
   /** progress bar */
-  const bar = progressMulti(promises.length);
+  const bar = progress(promises.length);
+
+  /** limit concurrent promises */
+  const limiter = pLimit(10);
 
   /** run promises */
   const settled = await Promise.allSettled(
-    promises.map(async (promise, index) => {
-      try {
-        bar.set(index, 0);
-        const result = await promise((progress) => bar.set(index, progress));
-        if (isEmpty(result)) throw Error("No results");
-        bar.set(index, "success");
-        return result as NonNullable<Result>;
-      } catch (error) {
-        bar.set(index, "error");
-        throw error;
-      }
-    }),
+    promises
+      .map((promise, index) => async () => {
+        try {
+          bar(index, "start");
+          const result = await promise((progress) => bar(index, progress));
+          if (isEmpty(result)) throw Error("No results");
+          bar(index, "success");
+          return result as NonNullable<Result>;
+        } catch (error) {
+          bar(index, "error");
+          throw error;
+        }
+      })
+      .map(limiter),
   );
 
   const results = settled.map((settled) =>
     settled.status === "fulfilled" ? settled.value : (settled.reason as Error),
   );
-
-  bar.done();
 
   /** filter for successes */
   const successes = settled
@@ -161,21 +150,14 @@ export const queryMulti = async <Result>(
     .filter((settled) => settled.status === "rejected")
     .map((error) => error.reason as Error);
 
-  /** give hints of error causes */
+  /** logging */
   const messages = countBy(
     errors.map((error) =>
       truncate(error.message.replaceAll("\n", " "), { length: 80 }),
     ),
   );
-
-  for (const [message, count] of Object.entries(messages))
-    log(`(${count}) ${stripAnsi(message)}`, "secondary");
-
-  if (errors.length)
-    format(errors.length.toLocaleString() + " errors", "error");
-  if (successes.length)
-    format(successes.length.toLocaleString() + " successes", "success");
-
+  for (const [message, _count] of Object.entries(messages))
+    log(`(${count(_count)}): ${stripAnsi(message)}`, "warn");
   if (!successes.length) throw log("No successes", "error");
 
   /** save raw data */

@@ -6,15 +6,14 @@ import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
 import type { PublicationsResults } from "@/api/reporter-publications-results.d";
 import { log } from "@/util/log";
 import { query } from "@/util/request";
+import { count } from "@/util/string";
 
 /** get publications associated with core projects */
 export const getPublications = async (coreProjects: string[]) => {
   /** de-dupe */
   coreProjects = uniq(coreProjects);
 
-  log(
-    `Getting publications for ${coreProjects.length.toLocaleString()} core projects`,
-  );
+  log(`Getting publications for ${count(coreProjects)} core projects`);
 
   /** get publications associated with core projects */
   const reporter = await query(
@@ -31,9 +30,7 @@ export const getPublications = async (coreProjects: string[]) => {
   /** de-dupe */
   reporterPublications = uniqBy(reporterPublications, (result) => result.pmid);
 
-  log(
-    `Getting metadata for ${reporterPublications.length.toLocaleString()} core publications`,
-  );
+  log(`Getting metadata for ${count(reporterPublications)} core publications`);
 
   /** get extra info about publications */
   const icite = await query(

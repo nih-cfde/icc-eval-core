@@ -1,9 +1,9 @@
-/** DRC asset lists */
-
+import { countBy, sortBy } from "lodash-es";
 import type { Code, DCC, Files } from "@/api/drc";
 import { downloadFile, loadFile } from "@/util/file";
-import { deindent, indent, log } from "@/util/log";
+import { log } from "@/util/log";
 import { queryMulti } from "@/util/request";
+import { getExt } from "@/util/string";
 
 /** DRC top-level lists */
 const drcLists = [
@@ -24,19 +24,53 @@ const drcLists = [
 /** get info from DRC assets */
 export const getDrc = async () => {
   log("Downloading DRC lists from...");
-  indent();
   for (const { url } of drcLists) log(url);
-  deindent();
 
   /** download meta lists */
   const results = await queryMulti(
     drcLists.map(({ url, filename }) => async (progress) => {
-      const path = await downloadFile(url, filename, progress);
+      const { path } = await downloadFile(url, filename, progress);
       return await loadFile<DCC | Files | Code>(path, "tsv");
     }),
   );
 
   const [dcc, files, code] = results as [DCC, Files, Code];
+
+  /** assets to download */
+  let assets = dcc
+    .map((dcc) => ({
+      type: "dcc",
+      url: dcc.link ?? "",
+      ext: getExt(dcc.link),
+      size: 0,
+    }))
+    .concat(
+      files.map((file) => ({
+        type: "file",
+        url: file.link ?? "",
+        ext: getExt(file.link),
+        size: Number(file.size),
+      })),
+    )
+    .filter(({ ext }) => [".zip", ".gmt"].includes(ext));
+
+  /** do biggest downloads last */
+  assets = sortBy(assets, "size");
+
+  log("Downloading assets");
+
+  const counts = countBy(assets, "ext");
+  for (const [ext, count] of Object.entries(counts))
+    log(`${count} ${ext} files`, "secondary");
+
+  /** download all */
+  await queryMulti(
+    assets.map(({ type, url }) => async (progress) => {
+      const filename = url.split("/").pop()!;
+      await downloadFile(url, `drc/${type}/${filename}`, progress);
+      return true;
+    }),
+  );
 
   /** transform data into desired format, with fallbacks */
   return {

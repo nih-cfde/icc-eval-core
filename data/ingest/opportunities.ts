@@ -3,6 +3,7 @@ import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { newPage } from "@/util/browser";
 import { log } from "@/util/log";
 import { filterErrors, queryMulti } from "@/util/request";
+import { count } from "@/util/string";
 
 /** page to scrape */
 const opportunitiesUrl =
@@ -46,9 +47,7 @@ export const getOpportunities = async () => {
     return "";
   };
 
-  log(
-    `Parsing ${documents.length.toLocaleString()} HTML/PDF documents for opportunities`,
-  );
+  log(`Parsing ${count(documents)} HTML/PDF documents for opportunities`);
 
   let opportunities = await queryMulti(
     filterErrors(documents).map((document) => async (progress) => {
