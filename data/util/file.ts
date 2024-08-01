@@ -10,7 +10,10 @@ import {
   type Options as StringifyOptions,
 } from "csv-stringify/sync";
 import { isEmpty } from "lodash-es";
+import Downloader from "nodejs-file-downloader";
 import { log } from "@/util/log";
+
+const { RAW_PATH, NOCACHE } = process.env;
 
 type Extensions = "json" | "csv" | "tsv";
 
@@ -20,6 +23,24 @@ export type Filename = `${string}.${Extensions}`;
 export const clearFolder = (path: string) => {
   rmSync(path, { force: true, recursive: true });
   mkdirSync(path, { recursive: true });
+};
+
+/** download file from url (if filename not already present) */
+export const downloadFile = async (
+  url: string,
+  filename: string,
+  onProgress?: (percent: number) => void,
+) => {
+  const path = `${RAW_PATH}/${filename}`;
+  await new Downloader({
+    url,
+    fileName: path,
+    skipExistingFileName: !NOCACHE,
+    cloneFiles: false,
+    maxAttempts: 3,
+    onProgress: (percentage) => onProgress?.(Number(percentage)),
+  }).download();
+  return path;
 };
 
 /** load data from file */
@@ -32,7 +53,6 @@ export const loadFile = <Data>(
   try {
     contents = readFileSync(path, "utf-8");
   } catch (error) {
-    log(error, "warn");
     return null;
   }
   if (format === "json" || path.endsWith(".json"))
@@ -74,9 +94,9 @@ export const saveFile = (
 /** safe-parse json */
 export const parseJson = <Data>(data: string) => {
   try {
-    const result = JSON.parse(data);
-    if (isEmpty(result)) throw Error("No data");
-    return result as Data;
+    const parsed = JSON.parse(data) as Data;
+    if (isEmpty(parsed)) throw Error("No data");
+    return parsed as NonNullable<Data>;
   } catch (error) {
     log(error, "warn");
     return null;
@@ -92,14 +112,14 @@ export const parseCsv = <Data>(
   options?: ParseOptions,
 ) => {
   try {
-    const result = csvParse(contents, {
+    const data = csvParse(contents, {
       columns: true,
       skipEmptyLines: true,
       relaxQuotes: true,
       ...options,
-    });
-    if (isEmpty(result)) throw Error("No data");
-    return result as Data;
+    }) as unknown;
+    if (isEmpty(data)) throw Error("No data");
+    return data as NonNullable<Data>;
   } catch (error) {
     log(error, "warn");
     return null;

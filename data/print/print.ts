@@ -1,6 +1,6 @@
 import { exec } from "child_process";
 import { newPage } from "@/util/browser";
-import { deindent, indent, log } from "@/util/log";
+import { log } from "@/util/log";
 import { queryMulti } from "@/util/request";
 
 const { PDF_PATH } = process.env;
@@ -39,44 +39,40 @@ export const printReports = async (
 
   log(`Printing ${pages.length.toLocaleString()} pages`);
 
-  indent();
+  await queryMulti(
+    pages.map(
+      ({ route, filename }: (typeof pages)[number]) =>
+        async (progress) => {
+          /** go to route that shows report */
+          const url = host + route;
+          const page = await newPage();
+          await page.goto(url);
+          progress(0.25);
 
-  const { results, errors } = await queryMulti(
-    pages.map(({ route, filename }: (typeof pages)[number]) => async () => {
-      /** go to route that shows report */
-      const url = host + route;
-      const page = await newPage();
-      await page.goto(url);
+          /** wait for app to render */
+          await page.emulateMedia({ media: "print" });
+          await page.waitForSelector("main");
 
-      /** wait for app to render */
-      await page.emulateMedia({ media: "print" });
-      await page.waitForSelector("main");
+          /** force page resize event for e.g. auto-resizing charts */
+          await page.setViewportSize({ width, height });
+          progress(0.5);
 
-      /** force page resize event for e.g. auto-resizing charts */
-      await page.setViewportSize({ width, height });
+          /** wait for rendering, layout shifts, animations, etc. to finish */
+          await page.waitForTimeout(2000);
+          progress(0.75);
 
-      /** wait for rendering, layout shifts, animations, etc. to finish */
-      await page.waitForTimeout(2000);
-
-      /** print pdf */
-      await page.pdf({
-        path: `${PDF_PATH}/${filename}.pdf`,
-        format: "letter",
-        landscape: true,
-        width,
-        height,
-      });
-    }),
+          /** print pdf */
+          await page.pdf({
+            path: `${PDF_PATH}/${filename}.pdf`,
+            format: "letter",
+            landscape: true,
+            width,
+            height,
+          });
+        },
+    ),
   );
-  deindent();
 
   /** close app */
   dev.kill();
-
-  if (results.length)
-    log(`Printed ${results.length.toLocaleString()} PDFs`, "success");
-  if (errors.length) {
-    for (const error of errors) log(error, "warn");
-    log(`Error printing ${errors.length.toLocaleString()} PDFs`, "error");
-  }
 };

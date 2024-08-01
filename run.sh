@@ -1,5 +1,5 @@
-data="npm run --prefix data"
-app="npm run --prefix app"
+data="npm run --silent --prefix data"
+app="npm run --silent --prefix app"
 dataBun="--cwd data"
 appBun="--cwd app"
 

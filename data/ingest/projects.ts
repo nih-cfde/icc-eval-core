@@ -9,11 +9,10 @@ import { query } from "@/util/request";
 export const getProjects = async (opportunities: string[]) => {
   log(
     `Getting projects for ${opportunities.length.toLocaleString()} opportunities`,
-    "start",
   );
 
   /** get projects associated with opportunities */
-  const { result: reporter, error: reporterError } = await query(
+  const reporter = await query(
     () =>
       queryReporter<ProjectsQuery, ProjectsResults>("projects", {
         criteria: { opportunity_numbers: opportunities },
@@ -26,9 +25,6 @@ export const getProjects = async (opportunities: string[]) => {
 
   /** de-dupe */
   projects = uniqBy(projects, (project) => project.project_num);
-
-  log(`Got ${projects.length.toLocaleString()} projects`, "success");
-  if (reporterError) throw log("Error getting projects", "error");
 
   /** transform data into desired format, with fallbacks */
   const transformedProjects = projects.map((project) => ({

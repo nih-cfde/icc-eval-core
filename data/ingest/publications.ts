@@ -14,11 +14,10 @@ export const getPublications = async (coreProjects: string[]) => {
 
   log(
     `Getting publications for ${coreProjects.length.toLocaleString()} core projects`,
-    "start",
   );
 
   /** get publications associated with core projects */
-  const { result: reporter, error: reporterError } = await query(
+  const reporter = await query(
     () =>
       queryReporter<PublicationsQuery, PublicationsResults>("publications", {
         criteria: { core_project_nums: coreProjects },
@@ -33,13 +32,11 @@ export const getPublications = async (coreProjects: string[]) => {
   reporterPublications = uniqBy(reporterPublications, (result) => result.pmid);
 
   log(
-    `Got ${reporterPublications.length.toLocaleString()} publications`,
-    "success",
+    `Getting metadata for ${reporterPublications.length.toLocaleString()} core publications`,
   );
-  if (reporterError) log("Error getting publications", "error");
 
   /** get extra info about publications */
-  const { result: icite, error: iciteError } = await query(
+  const icite = await query(
     () =>
       queryIcite(
         reporterPublications
@@ -54,12 +51,6 @@ export const getPublications = async (coreProjects: string[]) => {
 
   /** de-dupe */
   icitePublications = uniqBy(icitePublications, (result) => result.pmid);
-
-  log(
-    `Got ${icitePublications.length.toLocaleString()} publication metadata`,
-    "success",
-  );
-  if (iciteError) throw log("Error getting publication metadata", "error");
 
   /** quick lookup of extra info from icite results by id */
   const extrasLookup: Record<

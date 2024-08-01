@@ -1,5 +1,7 @@
+import { countBy, size, truncate } from "lodash-es";
+import stripAnsi from "strip-ansi";
 import { loadFile, saveFile, type Filename } from "@/util/file";
-import { log, status } from "@/util/log";
+import { format, log, progress, progressMulti } from "@/util/log";
 
 export type Params = Record<string, unknown | unknown[]>;
 
@@ -44,73 +46,99 @@ export const request = async <Response>(
 };
 
 /** is empty data result */
-export const isEmpty = <Data>(data: unknown): data is undefined | null | Data =>
+export const isEmpty = (data: unknown) =>
   data === undefined ||
   data === null ||
   (typeof data === "object" && !Object.keys(data).length) ||
   (Array.isArray(data) && !data.length);
 
-/** run query, with caching and extra conveniences */
+/** get "size" of data */
+const getSize = (data: unknown) => {
+  try {
+    // @ts-expect-error try
+    if (data.results) return size(data.results).toLocaleString();
+    else throw Error();
+  } catch (error) {
+    try {
+      // @ts-expect-error try
+      return size(data).toLocaleString();
+    } catch (error) {
+      return "-";
+    }
+  }
+};
+
+/** run task, with caching and extra conveniences */
 export const query = async <Result>(
   /** async func to run */
-  promise: () => Promise<Result>,
+  promise: (progress: (progress: number) => void) => Promise<Result>,
   /** raw filename */
   filename?: Filename,
-): Promise<{ result?: NonNullable<Result>; error?: Error }> => {
+): Promise<NonNullable<Result>> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
     const result = loadFile<Result>(`${RAW_PATH}/${filename}`);
     if (result && !NOCACHE) {
-      log("Cached query result", "secondary");
-      return { result };
+      log(`Using cache, ${getSize(result)} items`, "secondary");
+      return result;
     }
   }
 
   let result: Result;
 
+  /** status bar */
+  const bar = progress();
+
   /** try to run async func */
   try {
-    result = (await promise()) as typeof result;
-    if (isEmpty<Result>(result)) throw Error("No results");
+    result = await promise((progress) => bar.set(progress));
+    if (isEmpty(result)) throw Error("No results");
   } catch (error) {
-    return { error: error as Error };
+    // bar.done();
+    throw log(error, "error");
   }
+
+  // bar.done();
+
+  log(`Success, ${getSize(result)} items`, "success");
 
   /** save raw data */
   if (filename) saveFile(result, `${RAW_PATH}/${filename}`);
 
-  return { result };
+  return result as NonNullable<Result>;
 };
 
-/** run multiple queries in parallel, with caching and extra conveniences */
+/** run multiple tasks in parallel, with caching and extra conveniences */
 export const queryMulti = async <Result>(
   /** async funcs to run */
-  promises: (() => Promise<Result>)[],
+  promises: ((
+    /** func to call to update progress of promise */
+    progress: (progress: number) => void,
+  ) => Promise<Result>)[],
   /** raw (cache) filename */
   filename?: Filename,
-): Promise<{
-  results: Result[];
-  errors: (Error & { index: number })[];
-}> => {
+): Promise<(NonNullable<Result> | Error)[]> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const results = loadFile<Result[]>(`${RAW_PATH}/${filename}`);
+    const results = loadFile<NonNullable<Result>[]>(`${RAW_PATH}/${filename}`);
     if (results && !NOCACHE) {
-      log("Cached query result", "secondary");
-      return { results, errors: [] };
+      log(`Using cache, ${getSize(results)} items`, "secondary");
+      return results;
     }
   }
 
-  /** status bar */
-  const bar = status(promises.length);
+  /** progress bar */
+  const bar = progressMulti(promises.length);
 
   /** run promises */
   const settled = await Promise.allSettled(
     promises.map(async (promise, index) => {
       try {
-        const result = await promise();
+        bar.set(index, 0);
+        const result = await promise((progress) => bar.set(index, progress));
+        if (isEmpty(result)) throw Error("No results");
         bar.set(index, "success");
-        return result;
+        return result as NonNullable<Result>;
       } catch (error) {
         bar.set(index, "error");
         throw error;
@@ -118,19 +146,46 @@ export const queryMulti = async <Result>(
     }),
   );
 
+  const results = settled.map((settled) =>
+    settled.status === "fulfilled" ? settled.value : (settled.reason as Error),
+  );
+
   bar.done();
 
-  /** use flatMap to filter and map at same time with easier type safety */
-  const results = settled
-    .filter((result) => result.status === "fulfilled")
-    .map((result) => result.value);
+  /** filter for successes */
+  const successes = settled
+    .filter((settled) => settled.status === "fulfilled")
+    .map((success) => success.value);
+  /** filter for errors */
   const errors = settled
-    .map((result, index) => ({ ...result, index }))
-    .filter((result) => result.status === "rejected")
-    .map(({ reason, index }) => ({ ...(reason as Error), index }));
+    .filter((settled) => settled.status === "rejected")
+    .map((error) => error.reason as Error);
 
-  /** save raw data (unless no successful results) */
-  if (filename && results.length) saveFile(results, `${RAW_PATH}/${filename}`);
+  /** give hints of error causes */
+  const messages = countBy(
+    errors.map((error) =>
+      truncate(error.message.replaceAll("\n", " "), { length: 80 }),
+    ),
+  );
 
-  return { results, errors };
+  for (const [message, count] of Object.entries(messages))
+    log(`(${count}) ${stripAnsi(message)}`, "secondary");
+
+  if (errors.length)
+    format(errors.length.toLocaleString() + " errors", "error");
+  if (successes.length)
+    format(successes.length.toLocaleString() + " successes", "success");
+
+  if (!successes.length) throw log("No successes", "error");
+
+  /** save raw data */
+  if (filename) saveFile(filterErrors(results), `${RAW_PATH}/${filename}`);
+
+  return results;
 };
+
+/** filter out errors */
+export const filterErrors = <Result>(results: (Result | Error)[]) =>
+  results.filter(
+    (item): item is Exclude<typeof item, Error> => !(item instanceof Error),
+  );

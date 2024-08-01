@@ -1,4 +1,5 @@
 import chalk from "chalk";
+import { clamp } from "lodash-es";
 
 /** indent level */
 let indentCount = 1;
@@ -75,23 +76,63 @@ export const divider = (message: Message) => {
 /** print newline. use as minor/lower-level divider. */
 export const newline = () => log("", "", false, 0);
 
-/** progress bar for simple % */
-export const progress = (message: Message, percent: number) => {
-  const chars = 10;
-  const bar = "▓".repeat(chars * percent) + "░".repeat(chars * (1 - percent));
-  log(`${message} ${bar}`);
+/**
+ * progress/state of task. log level type (success/error/etc) or percent
+ * complete.
+ */
+type Progress = Level | number;
+
+/** progress bar for single task, simple percentage */
+export const progress = () => {
+  /** derive functionality from multi progress bar */
+  const { set, done } = progressMulti(1, multiCharBar);
+  return {
+    set: (progress: Progress) => set(0, progress),
+    done,
+  };
 };
 
-/** status bar for start/success/error */
-export const status = (length: number) => {
-  const bar: Level[] = Array(length).fill("start");
-  const set = (index: number, status: (typeof bar)[number]) => {
-    bar[index] = status;
-    print();
+/** progress bar for multiple tasks */
+export const progressMulti = (
+  /** total number of entries to make and track */
+  length: number,
+  bar: (percent: number) => string = singleCharBar,
+) => {
+  /**
+   * current state of progresses. log level type (success/error/etc) or percent
+   * complete.
+   */
+  const state: Progress[] = Array(length).fill("");
+  /** update progress of particular entry */
+  const set = (index: number, progress: Progress) => {
+    state[index] = progress;
+    if (!Number.isNaN(progress))
+      log(
+        state
+          .map((progress) =>
+            typeof progress === "number"
+              ? format(bar(progress), "secondary")
+              : format("", progress),
+          )
+          .join(""),
+        "",
+        true,
+      );
   };
-  const print = () =>
-    log(bar.map((status) => format("", status)).join(""), "", true);
-  print();
-  const done = newline;
-  return { set, done };
+  /** return funcs to allow calling from outside */
+  return { set, done: newline };
+};
+
+/** get single char to indicate progress percent */
+const singleCharBar = (percent: number) => {
+  const chars = "▁▂▃▄▅▆▇█";
+  const index = Math.round(percent * (chars.length - 1));
+  return chars.charAt(clamp(index, 0, chars.length));
+};
+
+/** get multi-char bar to indicate progress percent */
+const multiCharBar = (percent: number) => {
+  const length = 10;
+  percent = clamp(percent, 0, 1);
+  return "▓".repeat(length * percent) + "░".repeat(length * (1 - percent));
 };

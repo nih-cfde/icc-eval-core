@@ -9,7 +9,7 @@ export type DCC = {
   dccapproved?: string;
   deleted?: string;
   created?: string;
-};
+}[];
 
 export type Files = {
   filetype?: string;
@@ -17,7 +17,7 @@ export type Files = {
   link?: string;
   size?: string;
   sha256checksum?: string;
-};
+}[];
 
 export type Code = {
   type?: string;
@@ -28,4 +28,4 @@ export type Code = {
   smartAPISpec?: string;
   smartAPIURL?: string;
   entityPageExample?: string;
-};
+}[];

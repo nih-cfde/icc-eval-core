@@ -36,21 +36,21 @@ Apps URL	 Human Reference Atlas	https://humanatlas.io/	A Human Reference Atlas (
 Apps URL	HRA Exploration	https://portal.hubmapconsortium.org/ccf-eui		False	False		
 ETL	LINCS ETL Script	https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf0a_c2m2.py		False	False		
 ETL	LINCS ETL Script	https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mf10a_c2m2.py		False	False		
-Entity Page Template	SigCom LINCS Gene Template	"https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={""skip"":0,""limit"":10,""search"":[""<GENE_NAME>""]}"	Template URL for SigCom LINCS Gene	False	False		
+Entity Page Template	SigCom LINCS Gene Template	https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={"skip":0,"limit":10,"search":["<GENE_NAME>"]}	Template URL for SigCom LINCS Gene	False	False		
 ETL	LINCS ETL script test 	https://github.com/nih-cfde/LINCS-metadata/blob/ain/scripts/process_mcf10a_c2m2.py	test notification	False	False		
-Entity Page Template	SigCom LINCS Drug Template	"https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={""search"":[""<DRUG_NAME>""]}"		False	False		
-Entity Page Template	SigCom LINCS Gene Example (ACE2)	"https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={""skip"":0,""limit"":10,""search"":[""ACE2""]}"	Example entity page for ACE2 in SigCom LINCS	False	False		
-Entity Page Template	SigCom LINCS Drug Example (Imatinib)	"https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={""search"":[""Imatinib""]}"	Example drug page for imatinib in SigCom LINCS	False	False		
+Entity Page Template	SigCom LINCS Drug Template	https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={"search":["<DRUG_NAME>"]}		False	False		
+Entity Page Template	SigCom LINCS Gene Example (ACE2)	https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={"skip":0,"limit":10,"search":["ACE2"]}	Example entity page for ACE2 in SigCom LINCS	False	False		
+Entity Page Template	SigCom LINCS Drug Example (Imatinib)	https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={"search":["Imatinib"]}	Example drug page for imatinib in SigCom LINCS	False	False		
 Entity Page Template	LINCS Data Portal 2.0 Template	http://lincsportal.ccs.miami.edu/signatures/perturbations/<PERT_ID>	Template gene page URL for LINCS Data Portal 2.0 	False	False		
 Entity Page Template	LINCS Data Portal 2.0 Example (Imatinib)	http://lincsportal.ccs.miami.edu/signatures/perturbations/16646	Example drug page for imatinib (perturbation ID 16646) in LINCS Data Portal 2.0 	False	False		
 Entity Page Template	Harmonizome Template	https://maayanlab.cloud/Harmonizome/gene/<GENE_NAME>	Example gene page URL template for Harmonizome	False	False		
 Entity Page Template	Harmonizome Example (ACE2)	https://maayanlab.cloud/Harmonizome/gene/ACE2	Example gene page for ACE2 in Harmonizome	False	False		
-Entity Page Template	Drugmonizome Template	"https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={""limit"":10,""search"":[""<DRUG_NAME>""]}"	Template drug page URL for Drugmonizome	False	False		
-Entity Page Template	Drugmonizome Example (Imatinib)	"https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={""limit"":10,""search"":[""Imatinib""]}"	Example drug page for imatinib in Drugmonizome	False	False		
+Entity Page Template	Drugmonizome Template	https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={"limit":10,"search":["<DRUG_NAME>"]}	Template drug page URL for Drugmonizome	False	False		
+Entity Page Template	Drugmonizome Example (Imatinib)	https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={"limit":10,"search":["Imatinib"]}	Example drug page for imatinib in Drugmonizome	False	False		
 PWB Metanodes	LINCS L1000 Reverse Search	https://playbook-workflow-builder.cloud/components/LINCSL1000ReverseSearchDashboard		False	False		
-Entity Page Template	SigCom LINCS Gene Pages	"https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={""skip"":0,""limit"":10,""search"":[""{gene.symbol}""]}"		False	False		"https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={""skip"":0,""limit"":10,""search"":[""ACE2""]}"
-Entity Page Template	SigCom LINCS Drug Pages	"https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={""search"":[""{drug.label}""]}"		False	False		"https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={""search"":[""Imatinib""]}"
-Entity Page Template	Drugmonizome Drug Pages	"https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={""limit"":10,""search"":[""{drug.label}""]}"		False	False		"https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={""limit"":10,""search"":[""Imatinib""]}"
+Entity Page Template	SigCom LINCS Gene Pages	https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={"skip":0,"limit":10,"search":["{gene.symbol}"]}		False	False		https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={"skip":0,"limit":10,"search":["ACE2"]}
+Entity Page Template	SigCom LINCS Drug Pages	https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={"search":["{drug.label}"]}		False	False		https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={"search":["Imatinib"]}
+Entity Page Template	Drugmonizome Drug Pages	https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={"limit":10,"search":["{drug.label}"]}		False	False		https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={"limit":10,"search":["Imatinib"]}
 Entity Page Template	Harmonizome Gene Pages	https://maayanlab.cloud/Harmonizome/gene/{gene.symbol}		False	False		https://maayanlab.cloud/Harmonizome/gene/ACE2
 Entity Page Template	IDG Reactome Gene Pages	https://idg.reactome.org/search/{gene.symbol}		False	False		https://idg.reactome.org/search/ACE2
 Entity Page Template	Pharos Gene Pages	https://pharos.nih.gov/search?q={gene.symbol}		False	False		https://pharos.nih.gov/search?q=ACE2
