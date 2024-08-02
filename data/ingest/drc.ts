@@ -1,6 +1,6 @@
 import { countBy, sortBy } from "lodash-es";
 import type { Code, DCC, Files } from "@/api/drc";
-import { downloadFile, loadFile } from "@/util/file";
+import { downloadFile, loadFile, unzip } from "@/util/file";
 import { log } from "@/util/log";
 import { queryMulti } from "@/util/request";
 import { getExt } from "@/util/string";
@@ -42,17 +42,15 @@ export const getDrc = async () => {
       type: "dcc",
       url: dcc.link ?? "",
       ext: getExt(dcc.link),
-      size: 0,
     }))
     .concat(
       files.map((file) => ({
         type: "file",
         url: file.link ?? "",
         ext: getExt(file.link),
-        size: Number(file.size),
       })),
     )
-    .filter(({ ext }) => [".zip", ".gmt"].includes(ext));
+    .filter(({ ext }) => ["zip", "gmt"].includes(ext));
 
   /** do biggest downloads last */
   assets = sortBy(assets, "size");
@@ -63,11 +61,21 @@ export const getDrc = async () => {
   for (const [ext, count] of Object.entries(counts))
     log(`${count} ${ext} files`, "secondary");
 
-  /** download all */
   await queryMulti(
-    assets.map(({ type, url }) => async (progress) => {
+    assets.map(({ type, url, ext }) => async (progress) => {
       const filename = url.split("/").pop()!;
-      await downloadFile(url, `drc/${type}/${filename}`, progress);
+
+      /** download file */
+      const { path } = await downloadFile(
+        url,
+        `temp/${type}/${filename}`,
+        progress,
+      );
+
+      /** load file */
+      if (ext === "zip") unzip(path);
+      // else loadFile(path);
+
       return true;
     }),
   );

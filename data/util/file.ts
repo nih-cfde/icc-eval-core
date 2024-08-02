@@ -1,3 +1,4 @@
+import { spawn as nodeSpawn } from "child_process";
 import {
   existsSync,
   mkdirSync,
@@ -23,7 +24,7 @@ import { midTrunc } from "@/util/string";
 
 const { RAW_PATH, NOCACHE } = process.env;
 
-type Extensions = "json" | "csv" | "tsv";
+type Extensions = "json" | "csv" | "tsv" | "txt";
 
 export type Filename = `${string}.${Extensions}`;
 
@@ -83,9 +84,39 @@ export const loadFile = <Data>(
     return parseCsv<Data>(contents, { delimiter: ",", ...options });
   if (format === "tsv" || path.endsWith(".tsv"))
     return parseCsv<Data>(contents, { delimiter: "\t", ...options });
+  if (format === "txt" || path.endsWith(".txt") || path.endsWith(".gmt"))
+    return contents as Data;
 
   return null;
 };
+
+/** extract zip file contents */
+export const unzip = async (filename: string) => {
+  try {
+    const { dir, name } = parse(filename);
+    const output = `${dir}/${name}`;
+    await spawn("unzip", [filename, "-d", output]);
+    return output;
+  } catch (error) {
+    log(error, "warn");
+    return null;
+  }
+};
+
+type Spawn = Parameters<typeof nodeSpawn>;
+
+/** https://stackoverflow.com/questions/72862197/how-to-use-promisify-with-the-spawn-function-for-the-child-process */
+const spawn = (cmd: Spawn[0], args: Spawn[1] = [], options: Spawn[2] = {}) =>
+  new Promise((resolve, reject) => {
+    const process = nodeSpawn(cmd, args, options);
+    const errors: string[] = [];
+    const stdout: string[] = [];
+    process.stdout?.on("data", (data) => stdout.push(data.toString()));
+    process.on("error", (error) => errors.push(error.toString()));
+    process.on("close", () =>
+      errors.length ? reject(errors.join(" ")) : resolve(stdout.join("")),
+    );
+  });
 
 /** save data to file */
 export const saveFile = (

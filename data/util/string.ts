@@ -18,9 +18,9 @@ export const bytes = (bytes: number) => {
   return bytes.toFixed(1) + " " + units[0]!;
 };
 
-/** get url extension (for paths, use path module */
+/** get url extension, without dot (for paths, use path module) */
 export const getExt = (url?: string) =>
-  url?.match(/\.[0-9a-z]+$/i)?.[0] ?? ".???";
+  url?.match(/\.([0-9a-z]+)$/i)?.[1] ?? "???";
 
 /** truncate string from middle */
 export const midTrunc = (string: string, limit: number) => {
