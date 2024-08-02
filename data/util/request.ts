@@ -63,10 +63,10 @@ export const query = async <Result>(
 ): Promise<NonNullable<Result>> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const result = loadFile<Result>(`${RAW_PATH}/${filename}`);
-    if (result && !NOCACHE) {
-      log(`Using cache, ${count(result)} items`, "secondary");
-      return result;
+    const { data } = await loadFile<Result>(`${RAW_PATH}/${filename}`);
+    if (data && !NOCACHE) {
+      log(`Using cache, ${count(data)} items`, "secondary");
+      return data;
     }
   }
 
@@ -108,10 +108,12 @@ export const queryMulti = async <Result>(
 ): Promise<(NonNullable<Result> | Error)[]> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const results = loadFile<NonNullable<Result>[]>(`${RAW_PATH}/${filename}`);
-    if (results && !NOCACHE) {
-      log(`Using cache, ${count(results)} items`, "secondary");
-      return results;
+    const { data } = await loadFile<NonNullable<Result>[]>(
+      `${RAW_PATH}/${filename}`,
+    );
+    if (data && !NOCACHE) {
+      log(`Using cache, ${count(data)} items`, "secondary");
+      return data;
     }
   }
 
@@ -174,8 +176,8 @@ export const queryMulti = async <Result>(
       truncate(error.message.replaceAll("\n", " "), { length: 80 }),
     ),
   );
-  for (const [message, _count] of Object.entries(messages))
-    log(`(${count(_count)}): ${stripAnsi(message)}`, "warn");
+  for (const [message, number] of Object.entries(messages))
+    log(`(${count(number)}): ${stripAnsi(message)}`, "warn");
   if (!successes.length) throw log("No successes", "error");
 
   /** save raw data */

@@ -30,7 +30,8 @@ export const getJournals = async (journalIds: string[]) => {
       "scimago-ranks.csv",
       progress,
     );
-    return await loadFile<Rank[]>(path, "csv", { delimiter: ";" });
+    const { data } = await loadFile<Rank[]>(path, "csv", { delimiter: ";" });
+    return data;
   }, "scimago-ranks.csv");
 
   log("Getting journal names");

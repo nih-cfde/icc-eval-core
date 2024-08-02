@@ -1,13 +1,6 @@
 import { spawn as nodeSpawn } from "child_process";
-import {
-  existsSync,
-  mkdirSync,
-  readFileSync,
-  rmSync,
-  statSync,
-  writeFileSync,
-} from "fs";
-import { readdir } from "fs/promises";
+import { existsSync, type Stats } from "fs";
+import { mkdir, readdir, readFile, rm, stat, writeFile } from "fs/promises";
 import { parse } from "path";
 import {
   parse as csvParse,
@@ -30,9 +23,9 @@ type Extensions = "json" | "csv" | "tsv" | "txt";
 export type Filename = `${string}.${Extensions}`;
 
 /** make fresh folder */
-export const clearFolder = (path: string) => {
-  rmSync(path, { force: true, recursive: true });
-  mkdirSync(path, { recursive: true });
+export const clearFolder = async (path: string) => {
+  await rm(path, { force: true, recursive: true });
+  await mkdir(path, { recursive: true });
 };
 
 /** download file from url (if filename not already present) */
@@ -45,7 +38,7 @@ export const downloadFile = async (
   path = `${RAW_PATH}/${path}`;
 
   /** create folders if needed */
-  mkdirSync(parse(path).dir, { recursive: true });
+  await mkdir(parse(path).dir, { recursive: true });
 
   /** will we be using existing/cached file */
   const cached = !NOCACHE && existsSync(path);
@@ -67,31 +60,34 @@ export const downloadFile = async (
   /** trigger download */
   await downloader.download();
 
-  return { path, cached, stats: statSync(path) };
+  return { path, size: (await stat(path)).size };
 };
 
 /** load data from file */
-export const loadFile = <Data>(
+export const loadFile = async <Data>(
   path: string,
   format?: Extensions,
   options?: ParseOptions,
 ) => {
+  let data: Data | null = null;
+  let stats: Stats | null = null;
   let contents = "";
   try {
-    contents = readFileSync(path, "utf-8");
+    contents = await readFile(path, "utf-8");
+    stats = await stat(path);
   } catch (error) {
-    return null;
+    log(`loadFile(${path}): ${error}`, "warn");
   }
   if (format === "json" || path.endsWith(".json"))
-    return parseJson<Data>(contents);
+    data = parseJson<Data>(contents);
   if (format === "csv" || path.endsWith(".csv"))
-    return parseCsv<Data>(contents, { delimiter: ",", ...options });
+    data = parseCsv<Data>(contents, { delimiter: ",", ...options });
   if (format === "tsv" || path.endsWith(".tsv"))
-    return parseCsv<Data>(contents, { delimiter: "\t", ...options });
+    data = parseCsv<Data>(contents, { delimiter: "\t", ...options });
   if (format === "txt" || path.endsWith(".txt") || path.endsWith(".gmt"))
-    return contents as Data;
+    data = contents as Data;
 
-  return null;
+  return { data, stats };
 };
 
 /** extract zip file contents */
@@ -102,18 +98,26 @@ export const unzip = async (filename: string) => {
   /** unzip command */
   const [cmd, ...args] = ["unzip", filename, "-d", output];
   try {
-    /** if output folder already has contents, return file paths */
-    if (existsSync(output)) return await readdir(output, { recursive: true });
-    /** clear folder to avoid unzip halting */
-    clearFolder(output);
-    /** run unzip */
-    await spawn(cmd!, args);
-    /** return file paths */
-    return await readdir(output, { recursive: true });
+    /** if not already unzipped */
+    if (!existsSync(output)) {
+      /** clear folder to avoid unzip halting */
+      await clearFolder(output);
+      /** run unzip */
+      await spawn(cmd!, args);
+    }
+    /** return file paths and stats */
+    return Promise.all(
+      (await readdir(output, { recursive: true }))
+        .map((path) => `${output}/${path}`)
+        .map(async (path) => ({
+          path,
+          size: (await stat(path)).size,
+        })),
+    );
   } catch (error) {
     log(`unzip(${filename}): ${error}`, "warn");
     /** clear folder to not end up with partial contents */
-    clearFolder(output);
+    await clearFolder(output);
     return null;
   }
 };
@@ -140,7 +144,7 @@ const spawn = (cmd: Spawn[0], args: Spawn[1] = [], options: Spawn[2] = {}) =>
   });
 
 /** save data to file */
-export const saveFile = (
+export const saveFile = async (
   data: unknown,
   path: string,
   format?: Extensions,
@@ -157,9 +161,9 @@ export const saveFile = (
 
   try {
     /** create folders if needed */
-    mkdirSync(parse(path).dir, { recursive: true });
+    await mkdir(parse(path).dir, { recursive: true });
     /** save file */
-    writeFileSync(path, contents);
+    await writeFile(path, contents);
     return true;
   } catch (error) {
     log(error, "error");

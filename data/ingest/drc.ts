@@ -1,9 +1,9 @@
-import { countBy, sortBy, uniq, uniqBy } from "lodash-es";
+import { countBy, sortBy, sumBy, uniqBy } from "lodash-es";
 import type { Code, DCC, File } from "@/api/drc";
 import { downloadFile, loadFile, unzip } from "@/util/file";
 import { log } from "@/util/log";
 import { filterErrors, queryMulti } from "@/util/request";
-import { getExt, getFilename } from "@/util/string";
+import { bytes, count, getExt, getFilename } from "@/util/string";
 
 /** DRC top-level lists */
 const drcLists = [
@@ -13,7 +13,7 @@ const drcLists = [
   },
   {
     url: "https://cfde-drc.s3.amazonaws.com/database/files/current_file_assets.tsv",
-    filename: "drc-files.tsv",
+    filename: "drc-file.tsv",
   },
   {
     url: "https://cfde-drc.s3.amazonaws.com/database/files/current_code_assets.tsv",
@@ -30,7 +30,8 @@ export const getDrc = async () => {
   const lists = await queryMulti(
     drcLists.map(({ url, filename }) => async (progress) => {
       const { path } = await downloadFile(url, filename, progress);
-      return await loadFile<DCC | File | Code>(path, "tsv");
+      const { data } = await loadFile<DCC | File | Code>(path, "tsv");
+      return data;
     }),
   );
 
@@ -64,32 +65,35 @@ export const getDrc = async () => {
 
   {
     const counts = countBy(resources, "ext");
-    for (const [ext, count] of Object.entries(counts))
-      log(`${count} ${ext} files`, "secondary");
+    for (const [ext, number] of Object.entries(counts))
+      log(`(${count(number)}) .${ext} files`, "secondary");
   }
 
   /** download assets locally and get paths to local files */
-  const pathResults = await queryMulti(
+  const fileResults = await queryMulti(
     resources.map(({ url, path, ext }) => async (progress) => {
       /** download file */
-      const { path: downloadedPath } = await downloadFile(url, path, progress);
+      const file = await downloadFile(url, path, progress);
 
       /** unzip and get all file paths */
-      if (ext === "zip") return (await unzip(downloadedPath)) ?? "";
+      if (ext === "zip") return (await unzip(file.path)) ?? [];
 
-      return path;
+      return file;
     }),
   );
 
   /** de-dupe, filter out errors, and flatten */
-  const paths = uniq(filterErrors(pathResults).flat());
+  const files = uniqBy(filterErrors(fileResults).flat(), "path");
 
   {
-    const counts = countBy(paths, getExt);
-    for (const [ext, count] of Object.entries(counts))
-      log(`${count} ${ext} files`, "secondary");
+    const counts = countBy(files, ({ path }) => getExt(path));
+    for (const [ext, number] of Object.entries(counts))
+      log(`(${count(number)}) .${ext} files`, "secondary");
   }
 
-  /** return unzipped file paths (for now) */
-  return paths;
+  log(`${count(files)} files`);
+  log(`${bytes(sumBy(files, "size"))}`);
+
+  /** return unzipped files (for now) */
+  return files;
 };
