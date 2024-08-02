@@ -61,13 +61,9 @@ export const getDrc = async () => {
   /** do biggest downloads last */
   resources = sortBy(resources, "size");
 
-  log("Downloading resources");
+  logFiles(resources);
 
-  {
-    const counts = countBy(resources, "ext");
-    for (const [ext, number] of Object.entries(counts))
-      log(`(${count(number)}) .${ext} files`, "secondary");
-  }
+  log("Downloading resources");
 
   /** download assets locally and get paths to local files */
   const fileResults = await queryMulti(
@@ -83,17 +79,22 @@ export const getDrc = async () => {
   );
 
   /** de-dupe, filter out errors, and flatten */
-  const files = uniqBy(filterErrors(fileResults).flat(), "path");
+  const files = uniqBy(filterErrors(fileResults).flat(), "path").map(
+    (file) => ({ ...file, ext: getExt(file.path) }),
+  );
 
-  {
-    const counts = countBy(files, ({ path }) => getExt(path));
-    for (const [ext, number] of Object.entries(counts))
-      log(`(${count(number)}) .${ext} files`, "secondary");
-  }
+  logFiles(files);
 
   log(`${count(files)} files`);
   log(`${bytes(sumBy(files, "size"))}`);
 
   /** return unzipped files (for now) */
   return files;
+};
+
+/** log file types */
+const logFiles = (files: { path: string }[]) => {
+  const counts = countBy(files, "ext");
+  for (const [ext, number] of Object.entries(counts))
+    log(`(${count(number)}) .${ext} files`, "secondary");
 };
