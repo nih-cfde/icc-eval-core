@@ -75,9 +75,11 @@ export const query = async <Result>(
   /** progress bar */
   const bar = progress(1);
 
-  /** try to run async func */
   try {
+    /** run promise */
     result = await promise((progress) => bar(0, progress));
+
+    /** don't let empty be successful result */
     if (isEmpty(result)) throw Error("No results");
   } catch (error) {
     throw log(error, "error");
@@ -116,10 +118,10 @@ export const queryMulti = async <Result>(
   /** progress bar */
   const bar = progress(promises.length);
 
-  /** queue to limit concurrency */
+  /** number of currently running promises */
   let running = 0;
 
-  /** max */
+  /** max concurrent promises allowed */
   const limit = 10;
 
   /** run promises */
@@ -128,17 +130,26 @@ export const queryMulti = async <Result>(
       try {
         /** wait until # of running promises is less than limit */
         while (running >= limit) await sleep(10);
-        /** tally up */
+
+        /** inc running promises */
         running++;
+
         bar(index, "start");
+
+        /** run promise */
         const result = await promise((progress) => bar(index, progress));
+
+        /** don't let empty be successful result */
         if (isEmpty(result)) throw Error("No results");
+
         bar(index, "success");
+
         return result as NonNullable<Result>;
       } catch (error) {
         bar(index, "error");
         throw error;
       } finally {
+        /** dec running promises */
         running--;
       }
     }),

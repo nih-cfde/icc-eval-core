@@ -41,6 +41,7 @@ export const downloadFile = async (
   path: string,
   onProgress?: (percent: number) => void,
 ) => {
+  /** always download to raw */
   path = `${RAW_PATH}/${path}`;
 
   /** create folders if needed */
@@ -58,10 +59,12 @@ export const downloadFile = async (
     cloneFiles: false,
     maxAttempts: 3,
     onProgress: (percentage) => {
+      /** call provided progress callback */
       !cached && onProgress?.(Number(percentage) / 100);
     },
   });
 
+  /** trigger download */
   await downloader.download();
 
   return { path, cached, stats: statSync(path) };
@@ -94,12 +97,20 @@ export const loadFile = <Data>(
 /** extract zip file contents */
 export const unzip = async (filename: string) => {
   const { dir, name } = parse(filename);
+  /** folder to output zip file contents to */
   const output = `${dir}/${name}`;
+  /** unzip command */
   const [cmd, ...args] = ["unzip", filename, "-d", output];
   try {
+    /** if output folder already has contents, return file paths */
+    const existing = await readdir(output, { recursive: true });
+    if (existing.length) return existing;
+    /** clear folder to avoid unzip halting */
     clearFolder(output);
+    /** run unzip */
     await spawn(cmd!, args);
-    return await readdir(output);
+    /** return file paths */
+    return await readdir(output, { recursive: true });
   } catch (error) {
     log(`unzip(${filename}): ${error}`, "warn");
     return null;
