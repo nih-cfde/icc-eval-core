@@ -103,8 +103,7 @@ export const unzip = async (filename: string) => {
   const [cmd, ...args] = ["unzip", filename, "-d", output];
   try {
     /** if output folder already has contents, return file paths */
-    const existing = await readdir(output, { recursive: true });
-    if (existing.length) return existing;
+    if (existsSync(output)) return await readdir(output, { recursive: true });
     /** clear folder to avoid unzip halting */
     clearFolder(output);
     /** run unzip */
@@ -113,6 +112,8 @@ export const unzip = async (filename: string) => {
     return await readdir(output, { recursive: true });
   } catch (error) {
     log(`unzip(${filename}): ${error}`, "warn");
+    /** clear folder to not end up with partial contents */
+    clearFolder(output);
     return null;
   }
 };
