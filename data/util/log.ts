@@ -108,7 +108,7 @@ export const progress = (
     if (length > 1) {
       const successes = state.filter((state) => state === "success");
       const errors = state.filter((state) => state === "error");
-      const unfinished = state.filter(
+      const left = state.filter(
         (state) => state !== "success" && state !== "error",
       );
       const progresses = state.filter((state) => typeof state === "number");
@@ -117,7 +117,7 @@ export const progress = (
           successes.length &&
             format(count(successes) + " successes", "success"),
           errors.length && format(count(errors) + " errors", "error"),
-          unfinished.length && format(count(unfinished) + " running", "start"),
+          left.length && format(count(left) + " left", "start"),
           progresses.map(charBar).join(""),
         ]
           .filter(Boolean)

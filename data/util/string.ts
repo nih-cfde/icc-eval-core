@@ -19,6 +19,9 @@ export const bytes = (bytes: number) => {
 };
 
 /** get url extension, without dot (for paths, use path module) */
+export const getFilename = (url?: string) => url?.split("/").pop() ?? "???";
+
+/** get url extension, without dot (for paths, use path module) */
 export const getExt = (url?: string) =>
   url?.match(/\.([0-9a-z]+)$/i)?.[1] ?? "???";
 

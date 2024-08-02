@@ -11,7 +11,7 @@ export type DCC = {
   created?: string;
 }[];
 
-export type Files = {
+export type File = {
   filetype?: string;
   filename?: string;
   link?: string;

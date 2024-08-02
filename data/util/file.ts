@@ -7,6 +7,7 @@ import {
   statSync,
   writeFileSync,
 } from "fs";
+import { readdir } from "fs/promises";
 import { parse } from "path";
 import {
   parse as csvParse,
@@ -37,10 +38,10 @@ export const clearFolder = (path: string) => {
 /** download file from url (if filename not already present) */
 export const downloadFile = async (
   url: string,
-  filename: string,
+  path: string,
   onProgress?: (percent: number) => void,
 ) => {
-  const path = `${RAW_PATH}/${filename}`;
+  path = `${RAW_PATH}/${path}`;
 
   /** create folders if needed */
   mkdirSync(parse(path).dir, { recursive: true });
@@ -48,7 +49,7 @@ export const downloadFile = async (
   /** will we be using existing/cached file */
   const cached = !NOCACHE && existsSync(path);
 
-  if (cached) log(`Using cache ${midTrunc(filename, 40)}`, "secondary");
+  if (cached) log(`Using cache ${midTrunc(path, 40)}`, "secondary");
 
   const downloader = new Downloader({
     url,
@@ -92,13 +93,15 @@ export const loadFile = <Data>(
 
 /** extract zip file contents */
 export const unzip = async (filename: string) => {
+  const { dir, name } = parse(filename);
+  const output = `${dir}/${name}`;
+  const [cmd, ...args] = ["unzip", filename, "-d", output];
   try {
-    const { dir, name } = parse(filename);
-    const output = `${dir}/${name}`;
-    await spawn("unzip", [filename, "-d", output]);
-    return output;
+    clearFolder(output);
+    await spawn(cmd!, args);
+    return await readdir(output);
   } catch (error) {
-    log(error, "warn");
+    log(`unzip(${filename}): ${error}`, "warn");
     return null;
   }
 };
@@ -108,11 +111,17 @@ type Spawn = Parameters<typeof nodeSpawn>;
 /** https://stackoverflow.com/questions/72862197/how-to-use-promisify-with-the-spawn-function-for-the-child-process */
 const spawn = (cmd: Spawn[0], args: Spawn[1] = [], options: Spawn[2] = {}) =>
   new Promise((resolve, reject) => {
+    setTimeout(
+      () => reject(`Spawn process timeout ${cmd} ${args.join(" ")}`),
+      60 * 1000,
+    );
     const process = nodeSpawn(cmd, args, options);
     const errors: string[] = [];
     const stdout: string[] = [];
-    process.stdout?.on("data", (data) => stdout.push(data.toString()));
-    process.on("error", (error) => errors.push(error.toString()));
+    process.stdout?.on("data", (data) => stdout.push(String(data)));
+    process.on("error", (error) =>
+      errors.push([cmd, ...args, error].join(" ")),
+    );
     process.on("close", () =>
       errors.length ? reject(errors.join(" ")) : resolve(stdout.join("")),
     );
@@ -153,7 +162,7 @@ export const parseJson = <Data>(data: string) => {
     if (isEmpty(parsed)) throw Error("No data");
     return parsed as NonNullable<Data>;
   } catch (error) {
-    log(error, "warn");
+    log(`parseJson(): ${error}`, "warn");
     return null;
   }
 };
@@ -176,7 +185,7 @@ export const parseCsv = <Data>(
     if (isEmpty(data)) throw Error("No data");
     return data as NonNullable<Data>;
   } catch (error) {
-    log(error, "warn");
+    log(`parseCsv(): ${error}`, "warn");
     return null;
   }
 };

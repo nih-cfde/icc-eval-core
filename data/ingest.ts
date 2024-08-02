@@ -8,7 +8,7 @@ import { browser } from "@/util/browser";
 import { saveFile } from "@/util/file";
 import { divider } from "@/util/log";
 
-const { OUTPUT_PATH } = process.env;
+const { RAW_PATH, OUTPUT_PATH } = process.env;
 
 divider("Opportunities");
 
@@ -46,7 +46,7 @@ for (const coreProject of coreProjects)
 
 divider("DRC");
 
-const { dcc, files, code } = await getDrc();
+const drcFiles = await getDrc();
 
 divider("Saving");
 
@@ -57,8 +57,6 @@ saveFile(projects, `${OUTPUT_PATH}/projects.json`);
 saveFile(publications, `${OUTPUT_PATH}/publications.json`);
 saveFile(journals, `${OUTPUT_PATH}/journals.json`);
 saveFile(repos, `${OUTPUT_PATH}/repos.json`);
-saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
-saveFile(files, `${OUTPUT_PATH}/drc-files.json`);
-saveFile(code, `${OUTPUT_PATH}/drc-code.json`);
+saveFile(drcFiles, `${RAW_PATH}/drc-files.json`);
 
 await browser.close();

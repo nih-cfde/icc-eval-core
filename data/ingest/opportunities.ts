@@ -2,7 +2,7 @@ import { uniq, uniqBy } from "lodash-es";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { newPage } from "@/util/browser";
 import { log } from "@/util/log";
-import { filterErrors, queryMulti } from "@/util/request";
+import { filterErrors, query, queryMulti } from "@/util/request";
 import { count } from "@/util/string";
 
 /** page to scrape */
@@ -20,21 +20,20 @@ const numberPattern = /(((RFA|NOT)-RM-\d+-\d+)|OTA-\d+-\d+)/i;
 export const getOpportunities = async () => {
   log(`Scraping ${opportunitiesUrl} for documents`);
 
-  /** list of current and archived opportunities */
-  const page = await newPage();
-  await page.goto(opportunitiesUrl);
-
-  /** full list of opportunity html/pdf docs */
-  let documents = await queryMulti(
-    Array.from(await page.locator(documentsSelector).all()).map(
-      (link) => async () => {
-        const href = await link.getAttribute("href");
-        if (href) return href;
-        else throw Error("No href");
-      },
-    ),
-    "documents.json",
-  );
+  /** get full list of opportunity html/pdf docs */
+  let documents = await query(async () => {
+    const page = await newPage();
+    await page.goto(opportunitiesUrl);
+    return await Promise.all(
+      Array.from(await page.locator(documentsSelector).all()).map(
+        async (link) => {
+          const href = await link.getAttribute("href");
+          if (href) return href;
+          else throw Error("No href");
+        },
+      ),
+    );
+  }, "documents.json");
 
   /** de-dupe */
   documents = uniq(documents);

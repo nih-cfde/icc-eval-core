@@ -1,9 +1,9 @@
-import { countBy, sortBy } from "lodash-es";
-import type { Code, DCC, Files } from "@/api/drc";
+import { countBy, sortBy, uniq, uniqBy } from "lodash-es";
+import type { Code, DCC, File } from "@/api/drc";
 import { downloadFile, loadFile, unzip } from "@/util/file";
 import { log } from "@/util/log";
-import { queryMulti } from "@/util/request";
-import { getExt } from "@/util/string";
+import { filterErrors, queryMulti } from "@/util/request";
+import { getExt, getFilename } from "@/util/string";
 
 /** DRC top-level lists */
 const drcLists = [
@@ -23,82 +23,73 @@ const drcLists = [
 
 /** get info from DRC assets */
 export const getDrc = async () => {
-  log("Downloading DRC lists from...");
+  log("Downloading DRC resource lists from...");
   for (const { url } of drcLists) log(url);
 
   /** download meta lists */
-  const results = await queryMulti(
+  const lists = await queryMulti(
     drcLists.map(({ url, filename }) => async (progress) => {
       const { path } = await downloadFile(url, filename, progress);
-      return await loadFile<DCC | Files | Code>(path, "tsv");
+      return await loadFile<DCC | File | Code>(path, "tsv");
     }),
   );
 
-  const [dcc, files, code] = results as [DCC, Files, Code];
+  const [dcc, file] = lists as [DCC, File, Code];
 
-  /** assets to download */
-  let assets = dcc
+  /** resources to download */
+  let resources = dcc
     .map((dcc) => ({
-      type: "dcc",
       url: dcc.link ?? "",
+      path: `temp/dcc/${getFilename(dcc.link)}`,
       ext: getExt(dcc.link),
+      size: 0,
     }))
     .concat(
-      files.map((file) => ({
-        type: "file",
+      file.map((file) => ({
         url: file.link ?? "",
+        path: `temp/file/${getFilename(file.link)}`,
         ext: getExt(file.link),
+        size: Number(file.size),
       })),
     )
     .filter(({ ext }) => ["zip", "gmt"].includes(ext));
 
+  /** de-dupe */
+  resources = uniqBy(resources, "path");
+
   /** do biggest downloads last */
-  assets = sortBy(assets, "size");
+  resources = sortBy(resources, "size");
 
-  log("Downloading assets");
+  log("Downloading resources");
 
-  const counts = countBy(assets, "ext");
-  for (const [ext, count] of Object.entries(counts))
-    log(`${count} ${ext} files`, "secondary");
+  {
+    const counts = countBy(resources, "ext");
+    for (const [ext, count] of Object.entries(counts))
+      log(`${count} ${ext} files`, "secondary");
+  }
 
-  await queryMulti(
-    assets.map(({ type, url, ext }) => async (progress) => {
-      const filename = url.split("/").pop()!;
-
+  /** download assets locally and get paths to local files */
+  const pathResults = await queryMulti(
+    resources.map(({ url, path, ext }) => async (progress) => {
       /** download file */
-      const { path } = await downloadFile(
-        url,
-        `temp/${type}/${filename}`,
-        progress,
-      );
+      const { path: downloadedPath } = await downloadFile(url, path, progress);
 
-      /** load file */
-      if (ext === "zip") unzip(path);
-      // else loadFile(path);
+      /** unzip and get all file paths */
+      if (ext === "zip") return (await unzip(downloadedPath)) ?? "";
 
-      return true;
+      return path;
     }),
   );
 
-  /** transform data into desired format, with fallbacks */
-  return {
-    dcc: dcc.map((dcc) => ({
-      link: dcc.link,
-      modified: new Date(dcc.lastmodified ?? "").toISOString(),
-      created: new Date(dcc.created ?? "").toISOString(),
-    })),
-    files: files.map((file) => ({
-      type: file.filetype ?? "",
-      filename: file.filename ?? "",
-      link: file.link ?? "",
-      size: Number(file.size) || 0,
-    })),
-    code: code.map((code) => ({
-      type: code.type ?? "",
-      name: code.name ?? "",
-      link: code.link ?? "",
-      description: code.description ?? "",
-      api: code.smartAPIURL ?? "",
-    })),
-  };
+  /** de-dupe, filter out errors, and flatten */
+  const paths = uniq(filterErrors(pathResults).flat());
+
+  {
+    const counts = countBy(paths, getExt);
+    for (const [ext, count] of Object.entries(counts))
+      log(`${count} ${ext} files`, "secondary");
+  }
+
+  /** return unzipped file paths (for now) */
+  return paths;
 };

@@ -1,8 +1,8 @@
 import { countBy, truncate } from "lodash-es";
-import pLimit from "p-limit";
 import stripAnsi from "strip-ansi";
 import { loadFile, saveFile, type Filename } from "@/util/file";
 import { log, progress } from "@/util/log";
+import { sleep } from "@/util/misc";
 import { count } from "@/util/string";
 
 export type Params = Record<string, unknown | unknown[]>;
@@ -116,25 +116,32 @@ export const queryMulti = async <Result>(
   /** progress bar */
   const bar = progress(promises.length);
 
-  /** limit concurrent promises */
-  const limiter = pLimit(10);
+  /** queue to limit concurrency */
+  let running = 0;
+
+  /** max */
+  const limit = 10;
 
   /** run promises */
   const settled = await Promise.allSettled(
-    promises
-      .map((promise, index) => async () => {
-        try {
-          bar(index, "start");
-          const result = await promise((progress) => bar(index, progress));
-          if (isEmpty(result)) throw Error("No results");
-          bar(index, "success");
-          return result as NonNullable<Result>;
-        } catch (error) {
-          bar(index, "error");
-          throw error;
-        }
-      })
-      .map(limiter),
+    promises.map(async (promise, index) => {
+      try {
+        /** wait until # of running promises is less than limit */
+        while (running >= limit) await sleep(10);
+        /** tally up */
+        running++;
+        bar(index, "start");
+        const result = await promise((progress) => bar(index, progress));
+        if (isEmpty(result)) throw Error("No results");
+        bar(index, "success");
+        return result as NonNullable<Result>;
+      } catch (error) {
+        bar(index, "error");
+        throw error;
+      } finally {
+        running--;
+      }
+    }),
   );
 
   const results = settled.map((settled) =>
