@@ -1,5 +1,5 @@
 import { parse } from "path";
-import { countBy, groupBy, sumBy, uniqBy } from "lodash-es";
+import { countBy, groupBy, mapValues, omit, sumBy, uniqBy } from "lodash-es";
 import type { Code, DCC, File } from "@/api/types/drc";
 import { downloadFile, loadFile, unzip } from "@/util/file";
 import { log } from "@/util/log";
@@ -94,12 +94,14 @@ export const getDrc = async () => {
   );
 
   /** de-dupe, filter out errors, and flatten */
-  const files = uniqBy(filterErrors(fileResults).flat(), "path").map((file) => {
-    const parts = getParts(file.path);
-    const dir = parts.dir.split("/").slice(4).join("/");
-    const type = parts.dir.split("/")[3] ?? "";
-    return { ...file, type, dir, name: parts.name, ext: parts.ext };
-  });
+  const files = uniqBy(filterErrors(fileResults).flat(), "path").map(
+    ({ path, size }) => {
+      const parts = getParts(path);
+      const dir = parts.dir.split("/").slice(4).join("/");
+      const type = parts.dir.split("/")[3] ?? "";
+      return { type, dir, name: parts.name, ext: parts.ext, size };
+    },
+  );
 
   logFiles(files);
 
@@ -107,7 +109,9 @@ export const getDrc = async () => {
   log(`${bytes(sumBy(files, "size"))}`);
 
   /** return unzipped files (for now) */
-  return groupBy(files, "type");
+  return mapValues(groupBy(files, "type"), (value) =>
+    value.map((value) => omit(value, "type")),
+  );
 };
 
 /** log file types */
