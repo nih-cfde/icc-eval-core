@@ -1,9 +1,10 @@
-import { countBy, sortBy, sumBy, uniqBy } from "lodash-es";
+import { parse } from "path";
+import { countBy, groupBy, sumBy, uniqBy } from "lodash-es";
 import type { Code, DCC, File } from "@/api/types/drc";
 import { downloadFile, loadFile, unzip } from "@/util/file";
 import { log } from "@/util/log";
 import { filterErrors, queryMulti } from "@/util/request";
-import { bytes, count, getExt, getFilename } from "@/util/string";
+import { bytes, count, urlToPath } from "@/util/string";
 
 /** DRC top-level lists */
 const drcLists = [
@@ -37,29 +38,43 @@ export const getDrc = async () => {
 
   const [dcc, file] = lists as [DCC, File, Code];
 
+  /** split full path into parts */
+  const getParts = (path: string) => {
+    const { dir, name, ext } = parse(urlToPath(path));
+    return { dir, name, ext: ext.replace(/^\./, "") };
+  };
+
   /** resources to download */
   let resources = dcc
+    /** "dcc" type */
     .map((dcc) => ({
       url: dcc.link ?? "",
-      path: `temp/dcc/${getFilename(dcc.link)}`,
-      ext: getExt(dcc.link),
+      type: "dcc",
       size: 0,
     }))
+    /** "file" type */
     .concat(
       file.map((file) => ({
         url: file.link ?? "",
-        path: `temp/file/${getFilename(file.link)}`,
-        ext: getExt(file.link),
+        type: "file",
         size: Number(file.size),
       })),
     )
+    .map(({ type, ...resource }) => {
+      /** split url into parts */
+      const { name, ext } = getParts(resource.url);
+      return {
+        ...resource,
+        /** set path to download to */
+        path: `temp/${type}/${name}.${ext}`,
+        ext,
+      };
+    })
+    /** only download certain file extensions */
     .filter(({ ext }) => ["zip", "gmt"].includes(ext));
 
   /** de-dupe */
   resources = uniqBy(resources, "path");
-
-  /** do biggest downloads last */
-  resources = sortBy(resources, "size");
 
   logFiles(resources);
 
@@ -79,9 +94,12 @@ export const getDrc = async () => {
   );
 
   /** de-dupe, filter out errors, and flatten */
-  const files = uniqBy(filterErrors(fileResults).flat(), "path").map(
-    (file) => ({ ...file, ext: getExt(file.path) }),
-  );
+  const files = uniqBy(filterErrors(fileResults).flat(), "path").map((file) => {
+    const parts = getParts(file.path);
+    const dir = parts.dir.split("/").slice(4).join("/");
+    const type = parts.dir.split("/")[3] ?? "";
+    return { ...file, type, dir, name: parts.name, ext: parts.ext };
+  });
 
   logFiles(files);
 
@@ -89,11 +107,11 @@ export const getDrc = async () => {
   log(`${bytes(sumBy(files, "size"))}`);
 
   /** return unzipped files (for now) */
-  return files;
+  return groupBy(files, "type");
 };
 
 /** log file types */
-const logFiles = (files: { path: string }[]) => {
+const logFiles = (files: { ext: string }[]) => {
   const counts = countBy(files, "ext");
   for (const [ext, number] of Object.entries(counts))
     log(`(${count(number)}) .${ext} files`, "secondary");

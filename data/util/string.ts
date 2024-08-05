@@ -18,12 +18,14 @@ export const bytes = (bytes: number) => {
   return bytes.toFixed(1) + " " + units[0]!;
 };
 
-/** get url extension, without dot (for paths, use path module) */
-export const getFilename = (url?: string) => url?.split("/").pop() ?? "???";
-
-/** get url extension, without dot (for paths, use path module) */
-export const getExt = (url?: string) =>
-  url?.match(/\.([0-9a-z]+)$/i)?.[1] ?? "???";
+/** if url, convert to file path (by removing origin) */
+export const urlToPath = (url: string) => {
+  try {
+    return new URL(url).pathname.replace(/^\//, "");
+  } catch (error) {
+    return url;
+  }
+};
 
 /** truncate string from middle */
 export const midTrunc = (string: string, limit: number) => {

@@ -46,7 +46,7 @@ for (const coreProject of coreProjects)
 
 divider("DRC");
 
-const drcFiles = await getDrc();
+const { dcc, file } = await getDrc();
 
 divider("Saving");
 
@@ -57,6 +57,7 @@ saveFile(projects, `${OUTPUT_PATH}/projects.json`);
 saveFile(publications, `${OUTPUT_PATH}/publications.json`);
 saveFile(journals, `${OUTPUT_PATH}/journals.json`);
 saveFile(repos, `${OUTPUT_PATH}/repos.json`);
-saveFile(drcFiles, `${RAW_PATH}/drc-files.json`);
+saveFile(dcc, `${RAW_PATH}/drc-dcc.json`);
+saveFile(file, `${RAW_PATH}/drc-file.json`);
 
 await browser.close();
