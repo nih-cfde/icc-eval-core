@@ -1,5 +1,5 @@
 import { uniq, uniqBy } from "lodash-es";
-import type { Rank } from "@/api/scimago-ranks";
+import type { Rank } from "@/api/types/scimago-ranks";
 import { newPage } from "@/util/browser";
 import { downloadFile, loadFile } from "@/util/file";
 import { log } from "@/util/log";

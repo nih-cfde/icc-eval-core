@@ -1,7 +1,7 @@
 import { sum, uniq, uniqBy } from "lodash-es";
 import { queryReporter } from "@/api/reporter";
-import type { ProjectsQuery } from "@/api/reporter-projects-query";
-import type { ProjectsResults } from "@/api/reporter-projects-results";
+import type { ProjectsQuery } from "@/api/types/reporter-projects-query";
+import type { ProjectsResults } from "@/api/types/reporter-projects-results";
 import { log } from "@/util/log";
 import { query } from "@/util/request";
 import { count } from "@/util/string";

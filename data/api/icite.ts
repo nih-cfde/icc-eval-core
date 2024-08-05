@@ -1,6 +1,6 @@
 import { chunk, isEmpty } from "lodash-es";
-import type { Results } from "@/api/icite-results";
 import { request } from "@/util/request";
+import type { Results } from "./types/icite-results";
 
 const api = "https://icite.od.nih.gov/api/pubs";
 

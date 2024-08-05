@@ -1,5 +1,3 @@
-This folder contains code to interact with third party APIs and TypeScript definitions for requests/responses (query/results).
-
 # How to generate types
 
 ## RePORTER

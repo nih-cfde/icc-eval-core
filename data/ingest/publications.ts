@@ -1,9 +1,9 @@
 import { uniq, uniqBy } from "lodash-es";
 import { queryIcite } from "@/api/icite";
-import type { Datum } from "@/api/icite-results";
 import { queryReporter } from "@/api/reporter";
-import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
-import type { PublicationsResults } from "@/api/reporter-publications-results.d";
+import type { Datum } from "@/api/types/icite-results";
+import type { PublicationsQuery } from "@/api/types/reporter-publications-query";
+import type { PublicationsResults } from "@/api/types/reporter-publications-results";
 import { log } from "@/util/log";
 import { query } from "@/util/request";
 import { count } from "@/util/string";

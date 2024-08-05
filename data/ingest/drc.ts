@@ -1,5 +1,5 @@
 import { countBy, sortBy, sumBy, uniqBy } from "lodash-es";
-import type { Code, DCC, File } from "@/api/drc";
+import type { Code, DCC, File } from "@/api/types/drc";
 import { downloadFile, loadFile, unzip } from "@/util/file";
 import { log } from "@/util/log";
 import { filterErrors, queryMulti } from "@/util/request";
