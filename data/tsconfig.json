@@ -9,6 +9,7 @@
     "noErrorTruncation": true,
     "noUncheckedIndexedAccess": true,
     "strict": true,
+    "verbatimModuleSyntax": true,
 
     "paths": {
       "@/*": ["./*"]

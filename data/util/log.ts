@@ -1,4 +1,6 @@
 import chalk from "chalk";
+import { clamp } from "lodash-es";
+import { count } from "@/util/string";
 
 /** indent level */
 let indentCount = 1;
@@ -44,21 +46,27 @@ export const format = (
   return color(message);
 };
 
+/** whether most recent log was an in-place or new line */
+let prevInPlace = false;
+
 /** print message to console */
 export const log = (
   message: Message,
   level: keyof typeof levels | "" = "",
-  update = false,
+  inPlace = false,
   manualIndent?: number,
 ): string => {
   message = format(message, level);
   const indent = getIndent(manualIndent);
-  if (update) {
+  if (inPlace) {
     process.stdout.clearLine(0);
     process.stdout.cursorTo(0);
     process.stdout.write(indent + message);
+    prevInPlace = true;
   } else {
+    if (prevInPlace) console.log();
     console.log(indent + message);
+    prevInPlace = false;
   }
   if (level === "error") throw Error(message);
   return message;
@@ -75,23 +83,80 @@ export const divider = (message: Message) => {
 /** print newline. use as minor/lower-level divider. */
 export const newline = () => log("", "", false, 0);
 
-/** progress bar for simple % */
-export const progress = (message: Message, percent: number) => {
-  const chars = 10;
-  const bar = "▓".repeat(chars * percent) + "░".repeat(chars * (1 - percent));
-  log(`${message} ${bar}`);
-};
+/** progress/state of task. log level (success/error/etc) or percent complete. */
+type Progress = Level | number;
 
-/** status bar for start/success/error */
-export const status = (length: number) => {
-  const bar: Level[] = Array(length).fill("start");
-  const set = (index: number, status: (typeof bar)[number]) => {
-    bar[index] = status;
+/** progress bar */
+export const progress = (
+  /** total number of entries to make and track */
+  length: number,
+) => {
+  /** current state of progresses */
+  const state: Progress[] = Array(length).fill("");
+
+  /** print progress */
+  const print = () => {
+    /** single */
+    if (length === 1) {
+      const progress = state[0]!;
+      if (typeof progress === "number")
+        log(longBar(progress), "secondary", true);
+      else log("", progress);
+    }
+
+    /** multi */
+    if (length > 1) {
+      const successes = state.filter((state) => state === "success");
+      const errors = state.filter((state) => state === "error");
+      const left = state.filter(
+        (state) => state !== "success" && state !== "error",
+      );
+      const progresses = state.filter((state) => typeof state === "number");
+      log(
+        [
+          successes.length &&
+            format(count(successes) + " successes", "success"),
+          errors.length && format(count(errors) + " errors", "error"),
+          left.length && format(count(left) + " left", "start"),
+          progresses.map(charBar).join(""),
+        ]
+          .filter(Boolean)
+          .join(" "),
+        "",
+        true,
+      );
+    }
+  };
+
+  /** update progress of particular entry */
+  const set = (index: number, progress: Progress) => {
+    state[index] = progress;
     print();
   };
-  const print = () =>
-    log(bar.map((status) => format("", status)).join(""), "", true);
-  print();
-  const done = newline;
-  return { set, done };
+
+  return set;
+};
+
+/** get single char to indicate progress of many items */
+const charBar = (percent: number) => {
+  if (Number.isNaN(percent)) return spinner();
+  const chars = "▁▂▃▄▅▆▇█";
+  const index = Math.round(percent * (chars.length - 1));
+  return chars.charAt(clamp(index, 0, chars.length));
+};
+
+/** get long bar to indicate progress of single item */
+const longBar = (percent: number) => {
+  if (Number.isNaN(percent)) return spinner();
+  const length = 10;
+  percent = clamp(percent, 0, 1);
+  return "▓".repeat(length * percent) + "░".repeat(length * (1 - percent));
+};
+
+/** indeterminate spinner */
+const spinner = () => {
+  const chars = "◐◓◑◒";
+  const percent = ((2 * performance.now()) / 1000) % 1;
+  const index = Math.round(percent * (chars.length - 1));
+  return chars.charAt(clamp(index, 0, chars.length));
 };
