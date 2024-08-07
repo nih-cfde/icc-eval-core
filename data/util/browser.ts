@@ -22,20 +22,3 @@ export const newPage = async (
     });
   return page;
 };
-
-/** go to public url and download, get local path to file */
-export const download = async (
-  url: string,
-  page?: playwright.Page,
-): Promise<string> => {
-  page ??= await newPage();
-  const { promise, resolve } = Promise.withResolvers<string>();
-  /** https://stackoverflow.com/questions/73652378/download-files-with-goto-in-playwright-python */
-  try {
-    await page.goto(url);
-  } catch (error) {
-    //
-  }
-  page.on("download", (download) => download.path().then(resolve));
-  return promise;
-};

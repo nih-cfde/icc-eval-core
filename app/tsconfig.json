@@ -19,6 +19,7 @@
     /* Linting */
     "strict": true,
     "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
 
     "paths": {
       "@/*": ["./src/*"],

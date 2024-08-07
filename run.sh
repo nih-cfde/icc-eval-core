@@ -1,7 +1,12 @@
-data="npm run --prefix data"
-app="npm run --prefix app"
+data="npm run --silent --prefix data"
+app="npm run --silent --prefix app"
 dataBun="--cwd data"
 appBun="--cwd app"
+
+regex="^.*--[A-Za-z-]+ (.+)$"
+if [[ $* =~ $regex ]]; then
+  extraargs="${BASH_REMATCH[1]}"
+fi
 
 # run individual pipeline step
 if [[ $* == *--ingest* ]]; then
@@ -10,6 +15,10 @@ elif [[ $* == *--print* ]]; then
   $data print
 elif [[ $* == *--app* ]]; then
   $app dev -- --open
+
+# run individual script in data
+elif [[ $* == *--script* ]]; then
+  $data script -- $extraargs
 
 # install just packages
 elif [[ $* == *--install-packages* ]]; then

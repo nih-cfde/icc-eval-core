@@ -1,19 +1,17 @@
 import { sum, uniq, uniqBy } from "lodash-es";
 import { queryReporter } from "@/api/reporter";
-import type { ProjectsQuery } from "@/api/reporter-projects-query";
-import type { ProjectsResults } from "@/api/reporter-projects-results";
+import type { ProjectsQuery } from "@/api/types/reporter-projects-query";
+import type { ProjectsResults } from "@/api/types/reporter-projects-results";
 import { log } from "@/util/log";
 import { query } from "@/util/request";
+import { count } from "@/util/string";
 
 /** get grant projects associated with funding opportunities */
 export const getProjects = async (opportunities: string[]) => {
-  log(
-    `Getting projects for ${opportunities.length.toLocaleString()} opportunities`,
-    "start",
-  );
+  log(`Getting projects for ${count(opportunities)} opportunities`);
 
   /** get projects associated with opportunities */
-  const { result: reporter, error: reporterError } = await query(
+  const reporter = await query(
     () =>
       queryReporter<ProjectsQuery, ProjectsResults>("projects", {
         criteria: { opportunity_numbers: opportunities },
@@ -26,9 +24,6 @@ export const getProjects = async (opportunities: string[]) => {
 
   /** de-dupe */
   projects = uniqBy(projects, (project) => project.project_num);
-
-  if (reporterError) throw log("Error getting projects", "error");
-  log(`Got ${projects.length.toLocaleString()} projects`, "success");
 
   /** transform data into desired format, with fallbacks */
   const transformedProjects = projects.map((project) => ({

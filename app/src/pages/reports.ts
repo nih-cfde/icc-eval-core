@@ -20,6 +20,6 @@ export const pdfs = ref<Record<string, string>>({});
         )[0]?.()
       )?.default ?? {};
   } catch (error) {
-    console.error("Couldn't load PDF list");
+    console.error("Problem loading PDF list");
   }
 })();

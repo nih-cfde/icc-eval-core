@@ -1,5 +1,9 @@
+import { countBy, truncate } from "lodash-es";
+import stripAnsi from "strip-ansi";
 import { loadFile, saveFile, type Filename } from "@/util/file";
-import { log, status } from "@/util/log";
+import { log, progress } from "@/util/log";
+import { sleep } from "@/util/misc";
+import { count } from "@/util/string";
 
 export type Params = Record<string, unknown | unknown[]>;
 
@@ -39,97 +43,151 @@ export const request = async <Response>(
     if (options.parse === "text") return (await response.text()) as Response;
     throw Error();
   } catch (error) {
-    throw Error(`Couldn't parse ${url.pathname} as ${options.parse}`);
+    throw Error(`Problem parsing ${url.pathname} as ${options.parse}`);
   }
 };
 
-/** run query, with caching and extra conveniences */
+/** is empty data result */
+export const isEmpty = (data: unknown) =>
+  data === undefined ||
+  data === null ||
+  (typeof data === "object" && !Object.keys(data).length) ||
+  (Array.isArray(data) && !data.length);
+
+/** run task, with caching, progress logging, and error catching */
 export const query = async <Result>(
   /** async func to run */
-  promise: () => Promise<Result>,
+  promise: (progress: (progress: number) => void) => Promise<Result>,
   /** raw filename */
   filename?: Filename,
-): Promise<{ result?: NonNullable<Result>; error?: Error }> => {
+): Promise<NonNullable<Result>> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const result = loadFile<Result>(`${RAW_PATH}/${filename}`);
-    if (result && !NOCACHE) {
-      log("Cached query result", "secondary");
-      return { result };
+    const { data } = await loadFile<Result>(`${RAW_PATH}/${filename}`);
+    if (data && !NOCACHE) {
+      log(`Using cache, ${count(data)} items`, "secondary");
+      return data;
     }
   }
 
   let result: Result;
 
-  /** try to run async func */
+  /** progress bar */
+  const bar = progress(1);
+
   try {
-    result = await promise();
-    if (
-      result === undefined ||
-      result === null ||
-      (typeof result === "object" && !Object.keys(result).length) ||
-      (Array.isArray(result) && !result.length)
-    )
-      throw Error("No results");
+    /** run promise */
+    result = await promise((progress) => bar(0, progress));
+
+    /** don't let empty be successful result */
+    if (isEmpty(result)) throw Error("No results");
   } catch (error) {
-    return { error: error as Error };
+    throw log(error, "error");
   }
 
-  /** save raw data */
-  if (filename && result) saveFile(result, `${RAW_PATH}/${filename}`);
+  log(`Success, ${count(result)} items`, "success");
 
-  return { result };
+  /** save raw data */
+  if (filename) saveFile(result, `${RAW_PATH}/${filename}`);
+
+  return result as NonNullable<Result>;
 };
 
-/** run multiple queries in parallel, with caching and extra conveniences */
+/**
+ * run multiple tasks in parallel, with caching, max concurrency, progress
+ * logging, error catching, and formatting
+ */
 export const queryMulti = async <Result>(
   /** async funcs to run */
-  promises: (() => Promise<Result>)[],
+  promises: ((
+    /** func to call to update progress of promise */
+    progress: (progress: number) => void,
+  ) => Promise<Result>)[],
   /** raw (cache) filename */
   filename?: Filename,
-): Promise<{
-  results: Result[];
-  errors: (Error & { index: number })[];
-}> => {
+): Promise<(NonNullable<Result> | Error)[]> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const results = loadFile<Result[]>(`${RAW_PATH}/${filename}`);
-    if (results && !NOCACHE) {
-      log("Cached query result", "secondary");
-      return { results, errors: [] };
+    const { data } = await loadFile<NonNullable<Result>[]>(
+      `${RAW_PATH}/${filename}`,
+    );
+    if (data && !NOCACHE) {
+      log(`Using cache, ${count(data)} items`, "secondary");
+      return data;
     }
   }
 
-  /** status bar */
-  const bar = status(promises.length);
+  /** progress bar */
+  const bar = progress(promises.length);
+
+  /** number of currently running promises */
+  let running = 0;
+
+  /** max concurrent promises allowed */
+  const limit = 10;
 
   /** run promises */
   const settled = await Promise.allSettled(
     promises.map(async (promise, index) => {
       try {
-        const result = await promise();
-        bar.set(index, "success");
-        return result;
+        /** wait until # of running promises is less than limit */
+        while (running >= limit) await sleep(10);
+
+        /** inc running promises */
+        running++;
+
+        bar(index, "start");
+
+        /** run promise */
+        const result = await promise((progress) => bar(index, progress));
+
+        /** don't let empty be successful result */
+        if (isEmpty(result)) throw Error("No results");
+
+        bar(index, "success");
+
+        return result as NonNullable<Result>;
       } catch (error) {
-        bar.set(index, "error");
+        bar(index, "error");
         throw error;
+      } finally {
+        /** dec running promises */
+        running--;
       }
     }),
   );
 
-  bar.done();
+  const results = settled.map((settled) =>
+    settled.status === "fulfilled" ? settled.value : (settled.reason as Error),
+  );
 
-  /** use flatMap to filter and map at same time with easier type safety */
-  const results = settled
-    .filter((result) => result.status === "fulfilled")
-    .map((result) => result.value);
+  /** filter for successes */
+  const successes = settled
+    .filter((settled) => settled.status === "fulfilled")
+    .map((success) => success.value);
+  /** filter for errors */
   const errors = settled
-    .map((result, index) => ({ ...result, index }))
-    .filter((result) => result.status === "rejected")
-    .map(({ reason, index }) => ({ ...(reason as Error), index }));
+    .filter((settled) => settled.status === "rejected")
+    .map((error) => error.reason as Error);
 
-  /** save raw data (unless no successful results) */
-  if (filename && results.length) saveFile(results, `${RAW_PATH}/${filename}`);
+  /** logging */
+  const messages = countBy(
+    errors.map((error) =>
+      truncate(error.message.replaceAll("\n", " "), { length: 80 }),
+    ),
+  );
+  for (const [message, number] of Object.entries(messages))
+    log(`(${count(number)}): ${stripAnsi(message)}`, "warn");
+  if (!successes.length) throw log("No successes", "error");
 
-  return { results, errors };
+  /** save raw data */
+  if (filename) saveFile(filterErrors(results), `${RAW_PATH}/${filename}`);
+
+  return results;
 };
+
+/** filter out errors */
+export const filterErrors = <Result>(results: (Result | Error)[]) =>
+  results.filter(
+    (item): item is Exclude<typeof item, Error> => !(item instanceof Error),
+  );

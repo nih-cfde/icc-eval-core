@@ -2,7 +2,8 @@ import { uniq, uniqBy } from "lodash-es";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { newPage } from "@/util/browser";
 import { log } from "@/util/log";
-import { queryMulti } from "@/util/request";
+import { filterErrors, query, queryMulti } from "@/util/request";
+import { count } from "@/util/string";
 
 /** page to scrape */
 const opportunitiesUrl =
@@ -17,36 +18,25 @@ const numberPattern = /(((RFA|NOT)-RM-\d+-\d+)|OTA-\d+-\d+)/i;
 
 /** get common fund funding opportunities, past and present */
 export const getOpportunities = async () => {
-  log(`Scraping ${opportunitiesUrl}`, "start");
+  log(`Scraping ${opportunitiesUrl} for documents`);
 
-  /** list of current and archived opportunities */
-  const page = await newPage();
-  await page.goto(opportunitiesUrl);
-
-  /** full list of opportunity html/pdf docs */
-  let { results: documents, errors: documentErrors } = await queryMulti(
-    Array.from(await page.locator(documentsSelector).all()).map(
-      (link) => async () => {
-        const href = await link.getAttribute("href");
-        if (href) return href;
-        else throw Error("No href");
-      },
-    ),
-  );
+  /** get full list of opportunity html/pdf docs */
+  let documents = await query(async () => {
+    const page = await newPage();
+    await page.goto(opportunitiesUrl);
+    return await Promise.all(
+      Array.from(await page.locator(documentsSelector).all()).map(
+        async (link) => {
+          const href = await link.getAttribute("href");
+          if (href) return href;
+          else throw Error("No href");
+        },
+      ),
+    );
+  }, "documents.json");
 
   /** de-dupe */
   documents = uniq(documents);
-
-  log(
-    `Got ${documents.length.toLocaleString()} opportunity documents`,
-    "success",
-  );
-  if (documentErrors.length) {
-    log(
-      `Problem getting ${documentErrors.length.toLocaleString()} opportunity documents`,
-      "error",
-    );
-  }
 
   /** get prefix of opportunity number */
   const getPrefix = (id: string) => {
@@ -56,16 +46,21 @@ export const getOpportunities = async () => {
     return "";
   };
 
-  let { results: opportunities, errors: opportunityErrors } = await queryMulti(
-    documents.map((document) => async () => {
+  log(`Parsing ${count(documents)} HTML/PDF documents for opportunities`);
+
+  let opportunities = await queryMulti(
+    filterErrors(documents).map((document) => async (progress) => {
       const page = await newPage();
+      progress(0.25);
 
       /** html document */
       if (document.endsWith(".html")) {
         await page.goto(document);
+        progress(0.5);
 
         /** main opportunity number */
         const id = (await page.locator(".noticenum").innerText()).trim();
+        progress(0.75);
 
         /** opportunity number prefix */
         const prefix = getPrefix(id);
@@ -89,10 +84,12 @@ export const getOpportunities = async () => {
           url: new URL(document, opportunitiesUrl).href,
           verbosity: 0,
         }).promise;
+        progress(0.5);
         const firstPage = await pdf.getPage(1);
         const text = (await firstPage.getTextContent()).items
           .map((item) => ("str" in item ? item.str : ""))
           .join("");
+        progress(0.75);
 
         /** main opportunity number */
         const id = text.match(numberPattern)?.[1] || "";
@@ -116,13 +113,5 @@ export const getOpportunities = async () => {
   /** de-dupe */
   opportunities = uniqBy(opportunities, "id");
 
-  log(`Got ${opportunities.length.toLocaleString()} opportunities`, "success");
-  if (opportunityErrors.length) {
-    log(
-      `Problem getting ${opportunityErrors.length.toLocaleString()} opportunities`,
-      "error",
-    );
-  }
-
-  return opportunities;
+  return filterErrors(opportunities);
 };

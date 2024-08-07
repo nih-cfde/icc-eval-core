@@ -111,7 +111,7 @@ export const fileExists = async (owner: string, name: string, path: string) => {
     if (status === 302) return true;
     if (status === 404) return false;
     throw Error(
-      `Couldn't get contents for repo ${owner}/${name}, status ${status}`,
+      `Problem getting contents for repo ${owner}/${name}, status ${status}`,
     );
   }
 };

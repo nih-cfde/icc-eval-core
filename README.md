@@ -46,6 +46,7 @@ Private repos and other platforms such as GitLab aren't supported yet.
 
 ## Requirements
 
+- Linux or MacOS system
 - [Node](https://nodejs.org/) v22+
 - [Bun](https://bun.sh/) (_for package management only_, as faster/smaller replacement for Yarn)
 
