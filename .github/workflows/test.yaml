@@ -14,14 +14,10 @@ jobs:
       - if: runner.debug == '1'
         uses: mxschmitt/action-tmate@v3
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: "22"
-          cache: yarn
-          cache-dependency-path: |
-            app/yarn.lock
-            data/yarn.lock
+          bun-version: latest
 
       - name: Install packages
         run: ./run.sh --install-packages

@@ -1,9 +1,6 @@
 import { chunk, isEmpty } from "lodash-es";
 import type { Results } from "@/api/icite-results";
-import { loadJson, saveJson } from "@/util/file";
 import { request } from "@/util/request";
-
-const { RAW_PATH } = process.env;
 
 const api = "https://icite.od.nih.gov/api/pubs";
 
@@ -16,13 +13,6 @@ const api = "https://icite.od.nih.gov/api/pubs";
 
 /** run icite query */
 export const queryIcite = async (pmids: number[]) => {
-  /** filename for raw data */
-  const filename = "icite";
-
-  /** if raw data already exists, return that without querying */
-  const raw = await loadJson<Results>(RAW_PATH, filename);
-  if (raw) return raw;
-
   /** break ids into chunks of max allowed size */
   const chunks = chunk(pmids, 1000);
 
@@ -39,9 +29,6 @@ export const queryIcite = async (pmids: number[]) => {
     /** collect this chunk of results */
     results.data = results.data.concat(data);
   }
-
-  /** save raw data */
-  saveJson(results, RAW_PATH, filename);
 
   return results;
 };

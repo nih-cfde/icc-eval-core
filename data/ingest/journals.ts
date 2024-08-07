@@ -1,108 +1,65 @@
-import { existsSync, readFileSync } from "fs";
-import { parse } from "csv-parse/sync";
 import { uniq, uniqBy } from "lodash-es";
-import type { Rank } from "@/api/scimago-journals";
-import { newPage } from "@/util/browser";
+import type { Rank } from "@/api/scimago-ranks";
+import { download, newPage } from "@/util/browser";
+import { loadFile } from "@/util/file";
 import { deindent, indent, log } from "@/util/log";
-import { allSettled } from "@/util/request";
+import { query, queryMulti } from "@/util/request";
 
-const { RAW_PATH } = process.env;
-
-/** ranks url */
-const ranksUrl = "https://www.scimagojr.com/journalrank.php";
-/** raw data download text */
-const downloadText = "Download data";
-/** page to scrape */
-const searchUrl = "https://www.scimagojr.com/journalsearch.php?q=";
-/** selector to get first search result journal name */
-const nameSelector = ".jrnlname";
-
-/** increase timeout for slow scimago site */
-const options = { timeout: 30 * 1000 };
+/** ranks data download url */
+const ranksUrl = "https://www.scimagojr.com/journalrank.php?out=xls";
+/** full journal name search */
+const searchUrl =
+  "https://www.ncbi.nlm.nih.gov/nlmcatalog/?term=JOURNAL%5BTA%5D";
+/** locator for issns */
+const issnSelector = `dt:text("ISSN:") + dd`;
 
 /** get journal info */
 export const getJournals = async (journalIds: string[]) => {
   /** de-dupe */
   journalIds = uniq(journalIds);
 
-  const rankDataPath = `${RAW_PATH}/scimago-journals.csv`;
+  log(`Getting ${journalIds.length.toLocaleString()} journals`, "start");
 
-  /** download raw data */
-  if (!existsSync(rankDataPath)) {
-    try {
-      log(`Downloading from ${ranksUrl}`);
-      const page = await newPage();
-      await page.goto(ranksUrl, options);
-      /** https://playwright.dev/docs/downloads */
-      const downloadPromise = page
-        .waitForEvent("download", options)
-        /** https://github.com/microsoft/playwright/issues/21206 */
-        .catch((error) => log(error, "warn"));
-      await page.getByText(downloadText).click(options);
-      const download = await downloadPromise;
-      await download.saveAs(rankDataPath);
-    } catch (error) {
-      log(error, "warn");
-    }
-  }
+  log(`Downloading from ${ranksUrl}`);
 
-  log(`Parsing CSV`);
+  /** get journal rank data */
+  const { result: ranks = [], error: ranksError } = await query(async () => {
+    const file = await download(ranksUrl);
+    return await loadFile<Rank[]>(file, "csv", {
+      delimiter: ";",
+    });
+  }, "scimago-ranks.csv");
 
-  /** read local rank data file contents */
-  const rankDataContents = (() => {
-    try {
-      return readFileSync(rankDataPath);
-    } catch (error) {
-      error;
-      return "";
-    }
-  })();
+  if (ranksError) throw log("Error getting journal ranks", "error");
+  log(`Got ${ranks.length.toLocaleString()} journal ranks`, "success");
 
-  /** parse raw data */
-  const rankData = parse(rankDataContents, {
-    columns: true,
-    delimiter: ";",
-    skipEmptyLines: true,
-    relaxQuotes: true,
-    cast: (value) => {
-      const asNumber = Number(value.replace(",", "."));
-      if (Number.isNaN(asNumber)) return value;
-      else return asNumber;
-    },
-  }) as Rank[];
-
-  log(`Getting ${journalIds.length.toLocaleString()} journals`);
-
-  /** convert to map for faster lookup */
-  const rankLookup = Object.fromEntries(
-    rankData.map((value) => [value.Title, value]),
-  );
+  log("Getting journal names");
 
   indent();
-  /** run in parallel */
-  let { results: journals, errors: journalErrors } = await allSettled(
-    journalIds,
-    async (journalId) => {
-      /** get full journal name from abbreviated name/id via journal search */
+
+  let { results: journals, errors: journalErrors } = await queryMulti(
+    journalIds.map((id) => async () => {
       const page = await newPage();
-      await page.goto(searchUrl + journalId.replaceAll(" ", "+"), options);
-      const name = await page.locator(nameSelector).first().innerText(options);
-      const rank = rankLookup[name];
-      if (!rank) throw Error("No matching rank");
-      return rank;
-    },
-    (journal) => log(journal, "start"),
-    (_, result) => log(result.Title, "success"),
-    (journal) => log(journal, "warn"),
-    "scimago-journals",
+      await page.goto(searchUrl.replace("JOURNAL", id.replaceAll(" ", "+")));
+      /** get full journal name from abbreviated name/id via journal search */
+      const issns = (await page.locator(issnSelector).innerText())
+        .split("\n")
+        .map((number) => number.replaceAll(/[^0-9]/g, ""))
+        .filter(Boolean);
+      return { id, issns };
+    }),
+    "nlm-journals.json",
   );
   deindent();
 
   /** de-dupe */
-  journals = uniqBy(journals, (journal) => journal.value.Title);
+  journals = uniqBy(journals, "id");
 
   if (journals.length)
-    log(`Got ${journals.length.toLocaleString()} journals`, "success");
+    log(
+      `Got ${journals.length.toLocaleString()} journals`,
+      journals.length ? "success" : "error",
+    );
   if (journalErrors.length)
     log(
       `Problem getting ${journalErrors.length.toLocaleString()} journals`,
@@ -111,17 +68,23 @@ export const getJournals = async (journalIds: string[]) => {
 
   /** transform data into desired format, with fallbacks */
   const transformedJournals = journals
-    .map(({ input, value: journal }) => ({
-      id: input,
-      name: journal.Title,
-      rank: journal.SJR,
-    }))
+    .map(({ id, issns }) => {
+      /** find matching rank by issn */
+      const rank = ranks.find((rank) =>
+        issns.some((issn) => rank.Issn?.includes(issn)),
+      );
+      return {
+        id,
+        name: rank?.Title ?? id,
+        rank: Number(rank?.SJR?.replace(",", ".") ?? 0),
+        issns,
+      };
+    })
     .concat(
-      ...journalErrors.map((value) => ({
-        id: value.input,
-        name: "",
-        rank: 0,
-      })),
+      journalErrors.map((error) => {
+        const id = journalIds[error.index]!;
+        return { id, name: id, rank: 0, issns: [] };
+      }),
     );
 
   return transformedJournals;

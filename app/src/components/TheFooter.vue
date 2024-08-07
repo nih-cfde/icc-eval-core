@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="row">
+    <div class="row print-hide">
       <AppLink
         v-if="pdf"
         :to="`/pdfs/${pdf}.pdf`"
@@ -14,6 +14,11 @@
       <AppLink to="https://github.com/nih-cfde/icc-eval-core">
         Learn more
       </AppLink>
+    </div>
+
+    <div class="row print-show">
+      Generated on
+      {{ new Date().toLocaleString(undefined, { dateStyle: "medium" }) }}
     </div>
 
     <div class="row">
@@ -60,11 +65,6 @@ footer a {
   }
 }
 
-@media print {
-  footer {
-    display: none;
-  }
-}
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -72,5 +72,17 @@ footer a {
   justify-content: center;
   gap: 20px;
   text-align: center;
+}
+
+@media print {
+  .print-hide {
+    display: none;
+  }
+}
+
+@media screen {
+  .print-show {
+    display: none;
+  }
 }
 </style>

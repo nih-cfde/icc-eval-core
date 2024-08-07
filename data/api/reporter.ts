@@ -1,8 +1,5 @@
-import { loadJson, saveJson } from "@/util/file";
 import { request } from "@/util/request";
 import type { Params } from "@/util/request";
-
-const { RAW_PATH } = process.env;
 
 /**
  * https://api.reporter.nih.gov/
@@ -32,13 +29,6 @@ export const queryReporter = async <
   query: Query,
   params?: Params,
 ) => {
-  /** filename for raw data */
-  const filename = `reporter-${endpoint}`;
-
-  /** if raw data already exists, return that without querying */
-  const raw = await loadJson<Results>(RAW_PATH, filename);
-  if (raw) return raw;
-
   /** max allowed page size */
   query.limit = 500;
 
@@ -65,9 +55,6 @@ export const queryReporter = async <
     /** if at end of pages, exit */
     if (offset + query.limit >= (page.meta.total ?? 0)) break;
   }
-
-  /** save raw data */
-  saveJson(results, RAW_PATH, filename);
 
   return results;
 };

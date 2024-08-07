@@ -1,28 +1,89 @@
-import { mkdirSync, rmSync, writeFileSync } from "fs";
-import { readFile } from "fs/promises";
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
+import { parse } from "path";
+import {
+  parse as csvParse,
+  type Options as ParseOptions,
+} from "csv-parse/sync";
+import {
+  stringify,
+  type Input,
+  type Options as StringifyOptions,
+} from "csv-stringify/sync";
+import { log } from "@/util/log";
 
-/** save json data to file */
-export const saveJson = (data: unknown, path: string, filename: string) => {
-  /** don't save if empty data (preserve existing data) */
-  if (Array.isArray(data) && !data.length) return;
-  mkdirSync(path, { recursive: true });
-  writeFileSync(`${path}/${filename}.json`, JSON.stringify(data, null, 2));
-};
+type Extensions = "json" | "csv" | "tsv";
 
-/** load json data from file */
-export const loadJson = async <Data>(path: string, filename: string) => {
-  try {
-    return JSON.parse(
-      await readFile(`${path}/${filename}.json`, "utf-8"),
-    ) as Data;
-  } catch (error) {
-    error;
-    return null;
-  }
-};
+export type Filename = `${string}.${Extensions}`;
 
 /** make fresh folder */
 export const clearFolder = (path: string) => {
   rmSync(path, { force: true, recursive: true });
   mkdirSync(path, { recursive: true });
 };
+
+/** load data from file */
+export const loadFile = <Data>(
+  path: string,
+  format?: Extensions,
+  options?: ParseOptions,
+) => {
+  let contents = "";
+  try {
+    contents = readFileSync(path, "utf-8");
+  } catch (error) {
+    return null;
+  }
+  if (format === "json" || path.endsWith(".json"))
+    return parseJson<Data>(contents);
+  if (format === "csv" || path.endsWith(".csv"))
+    return parseCsv<Data>(contents, options);
+  return null;
+};
+
+/** save data to file */
+export const saveFile = (data: unknown, path: string, format?: Extensions) => {
+  let contents: string | NodeJS.ArrayBufferView = "";
+
+  if (format === "json" || path.endsWith(".json"))
+    contents = stringifyJson(data);
+  if (format === "csv" || path.endsWith(".csv"))
+    contents = stringifyCsv([data].flat());
+
+  try {
+    mkdirSync(parse(path).dir, { recursive: true });
+    writeFileSync(path, contents);
+  } catch (error) {
+    log(`Couldn't save ${path}`, "error");
+  }
+};
+
+/** safe-parse json */
+export const parseJson = <Data>(data: string) => {
+  try {
+    return JSON.parse(data) as Data;
+  } catch (error) {
+    return null;
+  }
+};
+
+/** stringify json */
+export const stringifyJson = (data: unknown) => JSON.stringify(data, null, 2);
+
+/** parse csv/tsv/etc contents */
+export const parseCsv = <Result>(
+  contents: Buffer | string,
+  options?: ParseOptions,
+) =>
+  csvParse(contents, {
+    columns: true,
+    skipEmptyLines: true,
+    relaxQuotes: true,
+    ...options,
+  }) as Result;
+
+/** stringify csv/tsv/etc contents */
+export const stringifyCsv = (contents: Input, options?: StringifyOptions) =>
+  stringify(contents, {
+    header: true,
+    ...options,
+  });

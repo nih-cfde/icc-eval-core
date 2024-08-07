@@ -3,6 +3,7 @@ import { queryReporter } from "@/api/reporter";
 import type { ProjectsQuery } from "@/api/reporter-projects-query";
 import type { ProjectsResults } from "@/api/reporter-projects-results";
 import { log } from "@/util/log";
+import { query } from "@/util/request";
 
 /** get grant projects associated with funding opportunities */
 export const getProjects = async (opportunities: string[]) => {
@@ -11,18 +12,23 @@ export const getProjects = async (opportunities: string[]) => {
     "start",
   );
 
-  let { results: projects } = await queryReporter<
-    ProjectsQuery,
-    ProjectsResults
-  >("projects", { criteria: { opportunity_numbers: opportunities } });
+  /** get projects associated with opportunities */
+  const { result: reporter, error: reporterError } = await query(
+    () =>
+      queryReporter<ProjectsQuery, ProjectsResults>("projects", {
+        criteria: { opportunity_numbers: opportunities },
+      }),
+    "reporter-projects.json",
+  );
+
+  /** extract results */
+  let projects = reporter?.results ?? [];
 
   /** de-dupe */
   projects = uniqBy(projects, (project) => project.project_num);
 
-  log(
-    `Found ${projects.length.toLocaleString()} projects`,
-    projects.length ? "success" : "error",
-  );
+  if (reporterError) throw log("Error getting projects", "error");
+  log(`Got ${projects.length.toLocaleString()} projects`, "success");
 
   /** transform data into desired format, with fallbacks */
   const transformedProjects = projects.map((project) => ({
@@ -55,6 +61,7 @@ export const getProjects = async (opportunities: string[]) => {
       projects: projects.map((project) => project.id),
       award_amount: sum(projects.map((project) => project.award_amount)),
       publications: 0,
+      repos: 0,
     };
   });
 

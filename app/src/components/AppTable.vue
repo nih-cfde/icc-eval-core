@@ -15,9 +15,8 @@
               class="th"
               :style="{
                 ...cellStyle(header.column.columnDef.meta?.colProp),
-                ...header.column.columnDef.meta?.colProp.style,
               }"
-              v-bind="header.column.columnDef.meta?.colProp.attrs"
+              v-bind="cellAttrs(header.column.columnDef.meta?.colProp)"
               @click="header.column.getToggleSortingHandler()?.($event)"
             >
               <FlexRender
@@ -45,9 +44,10 @@
               class="td"
               :style="{
                 ...cellStyle(cell.column.columnDef.meta?.colProp),
-                ...cell.column.columnDef.meta?.colProp.style,
               }"
-              v-bind="cell.column.columnDef.meta?.colProp.attrs"
+              v-bind="
+                cellAttrs(cell.column.columnDef.meta?.colProp, row.original)
+              "
             >
               <slot
                 v-if="
@@ -85,7 +85,7 @@ export type Cols<Rows extends Cell[] = Cell[]> = {
   /** horizontal alignment */
   align?: "left" | "center" | "right";
   /** cell attributes */
-  attrs?: HTMLAttributes;
+  attrs?: HTMLAttributes | ((row?: Rows[number]) => HTMLAttributes);
   /** cell style */
   style?: CSSProperties;
 }[];
@@ -235,7 +235,15 @@ const cellStyle = (col?: Cols[number]) => ({
     center: "center",
     right: "flex-end",
   }[col?.align ?? "center"],
+  ...col?.style,
 });
+
+/** get cell attrs from col definition */
+const cellAttrs = (col?: Cols[number], row?: Row) => {
+  if (typeof col?.attrs === "object") return col?.attrs;
+  if (typeof col?.attrs === "function") return col?.attrs(row);
+  return {};
+};
 </script>
 
 <style scoped>
@@ -243,7 +251,7 @@ const cellStyle = (col?: Cols[number]) => ({
   width: calc(100vw - 100px);
   max-width: max-content;
   overflow-x: auto;
-  border-radius: var(--rounded);
+  border-radius: var(--rounded) var(--rounded) 0 0;
 }
 
 @media print {

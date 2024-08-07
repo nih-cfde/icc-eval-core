@@ -1,5 +1,7 @@
-data="yarn --cwd ./data/"
-app="yarn --cwd ./app/"
+data="npm run --prefix data"
+app="npm run --prefix app"
+dataBun="--cwd data"
+appBun="--cwd app"
 
 # run individual pipeline step
 if [[ $* == *--ingest* ]]; then
@@ -7,18 +9,18 @@ if [[ $* == *--ingest* ]]; then
 elif [[ $* == *--print* ]]; then
   $data print
 elif [[ $* == *--app* ]]; then
-  $app dev
+  $app dev -- --open
 
 # install just packages
 elif [[ $* == *--install-packages* ]]; then
-  $data install
-  $app install
+  bun install $dataBun
+  bun install $appBun
 
 # install packages and other dependenices
 elif [[ $* == *--install* ]]; then
-  $data install
-  $app install
-  $data --silent install-playwright
+  bun install $dataBun
+  bun install $appBun
+  $data install-playwright -- --silent
 
 # run tests
 elif [[ $* == *--test* ]]; then
@@ -40,6 +42,6 @@ else
   $data ingest
   $data print
   if [[ -z "$CI" ]]; then
-    $app dev
+    $app dev -- --open
   fi
 fi

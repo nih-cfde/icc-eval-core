@@ -54,6 +54,7 @@ main {
 section {
   display: flex;
   flex-direction: column;
+  /* align-items: flex-start; */
   align-items: center;
   padding: 40px max(40px, (100% - var(--content)) / 2);
   gap: 40px;
@@ -153,6 +154,10 @@ code {
   font-family: var(--mono);
 }
 
+dd {
+  margin: 0;
+}
+
 /* images */
 
 svg {
@@ -174,7 +179,6 @@ button {
 @media print {
   table {
     width: 100% !important;
-    /* table-layout: fixed; */
   }
 
   th,
@@ -188,23 +192,22 @@ table {
   overflow-wrap: break-word;
 }
 
-th {
-  font-weight: var(--bold);
+tr {
+  border-bottom: solid 1px var(--off-white);
 }
 
 th {
   background: var(--off-white);
+  font-weight: var(--bold);
 }
 
 th,
 td {
+  max-width: 25vw;
   padding: 0;
-  text-align: left;
 }
 
-tbody tr {
-  border-bottom: solid 1px var(--off-white);
-}
+/* chart layout */
 
 /* chart layout */
 
@@ -242,7 +245,7 @@ tbody tr {
 .mini-table {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 10px;
+  gap: 10px 20px;
 }
 
 .mini-table > :nth-child(odd) {

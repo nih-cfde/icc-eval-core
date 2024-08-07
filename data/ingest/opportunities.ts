@@ -1,8 +1,8 @@
 import { uniq, uniqBy } from "lodash-es";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
 import { newPage } from "@/util/browser";
-import { deindent, indent, log } from "@/util/log";
-import { allSettled } from "@/util/request";
+import { log } from "@/util/log";
+import { queryMulti } from "@/util/request";
 
 /** page to scrape */
 const opportunitiesUrl =
@@ -24,22 +24,29 @@ export const getOpportunities = async () => {
   await page.goto(opportunitiesUrl);
 
   /** full list of opportunity html/pdf docs */
-  let { results: documents } = await allSettled(
-    Array.from(await page.locator(documentsSelector).all()),
-    async (link) => {
-      const href = await link.getAttribute("href");
-      if (href) return href;
-      else throw Error("No href");
-    },
+  let { results: documents, errors: documentErrors } = await queryMulti(
+    Array.from(await page.locator(documentsSelector).all()).map(
+      (link) => async () => {
+        const href = await link.getAttribute("href");
+        if (href) return href;
+        else throw Error("No href");
+      },
+    ),
   );
 
   /** de-dupe */
   documents = uniq(documents);
 
   log(
-    `Found ${documents.length.toLocaleString()} opportunity documents`,
-    documents.length ? "success" : "error",
+    `Got ${documents.length.toLocaleString()} opportunity documents`,
+    "success",
   );
+  if (documentErrors.length) {
+    log(
+      `Problem getting ${documentErrors.length.toLocaleString()} opportunity documents`,
+      "error",
+    );
+  }
 
   /** get prefix of opportunity number */
   const getPrefix = (id: string) => {
@@ -49,11 +56,8 @@ export const getOpportunities = async () => {
     return "";
   };
 
-  indent();
-  /** run in parallel */
-  let { results: opportunities, errors: opportunityErrors } = await allSettled(
-    documents.map((document) => document.value),
-    async (document) => {
+  let { results: opportunities, errors: opportunityErrors } = await queryMulti(
+    documents.map((document) => async () => {
       const page = await newPage();
 
       /** html document */
@@ -81,8 +85,10 @@ export const getOpportunities = async () => {
       /** pdf document */
       if (document.endsWith(".pdf")) {
         /** parse pdf */
-        const pdf = await getDocument(new URL(document, opportunitiesUrl).href)
-          .promise;
+        const pdf = await getDocument({
+          url: new URL(document, opportunitiesUrl).href,
+          verbosity: 0,
+        }).promise;
         const firstPage = await pdf.getPage(1);
         const text = (await firstPage.getTextContent()).items
           .map((item) => ("str" in item ? item.str : ""))
@@ -103,33 +109,20 @@ export const getOpportunities = async () => {
       }
 
       throw Error("Invalid document extension");
-    },
-    (document) => log(document, "start"),
-    (_, result) => log(result.id, "success"),
-    (document) => log(document, "warn"),
+    }),
+    "opportunities.json",
   );
-  deindent();
 
   /** de-dupe */
-  opportunities = uniqBy(opportunities, (item) => item.value.id);
+  opportunities = uniqBy(opportunities, "id");
 
+  log(`Got ${opportunities.length.toLocaleString()} opportunities`, "success");
   if (opportunityErrors.length) {
     log(
       `Problem getting ${opportunityErrors.length.toLocaleString()} opportunities`,
-      "warn",
+      "error",
     );
-    indent();
-    for (const error of opportunityErrors) log(error.value, "warn");
-    deindent();
   }
-  log(
-    `Found ${opportunities.length.toLocaleString()} opportunities`,
-    opportunities.length ? "success" : "error",
-  );
 
-  const transformedOpportunities = opportunities.map(
-    (opportunity) => opportunity.value,
-  );
-
-  return transformedOpportunities;
+  return opportunities;
 };

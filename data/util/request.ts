@@ -1,8 +1,9 @@
-import { loadJson, saveJson } from "@/util/file";
+import { loadFile, saveFile, type Filename } from "@/util/file";
+import { log, status } from "@/util/log";
 
 export type Params = Record<string, unknown | unknown[]>;
 
-const { RAW_PATH } = process.env;
+const { RAW_PATH, NOCACHE } = process.env;
 
 /** generic request wrapper */
 export const request = async <Response>(
@@ -38,70 +39,97 @@ export const request = async <Response>(
     if (options.parse === "text") return (await response.text()) as Response;
     throw Error();
   } catch (error) {
-    error;
     throw Error(`Couldn't parse ${url.pathname} as ${options.parse}`);
   }
 };
 
-/** allSettled, with conveniences */
-export const allSettled = async <Input, Result>(
-  /** array of things */
-  input: Input[],
-  /** async func to run on each array item */
-  promise: (input: Input) => Promise<Result>,
-  /** func to run on each promise start */
-  onStart?: (input: Input) => void,
-  /** func to run on each promise success */
-  onSuccess?: (input: Input, result: Result) => void,
-  /** func to run on each promise error */
-  onError?: (input: Input, error: string) => void,
+/** run query, with caching and extra conveniences */
+export const query = async <Result>(
+  /** async func to run */
+  promise: () => Promise<Result>,
   /** raw filename */
-  filename?: string,
-) => {
+  filename?: Filename,
+): Promise<{ result?: NonNullable<Result>; error?: Error }> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const raw = await loadJson<Result[]>(RAW_PATH, filename);
-    if (raw)
-      return {
-        results: raw.map((r, index) => ({ input: input[index]!, value: r })),
-        errors: [],
-      };
+    const result = loadFile<Result>(`${RAW_PATH}/${filename}`);
+    if (result && !NOCACHE) {
+      log("Cached query result", "secondary");
+      return { result };
+    }
   }
 
+  let result: Result;
+
+  /** try to run async func */
+  try {
+    result = await promise();
+    if (
+      result === undefined ||
+      result === null ||
+      (typeof result === "object" && !Object.keys(result).length) ||
+      (Array.isArray(result) && !result.length)
+    )
+      throw Error("No results");
+  } catch (error) {
+    return { error: error as Error };
+  }
+
+  /** save raw data */
+  if (filename && result) saveFile(result, `${RAW_PATH}/${filename}`);
+
+  return { result };
+};
+
+/** run multiple queries in parallel, with caching and extra conveniences */
+export const queryMulti = async <Result>(
+  /** async funcs to run */
+  promises: (() => Promise<Result>)[],
+  /** raw (cache) filename */
+  filename?: Filename,
+): Promise<{
+  results: Result[];
+  errors: (Error & { index: number })[];
+}> => {
+  /** if raw data already exists, return that without querying */
+  if (filename) {
+    const results = loadFile<Result[]>(`${RAW_PATH}/${filename}`);
+    if (results && !NOCACHE) {
+      log("Cached query result", "secondary");
+      return { results, errors: [] };
+    }
+  }
+
+  /** status bar */
+  const bar = status(promises.length);
+
+  /** run promises */
   const settled = await Promise.allSettled(
-    input.map(async (input) => {
+    promises.map(async (promise, index) => {
       try {
-        onStart?.(input);
-        const result = await promise(input);
-        onSuccess?.(input, result);
+        const result = await promise();
+        bar.set(index, "success");
         return result;
       } catch (error) {
-        onError?.(input, String(error));
+        bar.set(index, "error");
         throw error;
       }
     }),
   );
 
+  bar.done();
+
   /** use flatMap to filter and map at same time with easier type safety */
+  const results = settled
+    .filter((result) => result.status === "fulfilled")
+    .map((result) => result.value);
+  const errors = settled
+    .map((result, index) => ({ ...result, index }))
+    .filter((result) => result.status === "rejected")
+    .map(({ reason, index }) => ({ ...(reason as Error), index }));
 
-  const results = settled.flatMap((result, index) =>
-    result.status === "fulfilled"
-      ? [{ input: input[index]!, value: result.value }]
-      : [],
-  );
-  const errors = settled.flatMap((result, index) =>
-    result.status === "rejected"
-      ? [{ input: input[index]!, value: result.reason as Error }]
-      : [],
-  );
-
-  /** save raw data */
-  if (filename)
-    saveJson(
-      results.map((result) => result.value),
-      RAW_PATH,
-      filename,
-    );
+  /** save raw data (unless no successful results) */
+  if (filename && results.length) saveFile(results, `${RAW_PATH}/${filename}`);
 
   return { results, errors };
 };

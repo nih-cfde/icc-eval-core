@@ -1,7 +1,7 @@
 import { exec } from "child_process";
 import { newPage } from "@/util/browser";
 import { deindent, indent, log } from "@/util/log";
-import { allSettled } from "@/util/request";
+import { queryMulti } from "@/util/request";
 
 const { PDF_PATH } = process.env;
 
@@ -20,7 +20,11 @@ export const printReports = async (
   log("Running app");
 
   /** run app */
-  const dev = exec("yarn --cwd $APP_PATH dev", () => null);
+  const dev = exec(
+    "npm run --prefix $APP_PATH dev",
+    /** suppress console prints */
+    () => null,
+  );
 
   /** wait for dev server to be ready */
   const host = await new Promise<string>((resolve, reject) => {
@@ -36,13 +40,11 @@ export const printReports = async (
   log(`Printing ${pages.length.toLocaleString()} pages`);
 
   indent();
-  /** run in parallel */
-  const { results, errors } = await allSettled(
-    pages,
-    async ({ route, filename }: (typeof pages)[number]) => {
+
+  const { results, errors } = await queryMulti(
+    pages.map(({ route, filename }: (typeof pages)[number]) => async () => {
       /** go to route that shows report */
       const url = host + route;
-      log(url, "start");
       const page = await newPage();
       await page.goto(url);
 
@@ -64,10 +66,7 @@ export const printReports = async (
         width,
         height,
       });
-    },
-    (page) => log(page.route, "start"),
-    (page) => log(page.route, "success"),
-    (page) => log(page.route, "warn"),
+    }),
   );
   deindent();
 
@@ -77,7 +76,7 @@ export const printReports = async (
   if (results.length)
     log(`Printed ${results.length.toLocaleString()} PDFs`, "success");
   if (errors.length) {
-    for (const error of errors) log(error.value, "warn");
+    for (const error of errors) log(error, "warn");
     log(`Error printing ${errors.length.toLocaleString()} PDFs`, "error");
   }
 };

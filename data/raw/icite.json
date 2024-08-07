@@ -8,17 +8,17 @@
       "authors": "Mengzhen Liu, Yu Jiang, Robbee Wedow, Yue Li, David M Brazel, Fang Chen, Gargi Datta, Jose Davila-Velderrain, Daniel McGuire, Chao Tian, Xiaowei Zhan, Hélène Choquet, Anna R Docherty, Jessica D Faul, Johanna R Foerster, Lars G Fritsche, Maiken Elvestad Gabrielsen, Scott D Gordon, Jeffrey Haessler, Jouke-Jan Hottenga, Hongyan Huang, Seon-Kyeong Jang, Philip R Jansen, Yueh Ling, Reedik Mägi, Nana Matoba, George McMahon, Antonella Mulas, Valeria Orrù, Teemu Palviainen, Anita Pandit, Gunnar W Reginsson, Anne Heidi Skogholt, Jennifer A Smith, Amy E Taylor, Constance Turman, Gonneke Willemsen, Hannah Young, Kendra A Young, Gregory J M Zajac, Wei Zhao, Wei Zhou, Gyda Bjornsdottir, Jason D Boardman, Michael Boehnke, Dorret I Boomsma, Chu Chen, Francesco Cucca, Gareth E Davies, Charles B Eaton, Marissa A Ehringer, Tõnu Esko, Edoardo Fiorillo, Nathan A Gillespie, Daniel F Gudbjartsson, Toomas Haller, Kathleen Mullan Harris, Andrew C Heath, John K Hewitt, Ian B Hickie, John E Hokanson, Christian J Hopfer, David J Hunter, William G Iacono, Eric O Johnson, Yoichiro Kamatani, Sharon L R Kardia, Matthew C Keller, Manolis Kellis, Charles Kooperberg, Peter Kraft, Kenneth S Krauter, Markku Laakso, Penelope A Lind, Anu Loukola, Sharon M Lutz, Pamela A F Madden, Nicholas G Martin, Matt McGue, Matthew B McQueen, Sarah E Medland, Andres Metspalu, Karen L Mohlke, Jonas B Nielsen, Yukinori Okada, Ulrike Peters, Tinca J C Polderman, Danielle Posthuma, Alexander P Reiner, John P Rice, Eric Rimm, Richard J Rose, Valgerdur Runarsdottir, Michael C Stallings, Alena Stančáková, Hreinn Stefansson, Khanh K Thai, Hilary A Tindle, Thorarinn Tyrfingsson, Tamara L Wall, David R Weir, Constance Weisner, John B Whitfield, Bendik Slagsvold Winsvold, Jie Yin, Luisa Zuccolo, Laura J Bierut, Kristian Hveem, James J Lee, Marcus R Munafò, Nancy L Saccone, Cristen J Willer, Marilyn C Cornelis, Sean P David, David A Hinds, Eric Jorgenson, Jaakko Kaprio, Jerry A Stitzel, Kari Stefansson, Thorgeir E Thorgeirsson, Gonçalo Abecasis, Dajiang J Liu, Scott Vrieze",
       "journal": "Nat Genet",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 62,
+      "relative_citation_ratio": 62.16,
       "nih_percentile": 100,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.95,
       "is_clinical": "No",
-      "citation_count": 1040,
-      "citations_per_year": 208,
-      "expected_citations_per_year": 3.3548367040224867,
-      "field_citation_rate": 6.84539832926112,
+      "citation_count": 1054,
+      "citations_per_year": 210.8,
+      "expected_citations_per_year": 3.391275238700365,
+      "field_citation_rate": 6.835530575476614,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": 1,
@@ -184,6 +184,7 @@
         37408137,
         34692687,
         34211176,
+        38985358,
         37427123,
         34779080,
         36386930,
@@ -317,6 +318,7 @@
         34472130,
         35242384,
         31690828,
+        39031522,
         37170112,
         35810454,
         33785739,
@@ -335,6 +337,7 @@
         32602428,
         36143170,
         37001709,
+        39043636,
         34672390,
         35995948,
         31708007,
@@ -375,6 +378,7 @@
         36301540,
         35211151,
         35989212,
+        38947071,
         34823502,
         31845132,
         35383961,
@@ -403,6 +407,8 @@
         33182605,
         37066212,
         38358370,
+        38941394,
+        38946945,
         34944615,
         37056646,
         38504681,
@@ -427,7 +433,6 @@
         36781202,
         38693263,
         37662288,
-        38220043,
         35982161,
         34409073,
         35583096,
@@ -534,6 +539,7 @@
         31204010,
         37231681,
         36608483,
+        38994145,
         33287626,
         33823003,
         36003339,
@@ -589,6 +595,7 @@
         36733810,
         38873562,
         36376304,
+        38951129,
         32812348,
         32012119,
         34873335,
@@ -596,6 +603,7 @@
         36243988,
         37333128,
         37486023,
+        38956929,
         37237487,
         33017751,
         34866211,
@@ -723,6 +731,7 @@
         35186008,
         34426670,
         36734056,
+        38982111,
         34472679,
         37656706,
         33716514,
@@ -732,6 +741,7 @@
         35904282,
         37974509,
         36799223,
+        39005629,
         33686200,
         35900194,
         33619316,
@@ -776,6 +786,7 @@
         35904850,
         36171425,
         37605270,
+        38981971,
         32791514,
         37517263,
         35129650,
@@ -799,6 +810,8 @@
         38365769,
         37702655,
         35943859,
+        38937676,
+        38959188,
         36765104,
         31744183,
         38227004,
@@ -869,6 +882,7 @@
         33604756,
         31796137,
         34803779,
+        39015929,
         31237718,
         33555548,
         36085329,
@@ -1165,7 +1179,7 @@
         26276628
       ],
       "doi": "10.1038/s41588-018-0307-5",
-      "last_modified": "06/30/2024, 09:50:49"
+      "last_modified": "07/28/2024, 10:57:30"
     },
     {
       "pmid": 33748796,
@@ -1174,17 +1188,17 @@
       "authors": "Daniel J B Clarke, Minji Jeon, Daniel J Stein, Nicole Moiseyev, Eryk Kropiwnicki, Charles Dai, Zhuorui Xie, Megan L Wojciechowicz, Skylar Litz, Jason Hom, John Erol Evangelista, Lucas Goldman, Serena Zhang, Christine Yoon, Tahmid Ahamed, Samantha Bhuiyan, Minxuan Cheng, Julie Karam, Kathleen M Jagodnik, Ingrid Shu, Alexander Lachmann, Sam Ayling, Sherry L Jenkins, Avi Ma'ayan",
       "journal": "Patterns (N Y)",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 4.6,
-      "nih_percentile": 92.2,
+      "relative_citation_ratio": 4.5,
+      "nih_percentile": 91.9,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 0,
-      "apt": 0.5,
+      "apt": 0.75,
       "is_clinical": "No",
       "citation_count": 52,
       "citations_per_year": 17.333333333333332,
-      "expected_citations_per_year": 3.7677701012878155,
-      "field_citation_rate": 9.408199003772578,
+      "expected_citations_per_year": 3.8527950333876393,
+      "field_citation_rate": 9.392564110786473,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -1292,7 +1306,7 @@
         27571553
       ],
       "doi": "10.1016/j.patter.2021.100213",
-      "last_modified": "06/30/2024, 10:10:16"
+      "last_modified": "07/28/2024, 11:18:10"
     },
     {
       "pmid": 33787872,
@@ -1301,8 +1315,8 @@
       "authors": "Eryk Kropiwnicki, John E Evangelista, Daniel J Stein, Daniel J B Clarke, Alexander Lachmann, Maxim V Kuleshov, Minji Jeon, Kathleen M Jagodnik, Avi Ma'ayan",
       "journal": "Database (Oxford)",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.54,
-      "nih_percentile": 66,
+      "relative_citation_ratio": 1.5,
+      "nih_percentile": 65.1,
       "human": 0.5,
       "animal": 0,
       "molecular_cellular": 0.5,
@@ -1310,8 +1324,8 @@
       "is_clinical": "No",
       "citation_count": 15,
       "citations_per_year": 5,
-      "expected_citations_per_year": 3.2562117489101676,
-      "field_citation_rate": 8.026168390634755,
+      "expected_citations_per_year": 3.3329062100137965,
+      "field_citation_rate": 8.020966122799349,
       "provisional": "No",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -1401,7 +1415,7 @@
         22422992
       ],
       "doi": "10.1093/database/baab017",
-      "last_modified": "06/30/2024, 10:12:25"
+      "last_modified": "07/28/2024, 11:20:16"
     },
     {
       "pmid": 33808985,
@@ -1410,8 +1424,8 @@
       "authors": "Christian D Powell, Hunter N B Moseley",
       "journal": "Metabolites",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.89,
-      "nih_percentile": 45.9,
+      "relative_citation_ratio": 0.87,
+      "nih_percentile": 45,
       "human": 0,
       "animal": 1,
       "molecular_cellular": 0,
@@ -1419,8 +1433,8 @@
       "is_clinical": "No",
       "citation_count": 7,
       "citations_per_year": 2.3333333333333335,
-      "expected_citations_per_year": 2.623168664023187,
-      "field_citation_rate": 6.315933539258218,
+      "expected_citations_per_year": 2.6850455751132634,
+      "field_citation_rate": 6.311746183122647,
       "provisional": "No",
       "x_coord": 0.8660254037844386,
       "y_coord": -0.5,
@@ -1451,7 +1465,7 @@
         26491418
       ],
       "doi": "10.3390/metabo11030163",
-      "last_modified": "06/30/2024, 10:13:37"
+      "last_modified": "07/28/2024, 11:21:31"
     },
     {
       "pmid": 34705835,
@@ -1460,8 +1474,8 @@
       "authors": "Andreas Bueckle, Kilian Buehling, Patrick C Shih, Katy Börner",
       "journal": "PLoS One",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.51,
-      "nih_percentile": 27.6,
+      "relative_citation_ratio": 0.5,
+      "nih_percentile": 26.9,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
@@ -1469,8 +1483,8 @@
       "is_clinical": "No",
       "citation_count": 5,
       "citations_per_year": 1.6666666666666667,
-      "expected_citations_per_year": 3.27567064974296,
-      "field_citation_rate": 8.078738730897872,
+      "expected_citations_per_year": 3.3530060492962828,
+      "field_citation_rate": 8.073994574035929,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": 1,
@@ -1497,7 +1511,7 @@
         18461742
       ],
       "doi": "10.1371/journal.pone.0258103",
-      "last_modified": "06/30/2024, 10:59:05"
+      "last_modified": "07/28/2024, 12:08:41"
     },
     {
       "pmid": 34721400,
@@ -1506,8 +1520,8 @@
       "authors": "Kavitha Mukund, Priya Nayak, Chethan Ashokkumar, Sohail Rao, Jose Almeda, Monica M Betancourt-Garcia, Rakesh Sindhi, Shankar Subramaniam",
       "journal": "Front Immunol",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.7,
-      "nih_percentile": 69.4,
+      "relative_citation_ratio": 1.66,
+      "nih_percentile": 68.6,
       "human": 0.1,
       "animal": 0,
       "molecular_cellular": 0.9,
@@ -1515,8 +1529,8 @@
       "is_clinical": "No",
       "citation_count": 21,
       "citations_per_year": 7,
-      "expected_citations_per_year": 4.126694841313757,
-      "field_citation_rate": 10.377873286721613,
+      "expected_citations_per_year": 4.225173427892711,
+      "field_citation_rate": 10.374992341034766,
       "provisional": "No",
       "x_coord": -0.7794228634059948,
       "y_coord": -0.35,
@@ -1652,7 +1666,7 @@
         34786557
       ],
       "doi": "10.3389/fimmu.2021.738073",
-      "last_modified": "06/30/2024, 10:59:40"
+      "last_modified": "07/28/2024, 12:09:16"
     },
     {
       "pmid": 34862502,
@@ -1661,17 +1675,17 @@
       "authors": "Daniel Petras, Vanessa V Phelan, Deepa Acharya, Andrew E Allen, Allegra T Aron, Nuno Bandeira, Benjamin P Bowen, Deirdre Belle-Oudry, Simon Boecker, Dale A Cummings, Jessica M Deutsch, Eoin Fahy, Neha Garg, Rachel Gregor, Jo Handelsman, Mirtha Navarro-Hoyos, Alan K Jarmusch, Scott A Jarmusch, Katherine Louie, Katherine N Maloney, Michael T Marty, Michael M Meijler, Itzhak Mizrahi, Rachel L Neve, Trent R Northen, Carlos Molina-Santiago, Morgan Panitchpakdi, Benjamin Pullman, Aaron W Puri, Robin Schmid, Shankar Subramaniam, Monica Thukral, Felipe Vasquez-Castro, Pieter C Dorrestein, Mingxun Wang",
       "journal": "Nat Methods",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 6.18,
-      "nih_percentile": 95.2,
+      "relative_citation_ratio": 5.94,
+      "nih_percentile": 94.8,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 0,
-      "apt": 0.25,
+      "apt": 0.05,
       "is_clinical": "No",
       "citation_count": 28,
       "citations_per_year": 14,
-      "expected_citations_per_year": 2.2649160707176734,
-      "field_citation_rate": 6.561157044564109,
+      "expected_citations_per_year": 2.3571399197178184,
+      "field_citation_rate": 6.556246206755789,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -1719,7 +1733,7 @@
         27575624
       ],
       "doi": "10.1038/s41592-021-01339-5",
-      "last_modified": "06/30/2024, 09:48:27"
+      "last_modified": "07/28/2024, 10:55:00"
     },
     {
       "pmid": 35085427,
@@ -1728,8 +1742,8 @@
       "authors": "Eryk Kropiwnicki, Jessica L Binder, Jeremy J Yang, Jayme Holmes, Alexander Lachmann, Daniel J B Clarke, Timothy Sheils, Keith J Kelleher, Vincent T Metzger, Cristian G Bologa, Tudor I Oprea, Avi Ma'ayan",
       "journal": "Curr Protoc",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.16,
-      "nih_percentile": 55.8,
+      "relative_citation_ratio": 1.12,
+      "nih_percentile": 54.4,
       "human": 0.5,
       "animal": 0,
       "molecular_cellular": 0.5,
@@ -1737,8 +1751,8 @@
       "is_clinical": "No",
       "citation_count": 6,
       "citations_per_year": 3,
-      "expected_citations_per_year": 2.5807681030636385,
-      "field_citation_rate": 7.497478571504021,
+      "expected_citations_per_year": 2.6837583503885862,
+      "field_citation_rate": 7.49296205136085,
       "provisional": "Yes",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -1810,7 +1824,7 @@
         32040955
       ],
       "doi": "10.1002/cpz1.355",
-      "last_modified": "06/30/2024, 09:56:28"
+      "last_modified": "07/28/2024, 11:03:33"
     },
     {
       "pmid": 35143610,
@@ -1819,8 +1833,8 @@
       "authors": "Alexander Lachmann, Zhuorui Xie, Avi Ma'ayan",
       "journal": "Bioinformatics",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.13,
-      "nih_percentile": 54.7,
+      "relative_citation_ratio": 1.09,
+      "nih_percentile": 53.3,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 0,
@@ -1828,8 +1842,8 @@
       "is_clinical": "No",
       "citation_count": 8,
       "citations_per_year": 4,
-      "expected_citations_per_year": 3.5457743897046416,
-      "field_citation_rate": 10.358173033728082,
+      "expected_citations_per_year": 3.680231848621719,
+      "field_citation_rate": 10.350769287183653,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -1852,7 +1866,7 @@
         16199517
       ],
       "doi": "10.1093/bioinformatics/btac076",
-      "last_modified": "06/30/2024, 09:59:23"
+      "last_modified": "07/28/2024, 11:06:29"
     },
     {
       "pmid": 35178743,
@@ -1861,8 +1875,8 @@
       "authors": "Roopali Singh, Feipeng Zhang, Qunhua Li",
       "journal": "Stat Med",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.34,
-      "nih_percentile": 18.2,
+      "relative_citation_ratio": 0.33,
+      "nih_percentile": 17.4,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
@@ -1870,8 +1884,8 @@
       "is_clinical": "No",
       "citation_count": 2,
       "citations_per_year": 1,
-      "expected_citations_per_year": 2.9216456469003727,
-      "field_citation_rate": 8.507986498187668,
+      "expected_citations_per_year": 3.0355662485452894,
+      "field_citation_rate": 8.501919297845108,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -1897,7 +1911,7 @@
         33028816
       ],
       "doi": "10.1002/sim.9334",
-      "last_modified": "06/30/2024, 10:01:38"
+      "last_modified": "07/28/2024, 11:08:26"
     },
     {
       "pmid": 35183110,
@@ -1906,8 +1920,8 @@
       "authors": "Eryk Kropiwnicki, Alexander Lachmann, Daniel J B Clarke, Zhuorui Xie, Kathleen M Jagodnik, Avi Ma'ayan",
       "journal": "BMC Bioinformatics",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.23,
-      "nih_percentile": 58.1,
+      "relative_citation_ratio": 1.19,
+      "nih_percentile": 56.6,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 1,
@@ -1915,8 +1929,8 @@
       "is_clinical": "No",
       "citation_count": 6,
       "citations_per_year": 3,
-      "expected_citations_per_year": 2.4308595721534076,
-      "field_citation_rate": 7.053085089148835,
+      "expected_citations_per_year": 2.529712083117504,
+      "field_citation_rate": 7.05116953200195,
       "provisional": "Yes",
       "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
@@ -1959,7 +1973,7 @@
         29718389
       ],
       "doi": "10.1186/s12859-022-04590-5",
-      "last_modified": "06/30/2024, 10:01:55"
+      "last_modified": "07/28/2024, 11:08:42"
     },
     {
       "pmid": 35188328,
@@ -1968,8 +1982,8 @@
       "authors": "Erica Lay, Mahshid S Azamian, Susan W Denfield, William Dreyer, Joseph A Spinner, Debra Kearney, Lilei Zhang, Kim C Worley, Weimin Bi, Seema R Lalani",
       "journal": "Am J Med Genet A",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.92,
-      "nih_percentile": 47.3,
+      "relative_citation_ratio": 0.89,
+      "nih_percentile": 45.9,
       "human": 0.33,
       "animal": 0.33,
       "molecular_cellular": 0.33,
@@ -1977,8 +1991,8 @@
       "is_clinical": "No",
       "citation_count": 5,
       "citations_per_year": 2.5,
-      "expected_citations_per_year": 2.703059422170756,
-      "field_citation_rate": 7.860002737606113,
+      "expected_citations_per_year": 2.8101126537977157,
+      "field_citation_rate": 7.855336207021012,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 0,
@@ -2009,7 +2023,7 @@
         32898131
       ],
       "doi": "10.1002/ajmg.a.62699",
-      "last_modified": "06/30/2024, 10:02:12"
+      "last_modified": "07/28/2024, 11:08:59"
     },
     {
       "pmid": 35337371,
@@ -2018,8 +2032,8 @@
       "authors": "Jennifer L Fisher, Emma F Jones, Victoria L Flanary, Avery S Williams, Elizabeth J Ramsey, Brittany N Lasseigne",
       "journal": "Biol Sex Differ",
       "is_research_article": "No",
-      "relative_citation_ratio": 1.7,
-      "nih_percentile": 69.5,
+      "relative_citation_ratio": 1.64,
+      "nih_percentile": 68.2,
       "human": 0.5,
       "animal": 0,
       "molecular_cellular": 0.5,
@@ -2027,8 +2041,8 @@
       "is_clinical": "No",
       "citation_count": 9,
       "citations_per_year": 4.5,
-      "expected_citations_per_year": 2.6445023857004433,
-      "field_citation_rate": 7.686414448831376,
+      "expected_citations_per_year": 2.7499268319630086,
+      "field_citation_rate": 7.682728026835444,
       "provisional": "Yes",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -2236,7 +2250,7 @@
         34493869
       ],
       "doi": "10.1186/s13293-022-00420-8",
-      "last_modified": "06/30/2024, 10:10:28"
+      "last_modified": "07/28/2024, 11:18:16"
     },
     {
       "pmid": 35368424,
@@ -2245,8 +2259,8 @@
       "authors": "Daniel J B Clarke, Maxim V Kuleshov, Zhuorui Xie, John E Evangelista, Marilyn R Meyers, Eryk Kropiwnicki, Sherry L Jenkins, Avi Ma'ayan",
       "journal": "Bioinform Adv",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.13,
-      "nih_percentile": 6.1,
+      "relative_citation_ratio": 0.12,
+      "nih_percentile": 5.9,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
@@ -2254,8 +2268,8 @@
       "is_clinical": "No",
       "citation_count": 1,
       "citations_per_year": 0.5,
-      "expected_citations_per_year": 3.957818695892131,
-      "field_citation_rate": 11.579649910323823,
+      "expected_citations_per_year": 4.105094760548076,
+      "field_citation_rate": 11.569242539195644,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -2282,7 +2296,7 @@
         24650281
       ],
       "doi": "10.1093/bioadv/vbac013",
-      "last_modified": "06/30/2024, 10:12:15"
+      "last_modified": "07/28/2024, 11:19:59"
     },
     {
       "pmid": 35440119,
@@ -2291,8 +2305,8 @@
       "authors": "Fan Feng, Yuan Yao, Xue Qing David Wang, Xiaotian Zhang, Jie Liu",
       "journal": "Nat Commun",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.36,
-      "nih_percentile": 61.7,
+      "relative_citation_ratio": 1.31,
+      "nih_percentile": 60.4,
       "human": 0.25,
       "animal": 0,
       "molecular_cellular": 0.75,
@@ -2300,8 +2314,8 @@
       "is_clinical": "No",
       "citation_count": 11,
       "citations_per_year": 5.5,
-      "expected_citations_per_year": 4.040354308933213,
-      "field_citation_rate": 11.824321032607118,
+      "expected_citations_per_year": 4.186352326388032,
+      "field_citation_rate": 11.802282815765489,
       "provisional": "Yes",
       "x_coord": -0.649519052838329,
       "y_coord": -0.125,
@@ -2346,7 +2360,7 @@
         32213324
       ],
       "doi": "10.1038/s41467-022-29695-6",
-      "last_modified": "06/30/2024, 10:15:51"
+      "last_modified": "07/28/2024, 11:24:00"
     },
     {
       "pmid": 35448980,
@@ -2356,7 +2370,7 @@
       "journal": "BMC Cancer",
       "is_research_article": "Yes",
       "relative_citation_ratio": 0.19,
-      "nih_percentile": 9.7,
+      "nih_percentile": 9.3,
       "human": 0.5,
       "animal": 0,
       "molecular_cellular": 0.5,
@@ -2364,8 +2378,8 @@
       "is_clinical": "No",
       "citation_count": 2,
       "citations_per_year": 1,
-      "expected_citations_per_year": 5.137442543776693,
-      "field_citation_rate": 15.076563304429188,
+      "expected_citations_per_year": 5.3271132797747045,
+      "field_citation_rate": 15.073895069089895,
       "provisional": "Yes",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -2444,7 +2458,7 @@
         26414153
       ],
       "doi": "10.1186/s12885-022-09479-3",
-      "last_modified": "06/30/2024, 10:16:21"
+      "last_modified": "07/28/2024, 11:24:28"
     },
     {
       "pmid": 35524556,
@@ -2453,17 +2467,17 @@
       "authors": "John Erol Evangelista, Daniel J B Clarke, Zhuorui Xie, Alexander Lachmann, Minji Jeon, Kerwin Chen, Kathleen M Jagodnik, Sherry L Jenkins, Maxim V Kuleshov, Megan L Wojciechowicz, Stephan C Schürer, Mario Medvedovic, Avi Ma'ayan",
       "journal": "Nucleic Acids Res",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 3.74,
-      "nih_percentile": 89.2,
+      "relative_citation_ratio": 3.79,
+      "nih_percentile": 89.4,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 1,
       "apt": 0.25,
       "is_clinical": "No",
-      "citation_count": 24,
-      "citations_per_year": 12,
-      "expected_citations_per_year": 3.2068955009803344,
-      "field_citation_rate": 9.353589982033506,
+      "citation_count": 25,
+      "citations_per_year": 12.5,
+      "expected_citations_per_year": 3.296321935188025,
+      "field_citation_rate": 9.2497459980944,
       "provisional": "Yes",
       "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
@@ -2490,6 +2504,7 @@
         36100892,
         37846218,
         37953774,
+        38966801,
         37166966,
         37166973,
         38348970
@@ -2567,7 +2582,7 @@
         27128319
       ],
       "doi": "10.1093/nar/gkac328",
-      "last_modified": "06/30/2024, 10:20:28"
+      "last_modified": "07/28/2024, 11:28:10"
     },
     {
       "pmid": 35636728,
@@ -2576,8 +2591,8 @@
       "authors": "Dean E Hammond, Deborah M Simpson, Catarina Franco, Marina Wright Muelas, John Waters, R W Ludwig, Mark C Prescott, Jane L Hurst, Robert J Beynon, Edward Lau",
       "journal": "Mol Cell Proteomics",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 2.94,
-      "nih_percentile": 84.6,
+      "relative_citation_ratio": 2.83,
+      "nih_percentile": 83.8,
       "human": 0,
       "animal": 0.67,
       "molecular_cellular": 0.33,
@@ -2585,8 +2600,8 @@
       "is_clinical": "No",
       "citation_count": 16,
       "citations_per_year": 8,
-      "expected_citations_per_year": 2.7235278506621055,
-      "field_citation_rate": 7.920679979657507,
+      "expected_citations_per_year": 2.8265711168834717,
+      "field_citation_rate": 7.902537778342673,
       "provisional": "Yes",
       "x_coord": 0.28867513459481287,
       "y_coord": -0.5,
@@ -2650,7 +2665,7 @@
         26358907
       ],
       "doi": "10.1016/j.mcpro.2022.100252",
-      "last_modified": "06/30/2024, 10:26:07"
+      "last_modified": "07/28/2024, 11:33:47"
     },
     {
       "pmid": 35672318,
@@ -2659,8 +2674,8 @@
       "authors": "Chachrit Khunsriraksakul, Daniel McGuire, Renan Sauteraud, Fang Chen, Lina Yang, Lida Wang, Jordan Hughey, Scott Eckert, J Dylan Weissenkampen, Ganesh Shenoy, Olivia Marx, Laura Carrel, Bibo Jiang, Dajiang J Liu",
       "journal": "Nat Commun",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.76,
-      "nih_percentile": 70.5,
+      "relative_citation_ratio": 1.69,
+      "nih_percentile": 69.3,
       "human": 0.5,
       "animal": 0,
       "molecular_cellular": 0.5,
@@ -2668,8 +2683,8 @@
       "is_clinical": "No",
       "citation_count": 14,
       "citations_per_year": 7,
-      "expected_citations_per_year": 3.9883771494242546,
-      "field_citation_rate": 11.670238334465353,
+      "expected_citations_per_year": 4.137329046052248,
+      "field_citation_rate": 11.661687922358105,
       "provisional": "Yes",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -2790,7 +2805,7 @@
         29675946
       ],
       "doi": "10.1038/s41467-022-30956-7",
-      "last_modified": "06/30/2024, 10:28:05"
+      "last_modified": "07/28/2024, 11:35:49"
     },
     {
       "pmid": 35758026,
@@ -2808,7 +2823,7 @@
       "is_clinical": "No",
       "citation_count": 0,
       "citations_per_year": 0,
-      "expected_citations_per_year": 1.3786397545182583,
+      "expected_citations_per_year": 1.4427513785270603,
       "field_citation_rate": 3.933852140077821,
       "provisional": "Yes",
       "x_coord": 0.3464101615137754,
@@ -2878,7 +2893,7 @@
         20485680
       ],
       "doi": "10.1242/dmm.049343",
-      "last_modified": "06/30/2024, 10:32:42"
+      "last_modified": "07/28/2024, 11:40:55"
     },
     {
       "pmid": 35821831,
@@ -2887,8 +2902,8 @@
       "authors": "Himangi Srivastava, Marina Pozzoli, Edward Lau",
       "journal": "Front Aging",
       "is_research_article": "No",
-      "relative_citation_ratio": 0.91,
-      "nih_percentile": 46.7,
+      "relative_citation_ratio": 0.87,
+      "nih_percentile": 45.2,
       "human": 0.33,
       "animal": 0,
       "molecular_cellular": 0.67,
@@ -2896,8 +2911,8 @@
       "is_clinical": "No",
       "citation_count": 4,
       "citations_per_year": 2,
-      "expected_citations_per_year": 2.200514515645221,
-      "field_citation_rate": 6.370243084204678,
+      "expected_citations_per_year": 2.292330768549973,
+      "field_citation_rate": 6.370378683451451,
       "provisional": "Yes",
       "x_coord": -0.5773502691896257,
       "y_coord": 0,
@@ -2963,7 +2978,7 @@
         30043445
       ],
       "doi": "10.3389/fragi.2022.884321",
-      "last_modified": "06/30/2024, 10:36:49"
+      "last_modified": "07/28/2024, 11:45:16"
     },
     {
       "pmid": 35833142,
@@ -2972,8 +2987,8 @@
       "authors": "Chachrit Khunsriraksakul, Havell Markus, Nancy J Olsen, Laura Carrel, Bibo Jiang, Dajiang J Liu",
       "journal": "Front Immunol",
       "is_research_article": "No",
-      "relative_citation_ratio": 0.88,
-      "nih_percentile": 45.3,
+      "relative_citation_ratio": 0.84,
+      "nih_percentile": 44,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
@@ -2981,8 +2996,8 @@
       "is_clinical": "No",
       "citation_count": 6,
       "citations_per_year": 3,
-      "expected_citations_per_year": 3.425434673818055,
-      "field_citation_rate": 10.001434260532461,
+      "expected_citations_per_year": 3.5518614055267617,
+      "field_citation_rate": 9.982613002251808,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -3086,7 +3101,7 @@
         30926966
       ],
       "doi": "10.3389/fimmu.2022.889296",
-      "last_modified": "06/30/2024, 10:37:05"
+      "last_modified": "07/28/2024, 11:45:32"
     },
     {
       "pmid": 35876555,
@@ -3095,8 +3110,8 @@
       "authors": "Zhuorui Xie, Eryk Kropiwnicki, Megan L Wojciechowicz, Kathleen M Jagodnik, Ingrid Shu, Allison Bailey, Daniel J B Clarke, Minji Jeon, John Erol Evangelista, Maxim V Kuleshov, Alexander Lachmann, Abhijna A Parigi, Jose M Sanchez, Sherry L Jenkins, Avi Ma'ayan",
       "journal": "Curr Protoc",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.31,
-      "nih_percentile": 16.1,
+      "relative_citation_ratio": 0.36,
+      "nih_percentile": 19.3,
       "human": 0.5,
       "animal": 0,
       "molecular_cellular": 0.5,
@@ -3104,15 +3119,15 @@
       "is_clinical": "No",
       "citation_count": 2,
       "citations_per_year": 1,
-      "expected_citations_per_year": 3.271209732494739,
-      "field_citation_rate": 9.544245077738491,
+      "expected_citations_per_year": 2.7630232621034354,
+      "field_citation_rate": 7.720287553390964,
       "provisional": "Yes",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
       "cited_by_clin": null,
       "cited_by": [
         37953774,
-        38045474
+        38966801
       ],
       "references": [
         17008526,
@@ -3147,7 +3162,7 @@
         32913098
       ],
       "doi": "10.1002/cpz1.487",
-      "last_modified": "06/30/2024, 10:39:32"
+      "last_modified": "07/28/2024, 11:48:04"
     },
     {
       "pmid": 35927245,
@@ -3156,17 +3171,17 @@
       "authors": "H Serhat Tetikol, Deniz Turgut, Kubra Narci, Gungor Budak, Ozem Kalay, Elif Arslan, Sinem Demirkaya-Budak, Alexey Dolgoborodov, Duygu Kabakci-Zorlu, Vladimir Semenyuk, Amit Jain, Brandi N Davis-Dusenbery",
       "journal": "Nat Commun",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.65,
-      "nih_percentile": 34.9,
+      "relative_citation_ratio": 0.62,
+      "nih_percentile": 33.7,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
-      "apt": 0.5,
+      "apt": 0.25,
       "is_clinical": "No",
       "citation_count": 5,
       "citations_per_year": 2.5,
-      "expected_citations_per_year": 3.858727084561542,
-      "field_citation_rate": 11.285899675003614,
+      "expected_citations_per_year": 4.00427094975221,
+      "field_citation_rate": 11.28008781852665,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -3227,7 +3242,7 @@
         19505943
       ],
       "doi": "10.1038/s41467-022-31724-3",
-      "last_modified": "06/30/2024, 10:42:22"
+      "last_modified": "07/28/2024, 11:50:59"
     },
     {
       "pmid": 35927319,
@@ -3236,17 +3251,17 @@
       "authors": "Seon-Kyeong Jang, Luke Evans, Allison Fialkowski, Donna K Arnett, Allison E Ashley-Koch, Kathleen C Barnes, Diane M Becker, Joshua C Bis, John Blangero, Eugene R Bleecker, Meher Preethi Boorgula, Donald W Bowden, Jennifer A Brody, Brian E Cade, Brenda W Campbell Jenkins, April P Carson, Sameer Chavan, L Adrienne Cupples, Brian Custer, Scott M Damrauer, Sean P David, Mariza de Andrade, Carla L Dinardo, Tasha E Fingerlin, Myriam Fornage, Barry I Freedman, Melanie E Garrett, Sina A Gharib, David C Glahn, Jeffrey Haessler, Susan R Heckbert, John E Hokanson, Lifang Hou, Shih-Jen Hwang, Matthew C Hyman, Renae Judy, Anne E Justice, Robert C Kaplan, Sharon L R Kardia, Shannon Kelly, Wonji Kim, Charles Kooperberg, Daniel Levy, Donald M Lloyd-Jones, Ruth J F Loos, Ani W Manichaikul, Mark T Gladwin, Lisa Warsinger Martin, Mehdi Nouraie, Olle Melander, Deborah A Meyers, Courtney G Montgomery, Kari E North, Elizabeth C Oelsner, Nicholette D Palmer, Marinelle Payton, Anna L Peljto, Patricia A Peyser, Michael Preuss, Bruce M Psaty, Dandi Qiao, Daniel J Rader, Nicholas Rafaels, Susan Redline, Robert M Reed, Alexander P Reiner, Stephen S Rich, Jerome I Rotter, David A Schwartz, Aladdin H Shadyab, Edwin K Silverman, Nicholas L Smith, J Gustav Smith, Albert V Smith, Jennifer A Smith, Weihong Tang, Kent D Taylor, Marilyn J Telen, Ramachandran S Vasan, Victor R Gordeuk, Zhe Wang, Kerri L Wiggins, Lisa R Yanek, Ivana V Yang, Kendra A Young, Kristin L Young, Yingze Zhang, Dajiang J Liu, Matthew C Keller, Scott Vrieze",
       "journal": "Nat Hum Behav",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.49,
-      "nih_percentile": 65,
+      "relative_citation_ratio": 1.58,
+      "nih_percentile": 66.9,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.75,
       "is_clinical": "No",
-      "citation_count": 11,
-      "citations_per_year": 5.5,
-      "expected_citations_per_year": 3.6803751891558076,
-      "field_citation_rate": 10.757187803819551,
+      "citation_count": 12,
+      "citations_per_year": 6,
+      "expected_citations_per_year": 3.802298639977153,
+      "field_citation_rate": 10.70084719714089,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -3254,6 +3269,7 @@
       "cited_by": [
         38632388,
         37820404,
+        38978318,
         37034728,
         37452091,
         37853064,
@@ -3341,7 +3357,7 @@
         29986103
       ],
       "doi": "10.1038/s41562-022-01408-5",
-      "last_modified": "06/30/2024, 10:42:23"
+      "last_modified": "07/28/2024, 11:50:59"
     },
     {
       "pmid": 35930447,
@@ -3350,17 +3366,17 @@
       "authors": "Yu Han, Sara A Wennersten, Julianna M Wright, R W Ludwig, Edward Lau, Maggie P Y Lam",
       "journal": "Am J Physiol Heart Circ Physiol",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.79,
-      "nih_percentile": 71.2,
+      "relative_citation_ratio": 2.22,
+      "nih_percentile": 77.7,
       "human": 0,
       "animal": 0.5,
       "molecular_cellular": 0.5,
-      "apt": 0.25,
+      "apt": 0.5,
       "is_clinical": "No",
-      "citation_count": 10,
-      "citations_per_year": 5,
-      "expected_citations_per_year": 2.7880655839243187,
-      "field_citation_rate": 8.111997630851617,
+      "citation_count": 13,
+      "citations_per_year": 6.5,
+      "expected_citations_per_year": 2.925721153122784,
+      "field_citation_rate": 8.186892245871631,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.5,
@@ -3368,14 +3384,17 @@
       "cited_by": [
         37656130,
         37456137,
-        37456138,
-        38132139,
         38406555,
-        38534362,
         38645170,
         37808586,
+        38099847,
+        37456138,
+        38132139,
+        38534362,
+        38038719,
         36083794,
-        37115628
+        37115628,
+        38305752
       ],
       "references": [
         31249421,
@@ -3480,7 +3499,7 @@
         11773073
       ],
       "doi": "10.1152/ajpheart.00244.2022",
-      "last_modified": "06/30/2024, 10:42:34"
+      "last_modified": "07/28/2024, 11:51:10"
     },
     {
       "pmid": 36001024,
@@ -3489,17 +3508,17 @@
       "authors": "Meenakshi Anurag, Eric J Jaehnig, Karsten Krug, Jonathan T Lei, Erik J Bergstrom, Beom-Jun Kim, Tanmayi D Vashist, Anh Minh Tran Huynh, Yongchao Dou, Xuxu Gou, Chen Huang, Zhiao Shi, Bo Wen, Viktoriya Korchina, Richard A Gibbs, Donna M Muzny, Harshavardhan Doddapaneni, Lacey E Dobrolecki, Henry Rodriguez, Ana I Robles, Tara Hiltke, Michael T Lewis, Julie R Nangia, Maryam Nemati Shafaee, Shunqiang Li, Ian S Hagemann, Jeremy Hoog, Bora Lim, C Kent Osborne, D R Mani, Michael A Gillette, Bing Zhang, Gloria V Echeverria, George Miles, Mothaffar F Rimawi, Steven A Carr, Foluso O Ademuyiwa, Shankha Satpathy, Matthew J Ellis",
       "journal": "Cancer Discov",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 2.99,
-      "nih_percentile": 85,
+      "relative_citation_ratio": 3.3,
+      "nih_percentile": 87,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.75,
       "is_clinical": "No",
-      "citation_count": 23,
-      "citations_per_year": 11.5,
-      "expected_citations_per_year": 3.8518335079509165,
-      "field_citation_rate": 11.265464143434617,
+      "citation_count": 26,
+      "citations_per_year": 13,
+      "expected_citations_per_year": 3.9382698649074324,
+      "field_citation_rate": 11.090801923642337,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -3513,11 +3532,13 @@
         37679817,
         38717531,
         37168844,
+        38967737,
         37656187,
         37725793,
         37682172,
         37874652,
         38044421,
+        38966532,
         37196763,
         38919774,
         37808840,
@@ -3527,6 +3548,7 @@
         36980791,
         38485785,
         36403559,
+        38956552,
         37811874
       ],
       "references": [
@@ -3597,7 +3619,7 @@
         25907283
       ],
       "doi": "10.1158/2159-8290.CD-22-0200",
-      "last_modified": "06/30/2024, 10:46:08"
+      "last_modified": "07/28/2024, 11:54:59"
     },
     {
       "pmid": 36055210,
@@ -3607,7 +3629,7 @@
       "journal": "Am J Hum Genet",
       "is_research_article": "No",
       "relative_citation_ratio": 0.13,
-      "nih_percentile": 6.5,
+      "nih_percentile": 6.3,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
@@ -3615,8 +3637,8 @@
       "is_clinical": "No",
       "citation_count": 1,
       "citations_per_year": 0.5,
-      "expected_citations_per_year": 3.7283878960846537,
-      "field_citation_rate": 10.899518156200802,
+      "expected_citations_per_year": 3.870316405020975,
+      "field_citation_rate": 10.895916771446068,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -3668,7 +3690,7 @@
         31308520
       ],
       "doi": "10.1016/j.ajhg.2022.07.008",
-      "last_modified": "06/30/2024, 10:48:36"
+      "last_modified": "07/28/2024, 11:57:38"
     },
     {
       "pmid": 36065636,
@@ -3677,8 +3699,8 @@
       "authors": "Runjun D Kumar, Linyan Meng, Pengfei Liu, Christina Y Miyake, Kim C Worley, Weimin Bi, Seema R Lalani",
       "journal": "Am J Med Genet A",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.61,
-      "nih_percentile": 32.8,
+      "relative_citation_ratio": 0.58,
+      "nih_percentile": 31.5,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
@@ -3686,8 +3708,8 @@
       "is_clinical": "No",
       "citation_count": 3,
       "citations_per_year": 1.5,
-      "expected_citations_per_year": 2.4724008858720676,
-      "field_citation_rate": 7.17623144348206,
+      "expected_citations_per_year": 2.5723044248019824,
+      "field_citation_rate": 7.1733210016319635,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -3719,7 +3741,7 @@
         34211152
       ],
       "doi": "10.1002/ajmg.a.62967",
-      "last_modified": "06/30/2024, 10:49:06"
+      "last_modified": "07/28/2024, 11:58:14"
     },
     {
       "pmid": 36100892,
@@ -3728,8 +3750,8 @@
       "authors": "Minji Jeon, Zhuorui Xie, John E Evangelista, Megan L Wojciechowicz, Daniel J B Clarke, Avi Ma'ayan",
       "journal": "BMC Bioinformatics",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.51,
-      "nih_percentile": 27.6,
+      "relative_citation_ratio": 0.49,
+      "nih_percentile": 26.6,
       "human": 0.5,
       "animal": 0,
       "molecular_cellular": 0.5,
@@ -3737,8 +3759,8 @@
       "is_clinical": "No",
       "citation_count": 3,
       "citations_per_year": 1.5,
-      "expected_citations_per_year": 2.9445069125405836,
-      "field_citation_rate": 8.57575714064019,
+      "expected_citations_per_year": 3.0586604865014433,
+      "field_citation_rate": 8.568151747031097,
       "provisional": "Yes",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -3787,7 +3809,7 @@
         29417473
       ],
       "doi": "10.1186/s12859-022-04895-5",
-      "last_modified": "06/30/2024, 10:50:45"
+      "last_modified": "07/28/2024, 12:00:07"
     },
     {
       "pmid": 36116580,
@@ -3796,23 +3818,24 @@
       "authors": "Raj Kumar, Tamanna Islam, Md Nurunnabi",
       "journal": "J Control Release",
       "is_research_article": "No",
-      "relative_citation_ratio": 4.73,
-      "nih_percentile": 92.5,
+      "relative_citation_ratio": 4.83,
+      "nih_percentile": 92.7,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
-      "apt": 0.75,
+      "apt": 0.5,
       "is_clinical": "No",
-      "citation_count": 19,
-      "citations_per_year": 9.5,
-      "expected_citations_per_year": 2.0071598216342155,
-      "field_citation_rate": 5.797056453133451,
+      "citation_count": 20,
+      "citations_per_year": 10,
+      "expected_citations_per_year": 2.071907827832636,
+      "field_citation_rate": 5.738223110784158,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
       "cited_by_clin": null,
       "cited_by": [
         36529384,
+        39000223,
         37998795,
         37690380,
         37238639,
@@ -4096,7 +4119,7 @@
         31684792
       ],
       "doi": "10.1016/j.jconrel.2022.09.024",
-      "last_modified": "06/30/2024, 10:51:31"
+      "last_modified": "07/28/2024, 12:00:52"
     },
     {
       "pmid": 36125045,
@@ -4105,8 +4128,8 @@
       "authors": "Keith C Cheng, Rebecca D Burdine, Mary E Dickinson, Stephen C Ekker, Alex Y Lin, K C Kent Lloyd, Cathleen M Lutz, Calum A MacRae, John H Morrison, David H O'Connor, John H Postlethwait, Crystal D Rogers, Susan Sanchez, Julie H Simpson, William S Talbot, Douglas C Wallace, Jill M Weimer, Hugo J Bellen",
       "journal": "Dis Model Mech",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.2,
-      "nih_percentile": 56.9,
+      "relative_citation_ratio": 1.15,
+      "nih_percentile": 55.5,
       "human": 0.5,
       "animal": 0.5,
       "molecular_cellular": 0,
@@ -4114,8 +4137,8 @@
       "is_clinical": "No",
       "citation_count": 8,
       "citations_per_year": 4,
-      "expected_citations_per_year": 3.344363995164977,
-      "field_citation_rate": 9.761105835026685,
+      "expected_citations_per_year": 3.472524260456894,
+      "field_citation_rate": 9.755080340668524,
       "provisional": "Yes",
       "x_coord": 0.4330127018922193,
       "y_coord": 0.25,
@@ -4242,7 +4265,7 @@
         19536255
       ],
       "doi": "10.1242/dmm.049600",
-      "last_modified": "06/30/2024, 10:51:55"
+      "last_modified": "07/28/2024, 12:01:16"
     },
     {
       "pmid": 36303018,
@@ -4251,22 +4274,23 @@
       "authors": "Zilin Li, Xihao Li, Hufeng Zhou, Sheila M Gaynor, Margaret Sunitha Selvaraj, Theodore Arapoglou, Corbin Quick, Yaowu Liu, Han Chen, Ryan Sun, Rounak Dey, Donna K Arnett, Paul L Auer, Lawrence F Bielak, Joshua C Bis, Thomas W Blackwell, John Blangero, Eric Boerwinkle, Donald W Bowden, Jennifer A Brody, Brian E Cade, Matthew P Conomos, Adolfo Correa, L Adrienne Cupples, Joanne E Curran, Paul S de Vries, Ravindranath Duggirala, Nora Franceschini, Barry I Freedman, Harald H H Göring, Xiuqing Guo, Rita R Kalyani, Charles Kooperberg, Brian G Kral, Leslie A Lange, Bridget M Lin, Ani Manichaikul, Alisa K Manning, Lisa W Martin, Rasika A Mathias, James B Meigs, Braxton D Mitchell, May E Montasser, Alanna C Morrison, Take Naseri, Jeffrey R O'Connell, Nicholette D Palmer, Patricia A Peyser, Bruce M Psaty, Laura M Raffield, Susan Redline, Alexander P Reiner, Muagututi'a Sefuiva Reupena, Kenneth M Rice, Stephen S Rich, Jennifer A Smith, Kent D Taylor, Margaret A Taub, Ramachandran S Vasan, Daniel E Weeks, James G Wilson, Lisa R Yanek, Wei Zhao, Jerome I Rotter, Cristen J Willer, Pradeep Natarajan, Gina M Peloso, Xihong Lin",
       "journal": "Nat Methods",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 3.95,
-      "nih_percentile": 90.1,
+      "relative_citation_ratio": 4.05,
+      "nih_percentile": 90.4,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.75,
       "is_clinical": "No",
-      "citation_count": 34,
-      "citations_per_year": 17,
-      "expected_citations_per_year": 4.301217110546617,
-      "field_citation_rate": 12.59763078437388,
+      "citation_count": 36,
+      "citations_per_year": 18,
+      "expected_citations_per_year": 4.4452422761717605,
+      "field_citation_rate": 12.544758730163212,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
       "cited_by_clin": null,
       "cited_by": [
+        38773771,
         38548833,
         37207929,
         37961350,
@@ -4285,6 +4309,7 @@
         37831073,
         37774677,
         37809401,
+        38966948,
         37871292,
         38699372,
         37425772,
@@ -4357,7 +4382,7 @@
         21785142
       ],
       "doi": "10.1038/s41592-022-01640-x",
-      "last_modified": "06/30/2024, 10:59:59"
+      "last_modified": "07/28/2024, 12:09:23"
     },
     {
       "pmid": 36350676,
@@ -4366,7 +4391,7 @@
       "authors": "Hufeng Zhou, Theodore Arapoglou, Xihao Li, Zilin Li, Xiuwen Zheng, Jill Moore, Abhijith Asok, Sushant Kumar, Elizabeth E Blue, Steven Buyske, Nancy Cox, Adam Felsenfeld, Mark Gerstein, Eimear Kenny, Bingshan Li, Tara Matise, Anthony Philippakis, Heidi L Rehm, Heidi J Sofia, Grace Snyder, Zhiping Weng, Benjamin Neale, Shamil R Sunyaev, Xihong Lin",
       "journal": "Nucleic Acids Res",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 13.73,
+      "relative_citation_ratio": 12.46,
       "nih_percentile": null,
       "human": 1,
       "animal": 0,
@@ -4375,8 +4400,8 @@
       "is_clinical": "No",
       "citation_count": 36,
       "citations_per_year": 36,
-      "expected_citations_per_year": 2.6211606041584385,
-      "field_citation_rate": 10.567953289267535,
+      "expected_citations_per_year": 2.8883294652083302,
+      "field_citation_rate": 10.55017207329209,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -4479,7 +4504,7 @@
         12824425
       ],
       "doi": "10.1093/nar/gkac966",
-      "last_modified": "06/30/2024, 09:43:50"
+      "last_modified": "07/28/2024, 10:50:18"
     },
     {
       "pmid": 36356032,
@@ -4488,17 +4513,17 @@
       "authors": "Himangi Srivastava, Michael J Lippincott, Jordan Currie, Robert Canfield, Maggie P Y Lam, Edward Lau",
       "journal": "PLoS Comput Biol",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.41,
-      "nih_percentile": 22.3,
+      "relative_citation_ratio": 0.5,
+      "nih_percentile": 27.2,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 1,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 3,
-      "citations_per_year": 1.5,
-      "expected_citations_per_year": 3.619712911758318,
-      "field_citation_rate": 10.577358673772178,
+      "citation_count": 4,
+      "citations_per_year": 2,
+      "expected_citations_per_year": 3.984581336881067,
+      "field_citation_rate": 11.223619564997104,
       "provisional": "Yes",
       "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
@@ -4506,6 +4531,7 @@
       "cited_by": [
         37503057,
         38645170,
+        38940271,
         38511670
       ],
       "references": [
@@ -4570,7 +4596,7 @@
         20498273
       ],
       "doi": "10.1371/journal.pcbi.1010702",
-      "last_modified": "06/30/2024, 11:01:59"
+      "last_modified": "07/28/2024, 12:11:22"
     },
     {
       "pmid": 36409836,
@@ -4579,8 +4605,8 @@
       "authors": "Amanda L Charbonneau, Arthur Brady, Karl Czajkowski, Jain Aluvathingal, Saranya Canchi, Robert Carter, Kyle Chard, Daniel J B Clarke, Jonathan Crabtree, Heather H Creasy, Mike D'Arcy, Victor Felix, Michelle Giglio, Alicia Gingrich, Rayna M Harris, Theresa K Hodges, Olukemi Ifeonu, Minji Jeon, Eryk Kropiwnicki, Marisa C W Lim, R Lee Liming, Jessica Lumian, Anup A Mahurkar, Meisha Mandal, James B Munro, Suvarna Nadendla, Rudyard Richter, Cia Romano, Philippe Rocca-Serra, Michael Schor, Robert E Schuler, Hongsuda Tangmunarunkit, Alex Waldrop, Cris Williams, Karen Word, Susanna-Assunta Sansone, Avi Ma'ayan, Rick Wagner, Ian Foster, Carl Kesselman, C Titus Brown, Owen White",
       "journal": "Gigascience",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 1.01,
-      "nih_percentile": 50.5,
+      "relative_citation_ratio": 0.97,
+      "nih_percentile": 49.1,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 0,
@@ -4588,8 +4614,8 @@
       "is_clinical": "No",
       "citation_count": 8,
       "citations_per_year": 4,
-      "expected_citations_per_year": 3.9751288531706472,
-      "field_citation_rate": 11.630964675577058,
+      "expected_citations_per_year": 4.124133960177942,
+      "field_citation_rate": 11.623845458955158,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -4620,7 +4646,7 @@
         24223762
       ],
       "doi": "10.1093/gigascience/giac105",
-      "last_modified": "06/30/2024, 11:03:54"
+      "last_modified": "07/28/2024, 12:13:19"
     },
     {
       "pmid": 36445310,
@@ -4629,17 +4655,17 @@
       "authors": "Elfa Beaven, Raj Kumar, Himanshu N Bhatt, Stephanie V Esquivel, Md Nurunnabi",
       "journal": "Chem Commun (Camb)",
       "is_research_article": "No",
-      "relative_citation_ratio": 1.67,
-      "nih_percentile": 68.8,
+      "relative_citation_ratio": 1.76,
+      "nih_percentile": 70.6,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.25,
       "is_clinical": "No",
-      "citation_count": 8,
-      "citations_per_year": 4,
-      "expected_citations_per_year": 2.401566475228029,
-      "field_citation_rate": 6.9662477272415755,
+      "citation_count": 9,
+      "citations_per_year": 4.5,
+      "expected_citations_per_year": 2.5569163665168957,
+      "field_citation_rate": 7.129189266678292,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -4647,6 +4673,7 @@
       "cited_by": [
         37686108,
         38065244,
+        38888911,
         36753355,
         38842554,
         38391973,
@@ -4835,7 +4862,7 @@
         10739762
       ],
       "doi": "10.1039/d2cc04825f",
-      "last_modified": "06/30/2024, 11:05:12"
+      "last_modified": "07/28/2024, 12:14:41"
     },
     {
       "pmid": 36456625,
@@ -4844,23 +4871,24 @@
       "authors": "Kendall Higgins, Bret A Moore, Zorana Berberovic, Hibret A Adissu, Mohammad Eskandarian, Ann M Flenniken, Andy Shao, Denise M Imai, Dave Clary, Louise Lanoue, Susan Newbigging, Lauryl M J Nutter, David J Adams, Fatima Bosch, Robert E Braun, Steve D M Brown, Mary E Dickinson, Michael Dobbie, Paul Flicek, Xiang Gao, Sanjeev Galande, Anne Grobler, Jason D Heaney, Yann Herault, Martin Hrabe de Angelis, Hsian-Jean Genie Chin, Fabio Mammano, Chuan Qin, Toshihiko Shiroishi, Radislav Sedlacek, J-K Seong, Ying Xu, K C Kent Lloyd, Colin McKerlie, Ala Moshiri",
       "journal": "Sci Rep",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.32,
-      "nih_percentile": 16.8,
+      "relative_citation_ratio": 0.46,
+      "nih_percentile": 24.9,
       "human": 0,
       "animal": 0.75,
       "molecular_cellular": 0.25,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 2,
-      "citations_per_year": 1,
-      "expected_citations_per_year": 3.1396644592478884,
-      "field_citation_rate": 9.154288203966322,
+      "citation_count": 3,
+      "citations_per_year": 1.5,
+      "expected_citations_per_year": 3.258915020828925,
+      "field_citation_rate": 9.14246592419902,
       "provisional": "Yes",
       "x_coord": 0.43301270189221935,
       "y_coord": -0.5,
       "cited_by_clin": null,
       "cited_by": [
         37581698,
+        38881316,
         37780208
       ],
       "references": [
@@ -4929,7 +4957,7 @@
         19968984
       ],
       "doi": "10.1038/s41598-022-19710-7",
-      "last_modified": "06/30/2024, 11:05:34"
+      "last_modified": "07/28/2024, 12:15:04"
     },
     {
       "pmid": 36477530,
@@ -4938,17 +4966,17 @@
       "authors": "Gretchen R B Saunders, Xingyan Wang, Fang Chen, Seon-Kyeong Jang, Mengzhen Liu, Chen Wang, Shuang Gao, Yu Jiang, Chachrit Khunsriraksakul, Jacqueline M Otto, Clifton Addison, Masato Akiyama, Christine M Albert, Fazil Aliev, Alvaro Alonso, Donna K Arnett, Allison E Ashley-Koch, Aneel A Ashrani, Kathleen C Barnes, R Graham Barr, Traci M Bartz, Diane M Becker, Lawrence F Bielak, Emelia J Benjamin, Joshua C Bis, Gyda Bjornsdottir, John Blangero, Eugene R Bleecker, Jason D Boardman, Eric Boerwinkle, Dorret I Boomsma, Meher Preethi Boorgula, Donald W Bowden, Jennifer A Brody, Brian E Cade, Daniel I Chasman, Sameer Chavan, Yii-Der Ida Chen, Zhengming Chen, Iona Cheng, Michael H Cho, Hélène Choquet, John W Cole, Marilyn C Cornelis, Francesco Cucca, Joanne E Curran, Mariza de Andrade, Danielle M Dick, Anna R Docherty, Ravindranath Duggirala, Charles B Eaton, Marissa A Ehringer, Tõnu Esko, Jessica D Faul, Lilian Fernandes Silva, Edoardo Fiorillo, Myriam Fornage, Barry I Freedman, Maiken E Gabrielsen, Melanie E Garrett, Sina A Gharib, Christian Gieger, Nathan Gillespie, David C Glahn, Scott D Gordon, Charles C Gu, Dongfeng Gu, Daniel F Gudbjartsson, Xiuqing Guo, Jeffrey Haessler, Michael E Hall, Toomas Haller, Kathleen Mullan Harris, Jiang He, Pamela Herd, John K Hewitt, Ian Hickie, Bertha Hidalgo, John E Hokanson, Christian Hopfer, JoukeJan Hottenga, Lifang Hou, Hongyan Huang, Yi-Jen Hung, David J Hunter, Kristian Hveem, Shih-Jen Hwang, Chii-Min Hwu, William Iacono, Marguerite R Irvin, Yon Ho Jee, Eric O Johnson, Yoonjung Y Joo, Eric Jorgenson, Anne E Justice, Yoichiro Kamatani, Robert C Kaplan, Jaakko Kaprio, Sharon L R Kardia, Matthew C Keller, Tanika N Kelly, Charles Kooperberg, Tellervo Korhonen, Peter Kraft, Kenneth Krauter, Johanna Kuusisto, Markku Laakso, Jessica Lasky-Su, Wen-Jane Lee, James J Lee, Daniel Levy, Liming Li, Kevin Li, Yuqing Li, Kuang Lin, Penelope A Lind, Chunyu Liu, Donald M Lloyd-Jones, Sharon M Lutz, Jiantao Ma, Reedik Mägi, Ani Manichaikul, Nicholas G Martin, Ravi Mathur, Nana Matoba, Patrick F McArdle, Matt McGue, Matthew B McQueen, Sarah E Medland, Andres Metspalu, Deborah A Meyers, Iona Y Millwood, Braxton D Mitchell, Karen L Mohlke, Matthew Moll, May E Montasser, Alanna C Morrison, Antonella Mulas, Jonas B Nielsen, Kari E North, Elizabeth C Oelsner, Yukinori Okada, Valeria Orrù, Nicholette D Palmer, Teemu Palviainen, Anita Pandit, S Lani Park, Ulrike Peters, Annette Peters, Patricia A Peyser, Tinca J C Polderman, Nicholas Rafaels, Susan Redline, Robert M Reed, Alex P Reiner, John P Rice, Stephen S Rich, Nicole E Richmond, Carol Roan, Jerome I Rotter, Michael N Rueschman, Valgerdur Runarsdottir, Nancy L Saccone, David A Schwartz, Aladdin H Shadyab, Jingchunzi Shi, Suyash S Shringarpure, Kamil Sicinski, Anne Heidi Skogholt, Jennifer A Smith, Nicholas L Smith, Nona Sotoodehnia, Michael C Stallings, Hreinn Stefansson, Kari Stefansson, Jerry A Stitzel, Xiao Sun, Moin Syed, Ruth Tal-Singer, Amy E Taylor, Kent D Taylor, Marilyn J Telen, Khanh K Thai, Hemant Tiwari, Constance Turman, Thorarinn Tyrfingsson, Tamara L Wall, Robin G Walters, David R Weir, Scott T Weiss, Wendy B White, John B Whitfield, Kerri L Wiggins, Gonneke Willemsen, Cristen J Willer, Bendik S Winsvold, Huichun Xu, Lisa R Yanek, Jie Yin, Kristin L Young, Kendra A Young, Bing Yu, Wei Zhao, Wei Zhou, Sebastian Zöllner, Luisa Zuccolo, Chiara Batini, Andrew W Bergen, Laura J Bierut, Sean P David, Sarah A Gagliano Taliun, Dana B Hancock, Bibo Jiang, Marcus R Munafò, Thorgeir E Thorgeirsson, Dajiang J Liu, Scott Vrieze",
       "journal": "Nature",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 18.63,
-      "nih_percentile": 99.3,
+      "relative_citation_ratio": 19.42,
+      "nih_percentile": 99.4,
       "human": 0.5,
       "animal": 0,
       "molecular_cellular": 0.5,
       "apt": 0.95,
       "is_clinical": "No",
-      "citation_count": 102,
-      "citations_per_year": 51,
-      "expected_citations_per_year": 2.736883469777301,
-      "field_citation_rate": 7.9602717897537945,
+      "citation_count": 111,
+      "citations_per_year": 55.5,
+      "expected_citations_per_year": 2.857987986173485,
+      "field_citation_rate": 7.9926388764080984,
       "provisional": "Yes",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -4962,6 +4990,7 @@
         38130847,
         38396255,
         38000378,
+        38946972,
         38293028,
         38355787,
         37475089,
@@ -4984,10 +5013,12 @@
         37790540,
         38177348,
         38811691,
+        38982111,
         36882010,
         36481943,
         37308787,
         37001985,
+        38990854,
         38380706,
         37333128,
         37459064,
@@ -5005,9 +5036,11 @@
         38816585,
         37761966,
         38335242,
+        38947071,
         38730024,
         37398076,
         37753566,
+        38957811,
         38405959,
         37872160,
         38779854,
@@ -5022,6 +5055,7 @@
         37917228,
         38277453,
         38906991,
+        38981971,
         38562880,
         37057635,
         38238290,
@@ -5056,7 +5090,10 @@
         37922090,
         36781202,
         38794754,
+        38989054,
+        39031522,
         37525606,
+        38977622,
         37156939
       ],
       "references": [
@@ -5119,7 +5156,7 @@
         21968928
       ],
       "doi": "10.1038/s41586-022-05477-4",
-      "last_modified": "06/30/2024, 11:06:11"
+      "last_modified": "07/28/2024, 12:15:44"
     },
     {
       "pmid": 36513738,
@@ -5128,17 +5165,17 @@
       "authors": "Katy Börner, Andreas Bueckle, Bruce W Herr, Leonard E Cross, Ellen M Quardokus, Elizabeth G Record, Yingnan Ju, Jonathan C Silverstein, Kristen M Browne, Sanjay Jain, Clive H Wasserfall, Marda L Jorgensen, Jeffrey M Spraggins, N Heath Patterson, Griffin M Weber",
       "journal": "Commun Biol",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 0.76,
-      "nih_percentile": 40.2,
+      "relative_citation_ratio": 0.93,
+      "nih_percentile": 47.4,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.5,
       "is_clinical": "No",
-      "citation_count": 6,
-      "citations_per_year": 3,
-      "expected_citations_per_year": 3.9535069073015032,
-      "field_citation_rate": 11.566867910958385,
+      "citation_count": 7,
+      "citations_per_year": 3.5,
+      "expected_citations_per_year": 3.778462415002741,
+      "field_citation_rate": 10.632486787830095,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -5147,6 +5184,7 @@
         38834597,
         38826261,
         36711953,
+        39026885,
         37468756,
         36824790,
         37181487
@@ -5195,7 +5233,7 @@
         30083448
       ],
       "doi": "10.1038/s42003-022-03644-x",
-      "last_modified": "06/30/2024, 11:07:06"
+      "last_modified": "07/28/2024, 12:16:41"
     },
     {
       "pmid": 36564505,
@@ -5204,17 +5242,17 @@
       "authors": "Xihao Li, Corbin Quick, Hufeng Zhou, Sheila M Gaynor, Yaowu Liu, Han Chen, Margaret Sunitha Selvaraj, Ryan Sun, Rounak Dey, Donna K Arnett, Lawrence F Bielak, Joshua C Bis, John Blangero, Eric Boerwinkle, Donald W Bowden, Jennifer A Brody, Brian E Cade, Adolfo Correa, L Adrienne Cupples, Joanne E Curran, Paul S de Vries, Ravindranath Duggirala, Barry I Freedman, Harald H H Göring, Xiuqing Guo, Jeffrey Haessler, Rita R Kalyani, Charles Kooperberg, Brian G Kral, Leslie A Lange, Ani Manichaikul, Lisa W Martin, Stephen T McGarvey, Braxton D Mitchell, May E Montasser, Alanna C Morrison, Take Naseri, Jeffrey R O'Connell, Nicholette D Palmer, Patricia A Peyser, Bruce M Psaty, Laura M Raffield, Susan Redline, Alexander P Reiner, Muagututi'a Sefuiva Reupena, Kenneth M Rice, Stephen S Rich, Colleen M Sitlani, Jennifer A Smith, Kent D Taylor, Ramachandran S Vasan, Cristen J Willer, James G Wilson, Lisa R Yanek, Wei Zhao, Jerome I Rotter, Pradeep Natarajan, Gina M Peloso, Zilin Li, Xihong Lin",
       "journal": "Nat Genet",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 5.7,
+      "relative_citation_ratio": 4.68,
       "nih_percentile": null,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.75,
       "is_clinical": "No",
-      "citation_count": 17,
-      "citations_per_year": 17,
-      "expected_citations_per_year": 2.982973575887307,
-      "field_citation_rate": 14.200933884496179,
+      "citation_count": 16,
+      "citations_per_year": 16,
+      "expected_citations_per_year": 3.417739650699893,
+      "field_citation_rate": 14.54052508418562,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -5231,7 +5269,6 @@
         38039147,
         38039339,
         38040712,
-        38625562,
         38509709,
         38746374,
         37634742,
@@ -5289,7 +5326,7 @@
         23891470
       ],
       "doi": "10.1038/s41588-022-01225-6",
-      "last_modified": "06/30/2024, 09:48:32"
+      "last_modified": "07/28/2024, 10:55:04"
     },
     {
       "pmid": 36602970,
@@ -5308,7 +5345,7 @@
       "citation_count": 2,
       "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 9.139522393036504,
+      "field_citation_rate": 9.1373467021588,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -5358,7 +5395,7 @@
         33037820
       ],
       "doi": "10.1371/journal.pcbi.1010749",
-      "last_modified": "06/30/2024, 09:49:53"
+      "last_modified": "07/28/2024, 10:56:29"
     },
     {
       "pmid": 36688502,
@@ -5377,7 +5414,7 @@
       "citation_count": 3,
       "citations_per_year": 3,
       "expected_citations_per_year": null,
-      "field_citation_rate": 6.65938499505687,
+      "field_citation_rate": 6.655131439187339,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -5429,7 +5466,7 @@
         36306373
       ],
       "doi": "10.1021/acs.jproteome.2c00632",
-      "last_modified": "06/30/2024, 09:53:23"
+      "last_modified": "07/28/2024, 11:00:21"
     },
     {
       "pmid": 36702996,
@@ -5438,7 +5475,7 @@
       "authors": "Fang Chen, Xingyan Wang, Seon-Kyeong Jang, Bryan C Quach, J Dylan Weissenkampen, Chachrit Khunsriraksakul, Lina Yang, Renan Sauteraud, Christine M Albert, Nicholette D D Allred, Donna K Arnett, Allison E Ashley-Koch, Kathleen C Barnes, R Graham Barr, Diane M Becker, Lawrence F Bielak, Joshua C Bis, John Blangero, Meher Preethi Boorgula, Daniel I Chasman, Sameer Chavan, Yii-Der I Chen, Lee-Ming Chuang, Adolfo Correa, Joanne E Curran, Sean P David, Lisa de Las Fuentes, Ranjan Deka, Ravindranath Duggirala, Jessica D Faul, Melanie E Garrett, Sina A Gharib, Xiuqing Guo, Michael E Hall, Nicola L Hawley, Jiang He, Brian D Hobbs, John E Hokanson, Chao A Hsiung, Shih-Jen Hwang, Thomas M Hyde, Marguerite R Irvin, Andrew E Jaffe, Eric O Johnson, Robert Kaplan, Sharon L R Kardia, Joel D Kaufman, Tanika N Kelly, Joel E Kleinman, Charles Kooperberg, I-Te Lee, Daniel Levy, Sharon M Lutz, Ani W Manichaikul, Lisa W Martin, Olivia Marx, Stephen T McGarvey, Ryan L Minster, Matthew Moll, Karine A Moussa, Take Naseri, Kari E North, Elizabeth C Oelsner, Juan M Peralta, Patricia A Peyser, Bruce M Psaty, Nicholas Rafaels, Laura M Raffield, Muagututi'a Sefuiva Reupena, Stephen S Rich, Jerome I Rotter, David A Schwartz, Aladdin H Shadyab, Wayne H-H Sheu, Mario Sims, Jennifer A Smith, Xiao Sun, Kent D Taylor, Marilyn J Telen, Harold Watson, Daniel E Weeks, David R Weir, Lisa R Yanek, Kendra A Young, Kristin L Young, Wei Zhao, Dana B Hancock, Bibo Jiang, Scott Vrieze, Dajiang J Liu",
       "journal": "Nat Genet",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 6.83,
+      "relative_citation_ratio": 6.18,
       "nih_percentile": null,
       "human": 0.5,
       "animal": 0,
@@ -5447,8 +5484,8 @@
       "is_clinical": "No",
       "citation_count": 18,
       "citations_per_year": 18,
-      "expected_citations_per_year": 2.636660122388458,
-      "field_citation_rate": 10.723584660624917,
+      "expected_citations_per_year": 2.9104875890125332,
+      "field_citation_rate": 10.717185739558742,
       "provisional": "Yes",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -5520,7 +5557,7 @@
         29926988
       ],
       "doi": "10.1038/s41588-022-01282-x",
-      "last_modified": "06/30/2024, 09:54:13"
+      "last_modified": "07/28/2024, 11:01:13"
     },
     {
       "pmid": 36737727,
@@ -5536,16 +5573,17 @@
       "molecular_cellular": 0,
       "apt": 0.25,
       "is_clinical": "No",
-      "citation_count": 1,
-      "citations_per_year": 1,
+      "citation_count": 2,
+      "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 4.914123442349134,
+      "field_citation_rate": 7.029747336432837,
       "provisional": "No",
       "x_coord": 0.6928203230275509,
       "y_coord": -0.2,
       "cited_by_clin": null,
       "cited_by": [
-        38185673
+        38185673,
+        38881316
       ],
       "references": [
         17576678,
@@ -5616,7 +5654,7 @@
         25428369
       ],
       "doi": "10.1186/s12915-022-01475-0",
-      "last_modified": "06/30/2024, 09:56:07"
+      "last_modified": "07/28/2024, 11:03:08"
     },
     {
       "pmid": 36750564,
@@ -5625,17 +5663,17 @@
       "authors": "Chachrit Khunsriraksakul, Qinmengge Li, Havell Markus, Matthew T Patrick, Renan Sauteraud, Daniel McGuire, Xingyan Wang, Chen Wang, Lida Wang, Siyuan Chen, Ganesh Shenoy, Bingshan Li, Xue Zhong, Nancy J Olsen, Laura Carrel, Lam C Tsoi, Bibo Jiang, Dajiang J Liu",
       "journal": "Nat Commun",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 4.54,
+      "relative_citation_ratio": 4.74,
       "nih_percentile": null,
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.75,
       "is_clinical": "No",
-      "citation_count": 12,
-      "citations_per_year": 12,
-      "expected_citations_per_year": 2.642572143217466,
-      "field_citation_rate": 10.7829475321321,
+      "citation_count": 14,
+      "citations_per_year": 14,
+      "expected_citations_per_year": 2.9557169163368666,
+      "field_citation_rate": 11.058095278920483,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -5650,6 +5688,8 @@
         38616254,
         38637112,
         38724181,
+        38872309,
+        39009839,
         38296975,
         37961722,
         37876023
@@ -5776,7 +5816,7 @@
         24532676
       ],
       "doi": "10.1038/s41467-023-36306-5",
-      "last_modified": "06/30/2024, 09:56:48"
+      "last_modified": "07/28/2024, 11:03:51"
     },
     {
       "pmid": 36753355,
@@ -5795,7 +5835,7 @@
       "citation_count": 2,
       "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 6.279593737026837,
+      "field_citation_rate": 6.267753438754873,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": 1,
@@ -5985,7 +6025,7 @@
         34395388
       ],
       "doi": "10.1021/acsabm.2c00981",
-      "last_modified": "06/30/2024, 09:56:56"
+      "last_modified": "07/28/2024, 11:03:58"
     },
     {
       "pmid": 36802342,
@@ -6001,15 +6041,16 @@
       "molecular_cellular": 0,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 2,
-      "citations_per_year": 2,
+      "citation_count": 3,
+      "citations_per_year": 3,
       "expected_citations_per_year": null,
-      "field_citation_rate": 7.582534165129732,
+      "field_citation_rate": 5.677553571321194,
       "provisional": "No",
       "x_coord": 0.8660254037844386,
       "y_coord": -0.5,
       "cited_by_clin": null,
       "cited_by": [
+        39045422,
         38268040,
         38855547
       ],
@@ -6034,7 +6075,7 @@
         20576463
       ],
       "doi": "10.1242/bio.059698",
-      "last_modified": "06/30/2024, 09:59:28"
+      "last_modified": "07/28/2024, 11:06:31"
     },
     {
       "pmid": 36869839,
@@ -6053,7 +6094,7 @@
       "citation_count": 3,
       "citations_per_year": 3,
       "expected_citations_per_year": null,
-      "field_citation_rate": 8.532672548781548,
+      "field_citation_rate": 8.530537161725388,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.2,
@@ -6210,7 +6251,7 @@
         26363020
       ],
       "doi": "10.1093/database/baad009",
-      "last_modified": "06/30/2024, 10:03:40"
+      "last_modified": "07/28/2024, 11:10:14"
     },
     {
       "pmid": 36870946,
@@ -6226,10 +6267,10 @@
       "molecular_cellular": 0,
       "apt": 0.25,
       "is_clinical": "No",
-      "citation_count": 3,
-      "citations_per_year": 3,
+      "citation_count": 4,
+      "citations_per_year": 4,
       "expected_citations_per_year": null,
-      "field_citation_rate": 7.482312313008216,
+      "field_citation_rate": 9.414013023419098,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -6237,7 +6278,8 @@
       "cited_by": [
         37873272,
         38668602,
-        37999216
+        37999216,
+        38971819
       ],
       "references": [
         26978244,
@@ -6247,7 +6289,7 @@
         10928937
       ],
       "doi": "10.1186/s12859-023-05208-0",
-      "last_modified": "06/30/2024, 10:03:44"
+      "last_modified": "07/28/2024, 11:10:18"
     },
     {
       "pmid": 36874981,
@@ -6266,7 +6308,7 @@
       "citation_count": 3,
       "citations_per_year": 3,
       "expected_citations_per_year": null,
-      "field_citation_rate": 9.118162355365127,
+      "field_citation_rate": 9.111911591534476,
       "provisional": "No",
       "x_coord": 0.649519052838329,
       "y_coord": -0.125,
@@ -6313,7 +6355,7 @@
         29472638
       ],
       "doi": "10.7717/peerj.14927",
-      "last_modified": "06/30/2024, 10:03:57"
+      "last_modified": "07/28/2024, 11:10:29"
     },
     {
       "pmid": 36897015,
@@ -6332,7 +6374,7 @@
       "citation_count": 2,
       "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 11.278885609497422,
+      "field_citation_rate": 11.27320406348357,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -6349,7 +6391,7 @@
         28821273
       ],
       "doi": "10.1093/bioinformatics/btad126",
-      "last_modified": "06/30/2024, 10:04:56"
+      "last_modified": "07/28/2024, 11:11:26"
     },
     {
       "pmid": 36945517,
@@ -6401,7 +6443,7 @@
         20302353
       ],
       "doi": "10.21203/rs.3.rs-2662020/v1",
-      "last_modified": "06/30/2024, 10:07:40"
+      "last_modified": "07/28/2024, 11:14:42"
     },
     {
       "pmid": 36971908,
@@ -6410,7 +6452,7 @@
       "authors": "Humayra Afrin, Renu Geetha Bai, Raj Kumar, Sheikh Shafin Ahmad, Sandeep K Agarwal, Md Nurunnabi",
       "journal": "Cancer Metastasis Rev",
       "is_research_article": "No",
-      "relative_citation_ratio": 4.17,
+      "relative_citation_ratio": 3.86,
       "nih_percentile": null,
       "human": 1,
       "animal": 0,
@@ -6419,8 +6461,8 @@
       "is_clinical": "No",
       "citation_count": 10,
       "citations_per_year": 10,
-      "expected_citations_per_year": 2.3988306733576903,
-      "field_citation_rate": 8.335528286708678,
+      "expected_citations_per_year": 2.592435288489784,
+      "field_citation_rate": 8.319912340230106,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": 1,
@@ -6643,7 +6685,7 @@
         19053311
       ],
       "doi": "10.1007/s10555-023-10099-x",
-      "last_modified": "06/30/2024, 10:08:47"
+      "last_modified": "07/28/2024, 11:16:07"
     },
     {
       "pmid": 36973309,
@@ -6662,7 +6704,7 @@
       "citation_count": 4,
       "citations_per_year": 4,
       "expected_citations_per_year": null,
-      "field_citation_rate": 9.721951594511417,
+      "field_citation_rate": 9.718647777114542,
       "provisional": "No",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -6708,7 +6750,7 @@
         36824790
       ],
       "doi": "10.1038/s41597-023-01993-8",
-      "last_modified": "06/30/2024, 10:08:51"
+      "last_modified": "07/28/2024, 11:16:13"
     },
     {
       "pmid": 36993280,
@@ -6727,7 +6769,7 @@
       "citation_count": 1,
       "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": 8.977776847766911,
+      "field_citation_rate": 8.974050295459948,
       "provisional": "No",
       "x_coord": -0.28867513459481287,
       "y_coord": -0.5,
@@ -6767,7 +6809,7 @@
         34957416
       ],
       "doi": "10.1101/2023.03.15.532820",
-      "last_modified": "06/30/2024, 10:10:01"
+      "last_modified": "07/28/2024, 11:17:43"
     },
     {
       "pmid": 37082798,
@@ -6786,7 +6828,7 @@
       "citation_count": 3,
       "citations_per_year": 3,
       "expected_citations_per_year": null,
-      "field_citation_rate": 10.918080581515035,
+      "field_citation_rate": 10.910879714792967,
       "provisional": "No",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -6831,7 +6873,7 @@
         30728521
       ],
       "doi": "10.1111/acel.13809",
-      "last_modified": "06/30/2024, 10:14:55"
+      "last_modified": "07/28/2024, 11:22:54"
     },
     {
       "pmid": 37090499,
@@ -6901,7 +6943,7 @@
         36810892
       ],
       "doi": "10.1101/2023.04.11.536431",
-      "last_modified": "06/30/2024, 10:15:19"
+      "last_modified": "07/28/2024, 11:23:25"
     },
     {
       "pmid": 37166966,
@@ -6920,7 +6962,7 @@
       "citation_count": 1,
       "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": 12.891723144319677,
+      "field_citation_rate": 12.884020270465824,
       "provisional": "No",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -6985,7 +7027,7 @@
         33763152
       ],
       "doi": "10.1093/nar/gkad399",
-      "last_modified": "06/30/2024, 10:19:53"
+      "last_modified": "07/28/2024, 11:27:31"
     },
     {
       "pmid": 37166973,
@@ -6994,17 +7036,17 @@
       "authors": "John Erol Evangelista, Zhuorui Xie, Giacomo B Marino, Nhi Nguyen, Daniel J B Clarke, Avi Ma'ayan",
       "journal": "Nucleic Acids Res",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 6.53,
+      "relative_citation_ratio": 7.23,
       "nih_percentile": null,
       "human": 0,
       "animal": 0,
       "molecular_cellular": 0,
       "apt": 0.75,
       "is_clinical": "No",
-      "citation_count": 16,
-      "citations_per_year": 16,
-      "expected_citations_per_year": 2.451126273067037,
-      "field_citation_rate": 8.860630794924644,
+      "citation_count": 19,
+      "citations_per_year": 19,
+      "expected_citations_per_year": 2.628730762668548,
+      "field_citation_rate": 8.593484248440674,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.75,
@@ -7012,9 +7054,11 @@
       "cited_by": [
         38866905,
         37540207,
+        38927965,
         38568322,
         37620670,
         38674681,
+        38928385,
         38196661,
         37772400,
         38218214,
@@ -7024,6 +7068,7 @@
         38195661,
         37747879,
         38472164,
+        38992336,
         37987017,
         38637796
       ],
@@ -7130,7 +7175,7 @@
         10952686
       ],
       "doi": "10.1093/nar/gkad393",
-      "last_modified": "06/30/2024, 10:19:53"
+      "last_modified": "07/28/2024, 11:27:31"
     },
     {
       "pmid": 37217845,
@@ -7149,7 +7194,7 @@
       "citation_count": 1,
       "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": 7.365981093207101,
+      "field_citation_rate": 7.360435115739625,
       "provisional": "No",
       "x_coord": 0.5773502691896257,
       "y_coord": 0,
@@ -7249,7 +7294,7 @@
         31879244
       ],
       "doi": "10.1186/s10020-023-00664-z",
-      "last_modified": "06/30/2024, 10:22:42"
+      "last_modified": "07/28/2024, 11:30:17"
     },
     {
       "pmid": 37228754,
@@ -7258,7 +7303,7 @@
       "authors": "Emily L LaPlante, Alessandra Stürchler, Robert Fullem, David Chen, Anne C Starner, Emmanuel Esquivel, Eric Alsop, Andrew R Jackson, Ionita Ghiran, Getulio Pereira, Joel Rozowsky, Justin Chang, Mark B Gerstein, Roger P Alexander, Matthew E Roth, Jeffrey L Franklin, Robert J Coffey, Robert L Raffai, Isabelle M Mansuy, Stavros Stavrakis, Andrew J deMello, Louise C Laurent, Yi-Ting Wang, Chia-Feng Tsai, Tao Liu, Jennifer Jones, Kendall Van Keuren-Jensen, Eric Van Nostrand, Bogdan Mateescu, Aleksandar Milosavljevic",
       "journal": "Cell Genom",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 2.4,
+      "relative_citation_ratio": 2.19,
       "nih_percentile": null,
       "human": 0.33,
       "animal": 0,
@@ -7267,8 +7312,8 @@
       "is_clinical": "No",
       "citation_count": 6,
       "citations_per_year": 6,
-      "expected_citations_per_year": 2.5040574695538895,
-      "field_citation_rate": 9.392115359450075,
+      "expected_citations_per_year": 2.7342178791164047,
+      "field_citation_rate": 9.388578193105417,
       "provisional": "Yes",
       "x_coord": -0.5773502691896257,
       "y_coord": 0,
@@ -7317,7 +7362,7 @@
         27117408
       ],
       "doi": "10.1016/j.xgen.2023.100303",
-      "last_modified": "06/30/2024, 10:23:13"
+      "last_modified": "07/28/2024, 11:30:49"
     },
     {
       "pmid": 37238639,
@@ -7326,7 +7371,7 @@
       "authors": "Stephanie Vargas Esquivel, Himanshu N Bhatt, Rimpy Diwan, Ahsan Habib, Wen-Yee Lee, Zehedina Khatun, Md Nurunnabi",
       "journal": "Biomolecules",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 3.57,
+      "relative_citation_ratio": 3.49,
       "nih_percentile": null,
       "human": 0,
       "animal": 1,
@@ -7335,8 +7380,8 @@
       "is_clinical": "No",
       "citation_count": 7,
       "citations_per_year": 7,
-      "expected_citations_per_year": 1.9584568613326165,
-      "field_citation_rate": 3.91371470139352,
+      "expected_citations_per_year": 2.007624354028584,
+      "field_citation_rate": 3.9119841645303284,
       "provisional": "Yes",
       "x_coord": 0.8660254037844386,
       "y_coord": -0.5,
@@ -7403,7 +7448,7 @@
         31767747
       ],
       "doi": "10.3390/biom13050768",
-      "last_modified": "06/30/2024, 10:23:42"
+      "last_modified": "07/28/2024, 11:31:17"
     },
     {
       "pmid": 37242535,
@@ -7422,7 +7467,7 @@
       "citation_count": 1,
       "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": 4.234153085007062,
+      "field_citation_rate": 4.232045308110144,
       "provisional": "No",
       "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
@@ -7468,7 +7513,7 @@
         32117445
       ],
       "doi": "10.3390/ph16050752",
-      "last_modified": "06/30/2024, 10:23:54"
+      "last_modified": "07/28/2024, 11:31:29"
     },
     {
       "pmid": 37267954,
@@ -7477,17 +7522,17 @@
       "authors": "Luis I Prieto, Ines Sturmlechner, Sara I Graves, Cheng Zhang, Nick P Goplen, Eunhee S Yi, Jie Sun, Hu Li, Darren J Baker",
       "journal": "Cancer Cell",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 8.37,
+      "relative_citation_ratio": 8.83,
       "nih_percentile": null,
       "human": 0.17,
       "animal": 0.33,
       "molecular_cellular": 0.5,
       "apt": 0.25,
       "is_clinical": "No",
-      "citation_count": 24,
-      "citations_per_year": 24,
-      "expected_citations_per_year": 2.8657729549526483,
-      "field_citation_rate": 13.024117089979935,
+      "citation_count": 28,
+      "citations_per_year": 28,
+      "expected_citations_per_year": 3.1700539047333702,
+      "field_citation_rate": 12.673629453427727,
       "provisional": "Yes",
       "x_coord": -0.14433756729740643,
       "y_coord": -0.25,
@@ -7502,6 +7547,8 @@
         37586578,
         38654098,
         38600250,
+        38997794,
+        39034998,
         37267952,
         38229178,
         37873605,
@@ -7512,7 +7559,9 @@
         38572110,
         38468249,
         38865089,
+        39039076,
         38760832,
+        39001384,
         37723209,
         37866656,
         38689516,
@@ -7576,7 +7625,7 @@
         31681267
       ],
       "doi": "10.1016/j.ccell.2023.05.006",
-      "last_modified": "06/30/2024, 10:25:09"
+      "last_modified": "07/28/2024, 11:32:42"
     },
     {
       "pmid": 37292728,
@@ -7595,7 +7644,7 @@
       "citation_count": 1,
       "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": 16.809261481442324,
+      "field_citation_rate": 16.793292716625455,
       "provisional": "No",
       "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
@@ -7646,7 +7695,7 @@
         22941365
       ],
       "doi": "10.21203/rs.3.rs-2842981/v1",
-      "last_modified": "06/30/2024, 10:26:13"
+      "last_modified": "07/28/2024, 11:33:48"
     },
     {
       "pmid": 37349305,
@@ -7655,23 +7704,24 @@
       "authors": "Ryann M Fame, Peter N Kalugin, Boryana Petrova, Huixin Xu, Paul A Soden, Frederick B Shipley, Neil Dani, Bradford Grant, Aja Pragana, Joshua P Head, Suhasini Gupta, Morgan L Shannon, Fortunate F Chifamba, Hannah Hawks-Mayer, Amanda Vernon, Fan Gao, Yong Zhang, Michael J Holtzman, Myriam Heiman, Mark L Andermann, Naama Kanarek, Jonathan O Lipton, Maria K Lehtinen",
       "journal": "Nat Commun",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 3.31,
+      "relative_citation_ratio": 3.42,
       "nih_percentile": null,
       "human": 0,
       "animal": 1,
       "molecular_cellular": 0,
-      "apt": 0.25,
+      "apt": 0.75,
       "is_clinical": "No",
-      "citation_count": 8,
-      "citations_per_year": 8,
-      "expected_citations_per_year": 2.4176362368243263,
-      "field_citation_rate": 8.524355809475955,
+      "citation_count": 9,
+      "citations_per_year": 9,
+      "expected_citations_per_year": 2.6298154940627025,
+      "field_citation_rate": 8.601660255067097,
       "provisional": "Yes",
       "x_coord": 0.8660254037844386,
       "y_coord": -0.5,
       "cited_by_clin": null,
       "cited_by": [
         38802875,
+        39043640,
         38690647,
         38773599,
         38392972,
@@ -7805,7 +7855,7 @@
         24165681
       ],
       "doi": "10.1038/s41467-023-39326-3",
-      "last_modified": "06/30/2024, 10:28:51"
+      "last_modified": "07/28/2024, 11:36:28"
     },
     {
       "pmid": 37350332,
@@ -7824,7 +7874,7 @@
       "citation_count": 1,
       "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": 3.583853697826779,
+      "field_citation_rate": 3.5798517201551356,
       "provisional": "No",
       "x_coord": 0.8660254037844386,
       "y_coord": -0.5,
@@ -7875,7 +7925,7 @@
         25618543
       ],
       "doi": "10.1021/acsami.3c03528",
-      "last_modified": "06/30/2024, 10:28:55"
+      "last_modified": "07/28/2024, 11:36:31"
     },
     {
       "pmid": 37362157,
@@ -7981,7 +8031,7 @@
         30981959
       ],
       "doi": "10.1101/2023.05.23.541950",
-      "last_modified": "06/30/2024, 10:29:29"
+      "last_modified": "07/28/2024, 11:37:09"
     },
     {
       "pmid": 37371475,
@@ -8000,7 +8050,7 @@
       "citation_count": 1,
       "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": 18.99124474506893,
+      "field_citation_rate": 18.980885617701873,
       "provisional": "No",
       "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
@@ -8073,7 +8123,7 @@
         35365632
       ],
       "doi": "10.3390/biom13060895",
-      "last_modified": "06/30/2024, 10:29:56"
+      "last_modified": "07/28/2024, 11:37:42"
     },
     {
       "pmid": 37390485,
@@ -8122,7 +8172,7 @@
         16269127
       ],
       "doi": "10.1021/acs.analchem.3c00957",
-      "last_modified": "06/30/2024, 10:30:43"
+      "last_modified": "07/28/2024, 11:38:40"
     },
     {
       "pmid": 37398141,
@@ -8138,15 +8188,17 @@
       "molecular_cellular": 0.5,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 0,
-      "citations_per_year": 0,
+      "citation_count": 1,
+      "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": null,
+      "field_citation_rate": 8.700015467814339,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.5,
       "cited_by_clin": null,
-      "cited_by": [],
+      "cited_by": [
+        38763336
+      ],
       "references": [
         22474575,
         19416711,
@@ -8207,7 +8259,7 @@
         18726118
       ],
       "doi": "10.1101/2023.06.16.545392",
-      "last_modified": "06/30/2024, 10:31:03"
+      "last_modified": "07/28/2024, 11:39:05"
     },
     {
       "pmid": 37441265,
@@ -8216,7 +8268,7 @@
       "authors": "Ethan W Morgan, Fangcong Dong, Andrew J Annalora, Iain A Murray, Trenton Wolfe, Reece Erickson, Krishne Gowda, Shantu G Amin, Kristina S Petersen, Penny M Kris-Etherton, Craig B Marcus, Seth T Walk, Andrew D Patterson, Gary H Perdew",
       "journal": "Int J Tryptophan Res",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 2.64,
+      "relative_citation_ratio": 2.47,
       "nih_percentile": null,
       "human": 0.25,
       "animal": 0.25,
@@ -8225,8 +8277,8 @@
       "is_clinical": "No",
       "citation_count": 6,
       "citations_per_year": 6,
-      "expected_citations_per_year": 2.275251369136561,
-      "field_citation_rate": 7.094662841608888,
+      "expected_citations_per_year": 2.4293757202750896,
+      "field_citation_rate": 7.090874333761917,
       "provisional": "Yes",
       "x_coord": -0.21650635094610965,
       "y_coord": -0.125,
@@ -8308,7 +8360,7 @@
         31926012
       ],
       "doi": "10.1177/11786469231182510",
-      "last_modified": "06/30/2024, 10:32:47"
+      "last_modified": "07/28/2024, 11:40:58"
     },
     {
       "pmid": 37452018,
@@ -8324,15 +8376,19 @@
       "molecular_cellular": 0.25,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 0,
-      "citations_per_year": 0,
+      "citation_count": 3,
+      "citations_per_year": 3,
       "expected_citations_per_year": null,
-      "field_citation_rate": null,
+      "field_citation_rate": 8.216069139338227,
       "provisional": "No",
       "x_coord": 0.43301270189221935,
       "y_coord": -0.5,
       "cited_by_clin": null,
-      "cited_by": [],
+      "cited_by": [
+        38941469,
+        39001392,
+        38983010
+      ],
       "references": [
         11171113,
         30787436,
@@ -8465,7 +8521,7 @@
         22750943
       ],
       "doi": "10.1038/s41467-023-39672-2",
-      "last_modified": "06/30/2024, 10:33:19"
+      "last_modified": "07/28/2024, 11:41:38"
     },
     {
       "pmid": 37460679,
@@ -8484,7 +8540,7 @@
       "citation_count": 2,
       "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 7.732645704115534,
+      "field_citation_rate": 7.733175433332043,
       "provisional": "No",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
@@ -8574,7 +8630,7 @@
         14119520
       ],
       "doi": "10.1038/s43856-023-00329-2",
-      "last_modified": "06/30/2024, 10:33:50"
+      "last_modified": "07/28/2024, 11:42:17"
     },
     {
       "pmid": 37515770,
@@ -8593,7 +8649,7 @@
       "citation_count": 4,
       "citations_per_year": 4,
       "expected_citations_per_year": null,
-      "field_citation_rate": 11.713924415292587,
+      "field_citation_rate": 11.706485180785986,
       "provisional": "No",
       "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
@@ -8728,7 +8784,7 @@
         12590258
       ],
       "doi": "10.1016/j.celrep.2023.112848",
-      "last_modified": "06/30/2024, 10:36:47"
+      "last_modified": "07/28/2024, 11:45:14"
     },
     {
       "pmid": 37533331,
@@ -8747,7 +8803,7 @@
       "citation_count": 3,
       "citations_per_year": 3,
       "expected_citations_per_year": null,
-      "field_citation_rate": 8.265598384825992,
+      "field_citation_rate": 8.26005018171133,
       "provisional": "No",
       "x_coord": -0.5773502691896257,
       "y_coord": 0,
@@ -8804,7 +8860,7 @@
         23839242
       ],
       "doi": "10.1002/cnr2.1874",
-      "last_modified": "06/30/2024, 10:37:39"
+      "last_modified": "07/28/2024, 11:46:03"
     },
     {
       "pmid": 37546759,
@@ -8899,7 +8955,7 @@
         19393013
       ],
       "doi": "10.21203/rs.3.rs-2276903/v1",
-      "last_modified": "06/30/2024, 10:38:19"
+      "last_modified": "07/28/2024, 11:46:48"
     },
     {
       "pmid": 37554053,
@@ -8962,7 +9018,7 @@
         31933022
       ],
       "doi": "10.1021/acsabm.3c00354",
-      "last_modified": "06/30/2024, 10:38:37"
+      "last_modified": "07/28/2024, 11:47:10"
     },
     {
       "pmid": 37562554,
@@ -8981,7 +9037,7 @@
       "citation_count": 2,
       "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 6.18347285935327,
+      "field_citation_rate": 6.1751617894746005,
       "provisional": "No",
       "x_coord": 0.28867513459481287,
       "y_coord": -0.5,
@@ -9099,7 +9155,7 @@
         36633525
       ],
       "doi": "10.1016/j.jconrel.2023.08.005",
-      "last_modified": "06/30/2024, 10:38:56"
+      "last_modified": "07/28/2024, 11:47:31"
     },
     {
       "pmid": 37563770,
@@ -9117,8 +9173,8 @@
       "is_clinical": "No",
       "citation_count": 1,
       "citations_per_year": 1,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 10.72281342043187,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 10.710995439706355,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": 1,
@@ -9156,7 +9212,7 @@
         37563770
       ],
       "doi": "10.1002/alz.13406",
-      "last_modified": "06/30/2024, 09:36:24"
+      "last_modified": "07/28/2024, 10:42:10"
     },
     {
       "pmid": 37577715,
@@ -9227,7 +9283,7 @@
         37502019
       ],
       "doi": "10.1101/2023.08.03.551733",
-      "last_modified": "06/30/2024, 10:39:37"
+      "last_modified": "07/28/2024, 11:48:10"
     },
     {
       "pmid": 37623865,
@@ -9277,7 +9333,7 @@
         34019663
       ],
       "doi": "10.3390/metabo13080921",
-      "last_modified": "06/30/2024, 10:41:31"
+      "last_modified": "07/28/2024, 11:50:08"
     },
     {
       "pmid": 37657444,
@@ -9296,7 +9352,7 @@
       "citation_count": 2,
       "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 16.652405509795383,
+      "field_citation_rate": 16.641982632760563,
       "provisional": "No",
       "x_coord": -0.6928203230275509,
       "y_coord": -0.2,
@@ -9379,7 +9435,7 @@
         31949099
       ],
       "doi": "10.1016/j.molcel.2023.08.010",
-      "last_modified": "06/30/2024, 10:43:03"
+      "last_modified": "07/28/2024, 11:51:42"
     },
     {
       "pmid": 37771373,
@@ -9388,7 +9444,7 @@
       "authors": "Letizia Amadori, Claudia Calcagno, Dawn M Fernandez, Simon Koplev, Nicolas Fernandez, Ravneet Kaur, Pauline Mury, Nayaab S Khan, Swathy Sajja, Roza Shamailova, Yannick Cyr, Minji Jeon, Christopher A Hill, Peik Sean Chong, Sonum Naidu, Ken Sakurai, Adam Ali Ghotbi, Raphael Soler, Natalia Eberhardt, Adeeb Rahman, Peter Faries, Kathryn J Moore, Zahi A Fayad, Avi Ma'ayan, Chiara Giannarelli",
       "journal": "Nat Cardiovasc Res",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 2.06,
+      "relative_citation_ratio": 1.91,
       "nih_percentile": null,
       "human": 0.2,
       "animal": 0.4,
@@ -9397,8 +9453,8 @@
       "is_clinical": "No",
       "citation_count": 5,
       "citations_per_year": 5,
-      "expected_citations_per_year": 2.4213699200474186,
-      "field_citation_rate": 8.561845893464405,
+      "expected_citations_per_year": 2.6237830100484474,
+      "field_citation_rate": 8.556191275797083,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.2,
@@ -9479,7 +9535,7 @@
         1010803
       ],
       "doi": "10.1038/s44161-023-00278-y",
-      "last_modified": "06/30/2024, 10:47:47"
+      "last_modified": "07/28/2024, 11:57:23"
     },
     {
       "pmid": 37798473,
@@ -9488,17 +9544,17 @@
       "authors": "Anne Miller, Elisa M York, Sylwia A Stopka, Juan Ramón Martínez-François, Md Amin Hossain, Gerard Baquer, Michael S Regan, Nathalie Y R Agar, Gary Yellen",
       "journal": "Nat Metab",
       "is_research_article": "Yes",
-      "relative_citation_ratio": 2.02,
+      "relative_citation_ratio": 2.57,
       "nih_percentile": null,
       "human": 0,
       "animal": 0.5,
       "molecular_cellular": 0.5,
-      "apt": 0.25,
+      "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 5,
-      "citations_per_year": 5,
-      "expected_citations_per_year": 2.473685418904622,
-      "field_citation_rate": 9.087148209934007,
+      "citation_count": 7,
+      "citations_per_year": 7,
+      "expected_citations_per_year": 2.7189375002057665,
+      "field_citation_rate": 9.273404538225613,
       "provisional": "Yes",
       "x_coord": 0,
       "y_coord": -0.5,
@@ -9508,7 +9564,9 @@
         37929637,
         38187626,
         38645003,
-        38787918
+        38978567,
+        38787918,
+        38895230
       ],
       "references": [
         21401502,
@@ -9581,7 +9639,7 @@
         19393013
       ],
       "doi": "10.1038/s42255-023-00890-z",
-      "last_modified": "06/30/2024, 10:48:57"
+      "last_modified": "07/28/2024, 11:58:44"
     },
     {
       "pmid": 37815914,
@@ -9590,25 +9648,27 @@
       "authors": "Preston D Crowell, Jenna M Giafaglione, Anthony E Jones, Nicholas M Nunley, Takao Hashimoto, Amelie M L Delcourt, Anton Petcherski, Raag Agrawal, Matthew J Bernard, Johnny A Diaz, Kylie Y Heering, Rong Rong Huang, Jin-Yih Low, Nedas Matulionis, Nora M Navone, Huihui Ye, Amina Zoubeidi, Heather R Christofk, Matthew B Rettig, Robert E Reiter, Michael C Haffner, Paul C Boutros, Orian S Shirihai, Ajit S Divakaruni, Andrew S Goldstein",
       "journal": "Cell Rep",
       "is_research_article": "Yes",
-      "relative_citation_ratio": null,
+      "relative_citation_ratio": 1.76,
       "nih_percentile": null,
       "human": 0.33,
       "animal": 0,
       "molecular_cellular": 0.67,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 3,
-      "citations_per_year": 3,
-      "expected_citations_per_year": null,
-      "field_citation_rate": 13.933300985296766,
-      "provisional": "No",
+      "citation_count": 5,
+      "citations_per_year": 5,
+      "expected_citations_per_year": 2.8346658298875624,
+      "field_citation_rate": 10.145690152380634,
+      "provisional": "Yes",
       "x_coord": -0.5773502691896257,
       "y_coord": 0,
       "cited_by_clin": null,
       "cited_by": [
         38773518,
+        38969865,
         38859590,
-        38330100
+        38330100,
+        39000047
       ],
       "references": [
         24484909,
@@ -9702,7 +9762,7 @@
         36633525
       ],
       "doi": "10.1016/j.celrep.2023.113221",
-      "last_modified": "06/30/2024, 10:49:42"
+      "last_modified": "07/28/2024, 11:59:37"
     },
     {
       "pmid": 37849634,
@@ -9815,7 +9875,7 @@
         10802651
       ],
       "doi": "10.3233/ADR-220098",
-      "last_modified": "06/30/2024, 10:51:10"
+      "last_modified": "07/28/2024, 12:01:04"
     },
     {
       "pmid": 37953774,
@@ -9920,7 +9980,7 @@
         34718717
       ],
       "doi": "10.7717/peerj.16351",
-      "last_modified": "06/30/2024, 10:55:31"
+      "last_modified": "07/28/2024, 12:05:47"
     },
     {
       "pmid": 37961123,
@@ -9977,7 +10037,7 @@
         26432245
       ],
       "doi": "10.1101/2023.11.03.565556",
-      "last_modified": "06/30/2024, 10:55:51"
+      "last_modified": "07/28/2024, 12:06:06"
     },
     {
       "pmid": 37967790,
@@ -9995,8 +10055,8 @@
       "is_clinical": "No",
       "citation_count": 1,
       "citations_per_year": 1,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 18.99124474506893,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 18.980885617701873,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": 1,
@@ -10082,7 +10142,55 @@
         35478225
       ],
       "doi": "10.1016/j.drudis.2023.103825",
-      "last_modified": "06/30/2024, 09:40:33"
+      "last_modified": "07/28/2024, 10:46:35"
+    },
+    {
+      "pmid": 37983749,
+      "year": 2022,
+      "title": "MetGENE: gene-centric metabolomics information retrieval tool.",
+      "authors": "Sumana Srinivasan, Mano R Maurya, Srinivasan Ramachandran, Eoin Fahy, Shankar Subramaniam",
+      "journal": "Gigascience",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": 0.12,
+      "nih_percentile": 5.9,
+      "human": 0,
+      "animal": 0,
+      "molecular_cellular": 0,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 1,
+      "citations_per_year": 0.5,
+      "expected_citations_per_year": 4.086792495841179,
+      "field_citation_rate": 11.51675309055094,
+      "provisional": "Yes",
+      "x_coord": 0,
+      "y_coord": -0.75,
+      "cited_by_clin": null,
+      "cited_by": [
+        37983749
+      ],
+      "references": [
+        21071392,
+        31701147,
+        26467476,
+        29935383,
+        25954001,
+        25598080,
+        26615191,
+        10592173,
+        22139910,
+        37983749,
+        31586394,
+        28502612,
+        33237286,
+        34788843,
+        31921875,
+        21700865,
+        33211851,
+        34791404
+      ],
+      "doi": "10.1093/gigascience/giad089",
+      "last_modified": "07/28/2024, 12:22:05"
     },
     {
       "pmid": 38001239,
@@ -10101,7 +10209,7 @@
       "citation_count": 1,
       "citations_per_year": 1,
       "expected_citations_per_year": null,
-      "field_citation_rate": 13.119050443303113,
+      "field_citation_rate": 13.113009341698877,
       "provisional": "No",
       "x_coord": 0.14433756729740643,
       "y_coord": -0.25,
@@ -10184,7 +10292,7 @@
         25573116
       ],
       "doi": "10.1038/s42003-023-05463-0",
-      "last_modified": "06/30/2024, 10:57:20"
+      "last_modified": "07/28/2024, 12:07:29"
     },
     {
       "pmid": 38018851,
@@ -10244,7 +10352,7 @@
         36693222
       ],
       "doi": "10.1021/acs.jproteome.3c00443",
-      "last_modified": "06/30/2024, 10:58:02"
+      "last_modified": "07/28/2024, 12:08:07"
     },
     {
       "pmid": 38065244,
@@ -10260,15 +10368,19 @@
       "molecular_cellular": 0,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 0,
-      "citations_per_year": 0,
-      "expected_citations_per_year": null,
-      "field_citation_rate": null,
+      "citation_count": 3,
+      "citations_per_year": 3,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 8.12976476546195,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": 1,
       "cited_by_clin": null,
-      "cited_by": [],
+      "cited_by": [
+        38927453,
+        38976045,
+        38990415
+      ],
       "references": [
         35597779,
         9546745,
@@ -10748,7 +10860,7 @@
         30759880
       ],
       "doi": "10.1016/j.addr.2023.115147",
-      "last_modified": "06/30/2024, 09:42:11"
+      "last_modified": "07/28/2024, 10:48:38"
     },
     {
       "pmid": 38102827,
@@ -10819,7 +10931,7 @@
         18844838
       ],
       "doi": "10.1016/j.bpj.2023.12.010",
-      "last_modified": "06/30/2024, 09:42:57"
+      "last_modified": "07/28/2024, 10:49:23"
     },
     {
       "pmid": 38104896,
@@ -10835,16 +10947,17 @@
       "molecular_cellular": 0,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 2,
-      "citations_per_year": 2,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 4.694154717280221,
+      "citation_count": 3,
+      "citations_per_year": 3,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 5.049419806044134,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": 1,
       "cited_by_clin": null,
       "cited_by": [
         38543216,
+        38973906,
         38276519
       ],
       "references": [
@@ -10975,7 +11088,7 @@
         28650116
       ],
       "doi": "10.1016/j.addr.2023.115157",
-      "last_modified": "06/30/2024, 09:43:03"
+      "last_modified": "07/28/2024, 10:49:29"
     },
     {
       "pmid": 38161977,
@@ -11078,7 +11191,7 @@
         20628077
       ],
       "doi": "10.3389/fendo.2023.1282694",
-      "last_modified": "06/30/2024, 11:02:46"
+      "last_modified": "07/28/2024, 12:12:34"
     },
     {
       "pmid": 38165806,
@@ -11094,15 +11207,17 @@
       "molecular_cellular": 0.25,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 0,
-      "citations_per_year": 0,
-      "expected_citations_per_year": null,
-      "field_citation_rate": null,
+      "citation_count": 1,
+      "citations_per_year": 1,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 6.497883882315542,
       "provisional": "No",
       "x_coord": 0.21650635094610965,
       "y_coord": -0.125,
       "cited_by_clin": null,
-      "cited_by": [],
+      "cited_by": [
+        39014119
+      ],
       "references": [
         32786190,
         32243837,
@@ -11182,7 +11297,7 @@
         22343901
       ],
       "doi": "10.1016/j.celrep.2023.113629",
-      "last_modified": "06/30/2024, 09:44:32"
+      "last_modified": "07/28/2024, 10:51:04"
     },
     {
       "pmid": 38167211,
@@ -11288,7 +11403,7 @@
         30981959
       ],
       "doi": "10.1186/s40360-023-00727-1",
-      "last_modified": "07/02/2024, 05:43:08"
+      "last_modified": "07/28/2024, 10:51:08"
     },
     {
       "pmid": 38168620,
@@ -11306,8 +11421,8 @@
       "is_clinical": "No",
       "citation_count": 1,
       "citations_per_year": 1,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 10.38874758415526,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 10.382835355421276,
       "provisional": "No",
       "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
@@ -11362,7 +11477,7 @@
         37502019
       ],
       "doi": "10.1038/s42003-023-05690-5",
-      "last_modified": "06/30/2024, 09:44:40"
+      "last_modified": "07/28/2024, 10:51:12"
     },
     {
       "pmid": 38172157,
@@ -11378,16 +11493,17 @@
       "molecular_cellular": 0,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 1,
-      "citations_per_year": 1,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 4.922471880338951,
+      "citation_count": 2,
+      "citations_per_year": 2,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 7.111813886274748,
       "provisional": "No",
       "x_coord": 0.8660254037844386,
       "y_coord": -0.5,
       "cited_by_clin": null,
       "cited_by": [
-        38415274
+        38415274,
+        38763336
       ],
       "references": [
         32525305,
@@ -11455,7 +11571,7 @@
         12668679
       ],
       "doi": "10.1038/s41598-023-50360-5",
-      "last_modified": "06/30/2024, 09:44:49"
+      "last_modified": "07/28/2024, 10:51:21"
     },
     {
       "pmid": 38177592,
@@ -11471,15 +11587,16 @@
       "molecular_cellular": 0,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 1,
-      "citations_per_year": 1,
+      "citation_count": 2,
+      "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 8.55868193360384,
+      "field_citation_rate": 9.751457604999937,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
       "cited_by_clin": null,
       "cited_by": [
+        38915693,
         37398426
       ],
       "references": [
@@ -11542,7 +11659,7 @@
         29617928
       ],
       "doi": "10.1038/s43588-023-00544-w",
-      "last_modified": "07/02/2024, 05:43:08"
+      "last_modified": "07/28/2024, 12:12:47"
     },
     {
       "pmid": 38187579,
@@ -11589,7 +11706,7 @@
         26002472
       ],
       "doi": "10.1101/2023.12.19.572450",
-      "last_modified": "06/30/2024, 11:03:07"
+      "last_modified": "07/28/2024, 12:12:56"
     },
     {
       "pmid": 38191932,
@@ -11607,10 +11724,10 @@
       "is_clinical": "No",
       "citation_count": 6,
       "citations_per_year": 6,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 15.16842095670334,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 15.162053575650857,
       "provisional": "No",
-      "x_coord": 0,
+      "x_coord": -0.8660254037844386,
       "y_coord": -0.5,
       "cited_by_clin": null,
       "cited_by": [
@@ -11669,7 +11786,7 @@
         31594952
       ],
       "doi": "10.1038/s41592-023-02139-9",
-      "last_modified": "07/02/2024, 05:43:08"
+      "last_modified": "07/28/2024, 10:52:11"
     },
     {
       "pmid": 38214231,
@@ -11751,7 +11868,7 @@
         17558387
       ],
       "doi": "10.1093/nar/gkad1240",
-      "last_modified": "06/30/2024, 09:46:17"
+      "last_modified": "07/28/2024, 10:52:51"
     },
     {
       "pmid": 38286827,
@@ -11769,8 +11886,8 @@
       "is_clinical": "No",
       "citation_count": 4,
       "citations_per_year": 4,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 10.107376277838652,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 10.09834131013778,
       "provisional": "No",
       "x_coord": 0.21650635094610965,
       "y_coord": -0.125,
@@ -11842,7 +11959,7 @@
         15817463
       ],
       "doi": "10.1038/s43018-023-00704-x",
-      "last_modified": "06/30/2024, 09:49:23"
+      "last_modified": "07/28/2024, 10:56:03"
     },
     {
       "pmid": 38313267,
@@ -11880,7 +11997,7 @@
         36699362
       ],
       "doi": "10.1101/2024.01.27.577521",
-      "last_modified": "06/30/2024, 09:50:33"
+      "last_modified": "07/28/2024, 10:57:17"
     },
     {
       "pmid": 38313293,
@@ -11966,7 +12083,7 @@
         33185172
       ],
       "doi": "10.21203/rs.3.rs-3830161/v1",
-      "last_modified": "07/09/2024, 05:37:16"
+      "last_modified": "07/28/2024, 10:57:17"
     },
     {
       "pmid": 38318337,
@@ -12085,7 +12202,7 @@
         35451695
       ],
       "doi": "10.3389/fmicb.2024.1326584",
-      "last_modified": "06/30/2024, 09:50:48"
+      "last_modified": "07/28/2024, 10:57:30"
     },
     {
       "pmid": 38339304,
@@ -12187,7 +12304,7 @@
         31801079
       ],
       "doi": "10.3390/cancers16030553",
-      "last_modified": "06/30/2024, 09:51:42"
+      "last_modified": "07/28/2024, 10:58:39"
     },
     {
       "pmid": 38370127,
@@ -12203,15 +12320,17 @@
       "molecular_cellular": 0.5,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 0,
-      "citations_per_year": 0,
-      "expected_citations_per_year": null,
-      "field_citation_rate": null,
+      "citation_count": 1,
+      "citations_per_year": 1,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 6.898714516543546,
       "provisional": "No",
       "x_coord": -0.4330127018922193,
       "y_coord": 0.25,
       "cited_by_clin": null,
-      "cited_by": [],
+      "cited_by": [
+        38994207
+      ],
       "references": [
         30704458,
         30713111,
@@ -12253,7 +12372,7 @@
         36961310
       ],
       "doi": "10.1016/j.patter.2023.100894",
-      "last_modified": "06/30/2024, 09:53:08"
+      "last_modified": "07/28/2024, 11:00:13"
     },
     {
       "pmid": 38446352,
@@ -12500,7 +12619,7 @@
         19177575
       ],
       "doi": "10.1007/s13346-024-01551-8",
-      "last_modified": "06/30/2024, 09:56:56"
+      "last_modified": "07/28/2024, 11:04:00"
     },
     {
       "pmid": 38531616,
@@ -12638,7 +12757,7 @@
         33093573
       ],
       "doi": "10.1002/2211-5463.13796",
-      "last_modified": "06/30/2024, 10:02:09"
+      "last_modified": "07/28/2024, 11:08:45"
     },
     {
       "pmid": 38544285,
@@ -12764,7 +12883,7 @@
         30981117
       ],
       "doi": "10.1093/toxsci/kfae040",
-      "last_modified": "06/30/2024, 10:02:53"
+      "last_modified": "07/28/2024, 11:09:30"
     },
     {
       "pmid": 38605048,
@@ -12857,7 +12976,7 @@
         25903923
       ],
       "doi": "10.1038/s41597-024-03171-w",
-      "last_modified": "06/30/2024, 10:06:22"
+      "last_modified": "07/28/2024, 11:13:05"
     },
     {
       "pmid": 38643247,
@@ -12875,8 +12994,8 @@
       "is_clinical": "No",
       "citation_count": 1,
       "citations_per_year": 1,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 7.684938862862595,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 7.677633455835959,
       "provisional": "No",
       "x_coord": 0.8660254037844386,
       "y_coord": -0.5,
@@ -12924,7 +13043,7 @@
         35251951
       ],
       "doi": "10.1038/s42003-024-06177-7",
-      "last_modified": "06/30/2024, 10:08:26"
+      "last_modified": "07/28/2024, 11:15:37"
     },
     {
       "pmid": 38645198,
@@ -13002,7 +13121,7 @@
         29513652
       ],
       "doi": "10.1101/2024.04.09.588712",
-      "last_modified": "06/30/2024, 10:08:33"
+      "last_modified": "07/28/2024, 11:15:45"
     },
     {
       "pmid": 38651675,
@@ -13074,7 +13193,7 @@
         23861661
       ],
       "doi": "10.1002/ijc.34929",
-      "last_modified": "06/30/2024, 10:08:52"
+      "last_modified": "07/28/2024, 11:16:11"
     },
     {
       "pmid": 38659966,
@@ -13121,7 +13240,7 @@
         30842728
       ],
       "doi": "10.1101/2024.04.11.589093",
-      "last_modified": "06/30/2024, 10:09:22"
+      "last_modified": "07/28/2024, 11:16:49"
     },
     {
       "pmid": 38712147,
@@ -13152,6 +13271,7 @@
         34062119,
         29409532,
         31435019,
+        37311768,
         36693887,
         37468756,
         37390046,
@@ -13160,6 +13280,7 @@
         30475794,
         36149937,
         37824663,
+        37516747,
         29590361,
         34088715,
         37291214,
@@ -13168,7 +13289,7 @@
         29322913
       ],
       "doi": "10.1101/2024.04.22.590194",
-      "last_modified": "07/03/2024, 05:45:40"
+      "last_modified": "07/28/2024, 11:20:05"
     },
     {
       "pmid": 38714664,
@@ -13264,7 +13385,7 @@
         32879300
       ],
       "doi": "10.1038/s41467-024-47514-y",
-      "last_modified": "06/30/2024, 10:12:34"
+      "last_modified": "07/28/2024, 11:20:14"
     },
     {
       "pmid": 38746164,
@@ -13371,7 +13492,7 @@
         15004467
       ],
       "doi": "10.1101/2024.04.26.591349",
-      "last_modified": "06/30/2024, 10:14:20"
+      "last_modified": "07/28/2024, 11:22:07"
     },
     {
       "pmid": 38769143,
@@ -13462,7 +13583,7 @@
         36859716
       ],
       "doi": "10.1038/s41596-024-00996-y",
-      "last_modified": "06/30/2024, 10:15:38"
+      "last_modified": "07/28/2024, 11:23:43"
     },
     {
       "pmid": 38796686,
@@ -13519,7 +13640,7 @@
         26432245
       ],
       "doi": "10.1093/bioinformatics/btae340",
-      "last_modified": "06/30/2024, 10:17:19"
+      "last_modified": "07/28/2024, 11:25:20"
     },
     {
       "pmid": 38813868,
@@ -13537,8 +13658,8 @@
       "is_clinical": "No",
       "citation_count": 1,
       "citations_per_year": 1,
-      "expected_citations_per_year": 0.9999999995627543,
-      "field_citation_rate": 7.340888145152948,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 7.334039222514537,
       "provisional": "No",
       "x_coord": 0.28867513459481287,
       "y_coord": -0.5,
@@ -13620,7 +13741,7 @@
         30019515
       ],
       "doi": "10.7554/eLife.81875",
-      "last_modified": "06/30/2024, 10:18:30"
+      "last_modified": "07/28/2024, 11:26:19"
     },
     {
       "pmid": 38826219,
@@ -13717,7 +13838,7 @@
         30095162
       ],
       "doi": "10.21203/rs.3.rs-4402565/v1",
-      "last_modified": "06/30/2024, 10:19:21"
+      "last_modified": "07/28/2024, 11:27:03"
     },
     {
       "pmid": 38826261,
@@ -13821,7 +13942,152 @@
         33372656
       ],
       "doi": "10.1101/2024.03.27.587041",
-      "last_modified": "06/30/2024, 10:19:21"
+      "last_modified": "07/28/2024, 11:27:03"
+    },
+    {
+      "pmid": 38918178,
+      "year": 2024,
+      "title": "Leptochelins A-C, Cytotoxic Metallophores Produced by Geographically Dispersed <i>Leptothoe</i> Strains of Marine Cyanobacteria.",
+      "authors": "Nicole E Avalon, Mariana A Reis, Christopher C Thornburg, R Thomas Williamson, Daniel Petras, Allegra T Aron, George F Neuhaus, Momen Al-Hindy, Jana Mitrevska, Leonor Ferreira, João Morais, Yasin El Abiead, Evgenia Glukhov, Kelsey L Alexander, F Alexandra Vulpanovici, Matthew J Bertin, Syrena Whitner, Hyukjae Choi, Gabriella Spengler, Kirill Blinov, Ameen M Almohammadi, Lamiaa A Shaala, William R Kew, Ljiljana Paša-Tolić, Diaa T A Youssef, Pieter C Dorrestein, Vitor Vasconcelos, Lena Gerwick, Kerry L McPhail, William H Gerwick",
+      "journal": "J Am Chem Soc",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.33,
+      "animal": 0,
+      "molecular_cellular": 0.67,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": -0.5773502691896257,
+      "y_coord": 0,
+      "cited_by_clin": null,
+      "cited_by": [],
+      "references": [
+        37314407,
+        30264174,
+        8148612,
+        26769357,
+        32520016,
+        24951969,
+        8041691,
+        12423120,
+        33789052,
+        36535031,
+        35941113,
+        29982925,
+        15457255,
+        34795435,
+        31001838,
+        29779657,
+        17841485,
+        12950179,
+        30890712,
+        37594919,
+        21594652,
+        17804665,
+        35259694,
+        20376388,
+        34248867,
+        34681158,
+        33418911,
+        21699219,
+        33765498,
+        21806012,
+        25501581,
+        19821963,
+        12943851,
+        21570406,
+        9473040,
+        11098815,
+        4332462,
+        16194235,
+        25764171,
+        14602630
+      ],
+      "doi": "10.1021/jacs.4c05399",
+      "last_modified": "07/28/2024, 11:32:30"
+    },
+    {
+      "pmid": 38926365,
+      "year": 2024,
+      "title": "METTL3-mediated chromatin contacts promote stress granule phase separation through metabolic reprogramming during senescence.",
+      "authors": "Chen Wang, Hideki Tanizawa, Connor Hill, Aaron Havas, Qiang Zhang, Liping Liao, Xue Hao, Xue Lei, Lu Wang, Hao Nie, Yuan Qi, Bin Tian, Alessandro Gardini, Andrew V Kossenkov, Aaron Goldman, Shelley L Berger, Ken-Ichi Noma, Peter D Adams, Rugang Zhang",
+      "journal": "Nat Commun",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.2,
+      "animal": 0,
+      "molecular_cellular": 0.8,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": -0.6928203230275509,
+      "y_coord": -0.2,
+      "cited_by_clin": null,
+      "cited_by": [],
+      "references": [
+        33235358,
+        29298880,
+        23685455,
+        31388144,
+        35173161,
+        33377114,
+        31642031,
+        31292544,
+        27050931,
+        7334375,
+        29489746,
+        16901784,
+        27099234,
+        21925384,
+        18502472,
+        33176136,
+        32251394,
+        22549727,
+        26777405,
+        37192912,
+        17641637,
+        33187984,
+        27602576,
+        35725845,
+        25959774,
+        37118553,
+        24316715,
+        23945590,
+        33795874,
+        32451507,
+        35851616,
+        22682246,
+        35012849,
+        31086298,
+        33902106,
+        31831736,
+        28846090,
+        26467476,
+        25243985,
+        28143833,
+        33119753,
+        19279323,
+        33855023,
+        36544018,
+        20078217,
+        27643841,
+        26412307,
+        33111119,
+        22941365
+      ],
+      "doi": "10.1038/s41467-024-49745-5",
+      "last_modified": "07/28/2024, 11:32:58"
     }
   ]
 }
