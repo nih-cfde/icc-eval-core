@@ -469,12 +469,6 @@
   },
   {
     "dir": "2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
-  },
-  {
-    "dir": "2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1",
     "name": "submission_67073a558f17a55f57f679b02e5e1631d478a275",
     "ext": "",
     "size": 288
@@ -2551,12 +2545,6 @@
   },
   {
     "dir": "ERCC",
-    "name": "C2M2",
-    "ext": "",
-    "size": 96
-  },
-  {
-    "dir": "ERCC",
     "name": "ERCCRBP.Biofluid.nodes",
     "ext": "csv",
     "size": 818
@@ -2638,210 +2626,6 @@
     "name": "ERCCREG.edges",
     "ext": "csv",
     "size": 1562648256
-  },
-  {
-    "dir": "ERCC/C2M2",
-    "name": "2021-06-11",
-    "ext": "",
-    "size": 128
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11",
-    "name": "ERCC_C2M2_2021-06-11_datapackage",
-    "ext": "",
-    "size": 96
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11",
-    "name": "ERCC_C2M2_2021-06-11_datapackage",
-    "ext": "zip",
-    "size": 5665957
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage",
-    "name": "CFDEexRNA_06102021",
-    "ext": "",
-    "size": 288
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021",
-    "name": "bag-info",
-    "ext": "txt",
-    "size": 298
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021",
-    "name": "bagit",
-    "ext": "txt",
-    "size": 55
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021",
-    "name": "data",
-    "ext": "",
-    "size": 800
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021",
-    "name": "manifest-md5",
-    "ext": "txt",
-    "size": 1369
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021",
-    "name": "manifest-sha256",
-    "ext": "txt",
-    "size": 2105
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021",
-    "name": "tagmanifest-md5",
-    "ext": "txt",
-    "size": 192
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021",
-    "name": "tagmanifest-sha256",
-    "ext": "txt",
-    "size": 320
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "C2M2_datapackage",
-    "ext": "json",
-    "size": 52464
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "anatomy",
-    "ext": "tsv",
-    "size": 5350
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "assay_type",
-    "ext": "tsv",
-    "size": 628
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "biosample",
-    "ext": "tsv",
-    "size": 423363
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "biosample_from_subject",
-    "ext": "tsv",
-    "size": 312034
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "biosample_in_collection",
-    "ext": "tsv",
-    "size": 295118
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "collection",
-    "ext": "tsv",
-    "size": 4394
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "collection_defined_by_project",
-    "ext": "tsv",
-    "size": 2610
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "collection_in_collection",
-    "ext": "tsv",
-    "size": 120
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "data_type",
-    "ext": "tsv",
-    "size": 442
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "file",
-    "ext": "tsv",
-    "size": 24518149
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "file_describes_biosample",
-    "ext": "tsv",
-    "size": 10074203
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "file_describes_subject",
-    "ext": "tsv",
-    "size": 9959379
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "file_format",
-    "ext": "tsv",
-    "size": 168
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "file_in_collection",
-    "ext": "tsv",
-    "size": 9627581
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "id_namespace",
-    "ext": "tsv",
-    "size": 480
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "ncbi_taxonomy",
-    "ext": "tsv",
-    "size": 115
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "primary_dcc_contact",
-    "ext": "tsv",
-    "size": 492
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "project",
-    "ext": "tsv",
-    "size": 24207
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "project_in_project",
-    "ext": "tsv",
-    "size": 2313
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "subject",
-    "ext": "tsv",
-    "size": 245850
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "subject_in_collection",
-    "ext": "tsv",
-    "size": 174459
-  },
-  {
-    "dir": "ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage/CFDEexRNA_06102021/data",
-    "name": "subject_role_taxonomy",
-    "ext": "tsv",
-    "size": 181419
   },
   {
     "dir": "HuBMAP",
@@ -2962,24 +2746,6 @@
     "name": "LINCS.edges",
     "ext": "csv",
     "size": 31803743
-  },
-  {
-    "dir": "LINCS",
-    "name": "XMT",
-    "ext": "",
-    "size": 96
-  },
-  {
-    "dir": "LINCS/XMT",
-    "name": "2024-04-10",
-    "ext": "",
-    "size": 96
-  },
-  {
-    "dir": "LINCS/XMT/2024-04-10",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Sigs",
-    "ext": "gmt",
-    "size": 16319270
   },
   {
     "dir": "MW",
@@ -4000,12 +3766,6 @@
     "name": "substance",
     "ext": "tsv",
     "size": 38
-  },
-  {
-    "dir": "submission",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
   },
   {
     "dir": "submission",
@@ -6394,12 +6154,6 @@
     "name": "._substance",
     "ext": "tsv",
     "size": 176
-  },
-  {
-    "dir": "submission_validated",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
   },
   {
     "dir": "submission_validated",
@@ -15750,72 +15504,6 @@
     "size": 38
   },
   {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage",
-    "name": "data_3318a10b82ea496baf88073610ccc9c810deb001",
-    "ext": "",
-    "size": 96
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001",
-    "name": "data",
-    "ext": "",
-    "size": 96
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001/data",
-    "name": "external_CV_reference_files",
-    "ext": "",
-    "size": 192
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001/data/external_CV_reference_files",
-    "name": "doid.version_2023-03-31",
-    "ext": "obo",
-    "size": 6371017
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001/data/external_CV_reference_files",
-    "name": "ensembl_organism_name_to_ncbi_taxonomy_id",
-    "ext": "tsv",
-    "size": 27
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001/data/external_CV_reference_files",
-    "name": "sample_pubchem_reference_data",
-    "ext": "",
-    "size": 128
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001/data/external_CV_reference_files",
-    "name": "sample_uniprot_reference_data",
-    "ext": "",
-    "size": 96
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001/data/external_CV_reference_files/sample_uniprot_reference_data",
-    "name": "protein.first_5000_records.tsv",
-    "ext": "gz",
-    "size": 117901
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001/data/external_CV_reference_files/sample_pubchem_reference_data",
-    "name": "compound.first_5000_records.max_100_synonyms_per_term",
-    "ext": "tsv",
-    "size": 4671038
-  },
-  {
-    "dir": "GTEx_C2M2_2023-09-01_datapackage/data_3318a10b82ea496baf88073610ccc9c810deb001/data/external_CV_reference_files/sample_pubchem_reference_data",
-    "name": "substance.first_5000_records.max_100_synonyms_per_term",
-    "ext": "tsv",
-    "size": 471091
-  },
-  {
     "dir": "GlyGen_C2M2_2022-04-15_datapackage",
     "name": "autogenerated_C2M2_term_tables",
     "ext": "",
@@ -17188,12 +16876,6 @@
     "name": "substance",
     "ext": "tsv",
     "size": 38
-  },
-  {
-    "dir": "GlyGen_C2M2_2023-03-06_datapackage",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
   },
   {
     "dir": "GlyGen_C2M2_2023-03-06_datapackage",
@@ -21649,12 +21331,6 @@
   },
   {
     "dir": "HuBMAP_C2M2_2023-09-17_datapackage",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
-  },
-  {
-    "dir": "HuBMAP_C2M2_2023-09-17_datapackage",
     "name": "submission_467c58cb6e080e73377ca0258edb49e4c5b91c77",
     "ext": "",
     "size": 288
@@ -22984,12 +22660,6 @@
     "name": "substance",
     "ext": "tsv",
     "size": 38
-  },
-  {
-    "dir": "IDG_C2M2_2022-06-15_datapackage",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
   },
   {
     "dir": "IDG_C2M2_2022-06-15_datapackage",
@@ -35935,12 +35605,6 @@
   },
   {
     "dir": "SPARC_C2M2_2022-01-15_datapackage",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
-  },
-  {
-    "dir": "SPARC_C2M2_2022-01-15_datapackage",
     "name": "submission_output",
     "ext": "",
     "size": 288
@@ -39220,12 +38884,6 @@
     "name": "subject",
     "ext": "numbers",
     "size": 555969
-  },
-  {
-    "dir": "SPARC_C2M2_2023-01-10_datapackage",
-    "name": ".DS_Store",
-    "ext": "",
-    "size": 6148
   },
   {
     "dir": "SPARC_C2M2_2023-01-10_datapackage",
