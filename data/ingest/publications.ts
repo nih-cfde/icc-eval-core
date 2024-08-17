@@ -1,24 +1,22 @@
 import { uniq, uniqBy } from "lodash-es";
 import { queryIcite } from "@/api/icite";
-import type { Datum } from "@/api/icite-results";
 import { queryReporter } from "@/api/reporter";
-import type { PublicationsQuery } from "@/api/reporter-publications-query.d";
-import type { PublicationsResults } from "@/api/reporter-publications-results.d";
+import type { Datum } from "@/api/types/icite-results";
+import type { PublicationsQuery } from "@/api/types/reporter-publications-query";
+import type { PublicationsResults } from "@/api/types/reporter-publications-results";
 import { log } from "@/util/log";
 import { query } from "@/util/request";
+import { count, formatDate } from "@/util/string";
 
 /** get publications associated with core projects */
 export const getPublications = async (coreProjects: string[]) => {
   /** de-dupe */
   coreProjects = uniq(coreProjects);
 
-  log(
-    `Getting publications for ${coreProjects.length.toLocaleString()} core projects`,
-    "start",
-  );
+  log(`Getting publications for ${count(coreProjects)} core projects`);
 
   /** get publications associated with core projects */
-  const { result: reporter, error: reporterError } = await query(
+  const reporter = await query(
     () =>
       queryReporter<PublicationsQuery, PublicationsResults>("publications", {
         criteria: { core_project_nums: coreProjects },
@@ -32,14 +30,10 @@ export const getPublications = async (coreProjects: string[]) => {
   /** de-dupe */
   reporterPublications = uniqBy(reporterPublications, (result) => result.pmid);
 
-  if (reporterError) log("Error getting publications", "error");
-  log(
-    `Got ${reporterPublications.length.toLocaleString()} publications`,
-    "success",
-  );
+  log(`Getting metadata for ${count(reporterPublications)} core publications`);
 
   /** get extra info about publications */
-  const { result: icite, error: iciteError } = await query(
+  const icite = await query(
     () =>
       queryIcite(
         reporterPublications
@@ -54,12 +48,6 @@ export const getPublications = async (coreProjects: string[]) => {
 
   /** de-dupe */
   icitePublications = uniqBy(icitePublications, (result) => result.pmid);
-
-  if (iciteError) throw log("Error getting publication metadata", "error");
-  log(
-    `Got ${icitePublications.length.toLocaleString()} publication metadata`,
-    "success",
-  );
 
   /** quick lookup of extra info from icite results by id */
   const extrasLookup: Record<
@@ -102,9 +90,7 @@ export const getPublications = async (coreProjects: string[]) => {
         .map((string) => string.trim()),
       journal: extras?.journal ?? "",
       year: extras?.year ?? 0,
-      modified: extras?.last_modified
-        ? new Date(extras.last_modified).toISOString()
-        : "",
+      modified: formatDate(extras?.last_modified),
       doi: extras?.doi ?? "",
       relative_citation_ratio: extras?.relative_citation_ratio ?? 0,
       citations: extras?.citation_count ?? 0,

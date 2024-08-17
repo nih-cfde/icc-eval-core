@@ -1,4 +1,4 @@
-import { meanBy, orderBy } from "lodash-es";
+import { meanBy, orderBy, uniq, uniqBy } from "lodash-es";
 import {
   fileExists,
   getCommits,
@@ -11,67 +11,90 @@ import {
   getStars,
   searchRepos,
 } from "@/api/github";
-import { deindent, indent, log } from "@/util/log";
-import { queryMulti } from "@/util/request";
+import { log } from "@/util/log";
+import { filterErrors, queryMulti } from "@/util/request";
+import { count } from "@/util/string";
 
 export const getRepos = async (coreProjects: string[]) => {
-  log(
-    `Getting repos for ${coreProjects.length.toLocaleString()} core projects`,
-  );
+  /** de-dupe */
+  coreProjects = uniq(coreProjects);
 
-  indent();
+  log(`Getting repos for ${count(coreProjects)} core projects`);
 
-  const { results: repos, errors: repoErrors } = await queryMulti(
+  const repoResults = await queryMulti(
     coreProjects.map((coreProject) => async () => {
       /** TEMPORARY, to not query repos that aren't tagged yet */
       if (coreProject.toLowerCase() !== "u54od036472") throw Error("Skip");
 
-      /** search for all repos tagged with core project number */
-      const repos = await searchRepos(coreProject);
-
-      /** for each repo */
-      return Promise.all(
-        repos.map(async (repo) => {
-          const owner = repo.owner?.login ?? "";
-          const name = repo.name;
-
-          return {
-            /** associated core project number */
-            core_project: coreProject,
-            /** base top-level details */
-            ...repo,
-            stars: await getStars(owner, name),
-            /**
-             * watchers over time not possible
-             * https://stackoverflow.com/questions/71090557/github-api-number-of-watch-over-time
-             */
-            forks: await getForks(owner, name),
-            issues: await getIssues(owner, name),
-            pull_requests: await getPullRequests(owner, name),
-            commits: await getCommits(owner, name),
-            contributors: await getContributors(owner, name),
-            languages: await getLanguages(owner, name),
-            readme: await fileExists(owner, name, "README.md"),
-            contributing: await fileExists(owner, name, "CONTRIBUTING.md"),
-            dependencies: await getDependencies(owner, name),
-          };
-        }),
-      );
+      /**
+       * search for all repos tagged with core project number. gets base,
+       * top-level details.
+       */
+      return (await searchRepos(coreProject)).map((repo) => ({
+        ...repo,
+        core_project: coreProject,
+      }));
     }),
     "github-repos.json",
   );
-  deindent();
 
-  if (repos.length)
-    log(
-      `Got ${repos.length.toLocaleString()} repos`,
-      repos.length ? "success" : "error",
-    );
-  if (repoErrors.length)
-    log(`Problem getting ${repoErrors.length.toLocaleString()} repos`, "warn");
+  /** filter out errors and flatten */
+  let repos = filterErrors(repoResults).flat();
 
-  type Issue = (typeof repos)[number][number]["issues"][number];
-  type PullRequest = (typeof repos)[number][number]["pull_requests"][number];
+  /** de-dupe */
+  repos = uniqBy(repos, "id");
+
+  log(`Getting details for ${count(repos)} repos`);
+
+  const repoDetails = await queryMulti(
+    repos.map((repo) => async (progress) => {
+      const owner = repo.owner?.login ?? "";
+      const name = repo.name;
+
+      /**
+       * watchers over time not possible
+       * https://stackoverflow.com/questions/71090557/github-api-number-of-watch-over-time
+       */
+
+      const stars = await getStars(owner, name);
+      progress(0.2);
+      const forks = await getForks(owner, name);
+      progress(0.3);
+      const issues = await getIssues(owner, name);
+      progress(0.4);
+      const pull_requests = await getPullRequests(owner, name);
+      progress(0.5);
+      const commits = await getCommits(owner, name);
+      progress(0.6);
+      const contributors = await getContributors(owner, name);
+      progress(0.7);
+      const languages = await getLanguages(owner, name);
+      progress(0.8);
+      const readme = await fileExists(owner, name, "README.md");
+      const contributing = await fileExists(owner, name, "CONTRIBUTING.md");
+      progress(0.9);
+      const dependencies = await getDependencies(owner, name);
+
+      return {
+        ...repo,
+        stars,
+        forks,
+        issues,
+        pull_requests,
+        commits,
+        contributors,
+        languages,
+        readme,
+        contributing,
+        dependencies,
+      };
+    }),
+    "github-repo-details.json",
+  );
+
+  type Repo = Exclude<(typeof repoDetails)[number], Error>;
+  type Issue = Repo["issues"][number];
+  type PullRequest = Repo["pull_requests"][number];
 
   /** transform issue (or pull request, which gh considers sub-type of issue) */
   const mapIssue = (issue: Issue | PullRequest) => ({
@@ -98,7 +121,7 @@ export const getRepos = async (coreProjects: string[]) => {
     );
 
   /** transform data into desired format, with fallbacks */
-  const transformedRepos = repos.flat().map((repo) => ({
+  const transformedRepos = filterErrors(repoDetails).map((repo) => ({
     core_project: repo.core_project,
     id: repo.id,
     owner: repo.owner?.login ?? "",

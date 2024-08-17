@@ -1,3 +1,4 @@
+import { getDrc } from "@/ingest/drc";
 import { getRepos } from "@/ingest/github";
 import { getJournals } from "@/ingest/journals";
 import { getOpportunities } from "@/ingest/opportunities";
@@ -43,6 +44,10 @@ for (const coreProject of coreProjects)
     (repo) => repo.core_project === coreProject.id,
   ).length;
 
+divider("DRC");
+
+const { dcc, file, code } = await getDrc();
+
 divider("Saving");
 
 /** save output data */
@@ -52,5 +57,8 @@ saveFile(projects, `${OUTPUT_PATH}/projects.json`);
 saveFile(publications, `${OUTPUT_PATH}/publications.json`);
 saveFile(journals, `${OUTPUT_PATH}/journals.json`);
 saveFile(repos, `${OUTPUT_PATH}/repos.json`);
+saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
+saveFile(file, `${OUTPUT_PATH}/drc-file.json`);
+saveFile(code, `${OUTPUT_PATH}/drc-code.json`);
 
 await browser.close();

@@ -100,9 +100,12 @@
       "2024-07-03T11:14:18Z",
       "2024-07-14T12:25:18Z",
       "2024-07-25T09:16:29Z",
-      "2024-07-26T10:34:37Z"
+      "2024-07-26T10:34:37Z",
+      "2024-07-31T14:09:41Z",
+      "2024-08-01T11:42:54Z",
+      "2024-08-01T19:27:45Z"
     ],
-    "watchers": 86,
+    "watchers": 89,
     "forks": [
       "2024-07-08T00:50:35Z",
       "2024-06-19T14:46:23Z",
@@ -336,6 +339,16 @@
       {
         "state": "open",
         "state_reason": null,
+        "created": "2024-07-29T17:54:56Z",
+        "modified": "2024-07-29T17:57:36Z",
+        "closed": null,
+        "labels": [
+          "enhancement"
+        ]
+      },
+      {
+        "state": "open",
+        "state_reason": null,
         "created": "2024-07-09T19:13:52Z",
         "modified": "2024-07-24T21:54:35Z",
         "closed": null,
@@ -426,23 +439,23 @@
         "labels": []
       }
     ],
-    "open_issues": 3,
+    "open_issues": 4,
     "closed_issues": 8,
-    "issue_time_open": 2268508,
+    "issue_time_open": 2630077,
     "pull_requests": [
       {
-        "state": "open",
+        "state": "closed",
         "state_reason": "",
         "created": "2024-07-25T18:32:41Z",
-        "modified": "2024-07-25T18:33:14Z",
-        "closed": null,
+        "modified": "2024-07-29T15:35:55Z",
+        "closed": "2024-07-29T15:35:53Z",
         "labels": []
       },
       {
         "state": "open",
         "state_reason": "",
         "created": "2024-07-24T01:02:01Z",
-        "modified": "2024-07-25T22:29:38Z",
+        "modified": "2024-07-29T17:48:25Z",
         "closed": null,
         "labels": []
       },
@@ -479,10 +492,11 @@
         "labels": []
       }
     ],
-    "open_pull_requests": 2,
-    "closed_pull_requests": 4,
-    "pull_request_time_open": 558171,
+    "open_pull_requests": 1,
+    "closed_pull_requests": 5,
+    "pull_request_time_open": 832759,
     "commits": [
+      "2024-07-29T15:35:53Z",
       "2024-07-25T15:22:29Z",
       "2024-07-11T19:44:59Z",
       "2024-07-02T19:11:08Z",
@@ -493,6 +507,10 @@
       {
         "name": "vincerubinetti",
         "contributions": 5
+      },
+      {
+        "name": "cgreene",
+        "contributions": 1
       }
     ],
     "languages": [
@@ -522,7 +540,7 @@
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-07-25T22:29:15Z",
+    "modified": "2024-08-02T00:32:33Z",
     "license": "",
     "readme": true,
     "contributing": false,
