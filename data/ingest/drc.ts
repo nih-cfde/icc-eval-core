@@ -1,10 +1,11 @@
-import { parse } from "path";
-import { countBy, groupBy, mapValues, omit, sumBy, uniqBy } from "lodash-es";
+import type { Stats } from "fs";
+import { countBy, sumBy, uniqBy } from "lodash-es";
 import type { Code, DCC, File } from "@/api/types/drc";
 import { downloadFile, loadFile, unzip } from "@/util/file";
 import { log } from "@/util/log";
-import { filterErrors, queryMulti } from "@/util/request";
-import { bytes, count, urlToPath } from "@/util/string";
+import { queryMulti } from "@/util/request";
+import { bytes, count, parsePath } from "@/util/string";
+import { formatDate } from "./../util/string";
 
 /** DRC top-level lists */
 const drcLists = [
@@ -36,82 +37,100 @@ export const getDrc = async () => {
     }),
   );
 
-  const [dcc, file] = lists as [DCC, File, Code];
+  const [dcc, file, code] = lists as [DCC, File, Code];
 
-  /** split full path into parts */
-  const getParts = (path: string) => {
-    const { dir, name, ext } = parse(urlToPath(path));
-    return { dir, name, ext: ext.replace(/^\./, "") };
+  /** get download path and ext */
+  const getPath = (url = "", key: string) => {
+    const { name, ext } = parsePath(url);
+    return { path: `temp/${key}/${name}.${ext}`, ext };
   };
 
-  /** resources to download */
-  let resources = dcc
-    /** "dcc" type */
-    .map((dcc) => ({
+  /** resource data */
+  const resources = {
+    dcc: dcc.map((dcc) => ({
       url: dcc.link ?? "",
-      type: "dcc",
-      size: 0,
-    }))
-    /** "file" type */
-    .concat(
-      file.map((file) => ({
-        url: file.link ?? "",
-        type: "file",
-        size: Number(file.size),
-      })),
-    )
-    .map(({ type, ...resource }) => {
-      /** split url into parts */
-      const { name, ext } = getParts(resource.url);
-      return {
-        ...resource,
-        /** set path to download to */
-        path: `temp/${type}/${name}.${ext}`,
-        ext,
-      };
-    })
-    /** only download certain file extensions */
-    .filter(({ ext }) => ["zip", "gmt"].includes(ext));
+      date: formatDate(dcc.lastmodified),
+      ...getPath(dcc.link, "dcc"),
+      files: [] as Files,
+    })),
+    file: file.map((file) => ({
+      url: file.link ?? "",
+      size: Number(file.size),
+      name: file.filename ?? "",
+      date: formatDate(file.link?.match(/\d\d\d\d-\d\d-\d\d/)?.[0]),
+      ...getPath(file.link, "file"),
+      files: [] as Files,
+    })),
+    code: code.map((code) => ({
+      url: code.link ?? "",
+      type: code.type ?? "",
+      name: code.name ?? "",
+      date: "",
+      ...getPath(code.link, "code"),
+      files: [] as Files,
+    })),
+  };
 
   /** de-dupe */
-  resources = uniqBy(resources, "path");
+  resources.dcc = uniqBy(resources.dcc, "path");
+  resources.file = uniqBy(resources.file, "path");
+  resources.code = uniqBy(resources.code, "path");
 
-  logFiles(resources);
+  logFiles(Object.values(resources).flat());
 
   log("Downloading resources");
 
+  /** transform file info */
+  const mapFile = ({ path, stats }: { path: string; stats: Stats }) => {
+    const parts = parsePath(path);
+    const dir = parts.dir.split("/").slice(4).join("/");
+    const type = parts.dir.split("/")[3] ?? "";
+    return {
+      type,
+      dir,
+      name: parts.name,
+      ext: parts.ext,
+      size: stats.size,
+      date: formatDate(stats.mtime),
+    };
+  };
+  type Files = ReturnType<typeof mapFile>[];
+
   /** download assets locally and get paths to local files */
-  const fileResults = await queryMulti(
-    resources.map(({ url, path, ext }) => async (progress) => {
-      /** download file */
-      const file = await downloadFile(url, path, progress);
+  for (const resource of [resources.dcc, resources.file]) {
+    const fileResults = await queryMulti(
+      resource.map(({ url, path, ext }) => async (progress) => {
+        if (!["gmt", "zip"].includes(ext)) throw Error(`Skipping .${ext} file`);
 
-      /** unzip and get all file paths */
-      if (ext === "zip") return (await unzip(file.path)) ?? [];
+        /** download file */
+        const file = await downloadFile(url, path, progress);
 
-      return file;
-    }),
-  );
+        /** unzip and get all file paths */
+        if (ext === "zip") return (await unzip(file.path)) ?? [];
 
-  /** de-dupe, filter out errors, and flatten */
-  const files = uniqBy(filterErrors(fileResults).flat(), "path").map(
-    ({ path, size }) => {
-      const parts = getParts(path);
-      const dir = parts.dir.split("/").slice(4).join("/");
-      const type = parts.dir.split("/")[3] ?? "";
-      return { type, dir, name: parts.name, ext: parts.ext, size };
-    },
-  );
+        return [file];
+      }),
+    );
 
-  logFiles(files);
+    /** add file info to resource data */
+    for (const [index, files] of Object.entries(fileResults)) {
+      if (files instanceof Error) continue;
+      resource[Number(index)]!.files = files.map(mapFile);
+    }
+  }
 
-  log(`${count(files)} files`);
-  log(`${bytes(sumBy(files, "size"))}`);
+  /** get overall file stats */
+  const allFiles = Object.values(resources)
+    .map((resource) => resource.map((items) => items.files))
+    .flat()
+    .flat();
 
-  /** return unzipped files (for now) */
-  return mapValues(groupBy(files, "type"), (value) =>
-    value.map((value) => omit(value, "type")),
-  );
+  logFiles(allFiles);
+
+  log(`${count(allFiles)} files`);
+  log(`${bytes(sumBy(allFiles, "size"))}`);
+
+  return resources;
 };
 
 /** log file types */

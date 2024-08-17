@@ -1,3 +1,4 @@
+import { parse } from "path";
 import { size } from "lodash-es";
 
 /** get "size" of value and format as string */
@@ -36,4 +37,14 @@ export const midTrunc = (string: string, limit: number) => {
   const start = Math.ceil(string.length / 2 - reduce / 2);
   const end = Math.ceil(string.length / 2 + reduce / 2);
   return string.slice(0, start) + join + string.slice(end);
+};
+
+/** format date as iso string */
+export const formatDate = (date?: ConstructorParameters<typeof Date>[0]) =>
+  date ? new Date(date).toISOString() : "";
+
+/** split full path into parts */
+export const parsePath = (path: string) => {
+  const { dir, name, ext } = parse(urlToPath(path));
+  return { dir, name, ext: ext.replace(/^\./, "") };
 };

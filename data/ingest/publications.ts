@@ -6,7 +6,7 @@ import type { PublicationsQuery } from "@/api/types/reporter-publications-query"
 import type { PublicationsResults } from "@/api/types/reporter-publications-results";
 import { log } from "@/util/log";
 import { query } from "@/util/request";
-import { count } from "@/util/string";
+import { count, formatDate } from "@/util/string";
 
 /** get publications associated with core projects */
 export const getPublications = async (coreProjects: string[]) => {
@@ -90,9 +90,7 @@ export const getPublications = async (coreProjects: string[]) => {
         .map((string) => string.trim()),
       journal: extras?.journal ?? "",
       year: extras?.year ?? 0,
-      modified: extras?.last_modified
-        ? new Date(extras.last_modified).toISOString()
-        : "",
+      modified: formatDate(extras?.last_modified),
       doi: extras?.doi ?? "",
       relative_citation_ratio: extras?.relative_citation_ratio ?? 0,
       citations: extras?.citation_count ?? 0,

@@ -1,0 +1,443 @@
+[
+  {
+    "url": "https://data.sennetconsortium.org/",
+    "type": "Apps URL",
+    "name": "SenNet Data Portal",
+    "date": "",
+    "path": "temp/code/.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://data.sennetconsortium.org/ccf-eui",
+    "type": "Apps URL",
+    "name": "SenNet Exploration User Interface",
+    "date": "",
+    "path": "temp/code/ccf-eui.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://lincsproject.org/LINCS/tools",
+    "type": "Apps URL",
+    "name": "LINCS Tools Marketplace",
+    "date": "",
+    "path": "temp/code/tools.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://brl-bcm.stoplight.io/docs/exrna-atlas-json-api/ZG9jOjQ1Mg-overview",
+    "type": "API",
+    "name": "exRNA Atlas JSON-LD",
+    "date": "",
+    "path": "temp/code/ZG9jOjQ1Mg-overview.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://genboree.org/cfde-gene-dev/ui/api-docs",
+    "type": "API",
+    "name": "CFDE GeneReg Linked Data Hub",
+    "date": "",
+    "path": "temp/code/api-docs.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://reg.clinicalgenome.org/doc/",
+    "type": "API",
+    "name": "Allele Registry",
+    "date": "",
+    "path": "temp/code/doc.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/variant.ts",
+    "type": "PWB Metanodes",
+    "name": "Variant",
+    "date": "",
+    "path": "temp/code/variant.ts",
+    "ext": "ts",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/regulatoryElement.ts",
+    "type": "PWB Metanodes",
+    "name": "Regulatory Element",
+    "date": "",
+    "path": "temp/code/regulatoryElement.ts",
+    "ext": "ts",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/regulatoryElementInfo/index.tsx",
+    "type": "PWB Metanodes",
+    "name": "Regulatory Element Info",
+    "date": "",
+    "path": "temp/code/index.tsx",
+    "ext": "tsx",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/tree/main/components/lincs/l1000-reverse-search",
+    "type": "PWB Metanodes",
+    "name": "LINCS L1000 Reverse Search",
+    "date": "",
+    "path": "temp/code/l1000-reverse-search.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_c2m2.py",
+    "type": "ETL",
+    "name": "process_mcf10a_c2m2.py",
+    "date": "",
+    "path": "temp/code/process_mcf10a_c2m2.py",
+    "ext": "py",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/build_file_lincs2021.py",
+    "type": "ETL",
+    "name": "build_file_lincs2021.py",
+    "date": "",
+    "path": "temp/code/build_file_lincs2021.py",
+    "ext": "py",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/MyVariantInfo",
+    "type": "PWB Metanodes",
+    "name": "Variant",
+    "date": "",
+    "path": "temp/code/MyVariantInfo.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/RegulatoryElementInfo",
+    "type": "PWB Metanodes",
+    "name": "Regulatory Element Info",
+    "date": "",
+    "path": "temp/code/RegulatoryElementInfo.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/VariantInfo",
+    "type": "PWB Metanodes",
+    "name": "VariantInfo",
+    "date": "",
+    "path": "temp/code/VariantInfo.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://search.api.hubmapconsortium.org/v3/",
+    "type": "API",
+    "name": "HuBMAP Search API",
+    "date": "",
+    "path": "temp/code/v3.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/api/metadata/75cfc060ea7bec431a356c00c4a67c74?raw=1",
+    "type": "API",
+    "name": "SmartAPI URL",
+    "date": "",
+    "path": "temp/code/75cfc060ea7bec431a356c00c4a67c74.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/01",
+    "type": "API",
+    "name": "SmartAPI URL",
+    "date": "",
+    "path": "temp/code/01.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/Enrichr/help#api",
+    "type": "API",
+    "name": "Enrichr API",
+    "date": "",
+    "path": "temp/code/help.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_cm2.py",
+    "type": "ETL",
+    "name": "LINCS ETL script",
+    "date": "",
+    "path": "temp/code/process_mcf10a_cm2.py",
+    "ext": "py",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/SigComLINCSGeneSetResults",
+    "type": "PWB Metanodes",
+    "name": "SigCom LINCS Gene Set Search Results",
+    "date": "",
+    "path": "temp/code/SigComLINCSGeneSetResults.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/SigComLINCSSignatureResults",
+    "type": "PWB Metanodes",
+    "name": "SigCom LINCS Signature Search Results",
+    "date": "",
+    "path": "temp/code/SigComLINCSSignatureResults.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/fdb3ecfcf5006a142d3f5522930324f1",
+    "type": "API",
+    "name": "SigCom LINCS Data",
+    "date": "",
+    "path": "temp/code/fdb3ecfcf5006a142d3f5522930324f1.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf0a_c2m2.py",
+    "type": "ETL",
+    "name": "LINCS ETL Script",
+    "date": "",
+    "path": "temp/code/process_mcf0a_c2m2.py",
+    "ext": "py",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mf10a_c2m2.py",
+    "type": "ETL",
+    "name": "LINCS ETL Script",
+    "date": "",
+    "path": "temp/code/process_mf10a_c2m2.py",
+    "ext": "py",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"<GENE_NAME>\"]}",
+    "type": "Entity Page Template",
+    "name": "SigCom LINCS Gene Template",
+    "date": "",
+    "path": "temp/code/sigcom-lincs.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "http://lincsportal.ccs.miami.edu/signatures/perturbations/<PERT_ID>",
+    "type": "Entity Page Template",
+    "name": "LINCS Data Portal 2.0 Template",
+    "date": "",
+    "path": "temp/code/%3CPERT_ID%3E.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "http://lincsportal.ccs.miami.edu/signatures/perturbations/16646",
+    "type": "Entity Page Template",
+    "name": "LINCS Data Portal 2.0 Example (Imatinib)",
+    "date": "",
+    "path": "temp/code/16646.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/Harmonizome/gene/<GENE_NAME>",
+    "type": "Entity Page Template",
+    "name": "Harmonizome Template",
+    "date": "",
+    "path": "temp/code/%3CGENE_NAME%3E.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/Harmonizome/gene/ACE2",
+    "type": "Entity Page Template",
+    "name": "Harmonizome Example (ACE2)",
+    "date": "",
+    "path": "temp/code/ACE2.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"<DRUG_NAME>\"]}",
+    "type": "Entity Page Template",
+    "name": "Drugmonizome Template",
+    "date": "",
+    "path": "temp/code/drugmonizome.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/LINCSL1000ReverseSearchDashboard",
+    "type": "PWB Metanodes",
+    "name": "LINCS L1000 Reverse Search",
+    "date": "",
+    "path": "temp/code/LINCSL1000ReverseSearchDashboard.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/Harmonizome/gene/{gene.symbol}",
+    "type": "Entity Page Template",
+    "name": "Harmonizome Gene Pages",
+    "date": "",
+    "path": "temp/code/%7Bgene.symbol%7D",
+    "ext": "symbol%7D",
+    "files": []
+  },
+  {
+    "url": "https://pharos.nih.gov/search?q={gene.symbol}",
+    "type": "Entity Page Template",
+    "name": "Pharos Gene Pages",
+    "date": "",
+    "path": "temp/code/search.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://www.glygen.org/protein/{protein.uniprot}",
+    "type": "Entity Page Template",
+    "name": "GlyGen Protein Pages",
+    "date": "",
+    "path": "temp/code/%7Bprotein.uniprot%7D",
+    "ext": "uniprot%7D",
+    "files": []
+  },
+  {
+    "url": "https://bdcw.org/MetGENE/metGene.php?GeneInfoStr={gene.symbol}&GeneIDType=SYMBOL&species=hsa&anatomy=NA&disease_slim=&disease=NA",
+    "type": "Entity Page Template",
+    "name": "MetGENE Gene Pages",
+    "date": "",
+    "path": "temp/code/metGene.php",
+    "ext": "php",
+    "files": []
+  },
+  {
+    "url": "https://www.gtexportal.org/home/gene/{gene.ensembl}",
+    "type": "Entity Page Template",
+    "name": "GTEx Portal Gene Pages",
+    "date": "",
+    "path": "temp/code/%7Bgene.ensembl%7D",
+    "ext": "ensembl%7D",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/d2cd419fdeace3e941984bc542e9383f",
+    "type": "API",
+    "name": "Enrichr",
+    "date": "",
+    "path": "temp/code/d2cd419fdeace3e941984bc542e9383f.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/c6fdcbd1d6be2a51c065e18eabed4bb1",
+    "type": "API",
+    "name": "L1000CDS2",
+    "date": "",
+    "path": "temp/code/c6fdcbd1d6be2a51c065e18eabed4bb1.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/8113167e81987d36b707ae4aa795b17e",
+    "type": "API",
+    "name": "FAIRshake API v2",
+    "date": "",
+    "path": "temp/code/8113167e81987d36b707ae4aa795b17e.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/235e75417247f07e5fed6acf3f345bb7",
+    "type": "API",
+    "name": "L1000FWD",
+    "date": "",
+    "path": "temp/code/235e75417247f07e5fed6acf3f345bb7.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/02ff8a216233cad70e56c8c34fac7c1d",
+    "type": "API",
+    "name": "Harmonizome",
+    "date": "",
+    "path": "temp/code/02ff8a216233cad70e56c8c34fac7c1d.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/c8e4c6c6633ead7ddc2ecf3dc6ac97b2",
+    "type": "API",
+    "name": "FAIRshake",
+    "date": "",
+    "path": "temp/code/c8e4c6c6633ead7ddc2ecf3dc6ac97b2.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://gtexportal.org/api/v2/redoc#tag/GTEx-Portal-API-Info",
+    "type": "API",
+    "name": "GTEx API",
+    "date": "",
+    "path": "temp/code/redoc.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://ga4gh-rnaseq.github.io/schema/docs/index.html",
+    "type": "API",
+    "name": "GA4GH RNAget API",
+    "date": "",
+    "path": "temp/code/index.html",
+    "ext": "html",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/b8399f43cd71264faca4d798c793aa30",
+    "type": "API",
+    "name": "Pharos Microservice API",
+    "date": "",
+    "path": "temp/code/b8399f43cd71264faca4d798c793aa30.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://biocomputeobject.org/api/docs/",
+    "type": "API",
+    "name": "BioCompute Object Data Base API",
+    "date": "",
+    "path": "temp/code/docs.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/e712b9eb07e637a00ae468f757ce2a1f",
+    "type": "API",
+    "name": "Gene ID Conversion REST API",
+    "date": "",
+    "path": "temp/code/e712b9eb07e637a00ae468f757ce2a1f.",
+    "ext": "",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/ui/342e4cec92030d74efd84b61650fb0ea",
+    "type": "API",
+    "name": "MetGENE REST API",
+    "date": "",
+    "path": "temp/code/342e4cec92030d74efd84b61650fb0ea.",
+    "ext": "",
+    "files": []
+  }
+]

@@ -60,7 +60,7 @@ export const downloadFile = async (
   /** trigger download */
   await downloader.download();
 
-  return { path, size: (await stat(path)).size };
+  return { path, stats: await stat(path) };
 };
 
 /** load data from file */
@@ -111,7 +111,7 @@ export const unzip = async (filename: string) => {
         .map((path) => `${output}/${path}`)
         .map(async (path) => ({
           path,
-          size: (await stat(path)).size,
+          stats: await stat(path),
         })),
     );
   } catch (error) {
