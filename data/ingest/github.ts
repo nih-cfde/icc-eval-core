@@ -15,6 +15,7 @@ import { log } from "@/util/log";
 import { filterErrors, queryMulti } from "@/util/request";
 import { count } from "@/util/string";
 
+/** get github repos */
 export const getRepos = async (coreProjects: string[]) => {
   /** de-dupe */
   coreProjects = uniq(coreProjects);

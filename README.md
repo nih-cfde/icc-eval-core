@@ -40,6 +40,20 @@ Private repos and other platforms such as GitLab aren't supported yet.
 
 † Do not confuse this with a (sub) "project" number, which is longer, e.g. `1U54OD036472-01`.
 
+### Submit analytics
+
+Analytics are services that monitor traffic (number of visits over time, number of unique visitors, visitor demographics, etc.) on publicly accessible webpages.
+
+Currently, we only take submissions of webpages using Google Analytics.
+Other analytics services may supported in the future.
+
+1. Find all Google Analytics properties that are associated with your project.
+   1. If you're unsure where to find these, ask members of your project about any webpages related to it, and if anyone set up analytics for them.
+1. Allow us access to each property.
+   1. Go to the [Google Analytics dashboard](https://analytics.google.com/) and make sure you are [on the right property](https://support.google.com/analytics/answer/10252712?hl=en).
+   1. Find "property access management" from the main search bar (or the admin side menu).
+   1. Add a new user with the email `api-access@cfde-icc-eval-core-433116.iam.gserviceaccount.com`, uncheck "notify by email", and select the "viewer" role.
+
 ---
 
 # Development
@@ -103,3 +117,19 @@ Use `./run.sh` with flags to run specific steps or tasks in this repo:
 | `--app`     | Run webapp in dev mode                                         |
 | `--test`    | Run all tests (type-checking, linting/formatting checks, etc.) |
 | `--lint`    | Auto-fix linting/formatting                                    |
+
+## Setup
+
+### Google Analytics authentication
+
+1. Go to google console welcome page (console.cloud.google.com).
+1. Create new project titled "cfde-icc-eval-core".
+1. Go to "IAM & admin".
+1. Create service account with name "API Access" and id "api-access".
+1. Create json key for service account.
+1. Download json key, move to root of this repo, rename to "ga-credentials.json", and ensure it is being picked up by .gitignore.
+1. Go back to welcome page, then "API & services".
+1. Disable any apis (one-by-one) that were enabled by default.
+1. Enable "Google Analytics Data API" and "Google Analytics Admin API".
+1. Find service account email in google console or downloaded json.
+1. In readme of this repo, in Google Analytics instructions, update email account that submitters need to grant access to.
