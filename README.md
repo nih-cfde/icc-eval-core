@@ -117,19 +117,3 @@ Use `./run.sh` with flags to run specific steps or tasks in this repo:
 | `--app`     | Run webapp in dev mode                                         |
 | `--test`    | Run all tests (type-checking, linting/formatting checks, etc.) |
 | `--lint`    | Auto-fix linting/formatting                                    |
-
-## Setup
-
-### Google Analytics authentication
-
-1. Go to google console welcome page (console.cloud.google.com).
-1. Create new project titled "cfde-icc-eval-core".
-1. Go to "IAM & admin".
-1. Create service account with name "API Access" and id "api-access".
-1. Create json key for service account.
-1. Download json key, move to root of this repo, rename to "ga-credentials.json", and ensure it is being picked up by .gitignore.
-1. Go back to welcome page, then "API & services".
-1. Disable any apis (one-by-one) that were enabled by default.
-1. Enable "Google Analytics Data API" and "Google Analytics Admin API".
-1. Find service account email in google console or downloaded json.
-1. In readme of this repo, in Google Analytics instructions, update email account that submitters need to grant access to.

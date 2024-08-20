@@ -71,21 +71,21 @@ export const loadFile = async <Data>(
 ) => {
   let data: Data | null = null;
   let stats: Stats | null = null;
-  let contents = "";
+
   try {
-    contents = await readFile(path, "utf-8");
+    const contents = await readFile(path, "utf-8");
     stats = await stat(path);
+    if (format === "json" || path.endsWith(".json"))
+      data = parseJson<Data>(contents);
+    if (format === "csv" || path.endsWith(".csv"))
+      data = parseCsv<Data>(contents, { delimiter: ",", ...options });
+    if (format === "tsv" || path.endsWith(".tsv"))
+      data = parseCsv<Data>(contents, { delimiter: "\t", ...options });
+    if (format === "txt" || path.endsWith(".txt") || path.endsWith(".gmt"))
+      data = contents as Data;
   } catch (error) {
     log(`loadFile(${path}): ${error}`, "warn");
   }
-  if (format === "json" || path.endsWith(".json"))
-    data = parseJson<Data>(contents);
-  if (format === "csv" || path.endsWith(".csv"))
-    data = parseCsv<Data>(contents, { delimiter: ",", ...options });
-  if (format === "tsv" || path.endsWith(".tsv"))
-    data = parseCsv<Data>(contents, { delimiter: "\t", ...options });
-  if (format === "txt" || path.endsWith(".txt") || path.endsWith(".gmt"))
-    data = contents as Data;
 
   return { data, stats };
 };

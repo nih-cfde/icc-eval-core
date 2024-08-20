@@ -3,14 +3,14 @@ import { type Repository } from "@octokit/graphql-schema";
 import { throttling } from "@octokit/plugin-throttling";
 import { log } from "@/util/log";
 
-const { GITHUB_TOKEN } = process.env;
+const { AUTH_GITHUB } = process.env;
 
 /** number of times to retry after being rate limited */
 const retries = 4;
 /** multiply retry wait time for extra safety */
 const waitFactor = 2;
 
-if (!GITHUB_TOKEN)
+if (!AUTH_GITHUB)
   log(
     "No GitHub token provided. Anonymous requests may be slower or fail.",
     "warn",
@@ -21,7 +21,7 @@ const withPlugins = Octokit.plugin(throttling);
 
 /** github rest api client */
 export const octokit = new withPlugins({
-  auth: GITHUB_TOKEN,
+  auth: AUTH_GITHUB,
   /** https://github.com/octokit/plugin-throttling.js */
   throttle: {
     onRateLimit: (retryAfter, options, octokit, retryCount) => {

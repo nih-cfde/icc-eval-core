@@ -22,6 +22,11 @@ jobs:
       - name: Install packages
         run: ./run.sh --install
 
+      - name: Google auth
+        uses: "google-github-actions/auth@v2"
+        with:
+          credentials_json: "${{ secrets.AUTH_GOOGLE }}"
+
       - name: Run pipeline
         run: ./run.sh
 
