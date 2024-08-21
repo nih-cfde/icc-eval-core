@@ -100,8 +100,8 @@ export const progress = (
     if (length === 1) {
       const progress = state[0]!;
       if (typeof progress === "number")
-        log(longBar(progress), "secondary", true);
-      else log("", progress);
+        log(format(longBar(progress), "secondary"), "", true);
+      else log(format("", progress), "", true);
     }
 
     /** multi */
@@ -145,18 +145,18 @@ const charBar = (percent: number) => {
   return chars.charAt(clamp(index, 0, chars.length));
 };
 
-/** get long bar to indicate progress of single item */
-const longBar = (percent: number) => {
-  if (Number.isNaN(percent)) return spinner();
-  const length = 10;
-  percent = clamp(percent, 0, 1);
-  return "▓".repeat(length * percent) + "░".repeat(length * (1 - percent));
-};
-
 /** indeterminate spinner */
 const spinner = () => {
   const chars = "◐◓◑◒";
   const percent = ((2 * performance.now()) / 1000) % 1;
   const index = Math.round(percent * (chars.length - 1));
   return chars.charAt(clamp(index, 0, chars.length));
+};
+
+/** get long bar to indicate progress of single item */
+const longBar = (percent: number) => {
+  if (Number.isNaN(percent)) return spinner();
+  const length = 10;
+  percent = clamp(percent, 0, 1);
+  return "▓".repeat(length * percent) + "░".repeat(length * (1 - percent));
 };

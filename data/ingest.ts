@@ -11,17 +11,17 @@ import { divider } from "@/util/log";
 
 const { OUTPUT_PATH } = process.env;
 
-divider("Opportunities");
+// divider("Opportunities");
 
 // const opportunities = await getOpportunities();
 
-divider("Projects");
+// divider("Projects");
 
 // const { coreProjects, projects } = await getProjects(
 //   opportunities.map((opportunity) => opportunity.id),
 // );
 
-divider("Publications");
+// divider("Publications");
 
 // const publications = await getPublications(
 //   projects.map((project) => project.core_project),
@@ -31,17 +31,17 @@ divider("Publications");
 //     (publication) => publication.core_project === coreProject.id,
 //   ).length;
 
-divider("Journals");
+// divider("Journals");
 
 // const journals = await getJournals(
 //   publications.map((publication) => publication.journal),
 // );
 
-divider("Google Analytics");
+// divider("Google Analytics");
 
 const analytics = await getAnalytics();
 
-divider("GitHub");
+// divider("GitHub");
 
 // const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
 // for (const coreProject of coreProjects)
@@ -49,11 +49,11 @@ divider("GitHub");
 //     (repo) => repo.core_project === coreProject.id,
 //   ).length;
 
-divider("DRC");
+// divider("DRC");
 
 // const { dcc, file, code } = await getDrc();
 
-divider("Saving");
+// divider("Saving");
 
 /** save output data */
 // saveFile(opportunities, `${OUTPUT_PATH}/opportunities.json`);
