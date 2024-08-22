@@ -29,6 +29,15 @@
         "India": 60
       }
     },
+    "topCities": {
+      "bySessions": {
+        "(not set)": 115,
+        "New York": 91,
+        "Philadelphia": 80,
+        "Ashburn": 36,
+        "Cambridge": 32
+      }
+    },
     "topLanguages": {
       "bySessions": {
         "English": 1390,
@@ -43,6 +52,15 @@
         "desktop": 1410,
         "mobile": 375,
         "tablet": 17
+      }
+    },
+    "topOSes": {
+      "bySessions": {
+        "Macintosh": 688,
+        "Windows": 613,
+        "iOS": 244,
+        "Android": 147,
+        "Linux": 116
       }
     }
   }

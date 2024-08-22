@@ -237,17 +237,28 @@
         <template
           v-if="typeof topValue === 'object' && 'bySessions' in topValue"
         >
-          <dt>{{ startCase(topKey) }}</dt>
+          <dt>Top {{ topKey.replace("top", "") }}</dt>
           <dd>
             <template
               v-for="(byValue, byKey) in topValue.bySessions"
               :key="byKey"
             >
-              {{ startCase(byKey) }} ({{ byValue.toLocaleString() }})<br />
+              {{ byKey }} ({{ byValue.toLocaleString() }})<br />
             </template>
           </dd>
         </template>
       </div>
+    </div>
+
+    <div class="notes">
+      <p>Notes</p>
+      <p>
+        "Top" metrics are measured by number of
+        <AppLink to="https://support.google.com/analytics/answer/9191807?hl=en"
+          >"sessions"</AppLink
+        >
+        (i.e. a user opening the website).
+      </p>
     </div>
   </section>
 </template>
@@ -255,7 +266,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { fromPairs, orderBy, startCase, sum, sumBy, toPairs } from "lodash";
+import { fromPairs, orderBy, sum, sumBy, toPairs } from "lodash";
 import { useTitle } from "@vueuse/core";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
@@ -570,7 +581,7 @@ const commitsOverTime = computed(() =>
 const topDimensions = computed(() => {
   /** get properties matching this project */
   const properties = analytics
-    .filter((item) => item.project === id.value)
+    .filter((item) => item.project === id.value?.toLowerCase())
     .map(({ property, project, ...rest }) => rest);
 
   /** total values from all properties */

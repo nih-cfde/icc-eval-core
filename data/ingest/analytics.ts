@@ -2,10 +2,12 @@ import { capitalize, uniqBy } from "lodash-es";
 import {
   getProject,
   getProperties,
+  getTopCities,
   getTopContinents,
   getTopCountries,
   getTopDevices,
   getTopLanguages,
+  getTopOSes,
   getTopRegions,
 } from "@/api/google-analytics";
 import { log } from "@/util/log";
@@ -28,16 +30,20 @@ export const getAnalytics = async () => {
   const data = await queryMulti(
     properties.map(({ property }) => async (progress) => {
       const project = await getProject(property);
-      progress(0.1);
-      const topRegions = await getTopRegions(property);
       progress(0.3);
+      const topRegions = await getTopRegions(property);
+      progress(0.4);
       const topContinents = await getTopContinents(property);
       progress(0.5);
       const topCountries = await getTopCountries(property);
+      progress(0.6);
+      const topCities = await getTopCities(property);
       progress(0.7);
       const topLanguages = await getTopLanguages(property);
-      progress(0.9);
+      progress(0.8);
       const topDevices = await getTopDevices(property);
+      progress(0.9);
+      const topOSes = await getTopOSes(property);
 
       return {
         property,
@@ -45,8 +51,10 @@ export const getAnalytics = async () => {
         topRegions,
         topContinents,
         topCountries,
+        topCities,
         topLanguages,
         topDevices,
+        topOSes,
       };
     }),
     "google-analytics-data.json",
@@ -76,16 +84,20 @@ export const getAnalytics = async () => {
       topRegions,
       topContinents,
       topCountries,
+      topCities,
       topLanguages,
       topDevices,
+      topOSes,
     }) => ({
       property,
       project,
       topRegions: mapTop(topRegions),
       topContinents: mapTop(topContinents),
       topCountries: mapTop(topCountries),
+      topCities: mapTop(topCities),
       topLanguages: mapTop(topLanguages),
       topDevices: mapTop(topDevices),
+      topOSes: mapTop(topOSes),
     }),
   );
 

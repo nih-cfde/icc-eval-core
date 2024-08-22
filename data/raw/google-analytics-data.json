@@ -314,6 +314,110 @@
       ],
       "kind": "analyticsData#batchRunReports"
     },
+    "topCities": {
+      "reports": [
+        {
+          "dimensionHeaders": [
+            {
+              "name": "city"
+            }
+          ],
+          "metricHeaders": [
+            {
+              "name": "sessions",
+              "type": "TYPE_INTEGER"
+            }
+          ],
+          "rows": [
+            {
+              "dimensionValues": [
+                {
+                  "value": "(not set)",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "115",
+                  "oneValue": "value"
+                }
+              ]
+            },
+            {
+              "dimensionValues": [
+                {
+                  "value": "New York",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "91",
+                  "oneValue": "value"
+                }
+              ]
+            },
+            {
+              "dimensionValues": [
+                {
+                  "value": "Philadelphia",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "80",
+                  "oneValue": "value"
+                }
+              ]
+            },
+            {
+              "dimensionValues": [
+                {
+                  "value": "Ashburn",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "36",
+                  "oneValue": "value"
+                }
+              ]
+            },
+            {
+              "dimensionValues": [
+                {
+                  "value": "Cambridge",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "32",
+                  "oneValue": "value"
+                }
+              ]
+            }
+          ],
+          "totals": [],
+          "maximums": [],
+          "minimums": [],
+          "rowCount": 506,
+          "metadata": {
+            "samplingMetadatas": [],
+            "dataLossFromOtherRow": false,
+            "currencyCode": "USD",
+            "_currencyCode": "currencyCode",
+            "timeZone": "America/Los_Angeles",
+            "_timeZone": "timeZone"
+          },
+          "propertyQuota": null,
+          "kind": "analyticsData#runReport"
+        }
+      ],
+      "kind": "analyticsData#batchRunReports"
+    },
     "topLanguages": {
       "reports": [
         {
@@ -480,6 +584,110 @@
           "maximums": [],
           "minimums": [],
           "rowCount": 3,
+          "metadata": {
+            "samplingMetadatas": [],
+            "dataLossFromOtherRow": false,
+            "currencyCode": "USD",
+            "_currencyCode": "currencyCode",
+            "timeZone": "America/Los_Angeles",
+            "_timeZone": "timeZone"
+          },
+          "propertyQuota": null,
+          "kind": "analyticsData#runReport"
+        }
+      ],
+      "kind": "analyticsData#batchRunReports"
+    },
+    "topOSes": {
+      "reports": [
+        {
+          "dimensionHeaders": [
+            {
+              "name": "operatingSystem"
+            }
+          ],
+          "metricHeaders": [
+            {
+              "name": "sessions",
+              "type": "TYPE_INTEGER"
+            }
+          ],
+          "rows": [
+            {
+              "dimensionValues": [
+                {
+                  "value": "Macintosh",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "688",
+                  "oneValue": "value"
+                }
+              ]
+            },
+            {
+              "dimensionValues": [
+                {
+                  "value": "Windows",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "613",
+                  "oneValue": "value"
+                }
+              ]
+            },
+            {
+              "dimensionValues": [
+                {
+                  "value": "iOS",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "244",
+                  "oneValue": "value"
+                }
+              ]
+            },
+            {
+              "dimensionValues": [
+                {
+                  "value": "Android",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "147",
+                  "oneValue": "value"
+                }
+              ]
+            },
+            {
+              "dimensionValues": [
+                {
+                  "value": "Linux",
+                  "oneValue": "value"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "116",
+                  "oneValue": "value"
+                }
+              ]
+            }
+          ],
+          "totals": [],
+          "maximums": [],
+          "minimums": [],
+          "rowCount": 6,
           "metadata": {
             "samplingMetadatas": [],
             "dataLossFromOtherRow": false,

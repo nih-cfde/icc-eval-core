@@ -89,7 +89,11 @@ export const getTopContinents = (property: PropertyId) =>
   getTopDimension(property, "continent");
 export const getTopCountries = (property: PropertyId) =>
   getTopDimension(property, "country");
+export const getTopCities = (property: PropertyId) =>
+  getTopDimension(property, "city");
 export const getTopLanguages = (property: PropertyId) =>
   getTopDimension(property, "language");
 export const getTopDevices = (property: PropertyId) =>
   getTopDimension(property, "deviceCategory");
+export const getTopOSes = (property: PropertyId) =>
+  getTopDimension(property, "operatingSystem");
