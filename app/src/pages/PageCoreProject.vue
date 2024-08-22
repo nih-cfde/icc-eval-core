@@ -29,6 +29,8 @@
   <section>
     <h2>Publications</h2>
 
+    <p>Published works associated with this project.</p>
+
     <!-- table -->
     <AppTable
       :cols="publicationCols"
@@ -90,9 +92,11 @@
     </template>
   </section>
 
-  <!-- repos -->
+  <!-- software -->
   <section>
-    <h2>Repositories</h2>
+    <h2>Software</h2>
+
+    <p>Software repositories associated with this project.</p>
 
     <!-- main details -->
     <AppTable
@@ -222,12 +226,36 @@
       </div>
     </template>
   </section>
+
+  <section>
+    <h2>Analytics</h2>
+
+    <p>Traffic metrics of public websites associated with this project.</p>
+
+    <div class="details">
+      <div v-for="(topValue, topKey) in topDimensions" :key="topKey">
+        <template
+          v-if="typeof topValue === 'object' && 'bySessions' in topValue"
+        >
+          <dt>{{ startCase(topKey) }}</dt>
+          <dd>
+            <template
+              v-for="(byValue, byKey) in topValue.bySessions"
+              :key="byKey"
+            >
+              {{ startCase(byKey) }} ({{ byValue.toLocaleString() }})<br />
+            </template>
+          </dd>
+        </template>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { sum, sumBy } from "lodash";
+import { fromPairs, orderBy, startCase, sum, sumBy, toPairs } from "lodash";
 import { useTitle } from "@vueuse/core";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
@@ -237,6 +265,8 @@ import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { carve, limit } from "@/util/array";
 import { overTime } from "@/util/data";
 import { ago, printObject, span } from "@/util/string";
+import { getEntries } from "@/util/types";
+import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
 import journals from "~/journals.json";
 import publications from "~/publications.json";
@@ -535,4 +565,33 @@ const commitsOverTime = computed(() =>
     new Date(d).getUTCFullYear(),
   ),
 );
+
+/** "top dimensions" analytics data */
+const topDimensions = computed(() => {
+  /** get properties matching this project */
+  const properties = analytics
+    .filter((item) => item.project === id.value)
+    .map(({ property, project, ...rest }) => rest);
+
+  /** total values from all properties */
+  const top: Record<string, Record<string, Record<string, number>>> = {};
+
+  /** go through each property and total values */
+  for (const property of properties)
+    for (const [topKey, topValue] of getEntries(property))
+      for (const [byKey, byValue] of getEntries(topValue))
+        for (const [dimensionKey, dimensionValue] of getEntries(byValue)) {
+          top[topKey] ??= {};
+          top[topKey][byKey] ??= {};
+          top[topKey][byKey][dimensionKey] ??= 0;
+          top[topKey][byKey][dimensionKey] += dimensionValue;
+        }
+
+  /** sort counts */
+  for (const [, topValue] of getEntries(top))
+    for (let [, byValue] of getEntries(topValue))
+      byValue = fromPairs(orderBy(toPairs(byValue), [1], ["desc"]));
+
+  return top;
+});
 </script>

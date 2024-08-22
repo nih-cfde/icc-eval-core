@@ -1,73 +1,95 @@
-import { stringify } from "csv/sync";
 import { AnalyticsAdminServiceClient } from "@google-analytics/admin";
 import type { protos as AdminTypes } from "@google-analytics/admin";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 
-type Property = AdminTypes.google.analytics.admin.v1alpha.IPropertySummary & {
-  property: string;
-};
+type PropertyId = `properties/${string}`;
+type PropertyDetails =
+  AdminTypes.google.analytics.admin.v1alpha.IPropertySummary & {
+    property: PropertyId;
+  };
 
 /** api clients */
 const adminClient = new AnalyticsAdminServiceClient();
 const dataClient = new BetaAnalyticsDataClient();
 
-/** list all properties we have access to */
-export const getProperties = async () => {
-  const properties: Property[] = [];
+/** handling for google analytics non-standard errors */
+const handleError =
+  <Params extends unknown[], Return>(
+    func: (...params: Params) => Promise<Return>,
+  ) =>
+  async (...params: Params) => {
+    try {
+      return await func(...params);
+    } catch (error) {
+      throw Error((error as { details: string }).details ?? error);
+    }
+  };
+
+/** list all analytics properties we have access to */
+export const getProperties = handleError(async () => {
+  const properties: PropertyDetails[] = [];
   for await (const account of adminClient.listAccountSummariesAsync())
     for (const property of account.propertySummaries ?? [])
-      if (property.property) properties.push(property as { property: string });
+      if (property.property)
+        properties.push(property as { property: PropertyId });
   return properties;
+});
+
+/** extract project name from custom key event that property owner defines */
+export const getProject = handleError(async (property: PropertyId) => {
+  const metadata = await dataClient.getMetadata({
+    name: `${property}/metadata`,
+  });
+  const pattern = /^keyEvents:cfde_/i;
+  const keyEvent =
+    metadata[0].metrics?.find((metric) => metric.apiName?.match(pattern))
+      ?.apiName ?? "";
+  return keyEvent.replace(pattern, "").toLowerCase();
+});
+
+/** default date range, from earliest allowed to present */
+const dateRanges = [{ startDate: "2015-08-14", endDate: "today" }];
+
+/** pivot limit */
+const limit = 5;
+
+/** get "top" (by different metrics) dimension */
+export const getTopDimension = async (
+  property: PropertyId,
+  dimension: string,
+) => {
+  const metrics = [
+    // "activeUsers",
+    // "bounceRate",
+    // "engagedSessions",
+    // "engagementRate",
+    // "newUsers",
+    // "screenPageViews",
+    "sessions",
+    // "sessionsPerUser",
+  ];
+  const [response] = await dataClient.batchRunReports({
+    property,
+    requests: metrics.map((metric) => ({
+      dateRanges,
+      dimensions: [{ name: dimension }],
+      metrics: [{ name: metric }],
+      orderBys: [{ desc: true, metric: { metricName: metric } }],
+      limit,
+    })),
+  });
+  return response;
 };
 
-/** get analytics data about property */
-export const getPropertyAnalytics = async (property: string) => {
-  /** https://googleapis.dev/nodejs/analytics-data/latest/google.analytics.data.v1beta.IRunReportRequest.html */
-  try {
-    const [response] = await dataClient.runReport({
-      property,
-      dateRanges: [{ startDate: "2015-08-14", endDate: "today" }],
-      /** https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema */
-      dimensions: [
-        { name: "country" },
-        { name: "continent" },
-        { name: "date" },
-        { name: "deviceCategory" },
-        { name: "languageCode" },
-        { name: "region" },
-      ],
-      metrics: [
-        { name: "active28DayUsers" },
-        { name: "activeUsers" },
-        { name: "bounceRate" },
-        { name: "engagedSessions" },
-        { name: "engagementRate" },
-        { name: "eventCount" },
-        { name: "eventCountPerUser" },
-        { name: "newUsers" },
-        { name: "screenPageViews" },
-      ],
-    });
+/** get top various dimensions */
 
-    /** compress response */
-    const transformedResponse = {
-      property,
-      csv: stringify([
-        [
-          ...(response.dimensionHeaders?.map((header) => header.name ?? "") ??
-            []),
-          ...(response.metricHeaders?.map((header) => header.name ?? "") ?? []),
-        ],
-        ...(response.rows?.map((row) => [
-          ...(row.dimensionValues?.map((value) => value.value ?? "") ?? []),
-          ...(row.metricValues?.map((value) => value.value ?? "") ?? []),
-        ]) ?? []),
-      ]),
-    };
-
-    return transformedResponse;
-  } catch (error) {
-    /** non-standard error */
-    throw Error((error as { details: string }).details);
-  }
-};
+export const getTopRegions = (property: PropertyId) =>
+  getTopDimension(property, "region");
+export const getTopContinents = (property: PropertyId) =>
+  getTopDimension(property, "continent");
+export const getTopCountries = (property: PropertyId) =>
+  getTopDimension(property, "country");
+export const getTopLanguages = (property: PropertyId) =>
+  getTopDimension(property, "language");
+export const getTopDevices = (property: PropertyId) =>
+  getTopDimension(property, "deviceCategory");

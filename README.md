@@ -51,8 +51,11 @@ Other analytics services may supported in the future.
    1. If you're unsure where to find these, ask members of your project about any webpages related to it, and if anyone set up analytics for them.
 1. Allow us access to each property.
    1. Go to the [Google Analytics dashboard](https://analytics.google.com/) and make sure you are [on the right property](https://support.google.com/analytics/answer/10252712?hl=en).
-   1. Find "property access management" from the main search bar (or the admin side menu).
-   1. Add a new user with the email `api-access@cfde-icc-eval-core-433116.iam.gserviceaccount.com`, uncheck "notify by email", and select the "viewer" role.
+   1. Find "Property Access Management" from the main search bar (or the "Admin" side menu).
+   1. Add a new user with the email `api-access@cfde-icc-eval-core-433116.iam.gserviceaccount.com`, uncheck "Notify by email", and select the "Viewer" role.
+1. "Tag" each property so we can associate it with a particular project.
+   1. Find "Key Events" from the "Admin" side menu,under "Data Display".
+   1. Create a new key event with the name `cfde_XXX` (case-insensitive), where XXX is the _core_ project number, e.g. `cfde_R03OD034502`.
 
 ---
 
@@ -79,7 +82,7 @@ The automated steps in this repo are roughly as follows:
    1. Render select dashboard _pages_ (e.g. `/core-project/abc123`) to PDF _reports_.
 1. Deploy dashboard and PDFs to live, public web addresses.
 
-## Repo Content
+## Repo content
 
 - `/app` - Dashboard webapp made with Vue.
   Also used for generating PDF reports.

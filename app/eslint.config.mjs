@@ -29,7 +29,10 @@ export default [
     rules: {
       "prettier/prettier": "warn",
       "prefer-const": ["error", { destructuring: "all" }],
-      "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { ignoreRestSiblings: true },
+      ],
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-imports": "error",
       "vuejs-accessibility/label-has-for": [
