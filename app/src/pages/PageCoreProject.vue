@@ -5,7 +5,7 @@
 
   <!-- details -->
   <section>
-    <h2><Feather />Details</h2>
+    <h2><Eye />Details</h2>
 
     <dl class="details">
       <div
@@ -330,7 +330,7 @@ import { useTitle } from "@vueuse/core";
 import Analytics from "@/assets/analytics.svg";
 import Book from "@/assets/book.svg";
 import Code from "@/assets/code.svg";
-import Feather from "@/assets/feather.svg";
+import Eye from "@/assets/eye.svg";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppLineChart from "@/components/AppLineChart.vue";
@@ -382,10 +382,13 @@ const details = computed(() => [
       currency: "USD",
     }),
   ],
-  ["Publications", projectPublications.value.length.toLocaleString()],
+  [
+    "Publications",
+    `${projectPublications.value.length.toLocaleString()} publications`,
+  ],
   [
     "Repositories",
-    projectRepos.value.length.toLocaleString(),
+    `${projectRepos.value.length.toLocaleString()} repositories`,
     [sumBy(projectRepos.value, "stars.length").toLocaleString(), "stars"],
     [sumBy(projectRepos.value, "watchers").toLocaleString(), "watchers"],
     [sumBy(projectRepos.value, "forks.length").toLocaleString(), "forks"],
@@ -400,7 +403,10 @@ const details = computed(() => [
       "contributors",
     ],
   ],
-  ["Analytics", analyticsProperties.value.length.toLocaleString()],
+  [
+    "Analytics",
+    `${analyticsProperties.value.length.toLocaleString()} properties`,
+  ],
 ]);
 
 /** publication table row data */

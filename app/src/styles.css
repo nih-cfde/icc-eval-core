@@ -83,7 +83,7 @@ h4 {
   justify-content: center;
   width: 100%;
   margin: 0;
-  gap: 0.75em;
+  gap: 0.65em;
   color: var(--dark-gray);
   font-weight: var(--bold);
   text-align: center;
@@ -111,6 +111,11 @@ h4 {
   height: 2px;
   background: var(--off-white);
   content: "";
+}
+
+:is(h1, h2, h3, h4) > svg {
+  height: 0.75em;
+  opacity: 0.75;
 }
 
 hr {

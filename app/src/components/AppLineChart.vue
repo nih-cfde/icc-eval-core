@@ -65,7 +65,7 @@ const option = computed(() => {
     text: props.title,
     subtext: `Total: ${props.yFormat(sum(Object.values(props.data)))}`,
     right: "center",
-    top: 20,
+    top: 15,
     textStyle: { fontSize: 16 },
     subtextStyle: { fontSize: 14 },
   };
@@ -113,7 +113,8 @@ const option = computed(() => {
 
   options.tooltip = {
     trigger: "item",
-    valueFormatter: (value) => value?.toLocaleString() ?? "",
+    valueFormatter: (value) =>
+      typeof value === "number" ? props.yFormat(value) : String(value),
     // type: "axis",
     // axisPointer: {
     //   type: "cross",

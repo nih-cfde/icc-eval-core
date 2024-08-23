@@ -1,10 +1,10 @@
 <template>
   <section>
-    <h1>Home</h1>
+    <h1><Home />Home</h1>
   </section>
 
   <section>
-    <h2>Totals</h2>
+    <h2><Calculator />Totals</h2>
 
     <dl class="details">
       <div>
@@ -29,10 +29,7 @@
           {{
             sum(coreProjects.map((row) => row.awardAmount)).toLocaleString(
               undefined,
-              {
-                style: "currency",
-                currency: "USD",
-              },
+              { style: "currency", currency: "USD" },
             )
           }}
         </dd>
@@ -50,7 +47,7 @@
   </section>
 
   <section>
-    <h2>Over Time</h2>
+    <h2><Chart />Over Time</h2>
 
     <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -91,6 +88,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { sum, sumBy } from "lodash";
+import Calculator from "@/assets/calculator.svg";
+import Chart from "@/assets/chart.svg";
+import Home from "@/assets/home.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppLineChart from "@/components/AppLineChart.vue";
 import { overTime } from "@/util/data";
