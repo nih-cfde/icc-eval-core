@@ -114,6 +114,8 @@ h4 {
 }
 
 :is(h1, h2, h3, h4) > svg {
+  position: relative;
+  top: 1px;
   height: 0.75em;
   opacity: 0.75;
 }
