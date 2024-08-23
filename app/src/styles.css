@@ -10,6 +10,7 @@
   --off-white: hsl(var(--hue), var(--sat), 90%);
 
   --content: 1200px;
+  --full: calc(100vw - 100px);
 
   --sans: "Open Sans", sans-serif;
   --mono: "IBM Plex Mono", monospace;
