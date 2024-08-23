@@ -35,6 +35,11 @@ type Props = {
   yFormat?: (value: number) => string;
 };
 
+const props = withDefaults(defineProps<Props>(), {
+  cumulative: false,
+  yFormat: (value: number) => value.toLocaleString(),
+});
+
 const chart = ref<ComponentInstance<typeof VChart>>();
 const { width, height } = useElementSize(() => chart.value?.root);
 watchEffect(() => {
@@ -44,8 +49,6 @@ watchEffect(() => {
     height: height.value ?? 200,
   });
 });
-
-const props = defineProps<Props>();
 
 use([SVGRenderer, LineChart, TitleComponent, GridComponent, TooltipComponent]);
 
@@ -60,8 +63,11 @@ const option = computed(() => {
 
   options.title = {
     text: props.title,
+    subtext: `Total: ${props.yFormat(sum(Object.values(props.data)))}`,
     right: "center",
     top: 20,
+    textStyle: { fontSize: 16 },
+    subtextStyle: { fontSize: 14 },
   };
 
   options.grid = {
@@ -88,6 +94,7 @@ const option = computed(() => {
     {
       areaStyle: {
         color: theme,
+        opacity: 0.25,
       },
       lineStyle: {
         color: theme,

@@ -152,7 +152,7 @@ p {
 }
 
 code {
-  padding: 1px 3px;
+  padding: 0 0.2em;
   border-radius: var(--rounded);
   background: var(--off-white);
   font-family: var(--mono);
@@ -267,7 +267,7 @@ dd {
   align-items: center;
   width: 100%;
   margin: 10px 0;
-  gap: 10px;
+  gap: 10px 20px;
 }
 
 .definitions > :nth-child(odd) {

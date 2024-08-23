@@ -5,7 +5,7 @@
 
   <!-- details -->
   <section>
-    <h2>Details</h2>
+    <h2><Feather />Details</h2>
 
     <dl class="details">
       <div
@@ -27,7 +27,7 @@
 
   <!-- publications -->
   <section>
-    <h2>Publications</h2>
+    <h2><Book />Publications</h2>
 
     <p>Published works associated with this project.</p>
 
@@ -65,14 +65,12 @@
       <dl class="definitions">
         <dt>RCR</dt>
         <dd>
-          =
           <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
             >Relative Citation Ratio</AppLink
           >
         </dd>
         <dt>SJR</dt>
         <dd>
-          =
           <AppLink to="https://www.scimagojr.com/journalrank.php"
             >Scimago Journal Rank</AppLink
           >
@@ -80,7 +78,6 @@
       </dl>
     </div>
 
-    <!-- charts -->
     <template v-if="Object.keys(publicationsOverTime).length > 1">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -97,7 +94,7 @@
 
   <!-- repositories -->
   <section>
-    <h2>Repositories</h2>
+    <h2><Code />Repositories</h2>
 
     <p>Software repositories associated with this project.</p>
 
@@ -113,15 +110,15 @@
       </template>
 
       <template #issues="{ row }">
-        {{ row.closedIssues.toLocaleString() }} ✔
+        Closed: {{ row.closedIssues.toLocaleString() }}
         <br />
-        {{ row.openIssues.toLocaleString() }} ◯
+        Open: {{ row.openIssues.toLocaleString() }}
       </template>
 
       <template #pull-requests="{ row }">
-        {{ row.closedPullRequests.toLocaleString() }} ✔
+        Closed: {{ row.closedPullRequests.toLocaleString() }}
         <br />
-        {{ row.openPullRequests.toLocaleString() }} ◯
+        Open: {{ row.openPullRequests.toLocaleString() }}
       </template>
 
       <template #modified="{ row }">
@@ -165,18 +162,25 @@
     <div class="notes">
       <p>Notes</p>
       <dl class="definitions">
+        <dt>Repository</dt>
+        <dd>
+          For storing, tracking changes to, and collaborating on a piece of
+          software.
+        </dd>
         <dt>PR</dt>
-        <dd>= Pull (change) request</dd>
-        <dt>✔ ◯</dt>
-        <dd>= Closed/open</dd>
+        <dd>
+          "Pull request", a draft change (new feature, bug fix, etc.) to a repo.
+        </dd>
+        <dt>Closed/Open</dt>
+        <dd>Resolved/unresolved.</dd>
         <dt>Avg Issue/PR</dt>
         <dd>
-          = Average time issues/pull requests stay open for before being closed
+          Average time issues/pull requests stay open for before being closed.
         </dd>
       </dl>
       <p>
-        Only the <code>main</code> (or default) branch is considered (e.g. for #
-        of commits).
+        Only the <code>main</code>/default branch is considered for metrics like
+        # of commits.
       </p>
       <p>
         # of dependencies is totaled from all manifests in repo, direct and
@@ -227,89 +231,90 @@
 
   <!-- analytics -->
   <section>
-    <h2>Analytics</h2>
+    <h2><Analytics />Analytics</h2>
 
-    <p>Traffic metrics of public websites associated with this project.</p>
+    <p>Traffic metrics of websites associated with this project.</p>
 
-    <dl class="details">
-      <div>
-        <dt>Properties</dt>
+    <template v-if="analyticsProperties.length">
+      <dl class="details">
+        <div>
+          <dt>Websites</dt>
+          <template
+            v-for="({ property, propertyName }, key) of analyticsProperties"
+            :key="key"
+          >
+            <dd>
+              {{ startCase(propertyName) }} (property #{{
+                property.replace("properties/", "")
+              }})
+            </dd>
+          </template>
+        </div>
+      </dl>
+
+      <div class="charts">
         <template
-          v-for="({ property, propertyName }, key) of analyticsProperties"
+          v-for="({ metric, values }, key) in overTimeAnalytics?.metrics"
           :key="key"
         >
-          <dd>
-            {{ startCase(propertyName) }} (#{{
-              property.replace("properties/", "")
-            }})
-          </dd>
+          <AppLineChart
+            :title="startCase(metric)"
+            :data="
+              Object.fromEntries(
+                overTimeAnalytics?.dateRanges?.map((range, index) => [
+                  range.startDate,
+                  values[index]!,
+                ]) ?? [],
+              )
+            "
+          />
         </template>
       </div>
-    </dl>
 
-    <div class="charts">
-      <template
-        v-for="({ metric, values }, key) in overTimeAnalytics?.metrics"
-        :key="key"
-      >
-        <AppLineChart
-          :title="startCase(metric)"
-          :data="
-            Object.fromEntries(
-              overTimeAnalytics?.dateRanges?.map((range, index) => [
-                range.startDate,
-                values[index]!,
-              ]) ?? [],
-            )
-          "
-        />
-      </template>
-    </div>
-
-    <dl class="details">
-      <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
-        <template
-          v-if="typeof topValue === 'object' && 'byEngagedSessions' in topValue"
-        >
-          <dt>Top {{ topKey.replace("top", "") }}</dt>
-          <dd>
-            <template
-              v-for="(byValue, byKey) in topValue.byEngagedSessions"
-              :key="byKey"
-            >
-              {{ byKey }} ({{ byValue.toLocaleString() }})<br />
-            </template>
-          </dd>
-        </template>
-      </div>
-    </dl>
+      <dl class="details">
+        <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
+          <template
+            v-if="
+              typeof topValue === 'object' && 'byEngagedSessions' in topValue
+            "
+          >
+            <dt>Top {{ topKey.replace("top", "") }}</dt>
+            <dd>
+              <template
+                v-for="(byValue, byKey) in topValue.byEngagedSessions"
+                :key="byKey"
+              >
+                {{ byKey }} ({{ byValue.toLocaleString() }})<br />
+              </template>
+            </dd>
+          </template>
+        </div>
+      </dl>
+    </template>
 
     <div class="notes">
       <p>Notes</p>
       <dl class="definitions">
         <dt>Active Users</dt>
         <dd>
-          =
           <AppLink
             to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=activeUsers"
             >Distinct users who visited the website</AppLink
-          >
+          >.
         </dd>
         <dt>New Users</dt>
         <dd>
-          =
           <AppLink
             to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=newUsers"
             >Users who visited the website for the first time</AppLink
-          >
+          >.
         </dd>
         <dt>Engaged Sessions</dt>
         <dd>
-          =
           <AppLink
             to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=engagedSessions"
-            >Visits that had significant interaction.</AppLink
-          >
+            >Visits that had significant interaction</AppLink
+          >.
         </dd>
       </dl>
       <p>"Top" metrics are measured by number of engaged sessions.</p>
@@ -322,6 +327,10 @@ import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { fromPairs, orderBy, startCase, sum, sumBy, toPairs } from "lodash";
 import { useTitle } from "@vueuse/core";
+import Analytics from "@/assets/analytics.svg";
+import Book from "@/assets/book.svg";
+import Code from "@/assets/code.svg";
+import Feather from "@/assets/feather.svg";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppLineChart from "@/components/AppLineChart.vue";
@@ -391,6 +400,7 @@ const details = computed(() => [
       "contributors",
     ],
   ],
+  ["Analytics", analyticsProperties.value.length.toLocaleString()],
 ]);
 
 /** publication table row data */
