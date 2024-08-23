@@ -32,13 +32,13 @@ const handleError =
   <Params extends unknown[], Return>(
     func: (...params: Params) => Promise<Return>,
   ) =>
-    async (...params: Params) => {
-      try {
-        return await func(...params);
-      } catch (error) {
-        throw Error((error as { details: string }).details ?? error);
-      }
-    };
+  async (...params: Params) => {
+    try {
+      return await func(...params);
+    } catch (error) {
+      throw Error((error as { details: string }).details ?? error);
+    }
+  };
 
 /** list all analytics properties we have access to */
 export const getProperties = handleError(async () => {
@@ -97,7 +97,6 @@ const metrics = [
   // "screenPageViews",
 ];
 
-
 /** get metric value over time (chunked monthly) */
 export const getOverTime = async (property: PropertyId) => {
   /** earliest possible date */
@@ -134,7 +133,6 @@ export const getOverTime = async (property: PropertyId) => {
     ...result,
   }));
 };
-
 
 /** get "top" (by different metrics) dimensions (regions/languages/etc.) */
 export const getTopDimension = async (
