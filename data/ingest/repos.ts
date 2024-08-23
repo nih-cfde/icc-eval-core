@@ -33,7 +33,7 @@ export const getRepos = async (coreProjects: string[]) => {
        */
       return (await searchRepos(coreProject)).map((repo) => ({
         ...repo,
-        core_project: coreProject,
+        coreProject,
       }));
     }),
     "github-repos.json",
@@ -123,13 +123,13 @@ export const getRepos = async (coreProjects: string[]) => {
 
   /** transform data into desired format, with fallbacks */
   const transformedRepos = filterErrors(repoDetails).map((repo) => ({
-    core_project: repo.core_project,
+    core_project: repo.coreProject,
     id: repo.id,
     owner: repo.owner?.login ?? "",
     name: repo.name,
     description: repo.description ?? "",
     topics: (repo.topics ?? []).filter(
-      (topic) => !topic.match(new RegExp(repo.core_project, "i")),
+      (topic) => !topic.match(new RegExp(repo.coreProject, "i")),
     ),
     stars: repo.stars.map((star) => star.starred_at ?? ""),
     watchers: repo.watchers,

@@ -1,6 +1,7 @@
-import { capitalize, uniqBy } from "lodash-es";
+import { uniq, uniqBy } from "lodash-es";
 import {
-  getProject,
+  getCoreProject,
+  getOverTime,
   getProperties,
   getTopCities,
   getTopContinents,
@@ -12,6 +13,7 @@ import {
 } from "@/api/google-analytics";
 import { log } from "@/util/log";
 import { filterErrors, query, queryMulti } from "@/util/request";
+import { capitalize } from "@/util/string";
 
 /** get google analytics data */
 export const getAnalytics = async () => {
@@ -28,14 +30,16 @@ export const getAnalytics = async () => {
 
   /** get salient data about each property */
   const data = await queryMulti(
-    properties.map(({ property }) => async (progress) => {
-      const project = await getProject(property);
-      progress(0.3);
-      const topRegions = await getTopRegions(property);
+    properties.map(({ property, displayName }) => async (progress) => {
+      const coreProject = await getCoreProject(property);
+      progress(0.1);
+      const overTime = await getOverTime(property);
       progress(0.4);
       const topContinents = await getTopContinents(property);
       progress(0.5);
       const topCountries = await getTopCountries(property);
+      progress(0.5);
+      const topRegions = await getTopRegions(property);
       progress(0.6);
       const topCities = await getTopCities(property);
       progress(0.7);
@@ -47,10 +51,12 @@ export const getAnalytics = async () => {
 
       return {
         property,
-        project,
-        topRegions,
+        propertyName: displayName,
+        core_project: coreProject,
+        overTime,
         topContinents,
         topCountries,
+        topRegions,
         topCities,
         topLanguages,
         topDevices,
@@ -60,40 +66,73 @@ export const getAnalytics = async () => {
     "google-analytics-data.json",
   );
 
-  type TopValue = Awaited<ReturnType<typeof getTopRegions>>;
-
   /** map "top dimension" data */
-  const mapTop = (top: TopValue) => {
-    const report = top.reports?.[0] ?? {};
-    const metric = report.metricHeaders?.[0]?.name ?? "";
-    return {
-      [`by${capitalize(metric)}`]: Object.fromEntries(
-        report.rows?.map((row) => [
-          row.dimensionValues?.[0]?.value ?? "",
-          Number(row.metricValues?.[0]?.value) || 0,
-        ]) ?? [],
+  const mapTop = (reports: Awaited<ReturnType<typeof getTopRegions>>) =>
+    Object.fromEntries(
+      reports.map((report) => [
+        `by${capitalize(report.metricHeaders?.[0]?.name ?? "")}`,
+        Object.fromEntries(
+          report.rows?.map((row) => [
+            row.dimensionValues?.[0]?.value ?? "",
+            Number(row.metricValues?.[0]?.value) || 0,
+          ]) ?? [],
+        ),
+      ]) ?? [],
+    );
+
+  /** map "over time" data */
+  const mapOverTime = (reports: Awaited<ReturnType<typeof getOverTime>>) => {
+    const dateRanges = reports.map((report) => report.dateRange);
+    const metricKeys = uniq(
+      reports
+        .map(
+          (report) =>
+            report.metricHeaders?.map((header) => header.name ?? "") ?? "",
+        )
+        .flat(),
+    );
+
+    const metrics = metricKeys.map((metric, index) => ({
+      metric,
+      values: reports.map(
+        (report) => Number(report.rows?.[0]?.metricValues?.[index]?.value) || 0,
       ),
-    };
+    }));
+
+    /** trim undefined values off of start */
+    for (let index = 0; index < dateRanges.length; index++) {
+      if (!metrics.every((metric) => metric.values[index] === 0)) {
+        dateRanges.splice(0, index - 1);
+        metrics.forEach((metric) => metric.values.splice(0, index - 1));
+        break;
+      }
+    }
+
+    return { dateRanges, metrics };
   };
 
   /** transform data into desired format, with fallbacks */
   const transformedData = filterErrors(data).map(
     ({
       property,
-      project,
-      topRegions,
+      propertyName,
+      core_project,
+      overTime,
       topContinents,
       topCountries,
+      topRegions,
       topCities,
       topLanguages,
       topDevices,
       topOSes,
     }) => ({
       property,
-      project,
-      topRegions: mapTop(topRegions),
+      propertyName: propertyName ?? "",
+      core_project: core_project ?? "",
+      overTime: mapOverTime(overTime),
       topContinents: mapTop(topContinents),
       topCountries: mapTop(topCountries),
+      topRegions: mapTop(topRegions),
       topCities: mapTop(topCities),
       topLanguages: mapTop(topLanguages),
       topDevices: mapTop(topDevices),

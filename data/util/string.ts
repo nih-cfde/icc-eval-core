@@ -1,6 +1,10 @@
 import { parse } from "path";
 import { size } from "lodash-es";
 
+/** (lodash's capitalize forces later characters to lower case) */
+export const capitalize = (string: string) =>
+  string.substring(0, 1).toUpperCase() + string.substring(1);
+
 /** get "size" of value and format as string */
 export const count = (value: unknown) => {
   if (typeof value === "number") return value.toLocaleString();

@@ -39,19 +39,6 @@
     "is_active": 0
   },
   {
-    "id": "1OT2OD030161-01",
-    "core_project": "OT2OD030161",
-    "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
-    "opportunity": "OTA-20-005",
-    "application": 10129013,
-    "award_amount": 556197,
-    "activity_code": "OT2",
-    "agency_code": "NIH",
-    "date_start": "2020-09-23T12:09:00Z",
-    "date_end": "2024-09-22T12:09:00Z",
-    "is_active": 1
-  },
-  {
     "id": "3OT2OD030161-01S3",
     "core_project": "OT2OD030161",
     "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
@@ -63,6 +50,19 @@
     "date_start": "2020-09-23T12:09:00Z",
     "date_end": "2023-09-22T12:09:00Z",
     "is_active": 0
+  },
+  {
+    "id": "1OT2OD030161-01",
+    "core_project": "OT2OD030161",
+    "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
+    "opportunity": "OTA-20-005",
+    "application": 10129013,
+    "award_amount": 556197,
+    "activity_code": "OT2",
+    "agency_code": "NIH",
+    "date_start": "2020-09-23T12:09:00Z",
+    "date_end": "2024-09-22T12:09:00Z",
+    "is_active": 1
   },
   {
     "id": "3OT2OD030161-01S4",
@@ -104,19 +104,6 @@
     "is_active": 1
   },
   {
-    "id": "3OT2OD030545-01S4",
-    "core_project": "OT2OD030545",
-    "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
-    "opportunity": "OTA-20-005",
-    "application": 10707603,
-    "award_amount": 700000,
-    "activity_code": "OT2",
-    "agency_code": "NIH",
-    "date_start": "2020-09-25T12:09:00Z",
-    "date_end": "2023-09-24T12:09:00Z",
-    "is_active": 0
-  },
-  {
     "id": "3OT2OD030545-01S3",
     "core_project": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
@@ -130,16 +117,16 @@
     "is_active": 0
   },
   {
-    "id": "3OT2OD030545-01S1",
+    "id": "3OT2OD030545-01S4",
     "core_project": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10444351,
-    "award_amount": 150000,
+    "application": 10707603,
+    "award_amount": 700000,
     "activity_code": "OT2",
     "agency_code": "NIH",
     "date_start": "2020-09-25T12:09:00Z",
-    "date_end": "2022-09-24T12:09:00Z",
+    "date_end": "2023-09-24T12:09:00Z",
     "is_active": 0
   },
   {
@@ -149,6 +136,19 @@
     "opportunity": "OTA-20-005",
     "application": 10468526,
     "award_amount": 500000,
+    "activity_code": "OT2",
+    "agency_code": "NIH",
+    "date_start": "2020-09-25T12:09:00Z",
+    "date_end": "2022-09-24T12:09:00Z",
+    "is_active": 0
+  },
+  {
+    "id": "3OT2OD030545-01S1",
+    "core_project": "OT2OD030545",
+    "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
+    "opportunity": "OTA-20-005",
+    "application": 10444351,
+    "award_amount": 150000,
     "activity_code": "OT2",
     "agency_code": "NIH",
     "date_start": "2020-09-25T12:09:00Z",
@@ -321,7 +321,7 @@
     "activity_code": "R03",
     "agency_code": "NIH",
     "date_start": "2023-09-20T12:09:00Z",
-    "date_end": "2024-09-19T12:09:00Z",
+    "date_end": "2025-09-19T12:09:00Z",
     "is_active": 1
   },
   {
@@ -559,6 +559,19 @@
     "is_active": 0
   },
   {
+    "id": "3OT2OD030160-01S2",
+    "core_project": "OT2OD030160",
+    "name": "The LINCS DCIC Engagement Plan with the CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 10468520,
+    "award_amount": 676449,
+    "activity_code": "OT2",
+    "agency_code": "NIH",
+    "date_start": "2020-09-23T12:09:00Z",
+    "date_end": "2022-09-22T12:09:00Z",
+    "is_active": 0
+  },
+  {
     "id": "1OT2OD030160-01",
     "core_project": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
@@ -572,16 +585,16 @@
     "is_active": 1
   },
   {
-    "id": "3OT2OD030160-01S2",
+    "id": "3OT2OD030160-01S3",
     "core_project": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
     "opportunity": "OTA-20-005",
-    "application": 10468520,
-    "award_amount": 676449,
+    "application": 10682935,
+    "award_amount": 696280,
     "activity_code": "OT2",
     "agency_code": "NIH",
     "date_start": "2020-09-23T12:09:00Z",
-    "date_end": "2022-09-22T12:09:00Z",
+    "date_end": "2023-09-22T12:09:00Z",
     "is_active": 0
   },
   {
@@ -598,17 +611,17 @@
     "is_active": 0
   },
   {
-    "id": "3OT2OD030160-01S3",
-    "core_project": "OT2OD030160",
-    "name": "The LINCS DCIC Engagement Plan with the CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 10682935,
-    "award_amount": 696280,
+    "id": "1OT2OD036435-01",
+    "core_project": "OT2OD036435",
+    "name": "The CFDE Workbench",
+    "opportunity": "OTA-23-004",
+    "application": 10851224,
+    "award_amount": 1500000,
     "activity_code": "OT2",
     "agency_code": "NIH",
-    "date_start": "2020-09-23T12:09:00Z",
-    "date_end": "2023-09-22T12:09:00Z",
-    "is_active": 0
+    "date_start": "2023-09-18T12:09:00Z",
+    "date_end": "2028-09-17T12:09:00Z",
+    "is_active": 1
   },
   {
     "id": "3OT2OD030160-01S4",
@@ -621,19 +634,6 @@
     "agency_code": "NIH",
     "date_start": "2020-09-23T12:09:00Z",
     "date_end": "2024-09-22T12:09:00Z",
-    "is_active": 1
-  },
-  {
-    "id": "1OT2OD036435-01",
-    "core_project": "OT2OD036435",
-    "name": "The CFDE Workbench",
-    "opportunity": "OTA-23-004",
-    "application": 10851224,
-    "award_amount": 1500000,
-    "activity_code": "OT2",
-    "agency_code": "NIH",
-    "date_start": "2023-09-18T12:09:00Z",
-    "date_end": "2028-09-17T12:09:00Z",
     "is_active": 1
   },
   {
@@ -884,12 +884,12 @@
     "is_active": 1
   },
   {
-    "id": "3OT2OD030162-01S1",
+    "id": "3OT2OD030162-01S3",
     "core_project": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "opportunity": "OTA-20-005",
-    "application": 10444365,
-    "award_amount": 357776,
+    "application": 10683508,
+    "award_amount": 3224707,
     "activity_code": "OT2",
     "agency_code": "NIH",
     "date_start": "2020-09-25T12:09:00Z",
@@ -897,12 +897,12 @@
     "is_active": 0
   },
   {
-    "id": "3OT2OD030162-01S3",
+    "id": "3OT2OD030162-01S1",
     "core_project": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "opportunity": "OTA-20-005",
-    "application": 10683508,
-    "award_amount": 3224707,
+    "application": 10444365,
+    "award_amount": 357776,
     "activity_code": "OT2",
     "agency_code": "NIH",
     "date_start": "2020-09-25T12:09:00Z",
@@ -1088,7 +1088,7 @@
     "activity_code": "R03",
     "agency_code": "NIH",
     "date_start": "2023-09-20T12:09:00Z",
-    "date_end": "2024-09-19T12:09:00Z",
+    "date_end": "2025-09-19T12:09:00Z",
     "is_active": 1
   },
   {

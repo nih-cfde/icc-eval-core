@@ -73,6 +73,10 @@ const cols: Cols<typeof rows> = [
     name: "Publications",
   },
   {
+    key: "analytics",
+    name: "Analytics",
+  },
+  {
     key: "repos",
     name: "Repositories",
   },

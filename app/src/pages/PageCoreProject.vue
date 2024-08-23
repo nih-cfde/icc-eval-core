@@ -15,7 +15,7 @@
         <dt>{{ name }}</dt>
         <dd>
           <template v-for="(line, lineIndex) of detail" :key="lineIndex">
-            <template v-if="!(Array.isArray(line) && line[0] === '0')">
+            <template v-if="!Array.isArray(line) || line[0] !== '0'">
               {{ [line].flat().join(" ") }}
               <br />
             </template>
@@ -31,7 +31,6 @@
 
     <p>Published works associated with this project.</p>
 
-    <!-- table -->
     <AppTable
       :cols="publicationCols"
       :rows="projectPublications"
@@ -61,7 +60,6 @@
       </template>
     </AppTable>
 
-    <!-- notes -->
     <dl class="mini-table">
       <dt>RCR</dt>
       <dd>
@@ -92,13 +90,12 @@
     </template>
   </section>
 
-  <!-- software -->
+  <!-- repositories -->
   <section>
-    <h2>Software</h2>
+    <h2>Repositories</h2>
 
     <p>Software repositories associated with this project.</p>
 
-    <!-- main details -->
     <AppTable
       :cols="repoColsA"
       :rows="projectRepos"
@@ -129,7 +126,6 @@
       </template>
     </AppTable>
 
-    <!-- extra details -->
     <AppTable
       :cols="repoColsB"
       :rows="projectRepos"
@@ -161,7 +157,6 @@
       </template>
     </AppTable>
 
-    <!-- notes -->
     <dl class="mini-table">
       <dt>PR</dt>
       <dd>Pull (change) request</dd>
@@ -186,7 +181,6 @@
       </p>
     </div>
 
-    <!-- charts -->
     <template v-if="projectRepos.length">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -227,20 +221,64 @@
     </template>
   </section>
 
+  <!-- analytics -->
   <section>
     <h2>Analytics</h2>
 
     <p>Traffic metrics of public websites associated with this project.</p>
 
+    <div class="charts">
+      <template
+        v-for="({ metric, values }, key) in overTimeAnalytics?.metrics"
+        :key="key"
+      >
+        <AppLineChart
+          :title="startCase(metric)"
+          :data="
+            Object.fromEntries(
+              overTimeAnalytics?.dateRanges?.map((range, index) => [
+                range.startDate,
+                values[index]!,
+              ]) ?? [],
+            )
+          "
+        />
+      </template>
+    </div>
+
+    <dl class="mini-table">
+      <dt>Active Users</dt>
+      <dd>
+        <AppLink
+          to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=activeUsers"
+          >Distinct users who visited the website</AppLink
+        >
+      </dd>
+      <dt>New Users</dt>
+      <dd>
+        <AppLink
+          to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=newUsers"
+          >Users who visited the website for the first time</AppLink
+        >
+      </dd>
+      <dt>Engaged Sessions</dt>
+      <dd>
+        <AppLink
+          to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=engagedSessions"
+          >Visits that had significant interaction.</AppLink
+        >
+      </dd>
+    </dl>
+
     <div class="details">
-      <div v-for="(topValue, topKey) in topDimensions" :key="topKey">
+      <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
         <template
-          v-if="typeof topValue === 'object' && 'bySessions' in topValue"
+          v-if="typeof topValue === 'object' && 'byEngagedSessions' in topValue"
         >
           <dt>Top {{ topKey.replace("top", "") }}</dt>
           <dd>
             <template
-              v-for="(byValue, byKey) in topValue.bySessions"
+              v-for="(byValue, byKey) in topValue.byEngagedSessions"
               :key="byKey"
             >
               {{ byKey }} ({{ byValue.toLocaleString() }})<br />
@@ -254,10 +292,9 @@
       <p>Notes</p>
       <p>
         "Top" metrics are measured by number of
-        <AppLink to="https://support.google.com/analytics/answer/9191807?hl=en"
-          >"sessions"</AppLink
+        <AppLink to="https://support.google.com/analytics/answer/9191807"
+          >engaged sessions</AppLink
         >
-        (i.e. a user opening the website).
       </p>
     </div>
   </section>
@@ -266,7 +303,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { fromPairs, orderBy, sum, sumBy, toPairs } from "lodash";
+import { fromPairs, orderBy, startCase, sum, sumBy, toPairs } from "lodash";
 import { useTitle } from "@vueuse/core";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
@@ -275,7 +312,7 @@ import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { carve, limit } from "@/util/array";
 import { overTime } from "@/util/data";
-import { ago, printObject, span } from "@/util/string";
+import { ago, match, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
 import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
@@ -321,8 +358,8 @@ const details = computed(() => [
   ],
   ["Publications", projectPublications.value.length.toLocaleString()],
   [
-    "Software",
-    [projectRepos.value.length.toLocaleString(), "repositories"],
+    "Repositories",
+    projectRepos.value.length.toLocaleString(),
     [sumBy(projectRepos.value, "stars.length").toLocaleString(), "stars"],
     [sumBy(projectRepos.value, "watchers").toLocaleString(), "watchers"],
     [sumBy(projectRepos.value, "forks.length").toLocaleString(), "forks"],
@@ -577,32 +614,54 @@ const commitsOverTime = computed(() =>
   ),
 );
 
-/** "top dimensions" analytics data */
-const topDimensions = computed(() => {
+/** "over time" analytics data */
+const overTimeAnalytics = computed(() => {
   /** get properties matching this project */
   const properties = analytics
-    .filter((item) => item.project === id.value?.toLowerCase())
-    .map(({ property, project, ...rest }) => rest);
+    .filter((item) => match(item.core_project, id.value ?? ""))
+    .map((item) => item.overTime);
 
   /** total values from all properties */
-  const top: Record<string, Record<string, Record<string, number>>> = {};
+  const total = properties[0];
+  if (properties.length > 0 && total) {
+    const metrics = total.metrics.length;
+    const values = total.metrics[0]?.values?.length ?? 0;
+    for (const property of properties.slice(1))
+      for (let metricIndex = 0; metricIndex < metrics; metricIndex++)
+        for (let valueIndex = 0; valueIndex < values; valueIndex++)
+          total!.metrics[metricIndex]!.values[valueIndex]! +=
+            property.metrics[metricIndex]!.values[valueIndex]!;
+  }
+
+  return total;
+});
+
+/** "top dimensions" analytics data */
+const topAnalytics = computed(() => {
+  /** get properties matching this project */
+  const properties = analytics
+    .filter((item) => match(item.core_project, id.value ?? ""))
+    .map(({ property, propertyName, core_project, overTime, ...rest }) => rest);
+
+  /** total values from all properties */
+  const total: Record<string, Record<string, Record<string, number>>> = {};
 
   /** go through each property and total values */
   for (const property of properties)
     for (const [topKey, topValue] of getEntries(property))
       for (const [byKey, byValue] of getEntries(topValue))
         for (const [dimensionKey, dimensionValue] of getEntries(byValue)) {
-          top[topKey] ??= {};
-          top[topKey][byKey] ??= {};
-          top[topKey][byKey][dimensionKey] ??= 0;
-          top[topKey][byKey][dimensionKey] += dimensionValue;
+          total[topKey] ??= {};
+          total[topKey][byKey] ??= {};
+          total[topKey][byKey][dimensionKey] ??= 0;
+          total[topKey][byKey][dimensionKey] += dimensionValue;
         }
 
   /** sort counts */
-  for (const [, topValue] of getEntries(top))
+  for (const [, topValue] of getEntries(total))
     for (let [, byValue] of getEntries(topValue))
       byValue = fromPairs(orderBy(toPairs(byValue), [1], ["desc"]));
 
-  return top;
+  return total;
 });
 </script>

@@ -1,66 +1,462 @@
 [
   {
     "property": "properties/271441257",
-    "project": "r03od034502",
-    "topRegions": {
-      "bySessions": {
-        "California": 115,
-        "New York": 109,
-        "Pennsylvania": 108,
-        "England": 91,
-        "Colorado": 73
-      }
+    "propertyName": "preprint-similarity-search",
+    "core_project": "R03OD034502",
+    "overTime": {
+      "dateRanges": [
+        {
+          "startDate": "2021-04-01",
+          "endDate": "2021-05-01"
+        },
+        {
+          "startDate": "2021-05-01",
+          "endDate": "2021-06-01"
+        },
+        {
+          "startDate": "2021-06-01",
+          "endDate": "2021-07-01"
+        },
+        {
+          "startDate": "2021-07-01",
+          "endDate": "2021-08-01"
+        },
+        {
+          "startDate": "2021-08-01",
+          "endDate": "2021-09-01"
+        },
+        {
+          "startDate": "2021-09-01",
+          "endDate": "2021-10-01"
+        },
+        {
+          "startDate": "2021-10-01",
+          "endDate": "2021-11-01"
+        },
+        {
+          "startDate": "2021-11-01",
+          "endDate": "2021-12-01"
+        },
+        {
+          "startDate": "2021-12-01",
+          "endDate": "2022-01-01"
+        },
+        {
+          "startDate": "2022-01-01",
+          "endDate": "2022-02-01"
+        },
+        {
+          "startDate": "2022-02-01",
+          "endDate": "2022-03-01"
+        },
+        {
+          "startDate": "2022-03-01",
+          "endDate": "2022-04-01"
+        },
+        {
+          "startDate": "2022-04-01",
+          "endDate": "2022-05-01"
+        },
+        {
+          "startDate": "2022-05-01",
+          "endDate": "2022-06-01"
+        },
+        {
+          "startDate": "2022-06-01",
+          "endDate": "2022-07-01"
+        },
+        {
+          "startDate": "2022-07-01",
+          "endDate": "2022-08-01"
+        },
+        {
+          "startDate": "2022-08-01",
+          "endDate": "2022-09-01"
+        },
+        {
+          "startDate": "2022-09-01",
+          "endDate": "2022-10-01"
+        },
+        {
+          "startDate": "2022-10-01",
+          "endDate": "2022-11-01"
+        },
+        {
+          "startDate": "2022-11-01",
+          "endDate": "2022-12-01"
+        },
+        {
+          "startDate": "2022-12-01",
+          "endDate": "2023-01-01"
+        },
+        {
+          "startDate": "2023-01-01",
+          "endDate": "2023-02-01"
+        },
+        {
+          "startDate": "2023-02-01",
+          "endDate": "2023-03-01"
+        },
+        {
+          "startDate": "2023-03-01",
+          "endDate": "2023-04-01"
+        },
+        {
+          "startDate": "2023-04-01",
+          "endDate": "2023-05-01"
+        },
+        {
+          "startDate": "2023-05-01",
+          "endDate": "2023-06-01"
+        },
+        {
+          "startDate": "2023-06-01",
+          "endDate": "2023-07-01"
+        },
+        {
+          "startDate": "2023-07-01",
+          "endDate": "2023-08-01"
+        },
+        {
+          "startDate": "2023-08-01",
+          "endDate": "2023-09-01"
+        },
+        {
+          "startDate": "2023-09-01",
+          "endDate": "2023-10-01"
+        },
+        {
+          "startDate": "2023-10-01",
+          "endDate": "2023-11-01"
+        },
+        {
+          "startDate": "2023-11-01",
+          "endDate": "2023-12-01"
+        },
+        {
+          "startDate": "2023-12-01",
+          "endDate": "2024-01-01"
+        },
+        {
+          "startDate": "2024-01-01",
+          "endDate": "2024-02-01"
+        },
+        {
+          "startDate": "2024-02-01",
+          "endDate": "2024-03-01"
+        },
+        {
+          "startDate": "2024-03-01",
+          "endDate": "2024-04-01"
+        },
+        {
+          "startDate": "2024-04-01",
+          "endDate": "2024-05-01"
+        },
+        {
+          "startDate": "2024-05-01",
+          "endDate": "2024-06-01"
+        },
+        {
+          "startDate": "2024-06-01",
+          "endDate": "2024-07-01"
+        },
+        {
+          "startDate": "2024-07-01",
+          "endDate": "2024-08-01"
+        }
+      ],
+      "metrics": [
+        {
+          "metric": "activeUsers",
+          "values": [
+            0,
+            196,
+            226,
+            63,
+            94,
+            65,
+            70,
+            53,
+            22,
+            51,
+            257,
+            55,
+            95,
+            26,
+            92,
+            50,
+            17,
+            18,
+            28,
+            29,
+            17,
+            66,
+            23,
+            28,
+            25,
+            23,
+            22,
+            11,
+            11,
+            16,
+            50,
+            19,
+            15,
+            25,
+            19,
+            16,
+            23,
+            15,
+            10,
+            27
+          ]
+        },
+        {
+          "metric": "newUsers",
+          "values": [
+            0,
+            196,
+            218,
+            58,
+            86,
+            57,
+            61,
+            48,
+            19,
+            48,
+            255,
+            51,
+            92,
+            24,
+            89,
+            43,
+            16,
+            18,
+            28,
+            28,
+            17,
+            65,
+            20,
+            28,
+            25,
+            21,
+            22,
+            10,
+            10,
+            16,
+            50,
+            18,
+            15,
+            24,
+            19,
+            16,
+            21,
+            14,
+            9,
+            27
+          ]
+        },
+        {
+          "metric": "engagedSessions",
+          "values": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            15,
+            17,
+            41,
+            213,
+            34,
+            61,
+            19,
+            57,
+            34,
+            12,
+            15,
+            24,
+            20,
+            7,
+            45,
+            17,
+            18,
+            18,
+            18,
+            14,
+            9,
+            10,
+            4,
+            44,
+            14,
+            9,
+            18,
+            10,
+            14,
+            22,
+            10,
+            5,
+            9
+          ]
+        }
+      ]
     },
     "topContinents": {
-      "bySessions": {
-        "Americas": 988,
-        "Europe": 454,
-        "Asia": 195,
-        "Oceania": 22,
-        "Africa": 13
+      "byActiveUsers": {
+        "Americas": 1129,
+        "Europe": 483,
+        "Asia": 194,
+        "Oceania": 25,
+        "Africa": 10
+      },
+      "byNewUsers": {
+        "Americas": 1129,
+        "Europe": 480,
+        "Asia": 194,
+        "Oceania": 25,
+        "Africa": 10
+      },
+      "byEngagedSessions": {
+        "Americas": 471,
+        "Europe": 258,
+        "Asia": 94,
+        "Oceania": 17,
+        "Africa": 7
       }
     },
     "topCountries": {
-      "bySessions": {
-        "United States": 965,
-        "United Kingdom": 118,
-        "France": 64,
-        "Switzerland": 62,
-        "India": 60
+      "byActiveUsers": {
+        "United States": 1031,
+        "United Kingdom": 112,
+        "Germany": 62,
+        "Switzerland": 58,
+        "Canada": 57
+      },
+      "byNewUsers": {
+        "United States": 1031,
+        "United Kingdom": 111,
+        "Germany": 61,
+        "Canada": 57,
+        "India": 55
+      },
+      "byEngagedSessions": {
+        "United States": 423,
+        "United Kingdom": 58,
+        "Germany": 35,
+        "France": 31,
+        "India": 31
+      }
+    },
+    "topRegions": {
+      "byActiveUsers": {
+        "California": 159,
+        "Virginia": 126,
+        "New York": 110,
+        "England": 96,
+        "Colorado": 90
+      },
+      "byNewUsers": {
+        "California": 157,
+        "Virginia": 123,
+        "New York": 104,
+        "England": 95,
+        "Colorado": 87
+      },
+      "byEngagedSessions": {
+        "California": 64,
+        "England": 51,
+        "Colorado": 43,
+        "New York": 35,
+        "(not set)": 34
       }
     },
     "topCities": {
-      "bySessions": {
+      "byActiveUsers": {
+        "(not set)": 123,
+        "Ashburn": 98,
+        "New York": 84,
+        "Philadelphia": 49,
+        "Denver": 40
+      },
+      "byNewUsers": {
         "(not set)": 115,
-        "New York": 91,
-        "Philadelphia": 80,
-        "Ashburn": 36,
-        "Cambridge": 32
+        "Ashburn": 96,
+        "New York": 79,
+        "Philadelphia": 46,
+        "Cambridge": 37
+      },
+      "byEngagedSessions": {
+        "(not set)": 48,
+        "New York": 28,
+        "Philadelphia": 27,
+        "Cambridge": 19,
+        "Atlanta": 16
       }
     },
     "topLanguages": {
-      "bySessions": {
-        "English": 1390,
-        "Chinese": 65,
-        "Spanish": 52,
-        "French": 47,
-        "German": 29
+      "byActiveUsers": {
+        "English": 1545,
+        "Chinese": 62,
+        "Spanish": 51,
+        "French": 49,
+        "German": 41
+      },
+      "byNewUsers": {
+        "English": 1544,
+        "Chinese": 62,
+        "Spanish": 51,
+        "French": 49,
+        "German": 41
+      },
+      "byEngagedSessions": {
+        "English": 688,
+        "Spanish": 32,
+        "French": 31,
+        "Chinese": 30,
+        "Dutch": 12
       }
     },
     "topDevices": {
-      "bySessions": {
-        "desktop": 1410,
-        "mobile": 375,
-        "tablet": 17
+      "byActiveUsers": {
+        "desktop": 1304,
+        "mobile": 526,
+        "tablet": 16
+      },
+      "byNewUsers": {
+        "desktop": 1300,
+        "mobile": 526,
+        "tablet": 16
+      },
+      "byEngagedSessions": {
+        "desktop": 681,
+        "mobile": 165,
+        "tablet": 2
       }
     },
     "topOSes": {
-      "bySessions": {
-        "Macintosh": 688,
-        "Windows": 613,
-        "iOS": 244,
-        "Android": 147,
-        "Linux": 116
+      "byActiveUsers": {
+        "Macintosh": 615,
+        "Windows": 530,
+        "iOS": 346,
+        "Android": 195,
+        "Linux": 164
+      },
+      "byNewUsers": {
+        "Macintosh": 612,
+        "Windows": 530,
+        "iOS": 347,
+        "Android": 194,
+        "Linux": 158
+      },
+      "byEngagedSessions": {
+        "Macintosh": 358,
+        "Windows": 284,
+        "iOS": 106,
+        "Android": 61,
+        "Linux": 39
       }
     }
   }

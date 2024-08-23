@@ -19,3 +19,6 @@ export const printObject = (object: object | undefined | null) =>
   Object.entries(object ?? {})
     .map(([key, value]) => `${key}: ${value}`)
     .join("\n");
+
+/** case insensitive match */
+export const match = (a: string, b: string) => !!a.match(new RegExp(b, "i"));

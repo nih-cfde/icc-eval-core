@@ -23,16 +23,6 @@ import { SVGRenderer } from "echarts/renderers";
 import { sum } from "lodash";
 import { useElementSize } from "@vueuse/core";
 
-const chart = ref<ComponentInstance<typeof VChart>>();
-const { width, height } = useElementSize(() => chart.value?.root);
-watchEffect(() => {
-  /** manually resize */
-  chart.value?.resize({
-    width: width.value ?? 200,
-    height: height.value ?? 200,
-  });
-});
-
 type Props = {
   /** chart title */
   title: string;
@@ -43,6 +33,16 @@ type Props = {
   /** y-axis label formatter */
   yFormat?: (value: number) => string;
 };
+
+const chart = ref<ComponentInstance<typeof VChart>>();
+const { width, height } = useElementSize(() => chart.value?.root);
+watchEffect(() => {
+  /** manually resize */
+  chart.value?.resize({
+    width: width.value ?? 200,
+    height: height.value ?? 200,
+  });
+});
 
 const props = defineProps<Props>();
 
