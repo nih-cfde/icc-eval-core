@@ -32,13 +32,13 @@ const handleError =
   <Params extends unknown[], Return>(
     func: (...params: Params) => Promise<Return>,
   ) =>
-  async (...params: Params) => {
-    try {
-      return await func(...params);
-    } catch (error) {
-      throw Error((error as { details: string }).details ?? error);
-    }
-  };
+    async (...params: Params) => {
+      try {
+        return await func(...params);
+      } catch (error) {
+        throw Error((error as { details: string }).details ?? error);
+      }
+    };
 
 /** list all analytics properties we have access to */
 export const getProperties = handleError(async () => {
@@ -97,38 +97,6 @@ const metrics = [
   // "screenPageViews",
 ];
 
-/** get "top" (by different metrics) dimensions (regions/languages/etc.) */
-export const getTopDimension = async (
-  property: PropertyId,
-  dimension: string,
-) =>
-  batchReports(
-    property,
-    metrics.map((metric) => ({
-      dateRanges,
-      dimensions: [{ name: dimension }],
-      metrics: [{ name: metric }],
-      orderBys: [{ desc: true, metric: { metricName: metric } }],
-      limit,
-    })),
-  );
-
-/** get top various dimensions */
-
-export const getTopContinents = (property: PropertyId) =>
-  getTopDimension(property, "continent");
-export const getTopCountries = (property: PropertyId) =>
-  getTopDimension(property, "country");
-export const getTopRegions = (property: PropertyId) =>
-  getTopDimension(property, "region");
-export const getTopCities = (property: PropertyId) =>
-  getTopDimension(property, "city");
-export const getTopLanguages = (property: PropertyId) =>
-  getTopDimension(property, "language");
-export const getTopDevices = (property: PropertyId) =>
-  getTopDimension(property, "deviceCategory");
-export const getTopOSes = (property: PropertyId) =>
-  getTopDimension(property, "operatingSystem");
 
 /** get metric value over time (chunked monthly) */
 export const getOverTime = async (property: PropertyId) => {
@@ -166,3 +134,37 @@ export const getOverTime = async (property: PropertyId) => {
     ...result,
   }));
 };
+
+
+/** get "top" (by different metrics) dimensions (regions/languages/etc.) */
+export const getTopDimension = async (
+  property: PropertyId,
+  dimension: string,
+) =>
+  batchReports(
+    property,
+    metrics.map((metric) => ({
+      dateRanges,
+      dimensions: [{ name: dimension }],
+      metrics: [{ name: metric }],
+      orderBys: [{ desc: true, metric: { metricName: metric } }],
+      limit,
+    })),
+  );
+
+/** get top various dimensions */
+
+export const getTopContinents = (property: PropertyId) =>
+  getTopDimension(property, "continent");
+export const getTopCountries = (property: PropertyId) =>
+  getTopDimension(property, "country");
+export const getTopRegions = (property: PropertyId) =>
+  getTopDimension(property, "region");
+export const getTopCities = (property: PropertyId) =>
+  getTopDimension(property, "city");
+export const getTopLanguages = (property: PropertyId) =>
+  getTopDimension(property, "language");
+export const getTopDevices = (property: PropertyId) =>
+  getTopDimension(property, "deviceCategory");
+export const getTopOSes = (property: PropertyId) =>
+  getTopDimension(property, "operatingSystem");
