@@ -28,33 +28,33 @@ export const getProjects = async (opportunities: string[]) => {
   /** transform data into desired format, with fallbacks */
   const transformedProjects = projects.map((project) => ({
     id: project.project_num ?? "",
-    core_project: project.core_project_num ?? "",
+    coreProject: project.core_project_num ?? "",
     name: project.project_title ?? "",
     opportunity: project.opportunity_number ?? "",
     application: project.appl_id ?? 0,
-    award_amount: project.award_amount ?? 0,
-    activity_code: project.activity_code ?? "",
-    agency_code: project.agency_code ?? "",
-    date_start: project.project_start_date ?? "",
-    date_end: project.project_end_date ?? "",
-    is_active: project.is_active ? 1 : 0,
+    awardAmount: project.award_amount ?? 0,
+    activityCode: project.activity_code ?? "",
+    agencyCode: project.agency_code ?? "",
+    dateStart: project.project_start_date ?? "",
+    dateEnd: project.project_end_date ?? "",
+    isActive: project.is_active ? 1 : 0,
   }));
 
   /** get core projects */
   const transformedCoreProjects = uniq(
-    transformedProjects.map((project) => project.core_project),
+    transformedProjects.map((project) => project.coreProject),
   ).map((coreProjectId) => {
     /** get matching projects */
     const projects = transformedProjects.filter(
-      (project) => project.core_project === coreProjectId,
+      (project) => project.coreProject === coreProjectId,
     )!;
 
     return {
       id: coreProjectId,
       name: projects[0]!.name,
-      activity_code: projects[0]!.activity_code,
+      activityCode: projects[0]!.activityCode,
       projects: projects.map((project) => project.id),
-      award_amount: sum(projects.map((project) => project.award_amount)),
+      awardAmount: sum(projects.map((project) => project.awardAmount)),
       publications: 0,
       repos: 0,
       analytics: 0,

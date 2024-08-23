@@ -1,6 +1,6 @@
 <template>
   <label class="checkbox">
-    <input v-model="model" type="checkbox" class="input" />
+    <input v-model="model" type="checkbox" />
     <slot />
   </label>
 </template>
@@ -23,7 +23,7 @@ defineSlots<Slots>();
   cursor: pointer;
 }
 
-.input {
+input {
   width: 20px;
   height: 20px;
   accent-color: var(--theme);

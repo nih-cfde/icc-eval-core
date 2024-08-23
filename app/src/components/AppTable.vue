@@ -260,6 +260,10 @@ const cellAttrs = (col?: Cols[number], row?: Row) => {
   }
 }
 
+table {
+  min-width: var(--content);
+}
+
 .th,
 .td {
   display: flex;

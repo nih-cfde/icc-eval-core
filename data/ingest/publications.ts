@@ -82,7 +82,7 @@ export const getPublications = async (coreProjects: string[]) => {
     const extras = extrasLookup[result.pmid ?? 0];
     return {
       id: result.pmid ?? 0,
-      core_project: result.coreproject ?? "",
+      coreProject: result.coreproject ?? "",
       application: result.applid ?? 0,
       title: extras?.title ?? "",
       authors: (extras?.authors ?? "")
@@ -92,9 +92,9 @@ export const getPublications = async (coreProjects: string[]) => {
       year: extras?.year ?? 0,
       modified: formatDate(extras?.last_modified),
       doi: extras?.doi ?? "",
-      relative_citation_ratio: extras?.relative_citation_ratio ?? 0,
+      relativeCitationRatio: extras?.relative_citation_ratio ?? 0,
       citations: extras?.citation_count ?? 0,
-      citations_per_year: extras?.citations_per_year ?? 0,
+      citationsPerYear: extras?.citations_per_year ?? 0,
     };
   });
 

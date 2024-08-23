@@ -70,6 +70,8 @@ export const printReports = async (
             width,
             height,
           });
+
+          return true;
         },
     ),
   );

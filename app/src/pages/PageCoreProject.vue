@@ -34,7 +34,7 @@
     <AppTable
       :cols="publicationCols"
       :rows="projectPublications"
-      :sort="[{ id: 'relative_citation_ratio', desc: true }]"
+      :sort="[{ id: 'relativeCitationRatio', desc: true }]"
     >
       <template #id="{ row }">
         <span>
@@ -47,7 +47,7 @@
       </template>
 
       <template #authors="{ row }">
-        <template v-for="(author, index) of carve(row.authors, 2)" :key="index">
+        <template v-for="(author, key) of carve(row.authors, 2)" :key="key">
           {{ author }}
           <br />
         </template>
@@ -60,20 +60,25 @@
       </template>
     </AppTable>
 
-    <dl class="mini-table">
-      <dt>RCR</dt>
-      <dd>
-        <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
-          >Relative Citation Ratio</AppLink
-        >
-      </dd>
-      <dt>SJR</dt>
-      <dd>
-        <AppLink to="https://www.scimagojr.com/journalrank.php"
-          >Scimago Journal Rank</AppLink
-        >
-      </dd>
-    </dl>
+    <div class="notes">
+      <p>Notes</p>
+      <dl class="definitions">
+        <dt>RCR</dt>
+        <dd>
+          =
+          <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
+            >Relative Citation Ratio</AppLink
+          >
+        </dd>
+        <dt>SJR</dt>
+        <dd>
+          =
+          <AppLink to="https://www.scimagojr.com/journalrank.php"
+            >Scimago Journal Rank</AppLink
+          >
+        </dd>
+      </dl>
+    </div>
 
     <!-- charts -->
     <template v-if="Object.keys(publicationsOverTime).length > 1">
@@ -108,15 +113,15 @@
       </template>
 
       <template #issues="{ row }">
-        {{ row.closed_issues.toLocaleString() }} ✔
+        {{ row.closedIssues.toLocaleString() }} ✔
         <br />
-        {{ row.open_issues.toLocaleString() }} ◯
+        {{ row.openIssues.toLocaleString() }} ◯
       </template>
 
       <template #pull-requests="{ row }">
-        {{ row.closed_pull_requests.toLocaleString() }} ✔
+        {{ row.closedPullRequests.toLocaleString() }} ✔
         <br />
-        {{ row.open_pull_requests.toLocaleString() }} ◯
+        {{ row.openPullRequests.toLocaleString() }} ◯
       </template>
 
       <template #modified="{ row }">
@@ -157,19 +162,18 @@
       </template>
     </AppTable>
 
-    <dl class="mini-table">
-      <dt>PR</dt>
-      <dd>Pull (change) request</dd>
-      <dt>✔ ◯</dt>
-      <dd>Closed/open</dd>
-      <dt>Avg Issue/PR</dt>
-      <dd>
-        Average time issues/pull requests stay open for before being closed
-      </dd>
-    </dl>
-
     <div class="notes">
       <p>Notes</p>
+      <dl class="definitions">
+        <dt>PR</dt>
+        <dd>= Pull (change) request</dd>
+        <dt>✔ ◯</dt>
+        <dd>= Closed/open</dd>
+        <dt>Avg Issue/PR</dt>
+        <dd>
+          = Average time issues/pull requests stay open for before being closed
+        </dd>
+      </dl>
       <p>
         Only the <code>main</code> (or default) branch is considered (e.g. for #
         of commits).
@@ -227,6 +231,22 @@
 
     <p>Traffic metrics of public websites associated with this project.</p>
 
+    <dl class="details">
+      <div>
+        <dt>Properties</dt>
+        <template
+          v-for="({ property, propertyName }, key) of analyticsProperties"
+          :key="key"
+        >
+          <dd>
+            {{ startCase(propertyName) }} (#{{
+              property.replace("properties/", "")
+            }})
+          </dd>
+        </template>
+      </div>
+    </dl>
+
     <div class="charts">
       <template
         v-for="({ metric, values }, key) in overTimeAnalytics?.metrics"
@@ -246,31 +266,7 @@
       </template>
     </div>
 
-    <dl class="mini-table">
-      <dt>Active Users</dt>
-      <dd>
-        <AppLink
-          to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=activeUsers"
-          >Distinct users who visited the website</AppLink
-        >
-      </dd>
-      <dt>New Users</dt>
-      <dd>
-        <AppLink
-          to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=newUsers"
-          >Users who visited the website for the first time</AppLink
-        >
-      </dd>
-      <dt>Engaged Sessions</dt>
-      <dd>
-        <AppLink
-          to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=engagedSessions"
-          >Visits that had significant interaction.</AppLink
-        >
-      </dd>
-    </dl>
-
-    <div class="details">
+    <dl class="details">
       <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
         <template
           v-if="typeof topValue === 'object' && 'byEngagedSessions' in topValue"
@@ -286,16 +282,37 @@
           </dd>
         </template>
       </div>
-    </div>
+    </dl>
 
     <div class="notes">
       <p>Notes</p>
-      <p>
-        "Top" metrics are measured by number of
-        <AppLink to="https://support.google.com/analytics/answer/9191807"
-          >engaged sessions</AppLink
-        >
-      </p>
+      <dl class="definitions">
+        <dt>Active Users</dt>
+        <dd>
+          =
+          <AppLink
+            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=activeUsers"
+            >Distinct users who visited the website</AppLink
+          >
+        </dd>
+        <dt>New Users</dt>
+        <dd>
+          =
+          <AppLink
+            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=newUsers"
+            >Users who visited the website for the first time</AppLink
+          >
+        </dd>
+        <dt>Engaged Sessions</dt>
+        <dd>
+          =
+          <AppLink
+            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=engagedSessions"
+            >Visits that had significant interaction.</AppLink
+          >
+        </dd>
+      </dl>
+      <p>"Top" metrics are measured by number of engaged sessions.</p>
     </div>
   </section>
 </template>
@@ -351,7 +368,7 @@ const details = computed(() => [
   ["Name", coreProject.value.name],
   [
     "Award",
-    coreProject.value.award_amount.toLocaleString(undefined, {
+    coreProject.value.awardAmount.toLocaleString(undefined, {
       style: "currency",
       currency: "USD",
     }),
@@ -365,7 +382,7 @@ const details = computed(() => [
     [sumBy(projectRepos.value, "forks.length").toLocaleString(), "forks"],
     [sumBy(projectRepos.value, "issues.length").toLocaleString(), "issues"],
     [
-      sumBy(projectRepos.value, "pull_requests.length").toLocaleString(),
+      sumBy(projectRepos.value, "pullRequests.length").toLocaleString(),
       "pull requests",
     ],
     [sumBy(projectRepos.value, "commits.length").toLocaleString(), "commits"],
@@ -380,7 +397,7 @@ const details = computed(() => [
 const projectPublications = computed(() =>
   /** get publication matching this core project */
   publications
-    .filter((publication) => publication.core_project === id.value)
+    .filter((publication) => publication.coreProject === id.value)
     .map((publication) => {
       /** look up journal matching this publication */
       const journal = journals.find(
@@ -417,7 +434,7 @@ const publicationCols: Cols<typeof projectPublications.value> = [
     align: "left",
   },
   {
-    key: "relative_citation_ratio",
+    key: "relativeCitationRatio",
     name: "RCR",
   },
   {
@@ -429,7 +446,7 @@ const publicationCols: Cols<typeof projectPublications.value> = [
     name: "Citations",
   },
   {
-    key: "citations_per_year",
+    key: "citationsPerYear",
     name: "Cit./year",
   },
   {
@@ -456,13 +473,13 @@ const publicationsOverTime = computed(() =>
 /** repo table row data */
 const projectRepos = computed(() =>
   repos
-    .filter((repo) => repo.core_project === id.value)
+    .filter((repo) => repo.coreProject === id.value)
     .map((repo) => ({
       ...repo,
-      issue_time_open: span(repo.issue_time_open),
-      pull_request_time_open: span(repo.pull_request_time_open),
+      issueTimeOpen: span(repo.issueTimeOpen),
+      pullRequestTimeOpen: span(repo.pullRequestTimeOpen),
       modified: new Date(repo.modified),
-      dependency_total: sum(Object.values(repo.dependencies)),
+      dependencyTotal: sum(Object.values(repo.dependencies)),
       ...repo.dependencies,
     })),
 );
@@ -499,7 +516,7 @@ const repoColsA: Cols<typeof projectRepos.value> = [
     style: { whiteSpace: "nowrap" },
   },
   {
-    key: "pull_requests",
+    key: "pullRequests",
     slot: "pull-requests",
     name: "PRs",
     style: { whiteSpace: "nowrap" },
@@ -532,11 +549,11 @@ const repoColsB: Cols<typeof projectRepos.value> = [
     name: "Last Commit",
   },
   {
-    key: "issue_time_open",
+    key: "issueTimeOpen",
     name: "Avg Issue",
   },
   {
-    key: "pull_request_time_open",
+    key: "pullRequestTimeOpen",
     name: "Avg PR",
   },
   {
@@ -563,7 +580,7 @@ const repoColsB: Cols<typeof projectRepos.value> = [
   },
   {
     slot: "dependencies",
-    key: "dependency_total",
+    key: "dependencyTotal",
     name: "Dependencies",
     attrs: (row) => ({
       title: printObject(row?.dependencies),
@@ -600,7 +617,7 @@ const pullRequestsOverTime = computed(() =>
   overTime(
     projectRepos.value
       .map((repo) =>
-        repo.pull_requests.map((pull_request) => pull_request.created),
+        repo.pullRequests.map((pullRequest) => pullRequest.created),
       )
       .flat(),
     (d) => new Date(d).getUTCFullYear(),
@@ -614,12 +631,14 @@ const commitsOverTime = computed(() =>
   ),
 );
 
+/** analytics properties that match this project */
+const analyticsProperties = computed(() =>
+  analytics.filter((item) => match(item.coreProject, id.value ?? "")),
+);
+
 /** "over time" analytics data */
 const overTimeAnalytics = computed(() => {
-  /** get properties matching this project */
-  const properties = analytics
-    .filter((item) => match(item.core_project, id.value ?? ""))
-    .map((item) => item.overTime);
+  const properties = analyticsProperties.value.map((item) => item.overTime);
 
   /** total values from all properties */
   const total = properties[0];
@@ -638,10 +657,9 @@ const overTimeAnalytics = computed(() => {
 
 /** "top dimensions" analytics data */
 const topAnalytics = computed(() => {
-  /** get properties matching this project */
-  const properties = analytics
-    .filter((item) => match(item.core_project, id.value ?? ""))
-    .map(({ property, propertyName, core_project, overTime, ...rest }) => rest);
+  const properties = analyticsProperties.value.map(
+    ({ property, propertyName, coreProject, overTime, ...rest }) => rest,
+  );
 
   /** total values from all properties */
   const total: Record<string, Record<string, Record<string, number>>> = {};

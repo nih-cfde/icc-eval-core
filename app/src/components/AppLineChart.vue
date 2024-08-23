@@ -22,6 +22,7 @@ import { use } from "echarts/core";
 import { SVGRenderer } from "echarts/renderers";
 import { sum } from "lodash";
 import { useElementSize } from "@vueuse/core";
+import { getCssVar } from "@/util/misc";
 
 type Props = {
   /** chart title */
@@ -49,6 +50,8 @@ const props = defineProps<Props>();
 use([SVGRenderer, LineChart, TitleComponent, GridComponent, TooltipComponent]);
 
 provide(THEME_KEY, "light");
+
+const theme = getCssVar("--theme");
 
 const option = computed(() => {
   const options: EChartsOption = {};
@@ -83,7 +86,15 @@ const option = computed(() => {
 
   options.series = [
     {
-      areaStyle: {},
+      areaStyle: {
+        color: theme,
+      },
+      lineStyle: {
+        color: theme,
+      },
+      itemStyle: {
+        color: theme,
+      },
       type: "line",
       data: props.cumulative
         ? Object.values(props.data).map((_, index) =>

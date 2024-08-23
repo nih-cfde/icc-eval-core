@@ -63,7 +63,7 @@ export const getRepos = async (coreProjects: string[]) => {
       progress(0.3);
       const issues = await getIssues(owner, name);
       progress(0.4);
-      const pull_requests = await getPullRequests(owner, name);
+      const pullRequests = await getPullRequests(owner, name);
       progress(0.5);
       const commits = await getCommits(owner, name);
       progress(0.6);
@@ -81,7 +81,7 @@ export const getRepos = async (coreProjects: string[]) => {
         stars,
         forks,
         issues,
-        pull_requests,
+        pullRequests,
         commits,
         contributors,
         languages,
@@ -95,12 +95,12 @@ export const getRepos = async (coreProjects: string[]) => {
 
   type Repo = Exclude<(typeof repoDetails)[number], Error>;
   type Issue = Repo["issues"][number];
-  type PullRequest = Repo["pull_requests"][number];
+  type PullRequest = Repo["pullRequests"][number];
 
   /** transform issue (or pull request, which gh considers sub-type of issue) */
   const mapIssue = (issue: Issue | PullRequest) => ({
     state: issue.state,
-    state_reason: "state_reason" in issue ? issue.state_reason : "",
+    stateReason: "state_reason" in issue ? issue.state_reason : "",
     created: issue.created_at,
     modified: issue.updated_at,
     closed: issue.closed_at,
@@ -123,7 +123,7 @@ export const getRepos = async (coreProjects: string[]) => {
 
   /** transform data into desired format, with fallbacks */
   const transformedRepos = filterErrors(repoDetails).map((repo) => ({
-    core_project: repo.coreProject,
+    coreProject: repo.coreProject,
     id: repo.id,
     owner: repo.owner?.login ?? "",
     name: repo.name,
@@ -135,18 +135,18 @@ export const getRepos = async (coreProjects: string[]) => {
     watchers: repo.watchers,
     forks: repo.forks.map((fork) => fork.created_at ?? ""),
     issues: repo.issues.map(mapIssue),
-    open_issues: repo.issues.filter((issue) => issue.state === "open").length,
-    closed_issues: repo.issues.filter((issue) => issue.state === "closed")
+    openIssues: repo.issues.filter((issue) => issue.state === "open").length,
+    closedIssues: repo.issues.filter((issue) => issue.state === "closed")
       .length,
-    issue_time_open: getOpenTime(repo.issues),
-    pull_requests: repo.pull_requests.map(mapIssue),
-    open_pull_requests: repo.pull_requests.filter(
-      (pull_request) => pull_request.state === "open",
+    issueTimeOpen: getOpenTime(repo.issues),
+    pullRequests: repo.pullRequests.map(mapIssue),
+    openPullRequests: repo.pullRequests.filter(
+      (pullRequest) => pullRequest.state === "open",
     ).length,
-    closed_pull_requests: repo.pull_requests.filter(
-      (pull_request) => pull_request.state === "closed",
+    closedPullRequests: repo.pullRequests.filter(
+      (pullRequest) => pullRequest.state === "closed",
     ).length,
-    pull_request_time_open: getOpenTime(repo.pull_requests),
+    pullRequestTimeOpen: getOpenTime(repo.pullRequests),
     commits: repo.commits.map(
       (commit) =>
         commit.commit.committer?.date ?? commit.commit.author?.date ?? "",

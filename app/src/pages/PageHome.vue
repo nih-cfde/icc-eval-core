@@ -27,7 +27,7 @@
         <dt>Awards</dt>
         <dd>
           {{
-            sum(coreProjects.map((row) => row.award_amount)).toLocaleString(
+            sum(coreProjects.map((row) => row.awardAmount)).toLocaleString(
               undefined,
               {
                 style: "currency",
@@ -101,7 +101,7 @@ import publications from "~/publications.json";
 /** parse dates */
 const projects = rawProjects.map((raw) => ({
   ...raw,
-  date_start: new Date(raw.date_start),
+  dateStart: new Date(raw.dateStart),
 }));
 
 /** whether charts should be shown in cumulative mode */
@@ -109,14 +109,14 @@ const cumulative = ref(true);
 
 /** chart number of projects over time */
 const projectsOverTime = overTime(projects, (d) =>
-  d.date_start.getUTCFullYear(),
+  d.dateStart.getUTCFullYear(),
 );
 
 /** chart award amount over time */
 const awardsOverTime = overTime(
   projects,
-  (d) => d.date_start.getUTCFullYear(),
-  (d) => sumBy(d, "award_amount"),
+  (d) => d.dateStart.getUTCFullYear(),
+  (d) => sumBy(d, "awardAmount"),
 );
 
 /** chart number of publications over time */

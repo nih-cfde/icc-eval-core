@@ -52,7 +52,7 @@ export const getAnalytics = async () => {
       return {
         property,
         propertyName: displayName,
-        core_project: coreProject,
+        coreProject,
         overTime,
         topContinents,
         topCountries,
@@ -116,7 +116,7 @@ export const getAnalytics = async () => {
     ({
       property,
       propertyName,
-      core_project,
+      coreProject,
       overTime,
       topContinents,
       topCountries,
@@ -128,7 +128,7 @@ export const getAnalytics = async () => {
     }) => ({
       property,
       propertyName: propertyName ?? "",
-      core_project: core_project ?? "",
+      coreProject: coreProject ?? "",
       overTime: mapOverTime(overTime),
       topContinents: mapTop(topContinents),
       topCountries: mapTop(topCountries),

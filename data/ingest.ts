@@ -24,7 +24,7 @@ const { coreProjects, projects } = await getProjects(
 divider("Publications");
 
 const publications = await getPublications(
-  projects.map((project) => project.core_project),
+  projects.map((project) => project.coreProject),
 );
 
 divider("Journals");
@@ -45,13 +45,13 @@ divider("Supplemental counts");
 
 for (const coreProject of coreProjects) {
   coreProject.publications = publications.filter(
-    (publication) => publication.core_project === coreProject.id,
+    (publication) => publication.coreProject === coreProject.id,
   ).length;
   coreProject.analytics = analytics.filter(
-    (analytic) => analytic.core_project === coreProject.id,
+    (analytic) => analytic.coreProject === coreProject.id,
   ).length;
   coreProject.repos = repos.filter(
-    (repo) => repo.core_project === coreProject.id,
+    (repo) => repo.coreProject === coreProject.id,
   ).length;
 }
 

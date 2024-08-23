@@ -7,7 +7,7 @@
     <AppTable
       :cols="cols"
       :rows="rows"
-      :sort="[{ id: 'award_amount', desc: true }]"
+      :sort="[{ id: 'awardAmount', desc: true }]"
     >
       <template #id="{ row }">
         <AppLink :to="`/core-project/${row.id}`">{{ row.id }}</AppLink>
@@ -19,7 +19,7 @@
 
       <template #award-amount="{ row }">
         {{
-          row.award_amount.toLocaleString(undefined, {
+          row.awardAmount.toLocaleString(undefined, {
             style: "currency",
             currency: "USD",
             notation: "compact",
@@ -55,7 +55,7 @@ const cols: Cols<typeof rows> = [
     align: "left",
   },
   {
-    key: "activity_code",
+    key: "activityCode",
     name: "Activity Code",
   },
   {
@@ -64,7 +64,7 @@ const cols: Cols<typeof rows> = [
   },
   {
     slot: "award-amount",
-    key: "award_amount",
+    key: "awardAmount",
     name: "Award",
     attrs: { title: "Total award amount across all projects" },
   },
