@@ -47,6 +47,7 @@ const cols: Cols<typeof rows> = [
     key: "id",
     name: "ID",
     align: "left",
+    style: { whiteSpace: "nowrap" },
   },
   {
     slot: "name",

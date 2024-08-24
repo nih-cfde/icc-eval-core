@@ -178,6 +178,7 @@ button {
   appearance: none;
   border: none;
   background: none;
+  color: inherit;
   font: inherit;
   cursor: pointer;
 }
@@ -211,7 +212,6 @@ th {
 
 th,
 td {
-  max-width: 25vw;
   padding: 0;
 }
 
