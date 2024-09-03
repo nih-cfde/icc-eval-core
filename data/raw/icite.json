@@ -1415,7 +1415,7 @@
         22422992
       ],
       "doi": "10.1093/database/baab017",
-      "last_modified": "07/28/2024, 11:20:16"
+      "last_modified": "08/17/2024, 05:43:00"
     },
     {
       "pmid": 33808985,
@@ -7362,7 +7362,7 @@
         27117408
       ],
       "doi": "10.1016/j.xgen.2023.100303",
-      "last_modified": "07/28/2024, 11:30:49"
+      "last_modified": "08/18/2024, 05:43:25"
     },
     {
       "pmid": 37238639,
@@ -10296,7 +10296,7 @@
     },
     {
       "pmid": 38018851,
-      "year": 2023,
+      "year": 2024,
       "title": "Lipidomic Analysis Reveals Differences in the Extent of Remyelination in the Brain and Spinal Cord.",
       "authors": "Nishama De Silva Mohotti, Hiroko Kobayashi, Jenna M Williams, Rashmi Binjawadagi, Michel P Evertsen, Ethan G Christ, Meredith D Hartley",
       "journal": "J Proteome Res",
@@ -10304,8 +10304,8 @@
       "relative_citation_ratio": null,
       "nih_percentile": null,
       "human": 0,
-      "animal": 0.5,
-      "molecular_cellular": 0.5,
+      "animal": 0.67,
+      "molecular_cellular": 0.33,
       "apt": 0.05,
       "is_clinical": "No",
       "citation_count": 0,
@@ -10352,7 +10352,7 @@
         36693222
       ],
       "doi": "10.1021/acs.jproteome.3c00443",
-      "last_modified": "07/28/2024, 12:08:07"
+      "last_modified": "08/05/2024, 05:46:45"
     },
     {
       "pmid": 38065244,
@@ -11871,6 +11871,36 @@
       "last_modified": "07/28/2024, 10:52:51"
     },
     {
+      "pmid": 38226418,
+      "year": 2024,
+      "title": "Fatty acid metabolism promotes TRPV4 activity in lung microvascular endothelial cells in pulmonary arterial hypertension.",
+      "authors": "Nicolas Philip, Xin Yun, Hongyang Pi, Samuel Murray, Zack Hill, Jay Fonticella, Preston Perez, Cissy Zhang, Wimal Pathmasiri, Susan Sumner, Laura Servinsky, Haiyang Jiang, John C Huetsch, William M Oldham, Scott Visovatti, Peter J Leary, Sina A Gharib, Evan Brittain, Catherine E Simpson, Anne Le, Larissa A Shimoda, Karthik Suresh",
+      "journal": "Am J Physiol Lung Cell Mol Physiol",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.2,
+      "animal": 0.6,
+      "molecular_cellular": 0.2,
+      "apt": 0.25,
+      "is_clinical": "No",
+      "citation_count": 2,
+      "citations_per_year": 2,
+      "expected_citations_per_year": 0.9999999984389452,
+      "field_citation_rate": 4.294234939114228,
+      "provisional": "No",
+      "x_coord": 0.3464101615137754,
+      "y_coord": -0.19999999999999998,
+      "cited_by_clin": null,
+      "cited_by": [
+        38783958,
+        38994963
+      ],
+      "references": [],
+      "doi": "10.1152/ajplung.00199.2023",
+      "last_modified": "07/29/2024, 05:50:19"
+    },
+    {
       "pmid": 38286827,
       "year": 2024,
       "title": "Loss of Pip4k2c confers liver-metastatic organotropism through insulin-dependent PI3K-AKT pathway activation.",
@@ -12619,7 +12649,7 @@
         19177575
       ],
       "doi": "10.1007/s13346-024-01551-8",
-      "last_modified": "07/28/2024, 11:04:00"
+      "last_modified": "08/04/2024, 05:46:59"
     },
     {
       "pmid": 38531616,
@@ -14088,6 +14118,60 @@
       ],
       "doi": "10.1038/s41467-024-49745-5",
       "last_modified": "07/28/2024, 11:32:58"
+    },
+    {
+      "pmid": 38975764,
+      "year": 2024,
+      "title": "Taurine modulates host cell responses to <i>Helicobacter pylori</i> VacA toxin.",
+      "authors": "Mandy D Westland, Alexandra C Schrimpe-Rutledge, Simona G Codreanu, Stacy D Sherrod, John A McLean, Mark S McClain, Timothy L Cover",
+      "journal": "Infect Immun",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.33,
+      "animal": 0,
+      "molecular_cellular": 0.67,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": -0.6928203230275509,
+      "y_coord": -0.2,
+      "cited_by_clin": null,
+      "cited_by": [],
+      "references": [],
+      "doi": "10.1128/iai.00224-24",
+      "last_modified": "08/16/2024, 05:51:14"
+    },
+    {
+      "pmid": 38984754,
+      "year": 2024,
+      "title": "High-Resolution Mass Spectrometry for Human Exposomics: Expanding Chemical Space Coverage.",
+      "authors": "Yunjia Lai, Jeremy P Koelmel, Douglas I Walker, Elliott J Price, Stefano Papazian, Katherine E Manz, Delia Castilla-Fernández, John A Bowden, Vladimir Nikiforov, Arthur David, Vincent Bessonneau, Bashar Amer, Suresh Seethapathy, Xin Hu, Elizabeth Z Lin, Akrem Jbebli, Brooklynn R McNeil, Dinesh Barupal, Marina Cerasa, Hongyu Xie, Vrinda Kalia, Renu Nandakumar, Randolph Singh, Zhenyu Tian, Peng Gao, Yujia Zhao, Jean Froment, Pawel Rostkowski, Saurabh Dubey, Kateřina Coufalíková, Hana Seličová, Helge Hecht, Sheng Liu, Hanisha H Udhani, Sophie Restituito, Kam-Meng Tchou-Wong, Kun Lu, Jonathan W Martin, Benedikt Warth, Krystal J Godri Pollitt, Jana Klánová, Oliver Fiehn, Thomas O Metz, Kurt D Pennell, Dean P Jones, Gary W Miller",
+      "journal": "Environ Sci Technol",
+      "is_research_article": "No",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 1,
+      "animal": 0,
+      "molecular_cellular": 0,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": 1,
+      "cited_by_clin": null,
+      "cited_by": [],
+      "references": [],
+      "doi": "10.1021/acs.est.4c01156",
+      "last_modified": "07/28/2024, 11:36:22"
     }
   ]
 }

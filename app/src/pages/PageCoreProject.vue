@@ -5,7 +5,7 @@
 
   <!-- details -->
   <section>
-    <h2>Details</h2>
+    <h2><Eye />Details</h2>
 
     <dl class="details">
       <div
@@ -15,7 +15,7 @@
         <dt>{{ name }}</dt>
         <dd>
           <template v-for="(line, lineIndex) of detail" :key="lineIndex">
-            <template v-if="!(Array.isArray(line) && line[0] === '0')">
+            <template v-if="!Array.isArray(line) || line[0] !== '0'">
               {{ [line].flat().join(" ") }}
               <br />
             </template>
@@ -27,13 +27,14 @@
 
   <!-- publications -->
   <section>
-    <h2>Publications</h2>
+    <h2><Book />Publications</h2>
 
-    <!-- table -->
+    <p>Published works associated with this project.</p>
+
     <AppTable
       :cols="publicationCols"
       :rows="projectPublications"
-      :sort="[{ id: 'relative_citation_ratio', desc: true }]"
+      :sort="[{ id: 'relativeCitationRatio', desc: true }]"
     >
       <template #id="{ row }">
         <span>
@@ -46,7 +47,7 @@
       </template>
 
       <template #authors="{ row }">
-        <template v-for="(author, index) of carve(row.authors, 2)" :key="index">
+        <template v-for="(author, key) of carve(row.authors, 2)" :key="key">
           {{ author }}
           <br />
         </template>
@@ -59,23 +60,24 @@
       </template>
     </AppTable>
 
-    <!-- notes -->
-    <dl class="mini-table">
-      <dt>RCR</dt>
-      <dd>
-        <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
-          >Relative Citation Ratio</AppLink
-        >
-      </dd>
-      <dt>SJR</dt>
-      <dd>
-        <AppLink to="https://www.scimagojr.com/journalrank.php"
-          >Scimago Journal Rank</AppLink
-        >
-      </dd>
-    </dl>
+    <div class="notes">
+      <p>Notes</p>
+      <dl class="definitions">
+        <dt>RCR</dt>
+        <dd>
+          <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
+            >Relative Citation Ratio</AppLink
+          >
+        </dd>
+        <dt>SJR</dt>
+        <dd>
+          <AppLink to="https://www.scimagojr.com/journalrank.php"
+            >Scimago Journal Rank</AppLink
+          >
+        </dd>
+      </dl>
+    </div>
 
-    <!-- charts -->
     <template v-if="Object.keys(publicationsOverTime).length > 1">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -90,11 +92,12 @@
     </template>
   </section>
 
-  <!-- repos -->
+  <!-- repositories -->
   <section>
-    <h2>Repositories</h2>
+    <h2><Code />Repositories</h2>
 
-    <!-- main details -->
+    <p>Software repositories associated with this project.</p>
+
     <AppTable
       :cols="repoColsA"
       :rows="projectRepos"
@@ -107,15 +110,15 @@
       </template>
 
       <template #issues="{ row }">
-        {{ row.closed_issues.toLocaleString() }} ✔
+        Closed: {{ row.closedIssues.toLocaleString() }}
         <br />
-        {{ row.open_issues.toLocaleString() }} ◯
+        Open: {{ row.openIssues.toLocaleString() }}
       </template>
 
       <template #pull-requests="{ row }">
-        {{ row.closed_pull_requests.toLocaleString() }} ✔
+        Closed: {{ row.closedPullRequests.toLocaleString() }}
         <br />
-        {{ row.open_pull_requests.toLocaleString() }} ◯
+        Open: {{ row.openPullRequests.toLocaleString() }}
       </template>
 
       <template #modified="{ row }">
@@ -125,7 +128,6 @@
       </template>
     </AppTable>
 
-    <!-- extra details -->
     <AppTable
       :cols="repoColsB"
       :rows="projectRepos"
@@ -157,23 +159,28 @@
       </template>
     </AppTable>
 
-    <!-- notes -->
-    <dl class="mini-table">
-      <dt>PR</dt>
-      <dd>Pull (change) request</dd>
-      <dt>✔ ◯</dt>
-      <dd>Closed/open</dd>
-      <dt>Avg Issue/PR</dt>
-      <dd>
-        Average time issues/pull requests stay open for before being closed
-      </dd>
-    </dl>
-
     <div class="notes">
       <p>Notes</p>
+      <dl class="definitions">
+        <dt>Repository</dt>
+        <dd>
+          For storing, tracking changes to, and collaborating on a piece of
+          software.
+        </dd>
+        <dt>PR</dt>
+        <dd>
+          "Pull request", a draft change (new feature, bug fix, etc.) to a repo.
+        </dd>
+        <dt>Closed/Open</dt>
+        <dd>Resolved/unresolved.</dd>
+        <dt>Avg Issue/PR</dt>
+        <dd>
+          Average time issues/pull requests stay open for before being closed.
+        </dd>
+      </dl>
       <p>
-        Only the <code>main</code> (or default) branch is considered (e.g. for #
-        of commits).
+        Only the <code>main</code>/default branch is considered for metrics like
+        # of commits.
       </p>
       <p>
         # of dependencies is totaled from all manifests in repo, direct and
@@ -182,7 +189,6 @@
       </p>
     </div>
 
-    <!-- charts -->
     <template v-if="projectRepos.length">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -222,13 +228,109 @@
       </div>
     </template>
   </section>
+
+  <!-- analytics -->
+  <section>
+    <h2><Analytics />Analytics</h2>
+
+    <p>Traffic metrics of websites associated with this project.</p>
+
+    <template v-if="analyticsProperties.length">
+      <dl class="details">
+        <div>
+          <dt>Websites</dt>
+          <template
+            v-for="({ property, propertyName }, key) of analyticsProperties"
+            :key="key"
+          >
+            <dd>
+              {{ startCase(propertyName) }} (property #{{
+                property.replace("properties/", "")
+              }})
+            </dd>
+          </template>
+        </div>
+      </dl>
+
+      <div class="charts">
+        <template
+          v-for="({ metric, values }, key) in overTimeAnalytics?.metrics"
+          :key="key"
+        >
+          <AppLineChart
+            :title="startCase(metric)"
+            :data="
+              Object.fromEntries(
+                overTimeAnalytics?.dateRanges?.map((range, index) => [
+                  range.startDate,
+                  values[index]!,
+                ]) ?? [],
+              )
+            "
+          />
+        </template>
+      </div>
+
+      <dl class="details">
+        <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
+          <template
+            v-if="
+              typeof topValue === 'object' && 'byEngagedSessions' in topValue
+            "
+          >
+            <dt>Top {{ topKey.replace("top", "") }}</dt>
+            <dd>
+              <template
+                v-for="(byValue, byKey) in topValue.byEngagedSessions"
+                :key="byKey"
+              >
+                {{ byKey }} ({{ byValue.toLocaleString() }})<br />
+              </template>
+            </dd>
+          </template>
+        </div>
+      </dl>
+    </template>
+
+    <div class="notes">
+      <p>Notes</p>
+      <dl class="definitions">
+        <dt>Active Users</dt>
+        <dd>
+          <AppLink
+            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=activeUsers"
+            >Distinct users who visited the website</AppLink
+          >.
+        </dd>
+        <dt>New Users</dt>
+        <dd>
+          <AppLink
+            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=newUsers"
+            >Users who visited the website for the first time</AppLink
+          >.
+        </dd>
+        <dt>Engaged Sessions</dt>
+        <dd>
+          <AppLink
+            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=engagedSessions"
+            >Visits that had significant interaction</AppLink
+          >.
+        </dd>
+      </dl>
+      <p>"Top" metrics are measured by number of engaged sessions.</p>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { sum, sumBy } from "lodash";
+import { fromPairs, orderBy, startCase, sum, sumBy, toPairs } from "lodash";
 import { useTitle } from "@vueuse/core";
+import Analytics from "@/assets/analytics.svg";
+import Book from "@/assets/book.svg";
+import Code from "@/assets/code.svg";
+import Eye from "@/assets/eye.svg";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppLineChart from "@/components/AppLineChart.vue";
@@ -236,7 +338,9 @@ import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { carve, limit } from "@/util/array";
 import { overTime } from "@/util/data";
-import { ago, printObject, span } from "@/util/string";
+import { ago, match, printObject, span } from "@/util/string";
+import { getEntries } from "@/util/types";
+import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
 import journals from "~/journals.json";
 import publications from "~/publications.json";
@@ -273,21 +377,24 @@ const details = computed(() => [
   ["Name", coreProject.value.name],
   [
     "Award",
-    coreProject.value.award_amount.toLocaleString(undefined, {
+    coreProject.value.awardAmount.toLocaleString(undefined, {
       style: "currency",
       currency: "USD",
     }),
   ],
-  ["Publications", projectPublications.value.length.toLocaleString()],
   [
-    "Software",
-    [projectRepos.value.length.toLocaleString(), "repositories"],
+    "Publications",
+    `${projectPublications.value.length.toLocaleString()} publications`,
+  ],
+  [
+    "Repositories",
+    `${projectRepos.value.length.toLocaleString()} repositories`,
     [sumBy(projectRepos.value, "stars.length").toLocaleString(), "stars"],
     [sumBy(projectRepos.value, "watchers").toLocaleString(), "watchers"],
     [sumBy(projectRepos.value, "forks.length").toLocaleString(), "forks"],
     [sumBy(projectRepos.value, "issues.length").toLocaleString(), "issues"],
     [
-      sumBy(projectRepos.value, "pull_requests.length").toLocaleString(),
+      sumBy(projectRepos.value, "pullRequests.length").toLocaleString(),
       "pull requests",
     ],
     [sumBy(projectRepos.value, "commits.length").toLocaleString(), "commits"],
@@ -296,13 +403,17 @@ const details = computed(() => [
       "contributors",
     ],
   ],
+  [
+    "Analytics",
+    `${analyticsProperties.value.length.toLocaleString()} properties`,
+  ],
 ]);
 
 /** publication table row data */
 const projectPublications = computed(() =>
   /** get publication matching this core project */
   publications
-    .filter((publication) => publication.core_project === id.value)
+    .filter((publication) => publication.coreProject === id.value)
     .map((publication) => {
       /** look up journal matching this publication */
       const journal = journals.find(
@@ -339,7 +450,7 @@ const publicationCols: Cols<typeof projectPublications.value> = [
     align: "left",
   },
   {
-    key: "relative_citation_ratio",
+    key: "relativeCitationRatio",
     name: "RCR",
   },
   {
@@ -351,7 +462,7 @@ const publicationCols: Cols<typeof projectPublications.value> = [
     name: "Citations",
   },
   {
-    key: "citations_per_year",
+    key: "citationsPerYear",
     name: "Cit./year",
   },
   {
@@ -378,13 +489,13 @@ const publicationsOverTime = computed(() =>
 /** repo table row data */
 const projectRepos = computed(() =>
   repos
-    .filter((repo) => repo.core_project === id.value)
+    .filter((repo) => repo.coreProject === id.value)
     .map((repo) => ({
       ...repo,
-      issue_time_open: span(repo.issue_time_open),
-      pull_request_time_open: span(repo.pull_request_time_open),
+      issueTimeOpen: span(repo.issueTimeOpen),
+      pullRequestTimeOpen: span(repo.pullRequestTimeOpen),
       modified: new Date(repo.modified),
-      dependency_total: sum(Object.values(repo.dependencies)),
+      dependencyTotal: sum(Object.values(repo.dependencies)),
       ...repo.dependencies,
     })),
 );
@@ -421,7 +532,7 @@ const repoColsA: Cols<typeof projectRepos.value> = [
     style: { whiteSpace: "nowrap" },
   },
   {
-    key: "pull_requests",
+    key: "pullRequests",
     slot: "pull-requests",
     name: "PRs",
     style: { whiteSpace: "nowrap" },
@@ -454,11 +565,11 @@ const repoColsB: Cols<typeof projectRepos.value> = [
     name: "Last Commit",
   },
   {
-    key: "issue_time_open",
+    key: "issueTimeOpen",
     name: "Avg Issue",
   },
   {
-    key: "pull_request_time_open",
+    key: "pullRequestTimeOpen",
     name: "Avg PR",
   },
   {
@@ -485,7 +596,7 @@ const repoColsB: Cols<typeof projectRepos.value> = [
   },
   {
     slot: "dependencies",
-    key: "dependency_total",
+    key: "dependencyTotal",
     name: "Dependencies",
     attrs: (row) => ({
       title: printObject(row?.dependencies),
@@ -522,7 +633,7 @@ const pullRequestsOverTime = computed(() =>
   overTime(
     projectRepos.value
       .map((repo) =>
-        repo.pull_requests.map((pull_request) => pull_request.created),
+        repo.pullRequests.map((pullRequest) => pullRequest.created),
       )
       .flat(),
     (d) => new Date(d).getUTCFullYear(),
@@ -535,4 +646,56 @@ const commitsOverTime = computed(() =>
     new Date(d).getUTCFullYear(),
   ),
 );
+
+/** analytics properties that match this project */
+const analyticsProperties = computed(() =>
+  analytics.filter((item) => match(item.coreProject, id.value ?? "")),
+);
+
+/** "over time" analytics data */
+const overTimeAnalytics = computed(() => {
+  const properties = analyticsProperties.value.map((item) => item.overTime);
+
+  /** total values from all properties */
+  const total = properties[0];
+  if (properties.length > 0 && total) {
+    const metrics = total.metrics.length;
+    const values = total.metrics[0]?.values?.length ?? 0;
+    for (const property of properties.slice(1))
+      for (let metricIndex = 0; metricIndex < metrics; metricIndex++)
+        for (let valueIndex = 0; valueIndex < values; valueIndex++)
+          total!.metrics[metricIndex]!.values[valueIndex]! +=
+            property.metrics[metricIndex]!.values[valueIndex]!;
+  }
+
+  return total;
+});
+
+/** "top dimensions" analytics data */
+const topAnalytics = computed(() => {
+  const properties = analyticsProperties.value.map(
+    ({ property, propertyName, coreProject, overTime, ...rest }) => rest,
+  );
+
+  /** total values from all properties */
+  const total: Record<string, Record<string, Record<string, number>>> = {};
+
+  /** go through each property and total values */
+  for (const property of properties)
+    for (const [topKey, topValue] of getEntries(property))
+      for (const [byKey, byValue] of getEntries(topValue))
+        for (const [dimensionKey, dimensionValue] of getEntries(byValue)) {
+          total[topKey] ??= {};
+          total[topKey][byKey] ??= {};
+          total[topKey][byKey][dimensionKey] ??= 0;
+          total[topKey][byKey][dimensionKey] += dimensionValue;
+        }
+
+  /** sort counts */
+  for (const [, topValue] of getEntries(total))
+    for (let [, byValue] of getEntries(topValue))
+      byValue = fromPairs(orderBy(toPairs(byValue), [1], ["desc"]));
+
+  return total;
+});
 </script>

@@ -248,7 +248,7 @@ const cellAttrs = (col?: Cols[number], row?: Row) => {
 
 <style scoped>
 .scroll {
-  width: calc(100vw - 100px);
+  width: var(--full);
   max-width: max-content;
   overflow-x: auto;
   border-radius: var(--rounded) var(--rounded) 0 0;
@@ -258,6 +258,11 @@ const cellAttrs = (col?: Cols[number], row?: Row) => {
   .scroll {
     display: contents;
   }
+}
+
+table {
+  min-width: var(--full);
+  /* min-width: var(--content); */
 }
 
 .th,

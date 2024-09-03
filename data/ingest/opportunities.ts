@@ -66,14 +66,14 @@ export const getOpportunities = async () => {
         const prefix = getPrefix(id);
 
         /** activity code */
-        const activity_code = await page
+        const activityCode = await page
           .locator(activityCodeSelector)
           .first()
           .innerText({ timeout: 100 })
           .catch(() => "");
 
         /** validate number */
-        if (id.match(numberPattern)) return { id, prefix, activity_code };
+        if (id.match(numberPattern)) return { id, prefix, activityCode };
         else throw Error(`${id} does not seem like a valid opportunity number`);
       }
 
@@ -98,10 +98,10 @@ export const getOpportunities = async () => {
         const prefix = getPrefix(id);
 
         /** activity code */
-        const activity_code = "";
+        const activityCode = "";
 
         /** validate number */
-        if (id) return { id, prefix, activity_code };
+        if (id) return { id, prefix, activityCode };
         else throw Error("Doesn't seem to have opportunity number");
       }
 

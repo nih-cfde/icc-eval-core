@@ -10,6 +10,7 @@
     "noUncheckedIndexedAccess": true,
     "strict": true,
     "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
 
     "paths": {
       "@/*": ["./*"]
@@ -17,5 +18,6 @@
     "resolveJsonModule": true
   },
   "extends": "@tsconfig/node22/tsconfig.json",
-  "include": ["*", "*/*"]
+  "include": ["*", "*/*"],
+  "exclude": ["**/temp"]
 }

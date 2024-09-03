@@ -63,10 +63,14 @@ export const query = async <Result>(
 ): Promise<NonNullable<Result>> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const { data } = await loadFile<Result>(`${RAW_PATH}/${filename}`);
-    if (data && !NOCACHE) {
-      log(`Using cache, ${count(data)} items`, "secondary");
-      return data;
+    try {
+      const { data } = await loadFile<Result>(`${RAW_PATH}/${filename}`);
+      if (data && !NOCACHE) {
+        log(`Using cache, ${count(data)} items`, "secondary");
+        return data;
+      }
+    } catch (error) {
+      log("No cache found", "secondary");
     }
   }
 
@@ -108,12 +112,16 @@ export const queryMulti = async <Result>(
 ): Promise<(NonNullable<Result> | Error)[]> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
-    const { data } = await loadFile<NonNullable<Result>[]>(
-      `${RAW_PATH}/${filename}`,
-    );
-    if (data && !NOCACHE) {
-      log(`Using cache, ${count(data)} items`, "secondary");
-      return data;
+    try {
+      const { data } = await loadFile<NonNullable<Result>[]>(
+        `${RAW_PATH}/${filename}`,
+      );
+      if (data && !NOCACHE) {
+        log(`Using cache, ${count(data)} items`, "secondary");
+        return data;
+      }
+    } catch (error) {
+      log("No cache found", "secondary");
     }
   }
 
@@ -133,7 +141,7 @@ export const queryMulti = async <Result>(
         /** wait until # of running promises is less than limit */
         while (running >= limit) await sleep(10);
 
-        /** inc running promises */
+        /** increment running promises */
         running++;
 
         bar(index, "start");
@@ -151,7 +159,7 @@ export const queryMulti = async <Result>(
         bar(index, "error");
         throw error;
       } finally {
-        /** dec running promises */
+        /** decrement running promises */
         running--;
       }
     }),

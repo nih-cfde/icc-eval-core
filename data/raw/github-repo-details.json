@@ -66,7 +66,7 @@
     "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
     "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
     "created_at": "2020-06-26T19:43:06Z",
-    "updated_at": "2024-08-01T19:27:46Z",
+    "updated_at": "2024-08-18T13:51:59Z",
     "pushed_at": "2023-07-21T03:15:33Z",
     "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
     "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -74,8 +74,8 @@
     "svn_url": "https://github.com/vincerubinetti/svg-to-png",
     "homepage": "https://vincerubinetti.github.io/svg-to-png/",
     "size": 1145,
-    "stargazers_count": 89,
-    "watchers_count": 89,
+    "stargazers_count": 93,
+    "watchers_count": 93,
     "language": "TypeScript",
     "has_issues": true,
     "has_projects": false,
@@ -1658,7 +1658,7 @@
       }
     ],
     "open_issues": 0,
-    "watchers": 89,
+    "watchers": 93,
     "default_branch": "main",
     "permissions": {
       "admin": true,
@@ -1668,7 +1668,7 @@
       "pull": true
     },
     "score": 1,
-    "core_project": "U54OD036472",
+    "coreProject": "U54OD036472",
     "stars": [
       {
         "starred_at": "2021-09-24T09:27:49Z",
@@ -3716,6 +3716,98 @@
           "type": "User",
           "site_admin": false
         }
+      },
+      {
+        "starred_at": "2024-08-07T16:57:01Z",
+        "user": {
+          "login": "OrellBuehler",
+          "id": 17276101,
+          "node_id": "MDQ6VXNlcjE3Mjc2MTAx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/17276101?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/OrellBuehler",
+          "html_url": "https://github.com/OrellBuehler",
+          "followers_url": "https://api.github.com/users/OrellBuehler/followers",
+          "following_url": "https://api.github.com/users/OrellBuehler/following{/other_user}",
+          "gists_url": "https://api.github.com/users/OrellBuehler/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/OrellBuehler/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/OrellBuehler/subscriptions",
+          "organizations_url": "https://api.github.com/users/OrellBuehler/orgs",
+          "repos_url": "https://api.github.com/users/OrellBuehler/repos",
+          "events_url": "https://api.github.com/users/OrellBuehler/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/OrellBuehler/received_events",
+          "type": "User",
+          "site_admin": false
+        }
+      },
+      {
+        "starred_at": "2024-08-13T13:38:34Z",
+        "user": {
+          "login": "zolexander",
+          "id": 24555192,
+          "node_id": "MDQ6VXNlcjI0NTU1MTky",
+          "avatar_url": "https://avatars.githubusercontent.com/u/24555192?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zolexander",
+          "html_url": "https://github.com/zolexander",
+          "followers_url": "https://api.github.com/users/zolexander/followers",
+          "following_url": "https://api.github.com/users/zolexander/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zolexander/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zolexander/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zolexander/subscriptions",
+          "organizations_url": "https://api.github.com/users/zolexander/orgs",
+          "repos_url": "https://api.github.com/users/zolexander/repos",
+          "events_url": "https://api.github.com/users/zolexander/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zolexander/received_events",
+          "type": "User",
+          "site_admin": false
+        }
+      },
+      {
+        "starred_at": "2024-08-15T23:49:34Z",
+        "user": {
+          "login": "SizableShrimp",
+          "id": 29855886,
+          "node_id": "MDQ6VXNlcjI5ODU1ODg2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/29855886?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/SizableShrimp",
+          "html_url": "https://github.com/SizableShrimp",
+          "followers_url": "https://api.github.com/users/SizableShrimp/followers",
+          "following_url": "https://api.github.com/users/SizableShrimp/following{/other_user}",
+          "gists_url": "https://api.github.com/users/SizableShrimp/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/SizableShrimp/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/SizableShrimp/subscriptions",
+          "organizations_url": "https://api.github.com/users/SizableShrimp/orgs",
+          "repos_url": "https://api.github.com/users/SizableShrimp/repos",
+          "events_url": "https://api.github.com/users/SizableShrimp/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/SizableShrimp/received_events",
+          "type": "User",
+          "site_admin": false
+        }
+      },
+      {
+        "starred_at": "2024-08-18T13:51:59Z",
+        "user": {
+          "login": "travino",
+          "id": 120686325,
+          "node_id": "U_kgDOBzGG9Q",
+          "avatar_url": "https://avatars.githubusercontent.com/u/120686325?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/travino",
+          "html_url": "https://github.com/travino",
+          "followers_url": "https://api.github.com/users/travino/followers",
+          "following_url": "https://api.github.com/users/travino/following{/other_user}",
+          "gists_url": "https://api.github.com/users/travino/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/travino/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/travino/subscriptions",
+          "organizations_url": "https://api.github.com/users/travino/orgs",
+          "repos_url": "https://api.github.com/users/travino/repos",
+          "events_url": "https://api.github.com/users/travino/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/travino/received_events",
+          "type": "User",
+          "site_admin": false
+        }
       }
     ],
     "issues": [
@@ -3960,7 +4052,7 @@
         "state_reason": "completed"
       }
     ],
-    "pull_requests": [
+    "pullRequests": [
       {
         "url": "https://api.github.com/repos/vincerubinetti/svg-to-png/pulls/15",
         "id": 1414176486,
@@ -4102,7 +4194,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -4110,8 +4202,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -4147,7 +4239,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -4242,7 +4334,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -4250,8 +4342,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -4287,7 +4379,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -4472,7 +4564,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -4480,8 +4572,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -4517,7 +4609,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -4612,7 +4704,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -4620,8 +4712,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -4657,7 +4749,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -4842,7 +4934,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -4850,8 +4942,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -4887,7 +4979,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -4982,7 +5074,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -4990,8 +5082,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -5027,7 +5119,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -5212,7 +5304,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -5220,8 +5312,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -5257,7 +5349,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -5352,7 +5444,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -5360,8 +5452,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -5397,7 +5489,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -5582,7 +5674,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -5590,8 +5682,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -5627,7 +5719,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -5722,7 +5814,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -5730,8 +5822,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -5767,7 +5859,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -5952,7 +6044,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -5960,8 +6052,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -5997,7 +6089,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -6092,7 +6184,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -6100,8 +6192,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -6137,7 +6229,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -6322,7 +6414,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -6330,8 +6422,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -6367,7 +6459,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -6462,7 +6554,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -6470,8 +6562,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -6507,7 +6599,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -6692,7 +6784,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -6700,8 +6792,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -6737,7 +6829,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -6832,7 +6924,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -6840,8 +6932,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -6877,7 +6969,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -7062,7 +7154,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -7070,8 +7162,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -7107,7 +7199,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -7202,7 +7294,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -7210,8 +7302,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -7247,7 +7339,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -7432,7 +7524,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -7440,8 +7532,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -7477,7 +7569,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -7572,7 +7664,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -7580,8 +7672,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -7617,7 +7709,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -7802,7 +7894,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -7810,8 +7902,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -7847,7 +7939,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -7942,7 +8034,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -7950,8 +8042,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -7987,7 +8079,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -8172,7 +8264,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -8180,8 +8272,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -8217,7 +8309,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -8312,7 +8404,7 @@
             "releases_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/releases{/id}",
             "deployments_url": "https://api.github.com/repos/vincerubinetti/svg-to-png/deployments",
             "created_at": "2020-06-26T19:43:06Z",
-            "updated_at": "2024-08-01T19:27:46Z",
+            "updated_at": "2024-08-18T13:51:59Z",
             "pushed_at": "2023-07-21T03:15:33Z",
             "git_url": "git://github.com/vincerubinetti/svg-to-png.git",
             "ssh_url": "git@github.com:vincerubinetti/svg-to-png.git",
@@ -8320,8 +8412,8 @@
             "svn_url": "https://github.com/vincerubinetti/svg-to-png",
             "homepage": "https://vincerubinetti.github.io/svg-to-png/",
             "size": 1145,
-            "stargazers_count": 89,
-            "watchers_count": 89,
+            "stargazers_count": 93,
+            "watchers_count": 93,
             "language": "TypeScript",
             "has_issues": true,
             "has_projects": false,
@@ -8357,7 +8449,7 @@
             "visibility": "public",
             "forks": 14,
             "open_issues": 0,
-            "watchers": 89,
+            "watchers": 93,
             "default_branch": "main"
           }
         },
@@ -9841,14 +9933,14 @@
     "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
     "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
     "created_at": "2024-05-31T14:46:25Z",
-    "updated_at": "2024-07-29T15:35:56Z",
-    "pushed_at": "2024-08-02T00:32:33Z",
+    "updated_at": "2024-08-17T21:00:24Z",
+    "pushed_at": "2024-08-23T04:01:50Z",
     "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
     "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
     "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
     "svn_url": "https://github.com/nih-cfde/icc-eval-core",
     "homepage": "https://cfde-eval.netlify.app/",
-    "size": 12214,
+    "size": 7770,
     "stargazers_count": 1,
     "watchers_count": 1,
     "language": "TypeScript",
@@ -9939,17 +10031,17 @@
         "releases_url": "https://api.github.com/repos/seandavi/icc-eval-core/releases{/id}",
         "deployments_url": "https://api.github.com/repos/seandavi/icc-eval-core/deployments",
         "created_at": "2024-07-09T19:06:04Z",
-        "updated_at": "2024-07-09T19:06:04Z",
-        "pushed_at": "2024-07-09T18:29:35Z",
+        "updated_at": "2024-08-07T08:37:33Z",
+        "pushed_at": "2024-08-07T08:37:28Z",
         "git_url": "git://github.com/seandavi/icc-eval-core.git",
         "ssh_url": "git@github.com:seandavi/icc-eval-core.git",
         "clone_url": "https://github.com/seandavi/icc-eval-core.git",
         "svn_url": "https://github.com/seandavi/icc-eval-core",
         "homepage": "",
-        "size": 8099,
+        "size": 3977,
         "stargazers_count": 0,
         "watchers_count": 0,
-        "language": null,
+        "language": "TypeScript",
         "has_issues": false,
         "has_projects": true,
         "has_downloads": true,
@@ -9991,7 +10083,7 @@
       "pull": true
     },
     "score": 1,
-    "core_project": "U54OD036472",
+    "coreProject": "U54OD036472",
     "stars": [
       {
         "starred_at": "2024-07-09T19:05:31Z",
@@ -10018,6 +10110,66 @@
       }
     ],
     "issues": [
+      {
+        "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/21",
+        "repository_url": "https://api.github.com/repos/nih-cfde/icc-eval-core",
+        "labels_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/21/labels{/name}",
+        "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/21/comments",
+        "events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/21/events",
+        "html_url": "https://github.com/nih-cfde/icc-eval-core/issues/21",
+        "id": 2477830360,
+        "node_id": "I_kwDOMDM_U86TsLDY",
+        "number": 21,
+        "title": "Set up google cloud platform project",
+        "user": {
+          "login": "seandavi",
+          "id": 92435,
+          "node_id": "MDQ6VXNlcjkyNDM1",
+          "avatar_url": "https://avatars.githubusercontent.com/u/92435?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/seandavi",
+          "html_url": "https://github.com/seandavi",
+          "followers_url": "https://api.github.com/users/seandavi/followers",
+          "following_url": "https://api.github.com/users/seandavi/following{/other_user}",
+          "gists_url": "https://api.github.com/users/seandavi/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/seandavi/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/seandavi/subscriptions",
+          "organizations_url": "https://api.github.com/users/seandavi/orgs",
+          "repos_url": "https://api.github.com/users/seandavi/repos",
+          "events_url": "https://api.github.com/users/seandavi/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/seandavi/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "labels": [],
+        "state": "open",
+        "locked": false,
+        "assignee": null,
+        "assignees": [],
+        "milestone": null,
+        "comments": 1,
+        "created_at": "2024-08-21T11:46:35Z",
+        "updated_at": "2024-08-21T12:27:38Z",
+        "closed_at": null,
+        "author_association": "MEMBER",
+        "active_lock_reason": null,
+        "body": "@vincerubinetti do you have a google cloud project set up for cfde? If not, I can get one set up. We will likely need one for the google analytics stuff (see #14 ) and it may be helpful for other small compute or database tasks. ",
+        "reactions": {
+          "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/21/reactions",
+          "total_count": 0,
+          "+1": 0,
+          "-1": 0,
+          "laugh": 0,
+          "hooray": 0,
+          "confused": 0,
+          "heart": 0,
+          "rocket": 0,
+          "eyes": 0
+        },
+        "timeline_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/21/timeline",
+        "performed_via_github_app": null,
+        "state_reason": null
+      },
       {
         "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/18",
         "repository_url": "https://api.github.com/repos/nih-cfde/icc-eval-core",
@@ -10069,7 +10221,7 @@
         "created_at": "2024-07-29T17:54:56Z",
         "updated_at": "2024-07-29T17:57:36Z",
         "closed_at": null,
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "active_lock_reason": null,
         "body": "Scimago rankings list journals by their full names, but iCite returns journals by their abbreviated/short/id names.\r\n\r\nPreviously I was using Scimago's search, which [doesn't reliably return the right journal as the first result](https://www.scimagojr.com/journalsearch.php?q=Commun+Biol). #16 changes this to scrape the [NLM catalog search](https://www.ncbi.nlm.nih.gov/nlmcatalog/?term=Commun+Biol[TA]) instead, which works fine, but it'd be more appropriate to use an actual API since once exists.\r\n\r\nI can do [this query](https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=Commun%20Biol[TA]&retmode=json) ([with TA](https://stackoverflow.com/questions/75512796/how-do-i-get-issns-and-full-journal-names-from-a-list-of-abbreviated-journal-nam)) to get a journal's (pubmed?) id, then [this query](https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id=39069530&retmode=json) to get its `fulljournalname`, which should hopefully be the same as the NLM catalog search shows (which so far seems to match what Scimago has as the title).\r\n\r\nScimago rankings aren't a high priority, but I'm guessing we'll eventually need to use the entrez tools to look something up, so I might as well create some type definitions and api funcs for them.\r\n",
         "reactions": {
@@ -10098,7 +10250,7 @@
         "id": 2398979932,
         "node_id": "I_kwDOMDM_U86O_Ydc",
         "number": 14,
-        "title": "Add analytics/logging to dashboard",
+        "title": "Ingest (google) analytics",
         "user": {
           "login": "seandavi",
           "id": 92435,
@@ -10135,9 +10287,9 @@
         "assignee": null,
         "assignees": [],
         "milestone": null,
-        "comments": 1,
+        "comments": 8,
         "created_at": "2024-07-09T19:13:52Z",
-        "updated_at": "2024-07-24T21:54:35Z",
+        "updated_at": "2024-08-22T16:03:23Z",
         "closed_at": null,
         "author_association": "MEMBER",
         "active_lock_reason": null,
@@ -10195,13 +10347,13 @@
         "assignee": null,
         "assignees": [],
         "milestone": null,
-        "comments": 0,
+        "comments": 3,
         "created_at": "2024-07-01T23:31:28Z",
-        "updated_at": "2024-07-01T23:40:36Z",
+        "updated_at": "2024-08-07T20:07:56Z",
         "closed_at": null,
         "author_association": "MEMBER",
         "active_lock_reason": null,
-        "body": "This issue just captures the information shared by the DRC with us via email to help@cfde.cloud. These links were a response to my asking for API access to the information on https://info.cfde.cloud and https://data.cfde.cloud. \r\n\r\n- https://cfde-drc.s3.amazonaws.com/database/files/current_dcc_assets.tsv\r\n- https://cfde-drc.s3.amazonaws.com/database/files/current_file_assets.tsv\r\n- https://cfde-drc.s3.amazonaws.com/database/files/current_code_assets.tsv\r\n\r\nCurrently, each file has at most a couple hundred rows. I think these correspond to links in this [Data Matrix View](https://data.cfde.cloud/matrix)\r\n\r\n## current dcc assets format\r\n\r\n```\r\nlink\tlastmodified\tcurrent\tcreator\tdcc_id\tdrcapproved\tdccapproved\tdeleted\tcreated\r\nhttps://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf0a_c2m2.py\t2024-02-20 20:16:23.088\tFalse\tstephanieolaiya@gmail.com\tf3f490cf-fd69-579c-8ea3-472c7cf3fb59\tFalse\tFalse\tTrue\t2024-02-20 20:16:23.088\r\nhttps://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mf10a_c2m2.py\t2024-02-20 20:19:52.739\tFalse\tstephanieolaiya@gmail.com\tf3f490cf-fd69-579c-8ea3-472c7cf3fb59\tFalse\tFalse\tTrue\t2024-02-20 20:19:52.739\r\nhttps://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-05-08/SPARC.zip\t2024-05-08 15:47:03.429\tTrue\tsxie04@gmail.com\t2399794e-74c6-5735-a039-0782cdeeb1e2\tTrue\tTrue\tFalse\t2024-05-08 15:47:03.429\r\nhttps://zinc15.docking.org/substances/search/?q={drug.label}\t2024-03-08 00:15:43.332\tTrue\tsxie04@gmail.com\ta1289ebb-0306-59a1-b0fc-e4d03a4790d7\tTrue\tTrue\tFalse\t2024-03-08 00:15:43.332\r\nhttps://github.com/nih-cfde/LINCS-metadata/blob/ain/scripts/process_mcf10a_c2m2.py\t2024-02-21 22:08:41.275\tFalse\tstephanieolaiya@gmail.com\tf3f490cf-fd69-579c-8ea3-472c7cf3fb59\tFalse\tFalse\tTrue\t2024-02-21 22:08:41.275\r\nhttps://www.gtexportal.org/home/gene/{gene.ensembl}\t2024-03-08 00:18:20.759\tTrue\tsxie04@gmail.com\tb3028db2-209c-5862-8f4d-33c5b312332e\tTrue\tFalse\tFalse\t2024-03-08 00:18:20.759\r\nhttps://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/tkg 2.0.zip\t2024-03-01 05:45:05.879\tTrue\tjiaweixu@utexas.edu\t75b3be39-a021-5d80-b7e2-2a7938a1e11a\tFalse\tTrue\tFalse\t2024-03-01 05:45:05.879\r\nhttps://drugcentral.org/?q={drug.label}\t2024-03-08 00:15:16.867\tTrue\tsxie04@gmail.com\ta1289ebb-0306-59a1-b0fc-e4d03a4790d7\tTrue\tTrue\tFalse\t2024-03-08 00:15:16.867\r\n```\r\n\r\n## current file assets format\r\n\r\n```\r\ntype\tname\tlink\tdescription\topenAPISpec\tsmartAPISpec\tsmartAPIURL\tentityPageExample\r\nApps URL\tSenNet Data Portal\thttps://data.sennetconsortium.org/\t\tFalse\tFalse\r\nAPI\tHuBMAP Entity API\thttps://entity.api.hubmapconsortium.org/\tThe HuBMAP Entity API is a standard RESTful web service with create, update and read operations for the standard HuBMAP provenance graph entities.\tFalse\tTrue\thttps://smart-api.info/ui/0065e419668f3336a40d1f5ab89c6ba3\r\nAPI\tSenNet Search API\thttps://search.api.sennetconsortium.org\tThe SenNet Search API is a thin wrapper of the Elasticsearch API. It handles data indexing and reindexing into the backend Elasticsearch. It also accepts the search query and passes through to the Elasticsearch with data access security check.\tFalse\tTrue\thttps://smart-api.info/ui/10ed9b5eb8ff960d4431befc591ed842\r\nAPI\tSenNet Entity API\thttps://entity.api.sennetconsortium.org\tThe SenNet Entity API is a standard RESTful web service with create, update and read operations for the standard SenNet provenance graph entities.\tFalse\tTrue\thttps://smart-api.info/ui/7d838c9dee0caa2f8fe57173282c5812\r\nApps URL\tSenNet Exploration User Interface\thttps://data.sennetconsortium.org/ccf-eui\t\tFalse\tFalse\r\nApps URL\tLINCS Tools Marketplace\thttps://lincsproject.org/LINCS/tools\tThe LINCS Tools Marketplace page serves a listing of applications produced  using LINCS datasets by the LINCS consortium. \tFalse\tFalse\r\nApps URL\tSPARC Tools and Resources\thttps://sparc.science/tools-and-resources/tools\tSPARC Portal page listing SPARC associated tools and resources\tFalse\tFalse\r\nAPI\texRNA Atlas JSON-LD\thttps://brl-bcm.stoplight.io/docs/exrna-atlas-json-api/ZG9jOjQ1Mg-overview\t\tTrue\tFalse\r\nAPI\tCFDE GeneReg Linked Data Hub\thttps://genboree.org/cfde-gene-dev/ui/api-docs\t\tFalse\tFalse\r\n```\r\n\r\n## current code assets format\r\n\r\n```\r\nfiletype\tfilename\tlink\tsize\tsha256checksum\r\nKG Assertions\tdictionary_NAR_databases_deduplicate.csv\thttps://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/dictionary_NAR_databases_deduplicate.csv\t332431\tidxebqqDNkRDqgG4IDziJPyzOG83XfQLznIPMUGypq8=\r\nKG Assertions\tPapers.csv\thttps://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/Papers.csv\t305136\tTFRyCZSHx9Y3RHZd0SXOa7T4+hEYTPlXupVFUPDZxis=\r\nKG Assertions\ttkg 2.0.zip\thttps://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/tkg 2.0.zip\t303893995\t6ZpPhxpW95YWPREcYff5qteHdGaRitMkHeuQbGDerF8=\r\nXMT\tMoTrPAC_Endurance_Trained_Rats_2023.gmt\thttps://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2024-03-05/MoTrPAC_Endurance_Trained_Rats_2023.gmt\t187733\tGHbcupKlcgz78vtTbdkSaY3RbiPNWzLNPMD104Yhugc=\r\nXMT\tLINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt\thttps://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-11/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt\t16319270\tBxZ89Ja3/S7lTaA6yCv/Xhgwoh8EIy25JnF1Sk7VphY=\r\nXMT\ttestfile.gmt\thttps://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-23/testfile.gmt\t80\tMWcavCS4IMIBHGVvlq3AVOy9Qbgd6RgfDAh3CgjCdqY=\r\nC2M2\t2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1.zip\thttps://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26/2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1.zip\t1076294222\tpmm476mNJOP4SB/kI83WaWNhb5QpBjXv3w7DFvEkuhY=\r\nC2M2\thubmap-test-submission.zip\thttps://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26/hubmap-test-submission.zip\t1076294222\tpmm476mNJOP4SB/kI83WaWNhb5QpBjXv3w7DFvEkuhY=\r\nKG Assertions\tGTEx.zip\thttps://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-04-29/GTEx.zip\t149456464\ticIIQG/ikXF55yVGBU8fzfObHFBYbdRo3Vguy0CiDko=\r\n```",
+        "body": "This issue just captures the information shared by the DRC with us via email to help@cfde.cloud. These links were a response to my asking for API access to the information on https://info.cfde.cloud and https://data.cfde.cloud. \r\n\r\n- https://cfde-drc.s3.amazonaws.com/database/files/current_dcc_assets.tsv\r\n- https://cfde-drc.s3.amazonaws.com/database/files/current_file_assets.tsv\r\n- https://cfde-drc.s3.amazonaws.com/database/files/current_code_assets.tsv\r\n\r\nCurrently, each file has at most a couple hundred rows. I think these correspond to links in this [Data Matrix View](https://data.cfde.cloud/matrix)\r\n\r\n## current dcc assets format\r\n\r\n```\r\nlink\tlastmodified\tcurrent\tcreator\tdcc_id\tdrcapproved\tdccapproved\tdeleted\tcreated\r\nhttps://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf0a_c2m2.py\t2024-02-20 20:16:23.088\tFalse\tstephanieolaiya@gmail.com\tf3f490cf-fd69-579c-8ea3-472c7cf3fb59\tFalse\tFalse\tTrue\t2024-02-20 20:16:23.088\r\nhttps://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mf10a_c2m2.py\t2024-02-20 20:19:52.739\tFalse\tstephanieolaiya@gmail.com\tf3f490cf-fd69-579c-8ea3-472c7cf3fb59\tFalse\tFalse\tTrue\t2024-02-20 20:19:52.739\r\nhttps://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-05-08/SPARC.zip\t2024-05-08 15:47:03.429\tTrue\tsxie04@gmail.com\t2399794e-74c6-5735-a039-0782cdeeb1e2\tTrue\tTrue\tFalse\t2024-05-08 15:47:03.429\r\nhttps://zinc15.docking.org/substances/search/?q={drug.label}\t2024-03-08 00:15:43.332\tTrue\tsxie04@gmail.com\ta1289ebb-0306-59a1-b0fc-e4d03a4790d7\tTrue\tTrue\tFalse\t2024-03-08 00:15:43.332\r\nhttps://github.com/nih-cfde/LINCS-metadata/blob/ain/scripts/process_mcf10a_c2m2.py\t2024-02-21 22:08:41.275\tFalse\tstephanieolaiya@gmail.com\tf3f490cf-fd69-579c-8ea3-472c7cf3fb59\tFalse\tFalse\tTrue\t2024-02-21 22:08:41.275\r\nhttps://www.gtexportal.org/home/gene/{gene.ensembl}\t2024-03-08 00:18:20.759\tTrue\tsxie04@gmail.com\tb3028db2-209c-5862-8f4d-33c5b312332e\tTrue\tFalse\tFalse\t2024-03-08 00:18:20.759\r\nhttps://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/tkg 2.0.zip\t2024-03-01 05:45:05.879\tTrue\tjiaweixu@utexas.edu\t75b3be39-a021-5d80-b7e2-2a7938a1e11a\tFalse\tTrue\tFalse\t2024-03-01 05:45:05.879\r\nhttps://drugcentral.org/?q={drug.label}\t2024-03-08 00:15:16.867\tTrue\tsxie04@gmail.com\ta1289ebb-0306-59a1-b0fc-e4d03a4790d7\tTrue\tTrue\tFalse\t2024-03-08 00:15:16.867\r\n```\r\n\r\n## current code assets format\r\n\r\n```\r\ntype\tname\tlink\tdescription\topenAPISpec\tsmartAPISpec\tsmartAPIURL\tentityPageExample\r\nApps URL\tSenNet Data Portal\thttps://data.sennetconsortium.org/\t\tFalse\tFalse\r\nAPI\tHuBMAP Entity API\thttps://entity.api.hubmapconsortium.org/\tThe HuBMAP Entity API is a standard RESTful web service with create, update and read operations for the standard HuBMAP provenance graph entities.\tFalse\tTrue\thttps://smart-api.info/ui/0065e419668f3336a40d1f5ab89c6ba3\r\nAPI\tSenNet Search API\thttps://search.api.sennetconsortium.org\tThe SenNet Search API is a thin wrapper of the Elasticsearch API. It handles data indexing and reindexing into the backend Elasticsearch. It also accepts the search query and passes through to the Elasticsearch with data access security check.\tFalse\tTrue\thttps://smart-api.info/ui/10ed9b5eb8ff960d4431befc591ed842\r\nAPI\tSenNet Entity API\thttps://entity.api.sennetconsortium.org\tThe SenNet Entity API is a standard RESTful web service with create, update and read operations for the standard SenNet provenance graph entities.\tFalse\tTrue\thttps://smart-api.info/ui/7d838c9dee0caa2f8fe57173282c5812\r\nApps URL\tSenNet Exploration User Interface\thttps://data.sennetconsortium.org/ccf-eui\t\tFalse\tFalse\r\nApps URL\tLINCS Tools Marketplace\thttps://lincsproject.org/LINCS/tools\tThe LINCS Tools Marketplace page serves a listing of applications produced  using LINCS datasets by the LINCS consortium. \tFalse\tFalse\r\nApps URL\tSPARC Tools and Resources\thttps://sparc.science/tools-and-resources/tools\tSPARC Portal page listing SPARC associated tools and resources\tFalse\tFalse\r\nAPI\texRNA Atlas JSON-LD\thttps://brl-bcm.stoplight.io/docs/exrna-atlas-json-api/ZG9jOjQ1Mg-overview\t\tTrue\tFalse\r\nAPI\tCFDE GeneReg Linked Data Hub\thttps://genboree.org/cfde-gene-dev/ui/api-docs\t\tFalse\tFalse\r\n```\r\n\r\n## current file assets format\r\n\r\n```\r\nfiletype\tfilename\tlink\tsize\tsha256checksum\r\nKG Assertions\tdictionary_NAR_databases_deduplicate.csv\thttps://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/dictionary_NAR_databases_deduplicate.csv\t332431\tidxebqqDNkRDqgG4IDziJPyzOG83XfQLznIPMUGypq8=\r\nKG Assertions\tPapers.csv\thttps://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/Papers.csv\t305136\tTFRyCZSHx9Y3RHZd0SXOa7T4+hEYTPlXupVFUPDZxis=\r\nKG Assertions\ttkg 2.0.zip\thttps://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/tkg 2.0.zip\t303893995\t6ZpPhxpW95YWPREcYff5qteHdGaRitMkHeuQbGDerF8=\r\nXMT\tMoTrPAC_Endurance_Trained_Rats_2023.gmt\thttps://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2024-03-05/MoTrPAC_Endurance_Trained_Rats_2023.gmt\t187733\tGHbcupKlcgz78vtTbdkSaY3RbiPNWzLNPMD104Yhugc=\r\nXMT\tLINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt\thttps://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-11/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt\t16319270\tBxZ89Ja3/S7lTaA6yCv/Xhgwoh8EIy25JnF1Sk7VphY=\r\nXMT\ttestfile.gmt\thttps://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-23/testfile.gmt\t80\tMWcavCS4IMIBHGVvlq3AVOy9Qbgd6RgfDAh3CgjCdqY=\r\nC2M2\t2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1.zip\thttps://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26/2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1.zip\t1076294222\tpmm476mNJOP4SB/kI83WaWNhb5QpBjXv3w7DFvEkuhY=\r\nC2M2\thubmap-test-submission.zip\thttps://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26/hubmap-test-submission.zip\t1076294222\tpmm476mNJOP4SB/kI83WaWNhb5QpBjXv3w7DFvEkuhY=\r\nKG Assertions\tGTEx.zip\thttps://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-04-29/GTEx.zip\t149456464\ticIIQG/ikXF55yVGBU8fzfObHFBYbdRo3Vguy0CiDko=\r\n```",
         "reactions": {
           "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/12/reactions",
           "total_count": 0,
@@ -10365,7 +10517,7 @@
         "created_at": "2024-06-12T13:36:24Z",
         "updated_at": "2024-07-25T14:03:38Z",
         "closed_at": "2024-07-25T14:03:37Z",
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "active_lock_reason": null,
         "body": "This will require that we get a token from each team with relevant permissions for the appropriate repositories. Consider if the benefit is greater than the time cost across teams:\r\nhttps://docs.github.com/en/rest/metrics/traffic?apiVersion=2022-11-28#about-repository-traffic",
         "reactions": {
@@ -10461,7 +10613,7 @@
         "created_at": "2024-06-12T13:35:24Z",
         "updated_at": "2024-07-24T21:35:43Z",
         "closed_at": "2024-07-24T21:35:23Z",
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "active_lock_reason": null,
         "body": "Measure relevant activity on github (commits, issues, pull requests, etc).",
         "reactions": {
@@ -10557,7 +10709,7 @@
         "created_at": "2024-06-12T13:33:20Z",
         "updated_at": "2024-07-11T19:45:01Z",
         "closed_at": "2024-07-11T19:45:01Z",
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "active_lock_reason": null,
         "body": "I am not sure if this is obtainable from reporter - folks do report software as part of the RPPR process, but I didn't find examples on reporter with software listed. Alterantively, perhaps we can request a yaml file with at least the URLs for software associated with each project.",
         "reactions": {
@@ -11057,7 +11209,716 @@
         "state_reason": "completed"
       }
     ],
-    "pull_requests": [
+    "pullRequests": [
+      {
+        "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/20",
+        "id": 2009115454,
+        "node_id": "PR_kwDOMDM_U853wKs-",
+        "html_url": "https://github.com/nih-cfde/icc-eval-core/pull/20",
+        "diff_url": "https://github.com/nih-cfde/icc-eval-core/pull/20.diff",
+        "patch_url": "https://github.com/nih-cfde/icc-eval-core/pull/20.patch",
+        "issue_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/20",
+        "number": 20,
+        "state": "closed",
+        "locked": false,
+        "title": "add drc ingest, related fixes and improvements",
+        "user": {
+          "login": "vincerubinetti",
+          "id": 8326331,
+          "node_id": "MDQ6VXNlcjgzMjYzMzE=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8326331?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/vincerubinetti",
+          "html_url": "https://github.com/vincerubinetti",
+          "followers_url": "https://api.github.com/users/vincerubinetti/followers",
+          "following_url": "https://api.github.com/users/vincerubinetti/following{/other_user}",
+          "gists_url": "https://api.github.com/users/vincerubinetti/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/vincerubinetti/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/vincerubinetti/subscriptions",
+          "organizations_url": "https://api.github.com/users/vincerubinetti/orgs",
+          "repos_url": "https://api.github.com/users/vincerubinetti/repos",
+          "events_url": "https://api.github.com/users/vincerubinetti/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/vincerubinetti/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "The diff here looks bigger than it really is due to large raw data assets, moving files, and indentation changes.\r\n\r\nSee discussion in https://github.com/nih-cfde/icc-eval-core/issues/12\r\n\r\n- upgrade packages\r\n- add `/temp` dir to gitignore for large files we need to process\r\n- rename api type definitions from `.d.ts` to `.ts`, and move them to their own `/types` folder\r\n- add ingest function to download drc resource lists, download all of the resources listed in them, and give a high level summary\r\n- clean up github ingest. split up more appropriately for caching and parallelization.\r\n- allow all query/queryMultis to log progress. change nature of multi; return single array of both successes and errors (for easier matching with original input), and provide util func to filter out errors.\r\n- add util func to download file directly (without playwright), with caching and progress logging\r\n- add parsing/saving of tsv, txt, and gmt files\r\n- add util func to unzip archive and return details of contained files, with caching\r\n- improve logging util funcs for nicer and more informative progress display\r\n- limit concurrency in queryMulti (e.g. prevent trying to download 300 files at once)\r\n- add some string util funcs to reduce repetition\r\n- update `run.sh` to support running arbitrary ts file (for testing)",
+        "created_at": "2024-08-07T19:48:25Z",
+        "updated_at": "2024-08-17T21:00:21Z",
+        "closed_at": "2024-08-17T21:00:20Z",
+        "merged_at": "2024-08-17T21:00:20Z",
+        "merge_commit_sha": "b896bb862bbd1616fb0c2127523792659910f42b",
+        "assignee": null,
+        "assignees": [],
+        "requested_reviewers": [
+          {
+            "login": "seandavi",
+            "id": 92435,
+            "node_id": "MDQ6VXNlcjkyNDM1",
+            "avatar_url": "https://avatars.githubusercontent.com/u/92435?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/seandavi",
+            "html_url": "https://github.com/seandavi",
+            "followers_url": "https://api.github.com/users/seandavi/followers",
+            "following_url": "https://api.github.com/users/seandavi/following{/other_user}",
+            "gists_url": "https://api.github.com/users/seandavi/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/seandavi/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/seandavi/subscriptions",
+            "organizations_url": "https://api.github.com/users/seandavi/orgs",
+            "repos_url": "https://api.github.com/users/seandavi/repos",
+            "events_url": "https://api.github.com/users/seandavi/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/seandavi/received_events",
+            "type": "User",
+            "site_admin": false
+          },
+          {
+            "login": "cgreene",
+            "id": 542643,
+            "node_id": "MDQ6VXNlcjU0MjY0Mw==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/542643?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/cgreene",
+            "html_url": "https://github.com/cgreene",
+            "followers_url": "https://api.github.com/users/cgreene/followers",
+            "following_url": "https://api.github.com/users/cgreene/following{/other_user}",
+            "gists_url": "https://api.github.com/users/cgreene/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/cgreene/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/cgreene/subscriptions",
+            "organizations_url": "https://api.github.com/users/cgreene/orgs",
+            "repos_url": "https://api.github.com/users/cgreene/repos",
+            "events_url": "https://api.github.com/users/cgreene/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/cgreene/received_events",
+            "type": "User",
+            "site_admin": false
+          }
+        ],
+        "requested_teams": [],
+        "labels": [],
+        "milestone": null,
+        "draft": false,
+        "commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/20/commits",
+        "review_comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/20/comments",
+        "review_comment_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/comments{/number}",
+        "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/20/comments",
+        "statuses_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/8253c156a1f103b0466648875b83733fe8008b19",
+        "head": {
+          "label": "nih-cfde:drc",
+          "ref": "drc",
+          "sha": "8253c156a1f103b0466648875b83733fe8008b19",
+          "user": {
+            "login": "nih-cfde",
+            "id": 50423532,
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjUwNDIzNTMy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50423532?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nih-cfde",
+            "html_url": "https://github.com/nih-cfde",
+            "followers_url": "https://api.github.com/users/nih-cfde/followers",
+            "following_url": "https://api.github.com/users/nih-cfde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nih-cfde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nih-cfde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nih-cfde/subscriptions",
+            "organizations_url": "https://api.github.com/users/nih-cfde/orgs",
+            "repos_url": "https://api.github.com/users/nih-cfde/repos",
+            "events_url": "https://api.github.com/users/nih-cfde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nih-cfde/received_events",
+            "type": "Organization",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 808664915,
+            "node_id": "R_kgDOMDM_Uw",
+            "name": "icc-eval-core",
+            "full_name": "nih-cfde/icc-eval-core",
+            "private": false,
+            "owner": {
+              "login": "nih-cfde",
+              "id": 50423532,
+              "node_id": "MDEyOk9yZ2FuaXphdGlvbjUwNDIzNTMy",
+              "avatar_url": "https://avatars.githubusercontent.com/u/50423532?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/nih-cfde",
+              "html_url": "https://github.com/nih-cfde",
+              "followers_url": "https://api.github.com/users/nih-cfde/followers",
+              "following_url": "https://api.github.com/users/nih-cfde/following{/other_user}",
+              "gists_url": "https://api.github.com/users/nih-cfde/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/nih-cfde/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/nih-cfde/subscriptions",
+              "organizations_url": "https://api.github.com/users/nih-cfde/orgs",
+              "repos_url": "https://api.github.com/users/nih-cfde/repos",
+              "events_url": "https://api.github.com/users/nih-cfde/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/nih-cfde/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/nih-cfde/icc-eval-core",
+            "description": "(WIP) Tools for collecting and reporting CFDE metrics",
+            "fork": false,
+            "url": "https://api.github.com/repos/nih-cfde/icc-eval-core",
+            "forks_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/forks",
+            "keys_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/teams",
+            "hooks_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/hooks",
+            "issue_events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/events",
+            "assignees_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/tags",
+            "blobs_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/languages",
+            "stargazers_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/stargazers",
+            "contributors_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/contributors",
+            "subscribers_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/subscribers",
+            "subscription_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/subscription",
+            "commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/merges",
+            "archive_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/downloads",
+            "issues_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/labels{/name}",
+            "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
+            "created_at": "2024-05-31T14:46:25Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
+            "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
+            "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
+            "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
+            "svn_url": "https://github.com/nih-cfde/icc-eval-core",
+            "homepage": "https://cfde-eval.netlify.app/",
+            "size": 7770,
+            "stargazers_count": 1,
+            "watchers_count": 1,
+            "language": "TypeScript",
+            "has_issues": true,
+            "has_projects": false,
+            "has_downloads": true,
+            "has_wiki": false,
+            "has_pages": false,
+            "has_discussions": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 5,
+            "license": null,
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+              "u54od036472"
+            ],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 5,
+            "watchers": 1,
+            "default_branch": "main"
+          }
+        },
+        "base": {
+          "label": "nih-cfde:main",
+          "ref": "main",
+          "sha": "b74845975ec904777278a3083be7a0fc3e93ea3b",
+          "user": {
+            "login": "nih-cfde",
+            "id": 50423532,
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjUwNDIzNTMy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50423532?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nih-cfde",
+            "html_url": "https://github.com/nih-cfde",
+            "followers_url": "https://api.github.com/users/nih-cfde/followers",
+            "following_url": "https://api.github.com/users/nih-cfde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nih-cfde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nih-cfde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nih-cfde/subscriptions",
+            "organizations_url": "https://api.github.com/users/nih-cfde/orgs",
+            "repos_url": "https://api.github.com/users/nih-cfde/repos",
+            "events_url": "https://api.github.com/users/nih-cfde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nih-cfde/received_events",
+            "type": "Organization",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 808664915,
+            "node_id": "R_kgDOMDM_Uw",
+            "name": "icc-eval-core",
+            "full_name": "nih-cfde/icc-eval-core",
+            "private": false,
+            "owner": {
+              "login": "nih-cfde",
+              "id": 50423532,
+              "node_id": "MDEyOk9yZ2FuaXphdGlvbjUwNDIzNTMy",
+              "avatar_url": "https://avatars.githubusercontent.com/u/50423532?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/nih-cfde",
+              "html_url": "https://github.com/nih-cfde",
+              "followers_url": "https://api.github.com/users/nih-cfde/followers",
+              "following_url": "https://api.github.com/users/nih-cfde/following{/other_user}",
+              "gists_url": "https://api.github.com/users/nih-cfde/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/nih-cfde/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/nih-cfde/subscriptions",
+              "organizations_url": "https://api.github.com/users/nih-cfde/orgs",
+              "repos_url": "https://api.github.com/users/nih-cfde/repos",
+              "events_url": "https://api.github.com/users/nih-cfde/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/nih-cfde/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/nih-cfde/icc-eval-core",
+            "description": "(WIP) Tools for collecting and reporting CFDE metrics",
+            "fork": false,
+            "url": "https://api.github.com/repos/nih-cfde/icc-eval-core",
+            "forks_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/forks",
+            "keys_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/teams",
+            "hooks_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/hooks",
+            "issue_events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/events",
+            "assignees_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/tags",
+            "blobs_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/languages",
+            "stargazers_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/stargazers",
+            "contributors_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/contributors",
+            "subscribers_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/subscribers",
+            "subscription_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/subscription",
+            "commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/merges",
+            "archive_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/downloads",
+            "issues_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/labels{/name}",
+            "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
+            "created_at": "2024-05-31T14:46:25Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
+            "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
+            "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
+            "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
+            "svn_url": "https://github.com/nih-cfde/icc-eval-core",
+            "homepage": "https://cfde-eval.netlify.app/",
+            "size": 7770,
+            "stargazers_count": 1,
+            "watchers_count": 1,
+            "language": "TypeScript",
+            "has_issues": true,
+            "has_projects": false,
+            "has_downloads": true,
+            "has_wiki": false,
+            "has_pages": false,
+            "has_discussions": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 5,
+            "license": null,
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+              "u54od036472"
+            ],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 5,
+            "watchers": 1,
+            "default_branch": "main"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/20"
+          },
+          "html": {
+            "href": "https://github.com/nih-cfde/icc-eval-core/pull/20"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/20"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/20/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/20/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/comments{/number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/20/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/8253c156a1f103b0466648875b83733fe8008b19"
+          }
+        },
+        "author_association": "MEMBER",
+        "auto_merge": null,
+        "active_lock_reason": null
+      },
+      {
+        "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/19",
+        "id": 2004362016,
+        "node_id": "PR_kwDOMDM_U853eCMg",
+        "html_url": "https://github.com/nih-cfde/icc-eval-core/pull/19",
+        "diff_url": "https://github.com/nih-cfde/icc-eval-core/pull/19.diff",
+        "patch_url": "https://github.com/nih-cfde/icc-eval-core/pull/19.patch",
+        "issue_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/19",
+        "number": 19,
+        "state": "closed",
+        "locked": false,
+        "title": "DRC download",
+        "user": {
+          "login": "vincerubinetti",
+          "id": 8326331,
+          "node_id": "MDQ6VXNlcjgzMjYzMzE=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8326331?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/vincerubinetti",
+          "html_url": "https://github.com/vincerubinetti",
+          "followers_url": "https://api.github.com/users/vincerubinetti/followers",
+          "following_url": "https://api.github.com/users/vincerubinetti/following{/other_user}",
+          "gists_url": "https://api.github.com/users/vincerubinetti/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/vincerubinetti/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/vincerubinetti/subscriptions",
+          "organizations_url": "https://api.github.com/users/vincerubinetti/orgs",
+          "repos_url": "https://api.github.com/users/vincerubinetti/repos",
+          "events_url": "https://api.github.com/users/vincerubinetti/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/vincerubinetti/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "body": "Superseded by https://github.com/nih-cfde/icc-eval-core/pull/20",
+        "created_at": "2024-08-05T16:26:21Z",
+        "updated_at": "2024-08-07T19:49:15Z",
+        "closed_at": "2024-08-07T19:48:13Z",
+        "merged_at": null,
+        "merge_commit_sha": "fbe76a00ab01ec6019ed89b1026055558ebf646a",
+        "assignee": null,
+        "assignees": [],
+        "requested_reviewers": [],
+        "requested_teams": [],
+        "labels": [],
+        "milestone": null,
+        "draft": false,
+        "commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/19/commits",
+        "review_comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/19/comments",
+        "review_comment_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/comments{/number}",
+        "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/19/comments",
+        "statuses_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/6030d2b97cb8325bd7c54ebe711587f7fda37adb",
+        "head": {
+          "label": "nih-cfde:drc-temp",
+          "ref": "drc-temp",
+          "sha": "6030d2b97cb8325bd7c54ebe711587f7fda37adb",
+          "user": {
+            "login": "nih-cfde",
+            "id": 50423532,
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjUwNDIzNTMy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50423532?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nih-cfde",
+            "html_url": "https://github.com/nih-cfde",
+            "followers_url": "https://api.github.com/users/nih-cfde/followers",
+            "following_url": "https://api.github.com/users/nih-cfde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nih-cfde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nih-cfde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nih-cfde/subscriptions",
+            "organizations_url": "https://api.github.com/users/nih-cfde/orgs",
+            "repos_url": "https://api.github.com/users/nih-cfde/repos",
+            "events_url": "https://api.github.com/users/nih-cfde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nih-cfde/received_events",
+            "type": "Organization",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 808664915,
+            "node_id": "R_kgDOMDM_Uw",
+            "name": "icc-eval-core",
+            "full_name": "nih-cfde/icc-eval-core",
+            "private": false,
+            "owner": {
+              "login": "nih-cfde",
+              "id": 50423532,
+              "node_id": "MDEyOk9yZ2FuaXphdGlvbjUwNDIzNTMy",
+              "avatar_url": "https://avatars.githubusercontent.com/u/50423532?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/nih-cfde",
+              "html_url": "https://github.com/nih-cfde",
+              "followers_url": "https://api.github.com/users/nih-cfde/followers",
+              "following_url": "https://api.github.com/users/nih-cfde/following{/other_user}",
+              "gists_url": "https://api.github.com/users/nih-cfde/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/nih-cfde/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/nih-cfde/subscriptions",
+              "organizations_url": "https://api.github.com/users/nih-cfde/orgs",
+              "repos_url": "https://api.github.com/users/nih-cfde/repos",
+              "events_url": "https://api.github.com/users/nih-cfde/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/nih-cfde/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/nih-cfde/icc-eval-core",
+            "description": "(WIP) Tools for collecting and reporting CFDE metrics",
+            "fork": false,
+            "url": "https://api.github.com/repos/nih-cfde/icc-eval-core",
+            "forks_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/forks",
+            "keys_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/teams",
+            "hooks_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/hooks",
+            "issue_events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/events",
+            "assignees_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/tags",
+            "blobs_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/languages",
+            "stargazers_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/stargazers",
+            "contributors_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/contributors",
+            "subscribers_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/subscribers",
+            "subscription_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/subscription",
+            "commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/merges",
+            "archive_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/downloads",
+            "issues_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/labels{/name}",
+            "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
+            "created_at": "2024-05-31T14:46:25Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
+            "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
+            "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
+            "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
+            "svn_url": "https://github.com/nih-cfde/icc-eval-core",
+            "homepage": "https://cfde-eval.netlify.app/",
+            "size": 7770,
+            "stargazers_count": 1,
+            "watchers_count": 1,
+            "language": "TypeScript",
+            "has_issues": true,
+            "has_projects": false,
+            "has_downloads": true,
+            "has_wiki": false,
+            "has_pages": false,
+            "has_discussions": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 5,
+            "license": null,
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+              "u54od036472"
+            ],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 5,
+            "watchers": 1,
+            "default_branch": "main"
+          }
+        },
+        "base": {
+          "label": "nih-cfde:main",
+          "ref": "main",
+          "sha": "f13bd53da6673ef0ede37c045e1f9b14e6516bbd",
+          "user": {
+            "login": "nih-cfde",
+            "id": 50423532,
+            "node_id": "MDEyOk9yZ2FuaXphdGlvbjUwNDIzNTMy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/50423532?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/nih-cfde",
+            "html_url": "https://github.com/nih-cfde",
+            "followers_url": "https://api.github.com/users/nih-cfde/followers",
+            "following_url": "https://api.github.com/users/nih-cfde/following{/other_user}",
+            "gists_url": "https://api.github.com/users/nih-cfde/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/nih-cfde/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/nih-cfde/subscriptions",
+            "organizations_url": "https://api.github.com/users/nih-cfde/orgs",
+            "repos_url": "https://api.github.com/users/nih-cfde/repos",
+            "events_url": "https://api.github.com/users/nih-cfde/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/nih-cfde/received_events",
+            "type": "Organization",
+            "site_admin": false
+          },
+          "repo": {
+            "id": 808664915,
+            "node_id": "R_kgDOMDM_Uw",
+            "name": "icc-eval-core",
+            "full_name": "nih-cfde/icc-eval-core",
+            "private": false,
+            "owner": {
+              "login": "nih-cfde",
+              "id": 50423532,
+              "node_id": "MDEyOk9yZ2FuaXphdGlvbjUwNDIzNTMy",
+              "avatar_url": "https://avatars.githubusercontent.com/u/50423532?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/nih-cfde",
+              "html_url": "https://github.com/nih-cfde",
+              "followers_url": "https://api.github.com/users/nih-cfde/followers",
+              "following_url": "https://api.github.com/users/nih-cfde/following{/other_user}",
+              "gists_url": "https://api.github.com/users/nih-cfde/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/nih-cfde/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/nih-cfde/subscriptions",
+              "organizations_url": "https://api.github.com/users/nih-cfde/orgs",
+              "repos_url": "https://api.github.com/users/nih-cfde/repos",
+              "events_url": "https://api.github.com/users/nih-cfde/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/nih-cfde/received_events",
+              "type": "Organization",
+              "site_admin": false
+            },
+            "html_url": "https://github.com/nih-cfde/icc-eval-core",
+            "description": "(WIP) Tools for collecting and reporting CFDE metrics",
+            "fork": false,
+            "url": "https://api.github.com/repos/nih-cfde/icc-eval-core",
+            "forks_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/forks",
+            "keys_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/keys{/key_id}",
+            "collaborators_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/collaborators{/collaborator}",
+            "teams_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/teams",
+            "hooks_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/hooks",
+            "issue_events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/events{/number}",
+            "events_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/events",
+            "assignees_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/assignees{/user}",
+            "branches_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/branches{/branch}",
+            "tags_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/tags",
+            "blobs_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/blobs{/sha}",
+            "git_tags_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/tags{/sha}",
+            "git_refs_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/refs{/sha}",
+            "trees_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/trees{/sha}",
+            "statuses_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/{sha}",
+            "languages_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/languages",
+            "stargazers_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/stargazers",
+            "contributors_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/contributors",
+            "subscribers_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/subscribers",
+            "subscription_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/subscription",
+            "commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits{/sha}",
+            "git_commits_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/commits{/sha}",
+            "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/comments{/number}",
+            "issue_comment_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/comments{/number}",
+            "contents_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/contents/{+path}",
+            "compare_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/compare/{base}...{head}",
+            "merges_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/merges",
+            "archive_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/{archive_format}{/ref}",
+            "downloads_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/downloads",
+            "issues_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues{/number}",
+            "pulls_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls{/number}",
+            "milestones_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/milestones{/number}",
+            "notifications_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/notifications{?since,all,participating}",
+            "labels_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/labels{/name}",
+            "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
+            "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
+            "created_at": "2024-05-31T14:46:25Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
+            "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
+            "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
+            "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
+            "svn_url": "https://github.com/nih-cfde/icc-eval-core",
+            "homepage": "https://cfde-eval.netlify.app/",
+            "size": 7770,
+            "stargazers_count": 1,
+            "watchers_count": 1,
+            "language": "TypeScript",
+            "has_issues": true,
+            "has_projects": false,
+            "has_downloads": true,
+            "has_wiki": false,
+            "has_pages": false,
+            "has_discussions": true,
+            "forks_count": 1,
+            "mirror_url": null,
+            "archived": false,
+            "disabled": false,
+            "open_issues_count": 5,
+            "license": null,
+            "allow_forking": true,
+            "is_template": false,
+            "web_commit_signoff_required": false,
+            "topics": [
+              "u54od036472"
+            ],
+            "visibility": "public",
+            "forks": 1,
+            "open_issues": 5,
+            "watchers": 1,
+            "default_branch": "main"
+          }
+        },
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/19"
+          },
+          "html": {
+            "href": "https://github.com/nih-cfde/icc-eval-core/pull/19"
+          },
+          "issue": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/19"
+          },
+          "comments": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/19/comments"
+          },
+          "review_comments": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/19/comments"
+          },
+          "review_comment": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/comments{/number}"
+          },
+          "commits": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/19/commits"
+          },
+          "statuses": {
+            "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/6030d2b97cb8325bd7c54ebe711587f7fda37adb"
+          }
+        },
+        "author_association": "MEMBER",
+        "auto_merge": null,
+        "active_lock_reason": null
+      },
       {
         "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/pulls/17",
         "id": 1988133543,
@@ -11199,14 +12060,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -11326,14 +12187,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -11388,7 +12249,7 @@
             "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/795630937715b9e2647366b2eb40a8fe87ddeb03"
           }
         },
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "auto_merge": null,
         "active_lock_reason": null
       },
@@ -11401,7 +12262,7 @@
         "patch_url": "https://github.com/nih-cfde/icc-eval-core/pull/16.patch",
         "issue_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/issues/16",
         "number": 16,
-        "state": "open",
+        "state": "closed",
         "locked": false,
         "title": "More GitHub stats",
         "user": {
@@ -11426,10 +12287,10 @@
         },
         "body": "- switch from yarn to bun. not using bun as a runtime, just as a package manager. bun install ~20x faster than yarn install locally, and is faster on CI even when yarn is cached and bun is not.\r\n- update workflows, readmes, commands, etc to bun instead of yarn\r\n- remove unused fonts\r\n- rerun pipeline (diff is largely just pdfs and json)\r\n- enable table component to set cell element attrs based on row contents (e.g. put `title` tooltip on cell that shows more details from row data)\r\n- put \"generated on\" date in footer when printing (needed because some things on page are relative to current datetime, e.g. \"last updated Jul 28, 2024 (1 day ago)\")\r\n- changes to core project app page\r\n    - more details at top\r\n    - more descriptions/notes of info\r\n    - split repositories table into two for better printing (get rid of dependency table. details available on hover of dependency count.)\r\n    - add issues and prs over time charts\r\n    - pull top level details out of template and into script in generic/flexible way\r\n- add # of repos to core project listing table\r\n- add some string and time util funcs\r\n- add github api funcs for getting issues, prs, contributors, and languages (not just top)\r\n- abstract out data ingest caching mechanism into query and queryMulti wrapper functions. consistently use these in every ingest step to save/load cache and report errors.\r\n- ingest issues/prs and calc average issue/pr open time\r\n- improve scimago journal look up. was previously using scimago's search to convert journal abbreviations to full names, but was unreliable. e.g., searching \"Commun Biol\" shows \"Indian Journal of Experimental Biology\" as the first result instead of \"Communications Biology\". instead, scrape NLM catalog search, get ISSN, and use ISSN to lookup scimago rank \r\n- move csv parsing to separate function\r\n- cache opportunity number scraping like every other step\r\n- add \"download file\" playwright util func\r\n- refactor saveFile/loadFile/parsing/etc util funcs to be simpler\r\n- add \"update in place\" log func\r\n- get rid of \"memoize\" util func. the raw folder is now our request cache, so memoize is not needed.\r\n- remove allSettled wrapper func, and rework into queryMulti and query wrapper funcs as described above\r\n- update run script commands for yarn to bun",
         "created_at": "2024-07-24T01:02:01Z",
-        "updated_at": "2024-07-29T17:48:25Z",
-        "closed_at": null,
-        "merged_at": null,
-        "merge_commit_sha": "318d1bf35ec4e296e47ea0e395dcfefad0c4e24b",
+        "updated_at": "2024-08-07T19:18:47Z",
+        "closed_at": "2024-08-07T19:18:45Z",
+        "merged_at": "2024-08-07T19:18:45Z",
+        "merge_commit_sha": "b74845975ec904777278a3083be7a0fc3e93ea3b",
         "assignee": null,
         "assignees": [],
         "requested_reviewers": [
@@ -11574,14 +12435,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -11701,14 +12562,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -11763,7 +12624,7 @@
             "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/8cf7047d01be76f3d011018c7c62e19ec680d28f"
           }
         },
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "auto_merge": null,
         "active_lock_reason": null
       },
@@ -11929,14 +12790,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -12056,14 +12917,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -12118,7 +12979,7 @@
             "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/7b3ed8a91d65fd04872438ea1d954a3a9d38cbdd"
           }
         },
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "auto_merge": null,
         "active_lock_reason": null
       },
@@ -12284,14 +13145,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -12411,14 +13272,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -12473,7 +13334,7 @@
             "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/9987a8911b3c83782560dde6ae987f9d048ae349"
           }
         },
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "auto_merge": null,
         "active_lock_reason": null
       },
@@ -12618,14 +13479,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -12745,14 +13606,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -12807,7 +13668,7 @@
             "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/6427213ddbe2f93d46174dde0ccf35fcf9294d62"
           }
         },
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "auto_merge": null,
         "active_lock_reason": null
       },
@@ -12973,14 +13834,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -13100,14 +13961,14 @@
             "releases_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/releases{/id}",
             "deployments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/deployments",
             "created_at": "2024-05-31T14:46:25Z",
-            "updated_at": "2024-07-29T15:35:56Z",
-            "pushed_at": "2024-08-02T00:32:33Z",
+            "updated_at": "2024-08-17T21:00:24Z",
+            "pushed_at": "2024-08-23T04:01:50Z",
             "git_url": "git://github.com/nih-cfde/icc-eval-core.git",
             "ssh_url": "git@github.com:nih-cfde/icc-eval-core.git",
             "clone_url": "https://github.com/nih-cfde/icc-eval-core.git",
             "svn_url": "https://github.com/nih-cfde/icc-eval-core",
             "homepage": "https://cfde-eval.netlify.app/",
-            "size": 12214,
+            "size": 7770,
             "stargazers_count": 1,
             "watchers_count": 1,
             "language": "TypeScript",
@@ -13162,12 +14023,170 @@
             "href": "https://api.github.com/repos/nih-cfde/icc-eval-core/statuses/48aa522049cd336de375529c517a486cdbe0aa90"
           }
         },
-        "author_association": "COLLABORATOR",
+        "author_association": "MEMBER",
         "auto_merge": null,
         "active_lock_reason": null
       }
     ],
     "commits": [
+      {
+        "sha": "b896bb862bbd1616fb0c2127523792659910f42b",
+        "node_id": "C_kwDOMDM_U9oAKGI4OTZiYjg2MmJiZDE2MTZmYjBjMjEyNzUyMzc5MjY1OTkxMGY0MmI",
+        "commit": {
+          "author": {
+            "name": "Vincent Rubinetti",
+            "email": "vince.rubinetti@gmail.com",
+            "date": "2024-08-17T21:00:20Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2024-08-17T21:00:20Z"
+          },
+          "message": "add drc ingest, related fixes and improvements (#20)\n\nThe diff here looks bigger than it really is due to large raw data\r\nassets, moving files, and indentation changes.\r\n\r\nSee discussion in https://github.com/nih-cfde/icc-eval-core/issues/12\r\n\r\n- upgrade packages\r\n- add `/temp` dir to gitignore for large files we need to process\r\n- rename api type definitions from `.d.ts` to `.ts`, and move them to\r\ntheir own `/types` folder\r\n- add ingest function to download drc resource lists, download all of\r\nthe resources listed in them, and give a high level summary\r\n- clean up github ingest. split up more appropriately for caching and\r\nparallelization.\r\n- allow all query/queryMultis to log progress. change nature of multi;\r\nreturn single array of both successes and errors (for easier matching\r\nwith original input), and provide util func to filter out errors.\r\n- add util func to download file directly (without playwright), with\r\ncaching and progress logging\r\n- add parsing/saving of tsv, txt, and gmt files\r\n- add util func to unzip archive and return details of contained files,\r\nwith caching\r\n- improve logging util funcs for nicer and more informative progress\r\ndisplay\r\n- limit concurrency in queryMulti (e.g. prevent trying to download 300\r\nfiles at once)\r\n- add some string util funcs to reduce repetition\r\n- update `run.sh` to support running arbitrary ts file (for testing)",
+          "tree": {
+            "sha": "47d1c7a18280deebef1a2640d99152e6097398d8",
+            "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/trees/47d1c7a18280deebef1a2640d99152e6097398d8"
+          },
+          "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/commits/b896bb862bbd1616fb0c2127523792659910f42b",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJmwQ9kCRC1aQ7uu5UhlAAAC4UQAHYdj6ti8xgfgVwwo46LZ/Cn\n10LoPFpD/qCUVFK4PrylBxuCNYPnRFKttizVrc51jky0uf53X9Trf6HmIzLwIa8a\nwvot2jG6CumlhV2N5f5nShKxnp/mg/xlhyk4rIn3Mpz/I13NP4EryM6BtIQ9BGEQ\nbVo4lkDgD74X3cS5OBfpPe0nj4cSr+4BzcajbnBe/fUPFPSP1AdbNvBHxz0sWrlA\nfkPOzmiVsoVMTmYUV1sgYQm0I5IdhLMFzx1JeYIuTNApgWOA74LqbCqoeJQjvLPx\nV/omN3Sn2yt3UFQTBjQ1SDwx+0b9UCH0lU6LhONEiLXe4aG9ka7rEUQiCdQtdxTz\n9pCvU6rrKrADSat8R7i8bhGKGxzJ0RCUeBaPtnGmyPR4iuFclR8Z3fAip2gkY6a2\nfEgwB9PMAsIClaCCH1mUti/uuaHaQGFzU4QFeGMyZ4LYuESc8kuM+NlDV6bpNWxs\nMSCpFoTWVFM2Odcf/zIbatqv5uTHyAY5x5DO4Wv7J9Qm3wUS7sR6ZalYgPM9h4/L\na20Qu6+ZXZtD64WL65FSUAh7l0zMeVmfACzonwfVgZzyTbut9E+IzQ7OlhjTGQFm\nHxoeg4Z5s/99q+NRmcn1RNRgTgSZ+aVN6RDhoLmpxcTuPz4AyA5msjrnRmrouRGe\ncjMF/EsXYLkNqOKuRCkp\n=Xkjs\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree 47d1c7a18280deebef1a2640d99152e6097398d8\nparent b74845975ec904777278a3083be7a0fc3e93ea3b\nauthor Vincent Rubinetti <vince.rubinetti@gmail.com> 1723928420 -0400\ncommitter GitHub <noreply@github.com> 1723928420 -0400\n\nadd drc ingest, related fixes and improvements (#20)\n\nThe diff here looks bigger than it really is due to large raw data\r\nassets, moving files, and indentation changes.\r\n\r\nSee discussion in https://github.com/nih-cfde/icc-eval-core/issues/12\r\n\r\n- upgrade packages\r\n- add `/temp` dir to gitignore for large files we need to process\r\n- rename api type definitions from `.d.ts` to `.ts`, and move them to\r\ntheir own `/types` folder\r\n- add ingest function to download drc resource lists, download all of\r\nthe resources listed in them, and give a high level summary\r\n- clean up github ingest. split up more appropriately for caching and\r\nparallelization.\r\n- allow all query/queryMultis to log progress. change nature of multi;\r\nreturn single array of both successes and errors (for easier matching\r\nwith original input), and provide util func to filter out errors.\r\n- add util func to download file directly (without playwright), with\r\ncaching and progress logging\r\n- add parsing/saving of tsv, txt, and gmt files\r\n- add util func to unzip archive and return details of contained files,\r\nwith caching\r\n- improve logging util funcs for nicer and more informative progress\r\ndisplay\r\n- limit concurrency in queryMulti (e.g. prevent trying to download 300\r\nfiles at once)\r\n- add some string util funcs to reduce repetition\r\n- update `run.sh` to support running arbitrary ts file (for testing)"
+          }
+        },
+        "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits/b896bb862bbd1616fb0c2127523792659910f42b",
+        "html_url": "https://github.com/nih-cfde/icc-eval-core/commit/b896bb862bbd1616fb0c2127523792659910f42b",
+        "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits/b896bb862bbd1616fb0c2127523792659910f42b/comments",
+        "author": {
+          "login": "vincerubinetti",
+          "id": 8326331,
+          "node_id": "MDQ6VXNlcjgzMjYzMzE=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8326331?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/vincerubinetti",
+          "html_url": "https://github.com/vincerubinetti",
+          "followers_url": "https://api.github.com/users/vincerubinetti/followers",
+          "following_url": "https://api.github.com/users/vincerubinetti/following{/other_user}",
+          "gists_url": "https://api.github.com/users/vincerubinetti/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/vincerubinetti/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/vincerubinetti/subscriptions",
+          "organizations_url": "https://api.github.com/users/vincerubinetti/orgs",
+          "repos_url": "https://api.github.com/users/vincerubinetti/repos",
+          "events_url": "https://api.github.com/users/vincerubinetti/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/vincerubinetti/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "b74845975ec904777278a3083be7a0fc3e93ea3b",
+            "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits/b74845975ec904777278a3083be7a0fc3e93ea3b",
+            "html_url": "https://github.com/nih-cfde/icc-eval-core/commit/b74845975ec904777278a3083be7a0fc3e93ea3b"
+          }
+        ]
+      },
+      {
+        "sha": "b74845975ec904777278a3083be7a0fc3e93ea3b",
+        "node_id": "C_kwDOMDM_U9oAKGI3NDg0NTk3NWVjOTA0Nzc3Mjc4YTMwODNiZTdhMGZjM2U5M2VhM2I",
+        "commit": {
+          "author": {
+            "name": "Vincent Rubinetti",
+            "email": "vince.rubinetti@gmail.com",
+            "date": "2024-08-07T19:18:45Z"
+          },
+          "committer": {
+            "name": "GitHub",
+            "email": "noreply@github.com",
+            "date": "2024-08-07T19:18:45Z"
+          },
+          "message": "More GitHub stats (#16)\n\n- switch from yarn to bun. not using bun as a runtime, just as a package\r\nmanager. bun install ~20x faster than yarn install locally, and is\r\nfaster on CI even when yarn is cached and bun is not.\r\n- update workflows, readmes, commands, etc to bun instead of yarn\r\n- remove unused fonts\r\n- rerun pipeline (diff is largely just pdfs and json)\r\n- enable table component to set cell element attrs based on row contents\r\n(e.g. put `title` tooltip on cell that shows more details from row data)\r\n- put \"generated on\" date in footer when printing (needed because some\r\nthings on page are relative to current datetime, e.g. \"last updated Jul\r\n28, 2024 (1 day ago)\")\r\n- changes to core project app page\r\n    - more details at top\r\n    - more descriptions/notes of info\r\n- split repositories table into two for better printing (get rid of\r\ndependency table. details available on hover of dependency count.)\r\n    - add issues and prs over time charts\r\n- pull top level details out of template and into script in\r\ngeneric/flexible way\r\n- add # of repos to core project listing table\r\n- add some string and time util funcs\r\n- add github api funcs for getting issues, prs, contributors, and\r\nlanguages (not just top)\r\n- abstract out data ingest caching mechanism into query and queryMulti\r\nwrapper functions. consistently use these in every ingest step to\r\nsave/load cache and report errors.\r\n- ingest issues/prs and calc average issue/pr open time\r\n- improve scimago journal look up. was previously using scimago's search\r\nto convert journal abbreviations to full names, but was unreliable.\r\ne.g., searching \"Commun Biol\" shows \"Indian Journal of Experimental\r\nBiology\" as the first result instead of \"Communications Biology\".\r\ninstead, scrape NLM catalog search, get ISSN, and use ISSN to lookup\r\nscimago rank\r\n- move csv parsing to separate function\r\n- cache opportunity number scraping like every other step\r\n- add \"download file\" playwright util func\r\n- refactor saveFile/loadFile/parsing/etc util funcs to be simpler\r\n- add \"update in place\" log func\r\n- get rid of \"memoize\" util func. the raw folder is now our request\r\ncache, so memoize is not needed.\r\n- remove allSettled wrapper func, and rework into queryMulti and query\r\nwrapper funcs as described above\r\n- update run script commands for yarn to bun",
+          "tree": {
+            "sha": "bafb1daaed164a1a6788dacb2a321240baf1583d",
+            "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/trees/bafb1daaed164a1a6788dacb2a321240baf1583d"
+          },
+          "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/git/commits/b74845975ec904777278a3083be7a0fc3e93ea3b",
+          "comment_count": 0,
+          "verification": {
+            "verified": true,
+            "reason": "valid",
+            "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJms8iVCRC1aQ7uu5UhlAAApmkQAJAfBUh8s9BDh/dVsGvCzVao\nAx4C+tGhR/PCJc/Xdtp9kiFlnxdRDnflUTs/46Fx2kGbTw56fh3p0NAe3V90Z/St\n81JwiZcDG6H++pgZcRgJDPi0kfjcshV+5olOJve/U5OnwO5gsAirxOdj4yTHAbxD\njl+rsHUQn6ZU+WN/mHyiZbTUbuxvEiIxXbeskyZuv89LE0n+xfIY9nFRAAFQ7Uyr\nZdGwjX8NOu+MLY0qxYiPVZPRp2mQp+bTas30QQSi3+R8cRipHnVgAFtHOg8C3e/+\nzv9z6oNq5Gmr8QF5RscH8g6pnXkHDQ1iksQFAElp5uTKvPFerpQUW64/B+i1SuDL\nAA31azsq+YA/dwVih9VSff8/A+CATLDRtdWicGUgk1WhYK8nZk+JKUV95J4JIpoe\nbtWoKDY11Brt0sXH3uIeoDJw+YtYFWkyukOjncoH+uX42U+/xnfNphmfkbiLB1wO\ngXx0Sto3PiREtHxZGhnM7DOV9dOVg6hOfRU4932M4JHa7VIJGij5NSWIYXFOItmJ\np+sXE86opIEbgcJt2v9f4A0AgeCBLIw2eH8OX46J0/j5Ps37fI9QnFYKtXMeSipU\nREfCcUW+hmWh0b1M8bEx9R8rr4BHpIzYVdX3AcLIphQ8MSC4r8uZs733IxZPqMTw\n6ukJ/UwmNxSXreyHaHe4\n=/W4V\n-----END PGP SIGNATURE-----\n",
+            "payload": "tree bafb1daaed164a1a6788dacb2a321240baf1583d\nparent f13bd53da6673ef0ede37c045e1f9b14e6516bbd\nauthor Vincent Rubinetti <vince.rubinetti@gmail.com> 1723058325 -0400\ncommitter GitHub <noreply@github.com> 1723058325 -0400\n\nMore GitHub stats (#16)\n\n- switch from yarn to bun. not using bun as a runtime, just as a package\r\nmanager. bun install ~20x faster than yarn install locally, and is\r\nfaster on CI even when yarn is cached and bun is not.\r\n- update workflows, readmes, commands, etc to bun instead of yarn\r\n- remove unused fonts\r\n- rerun pipeline (diff is largely just pdfs and json)\r\n- enable table component to set cell element attrs based on row contents\r\n(e.g. put `title` tooltip on cell that shows more details from row data)\r\n- put \"generated on\" date in footer when printing (needed because some\r\nthings on page are relative to current datetime, e.g. \"last updated Jul\r\n28, 2024 (1 day ago)\")\r\n- changes to core project app page\r\n    - more details at top\r\n    - more descriptions/notes of info\r\n- split repositories table into two for better printing (get rid of\r\ndependency table. details available on hover of dependency count.)\r\n    - add issues and prs over time charts\r\n- pull top level details out of template and into script in\r\ngeneric/flexible way\r\n- add # of repos to core project listing table\r\n- add some string and time util funcs\r\n- add github api funcs for getting issues, prs, contributors, and\r\nlanguages (not just top)\r\n- abstract out data ingest caching mechanism into query and queryMulti\r\nwrapper functions. consistently use these in every ingest step to\r\nsave/load cache and report errors.\r\n- ingest issues/prs and calc average issue/pr open time\r\n- improve scimago journal look up. was previously using scimago's search\r\nto convert journal abbreviations to full names, but was unreliable.\r\ne.g., searching \"Commun Biol\" shows \"Indian Journal of Experimental\r\nBiology\" as the first result instead of \"Communications Biology\".\r\ninstead, scrape NLM catalog search, get ISSN, and use ISSN to lookup\r\nscimago rank\r\n- move csv parsing to separate function\r\n- cache opportunity number scraping like every other step\r\n- add \"download file\" playwright util func\r\n- refactor saveFile/loadFile/parsing/etc util funcs to be simpler\r\n- add \"update in place\" log func\r\n- get rid of \"memoize\" util func. the raw folder is now our request\r\ncache, so memoize is not needed.\r\n- remove allSettled wrapper func, and rework into queryMulti and query\r\nwrapper funcs as described above\r\n- update run script commands for yarn to bun"
+          }
+        },
+        "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits/b74845975ec904777278a3083be7a0fc3e93ea3b",
+        "html_url": "https://github.com/nih-cfde/icc-eval-core/commit/b74845975ec904777278a3083be7a0fc3e93ea3b",
+        "comments_url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits/b74845975ec904777278a3083be7a0fc3e93ea3b/comments",
+        "author": {
+          "login": "vincerubinetti",
+          "id": 8326331,
+          "node_id": "MDQ6VXNlcjgzMjYzMzE=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8326331?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/vincerubinetti",
+          "html_url": "https://github.com/vincerubinetti",
+          "followers_url": "https://api.github.com/users/vincerubinetti/followers",
+          "following_url": "https://api.github.com/users/vincerubinetti/following{/other_user}",
+          "gists_url": "https://api.github.com/users/vincerubinetti/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/vincerubinetti/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/vincerubinetti/subscriptions",
+          "organizations_url": "https://api.github.com/users/vincerubinetti/orgs",
+          "repos_url": "https://api.github.com/users/vincerubinetti/repos",
+          "events_url": "https://api.github.com/users/vincerubinetti/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/vincerubinetti/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "committer": {
+          "login": "web-flow",
+          "id": 19864447,
+          "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/web-flow",
+          "html_url": "https://github.com/web-flow",
+          "followers_url": "https://api.github.com/users/web-flow/followers",
+          "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+          "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+          "organizations_url": "https://api.github.com/users/web-flow/orgs",
+          "repos_url": "https://api.github.com/users/web-flow/repos",
+          "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/web-flow/received_events",
+          "type": "User",
+          "site_admin": false
+        },
+        "parents": [
+          {
+            "sha": "f13bd53da6673ef0ede37c045e1f9b14e6516bbd",
+            "url": "https://api.github.com/repos/nih-cfde/icc-eval-core/commits/f13bd53da6673ef0ede37c045e1f9b14e6516bbd",
+            "html_url": "https://github.com/nih-cfde/icc-eval-core/commit/f13bd53da6673ef0ede37c045e1f9b14e6516bbd"
+          }
+        ]
+      },
       {
         "sha": "f13bd53da6673ef0ede37c045e1f9b14e6516bbd",
         "node_id": "C_kwDOMDM_U9oAKGYxM2JkNTNkYTY2NzNlZjBlZGUzN2MwNDVlMWY5YjE0ZTY1MTZiYmQ",
@@ -13657,7 +14676,7 @@
         "received_events_url": "https://api.github.com/users/vincerubinetti/received_events",
         "type": "User",
         "site_admin": false,
-        "contributions": 5
+        "contributions": 7
       },
       {
         "login": "cgreene",
@@ -13682,12 +14701,12 @@
       }
     ],
     "languages": {
-      "TypeScript": 42684,
-      "Vue": 31233,
-      "CSS": 4734,
+      "TypeScript": 67437,
+      "Vue": 33975,
+      "CSS": 4767,
       "JavaScript": 2275,
-      "HTML": 1072,
-      "Shell": 796
+      "Shell": 1102,
+      "HTML": 1072
     },
     "readme": true,
     "contributing": false,
@@ -13695,6 +14714,17 @@
       "repository": {
         "dependencyGraphManifests": {
           "nodes": [
+            {
+              "blobPath": "/nih-cfde/icc-eval-core/blob/main/package.json",
+              "dependenciesCount": 1,
+              "dependencies": {
+                "nodes": [
+                  {
+                    "packageName": "type-fest"
+                  }
+                ]
+              }
+            },
             {
               "blobPath": "/nih-cfde/icc-eval-core/blob/main/app/package.json",
               "dependenciesCount": 29,
@@ -13791,766 +14821,8 @@
               }
             },
             {
-              "blobPath": "/nih-cfde/icc-eval-core/blob/main/app/yarn.lock",
-              "dependenciesCount": 346,
-              "dependencies": {
-                "nodes": [
-                  {
-                    "packageName": "@ampproject/remapping"
-                  },
-                  {
-                    "packageName": "@babel/code-frame"
-                  },
-                  {
-                    "packageName": "@babel/compat-data"
-                  },
-                  {
-                    "packageName": "@babel/core"
-                  },
-                  {
-                    "packageName": "@babel/generator"
-                  },
-                  {
-                    "packageName": "@babel/helper-compilation-targets"
-                  },
-                  {
-                    "packageName": "@babel/helper-environment-visitor"
-                  },
-                  {
-                    "packageName": "@babel/helper-function-name"
-                  },
-                  {
-                    "packageName": "@babel/helper-hoist-variables"
-                  },
-                  {
-                    "packageName": "@babel/helper-module-imports"
-                  },
-                  {
-                    "packageName": "@babel/helper-module-transforms"
-                  },
-                  {
-                    "packageName": "@babel/helper-simple-access"
-                  },
-                  {
-                    "packageName": "@babel/helper-split-export-declaration"
-                  },
-                  {
-                    "packageName": "@babel/helper-string-parser"
-                  },
-                  {
-                    "packageName": "@babel/helper-validator-identifier"
-                  },
-                  {
-                    "packageName": "@babel/helper-validator-option"
-                  },
-                  {
-                    "packageName": "@babel/helpers"
-                  },
-                  {
-                    "packageName": "@babel/highlight"
-                  },
-                  {
-                    "packageName": "@babel/parser"
-                  },
-                  {
-                    "packageName": "@babel/template"
-                  },
-                  {
-                    "packageName": "@babel/traverse"
-                  },
-                  {
-                    "packageName": "@babel/types"
-                  },
-                  {
-                    "packageName": "@esbuild/aix-ppc64"
-                  },
-                  {
-                    "packageName": "@esbuild/android-arm"
-                  },
-                  {
-                    "packageName": "@esbuild/android-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/android-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/darwin-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/darwin-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/freebsd-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/freebsd-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-arm"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-ia32"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-loong64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-mips64el"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-ppc64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-riscv64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-s390x"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/netbsd-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/openbsd-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/sunos-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/win32-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/win32-ia32"
-                  },
-                  {
-                    "packageName": "@esbuild/win32-x64"
-                  },
-                  {
-                    "packageName": "@eslint-community/eslint-utils"
-                  },
-                  {
-                    "packageName": "@eslint-community/regexpp"
-                  },
-                  {
-                    "packageName": "@eslint/config-array"
-                  },
-                  {
-                    "packageName": "@eslint/eslintrc"
-                  },
-                  {
-                    "packageName": "@eslint/js"
-                  },
-                  {
-                    "packageName": "@eslint/object-schema"
-                  },
-                  {
-                    "packageName": "@humanwhocodes/module-importer"
-                  },
-                  {
-                    "packageName": "@humanwhocodes/retry"
-                  },
-                  {
-                    "packageName": "@ianvs/prettier-plugin-sort-imports"
-                  },
-                  {
-                    "packageName": "@jridgewell/gen-mapping"
-                  },
-                  {
-                    "packageName": "@jridgewell/resolve-uri"
-                  },
-                  {
-                    "packageName": "@jridgewell/set-array"
-                  },
-                  {
-                    "packageName": "@jridgewell/sourcemap-codec"
-                  },
-                  {
-                    "packageName": "@jridgewell/trace-mapping"
-                  },
-                  {
-                    "packageName": "@nodelib/fs.scandir"
-                  },
-                  {
-                    "packageName": "@nodelib/fs.stat"
-                  },
-                  {
-                    "packageName": "@nodelib/fs.walk"
-                  },
-                  {
-                    "packageName": "@pkgr/core"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-android-arm-eabi"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-android-arm64"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-darwin-arm64"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-darwin-x64"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-arm-gnueabihf"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-arm-musleabihf"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-arm64-gnu"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-arm64-musl"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-powerpc64le-gnu"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-riscv64-gnu"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-s390x-gnu"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-x64-gnu"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-linux-x64-musl"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-win32-arm64-msvc"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-win32-ia32-msvc"
-                  },
-                  {
-                    "packageName": "@rollup/rollup-win32-x64-msvc"
-                  },
-                  {
-                    "packageName": "@tanstack/table-core"
-                  },
-                  {
-                    "packageName": "@tanstack/vue-table"
-                  },
-                  {
-                    "packageName": "@trysound/sax"
-                  },
-                  {
-                    "packageName": "@types/debug"
-                  },
-                  {
-                    "packageName": "@types/echarts"
-                  },
-                  {
-                    "packageName": "@types/estree"
-                  },
-                  {
-                    "packageName": "@types/lodash"
-                  },
-                  {
-                    "packageName": "@types/mdast"
-                  },
-                  {
-                    "packageName": "@types/ms"
-                  },
-                  {
-                    "packageName": "@types/node"
-                  },
-                  {
-                    "packageName": "@types/unist"
-                  },
-                  {
-                    "packageName": "@types/web-bluetooth"
-                  },
-                  {
-                    "packageName": "@types/zrender"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/eslint-plugin"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/parser"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/scope-manager"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/type-utils"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/types"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/typescript-estree"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/utils"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/visitor-keys"
-                  },
-                  {
-                    "packageName": "@vitejs/plugin-vue"
-                  },
-                  {
-                    "packageName": "@volar/language-core"
-                  },
-                  {
-                    "packageName": "@volar/source-map"
-                  },
-                  {
-                    "packageName": "@volar/typescript"
-                  },
-                  {
-                    "packageName": "@vue/compiler-core"
-                  },
-                  {
-                    "packageName": "@vue/compiler-dom"
-                  },
-                  {
-                    "packageName": "@vue/compiler-sfc"
-                  },
-                  {
-                    "packageName": "@vue/compiler-ssr"
-                  },
-                  {
-                    "packageName": "@vue/devtools-api"
-                  },
-                  {
-                    "packageName": "@vue/eslint-config-prettier"
-                  },
-                  {
-                    "packageName": "@vue/eslint-config-typescript"
-                  },
-                  {
-                    "packageName": "@vue/language-core"
-                  },
-                  {
-                    "packageName": "@vue/reactivity"
-                  },
-                  {
-                    "packageName": "@vue/runtime-core"
-                  },
-                  {
-                    "packageName": "@vue/runtime-dom"
-                  },
-                  {
-                    "packageName": "@vue/server-renderer"
-                  },
-                  {
-                    "packageName": "@vue/shared"
-                  },
-                  {
-                    "packageName": "@vue/tsconfig"
-                  },
-                  {
-                    "packageName": "@vueuse/core"
-                  },
-                  {
-                    "packageName": "@vueuse/metadata"
-                  },
-                  {
-                    "packageName": "@vueuse/shared"
-                  },
-                  {
-                    "packageName": "acorn"
-                  },
-                  {
-                    "packageName": "acorn-jsx"
-                  },
-                  {
-                    "packageName": "ajv"
-                  },
-                  {
-                    "packageName": "ansi-regex"
-                  },
-                  {
-                    "packageName": "ansi-styles"
-                  },
-                  {
-                    "packageName": "ansi-styles"
-                  },
-                  {
-                    "packageName": "argparse"
-                  },
-                  {
-                    "packageName": "aria-query"
-                  },
-                  {
-                    "packageName": "array-union"
-                  },
-                  {
-                    "packageName": "balanced-match"
-                  },
-                  {
-                    "packageName": "binary-searching"
-                  },
-                  {
-                    "packageName": "boolbase"
-                  },
-                  {
-                    "packageName": "brace-expansion"
-                  },
-                  {
-                    "packageName": "brace-expansion"
-                  },
-                  {
-                    "packageName": "braces"
-                  },
-                  {
-                    "packageName": "browserslist"
-                  },
-                  {
-                    "packageName": "callsites"
-                  },
-                  {
-                    "packageName": "caniuse-lite"
-                  },
-                  {
-                    "packageName": "chalk"
-                  },
-                  {
-                    "packageName": "chalk"
-                  },
-                  {
-                    "packageName": "character-entities"
-                  },
-                  {
-                    "packageName": "color-convert"
-                  },
-                  {
-                    "packageName": "color-convert"
-                  },
-                  {
-                    "packageName": "color-name"
-                  },
-                  {
-                    "packageName": "color-name"
-                  },
-                  {
-                    "packageName": "commander"
-                  },
-                  {
-                    "packageName": "comment-parser"
-                  },
-                  {
-                    "packageName": "computeds"
-                  },
-                  {
-                    "packageName": "concat-map"
-                  },
-                  {
-                    "packageName": "convert-source-map"
-                  },
-                  {
-                    "packageName": "cross-spawn"
-                  },
-                  {
-                    "packageName": "css-declaration-sorter"
-                  },
-                  {
-                    "packageName": "css-select"
-                  },
-                  {
-                    "packageName": "css-tree"
-                  },
-                  {
-                    "packageName": "css-tree"
-                  },
-                  {
-                    "packageName": "css-what"
-                  },
-                  {
-                    "packageName": "cssesc"
-                  },
-                  {
-                    "packageName": "csso"
-                  },
-                  {
-                    "packageName": "csstype"
-                  },
-                  {
-                    "packageName": "de-indent"
-                  },
-                  {
-                    "packageName": "debug"
-                  },
-                  {
-                    "packageName": "decode-named-character-reference"
-                  },
-                  {
-                    "packageName": "deep-is"
-                  },
-                  {
-                    "packageName": "dequal"
-                  },
-                  {
-                    "packageName": "devlop"
-                  },
-                  {
-                    "packageName": "dir-glob"
-                  },
-                  {
-                    "packageName": "dom-serializer"
-                  },
-                  {
-                    "packageName": "domelementtype"
-                  },
-                  {
-                    "packageName": "domhandler"
-                  },
-                  {
-                    "packageName": "domutils"
-                  },
-                  {
-                    "packageName": "echarts"
-                  },
-                  {
-                    "packageName": "electron-to-chromium"
-                  },
-                  {
-                    "packageName": "emoji-regex"
-                  },
-                  {
-                    "packageName": "entities"
-                  },
-                  {
-                    "packageName": "esbuild"
-                  },
-                  {
-                    "packageName": "escalade"
-                  },
-                  {
-                    "packageName": "escape-string-regexp"
-                  },
-                  {
-                    "packageName": "escape-string-regexp"
-                  },
-                  {
-                    "packageName": "eslint"
-                  },
-                  {
-                    "packageName": "eslint-config-prettier"
-                  },
-                  {
-                    "packageName": "eslint-plugin-prettier"
-                  },
-                  {
-                    "packageName": "eslint-plugin-vue"
-                  },
-                  {
-                    "packageName": "eslint-plugin-vuejs-accessibility"
-                  },
-                  {
-                    "packageName": "eslint-scope"
-                  },
-                  {
-                    "packageName": "eslint-scope"
-                  },
-                  {
-                    "packageName": "eslint-visitor-keys"
-                  },
-                  {
-                    "packageName": "eslint-visitor-keys"
-                  },
-                  {
-                    "packageName": "espree"
-                  },
-                  {
-                    "packageName": "espree"
-                  },
-                  {
-                    "packageName": "esquery"
-                  },
-                  {
-                    "packageName": "esrecurse"
-                  },
-                  {
-                    "packageName": "estraverse"
-                  },
-                  {
-                    "packageName": "estree-walker"
-                  },
-                  {
-                    "packageName": "esutils"
-                  },
-                  {
-                    "packageName": "fast-deep-equal"
-                  },
-                  {
-                    "packageName": "fast-diff"
-                  },
-                  {
-                    "packageName": "fast-glob"
-                  },
-                  {
-                    "packageName": "fast-json-stable-stringify"
-                  },
-                  {
-                    "packageName": "fast-levenshtein"
-                  },
-                  {
-                    "packageName": "fastq"
-                  },
-                  {
-                    "packageName": "file-entry-cache"
-                  },
-                  {
-                    "packageName": "fill-range"
-                  },
-                  {
-                    "packageName": "find-up"
-                  },
-                  {
-                    "packageName": "flat-cache"
-                  },
-                  {
-                    "packageName": "flatted"
-                  },
-                  {
-                    "packageName": "fsevents"
-                  },
-                  {
-                    "packageName": "gensync"
-                  },
-                  {
-                    "packageName": "glob-parent"
-                  },
-                  {
-                    "packageName": "glob-parent"
-                  },
-                  {
-                    "packageName": "globals"
-                  },
-                  {
-                    "packageName": "globals"
-                  },
-                  {
-                    "packageName": "globals"
-                  },
-                  {
-                    "packageName": "globby"
-                  },
-                  {
-                    "packageName": "graphemer"
-                  },
-                  {
-                    "packageName": "has-flag"
-                  },
-                  {
-                    "packageName": "has-flag"
-                  },
-                  {
-                    "packageName": "he"
-                  },
-                  {
-                    "packageName": "ignore"
-                  },
-                  {
-                    "packageName": "import-fresh"
-                  },
-                  {
-                    "packageName": "imurmurhash"
-                  },
-                  {
-                    "packageName": "is-extglob"
-                  },
-                  {
-                    "packageName": "is-glob"
-                  },
-                  {
-                    "packageName": "is-number"
-                  },
-                  {
-                    "packageName": "is-path-inside"
-                  },
-                  {
-                    "packageName": "isexe"
-                  },
-                  {
-                    "packageName": "javascript-time-ago"
-                  },
-                  {
-                    "packageName": "js-tokens"
-                  },
-                  {
-                    "packageName": "js-yaml"
-                  },
-                  {
-                    "packageName": "jsesc"
-                  },
-                  {
-                    "packageName": "json-buffer"
-                  },
-                  {
-                    "packageName": "json-schema-traverse"
-                  },
-                  {
-                    "packageName": "json-stable-stringify-without-jsonify"
-                  },
-                  {
-                    "packageName": "json5"
-                  },
-                  {
-                    "packageName": "keyv"
-                  },
-                  {
-                    "packageName": "levn"
-                  },
-                  {
-                    "packageName": "locate-path"
-                  },
-                  {
-                    "packageName": "lodash"
-                  },
-                  {
-                    "packageName": "lodash.merge"
-                  },
-                  {
-                    "packageName": "lru-cache"
-                  },
-                  {
-                    "packageName": "magic-string"
-                  },
-                  {
-                    "packageName": "mdast-util-from-markdown"
-                  },
-                  {
-                    "packageName": "mdast-util-to-string"
-                  },
-                  {
-                    "packageName": "mdn-data"
-                  },
-                  {
-                    "packageName": "mdn-data"
-                  },
-                  {
-                    "packageName": "merge2"
-                  },
-                  {
-                    "packageName": "micromark"
-                  },
-                  {
-                    "packageName": "micromark-core-commonmark"
-                  },
-                  {
-                    "packageName": "micromark-factory-destination"
-                  },
-                  {
-                    "packageName": "micromark-factory-label"
-                  }
-                ]
-              }
-            },
-            {
               "blobPath": "/nih-cfde/icc-eval-core/blob/main/data/package.json",
-              "dependenciesCount": 22,
+              "dependenciesCount": 24,
               "dependencies": {
                 "nodes": [
                   {
@@ -14599,7 +14871,13 @@
                     "packageName": "lodash-es"
                   },
                   {
+                    "packageName": "nodejs-file-downloader"
+                  },
+                  {
                     "packageName": "octokit"
+                  },
+                  {
+                    "packageName": "p-limit"
                   },
                   {
                     "packageName": "pdfjs-dist"
@@ -14611,771 +14889,13 @@
                     "packageName": "prettier-plugin-jsdoc"
                   },
                   {
-                    "packageName": "tsc"
+                    "packageName": "strip-ansi"
                   },
                   {
                     "packageName": "tsx"
                   },
                   {
                     "packageName": "typescript"
-                  }
-                ]
-              }
-            },
-            {
-              "blobPath": "/nih-cfde/icc-eval-core/blob/main/data/yarn.lock",
-              "dependenciesCount": 349,
-              "dependencies": {
-                "nodes": [
-                  {
-                    "packageName": "@ampproject/remapping"
-                  },
-                  {
-                    "packageName": "@babel/code-frame"
-                  },
-                  {
-                    "packageName": "@babel/compat-data"
-                  },
-                  {
-                    "packageName": "@babel/core"
-                  },
-                  {
-                    "packageName": "@babel/generator"
-                  },
-                  {
-                    "packageName": "@babel/helper-compilation-targets"
-                  },
-                  {
-                    "packageName": "@babel/helper-environment-visitor"
-                  },
-                  {
-                    "packageName": "@babel/helper-function-name"
-                  },
-                  {
-                    "packageName": "@babel/helper-hoist-variables"
-                  },
-                  {
-                    "packageName": "@babel/helper-module-imports"
-                  },
-                  {
-                    "packageName": "@babel/helper-module-transforms"
-                  },
-                  {
-                    "packageName": "@babel/helper-simple-access"
-                  },
-                  {
-                    "packageName": "@babel/helper-split-export-declaration"
-                  },
-                  {
-                    "packageName": "@babel/helper-string-parser"
-                  },
-                  {
-                    "packageName": "@babel/helper-validator-identifier"
-                  },
-                  {
-                    "packageName": "@babel/helper-validator-option"
-                  },
-                  {
-                    "packageName": "@babel/helpers"
-                  },
-                  {
-                    "packageName": "@babel/highlight"
-                  },
-                  {
-                    "packageName": "@babel/parser"
-                  },
-                  {
-                    "packageName": "@babel/template"
-                  },
-                  {
-                    "packageName": "@babel/traverse"
-                  },
-                  {
-                    "packageName": "@babel/types"
-                  },
-                  {
-                    "packageName": "@esbuild/aix-ppc64"
-                  },
-                  {
-                    "packageName": "@esbuild/android-arm"
-                  },
-                  {
-                    "packageName": "@esbuild/android-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/android-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/darwin-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/darwin-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/freebsd-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/freebsd-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-arm"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-ia32"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-loong64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-mips64el"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-ppc64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-riscv64"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-s390x"
-                  },
-                  {
-                    "packageName": "@esbuild/linux-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/netbsd-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/openbsd-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/sunos-x64"
-                  },
-                  {
-                    "packageName": "@esbuild/win32-arm64"
-                  },
-                  {
-                    "packageName": "@esbuild/win32-ia32"
-                  },
-                  {
-                    "packageName": "@esbuild/win32-x64"
-                  },
-                  {
-                    "packageName": "@eslint-community/eslint-utils"
-                  },
-                  {
-                    "packageName": "@eslint-community/regexpp"
-                  },
-                  {
-                    "packageName": "@eslint/config-array"
-                  },
-                  {
-                    "packageName": "@eslint/eslintrc"
-                  },
-                  {
-                    "packageName": "@eslint/js"
-                  },
-                  {
-                    "packageName": "@eslint/object-schema"
-                  },
-                  {
-                    "packageName": "@humanwhocodes/module-importer"
-                  },
-                  {
-                    "packageName": "@humanwhocodes/retry"
-                  },
-                  {
-                    "packageName": "@ianvs/prettier-plugin-sort-imports"
-                  },
-                  {
-                    "packageName": "@jridgewell/gen-mapping"
-                  },
-                  {
-                    "packageName": "@jridgewell/resolve-uri"
-                  },
-                  {
-                    "packageName": "@jridgewell/set-array"
-                  },
-                  {
-                    "packageName": "@jridgewell/sourcemap-codec"
-                  },
-                  {
-                    "packageName": "@jridgewell/trace-mapping"
-                  },
-                  {
-                    "packageName": "@mapbox/node-pre-gyp"
-                  },
-                  {
-                    "packageName": "@nodelib/fs.scandir"
-                  },
-                  {
-                    "packageName": "@nodelib/fs.stat"
-                  },
-                  {
-                    "packageName": "@nodelib/fs.walk"
-                  },
-                  {
-                    "packageName": "@octokit/app"
-                  },
-                  {
-                    "packageName": "@octokit/auth-app"
-                  },
-                  {
-                    "packageName": "@octokit/auth-oauth-app"
-                  },
-                  {
-                    "packageName": "@octokit/auth-oauth-device"
-                  },
-                  {
-                    "packageName": "@octokit/auth-oauth-user"
-                  },
-                  {
-                    "packageName": "@octokit/auth-token"
-                  },
-                  {
-                    "packageName": "@octokit/auth-unauthenticated"
-                  },
-                  {
-                    "packageName": "@octokit/core"
-                  },
-                  {
-                    "packageName": "@octokit/endpoint"
-                  },
-                  {
-                    "packageName": "@octokit/graphql"
-                  },
-                  {
-                    "packageName": "@octokit/graphql-schema"
-                  },
-                  {
-                    "packageName": "@octokit/oauth-app"
-                  },
-                  {
-                    "packageName": "@octokit/oauth-authorization-url"
-                  },
-                  {
-                    "packageName": "@octokit/oauth-methods"
-                  },
-                  {
-                    "packageName": "@octokit/openapi-types"
-                  },
-                  {
-                    "packageName": "@octokit/openapi-webhooks-types"
-                  },
-                  {
-                    "packageName": "@octokit/plugin-paginate-graphql"
-                  },
-                  {
-                    "packageName": "@octokit/plugin-paginate-rest"
-                  },
-                  {
-                    "packageName": "@octokit/plugin-rest-endpoint-methods"
-                  },
-                  {
-                    "packageName": "@octokit/plugin-retry"
-                  },
-                  {
-                    "packageName": "@octokit/plugin-throttling"
-                  },
-                  {
-                    "packageName": "@octokit/request"
-                  },
-                  {
-                    "packageName": "@octokit/request-error"
-                  },
-                  {
-                    "packageName": "@octokit/types"
-                  },
-                  {
-                    "packageName": "@octokit/webhooks"
-                  },
-                  {
-                    "packageName": "@octokit/webhooks-methods"
-                  },
-                  {
-                    "packageName": "@pkgr/core"
-                  },
-                  {
-                    "packageName": "@playwright/test"
-                  },
-                  {
-                    "packageName": "@tsconfig/node22"
-                  },
-                  {
-                    "packageName": "@types/aws-lambda"
-                  },
-                  {
-                    "packageName": "@types/debug"
-                  },
-                  {
-                    "packageName": "@types/lodash"
-                  },
-                  {
-                    "packageName": "@types/lodash-es"
-                  },
-                  {
-                    "packageName": "@types/mdast"
-                  },
-                  {
-                    "packageName": "@types/ms"
-                  },
-                  {
-                    "packageName": "@types/node"
-                  },
-                  {
-                    "packageName": "@types/unist"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/eslint-plugin"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/parser"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/scope-manager"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/type-utils"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/types"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/typescript-estree"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/utils"
-                  },
-                  {
-                    "packageName": "@typescript-eslint/visitor-keys"
-                  },
-                  {
-                    "packageName": "abbrev"
-                  },
-                  {
-                    "packageName": "acorn"
-                  },
-                  {
-                    "packageName": "acorn-jsx"
-                  },
-                  {
-                    "packageName": "agent-base"
-                  },
-                  {
-                    "packageName": "aggregate-error"
-                  },
-                  {
-                    "packageName": "ajv"
-                  },
-                  {
-                    "packageName": "ansi-regex"
-                  },
-                  {
-                    "packageName": "ansi-styles"
-                  },
-                  {
-                    "packageName": "ansi-styles"
-                  },
-                  {
-                    "packageName": "aproba"
-                  },
-                  {
-                    "packageName": "are-we-there-yet"
-                  },
-                  {
-                    "packageName": "argparse"
-                  },
-                  {
-                    "packageName": "array-union"
-                  },
-                  {
-                    "packageName": "balanced-match"
-                  },
-                  {
-                    "packageName": "before-after-hook"
-                  },
-                  {
-                    "packageName": "binary-searching"
-                  },
-                  {
-                    "packageName": "bottleneck"
-                  },
-                  {
-                    "packageName": "brace-expansion"
-                  },
-                  {
-                    "packageName": "brace-expansion"
-                  },
-                  {
-                    "packageName": "braces"
-                  },
-                  {
-                    "packageName": "browserslist"
-                  },
-                  {
-                    "packageName": "callsites"
-                  },
-                  {
-                    "packageName": "caniuse-lite"
-                  },
-                  {
-                    "packageName": "canvas"
-                  },
-                  {
-                    "packageName": "chalk"
-                  },
-                  {
-                    "packageName": "chalk"
-                  },
-                  {
-                    "packageName": "chalk"
-                  },
-                  {
-                    "packageName": "character-entities"
-                  },
-                  {
-                    "packageName": "chownr"
-                  },
-                  {
-                    "packageName": "clean-stack"
-                  },
-                  {
-                    "packageName": "color-convert"
-                  },
-                  {
-                    "packageName": "color-convert"
-                  },
-                  {
-                    "packageName": "color-name"
-                  },
-                  {
-                    "packageName": "color-name"
-                  },
-                  {
-                    "packageName": "color-support"
-                  },
-                  {
-                    "packageName": "comment-parser"
-                  },
-                  {
-                    "packageName": "concat-map"
-                  },
-                  {
-                    "packageName": "console-control-strings"
-                  },
-                  {
-                    "packageName": "convert-source-map"
-                  },
-                  {
-                    "packageName": "cross-spawn"
-                  },
-                  {
-                    "packageName": "csv"
-                  },
-                  {
-                    "packageName": "csv-generate"
-                  },
-                  {
-                    "packageName": "csv-parse"
-                  },
-                  {
-                    "packageName": "csv-stringify"
-                  },
-                  {
-                    "packageName": "debug"
-                  },
-                  {
-                    "packageName": "decode-named-character-reference"
-                  },
-                  {
-                    "packageName": "decompress-response"
-                  },
-                  {
-                    "packageName": "deep-is"
-                  },
-                  {
-                    "packageName": "delegates"
-                  },
-                  {
-                    "packageName": "dequal"
-                  },
-                  {
-                    "packageName": "detect-libc"
-                  },
-                  {
-                    "packageName": "devlop"
-                  },
-                  {
-                    "packageName": "dir-glob"
-                  },
-                  {
-                    "packageName": "electron-to-chromium"
-                  },
-                  {
-                    "packageName": "emoji-regex"
-                  },
-                  {
-                    "packageName": "esbuild"
-                  },
-                  {
-                    "packageName": "escalade"
-                  },
-                  {
-                    "packageName": "escape-string-regexp"
-                  },
-                  {
-                    "packageName": "escape-string-regexp"
-                  },
-                  {
-                    "packageName": "escape-string-regexp"
-                  },
-                  {
-                    "packageName": "eslint"
-                  },
-                  {
-                    "packageName": "eslint-plugin-prettier"
-                  },
-                  {
-                    "packageName": "eslint-scope"
-                  },
-                  {
-                    "packageName": "eslint-visitor-keys"
-                  },
-                  {
-                    "packageName": "eslint-visitor-keys"
-                  },
-                  {
-                    "packageName": "espree"
-                  },
-                  {
-                    "packageName": "esquery"
-                  },
-                  {
-                    "packageName": "esrecurse"
-                  },
-                  {
-                    "packageName": "estraverse"
-                  },
-                  {
-                    "packageName": "esutils"
-                  },
-                  {
-                    "packageName": "fast-deep-equal"
-                  },
-                  {
-                    "packageName": "fast-diff"
-                  },
-                  {
-                    "packageName": "fast-glob"
-                  },
-                  {
-                    "packageName": "fast-json-stable-stringify"
-                  },
-                  {
-                    "packageName": "fast-levenshtein"
-                  },
-                  {
-                    "packageName": "fastq"
-                  },
-                  {
-                    "packageName": "file-entry-cache"
-                  },
-                  {
-                    "packageName": "fill-range"
-                  },
-                  {
-                    "packageName": "find-up"
-                  },
-                  {
-                    "packageName": "flat-cache"
-                  },
-                  {
-                    "packageName": "flatted"
-                  },
-                  {
-                    "packageName": "fs-minipass"
-                  },
-                  {
-                    "packageName": "fs.realpath"
-                  },
-                  {
-                    "packageName": "fsevents"
-                  },
-                  {
-                    "packageName": "fsevents"
-                  },
-                  {
-                    "packageName": "gauge"
-                  },
-                  {
-                    "packageName": "gensync"
-                  },
-                  {
-                    "packageName": "get-tsconfig"
-                  },
-                  {
-                    "packageName": "glob"
-                  },
-                  {
-                    "packageName": "glob-parent"
-                  },
-                  {
-                    "packageName": "glob-parent"
-                  },
-                  {
-                    "packageName": "globals"
-                  },
-                  {
-                    "packageName": "globals"
-                  },
-                  {
-                    "packageName": "globby"
-                  },
-                  {
-                    "packageName": "graphemer"
-                  },
-                  {
-                    "packageName": "graphql"
-                  },
-                  {
-                    "packageName": "graphql-tag"
-                  },
-                  {
-                    "packageName": "has-flag"
-                  },
-                  {
-                    "packageName": "has-flag"
-                  },
-                  {
-                    "packageName": "has-unicode"
-                  },
-                  {
-                    "packageName": "https-proxy-agent"
-                  },
-                  {
-                    "packageName": "ignore"
-                  },
-                  {
-                    "packageName": "import-fresh"
-                  },
-                  {
-                    "packageName": "imurmurhash"
-                  },
-                  {
-                    "packageName": "indent-string"
-                  },
-                  {
-                    "packageName": "inflight"
-                  },
-                  {
-                    "packageName": "inherits"
-                  },
-                  {
-                    "packageName": "is-extglob"
-                  },
-                  {
-                    "packageName": "is-fullwidth-code-point"
-                  },
-                  {
-                    "packageName": "is-glob"
-                  },
-                  {
-                    "packageName": "is-number"
-                  },
-                  {
-                    "packageName": "is-path-inside"
-                  },
-                  {
-                    "packageName": "isexe"
-                  },
-                  {
-                    "packageName": "js-tokens"
-                  },
-                  {
-                    "packageName": "js-yaml"
-                  },
-                  {
-                    "packageName": "jsesc"
-                  },
-                  {
-                    "packageName": "json-buffer"
-                  },
-                  {
-                    "packageName": "json-schema-traverse"
-                  },
-                  {
-                    "packageName": "json-stable-stringify-without-jsonify"
-                  },
-                  {
-                    "packageName": "json5"
-                  },
-                  {
-                    "packageName": "keyv"
-                  },
-                  {
-                    "packageName": "levn"
-                  },
-                  {
-                    "packageName": "locate-path"
-                  },
-                  {
-                    "packageName": "lodash-es"
-                  },
-                  {
-                    "packageName": "lodash.merge"
-                  },
-                  {
-                    "packageName": "lru-cache"
-                  },
-                  {
-                    "packageName": "lru-cache"
-                  },
-                  {
-                    "packageName": "make-dir"
-                  },
-                  {
-                    "packageName": "mdast-util-from-markdown"
-                  },
-                  {
-                    "packageName": "mdast-util-to-string"
-                  },
-                  {
-                    "packageName": "merge2"
-                  },
-                  {
-                    "packageName": "micromark"
-                  },
-                  {
-                    "packageName": "micromark-core-commonmark"
-                  },
-                  {
-                    "packageName": "micromark-factory-destination"
-                  },
-                  {
-                    "packageName": "micromark-factory-label"
-                  },
-                  {
-                    "packageName": "micromark-factory-space"
-                  },
-                  {
-                    "packageName": "micromark-factory-title"
-                  },
-                  {
-                    "packageName": "micromark-factory-whitespace"
-                  },
-                  {
-                    "packageName": "micromark-util-character"
-                  },
-                  {
-                    "packageName": "micromark-util-chunked"
-                  },
-                  {
-                    "packageName": "micromark-util-classify-character"
-                  },
-                  {
-                    "packageName": "micromark-util-combine-extensions"
                   }
                 ]
               }
@@ -15389,10 +14909,10 @@
                     "packageName": "actions/checkout"
                   },
                   {
-                    "packageName": "actions/setup-node"
+                    "packageName": "mxschmitt/action-tmate"
                   },
                   {
-                    "packageName": "mxschmitt/action-tmate"
+                    "packageName": "oven-sh/setup-bun"
                   },
                   {
                     "packageName": "stefanzweifel/git-auto-commit-action"
@@ -15409,10 +14929,10 @@
                     "packageName": "actions/checkout"
                   },
                   {
-                    "packageName": "actions/setup-node"
+                    "packageName": "mxschmitt/action-tmate"
                   },
                   {
-                    "packageName": "mxschmitt/action-tmate"
+                    "packageName": "oven-sh/setup-bun"
                   }
                 ]
               }

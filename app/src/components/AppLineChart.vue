@@ -22,16 +22,7 @@ import { use } from "echarts/core";
 import { SVGRenderer } from "echarts/renderers";
 import { sum } from "lodash";
 import { useElementSize } from "@vueuse/core";
-
-const chart = ref<ComponentInstance<typeof VChart>>();
-const { width, height } = useElementSize(() => chart.value?.root);
-watchEffect(() => {
-  /** manually resize */
-  chart.value?.resize({
-    width: width.value ?? 200,
-    height: height.value ?? 200,
-  });
-});
+import { getCssVar } from "@/util/misc";
 
 type Props = {
   /** chart title */
@@ -44,11 +35,26 @@ type Props = {
   yFormat?: (value: number) => string;
 };
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  cumulative: false,
+  yFormat: (value: number) => value.toLocaleString(),
+});
+
+const chart = ref<ComponentInstance<typeof VChart>>();
+const { width, height } = useElementSize(() => chart.value?.root);
+watchEffect(() => {
+  /** manually resize */
+  chart.value?.resize({
+    width: width.value ?? 200,
+    height: height.value ?? 200,
+  });
+});
 
 use([SVGRenderer, LineChart, TitleComponent, GridComponent, TooltipComponent]);
 
 provide(THEME_KEY, "light");
+
+const theme = getCssVar("--theme");
 
 const option = computed(() => {
   const options: EChartsOption = {};
@@ -57,8 +63,11 @@ const option = computed(() => {
 
   options.title = {
     text: props.title,
+    subtext: `Total: ${props.yFormat(sum(Object.values(props.data)))}`,
     right: "center",
-    top: 20,
+    top: 15,
+    textStyle: { fontSize: 16 },
+    subtextStyle: { fontSize: 14 },
   };
 
   options.grid = {
@@ -83,7 +92,16 @@ const option = computed(() => {
 
   options.series = [
     {
-      areaStyle: {},
+      areaStyle: {
+        color: theme,
+        opacity: 0.25,
+      },
+      lineStyle: {
+        color: theme,
+      },
+      itemStyle: {
+        color: theme,
+      },
       type: "line",
       data: props.cumulative
         ? Object.values(props.data).map((_, index) =>
@@ -95,7 +113,8 @@ const option = computed(() => {
 
   options.tooltip = {
     trigger: "item",
-    valueFormatter: (value) => value?.toLocaleString() ?? "",
+    valueFormatter: (value) =>
+      typeof value === "number" ? props.yFormat(value) : String(value),
     // type: "axis",
     // axisPointer: {
     //   type: "cross",

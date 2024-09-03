@@ -43,7 +43,6 @@ header {
 }
 
 header a {
-  padding: 2px 5px;
   text-decoration: none;
 }
 
@@ -59,7 +58,7 @@ nav {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 

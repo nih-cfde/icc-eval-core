@@ -11,7 +11,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - if: runner.debug == '1'
+      - name: SSH debug
+        if: runner.debug == '1'
         uses: mxschmitt/action-tmate@v3
 
       - name: Set up Bun
@@ -21,6 +22,11 @@ jobs:
 
       - name: Install packages
         run: ./run.sh --install
+
+      - name: Google auth
+        uses: "google-github-actions/auth@v2"
+        with:
+          credentials_json: "${{ secrets.AUTH_GOOGLE }}"
 
       - name: Run pipeline
         run: ./run.sh

@@ -1,9 +1,10 @@
+import { getAnalytics } from "@/ingest/analytics";
 import { getDrc } from "@/ingest/drc";
-import { getRepos } from "@/ingest/github";
 import { getJournals } from "@/ingest/journals";
 import { getOpportunities } from "@/ingest/opportunities";
 import { getProjects } from "@/ingest/projects";
 import { getPublications } from "@/ingest/publications";
+import { getRepos } from "@/ingest/repos";
 import { browser } from "@/util/browser";
 import { saveFile } from "@/util/file";
 import { divider } from "@/util/log";
@@ -23,12 +24,8 @@ const { coreProjects, projects } = await getProjects(
 divider("Publications");
 
 const publications = await getPublications(
-  projects.map((project) => project.core_project),
+  projects.map((project) => project.coreProject),
 );
-for (const coreProject of coreProjects)
-  coreProject.publications = publications.filter(
-    (publication) => publication.core_project === coreProject.id,
-  ).length;
 
 divider("Journals");
 
@@ -36,13 +33,27 @@ const journals = await getJournals(
   publications.map((publication) => publication.journal),
 );
 
-divider("GitHub");
+divider("Analytics");
+
+const analytics = await getAnalytics();
+
+divider("Repos");
 
 const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
-for (const coreProject of coreProjects)
-  coreProject.repos = repos.filter(
-    (repo) => repo.core_project === coreProject.id,
+
+divider("Supplemental counts");
+
+for (const coreProject of coreProjects) {
+  coreProject.publications = publications.filter(
+    (publication) => publication.coreProject === coreProject.id,
   ).length;
+  coreProject.analytics = analytics.filter(
+    (analytic) => analytic.coreProject === coreProject.id,
+  ).length;
+  coreProject.repos = repos.filter(
+    (repo) => repo.coreProject === coreProject.id,
+  ).length;
+}
 
 divider("DRC");
 
@@ -56,6 +67,7 @@ saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
 saveFile(projects, `${OUTPUT_PATH}/projects.json`);
 saveFile(publications, `${OUTPUT_PATH}/publications.json`);
 saveFile(journals, `${OUTPUT_PATH}/journals.json`);
+saveFile(analytics, `${OUTPUT_PATH}/analytics.json`);
 saveFile(repos, `${OUTPUT_PATH}/repos.json`);
 saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
 saveFile(file, `${OUTPUT_PATH}/drc-file.json`);

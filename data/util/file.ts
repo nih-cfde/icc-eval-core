@@ -69,15 +69,13 @@ export const loadFile = async <Data>(
   format?: Extensions,
   options?: ParseOptions,
 ) => {
+  let contents = "";
   let data: Data | null = null;
   let stats: Stats | null = null;
-  let contents = "";
-  try {
-    contents = await readFile(path, "utf-8");
-    stats = await stat(path);
-  } catch (error) {
-    log(`loadFile(${path}): ${error}`, "warn");
-  }
+
+  contents = await readFile(path, "utf-8");
+  stats = await stat(path);
+
   if (format === "json" || path.endsWith(".json"))
     data = parseJson<Data>(contents);
   if (format === "csv" || path.endsWith(".csv"))
@@ -115,10 +113,9 @@ export const unzip = async (filename: string) => {
         })),
     );
   } catch (error) {
-    log(`unzip(${filename}): ${error}`, "warn");
     /** clear folder to not end up with partial contents */
     await clearFolder(output);
-    return null;
+    throw error;
   }
 };
 
@@ -171,16 +168,11 @@ export const saveFile = async (
   }
 };
 
-/** safe-parse json */
+/** parse json */
 export const parseJson = <Data>(data: string) => {
-  try {
-    const parsed = JSON.parse(data) as Data;
-    if (isEmpty(parsed)) throw Error("No data");
-    return parsed as NonNullable<Data>;
-  } catch (error) {
-    log(`parseJson(): ${error}`, "warn");
-    return null;
-  }
+  const parsed = JSON.parse(data) as Data;
+  if (isEmpty(parsed)) throw Error("No data");
+  return parsed as NonNullable<Data>;
 };
 
 /** stringify json */
@@ -191,19 +183,14 @@ export const parseCsv = <Data>(
   contents: Buffer | string,
   options?: ParseOptions,
 ) => {
-  try {
-    const data = csvParse(contents, {
-      columns: true,
-      skipEmptyLines: true,
-      relaxQuotes: true,
-      ...options,
-    }) as unknown;
-    if (isEmpty(data)) throw Error("No data");
-    return data as NonNullable<Data>;
-  } catch (error) {
-    log(`parseCsv(): ${error}`, "warn");
-    return null;
-  }
+  const data = csvParse(contents, {
+    columns: true,
+    skipEmptyLines: true,
+    relaxQuotes: true,
+    ...options,
+  }) as unknown;
+  if (isEmpty(data)) throw Error("No data");
+  return data as NonNullable<Data>;
 };
 
 /** stringify csv/tsv/etc contents */
