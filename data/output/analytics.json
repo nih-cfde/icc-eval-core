@@ -164,6 +164,10 @@
         {
           "startDate": "2024-07-01",
           "endDate": "2024-08-01"
+        },
+        {
+          "startDate": "2024-08-01",
+          "endDate": "2024-09-01"
         }
       ],
       "metrics": [
@@ -209,7 +213,8 @@
             23,
             15,
             10,
-            27
+            27,
+            13
           ]
         },
         {
@@ -254,7 +259,8 @@
             21,
             14,
             9,
-            27
+            27,
+            13
           ]
         },
         {
@@ -299,29 +305,30 @@
             22,
             10,
             5,
-            9
+            9,
+            7
           ]
         }
       ]
     },
     "topContinents": {
       "byActiveUsers": {
-        "Americas": 1129,
-        "Europe": 483,
-        "Asia": 194,
+        "Americas": 1130,
+        "Europe": 485,
+        "Asia": 196,
         "Oceania": 25,
         "Africa": 10
       },
       "byNewUsers": {
-        "Americas": 1129,
-        "Europe": 480,
-        "Asia": 194,
+        "Americas": 1130,
+        "Europe": 482,
+        "Asia": 196,
         "Oceania": 25,
         "Africa": 10
       },
       "byEngagedSessions": {
         "Americas": 471,
-        "Europe": 258,
+        "Europe": 260,
         "Asia": 94,
         "Oceania": 17,
         "Africa": 7
@@ -329,18 +336,18 @@
     },
     "topCountries": {
       "byActiveUsers": {
-        "United States": 1031,
+        "United States": 1032,
         "United Kingdom": 112,
         "Germany": 62,
         "Switzerland": 58,
         "Canada": 57
       },
       "byNewUsers": {
-        "United States": 1031,
+        "United States": 1032,
         "United Kingdom": 111,
         "Germany": 61,
         "Canada": 57,
-        "India": 55
+        "India": 57
       },
       "byEngagedSessions": {
         "United States": 423,
@@ -398,21 +405,21 @@
     },
     "topLanguages": {
       "byActiveUsers": {
-        "English": 1545,
+        "English": 1550,
         "Chinese": 62,
         "Spanish": 51,
         "French": 49,
         "German": 41
       },
       "byNewUsers": {
-        "English": 1544,
+        "English": 1549,
         "Chinese": 62,
         "Spanish": 51,
         "French": 49,
         "German": 41
       },
       "byEngagedSessions": {
-        "English": 688,
+        "English": 690,
         "Spanish": 32,
         "French": 31,
         "Chinese": 30,
@@ -421,42 +428,282 @@
     },
     "topDevices": {
       "byActiveUsers": {
-        "desktop": 1304,
-        "mobile": 526,
+        "desktop": 1308,
+        "mobile": 527,
         "tablet": 16
       },
       "byNewUsers": {
-        "desktop": 1300,
-        "mobile": 526,
+        "desktop": 1304,
+        "mobile": 527,
         "tablet": 16
       },
       "byEngagedSessions": {
-        "desktop": 681,
+        "desktop": 683,
         "mobile": 165,
         "tablet": 2
       }
     },
     "topOSes": {
       "byActiveUsers": {
-        "Macintosh": 615,
-        "Windows": 530,
+        "Macintosh": 617,
+        "Windows": 532,
         "iOS": 346,
-        "Android": 195,
+        "Android": 196,
         "Linux": 164
       },
       "byNewUsers": {
-        "Macintosh": 612,
-        "Windows": 530,
+        "Macintosh": 614,
+        "Windows": 532,
         "iOS": 347,
-        "Android": 194,
+        "Android": 195,
         "Linux": 158
       },
       "byEngagedSessions": {
-        "Macintosh": 358,
-        "Windows": 284,
+        "Macintosh": 359,
+        "Windows": 285,
         "iOS": 106,
         "Android": 61,
         "Linux": 39
+      }
+    }
+  },
+  {
+    "property": "properties/347971380",
+    "propertyName": "seandavi.github.io - GA4",
+    "coreProject": "U54OD036472",
+    "overTime": {
+      "dateRanges": [
+        {
+          "startDate": "2023-12-01",
+          "endDate": "2024-01-01"
+        },
+        {
+          "startDate": "2024-01-01",
+          "endDate": "2024-02-01"
+        },
+        {
+          "startDate": "2024-02-01",
+          "endDate": "2024-03-01"
+        },
+        {
+          "startDate": "2024-03-01",
+          "endDate": "2024-04-01"
+        },
+        {
+          "startDate": "2024-04-01",
+          "endDate": "2024-05-01"
+        },
+        {
+          "startDate": "2024-05-01",
+          "endDate": "2024-06-01"
+        },
+        {
+          "startDate": "2024-06-01",
+          "endDate": "2024-07-01"
+        },
+        {
+          "startDate": "2024-07-01",
+          "endDate": "2024-08-01"
+        },
+        {
+          "startDate": "2024-08-01",
+          "endDate": "2024-09-01"
+        }
+      ],
+      "metrics": [
+        {
+          "metric": "activeUsers",
+          "values": [
+            0,
+            50,
+            82,
+            7,
+            120,
+            18,
+            15,
+            159,
+            36
+          ]
+        },
+        {
+          "metric": "newUsers",
+          "values": [
+            0,
+            50,
+            79,
+            5,
+            119,
+            16,
+            16,
+            159,
+            29
+          ]
+        },
+        {
+          "metric": "engagedSessions",
+          "values": [
+            0,
+            39,
+            57,
+            7,
+            65,
+            15,
+            9,
+            399,
+            44
+          ]
+        }
+      ]
+    },
+    "topContinents": {
+      "byActiveUsers": {
+        "Americas": 435,
+        "Europe": 23,
+        "Asia": 11,
+        "(not set)": 2,
+        "Africa": 1
+      },
+      "byNewUsers": {
+        "Americas": 434,
+        "Europe": 24,
+        "Asia": 11,
+        "(not set)": 2,
+        "Africa": 1
+      },
+      "byEngagedSessions": {
+        "Americas": 615,
+        "Europe": 13,
+        "Asia": 4,
+        "Africa": 1
+      }
+    },
+    "topCountries": {
+      "byActiveUsers": {
+        "United States": 432,
+        "Singapore": 5,
+        "France": 4,
+        "India": 4,
+        "United Kingdom": 4
+      },
+      "byNewUsers": {
+        "United States": 431,
+        "Singapore": 5,
+        "France": 4,
+        "India": 4,
+        "United Kingdom": 4
+      },
+      "byEngagedSessions": {
+        "United States": 614,
+        "Italy": 4,
+        "India": 3,
+        "United Kingdom": 3,
+        "France": 2
+      }
+    },
+    "topRegions": {
+      "byActiveUsers": {
+        "California": 130,
+        "Virginia": 48,
+        "Washington": 32,
+        "Wyoming": 26,
+        "Colorado": 24
+      },
+      "byNewUsers": {
+        "California": 124,
+        "Virginia": 47,
+        "Washington": 32,
+        "Wyoming": 26,
+        "Colorado": 23
+      },
+      "byEngagedSessions": {
+        "California": 391,
+        "Maryland": 39,
+        "Virginia": 34,
+        "Colorado": 24,
+        "North Carolina": 17
+      }
+    },
+    "topCities": {
+      "byActiveUsers": {
+        "Irvine": 79,
+        "Ashburn": 27,
+        "Cheyenne": 26,
+        "(not set)": 25,
+        "Moses Lake": 23
+      },
+      "byNewUsers": {
+        "Irvine": 78,
+        "Ashburn": 27,
+        "Cheyenne": 26,
+        "(not set)": 23,
+        "Moses Lake": 23
+      },
+      "byEngagedSessions": {
+        "Irvine": 333,
+        "Los Angeles": 24,
+        "Richmond": 24,
+        "Ellicott City": 19,
+        "Bethesda": 12
+      }
+    },
+    "topLanguages": {
+      "byActiveUsers": {
+        "English": 460,
+        "Chinese": 3,
+        "French": 2,
+        "Spanish": 2,
+        "Hungarian": 1
+      },
+      "byNewUsers": {
+        "English": 461,
+        "Chinese": 3,
+        "French": 2,
+        "Spanish": 2,
+        "Hungarian": 1
+      },
+      "byEngagedSessions": {
+        "English": 622,
+        "Chinese": 4,
+        "French": 2,
+        "Hungarian": 1,
+        "Italian": 1
+      }
+    },
+    "topDevices": {
+      "byActiveUsers": {
+        "desktop": 366,
+        "mobile": 106
+      },
+      "byNewUsers": {
+        "desktop": 367,
+        "mobile": 106
+      },
+      "byEngagedSessions": {
+        "desktop": 581,
+        "mobile": 51
+      }
+    },
+    "topOSes": {
+      "byActiveUsers": {
+        "Windows": 237,
+        "Macintosh": 121,
+        "iOS": 92,
+        "Android": 14,
+        "Linux": 8
+      },
+      "byNewUsers": {
+        "Windows": 238,
+        "Macintosh": 121,
+        "iOS": 92,
+        "Android": 14,
+        "Linux": 8
+      },
+      "byEngagedSessions": {
+        "Windows": 377,
+        "Macintosh": 198,
+        "iOS": 42,
+        "Android": 9,
+        "Linux": 7
       }
     }
   }
