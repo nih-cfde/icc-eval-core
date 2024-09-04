@@ -8,13 +8,15 @@
     "lint": "eslint . --fix && prettier **/*.{ts,md} --write",
     "test:lint": "eslint . && prettier **/*.{ts,md} --check",
     "test:types": "tsc --noEmit",
-    "test": "npm run test:lint && npm run test:types",
+    "test:e2e": "playwright test",
+    "test": "npm run test:lint && npm run test:types && npm run test:e2e",
     "clean": "rm -rf node_modules bun.lockb && bun pm cache rm"
   },
   "dependencies": {
     "@google-analytics/admin": "^7.6.0",
     "@google-analytics/data": "^4.8.0",
     "@playwright/test": "^1.45.3",
+    "@zip.js/zip.js": "^2.7.52",
     "chalk": "^5.3.0",
     "csv": "^6.3.10",
     "date-fns": "^3.6.0",

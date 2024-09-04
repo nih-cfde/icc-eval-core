@@ -1,11 +1,16 @@
-import type { Stats } from "fs";
-import { countBy, sumBy, uniqBy } from "lodash-es";
+import { countBy, sumBy } from "lodash-es";
 import type { Code, DCC, File } from "@/api/types/drc";
-import { downloadFile, loadFile, unzip } from "@/util/file";
+import {
+  downloadFile,
+  liteDownloadFile,
+  liteUnzip,
+  loadFile,
+} from "@/util/file";
+import type { Stats } from "@/util/file";
 import { log } from "@/util/log";
 import { queryMulti } from "@/util/request";
-import { bytes, count, parsePath } from "@/util/string";
-import { formatDate } from "./../util/string";
+import { bytes, count, formatDate, splitPath } from "@/util/string";
+import { filterErrors } from "./../util/request";
 
 /** DRC top-level lists */
 const drcLists = [
@@ -39,84 +44,74 @@ export const getDrc = async () => {
 
   const [dcc, file, code] = lists as [DCC, File, Code];
 
-  /** get download path and ext */
-  const getPath = (url = "", key: string) => {
-    const { name, ext } = parsePath(url);
-    return { path: `temp/${key}/${name}.${ext}`, ext };
-  };
-
   /** resource data */
   const resources = {
     dcc: dcc.map((dcc) => ({
       url: dcc.link ?? "",
+      ...splitPath(dcc.link ?? ""),
       date: formatDate(dcc.lastmodified),
-      ...getPath(dcc.link, "dcc"),
       files: [] as Files,
     })),
     file: file.map((file) => ({
       url: file.link ?? "",
+      ...splitPath(file.link ?? ""),
       size: Number(file.size),
       name: file.filename ?? "",
       date: formatDate(file.link?.match(/\d\d\d\d-\d\d-\d\d/)?.[0]),
-      ...getPath(file.link, "file"),
       files: [] as Files,
     })),
     code: code.map((code) => ({
       url: code.link ?? "",
+      ...splitPath(code.link ?? ""),
       type: code.type ?? "",
       name: code.name ?? "",
       date: "",
-      ...getPath(code.link, "code"),
       files: [] as Files,
     })),
   };
 
-  /** de-dupe */
-  resources.dcc = uniqBy(resources.dcc, "path");
-  resources.file = uniqBy(resources.file, "path");
-  resources.code = uniqBy(resources.code, "path");
-
-  logFiles(Object.values(resources).flat());
-
-  log("Downloading resources");
+  for (const [ext, number] of Object.entries(
+    countBy(Object.values(resources).flat(), "ext"),
+  ))
+    log(`(${count(number)}) .${ext} files`, "secondary");
 
   /** transform file info */
-  const mapFile = ({ path, stats }: { path: string; stats: Stats }) => {
-    const parts = parsePath(path);
-    const dir = parts.dir.split("/").slice(4).join("/");
-    const type = parts.dir.split("/")[3] ?? "";
-    return {
-      type,
-      dir,
-      name: parts.name,
-      ext: parts.ext,
-      size: stats.size,
-      date: formatDate(stats.mtime),
-    };
-  };
+  const mapFile = ({
+    url,
+    path,
+    size,
+    date,
+  }: { url: string; path: string } & Stats) => ({
+    url: splitPath(url),
+    path: splitPath(path),
+    size,
+    date,
+  });
   type Files = ReturnType<typeof mapFile>[];
 
   /** download assets locally and get paths to local files */
-  for (const resource of [resources.dcc, resources.file]) {
+  for (const [key, resource] of Object.entries(resources)) {
+    /** skip code, since nothing to download/check */
+    if (key === "code") continue;
+
+    log(`Downloading DRC "${key}" resources`);
+
     const fileResults = await queryMulti(
-      resource.map(({ url, path, ext }) => async (progress) => {
-        if (!["gmt", "zip"].includes(ext)) throw Error(`Skipping .${ext} file`);
+      resource.map(({ url, ext }) => async (progress) => {
+        if (!ext) throw Error(`Skipping file with no extension`);
 
-        /** download file */
-        const file = await downloadFile(url, path, progress);
+        /** get files inside zip */
+        if (ext === "zip") return await liteUnzip(url, progress);
 
-        /** unzip and get all file paths */
-        if (ext === "zip") return (await unzip(file.path)) ?? [];
-
-        return [file];
+        /** download file and get file info */
+        return [await liteDownloadFile(url)];
       }),
+      `drc-${key}.json`,
     );
 
     /** add file info to resource data */
-    for (const [index, files] of Object.entries(fileResults)) {
-      if (files instanceof Error) continue;
+    for (const [index, files] of Object.entries(filterErrors(fileResults)))
       resource[Number(index)]!.files = files.map(mapFile);
-    }
   }
 
   /** get overall file stats */
@@ -125,17 +120,10 @@ export const getDrc = async () => {
     .flat()
     .flat();
 
-  logFiles(allFiles);
-
-  log(`${count(allFiles)} files`);
-  log(`${bytes(sumBy(allFiles, "size"))}`);
+  for (const [ext, number] of Object.entries(countBy(allFiles, "path.ext")))
+    log(`(${count(number)}) .${ext} files`, "secondary");
+  log(`> ${count(allFiles)} files`);
+  log(`> ${bytes(sumBy(allFiles, "size"))}`);
 
   return resources;
-};
-
-/** log file types */
-const logFiles = (files: { ext: string }[]) => {
-  const counts = countBy(files, "ext");
-  for (const [ext, number] of Object.entries(counts))
-    log(`(${count(number)}) .${ext} files`, "secondary");
 };

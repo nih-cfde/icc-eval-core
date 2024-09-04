@@ -11,14 +11,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: SSH debug
-        if: runner.debug == '1'
-        uses: mxschmitt/action-tmate@v3
-
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
+
+      - name: SSH debug
+        if: runner.debug == '1'
+        uses: mxschmitt/action-tmate@v3
 
       - name: Install packages
         run: ./run.sh --install

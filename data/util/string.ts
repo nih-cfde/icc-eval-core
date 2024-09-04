@@ -23,15 +23,6 @@ export const bytes = (bytes: number) => {
   return bytes.toFixed(1) + " " + units[0]!;
 };
 
-/** if url, convert to file path (by removing origin) */
-export const urlToPath = (url: string) => {
-  try {
-    return new URL(url).pathname.replace(/^\//, "");
-  } catch (error) {
-    return url;
-  }
-};
-
 /** truncate string from middle */
 export const midTrunc = (string: string, limit: number) => {
   const join = " ... ";
@@ -47,8 +38,41 @@ export const midTrunc = (string: string, limit: number) => {
 export const formatDate = (date?: ConstructorParameters<typeof Date>[0]) =>
   date ? new Date(date).toISOString() : "";
 
-/** split full path into parts */
-export const parsePath = (path: string) => {
-  const { dir, name, ext } = parse(urlToPath(path));
-  return { dir, name, ext: ext.replace(/^\./, "") };
+/** split full url or path into parts */
+export const splitPath = (path: string) => {
+  let dir = "";
+  let name = "";
+  let ext = "";
+
+  try {
+    /** parse as url */
+    const { origin, pathname, search, hash } = new URL(path);
+    const parsed = parse(decodeURI(pathname));
+    dir = decodeURI(
+      [origin, parsed.dir, search, hash].filter(Boolean).join(""),
+    );
+    name = parsed.name;
+    ext = parsed.ext;
+  } catch (error) {
+    /** parse as path */
+    const parsed = parse(path);
+    dir = parsed.dir;
+    name = parsed.name;
+    ext = parsed.ext;
+  }
+
+  /** remove dot from extension */
+  ext = ext.replace(/^\./, "");
+
+  /** if missing/invalid extension, consider a folder and remove file props */
+  if (!ext || ext.match(/[^A-Za-z0-9]/)) {
+    dir += [name, ext].filter(Boolean).join(".");
+    name = "";
+    ext = "";
+  }
+
+  /** remove leading/trailing slashes */
+  dir = dir.replace(/^\//, "").replace(/\/$/, "");
+
+  return { dir, name, ext };
 };
