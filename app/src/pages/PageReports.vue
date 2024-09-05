@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Reports</h1>
+    <AppHeading level="1">Reports</AppHeading>
   </section>
 
   <section>
@@ -19,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import { pdfs } from "@/pages/reports";
 </script>

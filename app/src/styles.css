@@ -65,6 +65,14 @@ section {
   gap: 40px;
 }
 
+section.full {
+  --content: 99999px;
+}
+
+section.narrow {
+  --content: 600px;
+}
+
 section:nth-child(odd) {
   background: #f8f8f8;
 }
@@ -215,6 +223,12 @@ td {
   padding: 0;
 }
 
+/** util */
+
+.center {
+  text-align: center;
+}
+
 /** definitions */
 
 dl {
@@ -233,7 +247,7 @@ dd {
 
 .details {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
   place-content: center;
   max-width: 100%;
   gap: 20px 30px;

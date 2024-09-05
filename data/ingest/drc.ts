@@ -10,7 +10,6 @@ import type { Stats } from "@/util/file";
 import { log } from "@/util/log";
 import { queryMulti } from "@/util/request";
 import { bytes, count, formatDate, splitPath } from "@/util/string";
-import { filterErrors } from "./../util/request";
 
 /** DRC top-level lists */
 const drcLists = [
@@ -110,8 +109,9 @@ export const getDrc = async () => {
     );
 
     /** add file info to resource data */
-    for (const [index, files] of Object.entries(filterErrors(fileResults)))
-      resource[Number(index)]!.files = files.map(mapFile);
+    for (const [index, files] of Object.entries(fileResults))
+      if (!(files instanceof Error))
+        resource[Number(index)]!.files = files.map(mapFile);
   }
 
   /** get overall file stats */

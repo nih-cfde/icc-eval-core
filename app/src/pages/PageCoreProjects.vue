@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1><Microscope />Core Projects</h1>
+    <AppHeading level="1"><Microscope />Core Projects</AppHeading>
   </section>
 
   <section>
@@ -33,6 +33,7 @@
 <script setup lang="ts">
 import { truncate } from "lodash";
 import Microscope from "@/assets/microscope.svg";
+import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import coreProjects from "~/core-projects.json";

@@ -10,6 +10,7 @@
     <nav>
       <AppLink to="/">Home</AppLink>
       <AppLink to="/core-projects">Core Projects</AppLink>
+      <AppLink to="/drc">DRC</AppLink>
     </nav>
   </header>
 </template>

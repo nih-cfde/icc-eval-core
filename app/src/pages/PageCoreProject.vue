@@ -1,11 +1,11 @@
 <template>
   <section>
-    <h1><Microscope />Core Project {{ id }}</h1>
+    <AppHeading level="1"><Microscope />Core Project {{ id }}</AppHeading>
   </section>
 
   <!-- details -->
   <section>
-    <h2><Eye />Details</h2>
+    <AppHeading level="2"><Eye />Details</AppHeading>
 
     <dl class="details">
       <div
@@ -27,7 +27,7 @@
 
   <!-- publications -->
   <section>
-    <h2><Book />Publications</h2>
+    <AppHeading level="2"><Book />Publications</AppHeading>
 
     <p>Published works associated with this project.</p>
 
@@ -94,7 +94,7 @@
 
   <!-- repositories -->
   <section>
-    <h2><Code />Repositories</h2>
+    <AppHeading level="2"><Code />Repositories</AppHeading>
 
     <p>Software repositories associated with this project.</p>
 
@@ -231,7 +231,7 @@
 
   <!-- analytics -->
   <section>
-    <h2><Analytics />Analytics</h2>
+    <AppHeading level="2"><Analytics />Analytics</AppHeading>
 
     <p>Traffic metrics of websites associated with this project.</p>
 
@@ -333,6 +333,7 @@ import Code from "@/assets/code.svg";
 import Eye from "@/assets/eye.svg";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
+import AppHeading from "@/components/AppHeading.vue";
 import AppLineChart from "@/components/AppLineChart.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
@@ -677,11 +678,13 @@ const topAnalytics = computed(() => {
     ({ property, propertyName, coreProject, overTime, ...rest }) => rest,
   );
 
+  type Property = Record<string, Record<string, Record<string, number>>>;
+
   /** total values from all properties */
-  const total: Record<string, Record<string, Record<string, number>>> = {};
+  const total: Property = {};
 
   /** go through each property and total values */
-  for (const property of properties)
+  for (const property of properties as unknown as Property[])
     for (const [topKey, topValue] of getEntries(property))
       for (const [byKey, byValue] of getEntries(topValue))
         for (const [dimensionKey, dimensionValue] of getEntries(byValue)) {

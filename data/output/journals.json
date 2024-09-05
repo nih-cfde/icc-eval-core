@@ -76,15 +76,6 @@
     ]
   },
   {
-    "id": "Biomolecules",
-    "name": "Biomolecules",
-    "rank": 1.179,
-    "issns": [
-      "2218273",
-      "2218273"
-    ]
-  },
-  {
     "id": "Drug Discov Today",
     "name": "Drug Discovery Today",
     "rank": 1.586,
@@ -92,6 +83,15 @@
       "13596446",
       "18785832",
       "13596446"
+    ]
+  },
+  {
+    "id": "Biomolecules",
+    "name": "Biomolecules",
+    "rank": 1.179,
+    "issns": [
+      "2218273",
+      "2218273"
     ]
   },
   {
@@ -184,6 +184,15 @@
     ]
   },
   {
+    "id": "Nat Commun",
+    "name": "Nature Communications",
+    "rank": 4.887,
+    "issns": [
+      "20411723",
+      "20411723"
+    ]
+  },
+  {
     "id": "Nature",
     "name": "Nature",
     "rank": 18.509,
@@ -194,12 +203,13 @@
     ]
   },
   {
-    "id": "Nat Commun",
-    "name": "Nature Communications",
-    "rank": 4.887,
+    "id": "Nat Genet",
+    "name": "Nature Genetics",
+    "rank": 17.3,
     "issns": [
-      "20411723",
-      "20411723"
+      "10614036",
+      "15461718",
+      "10614036"
     ]
   },
   {
@@ -218,16 +228,6 @@
     "issns": [
       "23973374",
       "23973374"
-    ]
-  },
-  {
-    "id": "Nat Genet",
-    "name": "Nature Genetics",
-    "rank": 17.3,
-    "issns": [
-      "10614036",
-      "15461718",
-      "10614036"
     ]
   },
   {
@@ -289,16 +289,6 @@
     ]
   },
   {
-    "id": "Cancer Metastasis Rev",
-    "name": "Cancer and Metastasis Reviews",
-    "rank": 2.866,
-    "issns": [
-      "01677659",
-      "15737233",
-      "01677659"
-    ]
-  },
-  {
     "id": "J Control Release",
     "name": "Journal of Controlled Release",
     "rank": 2.157,
@@ -306,6 +296,16 @@
       "01683659",
       "18734995",
       "01683659"
+    ]
+  },
+  {
+    "id": "Cancer Metastasis Rev",
+    "name": "Cancer and Metastasis Reviews",
+    "rank": 2.866,
+    "issns": [
+      "01677659",
+      "15737233",
+      "01677659"
     ]
   },
   {
@@ -496,20 +496,20 @@
     ]
   },
   {
+    "id": "Cell Rep",
+    "name": "Cell Reports",
+    "rank": 4.279,
+    "issns": [
+      "22111247"
+    ]
+  },
+  {
     "id": "J Alzheimers Dis Rep",
     "name": "Journal of Alzheimer's Disease Reports",
     "rank": 0.635,
     "issns": [
       "25424823",
       "25424823"
-    ]
-  },
-  {
-    "id": "Cell Rep",
-    "name": "Cell Reports",
-    "rank": 4.279,
-    "issns": [
-      "22111247"
     ]
   },
   {
@@ -559,6 +559,15 @@
     ]
   },
   {
+    "id": "Front Microbiol",
+    "name": "Frontiers in Microbiology",
+    "rank": 1.065,
+    "issns": [
+      "1664302",
+      "1664302"
+    ]
+  },
+  {
     "id": "Int J Cancer",
     "name": "International Journal of Cancer",
     "rank": 2.131,
@@ -569,12 +578,12 @@
     ]
   },
   {
-    "id": "Front Microbiol",
-    "name": "Frontiers in Microbiology",
-    "rank": 1.065,
+    "id": "Int J Tryptophan Res",
+    "name": "International Journal of Tryptophan Research",
+    "rank": 1.004,
     "issns": [
-      "1664302",
-      "1664302"
+      "11786469",
+      "11786469"
     ]
   },
   {
@@ -588,6 +597,16 @@
     ]
   },
   {
+    "id": "Toxicol Sci",
+    "name": "Toxicological Sciences",
+    "rank": 0.911,
+    "issns": [
+      "10966080",
+      "10960929",
+      "10960929"
+    ]
+  },
+  {
     "id": "Am J Physiol Lung Cell Mol Physiol",
     "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
     "rank": 1.339,
@@ -598,31 +617,12 @@
     ]
   },
   {
-    "id": "Int J Tryptophan Res",
-    "name": "International Journal of Tryptophan Research",
-    "rank": 1.004,
-    "issns": [
-      "11786469",
-      "11786469"
-    ]
-  },
-  {
     "id": "Gigascience",
     "name": "GigaScience",
     "rank": 4.621,
     "issns": [
       "2047217",
       "2047217"
-    ]
-  },
-  {
-    "id": "Toxicol Sci",
-    "name": "Toxicological Sciences",
-    "rank": 0.911,
-    "issns": [
-      "10966080",
-      "10960929",
-      "10960929"
     ]
   },
   {

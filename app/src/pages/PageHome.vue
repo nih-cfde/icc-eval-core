@@ -1,10 +1,10 @@
 <template>
   <section>
-    <h1><Home />Home</h1>
+    <AppHeading level="1"><Home />Home</AppHeading>
   </section>
 
   <section>
-    <h2><Calculator />Totals</h2>
+    <AppHeading level="2"><Calculator />Totals</AppHeading>
 
     <dl class="details">
       <div>
@@ -47,7 +47,7 @@
   </section>
 
   <section>
-    <h2><Chart />Over Time</h2>
+    <AppHeading level="2"><Chart />Over Time</AppHeading>
 
     <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
@@ -92,6 +92,7 @@ import Calculator from "@/assets/calculator.svg";
 import Chart from "@/assets/chart.svg";
 import Home from "@/assets/home.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
+import AppHeading from "@/components/AppHeading.vue";
 import AppLineChart from "@/components/AppLineChart.vue";
 import { overTime } from "@/util/data";
 import coreProjects from "~/core-projects.json";
