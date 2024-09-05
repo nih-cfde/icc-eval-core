@@ -13,13 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Debug dump
+        uses: crazy-max/ghaction-dump-context@v2
+
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20.x
+          node-version: 22.x
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
@@ -31,7 +34,10 @@ jobs:
         uses: mxschmitt/action-tmate@v3
 
       - name: Install packages
-        run: ./run.sh --install
+        run: ./run.sh --install-packages
+
+      - name: Install Playwright
+        uses: ./.github/actions/install-playwright
 
       - name: Google auth
         uses: google-github-actions/auth@v2
@@ -46,7 +52,13 @@ jobs:
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
           CACHE: ${{ inputs.cache && 'true' || '' }}
 
-      - name: Commit results
-        uses: stefanzweifel/git-auto-commit-action@v5
+      # - name: Commit results
+      #   uses: stefanzweifel/git-auto-commit-action@v5
+      #   with:
+      #     commit_message: Update compiled data
+
+      - name: Open pull request
+        uses: peter-evans/create-pull-request@v6
         with:
-          commit_message: Update compiled data
+          branch: update-data
+          title: Update compiled data

@@ -1,7 +1,5 @@
-data="npm run --quiet --prefix data"
-app="npm run --quiet --prefix app"
-dataBun="--cwd data"
-appBun="--cwd app"
+data="npm run --prefix data"
+app="npm run --prefix app"
 
 regex="^.*--[A-Za-z-]+ (.+)$"
 if [[ $* =~ $regex ]]; then
@@ -22,13 +20,13 @@ elif [[ $* == *--script* ]]; then
 
 # install just packages
 elif [[ $* == *--install-packages* ]]; then
-  bun install $dataBun
-  bun install $appBun
+  bun install --cwd data
+  bun install --cwd app
 
-# install packages and other dependenices
+# install everything
 elif [[ $* == *--install* ]]; then
-  bun install $dataBun
-  bun install $appBun
+  bun install --cwd data
+  bun install --cwd app
   $data install-playwright
 
 # run tests

@@ -122,8 +122,8 @@ export const getDrc = async () => {
 
   for (const [ext, number] of Object.entries(countBy(allFiles, "path.ext")))
     log(`(${count(number)}) .${ext} files`, "secondary");
-  log(`> ${count(allFiles)} files`);
-  log(`> ${bytes(sumBy(allFiles, "size"))}`);
+  log(`> ${count(allFiles)} files uncompressed`);
+  log(`> ${bytes(sumBy(allFiles, "size"))} uncompressed`);
 
   return resources;
 };

@@ -1,10 +1,11 @@
 import { exec } from "child_process";
+import stripAnsi from "strip-ansi";
 import { newPage } from "@/util/browser";
 import { log } from "@/util/log";
 import { queryMulti } from "@/util/request";
 import { count } from "@/util/string";
 
-const { PDF_PATH } = process.env;
+const { APP_PATH, PDF_PATH } = process.env;
 
 /** us letter size, landscape, in css units */
 const width = 11 * 96;
@@ -22,7 +23,7 @@ export const printReports = async (
 
   /** run app */
   const dev = exec(
-    "npm run --prefix $APP_PATH dev",
+    `npm run --prefix ${APP_PATH} dev`,
     /** suppress console prints */
     () => null,
   );
@@ -30,7 +31,7 @@ export const printReports = async (
   /** wait for dev server to be ready */
   const host = await new Promise<string>((resolve, reject) => {
     dev.stdout?.on("data", (chunk: string) => {
-      const [host] = chunk.match(hostPattern) ?? [];
+      const [host] = stripAnsi(chunk).match(hostPattern) ?? [];
       if (host) resolve(host);
     });
     setTimeout(() => reject("Waiting for dev server timed out"), 5 * 1000);
