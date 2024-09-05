@@ -21,7 +21,7 @@ jobs:
           bun-version: latest
 
       - name: Install packages
-        run: ./run.sh --install-packages
+        run: ./run.sh --install
 
       - name: Run tests
         run: ./run.sh --test

@@ -1,4 +1,5 @@
 .DS_Store
 node_modules
-/**/*credentials*.json
-/**/*cfde-icc-eval-core*.json
+*creds*.json
+*credentials*.json
+gha-creds*.json

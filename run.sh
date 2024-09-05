@@ -1,5 +1,5 @@
-data="npm run --silent --prefix data"
-app="npm run --silent --prefix app"
+data="npm run --quiet --prefix data"
+app="npm run --quiet --prefix app"
 dataBun="--cwd data"
 appBun="--cwd app"
 
@@ -29,7 +29,7 @@ elif [[ $* == *--install-packages* ]]; then
 elif [[ $* == *--install* ]]; then
   bun install $dataBun
   bun install $appBun
-  $data install-playwright -- --silent
+  $data install-playwright
 
 # run tests
 elif [[ $* == *--test* ]]; then

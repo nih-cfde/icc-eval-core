@@ -16,6 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
         with:
@@ -34,11 +39,14 @@ jobs:
           credentials_json: ${{ secrets.AUTH_GOOGLE }}
 
       - name: Run pipeline
-        run: ./run.sh
+        run: |
+          touch data/.env.local
+          ./run.sh
         env:
-          CACHE: ${{ inputs.cache && "true" || "" }}
+          AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
+          CACHE: ${{ inputs.cache && 'true' || '' }}
 
       - name: Commit results
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update compiled data

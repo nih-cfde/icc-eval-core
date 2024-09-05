@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "install-playwright": "playwright install chrome",
+    "install-playwright": "npx playwright install chrome && npx playwright install --with-deps",
     "script": "tsx --env-file=.env --env-file=.env.local",
     "ingest": "npm run script -- ./ingest.ts",
     "print": "npm run script -- ./print.ts",
