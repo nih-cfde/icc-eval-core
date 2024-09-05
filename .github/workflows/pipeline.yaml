@@ -34,7 +34,7 @@ jobs:
         uses: mxschmitt/action-tmate@v3
 
       - name: Install packages
-        run: ./run.sh --install-packages
+        run: ./run.sh --install
 
       - name: Install Playwright
         uses: ./.github/actions/install-playwright

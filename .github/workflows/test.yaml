@@ -26,7 +26,7 @@ jobs:
           bun-version: latest
 
       - name: Install packages
-        run: ./run.sh --install-packages
+        run: ./run.sh --install
 
       - name: Install Playwright
         uses: ./.github/actions/install-playwright
