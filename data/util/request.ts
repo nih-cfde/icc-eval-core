@@ -7,7 +7,7 @@ import { count } from "@/util/string";
 
 export type Params = Record<string, unknown | unknown[]>;
 
-const { RAW_PATH, NOCACHE } = process.env;
+const { RAW_PATH, CACHE } = process.env;
 
 /** request */
 type Url = string | URL;
@@ -76,7 +76,7 @@ export const query = async <Result>(
   if (filename) {
     try {
       const { data } = await loadFile<Result>(`${RAW_PATH}/${filename}`);
-      if (data && !NOCACHE) {
+      if (data && CACHE) {
         log(`Using cache, ${count(data)} items`, "secondary");
         return data;
       }
@@ -127,7 +127,7 @@ export const queryMulti = async <Result>(
       const { data } = await loadFile<NonNullable<Result>[]>(
         `${RAW_PATH}/${filename}`,
       );
-      if (data && !NOCACHE) {
+      if (data && CACHE) {
         log(`Using cache, ${count(data)} items`, "secondary");
         return data;
       }

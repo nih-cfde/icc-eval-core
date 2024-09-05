@@ -2,6 +2,11 @@ name: Run pipeline
 
 on:
   workflow_dispatch:
+    inputs:
+      cache:
+        type: boolean
+        description: Use cache (files in /raw)
+        default: false
 
 jobs:
   pipeline:
@@ -24,14 +29,16 @@ jobs:
         run: ./run.sh --install
 
       - name: Google auth
-        uses: "google-github-actions/auth@v2"
+        uses: google-github-actions/auth@v2
         with:
-          credentials_json: "${{ secrets.AUTH_GOOGLE }}"
+          credentials_json: ${{ secrets.AUTH_GOOGLE }}
 
       - name: Run pipeline
         run: ./run.sh
+        env:
+          CACHE: ${{ inputs.cache && "true" || "" }}
 
       - name: Commit results
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "Update compiled data"
+          commit_message: Update compiled data

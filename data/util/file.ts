@@ -18,7 +18,7 @@ import { log } from "@/util/log";
 import { request } from "@/util/request";
 import { formatDate, midTrunc } from "@/util/string";
 
-const { RAW_PATH, NOCACHE } = process.env;
+const { RAW_PATH, CACHE } = process.env;
 
 type Extensions = "json" | "csv" | "tsv" | "txt";
 
@@ -51,14 +51,14 @@ export const downloadFile = async (
   await mkdir(parse(path).dir, { recursive: true });
 
   /** will we be using existing/cached file */
-  const cached = !NOCACHE && existsSync(path);
+  const cached = CACHE && existsSync(path);
 
   if (cached) log(`Using cache ${midTrunc(path, 40)}`, "secondary");
 
   const downloader = new Downloader({
     url,
     fileName: path,
-    skipExistingFileName: !NOCACHE,
+    skipExistingFileName: !!CACHE,
     cloneFiles: false,
     maxAttempts: 3,
     onProgress: (percentage) => {
