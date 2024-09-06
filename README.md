@@ -11,7 +11,7 @@ This repository is a place to:
 - Ensure your project is fully included in the dashboard by aligning with our ingest process.
 - Maintain code used to coordinate the above.
 
-You can view the information as a live webapp dashboard or as separate PDF reports.
+You can view the information as a live dashboard webapp or as separate PDF reports.
 
 [🖱️ The Dashboard Webapp](https://cfde-eval.netlify.app)
 
@@ -109,14 +109,17 @@ External resources are cached in their _raw_ format to speed up subsequent runs,
 
 ## Commands
 
-Use `./run.sh` with flags to run specific steps or tasks in this repo:
+Use `./run.sh` with a `--flag` to conveniently run a `script` of the same name in `/data/package.json` and `/app/package.json` (if it exists) from the root of this repo.
 
-| Flag        | Description                                                    |
-| ----------- | -------------------------------------------------------------- |
-| `--install` | Install packages and dependencies                              |
-| `--ingest`  | Run "ingest" pipeline step                                     |
-| `--print`   | Run "print" pipeline step                                      |
-| no flag     | Run pipeline steps in order                                    |
-| `--app`     | Run webapp in dev mode                                         |
-| `--test`    | Run all tests (type-checking, linting/formatting checks, etc.) |
-| `--lint`    | Auto-fix linting/formatting                                    |
+Most important scripts:
+
+| Flag                   | Description                                                    |
+| ---------------------- | -------------------------------------------------------------- |
+| `--install`            | Install packages and dependencies                              |
+| `--install-playwright` | Install Playwright                                             |
+| _no flag_              | Run main pipeline steps in order                               |
+| `--test`               | Run all tests (type-checking, linting/formatting checks, etc.) |
+| `--lint`               | Auto-fix linting/formatting                                    |
+| `--dev`                | Run dashboard webapp in dev mode                               |
+
+See readmes in sub folders for all commands.

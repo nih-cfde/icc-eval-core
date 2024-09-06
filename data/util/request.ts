@@ -7,22 +7,32 @@ import { count } from "@/util/string";
 
 export type Params = Record<string, unknown | unknown[]>;
 
-const { RAW_PATH, NOCACHE } = process.env;
+const { RAW_PATH, CACHE } = process.env;
+
+/** request */
+type Url = string | URL;
+type Options = Omit<RequestInit, "body"> & {
+  params?: Params;
+  body?: unknown;
+  parse?: "json" | "text";
+};
+type Request = {
+  <Parsed>(url: Url, options: Options): Promise<Parsed>;
+  (url: Url, options: Options, raw: true): Promise<Response>;
+};
 
 /** generic request wrapper */
-export const request = async <Response>(
-  path: string | URL,
-  options: Omit<RequestInit, "body"> & {
-    params?: Params;
-    body?: unknown;
-    parse?: "json" | "text";
-  },
+export const request: Request = async <Parsed>(
+  url: Url,
+  options: Options,
+  /** whether to return raw response object */
+  raw = false,
 ) => {
   /** options defaults */
   options.parse ??= "json";
 
   /** construct request url */
-  const url = new URL(path);
+  url = new URL(url);
 
   /** add url params */
   for (const [key, values] of Object.entries(options.params ?? {}))
@@ -35,12 +45,13 @@ export const request = async <Response>(
     body: JSON.stringify(options.body),
   });
   const response = await fetch(request);
-  if (!response.ok) throw Error(`Response for ${url.href} not OK`);
+  if (!response.ok) throw Error(`Response for ${url} not OK`);
+  if (raw) return response;
 
   /** parse response */
   try {
-    if (options.parse === "json") return (await response.json()) as Response;
-    if (options.parse === "text") return (await response.text()) as Response;
+    if (options.parse === "json") return (await response.json()) as Parsed;
+    if (options.parse === "text") return (await response.text()) as Parsed;
     throw Error();
   } catch (error) {
     throw Error(`Problem parsing ${url.pathname} as ${options.parse}`);
@@ -65,7 +76,7 @@ export const query = async <Result>(
   if (filename) {
     try {
       const { data } = await loadFile<Result>(`${RAW_PATH}/${filename}`);
-      if (data && !NOCACHE) {
+      if (data && CACHE) {
         log(`Using cache, ${count(data)} items`, "secondary");
         return data;
       }
@@ -116,7 +127,7 @@ export const queryMulti = async <Result>(
       const { data } = await loadFile<NonNullable<Result>[]>(
         `${RAW_PATH}/${filename}`,
       );
-      if (data && !NOCACHE) {
+      if (data && CACHE) {
         log(`Using cache, ${count(data)} items`, "secondary");
         return data;
       }

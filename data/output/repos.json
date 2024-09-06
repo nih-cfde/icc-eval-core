@@ -107,9 +107,10 @@
       "2024-08-07T16:57:01Z",
       "2024-08-13T13:38:34Z",
       "2024-08-15T23:49:34Z",
-      "2024-08-18T13:51:59Z"
+      "2024-08-18T13:51:59Z",
+      "2024-09-04T00:51:35Z"
     ],
-    "watchers": 93,
+    "watchers": 94,
     "forks": [
       "2024-07-08T00:50:35Z",
       "2024-06-19T14:46:23Z",
@@ -359,11 +360,11 @@
         ]
       },
       {
-        "state": "open",
-        "stateReason": null,
+        "state": "closed",
+        "stateReason": "completed",
         "created": "2024-07-09T19:13:52Z",
-        "modified": "2024-08-22T16:03:23Z",
-        "closed": null,
+        "modified": "2024-09-03T20:52:33Z",
+        "closed": "2024-09-03T20:12:04Z",
         "labels": [
           "enhancement"
         ]
@@ -451,10 +452,18 @@
         "labels": []
       }
     ],
-    "openIssues": 5,
-    "closedIssues": 8,
-    "issueTimeOpen": 2581483,
+    "openIssues": 4,
+    "closedIssues": 9,
+    "issueTimeOpen": 3023877,
     "pullRequests": [
+      {
+        "state": "closed",
+        "stateReason": "",
+        "created": "2024-08-23T17:17:53Z",
+        "modified": "2024-09-03T15:26:14Z",
+        "closed": "2024-09-03T15:26:12Z",
+        "labels": []
+      },
       {
         "state": "closed",
         "stateReason": "",
@@ -521,9 +530,11 @@
       }
     ],
     "openPullRequests": 0,
-    "closedPullRequests": 8,
-    "pullRequestTimeOpen": 647874,
+    "closedPullRequests": 9,
+    "pullRequestTimeOpen": 680744,
     "commits": [
+      "2024-09-03T17:12:09Z",
+      "2024-09-03T15:26:12Z",
       "2024-08-17T21:00:20Z",
       "2024-08-07T19:18:45Z",
       "2024-07-29T15:35:53Z",
@@ -536,7 +547,7 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 7
+        "contributions": 9
       },
       {
         "name": "cgreene",
@@ -546,19 +557,19 @@
     "languages": [
       {
         "language": "TypeScript",
-        "count": 67437
+        "count": 77778
       },
       {
         "language": "Vue",
-        "count": 33975
+        "count": 40068
       },
       {
         "language": "CSS",
-        "count": 4767
+        "count": 5262
       },
       {
         "language": "JavaScript",
-        "count": 2275
+        "count": 2426
       },
       {
         "language": "Shell",
@@ -570,15 +581,14 @@
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-08-23T04:01:50Z",
+    "modified": "2024-09-05T06:32:24Z",
     "license": "",
     "readme": true,
     "contributing": false,
     "dependencies": {
-      "package.json": 1,
-      "app/package.json": 29,
-      "data/package.json": 24,
-      ".github/workflows/pipeline.yaml": 4,
+      "app/package.json": 30,
+      "data/package.json": 28,
+      ".github/workflows/pipeline.yaml": 5,
       ".github/workflows/test.yaml": 3
     }
   }

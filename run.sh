@@ -1,56 +1,28 @@
-data="npm run --silent --prefix data"
-app="npm run --silent --prefix app"
-dataBun="--cwd data"
-appBun="--cwd app"
+data="npm run --prefix data"
+app="npm run --prefix app"
 
-regex="^.*--[A-Za-z-]+ (.+)$"
-if [[ $* =~ $regex ]]; then
-  extraargs="${BASH_REMATCH[1]}"
-fi
+regex="^.*--([A-Za-z-]+) ?(.*)$"
 
-# run individual pipeline step
-if [[ $* == *--ingest* ]]; then
-  $data ingest
-elif [[ $* == *--print* ]]; then
-  $data print
-elif [[ $* == *--app* ]]; then
-  $app dev -- --open
+# install packages
+if [[ $* == *--install* ]]; then
+  bun install --cwd data
+  bun install --cwd app
 
-# run individual script in data
-elif [[ $* == *--script* ]]; then
-  $data script -- $extraargs
+# run script in /data and /app
+elif [[ $* =~ $regex ]]; then
+  script="\"${BASH_REMATCH[1]}\":"
+  if grep -q $script "data/package.json"; then
+    $data ${BASH_REMATCH[1]} -- ${BASH_REMATCH[2]}
+  fi
+  if grep -q $script "app/package.json"; then
+    $app ${BASH_REMATCH[1]} -- ${BASH_REMATCH[2]}
+  fi
 
-# install just packages
-elif [[ $* == *--install-packages* ]]; then
-  bun install $dataBun
-  bun install $appBun
-
-# install packages and other dependenices
-elif [[ $* == *--install* ]]; then
-  bun install $dataBun
-  bun install $appBun
-  $data install-playwright -- --silent
-
-# run tests
-elif [[ $* == *--test* ]]; then
-  $data test
-  $app test
-
-# run lint
-elif [[ $* == *--lint* ]]; then
-  $data lint
-  $app lint
-
-# hard uninstall packages
-elif [[ $* == *--clean* ]]; then
-  $data clean
-  $app clean
-
-# run all pipeline steps
+# run main pipeline steps
 else
   $data ingest
   $data print
   if [[ -z "$CI" ]]; then
-    $app dev -- --open
+    $app dev
   fi
 fi

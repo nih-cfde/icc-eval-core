@@ -1,0 +1,31 @@
+name: Install Playwright
+
+runs:
+  using: composite
+  steps:
+    - name: Get Playwright version
+      shell: bash
+      working-directory: data
+      run: |
+        PLAYWRIGHT_VERSION=$(npm ls @playwright/test | grep @playwright | sed 's/.*@//')
+        echo "Playwright Version: $PLAYWRIGHT_VERSION"
+        echo "PLAYWRIGHT_VERSION=$PLAYWRIGHT_VERSION" >> $GITHUB_ENV
+
+    - name: Cache Playwright
+      id: cache-playwright
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/ms-playwright
+        key: playwright-${{ env.PLAYWRIGHT_VERSION }}
+
+    - name: Install Playwright and its dependencies
+      shell: bash
+      if: steps.cache-playwright.outputs.cache-hit != 'true'
+      working-directory: data
+      run: npx playwright install chromium --with-deps
+
+    - name: Install just Playwright's dependencies
+      shell: bash
+      if: steps.cache-playwright.outputs.cache-hit == 'true'
+      working-directory: data
+      run: npx playwright install-deps

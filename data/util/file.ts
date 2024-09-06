@@ -1,6 +1,6 @@
 import { spawn as nodeSpawn } from "child_process";
-import { existsSync, type Stats } from "fs";
-import { mkdir, readdir, readFile, rm, stat, writeFile } from "fs/promises";
+import { existsSync } from "fs";
+import { mkdir, readFile, rm, stat, writeFile } from "fs/promises";
 import { parse } from "path";
 import {
   parse as csvParse,
@@ -13,14 +13,24 @@ import {
 } from "csv-stringify/sync";
 import { isEmpty } from "lodash-es";
 import Downloader from "nodejs-file-downloader";
+import { HttpRangeReader, ZipReader } from "@zip.js/zip.js";
 import { log } from "@/util/log";
-import { midTrunc } from "@/util/string";
+import { request } from "@/util/request";
+import { formatDate, midTrunc } from "@/util/string";
 
-const { RAW_PATH, NOCACHE } = process.env;
+const { RAW_PATH, CACHE } = process.env;
 
 type Extensions = "json" | "csv" | "tsv" | "txt";
 
 export type Filename = `${string}.${Extensions}`;
+
+/** get file stats in standard format */
+const getStats = async (path: string) => {
+  const { size, mtime } = await stat(path);
+  return { size, date: formatDate(mtime) };
+};
+
+export type Stats = Awaited<ReturnType<typeof getStats>>;
 
 /** make fresh folder */
 export const clearFolder = async (path: string) => {
@@ -41,14 +51,14 @@ export const downloadFile = async (
   await mkdir(parse(path).dir, { recursive: true });
 
   /** will we be using existing/cached file */
-  const cached = !NOCACHE && existsSync(path);
+  const cached = CACHE && existsSync(path);
 
   if (cached) log(`Using cache ${midTrunc(path, 40)}`, "secondary");
 
   const downloader = new Downloader({
     url,
     fileName: path,
-    skipExistingFileName: !NOCACHE,
+    skipExistingFileName: !!CACHE,
     cloneFiles: false,
     maxAttempts: 3,
     onProgress: (percentage) => {
@@ -60,7 +70,15 @@ export const downloadFile = async (
   /** trigger download */
   await downloader.download();
 
-  return { path, stats: await stat(path) };
+  return { path, ...(await getStats(path)) };
+};
+
+/** get info of remote file without downloading */
+export const liteDownloadFile = async (url: string) => {
+  const response = await request(url, { method: "HEAD" }, true);
+  const size = Number(response.headers.get("Content-Length"));
+  const date = formatDate(response.headers.get("Last-Modified") ?? "");
+  return { url, path: "", size, date };
 };
 
 /** load data from file */
@@ -71,10 +89,8 @@ export const loadFile = async <Data>(
 ) => {
   let contents = "";
   let data: Data | null = null;
-  let stats: Stats | null = null;
 
   contents = await readFile(path, "utf-8");
-  stats = await stat(path);
 
   if (format === "json" || path.endsWith(".json"))
     data = parseJson<Data>(contents);
@@ -85,44 +101,33 @@ export const loadFile = async <Data>(
   if (format === "txt" || path.endsWith(".txt") || path.endsWith(".gmt"))
     data = contents as Data;
 
-  return { data, stats };
+  return { data, ...(await getStats(path)) };
 };
 
-/** extract zip file contents */
-export const unzip = async (filename: string) => {
-  const { dir, name } = parse(filename);
-  /** folder to output zip file contents to */
-  const output = `${dir}/${name}`;
-  /** unzip command */
-  const [cmd, ...args] = ["unzip", filename, "-d", output];
-  try {
-    /** if not already unzipped */
-    if (!existsSync(output)) {
-      /** clear folder to avoid unzip halting */
-      await clearFolder(output);
-      /** run unzip */
-      await spawn(cmd!, args);
-    }
-    /** return file paths and stats */
-    return Promise.all(
-      (await readdir(output, { recursive: true }))
-        .map((path) => `${output}/${path}`)
-        .map(async (path) => ({
-          path,
-          stats: await stat(path),
-        })),
-    );
-  } catch (error) {
-    /** clear folder to not end up with partial contents */
-    await clearFolder(output);
-    throw error;
-  }
-};
+/** get file listing of remote zip file without downloading entire file */
+export const liteUnzip = async (
+  url: string,
+  onProgress?: (percent: number) => void,
+) =>
+  (
+    await new ZipReader(new HttpRangeReader(url)).getEntries({
+      onprogress: async (progress, total) => onProgress?.(progress / total),
+    })
+  ).map((entry) => ({
+    url,
+    path: entry.filename,
+    size: entry.uncompressedSize,
+    date: formatDate(entry.lastModDate),
+  }));
 
 type Spawn = Parameters<typeof nodeSpawn>;
 
 /** https://stackoverflow.com/questions/72862197/how-to-use-promisify-with-the-spawn-function-for-the-child-process */
-const spawn = (cmd: Spawn[0], args: Spawn[1] = [], options: Spawn[2] = {}) =>
+export const spawn = (
+  cmd: Spawn[0],
+  args: Spawn[1] = [],
+  options: Spawn[2] = {},
+) =>
   new Promise((resolve, reject) => {
     setTimeout(
       () => reject(`Spawn process timeout ${cmd} ${args.join(" ")}`),

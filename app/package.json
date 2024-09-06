@@ -1,13 +1,13 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint . --fix && prettier **/*.{ts,vue,css,html,md} --write",
     "test:lint": "eslint . && prettier **/*.{ts,vue,css,html,md} --check",
     "test:types": "vue-tsc",
     "test": "npm run test:lint && npm run test:types",
-    "preview": "vite preview",
     "clean": "rm -rf node_modules bun.lockb && bun pm cache rm"
   },
   "dependencies": {

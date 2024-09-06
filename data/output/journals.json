@@ -47,16 +47,6 @@
     ]
   },
   {
-    "id": "Anal Chem",
-    "name": "Analytical Chemistry",
-    "rank": 1.621,
-    "issns": [
-      "00032700",
-      "15206882",
-      "00032700"
-    ]
-  },
-  {
     "id": "Environ Sci Technol",
     "name": "Environmental Science &amp; Technology",
     "rank": 3.516,
@@ -64,6 +54,16 @@
       "0013936",
       "15205851",
       "0013936"
+    ]
+  },
+  {
+    "id": "Anal Chem",
+    "name": "Analytical Chemistry",
+    "rank": 1.621,
+    "issns": [
+      "00032700",
+      "15206882",
+      "00032700"
     ]
   },
   {
@@ -76,13 +76,13 @@
     ]
   },
   {
-    "id": "Cancer Cell",
-    "name": "Cancer Cell",
-    "rank": 17.507,
+    "id": "Drug Discov Today",
+    "name": "Drug Discovery Today",
+    "rank": 1.586,
     "issns": [
-      "15356108",
-      "18783686",
-      "15356108"
+      "13596446",
+      "18785832",
+      "13596446"
     ]
   },
   {
@@ -105,13 +105,23 @@
     ]
   },
   {
-    "id": "Drug Discov Today",
-    "name": "Drug Discovery Today",
-    "rank": 1.586,
+    "id": "Cancer Cell",
+    "name": "Cancer Cell",
+    "rank": 17.507,
     "issns": [
-      "13596446",
-      "18785832",
-      "13596446"
+      "15356108",
+      "18783686",
+      "15356108"
+    ]
+  },
+  {
+    "id": "Nat Protoc",
+    "name": "Nature Protocols",
+    "rank": 7.419,
+    "issns": [
+      "17502799",
+      "17542189",
+      "17502799"
     ]
   },
   {
@@ -135,26 +145,6 @@
     ]
   },
   {
-    "id": "Nat Protoc",
-    "name": "Nature Protocols",
-    "rank": 7.419,
-    "issns": [
-      "17502799",
-      "17542189",
-      "17502799"
-    ]
-  },
-  {
-    "id": "Am J Physiol Heart Circ Physiol",
-    "name": "American Journal of Physiology - Heart and Circulatory Physiology",
-    "rank": 1.452,
-    "issns": [
-      "03636135",
-      "15221539",
-      "03636135"
-    ]
-  },
-  {
     "id": "PLoS Comput Biol",
     "name": "PLoS Computational Biology",
     "rank": 1.652,
@@ -162,15 +152,6 @@
       "1553734",
       "15537358",
       "1553734"
-    ]
-  },
-  {
-    "id": "Front Aging",
-    "name": "Frontiers in Aging",
-    "rank": 1.062,
-    "issns": [
-      "26736217",
-      "26736217"
     ]
   },
   {
@@ -184,13 +165,31 @@
     ]
   },
   {
-    "id": "Nat Genet",
-    "name": "Nature Genetics",
-    "rank": 17.3,
+    "id": "Front Aging",
+    "name": "Frontiers in Aging",
+    "rank": 1.062,
     "issns": [
-      "10614036",
-      "15461718",
-      "10614036"
+      "26736217",
+      "26736217"
+    ]
+  },
+  {
+    "id": "Am J Physiol Heart Circ Physiol",
+    "name": "American Journal of Physiology - Heart and Circulatory Physiology",
+    "rank": 1.452,
+    "issns": [
+      "03636135",
+      "15221539",
+      "03636135"
+    ]
+  },
+  {
+    "id": "Nat Commun",
+    "name": "Nature Communications",
+    "rank": 4.887,
+    "issns": [
+      "20411723",
+      "20411723"
     ]
   },
   {
@@ -204,21 +203,13 @@
     ]
   },
   {
-    "id": "Nat Hum Behav",
-    "name": "Nature Human Behaviour",
-    "rank": 6.097,
+    "id": "Nat Genet",
+    "name": "Nature Genetics",
+    "rank": 17.3,
     "issns": [
-      "23973374",
-      "23973374"
-    ]
-  },
-  {
-    "id": "Nat Commun",
-    "name": "Nature Communications",
-    "rank": 4.887,
-    "issns": [
-      "20411723",
-      "20411723"
+      "10614036",
+      "15461718",
+      "10614036"
     ]
   },
   {
@@ -228,6 +219,15 @@
     "issns": [
       "16643224",
       "16643224"
+    ]
+  },
+  {
+    "id": "Nat Hum Behav",
+    "name": "Nature Human Behaviour",
+    "rank": 6.097,
+    "issns": [
+      "23973374",
+      "23973374"
     ]
   },
   {
@@ -260,52 +260,12 @@
     ]
   },
   {
-    "id": "J Control Release",
-    "name": "Journal of Controlled Release",
-    "rank": 2.157,
-    "issns": [
-      "01683659",
-      "18734995",
-      "01683659"
-    ]
-  },
-  {
-    "id": "Adv Drug Deliv Rev",
-    "name": "Advanced Drug Delivery Reviews",
-    "rank": 3.411,
-    "issns": [
-      "0169409",
-      "18728294",
-      "0169409"
-    ]
-  },
-  {
     "id": "ACS Appl Bio Mater",
     "name": "ACS Applied Bio Materials",
     "rank": 0.9,
     "issns": [
       "25766422",
       "25766422"
-    ]
-  },
-  {
-    "id": "Drug Deliv Transl Res",
-    "name": "Drug Delivery and Translational Research",
-    "rank": 0.994,
-    "issns": [
-      "2190393",
-      "21903948",
-      "2190393"
-    ]
-  },
-  {
-    "id": "Cancer Metastasis Rev",
-    "name": "Cancer and Metastasis Reviews",
-    "rank": 2.866,
-    "issns": [
-      "01677659",
-      "15737233",
-      "01677659"
     ]
   },
   {
@@ -319,6 +279,46 @@
     ]
   },
   {
+    "id": "Adv Drug Deliv Rev",
+    "name": "Advanced Drug Delivery Reviews",
+    "rank": 3.411,
+    "issns": [
+      "0169409",
+      "18728294",
+      "0169409"
+    ]
+  },
+  {
+    "id": "J Control Release",
+    "name": "Journal of Controlled Release",
+    "rank": 2.157,
+    "issns": [
+      "01683659",
+      "18734995",
+      "01683659"
+    ]
+  },
+  {
+    "id": "Cancer Metastasis Rev",
+    "name": "Cancer and Metastasis Reviews",
+    "rank": 2.866,
+    "issns": [
+      "01677659",
+      "15737233",
+      "01677659"
+    ]
+  },
+  {
+    "id": "Drug Deliv Transl Res",
+    "name": "Drug Delivery and Translational Research",
+    "rank": 0.994,
+    "issns": [
+      "2190393",
+      "21903948",
+      "2190393"
+    ]
+  },
+  {
     "id": "Nucleic Acids Res",
     "name": "Nucleic Acids Research",
     "rank": 7.048,
@@ -326,15 +326,6 @@
       "03051048",
       "13624962",
       "03051048"
-    ]
-  },
-  {
-    "id": "BMC Biol",
-    "name": "BMC Biology",
-    "rank": 1.787,
-    "issns": [
-      "17417007",
-      "17417007"
     ]
   },
   {
@@ -357,6 +348,15 @@
     ]
   },
   {
+    "id": "BMC Biol",
+    "name": "BMC Biology",
+    "rank": 1.787,
+    "issns": [
+      "17417007",
+      "17417007"
+    ]
+  },
+  {
     "id": "Nat Methods",
     "name": "Nature Methods",
     "rank": 14.796,
@@ -364,15 +364,6 @@
       "15487091",
       "15487105",
       "15487091"
-    ]
-  },
-  {
-    "id": "Biol Sex Differ",
-    "name": "Biology of Sex Differences",
-    "rank": 2.03,
-    "issns": [
-      "20426410",
-      "20426410"
     ]
   },
   {
@@ -385,12 +376,12 @@
     ]
   },
   {
-    "id": "BMC Pharmacol Toxicol",
-    "name": "BMC pharmacology &amp; toxicology",
-    "rank": 0.71,
+    "id": "Biol Sex Differ",
+    "name": "Biology of Sex Differences",
+    "rank": 2.03,
     "issns": [
-      "20506511",
-      "20506511"
+      "20426410",
+      "20426410"
     ]
   },
   {
@@ -401,6 +392,15 @@
       "10761551",
       "15283658",
       "10761551"
+    ]
+  },
+  {
+    "id": "BMC Pharmacol Toxicol",
+    "name": "BMC pharmacology &amp; toxicology",
+    "rank": 0.71,
+    "issns": [
+      "20506511",
+      "20506511"
     ]
   },
   {
@@ -460,15 +460,6 @@
     ]
   },
   {
-    "id": "Bioinform Adv",
-    "name": "Bioinformatics Advances",
-    "rank": 1.329,
-    "issns": [
-      "26350041",
-      "26350041"
-    ]
-  },
-  {
     "id": "Curr Protoc",
     "name": "Current Protocols",
     "rank": 1.52,
@@ -478,12 +469,12 @@
     ]
   },
   {
-    "id": "PLoS One",
-    "name": "PLoS ONE",
-    "rank": 0.839,
+    "id": "Bioinform Adv",
+    "name": "Bioinformatics Advances",
+    "rank": 1.329,
     "issns": [
-      "19326203",
-      "19326203"
+      "26350041",
+      "26350041"
     ]
   },
   {
@@ -496,11 +487,48 @@
     ]
   },
   {
+    "id": "PLoS One",
+    "name": "PLoS ONE",
+    "rank": 0.839,
+    "issns": [
+      "19326203",
+      "19326203"
+    ]
+  },
+  {
     "id": "Cell Rep",
     "name": "Cell Reports",
     "rank": 4.279,
     "issns": [
       "22111247"
+    ]
+  },
+  {
+    "id": "J Alzheimers Dis Rep",
+    "name": "Journal of Alzheimer's Disease Reports",
+    "rank": 0.635,
+    "issns": [
+      "25424823",
+      "25424823"
+    ]
+  },
+  {
+    "id": "Infect Immun",
+    "name": "Infection and Immunity",
+    "rank": 1.042,
+    "issns": [
+      "00199567",
+      "10985522",
+      "00199567"
+    ]
+  },
+  {
+    "id": "BMC Cancer",
+    "name": "BMC Cancer",
+    "rank": 1.087,
+    "issns": [
+      "14712407",
+      "14712407"
     ]
   },
   {
@@ -510,25 +538,6 @@
     "issns": [
       "25225812",
       "25225812"
-    ]
-  },
-  {
-    "id": "Biophys J",
-    "name": "Biophysical Journal",
-    "rank": 1.188,
-    "issns": [
-      "00063495",
-      "15420086",
-      "00063495"
-    ]
-  },
-  {
-    "id": "Gigascience",
-    "name": "GigaScience",
-    "rank": 4.621,
-    "issns": [
-      "2047217",
-      "2047217"
     ]
   },
   {
@@ -550,50 +559,12 @@
     ]
   },
   {
-    "id": "J Alzheimers Dis Rep",
-    "name": "Journal of Alzheimer's Disease Reports",
-    "rank": 0.635,
-    "issns": [
-      "25424823",
-      "25424823"
-    ]
-  },
-  {
-    "id": "Am J Physiol Lung Cell Mol Physiol",
-    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
-    "rank": 1.339,
-    "issns": [
-      "10400605",
-      "15221504",
-      "10400605"
-    ]
-  },
-  {
-    "id": "BMC Cancer",
-    "name": "BMC Cancer",
-    "rank": 1.087,
-    "issns": [
-      "14712407",
-      "14712407"
-    ]
-  },
-  {
     "id": "Front Microbiol",
     "name": "Frontiers in Microbiology",
     "rank": 1.065,
     "issns": [
       "1664302",
       "1664302"
-    ]
-  },
-  {
-    "id": "Infect Immun",
-    "name": "Infection and Immunity",
-    "rank": 1.042,
-    "issns": [
-      "00199567",
-      "10985522",
-      "00199567"
     ]
   },
   {
@@ -616,6 +587,16 @@
     ]
   },
   {
+    "id": "Biophys J",
+    "name": "Biophysical Journal",
+    "rank": 1.188,
+    "issns": [
+      "00063495",
+      "15420086",
+      "00063495"
+    ]
+  },
+  {
     "id": "Toxicol Sci",
     "name": "Toxicological Sciences",
     "rank": 0.911,
@@ -623,6 +604,25 @@
       "10966080",
       "10960929",
       "10960929"
+    ]
+  },
+  {
+    "id": "Am J Physiol Lung Cell Mol Physiol",
+    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
+    "rank": 1.339,
+    "issns": [
+      "10400605",
+      "15221504",
+      "10400605"
+    ]
+  },
+  {
+    "id": "Gigascience",
+    "name": "GigaScience",
+    "rank": 4.621,
+    "issns": [
+      "2047217",
+      "2047217"
     ]
   },
   {

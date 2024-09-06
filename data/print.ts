@@ -26,3 +26,6 @@ saveFile(
 );
 
 await browser.close();
+
+/** avoid odd hanging behavior on gh actions */
+process.exit(0);

@@ -46,22 +46,39 @@ export const format = (
   return color(message);
 };
 
-/** whether most recent log was an in-place or new line */
+/** whether previous log was an in-place or a new-line log */
 let prevInPlace = false;
+
+/** timestamp of last in-place log */
+let lastInPlace = 0;
 
 /** print message to console */
 export const log = (
   message: Message,
   level: keyof typeof levels | "" = "",
+  /**
+   * whether to write message in place instead of on new line. meant for rapidly
+   * updating messages like progress bars.
+   */
   inPlace = false,
   manualIndent?: number,
 ): string => {
   message = format(message, level);
   const indent = getIndent(manualIndent);
   if (inPlace) {
-    process.stdout.clearLine(0);
-    process.stdout.cursorTo(0);
-    process.stdout.write(indent + message);
+    /** if interactive shell */
+    if (process.stdout.isTTY) {
+      process.stdout.clearLine(0);
+      process.stdout.cursorTo(0);
+      process.stdout.write(indent + message);
+    } else {
+      /** if static shell */
+      /** only log every once in a while to not clutter logs */
+      if (performance.now() - lastInPlace > 500) {
+        console.log(indent + message);
+        lastInPlace = performance.now();
+      }
+    }
     prevInPlace = true;
   } else {
     if (prevInPlace) console.log();
