@@ -21,7 +21,7 @@ You can view the information as a live dashboard webapp or as separate PDF repor
 
 Current maintainers and team members:
 
-- [Casey Greene](mailto:casey.s.greene@cuanschutz.edu) - Project lead
+- [Casey Greene](mailto:casey.s.greene@cuanschutz.edu) - Evaluation Core Lead
 - [Sean Davis](mailto:sean.2.davis@cuanschutz.edu) - Project lead
 - [mailto:vincent.rubinetti@cuanschutz.edu](Vincent Rubinetti), [@vincerubinetti](https://github.com/vincerubinetti) - Software developer
 
