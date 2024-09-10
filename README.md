@@ -17,10 +17,22 @@ You can view the information as a live dashboard webapp or as separate PDF repor
 
 [📜 PDF Reports](https://cfde-eval.netlify.app/reports)
 
+## Contact
+
+Current maintainers and team members:
+
+- [Casey Greene](mailto:casey.s.greene@cuanschutz.edu) - Project lead
+- [Sean Davis](mailto:sean.2.davis@cuanschutz.edu) - Project lead
+- [mailto:vincent.rubinetti@cuanschutz.edu](Vincent Rubinetti), [@vincerubinetti](https://github.com/vincerubinetti) - Software developer
+
 ## Submit your project
 
-We gather most details about Common Fund projects automatically from NIH resources, but there are some pieces of info that require manual actions to be integrated.
+We gather most details about Common Fund projects automatically from NIH systems, but there are some pieces of info that require manual actions to be integrated.
 If you would like your project to be included in the dashboard to the fullest extent, please follow the instructions in the sections below as applicable.
+We've tried to make this process as easy and automated as possible.
+
+Once you've made a submission (and once your project is in NIH systems), your project should appear here the next time our ingest process runs.
+We try to run the ingest process regularly and frequently, but if you'd like your project to show up faster or are otherwise having issues, please [contact us](#contact).
 
 ### Submit software repositories
 
@@ -103,7 +115,7 @@ The automated steps in this repo are roughly as follows:
 - Netlify - Service used for hosting dashboard webapp (and PR previews).
 - Octokit - Library used for conveniently interacting with GitHub APIs.
 
-The ingest pipeline is optimized wherever possible and appropriate.
+The pipeline is optimized wherever possible and appropriate.
 Things like network requests and rendering are parallelized (e.g. PDF reports are printed simultaneously in separate tabs of the same Playwright browser instance).
 External resources are cached in their _raw_ format to speed up subsequent runs, and to avoid being rate-limited or blocked by those providers.
 
@@ -123,3 +135,10 @@ Most important scripts:
 | `--dev`                | Run dashboard webapp in dev mode                               |
 
 See readmes in sub folders for all commands.
+
+## Environment variables
+
+- `CACHE` - Whether to use cached files in `/raw` to skip time-consuming network requests.
+  Set to `true` (or any string) for true.
+  Leave blank/unset for false.
+  `false` by default.

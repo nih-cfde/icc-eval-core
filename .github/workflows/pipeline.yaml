@@ -8,6 +8,9 @@ on:
         description: Use cache (files in /raw)
         default: false
 
+  schedule:
+    - cron: "0 0 * * *"
+
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -54,13 +57,13 @@ jobs:
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
           CACHE: ${{ inputs.cache && 'true' || '' }}
 
-      # - name: Commit results
-      #   uses: stefanzweifel/git-auto-commit-action@v5
-      #   with:
-      #     commit_message: Update compiled data
-
-      - name: Open pull request
-        uses: peter-evans/create-pull-request@v6
+      - name: Commit results
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          branch: update-data
-          title: Update compiled data
+          commit_message: Update compiled data
+
+      # - name: Open pull request
+      #   uses: peter-evans/create-pull-request@v6
+      #   with:
+      #     branch: update-data
+      #     title: Update compiled data
