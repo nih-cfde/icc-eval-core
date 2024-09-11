@@ -3379,7 +3379,7 @@
         29986103
       ],
       "doi": "10.1038/s41562-022-01408-5",
-      "last_modified": "09/01/2024, 17:05:31"
+      "last_modified": "09/07/2024, 05:51:13"
     },
     {
       "pmid": 35930447,
@@ -3714,7 +3714,7 @@
         31308520
       ],
       "doi": "10.1016/j.ajhg.2022.07.008",
-      "last_modified": "09/01/2024, 17:12:00"
+      "last_modified": "09/06/2024, 05:54:59"
     },
     {
       "pmid": 36065636,
@@ -4291,7 +4291,7 @@
         19536255
       ],
       "doi": "10.1242/dmm.049600",
-      "last_modified": "09/01/2024, 17:15:54"
+      "last_modified": "09/06/2024, 06:02:36"
     },
     {
       "pmid": 36303018,
@@ -4534,7 +4534,7 @@
         12824425
       ],
       "doi": "10.1093/nar/gkac966",
-      "last_modified": "09/01/2024, 16:06:08"
+      "last_modified": "09/07/2024, 05:51:33"
     },
     {
       "pmid": 36356032,
@@ -4678,7 +4678,7 @@
         24223762
       ],
       "doi": "10.1093/gigascience/giac105",
-      "last_modified": "09/01/2024, 17:27:44"
+      "last_modified": "09/10/2024, 05:48:06"
     },
     {
       "pmid": 36445310,
@@ -5279,7 +5279,7 @@
         30083448
       ],
       "doi": "10.1038/s42003-022-03644-x",
-      "last_modified": "09/01/2024, 17:30:47"
+      "last_modified": "09/10/2024, 05:48:20"
     },
     {
       "pmid": 36564505,
@@ -5441,7 +5441,7 @@
         33037820
       ],
       "doi": "10.1371/journal.pcbi.1010749",
-      "last_modified": "09/01/2024, 16:13:06"
+      "last_modified": "09/11/2024, 05:50:26"
     },
     {
       "pmid": 36688502,
@@ -12505,12 +12505,12 @@
       "title": "Liver fibrosis pathologies and potentials of RNA based therapeutics modalities.",
       "authors": "Rimpy Diwan, Samantha Lynn Gaytan, Himanshu Narendrakumar Bhatt, Jacqueline Pena-Zacarias, Md Nurunnabi",
       "journal": "Drug Deliv Transl Res",
-      "is_research_article": "Yes",
+      "is_research_article": "No",
       "relative_citation_ratio": null,
       "nih_percentile": null,
-      "human": 0.4,
-      "animal": 0,
-      "molecular_cellular": 0.6,
+      "human": 0.5,
+      "animal": 0.5,
+      "molecular_cellular": 0,
       "apt": 0.05,
       "is_clinical": "No",
       "citation_count": 0,
@@ -12744,7 +12744,7 @@
         19177575
       ],
       "doi": "10.1007/s13346-024-01551-8",
-      "last_modified": "09/01/2024, 16:25:26"
+      "last_modified": "09/10/2024, 05:48:46"
     },
     {
       "pmid": 38531616,
@@ -13714,7 +13714,7 @@
         36859716
       ],
       "doi": "10.1038/s41596-024-00996-y",
-      "last_modified": "09/01/2024, 16:44:27"
+      "last_modified": "09/09/2024, 05:48:37"
     },
     {
       "pmid": 38796686,
@@ -14074,6 +14074,116 @@
       ],
       "doi": "10.1101/2024.03.27.587041",
       "last_modified": "09/01/2024, 16:47:43"
+    },
+    {
+      "pmid": 38844817,
+      "year": 2024,
+      "title": "Nucleotide metabolism in cancer cells fuels a UDP-driven macrophage cross-talk, promoting immunosuppression and immunotherapy resistance.",
+      "authors": "Tommaso Scolaro, Marta Manco, Mathieu Pecqueux, Ricardo Amorim, Rosa Trotta, Heleen H Van Acker, Matthias Van Haele, Niranjan Shirgaonkar, Stefan Naulaerts, Jan Daniluk, Fran Prenen, Chiara Varamo, Donatella Ponti, Ginevra Doglioni, Ana Margarida Ferreira Campos, Juan Fernandez Garcia, Silvia Radenkovic, Pegah Rouhi, Aleksandar Beatovic, Liwei Wang, Yu Wang, Amalia Tzoumpa, Asier Antoranz, Ara Sargsian, Mario Di Matteo, Emanuele Berardi, Jermaine Goveia, Bart Ghesquière, Tania Roskams, Stefaan Soenen, Thomas Voets, Bella Manshian, Sarah-Maria Fendt, Peter Carmeliet, Abhishek D Garg, Ramanuj DasGupta, Baki Topal, Massimiliano Mazzone",
+      "journal": "Nat Cancer",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.12,
+      "animal": 0.25,
+      "molecular_cellular": 0.62,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 1,
+      "citations_per_year": 1,
+      "expected_citations_per_year": 1.014322782687333,
+      "field_citation_rate": 16.07064958744973,
+      "provisional": "No",
+      "x_coord": -0.32475952641916445,
+      "y_coord": -0.3125,
+      "cited_by_clin": null,
+      "cited_by": [
+        39152226
+      ],
+      "references": [
+        28199831,
+        21444765,
+        21436454,
+        32144377,
+        26997480,
+        32559423,
+        24332039,
+        36522548,
+        30827862,
+        17410128,
+        8553070,
+        33199639,
+        30146486,
+        37055532,
+        25096411,
+        27642729,
+        24520856,
+        28117416,
+        16968944,
+        22585996,
+        33042633,
+        31609933,
+        23995783,
+        19217150,
+        25567350,
+        37667784,
+        30834048,
+        26200337,
+        25071169,
+        19008857,
+        26712084,
+        16257449,
+        27773694,
+        18519786,
+        26922909,
+        31197017,
+        21724990,
+        27209048,
+        20842054,
+        33179754,
+        16982708,
+        31935371,
+        30926081,
+        27350442,
+        27287723,
+        33723286,
+        31447322,
+        33962944,
+        34815265,
+        8537336,
+        22068034,
+        22388286,
+        29930882,
+        26359337,
+        27491898,
+        12883005,
+        32015543,
+        25605792,
+        30990168,
+        21398613,
+        25413493,
+        8700127,
+        15894267,
+        35122060,
+        26467476,
+        23941325,
+        37198494,
+        26028255,
+        28912244,
+        31126960,
+        26830752,
+        26598942,
+        32161598,
+        30439478,
+        29632196,
+        31273297,
+        10753868,
+        17632526,
+        28527783,
+        33309519
+      ],
+      "doi": "10.1038/s43018-024-00771-8",
+      "last_modified": "09/01/2024, 16:48:56"
     },
     {
       "pmid": 38918178,
@@ -14947,6 +15057,33 @@
       ],
       "doi": "10.1101/2024.08.03.606419",
       "last_modified": "09/03/2024, 05:52:00"
+    },
+    {
+      "pmid": 39206133,
+      "year": 2024,
+      "title": "Phosphate availability conditions caspofungin tolerance, capsule attachment and titan cell formation in <i>Cryptococcus neoformans</i>.",
+      "authors": "Xianya Qu, Kabir Bhalla, Linda C Horianopoulos, Guanggan Hu, Armando Alcázar Magaña, Leonard J Foster, Leandro Buffoni Roque da Silva, Matthias Kretschmer, James W Kronstad",
+      "journal": "Front Fungal Biol",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.17,
+      "animal": 0.33,
+      "molecular_cellular": 0.5,
+      "apt": 0,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": null,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": -0.75,
+      "cited_by_clin": [],
+      "cited_by": [],
+      "references": [],
+      "doi": "10.3389/ffunb.2024.1447588",
+      "last_modified": "09/03/2024, 05:52:48"
     }
   ]
 }

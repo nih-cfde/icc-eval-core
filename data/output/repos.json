@@ -108,9 +108,11 @@
       "2024-08-13T13:38:34Z",
       "2024-08-15T23:49:34Z",
       "2024-08-18T13:51:59Z",
-      "2024-09-04T00:51:35Z"
+      "2024-09-04T00:51:35Z",
+      "2024-09-06T12:36:21Z",
+      "2024-09-11T07:19:10Z"
     ],
-    "watchers": 94,
+    "watchers": 96,
     "forks": [
       "2024-07-08T00:50:35Z",
       "2024-06-19T14:46:23Z",
@@ -288,6 +290,7 @@
     "closedPullRequests": 12,
     "pullRequestTimeOpen": 6707866,
     "commits": [
+      "2024-09-07T23:49:23Z",
       "2023-07-21T03:14:52Z",
       "2023-07-02T16:33:06Z",
       "2023-07-02T04:59:40Z",
@@ -298,32 +301,35 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 6
+        "contributions": 7
       }
     ],
     "languages": [
       {
         "language": "TypeScript",
-        "count": 37377
+        "count": 36417
       },
       {
         "language": "CSS",
-        "count": 7194
+        "count": 7031
       },
       {
         "language": "HTML",
         "count": 1505
+      },
+      {
+        "language": "JavaScript",
+        "count": 1329
       }
     ],
     "created": "2020-06-26T19:43:06Z",
-    "modified": "2023-07-21T03:15:33Z",
+    "modified": "2024-09-07T23:49:46Z",
     "license": "MIT License",
     "readme": true,
     "contributing": false,
     "dependencies": {
-      "package.json": 31,
-      "yarn.lock": 446,
-      ".github/workflows/deploy.yaml": 2
+      "package.json": 35,
+      ".github/workflows/deploy.yaml": 3
     }
   },
   {
@@ -345,9 +351,11 @@
         "state": "open",
         "stateReason": null,
         "created": "2024-08-21T11:46:35Z",
-        "modified": "2024-08-21T12:27:38Z",
+        "modified": "2024-09-11T15:04:37Z",
         "closed": null,
-        "labels": []
+        "labels": [
+          "enhancement"
+        ]
       },
       {
         "state": "open",
@@ -454,8 +462,24 @@
     ],
     "openIssues": 4,
     "closedIssues": 9,
-    "issueTimeOpen": 3023877,
+    "issueTimeOpen": 3176625,
     "pullRequests": [
+      {
+        "state": "closed",
+        "stateReason": "",
+        "created": "2024-09-10T20:21:06Z",
+        "modified": "2024-09-11T15:02:46Z",
+        "closed": "2024-09-11T15:02:43Z",
+        "labels": []
+      },
+      {
+        "state": "closed",
+        "stateReason": "",
+        "created": "2024-09-05T22:45:19Z",
+        "modified": "2024-09-06T17:33:07Z",
+        "closed": "2024-09-06T17:33:05Z",
+        "labels": []
+      },
       {
         "state": "closed",
         "stateReason": "",
@@ -530,9 +554,13 @@
       }
     ],
     "openPullRequests": 0,
-    "closedPullRequests": 9,
-    "pullRequestTimeOpen": 680744,
+    "closedPullRequests": 11,
+    "pullRequestTimeOpen": 569241,
     "commits": [
+      "2024-09-11T15:03:47Z",
+      "2024-09-11T15:02:43Z",
+      "2024-09-10T19:41:55Z",
+      "2024-09-06T17:33:05Z",
       "2024-09-03T17:12:09Z",
       "2024-09-03T15:26:12Z",
       "2024-08-17T21:00:20Z",
@@ -547,7 +575,7 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 9
+        "contributions": 13
       },
       {
         "name": "cgreene",
@@ -557,39 +585,39 @@
     "languages": [
       {
         "language": "TypeScript",
-        "count": 77778
+        "count": 80583
       },
       {
         "language": "Vue",
-        "count": 40068
+        "count": 44127
       },
       {
         "language": "CSS",
-        "count": 5262
+        "count": 5391
       },
       {
         "language": "JavaScript",
         "count": 2426
       },
       {
-        "language": "Shell",
-        "count": 1102
-      },
-      {
         "language": "HTML",
         "count": 1072
+      },
+      {
+        "language": "Shell",
+        "count": 601
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-09-05T06:32:24Z",
+    "modified": "2024-09-11T15:03:47Z",
     "license": "",
     "readme": true,
     "contributing": false,
     "dependencies": {
       "app/package.json": 30,
-      "data/package.json": 28,
-      ".github/workflows/pipeline.yaml": 5,
-      ".github/workflows/test.yaml": 3
+      "data/package.json": 29,
+      ".github/workflows/pipeline.yaml": 7,
+      ".github/workflows/test.yaml": 4
     }
   }
 ]

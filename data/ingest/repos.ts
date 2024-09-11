@@ -24,9 +24,6 @@ export const getRepos = async (coreProjects: string[]) => {
 
   const repoResults = await queryMulti(
     coreProjects.map((coreProject) => async () => {
-      /** TEMPORARY, to not query repos that aren't tagged yet */
-      if (coreProject.toLowerCase() !== "u54od036472") throw Error("Skip");
-
       /**
        * search for all repos tagged with core project number. gets base,
        * top-level details.
