@@ -23,7 +23,7 @@ Current maintainers and team members:
 
 - [Casey Greene](mailto:casey.s.greene@cuanschutz.edu) - Evaluation Core Lead
 - [Sean Davis](mailto:sean.2.davis@cuanschutz.edu) - Evaluation Core Lead
-- [mailto:vincent.rubinetti@cuanschutz.edu](Vincent Rubinetti), [@vincerubinetti](https://github.com/vincerubinetti) - Software developer
+- [Vincent Rubinetti](mailto:vincent.rubinetti@cuanschutz.edu) ([@vincerubinetti](https://github.com/vincerubinetti)) - Software developer
 
 ## Submit your project
 
