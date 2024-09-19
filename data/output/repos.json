@@ -347,6 +347,7 @@
     ],
     "watchers": 1,
     "forks": [
+      "2024-09-19T19:58:28Z",
       "2024-07-09T19:06:04Z"
     ],
     "issues": [
@@ -465,7 +466,7 @@
     ],
     "openIssues": 4,
     "closedIssues": 9,
-    "issueTimeOpen": 3392441,
+    "issueTimeOpen": 3394596,
     "pullRequests": [
       {
         "state": "closed",
@@ -560,6 +561,10 @@
     "closedPullRequests": 11,
     "pullRequestTimeOpen": 569241,
     "commits": [
+      "2024-09-19T20:44:16Z",
+      "2024-09-19T20:43:36Z",
+      "2024-09-19T20:42:06Z",
+      "2024-09-19T18:53:01Z",
       "2024-09-11T16:04:51Z",
       "2024-09-11T15:03:47Z",
       "2024-09-11T15:02:43Z",
@@ -579,7 +584,7 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 14
+        "contributions": 18
       },
       {
         "name": "cgreene",
@@ -589,11 +594,11 @@
     "languages": [
       {
         "language": "TypeScript",
-        "count": 80440
+        "count": 80429
       },
       {
         "language": "Vue",
-        "count": 44127
+        "count": 44240
       },
       {
         "language": "CSS",
@@ -609,11 +614,11 @@
       },
       {
         "language": "Shell",
-        "count": 693
+        "count": 749
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-09-11T16:04:57Z",
+    "modified": "2024-09-19T20:44:16Z",
     "license": "",
     "readme": true,
     "contributing": false,
