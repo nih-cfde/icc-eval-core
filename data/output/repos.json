@@ -110,10 +110,12 @@
       "2024-08-18T13:51:59Z",
       "2024-09-04T00:51:35Z",
       "2024-09-06T12:36:21Z",
-      "2024-09-11T07:19:10Z"
+      "2024-09-11T07:19:10Z",
+      "2024-09-14T19:57:49Z"
     ],
-    "watchers": 96,
+    "watchers": 97,
     "forks": [
+      "2024-09-16T19:14:10Z",
       "2024-07-08T00:50:35Z",
       "2024-06-19T14:46:23Z",
       "2024-06-17T10:47:32Z",
@@ -290,6 +292,7 @@
     "closedPullRequests": 12,
     "pullRequestTimeOpen": 6707866,
     "commits": [
+      "2024-09-18T21:07:01Z",
       "2024-09-07T23:49:23Z",
       "2023-07-21T03:14:52Z",
       "2023-07-02T16:33:06Z",
@@ -301,7 +304,7 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 7
+        "contributions": 8
       }
     ],
     "languages": [
@@ -311,7 +314,7 @@
       },
       {
         "language": "CSS",
-        "count": 7031
+        "count": 7061
       },
       {
         "language": "HTML",
@@ -323,7 +326,7 @@
       }
     ],
     "created": "2020-06-26T19:43:06Z",
-    "modified": "2024-09-07T23:49:46Z",
+    "modified": "2024-09-18T21:07:28Z",
     "license": "MIT License",
     "readme": true,
     "contributing": false,
@@ -462,7 +465,7 @@
     ],
     "openIssues": 4,
     "closedIssues": 9,
-    "issueTimeOpen": 3176625,
+    "issueTimeOpen": 3392441,
     "pullRequests": [
       {
         "state": "closed",
@@ -557,6 +560,7 @@
     "closedPullRequests": 11,
     "pullRequestTimeOpen": 569241,
     "commits": [
+      "2024-09-11T16:04:51Z",
       "2024-09-11T15:03:47Z",
       "2024-09-11T15:02:43Z",
       "2024-09-10T19:41:55Z",
@@ -575,7 +579,7 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 13
+        "contributions": 14
       },
       {
         "name": "cgreene",
@@ -585,7 +589,7 @@
     "languages": [
       {
         "language": "TypeScript",
-        "count": 80583
+        "count": 80440
       },
       {
         "language": "Vue",
@@ -605,11 +609,11 @@
       },
       {
         "language": "Shell",
-        "count": 601
+        "count": 693
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-09-11T15:03:47Z",
+    "modified": "2024-09-11T16:04:57Z",
     "license": "",
     "readme": true,
     "contributing": false,

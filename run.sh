@@ -7,7 +7,11 @@ regex="^.*--([A-Za-z-]+) ?(.*)$"
 
 # run script in /data and /app
 if [[ $* =~ $regex ]]; then
-  script="\"${BASH_REMATCH[1]}\":"
+  script=${BASH_REMATCH[1]}
+  params=${BASE_REMATCH[2]}
+
+  echo "Running script: $script"
+  echo "With params: $params"
 
   if [[ $script == "install" ]]; then
     # install packages with bun
@@ -15,11 +19,11 @@ if [[ $* =~ $regex ]]; then
     bun install --cwd app
   else
     # run script with node
-    if grep -q $script "data/package.json"; then
-      $data ${BASH_REMATCH[1]} -- ${BASH_REMATCH[2]}
+    if grep -q "\"$script\":" "data/package.json"; then
+      $data $script -- $params
     fi
-    if grep -q $script "app/package.json"; then
-      $app ${BASH_REMATCH[1]} -- ${BASH_REMATCH[2]}
+    if grep -q "\"$script\":" "app/package.json"; then
+      $app $script -- $params
     fi
   fi
 
@@ -31,3 +35,4 @@ else
     $app dev
   fi
 fi
+
