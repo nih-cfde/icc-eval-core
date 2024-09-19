@@ -22,17 +22,18 @@ export const getRepos = async (coreProjects: string[]) => {
 
   log(`Getting repos for ${count(coreProjects)} core projects`);
 
+  /**
+   * search for all repos tagged with core project number. gets base, top-level
+   * details.
+   */
   const repoResults = await queryMulti(
-    coreProjects.map((coreProject) => async () => {
-      /**
-       * search for all repos tagged with core project number. gets base,
-       * top-level details.
-       */
-      return (await searchRepos(coreProject)).map((repo) => ({
-        ...repo,
-        coreProject,
-      }));
-    }),
+    coreProjects.map(
+      (coreProject) => async () =>
+        (await searchRepos(coreProject)).map((repo) => ({
+          ...repo,
+          coreProject,
+        })),
+    ),
     "github-repos.json",
   );
 

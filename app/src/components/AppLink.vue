@@ -1,11 +1,5 @@
 <template>
-  <component
-    :is="external ? 'a' : 'RouterLink'"
-    class="link"
-    :to="external ? undefined : to"
-    :href="to"
-    :target="(external && newTab !== false) || newTab === true ? '_blank' : ''"
-  >
+  <component :is="component" :[toAttr]="to" :target="target" class="link">
     <slot />
     <External v-if="external" />
   </component>
@@ -18,7 +12,7 @@ import External from "@/assets/external.svg";
 type Props = {
   /** internal route or external url to link to */
   to: string;
-  /** force external link or not (whether to use <a> or <RouterLink>) */
+  /** force external link or not */
   external?: boolean;
   /** force new tab or not */
   newTab?: boolean;
@@ -30,13 +24,25 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 type Slots = {
-  default: () => unknown;
+  default?: () => unknown;
 };
 
 defineSlots<Slots>();
 
 /** is link to internal route or external url */
-const external = computed(() => props.external ?? props.to.startsWith("http"));
+const external = computed(
+  () =>
+    props.external ??
+    ["http:", "mailto:"].some((prefix) => props.to.startsWith(prefix)),
+);
+
+const component = computed(() => (external.value ? "a" : "router-link"));
+
+const toAttr = computed(() => (external.value ? "href" : "to"));
+
+const target = computed(() =>
+  (props.newTab ?? external.value) ? "_blank" : "",
+);
 </script>
 
 <style scoped>
