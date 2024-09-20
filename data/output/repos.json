@@ -111,9 +111,10 @@
       "2024-09-04T00:51:35Z",
       "2024-09-06T12:36:21Z",
       "2024-09-11T07:19:10Z",
-      "2024-09-14T19:57:49Z"
+      "2024-09-14T19:57:49Z",
+      "2024-09-19T21:41:15Z"
     ],
-    "watchers": 97,
+    "watchers": 98,
     "forks": [
       "2024-09-16T19:14:10Z",
       "2024-07-08T00:50:35Z",
@@ -132,6 +133,14 @@
       "2021-10-18T01:14:08Z"
     ],
     "issues": [
+      {
+        "state": "open",
+        "stateReason": null,
+        "created": "2024-09-19T21:45:23Z",
+        "modified": "2024-09-19T22:22:24Z",
+        "closed": null,
+        "labels": []
+      },
       {
         "state": "closed",
         "stateReason": "not_planned",
@@ -165,9 +174,9 @@
         "labels": []
       }
     ],
-    "openIssues": 0,
+    "openIssues": 1,
     "closedIssues": 4,
-    "issueTimeOpen": 16264408,
+    "issueTimeOpen": 13013398,
     "pullRequests": [
       {
         "state": "closed",
@@ -347,6 +356,7 @@
     ],
     "watchers": 1,
     "forks": [
+      "2024-09-19T19:58:28Z",
       "2024-07-09T19:06:04Z"
     ],
     "issues": [
@@ -465,7 +475,7 @@
     ],
     "openIssues": 4,
     "closedIssues": 9,
-    "issueTimeOpen": 3392441,
+    "issueTimeOpen": 3398518,
     "pullRequests": [
       {
         "state": "closed",
@@ -560,6 +570,11 @@
     "closedPullRequests": 11,
     "pullRequestTimeOpen": 569241,
     "commits": [
+      "2024-09-19T20:49:46Z",
+      "2024-09-19T20:44:16Z",
+      "2024-09-19T20:43:36Z",
+      "2024-09-19T20:42:06Z",
+      "2024-09-19T18:53:01Z",
       "2024-09-11T16:04:51Z",
       "2024-09-11T15:03:47Z",
       "2024-09-11T15:02:43Z",
@@ -579,7 +594,7 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 14
+        "contributions": 19
       },
       {
         "name": "cgreene",
@@ -589,11 +604,11 @@
     "languages": [
       {
         "language": "TypeScript",
-        "count": 80440
+        "count": 80429
       },
       {
         "language": "Vue",
-        "count": 44127
+        "count": 44240
       },
       {
         "language": "CSS",
@@ -609,11 +624,11 @@
       },
       {
         "language": "Shell",
-        "count": 693
+        "count": 749
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-09-11T16:04:57Z",
+    "modified": "2024-09-19T20:49:48Z",
     "license": "",
     "readme": true,
     "contributing": false,

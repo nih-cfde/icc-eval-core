@@ -1,5 +1,8 @@
 # CFDE ICC Evaluation Core
 
+[![Run pipeline](https://github.com/nih-cfde/icc-eval-core/actions/workflows/pipeline.yaml/badge.svg)](https://github.com/nih-cfde/icc-eval-core/actions/workflows/pipeline.yaml)
+[![Run tests](https://github.com/nih-cfde/icc-eval-core/actions/workflows/test.yaml/badge.svg)](https://github.com/nih-cfde/icc-eval-core/actions/workflows/test.yaml)
+
 ## Overview
 
 The [Common Fund Data Ecosystem (CFDE)](https://commonfund.nih.gov/dataecosystem) is an effort to bring together knowledge across [Common Fund](https://commonfund.nih.gov/) programs into a cohesive resource.
