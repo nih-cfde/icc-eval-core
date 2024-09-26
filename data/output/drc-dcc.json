@@ -17998,14 +17998,6 @@
     ]
   },
   {
-    "url": "https://sparc.science/tools-and-resources/tools",
-    "dir": "https://sparc.science/tools-and-resourcestools",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-15T22:53:26.888Z",
-    "files": []
-  },
-  {
     "url": "https://entity.api.hubmapconsortium.org/",
     "dir": "https://entity.api.hubmapconsortium.org",
     "name": "",
@@ -21962,6 +21954,14 @@
         "date": "2024-06-06T01:27:36.000Z"
       }
     ]
+  },
+  {
+    "url": "https://sparc.science/tools-and-resources/tools",
+    "dir": "https://sparc.science/tools-and-resourcestools",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-15T22:53:26.888Z",
+    "files": []
   },
   {
     "url": "https://search.api.hubmapconsortium.org/v3/",
@@ -102535,6 +102535,1429 @@
     ]
   },
   {
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17/c2m2_2024SEP16_submit.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+    "name": "c2m2_2024SEP16_submit",
+    "ext": "zip",
+    "date": "2024-09-17T06:18:42.117Z",
+    "files": [
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "",
+          "ext": ""
+        },
+        "size": 0,
+        "date": "2024-09-17T06:06:43.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "dcc",
+          "ext": "tsv"
+        },
+        "size": 845,
+        "date": "2023-03-27T17:52:14.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._dcc",
+          "ext": "tsv"
+        },
+        "size": 323,
+        "date": "2023-03-27T17:52:14.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "id_namespace",
+          "ext": "tsv"
+        },
+        "size": 730,
+        "date": "2023-03-26T22:17:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._id_namespace",
+          "ext": "tsv"
+        },
+        "size": 233,
+        "date": "2023-03-26T22:17:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "disease",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2023-03-27T17:52:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._disease",
+          "ext": "tsv"
+        },
+        "size": 323,
+        "date": "2023-03-27T17:52:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "data_type",
+          "ext": "tsv"
+        },
+        "size": 1014,
+        "date": "2023-03-27T19:35:20.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._data_type",
+          "ext": "tsv"
+        },
+        "size": 580,
+        "date": "2023-03-27T19:35:20.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "C2M2_datapackage",
+          "ext": "json"
+        },
+        "size": 118977,
+        "date": "2023-03-27T17:48:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._C2M2_datapackage",
+          "ext": "json"
+        },
+        "size": 640,
+        "date": "2023-03-27T17:48:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_disease",
+          "ext": "tsv"
+        },
+        "size": 51,
+        "date": "2023-03-27T17:52:47.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_disease",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:52:47.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "file_in_collection",
+          "ext": "tsv"
+        },
+        "size": 13219740,
+        "date": "2024-09-17T06:02:25.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._file_in_collection",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T06:02:25.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "subject_role_taxonomy",
+          "ext": "tsv"
+        },
+        "size": 391747,
+        "date": "2024-09-17T05:12:07.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._subject_role_taxonomy",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T05:12:07.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "biosample_in_collection",
+          "ext": "tsv"
+        },
+        "size": 834285,
+        "date": "2024-09-17T04:40:33.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._biosample_in_collection",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T04:40:33.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "subject_phenotype",
+          "ext": "tsv"
+        },
+        "size": 64,
+        "date": "2023-03-27T17:50:41.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._subject_phenotype",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:50:41.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "phenotype_disease",
+          "ext": "tsv"
+        },
+        "size": 17,
+        "date": "2023-03-27T17:51:49.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._phenotype_disease",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:51:49.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_compound",
+          "ext": "tsv"
+        },
+        "size": 52,
+        "date": "2023-03-27T17:52:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_compound",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:52:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "protein_gene",
+          "ext": "tsv"
+        },
+        "size": 12,
+        "date": "2023-03-27T17:50:58.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._protein_gene",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:50:58.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "phenotype_gene",
+          "ext": "tsv"
+        },
+        "size": 14,
+        "date": "2023-03-27T17:51:49.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._phenotype_gene",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:51:49.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "phenotype",
+          "ext": "tsv"
+        },
+        "size": 28,
+        "date": "2023-03-27T17:51:49.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._phenotype",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:51:49.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "subject_disease",
+          "ext": "tsv"
+        },
+        "size": 62,
+        "date": "2023-03-27T17:50:48.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._subject_disease",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:50:48.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_phenotype",
+          "ext": "tsv"
+        },
+        "size": 53,
+        "date": "2023-03-27T17:52:59.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_phenotype",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:52:59.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "protein",
+          "ext": "tsv"
+        },
+        "size": 37,
+        "date": "2023-03-27T17:51:03.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._protein",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:51:03.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "ncbi_taxonomy",
+          "ext": "tsv"
+        },
+        "size": 1008,
+        "date": "2023-09-18T08:16:05.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._ncbi_taxonomy",
+          "ext": "tsv"
+        },
+        "size": 580,
+        "date": "2023-09-18T08:16:05.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_protein",
+          "ext": "tsv"
+        },
+        "size": 51,
+        "date": "2023-03-27T17:53:05.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_protein",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:53:05.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "analysis_type",
+          "ext": "tsv"
+        },
+        "size": 28,
+        "date": "2023-03-27T17:49:27.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._analysis_type",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:49:27.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "file_describes_biosample",
+          "ext": "tsv"
+        },
+        "size": 14611251,
+        "date": "2024-09-17T06:01:25.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._file_describes_biosample",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T06:01:25.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "file",
+          "ext": "tsv"
+        },
+        "size": 43924973,
+        "date": "2024-09-17T05:56:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._file",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T05:56:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_gene",
+          "ext": "tsv"
+        },
+        "size": 48,
+        "date": "2023-03-27T17:52:51.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_gene",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:52:51.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "biosample_from_subject",
+          "ext": "tsv"
+        },
+        "size": 868797,
+        "date": "2024-09-17T04:39:25.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._biosample_from_subject",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T04:39:25.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "file_describes_collection",
+          "ext": "tsv"
+        },
+        "size": 75,
+        "date": "2023-03-27T17:54:35.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._file_describes_collection",
+          "ext": "tsv"
+        },
+        "size": 233,
+        "date": "2023-03-27T17:54:35.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "subject_race",
+          "ext": "tsv"
+        },
+        "size": 43,
+        "date": "2023-03-27T17:50:29.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._subject_race",
+          "ext": "tsv"
+        },
+        "size": 358,
+        "date": "2023-03-27T17:50:29.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_in_collection",
+          "ext": "tsv"
+        },
+        "size": 120,
+        "date": "2023-03-26T22:17:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_in_collection",
+          "ext": "tsv"
+        },
+        "size": 233,
+        "date": "2023-03-26T22:17:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_defined_by_project",
+          "ext": "tsv"
+        },
+        "size": 25389,
+        "date": "2024-09-17T04:46:57.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_defined_by_project",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T04:46:57.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_substance",
+          "ext": "tsv"
+        },
+        "size": 53,
+        "date": "2023-03-27T17:53:12.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_substance",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:53:12.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "biosample_substance",
+          "ext": "tsv"
+        },
+        "size": 52,
+        "date": "2023-03-27T17:53:34.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._biosample_substance",
+          "ext": "tsv"
+        },
+        "size": 661,
+        "date": "2023-03-27T17:53:34.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "project",
+          "ext": "tsv"
+        },
+        "size": 129115,
+        "date": "2024-09-17T05:08:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._project",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T05:08:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "anatomy",
+          "ext": "tsv"
+        },
+        "size": 9971,
+        "date": "2024-06-15T21:58:24.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._anatomy",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-06-15T21:58:24.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "assay_type",
+          "ext": "tsv"
+        },
+        "size": 1753,
+        "date": "2023-03-27T19:51:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._assay_type",
+          "ext": "tsv"
+        },
+        "size": 580,
+        "date": "2023-03-27T19:51:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "biosample_disease",
+          "ext": "tsv"
+        },
+        "size": 66,
+        "date": "2023-03-27T17:53:50.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._biosample_disease",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:53:50.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_anatomy",
+          "ext": "tsv"
+        },
+        "size": 51,
+        "date": "2023-03-27T17:54:56.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_anatomy",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:54:56.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "gene",
+          "ext": "tsv"
+        },
+        "size": 38,
+        "date": "2023-03-27T17:51:56.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._gene",
+          "ext": "tsv"
+        },
+        "size": 323,
+        "date": "2023-03-27T17:51:56.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "biosample",
+          "ext": "tsv"
+        },
+        "size": 721162,
+        "date": "2024-09-17T04:45:52.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._biosample",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T04:45:52.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "file_describes_subject",
+          "ext": "tsv"
+        },
+        "size": 13684540,
+        "date": "2024-09-17T06:00:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._file_describes_subject",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T06:00:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "subject",
+          "ext": "tsv"
+        },
+        "size": 481079,
+        "date": "2024-09-17T05:13:26.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._subject",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T05:13:26.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "file_format",
+          "ext": "tsv"
+        },
+        "size": 2847,
+        "date": "2023-03-27T19:45:13.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._file_format",
+          "ext": "tsv"
+        },
+        "size": 580,
+        "date": "2023-03-27T19:45:13.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "biosample_gene",
+          "ext": "tsv"
+        },
+        "size": 47,
+        "date": "2023-03-27T17:53:41.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._biosample_gene",
+          "ext": "tsv"
+        },
+        "size": 323,
+        "date": "2023-03-27T17:53:41.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "primary_dcc_contact",
+          "ext": "tsv"
+        },
+        "size": 816,
+        "date": "2023-03-27T17:51:11.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._primary_dcc_contact",
+          "ext": "tsv"
+        },
+        "size": 233,
+        "date": "2023-03-27T17:51:11.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "subject_substance",
+          "ext": "tsv"
+        },
+        "size": 48,
+        "date": "2023-03-27T17:50:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._subject_substance",
+          "ext": "tsv"
+        },
+        "size": 323,
+        "date": "2023-03-27T17:50:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection",
+          "ext": "tsv"
+        },
+        "size": 97519,
+        "date": "2024-09-17T04:48:14.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T04:48:14.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "compound",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2023-03-27T17:53:27.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._compound",
+          "ext": "tsv"
+        },
+        "size": 323,
+        "date": "2023-03-27T17:53:27.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "subject_in_collection",
+          "ext": "tsv"
+        },
+        "size": 502879,
+        "date": "2024-09-17T05:10:11.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._subject_in_collection",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T05:10:11.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "project_in_project",
+          "ext": "tsv"
+        },
+        "size": 2082,
+        "date": "2024-09-17T04:55:00.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._project_in_project",
+          "ext": "tsv"
+        },
+        "size": 612,
+        "date": "2024-09-17T04:55:00.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "collection_taxonomy",
+          "ext": "tsv"
+        },
+        "size": 49,
+        "date": "2023-03-27T17:53:20.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._collection_taxonomy",
+          "ext": "tsv"
+        },
+        "size": 480,
+        "date": "2023-03-27T17:53:20.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2_2024SEP16_submit",
+          "name": "substance",
+          "ext": "tsv"
+        },
+        "size": 38,
+        "date": "2023-03-27T17:50:16.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+          "name": "c2m2_2024SEP16_submit",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "__MACOSX/c2m2_2024SEP16_submit",
+          "name": "._substance",
+          "ext": "tsv"
+        },
+        "size": 556,
+        "date": "2023-03-27T17:50:16.000Z"
+      }
+    ]
+  },
+  {
     "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-09-11/MW_submission_packet_20240906.zip",
     "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-09-11",
     "name": "MW_submission_packet_20240906",
@@ -106169,1427 +107592,1757 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17/c2m2_2024SEP16_submit.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-    "name": "c2m2_2024SEP16_submit",
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23/RBP_Unique_Loci.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+    "name": "RBP_Unique_Loci",
     "ext": "zip",
-    "date": "2024-09-17T06:18:42.117Z",
+    "date": "2024-09-23T16:02:20.328Z",
     "files": [
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "",
-          "ext": ""
+          "dir": "unionUniq",
+          "name": "AATF_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 0,
-        "date": "2024-09-17T06:06:43.000Z"
+        "size": 372,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "dcc",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "AGGF1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 845,
-        "date": "2023-03-27T17:52:14.000Z"
+        "size": 2681,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._dcc",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "AKAP1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 323,
-        "date": "2023-03-27T17:52:14.000Z"
+        "size": 2613,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "id_namespace",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "AKAP8L_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 730,
-        "date": "2023-03-26T22:17:23.000Z"
+        "size": 523,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._id_namespace",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "APOBEC3C_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 233,
-        "date": "2023-03-26T22:17:23.000Z"
+        "size": 213,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "AQR_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 29,
-        "date": "2023-03-27T17:52:09.000Z"
+        "size": 19419,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "BCCIP_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 323,
-        "date": "2023-03-27T17:52:09.000Z"
+        "size": 167,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "data_type",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "BCLAF1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 1014,
-        "date": "2023-03-27T19:35:20.000Z"
+        "size": 25664,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._data_type",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "BUD13_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 580,
-        "date": "2023-03-27T19:35:20.000Z"
+        "size": 5092,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "C2M2_datapackage",
-          "ext": "json"
+          "dir": "unionUniq",
+          "name": "CDC40_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 118977,
-        "date": "2023-03-27T17:48:46.000Z"
+        "size": 156,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._C2M2_datapackage",
-          "ext": "json"
+          "dir": "unionUniq",
+          "name": "CPSF6_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 640,
-        "date": "2023-03-27T17:48:46.000Z"
+        "size": 690,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "CSTF2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 51,
-        "date": "2023-03-27T17:52:47.000Z"
+        "size": 3112,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "CSTF2T_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:52:47.000Z"
+        "size": 19018,
+        "date": "2024-09-23T15:53:26.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "file_in_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DDX24_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 13219740,
-        "date": "2024-09-17T06:02:25.000Z"
+        "size": 4534,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._file_in_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DDX3X_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T06:02:25.000Z"
+        "size": 16822,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "subject_role_taxonomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DDX52_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 391747,
-        "date": "2024-09-17T05:12:07.000Z"
+        "size": 313,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._subject_role_taxonomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DDX55_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T05:12:07.000Z"
+        "size": 698,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "biosample_in_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DDX59_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 834285,
-        "date": "2024-09-17T04:40:33.000Z"
+        "size": 1386,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._biosample_in_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DDX6_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T04:40:33.000Z"
+        "size": 473,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "subject_phenotype",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DGCR8_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 64,
-        "date": "2023-03-27T17:50:41.000Z"
+        "size": 1929,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._subject_phenotype",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DHX30_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:50:41.000Z"
+        "size": 497,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "phenotype_disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DKC1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 17,
-        "date": "2023-03-27T17:51:49.000Z"
+        "size": 928,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._phenotype_disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "DROSHA_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:51:49.000Z"
+        "size": 1990,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_compound",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "EFTUD2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 52,
-        "date": "2023-03-27T17:52:39.000Z"
+        "size": 6812,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_compound",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "EIF3D_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:52:39.000Z"
+        "size": 264,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "protein_gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "EIF3G_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 12,
-        "date": "2023-03-27T17:50:58.000Z"
+        "size": 257,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._protein_gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "EIF3H_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:50:58.000Z"
+        "size": 1548,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "phenotype_gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "EIF4G2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 14,
-        "date": "2023-03-27T17:51:49.000Z"
+        "size": 3312,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._phenotype_gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "EWSR1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:51:49.000Z"
+        "size": 3938,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "phenotype",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "EXOSC5_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 28,
-        "date": "2023-03-27T17:51:49.000Z"
+        "size": 14887,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._phenotype",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FAM120A_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:51:49.000Z"
+        "size": 5206,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "subject_disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FASTKD2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 62,
-        "date": "2023-03-27T17:50:48.000Z"
+        "size": 39,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._subject_disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FKBP4_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:50:48.000Z"
+        "size": 223,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_phenotype",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FMR1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 53,
-        "date": "2023-03-27T17:52:59.000Z"
+        "size": 1348,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_phenotype",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FTO_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:52:59.000Z"
+        "size": 559,
+        "date": "2024-09-23T15:53:26.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "protein",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FUBP3_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 37,
-        "date": "2023-03-27T17:51:03.000Z"
+        "size": 2375,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._protein",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FUS_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:51:03.000Z"
+        "size": 2849,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "ncbi_taxonomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FXR1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 1008,
-        "date": "2023-09-18T08:16:05.000Z"
+        "size": 814,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._ncbi_taxonomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "FXR2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 580,
-        "date": "2023-09-18T08:16:05.000Z"
+        "size": 3561,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_protein",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "G3BP1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 51,
-        "date": "2023-03-27T17:53:05.000Z"
+        "size": 3096,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_protein",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "GEMIN5_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:53:05.000Z"
+        "size": 1647,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "analysis_type",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "GPKOW_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 28,
-        "date": "2023-03-27T17:49:27.000Z"
+        "size": 613,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._analysis_type",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "GRSF1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:49:27.000Z"
+        "size": 813,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "file_describes_biosample",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "GRWD1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 14611251,
-        "date": "2024-09-17T06:01:25.000Z"
+        "size": 17053,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._file_describes_biosample",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "GTF2F1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T06:01:25.000Z"
+        "size": 1579,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "file",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "HLTF_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 43924973,
-        "date": "2024-09-17T05:56:46.000Z"
+        "size": 2402,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._file",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "HNRNPA1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T05:56:46.000Z"
+        "size": 157,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "HNRNPC_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 48,
-        "date": "2023-03-27T17:52:51.000Z"
+        "size": 2908,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "HNRNPK_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:52:51.000Z"
+        "size": 6049,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "biosample_from_subject",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "HNRNPL_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 868797,
-        "date": "2024-09-17T04:39:25.000Z"
+        "size": 11891,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._biosample_from_subject",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "HNRNPM_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T04:39:25.000Z"
+        "size": 20542,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "file_describes_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "HNRNPUL1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 75,
-        "date": "2023-03-27T17:54:35.000Z"
+        "size": 131,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._file_describes_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "HNRNPU_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 233,
-        "date": "2023-03-27T17:54:35.000Z"
+        "size": 341,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "subject_race",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "IGF2BP1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 43,
-        "date": "2023-03-27T17:50:29.000Z"
+        "size": 5781,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._subject_race",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "IGF2BP2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 358,
-        "date": "2023-03-27T17:50:29.000Z"
+        "size": 1709,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_in_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "IGF2BP3_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 120,
-        "date": "2023-03-26T22:17:23.000Z"
+        "size": 993,
+        "date": "2024-09-23T15:53:26.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_in_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "ILF3_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 233,
-        "date": "2023-03-26T22:17:23.000Z"
+        "size": 5503,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_defined_by_project",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "KHDRBS1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 25389,
-        "date": "2024-09-17T04:46:57.000Z"
+        "size": 1208,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_defined_by_project",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "KHSRP_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T04:46:57.000Z"
+        "size": 30561,
+        "date": "2024-09-23T15:53:26.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_substance",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "LARP4_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 53,
-        "date": "2023-03-27T17:53:12.000Z"
+        "size": 1876,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_substance",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "LARP7_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:53:12.000Z"
+        "size": 513,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "biosample_substance",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "LIN28B_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 52,
-        "date": "2023-03-27T17:53:34.000Z"
+        "size": 6831,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._biosample_substance",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "LSM11_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 661,
-        "date": "2023-03-27T17:53:34.000Z"
+        "size": 1429,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "project",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "MATR3_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 129115,
-        "date": "2024-09-17T05:08:45.000Z"
+        "size": 11330,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._project",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "METAP2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T05:08:45.000Z"
+        "size": 1087,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "anatomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "MTPAP_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 9971,
-        "date": "2024-06-15T21:58:24.000Z"
+        "size": 394,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._anatomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "NCBP2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-06-15T21:58:24.000Z"
+        "size": 4109,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "assay_type",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "NIPBL_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 1753,
-        "date": "2023-03-27T19:51:46.000Z"
+        "size": 86,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._assay_type",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "NKRF_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 580,
-        "date": "2023-03-27T19:51:46.000Z"
+        "size": 2314,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "biosample_disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "NOLC1_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 855,
+        "date": "2024-09-23T15:53:27.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "NONO_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 7109,
+        "date": "2024-09-23T15:53:30.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "NSUN2_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 178,
+        "date": "2024-09-23T15:53:26.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "PABPC4_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 2544,
+        "date": "2024-09-23T15:53:31.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "PABPN1_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 2758,
+        "date": "2024-09-23T15:53:31.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "PCBP1_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 1250,
+        "date": "2024-09-23T15:53:30.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "PCBP2_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 4643,
+        "date": "2024-09-23T15:53:31.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "PHF6_loci_uniq",
+          "ext": "RBPmt"
         },
         "size": 66,
-        "date": "2023-03-27T17:53:50.000Z"
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._biosample_disease",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "PPIG_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:53:50.000Z"
+        "size": 14030,
+        "date": "2024-09-23T15:53:26.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_anatomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "PPIL4_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 51,
-        "date": "2023-03-27T17:54:56.000Z"
+        "size": 505,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_anatomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "PRPF4_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:54:56.000Z"
+        "size": 5203,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "PRPF8_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 38,
-        "date": "2023-03-27T17:51:56.000Z"
+        "size": 23080,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "PTBP1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 323,
-        "date": "2023-03-27T17:51:56.000Z"
+        "size": 13244,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "biosample",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "PUM1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 721162,
-        "date": "2024-09-17T04:45:52.000Z"
+        "size": 1096,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._biosample",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "PUM2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T04:45:52.000Z"
+        "size": 6133,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "file_describes_subject",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "QKI_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 13684540,
-        "date": "2024-09-17T06:00:17.000Z"
+        "size": 15837,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._file_describes_subject",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "RBFOX2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T06:00:17.000Z"
+        "size": 7110,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "subject",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "RBM15_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 481079,
-        "date": "2024-09-17T05:13:26.000Z"
+        "size": 5149,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._subject",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "RBM22_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T05:13:26.000Z"
+        "size": 1218,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "file_format",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "RBM5_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 2847,
-        "date": "2023-03-27T19:45:13.000Z"
+        "size": 214,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._file_format",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "RPS3_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 580,
-        "date": "2023-03-27T19:45:13.000Z"
+        "size": 4675,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "biosample_gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SAFB_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 47,
-        "date": "2023-03-27T17:53:41.000Z"
+        "size": 134,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._biosample_gene",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SDAD1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 323,
-        "date": "2023-03-27T17:53:41.000Z"
+        "size": 430,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "primary_dcc_contact",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SF3A3_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 816,
-        "date": "2023-03-27T17:51:11.000Z"
+        "size": 1453,
+        "date": "2024-09-23T15:53:28.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._primary_dcc_contact",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SF3B4_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 233,
-        "date": "2023-03-27T17:51:11.000Z"
+        "size": 11269,
+        "date": "2024-09-23T15:53:29.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "subject_substance",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SFPQ_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 48,
-        "date": "2023-03-27T17:50:21.000Z"
+        "size": 1608,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._subject_substance",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SLBP_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 323,
-        "date": "2023-03-27T17:50:21.000Z"
+        "size": 249,
+        "date": "2024-09-23T15:53:26.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SLTM_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 97519,
-        "date": "2024-09-17T04:48:14.000Z"
+        "size": 2689,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SMNDC1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T04:48:14.000Z"
+        "size": 593,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "compound",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SND1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 29,
-        "date": "2023-03-27T17:53:27.000Z"
+        "size": 5078,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._compound",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SRSF1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 323,
-        "date": "2023-03-27T17:53:27.000Z"
+        "size": 1759,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "subject_in_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SRSF9_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 502879,
-        "date": "2024-09-17T05:10:11.000Z"
+        "size": 398,
+        "date": "2024-09-23T15:53:32.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._subject_in_collection",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SSB_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T05:10:11.000Z"
+        "size": 145,
+        "date": "2024-09-23T15:53:27.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "project_in_project",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "STAU2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 2082,
-        "date": "2024-09-17T04:55:00.000Z"
+        "size": 295,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._project_in_project",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SUB1_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 612,
-        "date": "2024-09-17T04:55:00.000Z"
+        "size": 2313,
+        "date": "2024-09-23T15:53:26.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "collection_taxonomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "SUGP2_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 49,
-        "date": "2023-03-27T17:53:20.000Z"
+        "size": 19480,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._collection_taxonomy",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "TAF15_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 480,
-        "date": "2023-03-27T17:53:20.000Z"
+        "size": 493,
+        "date": "2024-09-23T15:53:31.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "c2m2_2024SEP16_submit",
-          "name": "substance",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "TARDBP_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 38,
-        "date": "2023-03-27T17:50:16.000Z"
+        "size": 7596,
+        "date": "2024-09-23T15:53:30.000Z"
       },
       {
         "url": {
-          "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-          "name": "c2m2_2024SEP16_submit",
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
           "ext": "zip"
         },
         "path": {
-          "dir": "__MACOSX/c2m2_2024SEP16_submit",
-          "name": "._substance",
-          "ext": "tsv"
+          "dir": "unionUniq",
+          "name": "TBRG4_loci_uniq",
+          "ext": "RBPmt"
         },
-        "size": 556,
-        "date": "2023-03-27T17:50:16.000Z"
+        "size": 362,
+        "date": "2024-09-23T15:53:28.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "TIA1_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 2441,
+        "date": "2024-09-23T15:53:32.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "TIAL1_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 1421,
+        "date": "2024-09-23T15:53:31.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "TRA2A_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 1410,
+        "date": "2024-09-23T15:53:30.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "TROVE2_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 455,
+        "date": "2024-09-23T15:53:29.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "U2AF1_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 543,
+        "date": "2024-09-23T15:53:31.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "U2AF2_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 12210,
+        "date": "2024-09-23T15:53:30.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "UCHL5_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 5741,
+        "date": "2024-09-23T15:53:31.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "UPF1_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 15483,
+        "date": "2024-09-23T15:53:26.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "XPO5_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 4209,
+        "date": "2024-09-23T15:53:28.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "XRCC6_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 479,
+        "date": "2024-09-23T15:53:27.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "XRN2_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 667,
+        "date": "2024-09-23T15:53:30.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "YBX3_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 7516,
+        "date": "2024-09-23T15:53:31.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "YWHAG_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 334,
+        "date": "2024-09-23T15:53:31.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "ZC3H11A_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 1065,
+        "date": "2024-09-23T15:53:28.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "ZNF622_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 9889,
+        "date": "2024-09-23T15:53:29.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+          "name": "RBP_Unique_Loci",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "unionUniq",
+          "name": "ZNF800_loci_uniq",
+          "ext": "RBPmt"
+        },
+        "size": 2760,
+        "date": "2024-09-23T15:53:27.000Z"
       }
     ]
+  },
+  {
+    "url": "https://fairshake.cloud",
+    "dir": "https://fairshake.cloud",
+    "name": "",
+    "ext": "",
+    "date": "2024-09-24T22:24:48.335Z",
+    "files": []
   },
   {
     "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-09-17/20240821_frictionless.zip",
@@ -109057,6 +110810,52 @@
         },
         "size": 20856572,
         "date": "2024-09-14T03:00:57.000Z"
+      }
+    ]
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-24/RBP_unique_loci_in_biofluids.rbpmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-24",
+    "name": "RBP_unique_loci_in_biofluids",
+    "ext": "rbpmt",
+    "date": "2024-09-24T17:21:37.515Z",
+    "files": [
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-24",
+          "name": "RBP_unique_loci_in_biofluids",
+          "ext": "rbpmt"
+        },
+        "path": {
+          "dir": "",
+          "name": "",
+          "ext": ""
+        },
+        "size": 408293,
+        "date": "2024-09-24T17:21:38.000Z"
+      }
+    ]
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-25/RBP_unique_loci_in_biofluids.rbpmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-25",
+    "name": "RBP_unique_loci_in_biofluids",
+    "ext": "rbpmt",
+    "date": "2024-09-25T14:39:20.448Z",
+    "files": [
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-25",
+          "name": "RBP_unique_loci_in_biofluids",
+          "ext": "rbpmt"
+        },
+        "path": {
+          "dir": "",
+          "name": "",
+          "ext": ""
+        },
+        "size": 408628,
+        "date": "2024-09-25T14:39:21.000Z"
       }
     ]
   },

@@ -179,7 +179,7 @@
     ],
     "openIssues": 1,
     "closedIssues": 4,
-    "issueTimeOpen": 13099799,
+    "issueTimeOpen": 13117070,
     "pullRequests": [
       {
         "state": "closed",
@@ -366,6 +366,16 @@
       {
         "state": "open",
         "stateReason": null,
+        "created": "2024-09-25T15:18:13Z",
+        "modified": "2024-09-25T15:18:23Z",
+        "closed": null,
+        "labels": [
+          "enhancement"
+        ]
+      },
+      {
+        "state": "open",
+        "stateReason": null,
         "created": "2024-08-21T11:46:35Z",
         "modified": "2024-09-11T15:04:37Z",
         "closed": null,
@@ -476,9 +486,9 @@
         "labels": []
       }
     ],
-    "openIssues": 4,
+    "openIssues": 5,
     "closedIssues": 9,
-    "issueTimeOpen": 3531444,
+    "issueTimeOpen": 3306194,
     "pullRequests": [
       {
         "state": "closed",
@@ -573,6 +583,7 @@
     "closedPullRequests": 11,
     "pullRequestTimeOpen": 569241,
     "commits": [
+      "2024-09-25T00:22:20Z",
       "2024-09-24T00:22:03Z",
       "2024-09-23T00:22:51Z",
       "2024-09-22T00:23:15Z",
@@ -604,7 +615,7 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 26
+        "contributions": 27
       },
       {
         "name": "cgreene",
@@ -638,7 +649,7 @@
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-09-24T00:22:05Z",
+    "modified": "2024-09-25T00:22:22Z",
     "license": "",
     "readme": true,
     "contributing": false,
