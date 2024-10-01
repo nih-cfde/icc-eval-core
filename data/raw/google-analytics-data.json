@@ -3750,6 +3750,60 @@
         },
         "propertyQuota": null,
         "kind": "analyticsData#runReport"
+      },
+      {
+        "dateRange": {
+          "startDate": "2024-09-01",
+          "endDate": "2024-10-01"
+        },
+        "dimensionHeaders": [],
+        "metricHeaders": [
+          {
+            "name": "activeUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "engagedSessions",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [],
+            "metricValues": [
+              {
+                "value": "16",
+                "oneValue": "value"
+              },
+              {
+                "value": "16",
+                "oneValue": "value"
+              },
+              {
+                "value": "9",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
       }
     ],
     "topContinents": [
@@ -3775,7 +3829,7 @@
             ],
             "metricValues": [
               {
-                "value": "1139",
+                "value": "1140",
                 "oneValue": "value"
               }
             ]
@@ -3874,7 +3928,7 @@
             ],
             "metricValues": [
               {
-                "value": "1139",
+                "value": "1140",
                 "oneValue": "value"
               }
             ]
@@ -4074,7 +4128,7 @@
             ],
             "metricValues": [
               {
-                "value": "1040",
+                "value": "1041",
                 "oneValue": "value"
               }
             ]
@@ -4173,7 +4227,7 @@
             ],
             "metricValues": [
               {
-                "value": "1040",
+                "value": "1041",
                 "oneValue": "value"
               }
             ]
@@ -4401,7 +4455,7 @@
             ],
             "metricValues": [
               {
-                "value": "112",
+                "value": "113",
                 "oneValue": "value"
               }
             ]
@@ -4500,7 +4554,7 @@
             ],
             "metricValues": [
               {
-                "value": "106",
+                "value": "107",
                 "oneValue": "value"
               }
             ]
@@ -4700,7 +4754,7 @@
             ],
             "metricValues": [
               {
-                "value": "86",
+                "value": "87",
                 "oneValue": "value"
               }
             ]
@@ -4799,7 +4853,7 @@
             ],
             "metricValues": [
               {
-                "value": "81",
+                "value": "82",
                 "oneValue": "value"
               }
             ]
@@ -4999,7 +5053,7 @@
             ],
             "metricValues": [
               {
-                "value": "51",
+                "value": "52",
                 "oneValue": "value"
               }
             ]
@@ -5098,7 +5152,7 @@
             ],
             "metricValues": [
               {
-                "value": "51",
+                "value": "52",
                 "oneValue": "value"
               }
             ]
@@ -5284,7 +5338,7 @@
             ],
             "metricValues": [
               {
-                "value": "528",
+                "value": "529",
                 "oneValue": "value"
               }
             ]
@@ -5355,7 +5409,7 @@
             ],
             "metricValues": [
               {
-                "value": "528",
+                "value": "529",
                 "oneValue": "value"
               }
             ]
@@ -5527,7 +5581,7 @@
             ],
             "metricValues": [
               {
-                "value": "197",
+                "value": "198",
                 "oneValue": "value"
               }
             ]
@@ -5626,7 +5680,7 @@
             ],
             "metricValues": [
               {
-                "value": "196",
+                "value": "197",
                 "oneValue": "value"
               }
             ]
@@ -8521,6 +8575,60 @@
         },
         "propertyQuota": null,
         "kind": "analyticsData#runReport"
+      },
+      {
+        "dateRange": {
+          "startDate": "2024-09-01",
+          "endDate": "2024-10-01"
+        },
+        "dimensionHeaders": [],
+        "metricHeaders": [
+          {
+            "name": "activeUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "engagedSessions",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [],
+            "metricValues": [
+              {
+                "value": "6",
+                "oneValue": "value"
+              },
+              {
+                "value": "4",
+                "oneValue": "value"
+              },
+              {
+                "value": "2",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/New_York",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
       }
     ],
     "topContinents": [
@@ -8546,7 +8654,7 @@
             ],
             "metricValues": [
               {
-                "value": "437",
+                "value": "438",
                 "oneValue": "value"
               }
             ]
@@ -8645,7 +8753,7 @@
             ],
             "metricValues": [
               {
-                "value": "436",
+                "value": "437",
                 "oneValue": "value"
               }
             ]
@@ -8831,7 +8939,7 @@
             ],
             "metricValues": [
               {
-                "value": "434",
+                "value": "435",
                 "oneValue": "value"
               }
             ]
@@ -8930,7 +9038,7 @@
             ],
             "metricValues": [
               {
-                "value": "433",
+                "value": "434",
                 "oneValue": "value"
               }
             ]
@@ -9728,7 +9836,7 @@
             ],
             "metricValues": [
               {
-                "value": "463",
+                "value": "464",
                 "oneValue": "value"
               }
             ]
@@ -9827,7 +9935,7 @@
             ],
             "metricValues": [
               {
-                "value": "464",
+                "value": "465",
                 "oneValue": "value"
               }
             ]
@@ -10027,7 +10135,7 @@
             ],
             "metricValues": [
               {
-                "value": "369",
+                "value": "370",
                 "oneValue": "value"
               }
             ]
@@ -10084,7 +10192,7 @@
             ],
             "metricValues": [
               {
-                "value": "370",
+                "value": "371",
                 "oneValue": "value"
               }
             ]
@@ -10214,7 +10322,7 @@
             ],
             "metricValues": [
               {
-                "value": "124",
+                "value": "125",
                 "oneValue": "value"
               }
             ]
@@ -10313,7 +10421,7 @@
             ],
             "metricValues": [
               {
-                "value": "124",
+                "value": "125",
                 "oneValue": "value"
               }
             ]

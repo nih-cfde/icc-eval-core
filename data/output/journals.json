@@ -15,15 +15,6 @@
     "issns": []
   },
   {
-    "id": "Commun Biol",
-    "name": "Communications Biology",
-    "rank": 2.09,
-    "issns": [
-      "23993642",
-      "23993642"
-    ]
-  },
-  {
     "id": "Alzheimers Dement",
     "name": "Alzheimer's and Dementia",
     "rank": 3.226,
@@ -34,13 +25,12 @@
     ]
   },
   {
-    "id": "Bioinformatics",
-    "name": "Bioinformatics",
-    "rank": 2.574,
+    "id": "Commun Biol",
+    "name": "Communications Biology",
+    "rank": 2.09,
     "issns": [
-      "13674803",
-      "13674811",
-      "13674803"
+      "23993642",
+      "23993642"
     ]
   },
   {
@@ -50,6 +40,16 @@
     "issns": [
       "26935015",
       "26935015"
+    ]
+  },
+  {
+    "id": "Bioinformatics",
+    "name": "Bioinformatics",
+    "rank": 2.574,
+    "issns": [
+      "13674803",
+      "13674811",
+      "13674803"
     ]
   },
   {
@@ -82,12 +82,13 @@
     ]
   },
   {
-    "id": "Biomolecules",
-    "name": "Biomolecules",
-    "rank": 1.179,
+    "id": "Drug Discov Today",
+    "name": "Drug Discovery Today",
+    "rank": 1.586,
     "issns": [
-      "2218273",
-      "2218273"
+      "13596446",
+      "18785832",
+      "13596446"
     ]
   },
   {
@@ -101,13 +102,12 @@
     ]
   },
   {
-    "id": "Drug Discov Today",
-    "name": "Drug Discovery Today",
-    "rank": 1.586,
+    "id": "Biomolecules",
+    "name": "Biomolecules",
+    "rank": 1.179,
     "issns": [
-      "13596446",
-      "18785832",
-      "13596446"
+      "2218273",
+      "2218273"
     ]
   },
   {
@@ -136,16 +136,6 @@
     ]
   },
   {
-    "id": "J Proteome Res",
-    "name": "Journal of Proteome Research",
-    "rank": 1.299,
-    "issns": [
-      "15353893",
-      "15353907",
-      "15353893"
-    ]
-  },
-  {
     "id": "J Am Chem Soc",
     "name": "Journal of the American Chemical Society",
     "rank": 5.489,
@@ -163,6 +153,26 @@
       "17502799",
       "17542189",
       "17502799"
+    ]
+  },
+  {
+    "id": "J Proteome Res",
+    "name": "Journal of Proteome Research",
+    "rank": 1.299,
+    "issns": [
+      "15353893",
+      "15353907",
+      "15353893"
+    ]
+  },
+  {
+    "id": "Mol Cell Proteomics",
+    "name": "Molecular and Cellular Proteomics",
+    "rank": 2.348,
+    "issns": [
+      "15359476",
+      "15359484",
+      "15359476"
     ]
   },
   {
@@ -195,16 +205,6 @@
     ]
   },
   {
-    "id": "Mol Cell Proteomics",
-    "name": "Molecular and Cellular Proteomics",
-    "rank": 2.348,
-    "issns": [
-      "15359476",
-      "15359484",
-      "15359476"
-    ]
-  },
-  {
     "id": "Nat Genet",
     "name": "Nature Genetics",
     "rank": 17.3,
@@ -212,25 +212,6 @@
       "10614036",
       "15461718",
       "10614036"
-    ]
-  },
-  {
-    "id": "Nat Hum Behav",
-    "name": "Nature Human Behaviour",
-    "rank": 6.097,
-    "issns": [
-      "23973374",
-      "23973374"
-    ]
-  },
-  {
-    "id": "Nature",
-    "name": "Nature",
-    "rank": 18.509,
-    "issns": [
-      "00280836",
-      "14764687",
-      "00280836"
     ]
   },
   {
@@ -253,12 +234,31 @@
     ]
   },
   {
+    "id": "Nat Hum Behav",
+    "name": "Nature Human Behaviour",
+    "rank": 6.097,
+    "issns": [
+      "23973374",
+      "23973374"
+    ]
+  },
+  {
     "id": "Front Immunol",
     "name": "Frontiers in Immunology",
     "rank": 1.868,
     "issns": [
       "16643224",
       "16643224"
+    ]
+  },
+  {
+    "id": "Nature",
+    "name": "Nature",
+    "rank": 18.509,
+    "issns": [
+      "00280836",
+      "14764687",
+      "00280836"
     ]
   },
   {
@@ -281,6 +281,16 @@
     ]
   },
   {
+    "id": "Adv Drug Deliv Rev",
+    "name": "Advanced Drug Delivery Reviews",
+    "rank": 3.411,
+    "issns": [
+      "0169409",
+      "18728294",
+      "0169409"
+    ]
+  },
+  {
     "id": "ACS Appl Bio Mater",
     "name": "ACS Applied Bio Materials",
     "rank": 0.9,
@@ -300,16 +310,6 @@
     ]
   },
   {
-    "id": "Adv Drug Deliv Rev",
-    "name": "Advanced Drug Delivery Reviews",
-    "rank": 3.411,
-    "issns": [
-      "0169409",
-      "18728294",
-      "0169409"
-    ]
-  },
-  {
     "id": "Cancer Metastasis Rev",
     "name": "Cancer and Metastasis Reviews",
     "rank": 2.866,
@@ -320,6 +320,12 @@
     ]
   },
   {
+    "id": "Chem Commun (Camb)",
+    "name": "Chem Commun (Camb)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "ACS Appl Mater Interfaces",
     "name": "ACS applied materials &amp; interfaces",
     "rank": 2.058,
@@ -328,12 +334,6 @@
       "19448252",
       "19448244"
     ]
-  },
-  {
-    "id": "Chem Commun (Camb)",
-    "name": "Chem Commun (Camb)",
-    "rank": 0,
-    "issns": []
   },
   {
     "id": "Drug Deliv Transl Res",
@@ -356,12 +356,12 @@
     ]
   },
   {
-    "id": "BMC Biol",
-    "name": "BMC Biology",
-    "rank": 1.787,
+    "id": "Sci Rep",
+    "name": "Scientific Reports",
+    "rank": 0.9,
     "issns": [
-      "17417007",
-      "17417007"
+      "20452322",
+      "20452322"
     ]
   },
   {
@@ -375,12 +375,12 @@
     ]
   },
   {
-    "id": "Sci Rep",
-    "name": "Scientific Reports",
-    "rank": 0.9,
+    "id": "BMC Biol",
+    "name": "BMC Biology",
+    "rank": 1.787,
     "issns": [
-      "20452322",
-      "20452322"
+      "17417007",
+      "17417007"
     ]
   },
   {
@@ -394,6 +394,16 @@
     ]
   },
   {
+    "id": "Mol Med",
+    "name": "Molecular Medicine",
+    "rank": 1.446,
+    "issns": [
+      "10761551",
+      "15283658",
+      "10761551"
+    ]
+  },
+  {
     "id": "BMC Pharmacol Toxicol",
     "name": "BMC pharmacology &amp; toxicology",
     "rank": 0.71,
@@ -401,6 +411,12 @@
       "20506511",
       "20506511"
     ]
+  },
+  {
+    "id": "Cancer Rep (Hoboken)",
+    "name": "Cancer Rep (Hoboken)",
+    "rank": 0,
+    "issns": []
   },
   {
     "id": "FEBS Open Bio",
@@ -412,28 +428,12 @@
     ]
   },
   {
-    "id": "Cancer Rep (Hoboken)",
-    "name": "Cancer Rep (Hoboken)",
-    "rank": 0,
-    "issns": []
-  },
-  {
     "id": "Biol Sex Differ",
     "name": "Biology of Sex Differences",
     "rank": 2.03,
     "issns": [
       "20426410",
       "20426410"
-    ]
-  },
-  {
-    "id": "Mol Med",
-    "name": "Molecular Medicine",
-    "rank": 1.446,
-    "issns": [
-      "10761551",
-      "15283658",
-      "10761551"
     ]
   },
   {
@@ -481,12 +481,6 @@
     "issns": []
   },
   {
-    "id": "Cancers (Basel)",
-    "name": "Cancers (Basel)",
-    "rank": 0,
-    "issns": []
-  },
-  {
     "id": "PeerJ",
     "name": "PeerJ",
     "rank": 0.623,
@@ -496,21 +490,18 @@
     ]
   },
   {
+    "id": "Cancers (Basel)",
+    "name": "Cancers (Basel)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "Cell Genom",
     "name": "Cell Genomics",
     "rank": 8.807,
     "issns": [
       "2666979",
       "2666979"
-    ]
-  },
-  {
-    "id": "Bioinform Adv",
-    "name": "Bioinformatics Advances",
-    "rank": 1.329,
-    "issns": [
-      "26350041",
-      "26350041"
     ]
   },
   {
@@ -523,12 +514,12 @@
     ]
   },
   {
-    "id": "Sci Data",
-    "name": "Scientific data",
-    "rank": 1.937,
+    "id": "Bioinform Adv",
+    "name": "Bioinformatics Advances",
+    "rank": 1.329,
     "issns": [
-      "20524463",
-      "20524463"
+      "26350041",
+      "26350041"
     ]
   },
   {
@@ -541,30 +532,20 @@
     ]
   },
   {
+    "id": "Sci Data",
+    "name": "Scientific data",
+    "rank": 1.937,
+    "issns": [
+      "20524463",
+      "20524463"
+    ]
+  },
+  {
     "id": "Cell Rep",
     "name": "Cell Reports",
     "rank": 4.279,
     "issns": [
       "22111247"
-    ]
-  },
-  {
-    "id": "Gigascience",
-    "name": "GigaScience",
-    "rank": 4.621,
-    "issns": [
-      "2047217",
-      "2047217"
-    ]
-  },
-  {
-    "id": "Infect Immun",
-    "name": "Infection and Immunity",
-    "rank": 1.042,
-    "issns": [
-      "00199567",
-      "10985522",
-      "00199567"
     ]
   },
   {
@@ -574,62 +555,6 @@
     "issns": [
       "1664302",
       "1664302"
-    ]
-  },
-  {
-    "id": "Int J Tryptophan Res",
-    "name": "International Journal of Tryptophan Research",
-    "rank": 1.004,
-    "issns": [
-      "11786469",
-      "11786469"
-    ]
-  },
-  {
-    "id": "Int J Cancer",
-    "name": "International Journal of Cancer",
-    "rank": 2.131,
-    "issns": [
-      "00207136",
-      "10970215",
-      "00207136"
-    ]
-  },
-  {
-    "id": "Nat Cancer",
-    "name": "Nature Cancer",
-    "rank": 11.9,
-    "issns": [
-      "26621347",
-      "26621347"
-    ]
-  },
-  {
-    "id": "Am J Physiol Lung Cell Mol Physiol",
-    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
-    "rank": 1.339,
-    "issns": [
-      "10400605",
-      "15221504",
-      "10400605"
-    ]
-  },
-  {
-    "id": "Elife",
-    "name": "eLife",
-    "rank": 3.932,
-    "issns": [
-      "2050084",
-      "2050084"
-    ]
-  },
-  {
-    "id": "BMC Cancer",
-    "name": "BMC Cancer",
-    "rank": 1.087,
-    "issns": [
-      "14712407",
-      "14712407"
     ]
   },
   {
@@ -662,6 +587,62 @@
     ]
   },
   {
+    "id": "BMC Cancer",
+    "name": "BMC Cancer",
+    "rank": 1.087,
+    "issns": [
+      "14712407",
+      "14712407"
+    ]
+  },
+  {
+    "id": "Int J Tryptophan Res",
+    "name": "International Journal of Tryptophan Research",
+    "rank": 1.004,
+    "issns": [
+      "11786469",
+      "11786469"
+    ]
+  },
+  {
+    "id": "Nat Cancer",
+    "name": "Nature Cancer",
+    "rank": 11.9,
+    "issns": [
+      "26621347",
+      "26621347"
+    ]
+  },
+  {
+    "id": "Elife",
+    "name": "eLife",
+    "rank": 3.932,
+    "issns": [
+      "2050084",
+      "2050084"
+    ]
+  },
+  {
+    "id": "Int J Cancer",
+    "name": "International Journal of Cancer",
+    "rank": 2.131,
+    "issns": [
+      "00207136",
+      "10970215",
+      "00207136"
+    ]
+  },
+  {
+    "id": "Infect Immun",
+    "name": "Infection and Immunity",
+    "rank": 1.042,
+    "issns": [
+      "00199567",
+      "10985522",
+      "00199567"
+    ]
+  },
+  {
     "id": "Nat Metab",
     "name": "Nature Metabolism",
     "rank": 7.192,
@@ -680,10 +661,29 @@
     ]
   },
   {
+    "id": "Gigascience",
+    "name": "GigaScience",
+    "rank": 4.621,
+    "issns": [
+      "2047217",
+      "2047217"
+    ]
+  },
+  {
     "id": "Front Endocrinol (Lausanne)",
     "name": "Front Endocrinol (Lausanne)",
     "rank": 0,
     "issns": []
+  },
+  {
+    "id": "Am J Physiol Lung Cell Mol Physiol",
+    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
+    "rank": 1.339,
+    "issns": [
+      "10400605",
+      "15221504",
+      "10400605"
+    ]
   },
   {
     "id": "Database (Oxford)",
@@ -702,21 +702,21 @@
     ]
   },
   {
-    "id": "Nat Cardiovasc Res",
-    "name": "Nature Cardiovascular Research",
-    "rank": 3.71,
-    "issns": [
-      "27310590",
-      "27310590"
-    ]
-  },
-  {
     "id": "Cell Rep Methods",
     "name": "Cell Reports Methods",
     "rank": 2.107,
     "issns": [
       "26672375",
       "26672375"
+    ]
+  },
+  {
+    "id": "Nat Cardiovasc Res",
+    "name": "Nature Cardiovascular Research",
+    "rank": 3.71,
+    "issns": [
+      "27310590",
+      "27310590"
     ]
   }
 ]
