@@ -8601,15 +8601,15 @@
             "dimensionValues": [],
             "metricValues": [
               {
-                "value": "6",
+                "value": "7",
+                "oneValue": "value"
+              },
+              {
+                "value": "5",
                 "oneValue": "value"
               },
               {
                 "value": "4",
-                "oneValue": "value"
-              },
-              {
-                "value": "2",
                 "oneValue": "value"
               }
             ]
@@ -8654,7 +8654,7 @@
             ],
             "metricValues": [
               {
-                "value": "438",
+                "value": "439",
                 "oneValue": "value"
               }
             ]
@@ -8753,7 +8753,7 @@
             ],
             "metricValues": [
               {
-                "value": "437",
+                "value": "438",
                 "oneValue": "value"
               }
             ]
@@ -8852,7 +8852,7 @@
             ],
             "metricValues": [
               {
-                "value": "617",
+                "value": "619",
                 "oneValue": "value"
               }
             ]
@@ -8939,7 +8939,7 @@
             ],
             "metricValues": [
               {
-                "value": "435",
+                "value": "436",
                 "oneValue": "value"
               }
             ]
@@ -9038,7 +9038,7 @@
             ],
             "metricValues": [
               {
-                "value": "434",
+                "value": "435",
                 "oneValue": "value"
               }
             ]
@@ -9137,7 +9137,7 @@
             ],
             "metricValues": [
               {
-                "value": "616",
+                "value": "618",
                 "oneValue": "value"
               }
             ]
@@ -9238,7 +9238,7 @@
             ],
             "metricValues": [
               {
-                "value": "130",
+                "value": "131",
                 "oneValue": "value"
               }
             ]
@@ -9337,7 +9337,7 @@
             ],
             "metricValues": [
               {
-                "value": "124",
+                "value": "125",
                 "oneValue": "value"
               }
             ]
@@ -9436,7 +9436,7 @@
             ],
             "metricValues": [
               {
-                "value": "392",
+                "value": "393",
                 "oneValue": "value"
               }
             ]
@@ -9450,7 +9450,7 @@
             ],
             "metricValues": [
               {
-                "value": "39",
+                "value": "40",
                 "oneValue": "value"
               }
             ]
@@ -9537,7 +9537,7 @@
             ],
             "metricValues": [
               {
-                "value": "79",
+                "value": "80",
                 "oneValue": "value"
               }
             ]
@@ -9636,7 +9636,7 @@
             ],
             "metricValues": [
               {
-                "value": "78",
+                "value": "79",
                 "oneValue": "value"
               }
             ]
@@ -9735,7 +9735,7 @@
             ],
             "metricValues": [
               {
-                "value": "334",
+                "value": "335",
                 "oneValue": "value"
               }
             ]
@@ -9777,7 +9777,7 @@
             ],
             "metricValues": [
               {
-                "value": "19",
+                "value": "20",
                 "oneValue": "value"
               }
             ]
@@ -9823,105 +9823,6 @@
         "metricHeaders": [
           {
             "name": "activeUsers",
-            "type": "TYPE_INTEGER"
-          }
-        ],
-        "rows": [
-          {
-            "dimensionValues": [
-              {
-                "value": "English",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "464",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Chinese",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "3",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "French",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "2",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Spanish",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "2",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Hungarian",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "1",
-                "oneValue": "value"
-              }
-            ]
-          }
-        ],
-        "totals": [],
-        "maximums": [],
-        "minimums": [],
-        "rowCount": 9,
-        "metadata": {
-          "samplingMetadatas": [],
-          "dataLossFromOtherRow": false,
-          "currencyCode": "USD",
-          "_currencyCode": "currencyCode",
-          "timeZone": "America/New_York",
-          "_timeZone": "timeZone"
-        },
-        "propertyQuota": null,
-        "kind": "analyticsData#runReport"
-      },
-      {
-        "dimensionHeaders": [
-          {
-            "name": "language"
-          }
-        ],
-        "metricHeaders": [
-          {
-            "name": "newUsers",
             "type": "TYPE_INTEGER"
           }
         ],
@@ -10020,6 +9921,105 @@
         ],
         "metricHeaders": [
           {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [
+              {
+                "value": "English",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "466",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Chinese",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "3",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "French",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "2",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Spanish",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "2",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Hungarian",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "1",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 9,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/New_York",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [
+          {
+            "name": "language"
+          }
+        ],
+        "metricHeaders": [
+          {
             "name": "engagedSessions",
             "type": "TYPE_INTEGER"
           }
@@ -10034,7 +10034,7 @@
             ],
             "metricValues": [
               {
-                "value": "624",
+                "value": "626",
                 "oneValue": "value"
               }
             ]
@@ -10135,7 +10135,7 @@
             ],
             "metricValues": [
               {
-                "value": "370",
+                "value": "371",
                 "oneValue": "value"
               }
             ]
@@ -10192,7 +10192,7 @@
             ],
             "metricValues": [
               {
-                "value": "371",
+                "value": "372",
                 "oneValue": "value"
               }
             ]
@@ -10249,7 +10249,7 @@
             ],
             "metricValues": [
               {
-                "value": "583",
+                "value": "585",
                 "oneValue": "value"
               }
             ]
@@ -10295,105 +10295,6 @@
         "metricHeaders": [
           {
             "name": "activeUsers",
-            "type": "TYPE_INTEGER"
-          }
-        ],
-        "rows": [
-          {
-            "dimensionValues": [
-              {
-                "value": "Windows",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "237",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Macintosh",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "125",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "iOS",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "92",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Android",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "14",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Linux",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "8",
-                "oneValue": "value"
-              }
-            ]
-          }
-        ],
-        "totals": [],
-        "maximums": [],
-        "minimums": [],
-        "rowCount": 5,
-        "metadata": {
-          "samplingMetadatas": [],
-          "dataLossFromOtherRow": false,
-          "currencyCode": "USD",
-          "_currencyCode": "currencyCode",
-          "timeZone": "America/New_York",
-          "_timeZone": "timeZone"
-        },
-        "propertyQuota": null,
-        "kind": "analyticsData#runReport"
-      },
-      {
-        "dimensionHeaders": [
-          {
-            "name": "operatingSystem"
-          }
-        ],
-        "metricHeaders": [
-          {
-            "name": "newUsers",
             "type": "TYPE_INTEGER"
           }
         ],
@@ -10492,6 +10393,105 @@
         ],
         "metricHeaders": [
           {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [
+              {
+                "value": "Windows",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "239",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Macintosh",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "125",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "iOS",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "92",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Android",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "14",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Linux",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "8",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 5,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/New_York",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [
+          {
+            "name": "operatingSystem"
+          }
+        ],
+        "metricHeaders": [
+          {
             "name": "engagedSessions",
             "type": "TYPE_INTEGER"
           }
@@ -10506,7 +10506,7 @@
             ],
             "metricValues": [
               {
-                "value": "378",
+                "value": "379",
                 "oneValue": "value"
               }
             ]
@@ -10520,7 +10520,7 @@
             ],
             "metricValues": [
               {
-                "value": "199",
+                "value": "200",
                 "oneValue": "value"
               }
             ]

@@ -534,7 +534,7 @@
             15,
             159,
             36,
-            6
+            7
           ]
         },
         {
@@ -549,7 +549,7 @@
             16,
             159,
             29,
-            4
+            5
           ]
         },
         {
@@ -564,28 +564,28 @@
             9,
             399,
             44,
-            2
+            4
           ]
         }
       ]
     },
     "topContinents": {
       "byActiveUsers": {
-        "Americas": 438,
+        "Americas": 439,
         "Europe": 23,
         "Asia": 12,
         "(not set)": 2,
         "Africa": 1
       },
       "byNewUsers": {
-        "Americas": 437,
+        "Americas": 438,
         "Europe": 24,
         "Asia": 12,
         "(not set)": 2,
         "Africa": 1
       },
       "byEngagedSessions": {
-        "Americas": 617,
+        "Americas": 619,
         "Europe": 13,
         "Asia": 4,
         "Africa": 1
@@ -593,21 +593,21 @@
     },
     "topCountries": {
       "byActiveUsers": {
-        "United States": 435,
+        "United States": 436,
         "India": 5,
         "Singapore": 5,
         "France": 4,
         "United Kingdom": 4
       },
       "byNewUsers": {
-        "United States": 434,
+        "United States": 435,
         "India": 5,
         "Singapore": 5,
         "France": 4,
         "United Kingdom": 4
       },
       "byEngagedSessions": {
-        "United States": 616,
+        "United States": 618,
         "Italy": 4,
         "India": 3,
         "United Kingdom": 3,
@@ -616,22 +616,22 @@
     },
     "topRegions": {
       "byActiveUsers": {
-        "California": 130,
+        "California": 131,
         "Virginia": 48,
         "Washington": 32,
         "Wyoming": 26,
         "Colorado": 24
       },
       "byNewUsers": {
-        "California": 124,
+        "California": 125,
         "Virginia": 47,
         "Washington": 32,
         "Wyoming": 26,
         "Colorado": 23
       },
       "byEngagedSessions": {
-        "California": 392,
-        "Maryland": 39,
+        "California": 393,
+        "Maryland": 40,
         "Virginia": 34,
         "Colorado": 24,
         "North Carolina": 17
@@ -639,44 +639,44 @@
     },
     "topCities": {
       "byActiveUsers": {
-        "Irvine": 79,
+        "Irvine": 80,
         "Ashburn": 27,
         "Cheyenne": 26,
         "(not set)": 25,
         "Moses Lake": 23
       },
       "byNewUsers": {
-        "Irvine": 78,
+        "Irvine": 79,
         "Ashburn": 27,
         "Cheyenne": 26,
         "(not set)": 23,
         "Moses Lake": 23
       },
       "byEngagedSessions": {
-        "Irvine": 334,
+        "Irvine": 335,
         "Los Angeles": 24,
         "Richmond": 24,
-        "Ellicott City": 19,
+        "Ellicott City": 20,
         "Bethesda": 12
       }
     },
     "topLanguages": {
       "byActiveUsers": {
-        "English": 464,
-        "Chinese": 3,
-        "French": 2,
-        "Spanish": 2,
-        "Hungarian": 1
-      },
-      "byNewUsers": {
         "English": 465,
         "Chinese": 3,
         "French": 2,
         "Spanish": 2,
         "Hungarian": 1
       },
+      "byNewUsers": {
+        "English": 466,
+        "Chinese": 3,
+        "French": 2,
+        "Spanish": 2,
+        "Hungarian": 1
+      },
       "byEngagedSessions": {
-        "English": 624,
+        "English": 626,
         "Chinese": 4,
         "French": 2,
         "Hungarian": 1,
@@ -685,36 +685,36 @@
     },
     "topDevices": {
       "byActiveUsers": {
-        "desktop": 370,
-        "mobile": 106
-      },
-      "byNewUsers": {
         "desktop": 371,
         "mobile": 106
       },
+      "byNewUsers": {
+        "desktop": 372,
+        "mobile": 106
+      },
       "byEngagedSessions": {
-        "desktop": 583,
+        "desktop": 585,
         "mobile": 51
       }
     },
     "topOSes": {
       "byActiveUsers": {
-        "Windows": 237,
-        "Macintosh": 125,
-        "iOS": 92,
-        "Android": 14,
-        "Linux": 8
-      },
-      "byNewUsers": {
         "Windows": 238,
         "Macintosh": 125,
         "iOS": 92,
         "Android": 14,
         "Linux": 8
       },
+      "byNewUsers": {
+        "Windows": 239,
+        "Macintosh": 125,
+        "iOS": 92,
+        "Android": 14,
+        "Linux": 8
+      },
       "byEngagedSessions": {
-        "Windows": 378,
-        "Macintosh": 199,
+        "Windows": 379,
+        "Macintosh": 200,
         "iOS": 42,
         "Android": 9,
         "Linux": 7
