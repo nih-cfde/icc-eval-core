@@ -92,15 +92,6 @@
     ]
   },
   {
-    "id": "Biomolecules",
-    "name": "Biomolecules",
-    "rank": 1.179,
-    "issns": [
-      "2218273",
-      "2218273"
-    ]
-  },
-  {
     "id": "Mol Cell",
     "name": "Molecular Cell",
     "rank": 9.332,
@@ -108,6 +99,15 @@
       "10972765",
       "10974164",
       "10972765"
+    ]
+  },
+  {
+    "id": "Biomolecules",
+    "name": "Biomolecules",
+    "rank": 1.179,
+    "issns": [
+      "2218273",
+      "2218273"
     ]
   },
   {
@@ -166,16 +166,6 @@
     ]
   },
   {
-    "id": "Am J Physiol Heart Circ Physiol",
-    "name": "American Journal of Physiology - Heart and Circulatory Physiology",
-    "rank": 1.452,
-    "issns": [
-      "03636135",
-      "15221539",
-      "03636135"
-    ]
-  },
-  {
     "id": "Mol Cell Proteomics",
     "name": "Molecular and Cellular Proteomics",
     "rank": 2.348,
@@ -183,6 +173,16 @@
       "15359476",
       "15359484",
       "15359476"
+    ]
+  },
+  {
+    "id": "Am J Physiol Heart Circ Physiol",
+    "name": "American Journal of Physiology - Heart and Circulatory Physiology",
+    "rank": 1.452,
+    "issns": [
+      "03636135",
+      "15221539",
+      "03636135"
     ]
   },
   {
@@ -320,16 +320,6 @@
     ]
   },
   {
-    "id": "Drug Deliv Transl Res",
-    "name": "Drug Delivery and Translational Research",
-    "rank": 0.994,
-    "issns": [
-      "2190393",
-      "21903948",
-      "2190393"
-    ]
-  },
-  {
     "id": "Chem Commun (Camb)",
     "name": "Chem Commun (Camb)",
     "rank": 0,
@@ -343,6 +333,16 @@
       "19448244",
       "19448252",
       "19448244"
+    ]
+  },
+  {
+    "id": "Drug Deliv Transl Res",
+    "name": "Drug Delivery and Translational Research",
+    "rank": 0.994,
+    "issns": [
+      "2190393",
+      "21903948",
+      "2190393"
     ]
   },
   {
@@ -523,21 +523,21 @@
     ]
   },
   {
-    "id": "Sci Data",
-    "name": "Scientific data",
-    "rank": 1.937,
-    "issns": [
-      "20524463",
-      "20524463"
-    ]
-  },
-  {
     "id": "PLoS One",
     "name": "PLoS ONE",
     "rank": 0.839,
     "issns": [
       "19326203",
       "19326203"
+    ]
+  },
+  {
+    "id": "Sci Data",
+    "name": "Scientific data",
+    "rank": 1.937,
+    "issns": [
+      "20524463",
+      "20524463"
     ]
   },
   {
@@ -614,6 +614,15 @@
     ]
   },
   {
+    "id": "Elife",
+    "name": "eLife",
+    "rank": 3.932,
+    "issns": [
+      "2050084",
+      "2050084"
+    ]
+  },
+  {
     "id": "Int J Cancer",
     "name": "International Journal of Cancer",
     "rank": 2.131,
@@ -624,15 +633,6 @@
     ]
   },
   {
-    "id": "Elife",
-    "name": "eLife",
-    "rank": 3.932,
-    "issns": [
-      "2050084",
-      "2050084"
-    ]
-  },
-  {
     "id": "Infect Immun",
     "name": "Infection and Immunity",
     "rank": 1.042,
@@ -640,21 +640,6 @@
       "00199567",
       "10985522",
       "00199567"
-    ]
-  },
-  {
-    "id": "Front Endocrinol (Lausanne)",
-    "name": "Front Endocrinol (Lausanne)",
-    "rank": 0,
-    "issns": []
-  },
-  {
-    "id": "Gigascience",
-    "name": "GigaScience",
-    "rank": 4.621,
-    "issns": [
-      "2047217",
-      "2047217"
     ]
   },
   {
@@ -674,6 +659,21 @@
       "25424823",
       "25424823"
     ]
+  },
+  {
+    "id": "Gigascience",
+    "name": "GigaScience",
+    "rank": 4.621,
+    "issns": [
+      "2047217",
+      "2047217"
+    ]
+  },
+  {
+    "id": "Front Endocrinol (Lausanne)",
+    "name": "Front Endocrinol (Lausanne)",
+    "rank": 0,
+    "issns": []
   },
   {
     "id": "Am J Physiol Lung Cell Mol Physiol",

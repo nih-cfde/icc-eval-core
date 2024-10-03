@@ -143,12 +143,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030545-01S2",
+    "id": "3OT2OD030545-01S1",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10468526,
-    "awardAmount": 500000,
+    "application": 10444351,
+    "awardAmount": 150000,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T12:09:00Z",
@@ -156,12 +156,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030545-01S1",
+    "id": "3OT2OD030545-01S2",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10444351,
-    "awardAmount": 150000,
+    "application": 10468526,
+    "awardAmount": 500000,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T12:09:00Z",
@@ -494,19 +494,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030546-01S4",
-    "coreProject": "OT2OD030546",
-    "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 11086411,
-    "awardAmount": 300000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T12:09:00Z",
-    "dateEnd": "2025-09-22T12:09:00Z",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030546-01S2",
     "coreProject": "OT2OD030546",
     "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
@@ -518,6 +505,19 @@
     "dateStart": "2020-09-23T12:09:00Z",
     "dateEnd": "2023-09-22T12:09:00Z",
     "isActive": 0
+  },
+  {
+    "id": "3OT2OD030546-01S4",
+    "coreProject": "OT2OD030546",
+    "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 11086411,
+    "awardAmount": 300000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T12:09:00Z",
+    "dateEnd": "2025-09-22T12:09:00Z",
+    "isActive": 1
   },
   {
     "id": "1OT2OD030546-01",
@@ -689,19 +689,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030160-01S2",
-    "coreProject": "OT2OD030160",
-    "name": "The LINCS DCIC Engagement Plan with the CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 10468520,
-    "awardAmount": 676449,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T12:09:00Z",
-    "dateEnd": "2022-09-22T12:09:00Z",
-    "isActive": 0
-  },
-  {
     "id": "1OT2OD030160-01",
     "coreProject": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
@@ -713,6 +700,19 @@
     "dateStart": "2020-09-23T12:09:00Z",
     "dateEnd": "2025-09-22T12:09:00Z",
     "isActive": 1
+  },
+  {
+    "id": "3OT2OD030160-01S2",
+    "coreProject": "OT2OD030160",
+    "name": "The LINCS DCIC Engagement Plan with the CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 10468520,
+    "awardAmount": 676449,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T12:09:00Z",
+    "dateEnd": "2022-09-22T12:09:00Z",
+    "isActive": 0
   },
   {
     "id": "3OT2OD036435-01S1",
@@ -767,19 +767,6 @@
     "isActive": 0
   },
   {
-    "id": "1OT2OD036435-01",
-    "coreProject": "OT2OD036435",
-    "name": "The CFDE Workbench",
-    "opportunity": "OTA-23-004",
-    "application": 10851224,
-    "awardAmount": 1500000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2023-09-18T12:09:00Z",
-    "dateEnd": "2028-09-17T12:09:00Z",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030160-01S4",
     "coreProject": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
@@ -791,6 +778,19 @@
     "dateStart": "2020-09-23T12:09:00Z",
     "dateEnd": "2024-09-22T12:09:00Z",
     "isActive": 0
+  },
+  {
+    "id": "1OT2OD036435-01",
+    "coreProject": "OT2OD036435",
+    "name": "The CFDE Workbench",
+    "opportunity": "OTA-23-004",
+    "application": 10851224,
+    "awardAmount": 1500000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2023-09-18T12:09:00Z",
+    "dateEnd": "2028-09-17T12:09:00Z",
+    "isActive": 1
   },
   {
     "id": "1R03OD032627-01",
