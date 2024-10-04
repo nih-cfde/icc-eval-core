@@ -138,11 +138,19 @@
     ],
     "issues": [
       {
-        "state": "open",
-        "stateReason": null,
+        "state": "closed",
+        "stateReason": "completed",
+        "created": "2024-10-03T20:11:59Z",
+        "modified": "2024-10-03T21:39:28Z",
+        "closed": "2024-10-03T20:12:04Z",
+        "labels": []
+      },
+      {
+        "state": "closed",
+        "stateReason": "completed",
         "created": "2024-09-19T21:45:23Z",
-        "modified": "2024-10-02T17:34:58Z",
-        "closed": null,
+        "modified": "2024-10-03T19:30:29Z",
+        "closed": "2024-10-03T19:30:29Z",
         "labels": []
       },
       {
@@ -178,10 +186,18 @@
         "labels": []
       }
     ],
-    "openIssues": 1,
-    "closedIssues": 4,
-    "issueTimeOpen": 13238039,
+    "openIssues": 0,
+    "closedIssues": 6,
+    "issueTimeOpen": 11043190,
     "pullRequests": [
+      {
+        "state": "closed",
+        "stateReason": "",
+        "created": "2024-10-03T04:10:14Z",
+        "modified": "2024-10-03T19:30:30Z",
+        "closed": "2024-10-03T19:30:28Z",
+        "labels": []
+      },
       {
         "state": "closed",
         "stateReason": "",
@@ -302,9 +318,12 @@
       }
     ],
     "openPullRequests": 0,
-    "closedPullRequests": 12,
-    "pullRequestTimeOpen": 6707866,
+    "closedPullRequests": 13,
+    "pullRequestTimeOpen": 6196123,
     "commits": [
+      "2024-10-03T21:43:47Z",
+      "2024-10-03T20:17:11Z",
+      "2024-10-03T19:30:28Z",
       "2024-09-18T21:07:01Z",
       "2024-09-07T23:49:23Z",
       "2023-07-21T03:14:52Z",
@@ -317,17 +336,17 @@
     "contributors": [
       {
         "name": "vincerubinetti",
-        "contributions": 8
+        "contributions": 11
       }
     ],
     "languages": [
       {
         "language": "TypeScript",
-        "count": 36417
+        "count": 39678
       },
       {
         "language": "CSS",
-        "count": 7061
+        "count": 7460
       },
       {
         "language": "HTML",
@@ -339,12 +358,12 @@
       }
     ],
     "created": "2020-06-26T19:43:06Z",
-    "modified": "2024-09-18T21:07:28Z",
+    "modified": "2024-10-03T21:44:11Z",
     "license": "MIT License",
     "readme": true,
     "contributing": false,
     "dependencies": {
-      "package.json": 35,
+      "package.json": 36,
       ".github/workflows/deploy.yaml": 3
     }
   },
@@ -489,7 +508,7 @@
     ],
     "openIssues": 5,
     "closedIssues": 9,
-    "issueTimeOpen": 3522211,
+    "issueTimeOpen": 3553060,
     "pullRequests": [
       {
         "state": "closed",
@@ -584,6 +603,7 @@
     "closedPullRequests": 11,
     "pullRequestTimeOpen": 569241,
     "commits": [
+      "2024-10-03T00:22:26Z",
       "2024-10-02T14:39:59Z",
       "2024-10-02T00:22:22Z",
       "2024-10-01T00:24:17Z",
@@ -658,7 +678,7 @@
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-10-02T14:39:59Z",
+    "modified": "2024-10-03T00:22:28Z",
     "license": "",
     "readme": true,
     "contributing": false,
