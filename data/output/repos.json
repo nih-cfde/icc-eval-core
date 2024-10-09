@@ -118,9 +118,10 @@
       "2024-09-22T03:15:05Z",
       "2024-09-29T00:57:00Z",
       "2024-10-07T16:44:12Z",
-      "2024-10-07T20:58:31Z"
+      "2024-10-07T20:58:31Z",
+      "2024-10-08T01:22:24Z"
     ],
-    "watchers": 104,
+    "watchers": 105,
     "forks": [
       "2024-10-07T16:24:52Z",
       "2024-09-16T19:14:10Z",
@@ -512,7 +513,7 @@
     ],
     "openIssues": 5,
     "closedIssues": 9,
-    "issueTimeOpen": 3676498,
+    "issueTimeOpen": 3707377,
     "pullRequests": [
       {
         "state": "closed",
@@ -607,6 +608,7 @@
     "closedPullRequests": 11,
     "pullRequestTimeOpen": 569241,
     "commits": [
+      "2024-10-08T00:22:22Z",
       "2024-10-07T00:24:45Z",
       "2024-10-06T00:24:58Z",
       "2024-10-05T00:23:13Z",
@@ -686,7 +688,7 @@
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-10-07T00:24:51Z",
+    "modified": "2024-10-08T00:22:27Z",
     "license": "",
     "readme": true,
     "contributing": false,
@@ -713,6 +715,7 @@
     ],
     "watchers": 6,
     "forks": [
+      "2024-10-08T23:11:15Z",
       "2022-01-27T20:46:53Z",
       "2020-11-13T17:41:45Z"
     ],
@@ -1136,7 +1139,7 @@
     ],
     "openPullRequests": 2,
     "closedPullRequests": 48,
-    "pullRequestTimeOpen": 1428397,
+    "pullRequestTimeOpen": 1431855,
     "commits": [
       "2024-06-20T21:47:42Z",
       "2024-06-07T17:29:07Z",
@@ -2027,6 +2030,22 @@
       {
         "state": "closed",
         "stateReason": "",
+        "created": "2024-10-08T19:35:51Z",
+        "modified": "2024-10-08T19:39:27Z",
+        "closed": "2024-10-08T19:39:26Z",
+        "labels": []
+      },
+      {
+        "state": "closed",
+        "stateReason": "",
+        "created": "2024-10-08T19:29:40Z",
+        "modified": "2024-10-08T20:12:32Z",
+        "closed": "2024-10-08T20:12:31Z",
+        "labels": []
+      },
+      {
+        "state": "closed",
+        "stateReason": "",
         "created": "2024-10-07T18:57:34Z",
         "modified": "2024-10-07T18:59:47Z",
         "closed": "2024-10-07T18:59:46Z",
@@ -2052,7 +2071,7 @@
         "state": "open",
         "stateReason": "",
         "created": "2024-10-03T19:49:25Z",
-        "modified": "2024-10-07T20:03:42Z",
+        "modified": "2024-10-08T19:44:18Z",
         "closed": null,
         "labels": []
       },
@@ -7861,9 +7880,12 @@
       }
     ],
     "openPullRequests": 1,
-    "closedPullRequests": 712,
-    "pullRequestTimeOpen": 380666,
+    "closedPullRequests": 714,
+    "pullRequestTimeOpen": 379726,
     "commits": [
+      "2024-10-08T22:11:10Z",
+      "2024-10-08T20:12:15Z",
+      "2024-10-08T19:39:09Z",
       "2024-10-07T18:59:29Z",
       "2024-10-04T16:12:41Z",
       "2024-10-03T20:06:42Z",
@@ -12960,7 +12982,7 @@
       },
       {
         "name": "qu-y",
-        "contributions": 1143
+        "contributions": 1145
       },
       {
         "name": "preetisi",
@@ -12976,7 +12998,7 @@
       },
       {
         "name": "moriondo2022",
-        "contributions": 455
+        "contributions": 456
       },
       {
         "name": "a-shilin",
@@ -13002,11 +13024,11 @@
     "languages": [
       {
         "language": "Vue",
-        "count": 3292660
+        "count": 3312483
       },
       {
         "language": "JavaScript",
-        "count": 1102630
+        "count": 1108500
       },
       {
         "language": "CSS",
@@ -13026,7 +13048,7 @@
       }
     ],
     "created": "2019-10-15T15:35:44Z",
-    "modified": "2024-10-07T20:03:41Z",
+    "modified": "2024-10-08T22:11:12Z",
     "license": "BSD 3-Clause \"New\" or \"Revised\" License",
     "readme": true,
     "contributing": false,

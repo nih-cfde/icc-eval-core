@@ -8654,7 +8654,7 @@
             ],
             "metricValues": [
               {
-                "value": "486",
+                "value": "487",
                 "oneValue": "value"
               }
             ]
@@ -8753,7 +8753,7 @@
             ],
             "metricValues": [
               {
-                "value": "485",
+                "value": "486",
                 "oneValue": "value"
               }
             ]
@@ -8852,7 +8852,7 @@
             ],
             "metricValues": [
               {
-                "value": "669",
+                "value": "670",
                 "oneValue": "value"
               }
             ]
@@ -8939,7 +8939,7 @@
             ],
             "metricValues": [
               {
-                "value": "483",
+                "value": "484",
                 "oneValue": "value"
               }
             ]
@@ -9038,7 +9038,7 @@
             ],
             "metricValues": [
               {
-                "value": "482",
+                "value": "483",
                 "oneValue": "value"
               }
             ]
@@ -9137,7 +9137,7 @@
             ],
             "metricValues": [
               {
-                "value": "668",
+                "value": "669",
                 "oneValue": "value"
               }
             ]
@@ -9238,7 +9238,7 @@
             ],
             "metricValues": [
               {
-                "value": "138",
+                "value": "139",
                 "oneValue": "value"
               }
             ]
@@ -9337,7 +9337,7 @@
             ],
             "metricValues": [
               {
-                "value": "132",
+                "value": "133",
                 "oneValue": "value"
               }
             ]
@@ -9450,7 +9450,7 @@
             ],
             "metricValues": [
               {
-                "value": "53",
+                "value": "54",
                 "oneValue": "value"
               }
             ]
@@ -9602,7 +9602,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 204,
+        "rowCount": 205,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9701,7 +9701,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 165,
+        "rowCount": 166,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9791,7 +9791,7 @@
             ],
             "metricValues": [
               {
-                "value": "15",
+                "value": "16",
                 "oneValue": "value"
               }
             ]
@@ -9823,105 +9823,6 @@
         "metricHeaders": [
           {
             "name": "activeUsers",
-            "type": "TYPE_INTEGER"
-          }
-        ],
-        "rows": [
-          {
-            "dimensionValues": [
-              {
-                "value": "English",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "513",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Chinese",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "3",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "French",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "2",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Spanish",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "2",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Hungarian",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "1",
-                "oneValue": "value"
-              }
-            ]
-          }
-        ],
-        "totals": [],
-        "maximums": [],
-        "minimums": [],
-        "rowCount": 9,
-        "metadata": {
-          "samplingMetadatas": [],
-          "dataLossFromOtherRow": false,
-          "currencyCode": "USD",
-          "_currencyCode": "currencyCode",
-          "timeZone": "America/New_York",
-          "_timeZone": "timeZone"
-        },
-        "propertyQuota": null,
-        "kind": "analyticsData#runReport"
-      },
-      {
-        "dimensionHeaders": [
-          {
-            "name": "language"
-          }
-        ],
-        "metricHeaders": [
-          {
-            "name": "newUsers",
             "type": "TYPE_INTEGER"
           }
         ],
@@ -10020,6 +9921,105 @@
         ],
         "metricHeaders": [
           {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [
+              {
+                "value": "English",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "515",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Chinese",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "3",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "French",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "2",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Spanish",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "2",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Hungarian",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "1",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 9,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/New_York",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [
+          {
+            "name": "language"
+          }
+        ],
+        "metricHeaders": [
+          {
             "name": "engagedSessions",
             "type": "TYPE_INTEGER"
           }
@@ -10034,7 +10034,7 @@
             ],
             "metricValues": [
               {
-                "value": "676",
+                "value": "677",
                 "oneValue": "value"
               }
             ]
@@ -10149,7 +10149,7 @@
             ],
             "metricValues": [
               {
-                "value": "109",
+                "value": "110",
                 "oneValue": "value"
               }
             ]
@@ -10206,7 +10206,7 @@
             ],
             "metricValues": [
               {
-                "value": "109",
+                "value": "110",
                 "oneValue": "value"
               }
             ]
@@ -10249,7 +10249,7 @@
             ],
             "metricValues": [
               {
-                "value": "635",
+                "value": "636",
                 "oneValue": "value"
               }
             ]
@@ -10350,7 +10350,7 @@
             ],
             "metricValues": [
               {
-                "value": "16",
+                "value": "17",
                 "oneValue": "value"
               }
             ]
@@ -10449,7 +10449,7 @@
             ],
             "metricValues": [
               {
-                "value": "16",
+                "value": "17",
                 "oneValue": "value"
               }
             ]
@@ -10506,7 +10506,7 @@
             ],
             "metricValues": [
               {
-                "value": "387",
+                "value": "388",
                 "oneValue": "value"
               }
             ]
