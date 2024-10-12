@@ -571,21 +571,21 @@
     },
     "topContinents": {
       "byActiveUsers": {
-        "Americas": 491,
-        "Europe": 23,
+        "Americas": 493,
+        "Europe": 24,
         "Asia": 12,
         "(not set)": 3,
         "Africa": 1
       },
       "byNewUsers": {
-        "Americas": 490,
+        "Americas": 492,
         "Europe": 24,
         "Asia": 12,
         "(not set)": 3,
         "Africa": 1
       },
       "byEngagedSessions": {
-        "Americas": 682,
+        "Americas": 701,
         "Europe": 13,
         "Asia": 4,
         "Africa": 1
@@ -593,21 +593,21 @@
     },
     "topCountries": {
       "byActiveUsers": {
-        "United States": 488,
+        "United States": 490,
         "India": 5,
         "Singapore": 5,
         "France": 4,
-        "United Kingdom": 4
+        "Italy": 4
       },
       "byNewUsers": {
-        "United States": 487,
+        "United States": 489,
         "India": 5,
         "Singapore": 5,
         "France": 4,
         "United Kingdom": 4
       },
       "byEngagedSessions": {
-        "United States": 681,
+        "United States": 700,
         "Italy": 4,
         "India": 3,
         "United Kingdom": 3,
@@ -617,7 +617,7 @@
     "topRegions": {
       "byActiveUsers": {
         "California": 139,
-        "Colorado": 56,
+        "Colorado": 57,
         "Virginia": 48,
         "Washington": 32,
         "Wyoming": 31
@@ -631,8 +631,8 @@
       },
       "byEngagedSessions": {
         "California": 395,
-        "Colorado": 60,
-        "Maryland": 55,
+        "Colorado": 72,
+        "Maryland": 62,
         "Virginia": 34,
         "North Carolina": 17
       }
@@ -641,9 +641,9 @@
       "byActiveUsers": {
         "Irvine": 80,
         "Cheyenne": 30,
+        "(not set)": 27,
         "Ashburn": 27,
-        "(not set)": 26,
-        "Moses Lake": 23
+        "Denver": 24
       },
       "byNewUsers": {
         "Irvine": 79,
@@ -654,29 +654,29 @@
       },
       "byEngagedSessions": {
         "Irvine": 335,
-        "Ellicott City": 34,
+        "Ellicott City": 39,
         "Los Angeles": 24,
         "Richmond": 24,
-        "Aurora": 17
+        "Aurora": 21
       }
     },
     "topLanguages": {
       "byActiveUsers": {
-        "English": 518,
+        "English": 520,
         "Chinese": 3,
         "French": 2,
         "Spanish": 2,
         "Hungarian": 1
       },
       "byNewUsers": {
-        "English": 519,
+        "English": 521,
         "Chinese": 3,
         "French": 2,
         "Spanish": 2,
         "Hungarian": 1
       },
       "byEngagedSessions": {
-        "English": 689,
+        "English": 708,
         "Chinese": 4,
         "French": 2,
         "Hungarian": 1,
@@ -685,36 +685,36 @@
     },
     "topDevices": {
       "byActiveUsers": {
-        "desktop": 420,
+        "desktop": 422,
         "mobile": 110
       },
       "byNewUsers": {
-        "desktop": 421,
+        "desktop": 423,
         "mobile": 110
       },
       "byEngagedSessions": {
-        "desktop": 648,
+        "desktop": 667,
         "mobile": 51
       }
     },
     "topOSes": {
       "byActiveUsers": {
         "Windows": 256,
-        "Macintosh": 154,
+        "Macintosh": 156,
         "iOS": 93,
         "Android": 17,
         "Linux": 10
       },
       "byNewUsers": {
         "Windows": 257,
-        "Macintosh": 154,
+        "Macintosh": 156,
         "iOS": 93,
         "Android": 17,
         "Linux": 10
       },
       "byEngagedSessions": {
-        "Windows": 388,
-        "Macintosh": 253,
+        "Windows": 390,
+        "Macintosh": 270,
         "iOS": 42,
         "Android": 9,
         "Linux": 7
