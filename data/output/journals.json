@@ -136,16 +136,6 @@
     "issns": []
   },
   {
-    "id": "Nat Protoc",
-    "name": "Nature Protocols",
-    "rank": 7.419,
-    "issns": [
-      "17502799",
-      "17542189",
-      "17502799"
-    ]
-  },
-  {
     "id": "J Proteome Res",
     "name": "Journal of Proteome Research",
     "rank": 1.299,
@@ -153,6 +143,16 @@
       "15353893",
       "15353907",
       "15353893"
+    ]
+  },
+  {
+    "id": "Nat Protoc",
+    "name": "Nature Protocols",
+    "rank": 7.419,
+    "issns": [
+      "17502799",
+      "17542189",
+      "17502799"
     ]
   },
   {
@@ -186,6 +186,15 @@
     ]
   },
   {
+    "id": "Front Aging",
+    "name": "Frontiers in Aging",
+    "rank": 1.062,
+    "issns": [
+      "26736217",
+      "26736217"
+    ]
+  },
+  {
     "id": "Mol Cell Proteomics",
     "name": "Molecular and Cellular Proteomics",
     "rank": 2.348,
@@ -196,12 +205,13 @@
     ]
   },
   {
-    "id": "Front Aging",
-    "name": "Frontiers in Aging",
-    "rank": 1.062,
+    "id": "Nat Genet",
+    "name": "Nature Genetics",
+    "rank": 17.3,
     "issns": [
-      "26736217",
-      "26736217"
+      "10614036",
+      "15461718",
+      "10614036"
     ]
   },
   {
@@ -223,13 +233,13 @@
     ]
   },
   {
-    "id": "Nat Genet",
-    "name": "Nature Genetics",
-    "rank": 17.3,
+    "id": "Stat Med",
+    "name": "Statistics in Medicine",
+    "rank": 1.348,
     "issns": [
-      "10614036",
-      "15461718",
-      "10614036"
+      "02776715",
+      "10970258",
+      "02776715"
     ]
   },
   {
@@ -240,16 +250,6 @@
       "00280836",
       "14764687",
       "00280836"
-    ]
-  },
-  {
-    "id": "Stat Med",
-    "name": "Statistics in Medicine",
-    "rank": 1.348,
-    "issns": [
-      "02776715",
-      "10970258",
-      "02776715"
     ]
   },
   {
@@ -300,6 +300,12 @@
     ]
   },
   {
+    "id": "Chem Commun (Camb)",
+    "name": "Chem Commun (Camb)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "J Control Release",
     "name": "Journal of Controlled Release",
     "rank": 2.157,
@@ -308,12 +314,6 @@
       "18734995",
       "01683659"
     ]
-  },
-  {
-    "id": "Chem Commun (Camb)",
-    "name": "Chem Commun (Camb)",
-    "rank": 0,
-    "issns": []
   },
   {
     "id": "Cancer Metastasis Rev",
@@ -356,6 +356,15 @@
     ]
   },
   {
+    "id": "Sci Rep",
+    "name": "Scientific Reports",
+    "rank": 0.9,
+    "issns": [
+      "20452322",
+      "20452322"
+    ]
+  },
+  {
     "id": "Dis Model Mech",
     "name": "DMM Disease Models and Mechanisms",
     "rank": 1.361,
@@ -363,15 +372,6 @@
       "17548403",
       "17548411",
       "17548403"
-    ]
-  },
-  {
-    "id": "Sci Rep",
-    "name": "Scientific Reports",
-    "rank": 0.9,
-    "issns": [
-      "20452322",
-      "20452322"
     ]
   },
   {
@@ -404,6 +404,12 @@
     ]
   },
   {
+    "id": "Cancer Rep (Hoboken)",
+    "name": "Cancer Rep (Hoboken)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "BMC Pharmacol Toxicol",
     "name": "BMC pharmacology &amp; toxicology",
     "rank": 0.71,
@@ -411,12 +417,6 @@
       "20506511",
       "20506511"
     ]
-  },
-  {
-    "id": "Cancer Rep (Hoboken)",
-    "name": "Cancer Rep (Hoboken)",
-    "rank": 0,
-    "issns": []
   },
   {
     "id": "FEBS Open Bio",
@@ -475,6 +475,12 @@
     ]
   },
   {
+    "id": "Commun Med (Lond)",
+    "name": "Commun Med (Lond)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "PeerJ",
     "name": "PeerJ",
     "rank": 0.623,
@@ -482,12 +488,6 @@
       "21678359",
       "21678359"
     ]
-  },
-  {
-    "id": "Commun Med (Lond)",
-    "name": "Commun Med (Lond)",
-    "rank": 0,
-    "issns": []
   },
   {
     "id": "Cancers (Basel)",
@@ -541,20 +541,20 @@
     ]
   },
   {
+    "id": "Cell Rep",
+    "name": "Cell Reports",
+    "rank": 4.279,
+    "issns": [
+      "22111247"
+    ]
+  },
+  {
     "id": "Front Microbiol",
     "name": "Frontiers in Microbiology",
     "rank": 1.065,
     "issns": [
       "1664302",
       "1664302"
-    ]
-  },
-  {
-    "id": "Cell Rep",
-    "name": "Cell Reports",
-    "rank": 4.279,
-    "issns": [
-      "22111247"
     ]
   },
   {
@@ -587,6 +587,12 @@
     ]
   },
   {
+    "id": "Front Endocrinol (Lausanne)",
+    "name": "Front Endocrinol (Lausanne)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "Biophys J",
     "name": "Biophysical Journal",
     "rank": 1.188,
@@ -595,12 +601,6 @@
       "15420086",
       "00063495"
     ]
-  },
-  {
-    "id": "Front Endocrinol (Lausanne)",
-    "name": "Front Endocrinol (Lausanne)",
-    "rank": 0,
-    "issns": []
   },
   {
     "id": "Toxicol Sci",
@@ -613,21 +613,21 @@
     ]
   },
   {
+    "id": "Elife",
+    "name": "eLife",
+    "rank": 3.932,
+    "issns": [
+      "2050084",
+      "2050084"
+    ]
+  },
+  {
     "id": "Int J Tryptophan Res",
     "name": "International Journal of Tryptophan Research",
     "rank": 1.004,
     "issns": [
       "11786469",
       "11786469"
-    ]
-  },
-  {
-    "id": "J Alzheimers Dis Rep",
-    "name": "Journal of Alzheimer's Disease Reports",
-    "rank": 0.635,
-    "issns": [
-      "25424823",
-      "25424823"
     ]
   },
   {
@@ -640,12 +640,12 @@
     ]
   },
   {
-    "id": "Elife",
-    "name": "eLife",
-    "rank": 3.932,
+    "id": "J Alzheimers Dis Rep",
+    "name": "Journal of Alzheimer's Disease Reports",
+    "rank": 0.635,
     "issns": [
-      "2050084",
-      "2050084"
+      "25424823",
+      "25424823"
     ]
   },
   {
