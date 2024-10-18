@@ -17,6 +17,28 @@
     "citationsPerYear": 0
   },
   {
+    "id": 38712147,
+    "coreProject": "R03OD036499",
+    "application": 10777089,
+    "title": "Discovery of optimal cell type classification marker genes from single cell RNA sequencing data.",
+    "authors": [
+      "Angela Liu",
+      "Beverly Peng",
+      "Ajith V Pankajam",
+      "Thu Elizabeth Duong",
+      "Gloria Pryhuber",
+      "Richard H Scheuermann",
+      "Yun Zhang"
+    ],
+    "journal": "bioRxiv",
+    "year": 2024,
+    "modified": "2024-09-28T20:41:25.000Z",
+    "doi": "10.1101/2024.04.22.590194",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 38826261,
     "coreProject": "R03OD036499",
     "application": 10777089,
@@ -52,32 +74,10 @@
     "citationsPerYear": 0
   },
   {
-    "id": 38712147,
-    "coreProject": "R03OD036499",
-    "application": 10777089,
-    "title": "Discovery of optimal cell type classification marker genes from single cell RNA sequencing data.",
-    "authors": [
-      "Angela Liu",
-      "Beverly Peng",
-      "Ajith V Pankajam",
-      "Thu Elizabeth Duong",
-      "Gloria Pryhuber",
-      "Richard H Scheuermann",
-      "Yun Zhang"
-    ],
-    "journal": "bioRxiv",
-    "year": 2024,
-    "modified": "2024-09-28T20:41:25.000Z",
-    "doi": "10.1101/2024.04.22.590194",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
     "id": 39149264,
     "coreProject": "R03OD036498",
     "application": 10774404,
-    "title": "Characterization of aberrant splicing in pediatric central nervous system tumors reveals CLK1 as a candidate oncogenic dependency.",
+    "title": "Characterization of aberrant splicing in pediatric central nervous system tumors reveals <i>CLK1</i> as a candidate oncogenic dependency.",
     "authors": [
       "Ammar S Naqvi",
       "Ryan J Corbett",
@@ -89,7 +89,7 @@
       "Bo Zhang",
       "Miguel A Brown",
       "Daniel P Miller",
-      "Adam Kraya",
+      "Adam A Kraya",
       "Joseph M Dybas",
       "Zhuangzhuang Geng",
       "Christopher Blackden",
@@ -99,7 +99,7 @@
       "Madison L Hollawell",
       "Phillip B Storm",
       "Jessica B Foster",
-      "Matuesz Koptyra",
+      "Mateusz Koptyra",
       "Peter J Madsen",
       "Sharon J Diskin",
       "Andrei Thomas-Tikhonenko",
@@ -108,7 +108,7 @@
     ],
     "journal": "bioRxiv",
     "year": 2024,
-    "modified": "2024-10-08T05:45:28.000Z",
+    "modified": "2024-10-18T00:09:05.000Z",
     "doi": "10.1101/2024.08.03.606419",
     "relativeCitationRatio": 0,
     "citations": 0,
@@ -334,7 +334,7 @@
     ],
     "journal": "Res Sq",
     "year": 2023,
-    "modified": "2024-09-28T20:35:15.000Z",
+    "modified": "2024-10-17T23:58:53.000Z",
     "doi": "10.21203/rs.3.rs-2662020/v1",
     "relativeCitationRatio": 0,
     "citations": 0,
@@ -469,29 +469,24 @@
     "citationsPerYear": 1
   },
   {
-    "id": 37657444,
+    "id": 36866271,
     "coreProject": "R03OD034496",
     "application": 10564098,
-    "title": "Single-nucleus multiomic mapping of m<sup>6</sup>A methylomes and transcriptomes in native populations of cells with sn-m6A-CT.",
+    "title": "Manifold epigenetics: A conceptual model that guides engineering strategies to improve whole-body regenerative health.",
     "authors": [
-      "Kiyofumi Hamashima",
-      "Ka Wai Wong",
-      "Tsz Wing Sam",
-      "Jia Hao Jackie Teo",
-      "Reshma Taneja",
-      "Minh T N Le",
-      "Qi-Jing Li",
-      "Jacob H Hanna",
-      "Hu Li",
-      "Yuin-Han Loh"
+      "Choong Yong Ung",
+      "Cristina Correia",
+      "Daniel Denis Billadeau",
+      "Shizhen Zhu",
+      "Hu Li"
     ],
-    "journal": "Mol Cell",
+    "journal": "Front Cell Dev Biol",
     "year": 2023,
-    "modified": "2024-09-28T21:13:30.000Z",
-    "doi": "10.1016/j.molcel.2023.08.010",
+    "modified": "2024-09-28T20:31:07.000Z",
+    "doi": "10.3389/fcell.2023.1122422",
     "relativeCitationRatio": 0,
-    "citations": 3,
-    "citationsPerYear": 3
+    "citations": 0,
+    "citationsPerYear": 0
   },
   {
     "id": 37242535,
@@ -520,26 +515,6 @@
     "citationsPerYear": 1
   },
   {
-    "id": 36866271,
-    "coreProject": "R03OD034496",
-    "application": 10564098,
-    "title": "Manifold epigenetics: A conceptual model that guides engineering strategies to improve whole-body regenerative health.",
-    "authors": [
-      "Choong Yong Ung",
-      "Cristina Correia",
-      "Daniel Denis Billadeau",
-      "Shizhen Zhu",
-      "Hu Li"
-    ],
-    "journal": "Front Cell Dev Biol",
-    "year": 2023,
-    "modified": "2024-09-28T20:31:07.000Z",
-    "doi": "10.3389/fcell.2023.1122422",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
     "id": 37967790,
     "coreProject": "R03OD034496",
     "application": 10564098,
@@ -559,6 +534,31 @@
     "relativeCitationRatio": 0,
     "citations": 1,
     "citationsPerYear": 1
+  },
+  {
+    "id": 37657444,
+    "coreProject": "R03OD034496",
+    "application": 10564098,
+    "title": "Single-nucleus multiomic mapping of m<sup>6</sup>A methylomes and transcriptomes in native populations of cells with sn-m6A-CT.",
+    "authors": [
+      "Kiyofumi Hamashima",
+      "Ka Wai Wong",
+      "Tsz Wing Sam",
+      "Jia Hao Jackie Teo",
+      "Reshma Taneja",
+      "Minh T N Le",
+      "Qi-Jing Li",
+      "Jacob H Hanna",
+      "Hu Li",
+      "Yuin-Han Loh"
+    ],
+    "journal": "Mol Cell",
+    "year": 2023,
+    "modified": "2024-09-28T21:13:30.000Z",
+    "doi": "10.1016/j.molcel.2023.08.010",
+    "relativeCitationRatio": 0,
+    "citations": 3,
+    "citationsPerYear": 3
   },
   {
     "id": 39149248,
@@ -787,24 +787,6 @@
     "citationsPerYear": 3
   },
   {
-    "id": 35821831,
-    "coreProject": "R03OD032666",
-    "application": 10356548,
-    "title": "Defining the Roles of Cardiokines in Human Aging and Age-Associated Diseases.",
-    "authors": [
-      "Himangi Srivastava",
-      "Marina Pozzoli",
-      "Edward Lau"
-    ],
-    "journal": "Front Aging",
-    "year": 2022,
-    "modified": "2024-09-28T21:04:24.000Z",
-    "doi": "10.3389/fragi.2022.884321",
-    "relativeCitationRatio": 0.8,
-    "citations": 4,
-    "citationsPerYear": 2
-  },
-  {
     "id": 35930447,
     "coreProject": "R03OD032666",
     "application": 10356548,
@@ -824,6 +806,24 @@
     "relativeCitationRatio": 2.22,
     "citations": 14,
     "citationsPerYear": 7
+  },
+  {
+    "id": 35821831,
+    "coreProject": "R03OD032666",
+    "application": 10356548,
+    "title": "Defining the Roles of Cardiokines in Human Aging and Age-Associated Diseases.",
+    "authors": [
+      "Himangi Srivastava",
+      "Marina Pozzoli",
+      "Edward Lau"
+    ],
+    "journal": "Front Aging",
+    "year": 2022,
+    "modified": "2024-09-28T21:04:24.000Z",
+    "doi": "10.3389/fragi.2022.884321",
+    "relativeCitationRatio": 0.8,
+    "citations": 4,
+    "citationsPerYear": 2
   },
   {
     "id": 30643251,
@@ -1069,27 +1069,6 @@
     "citationsPerYear": 6
   },
   {
-    "id": 35833142,
-    "coreProject": "R03OD032630",
-    "application": 10357165,
-    "title": "Construction and Application of Polygenic Risk Scores in Autoimmune Diseases.",
-    "authors": [
-      "Chachrit Khunsriraksakul",
-      "Havell Markus",
-      "Nancy J Olsen",
-      "Laura Carrel",
-      "Bibo Jiang",
-      "Dajiang J Liu"
-    ],
-    "journal": "Front Immunol",
-    "year": 2022,
-    "modified": "2024-09-28T21:04:39.000Z",
-    "doi": "10.3389/fimmu.2022.889296",
-    "relativeCitationRatio": 0.93,
-    "citations": 7,
-    "citationsPerYear": 3.5
-  },
-  {
     "id": 36702996,
     "coreProject": "R03OD032630",
     "application": 10357165,
@@ -1121,7 +1100,7 @@
       "Adolfo Correa",
       "Joanne E Curran",
       "Sean P David",
-      "Lisa de Las Fuentes",
+      "Lisa de las Fuentes",
       "Ranjan Deka",
       "Ravindranath Duggirala",
       "Jessica D Faul",
@@ -1188,11 +1167,32 @@
     ],
     "journal": "Nat Genet",
     "year": 2023,
-    "modified": "2024-09-28T20:22:00.000Z",
+    "modified": "2024-10-18T00:12:30.000Z",
     "doi": "10.1038/s41588-022-01282-x",
     "relativeCitationRatio": 5.2,
     "citations": 18,
     "citationsPerYear": 18
+  },
+  {
+    "id": 35833142,
+    "coreProject": "R03OD032630",
+    "application": 10357165,
+    "title": "Construction and Application of Polygenic Risk Scores in Autoimmune Diseases.",
+    "authors": [
+      "Chachrit Khunsriraksakul",
+      "Havell Markus",
+      "Nancy J Olsen",
+      "Laura Carrel",
+      "Bibo Jiang",
+      "Dajiang J Liu"
+    ],
+    "journal": "Front Immunol",
+    "year": 2022,
+    "modified": "2024-09-28T21:04:39.000Z",
+    "doi": "10.3389/fimmu.2022.889296",
+    "relativeCitationRatio": 0.93,
+    "citations": 7,
+    "citationsPerYear": 3.5
   },
   {
     "id": 36477530,
@@ -1445,35 +1445,6 @@
     "citationsPerYear": 1
   },
   {
-    "id": 35672318,
-    "coreProject": "R03OD032630",
-    "application": 10357165,
-    "title": "Integrating 3D genomic and epigenomic data to enhance target gene discovery and drug repurposing in transcriptome-wide association studies.",
-    "authors": [
-      "Chachrit Khunsriraksakul",
-      "Daniel McGuire",
-      "Renan Sauteraud",
-      "Fang Chen",
-      "Lina Yang",
-      "Lida Wang",
-      "Jordan Hughey",
-      "Scott Eckert",
-      "J Dylan Weissenkampen",
-      "Ganesh Shenoy",
-      "Olivia Marx",
-      "Laura Carrel",
-      "Bibo Jiang",
-      "Dajiang J Liu"
-    ],
-    "journal": "Nat Commun",
-    "year": 2022,
-    "modified": "2024-09-28T20:55:09.000Z",
-    "doi": "10.1038/s41467-022-30956-7",
-    "relativeCitationRatio": 1.71,
-    "citations": 15,
-    "citationsPerYear": 7.5
-  },
-  {
     "id": 36750564,
     "coreProject": "R03OD032630",
     "application": 10357165,
@@ -1505,6 +1476,35 @@
     "relativeCitationRatio": 3.97,
     "citations": 14,
     "citationsPerYear": 14
+  },
+  {
+    "id": 35672318,
+    "coreProject": "R03OD032630",
+    "application": 10357165,
+    "title": "Integrating 3D genomic and epigenomic data to enhance target gene discovery and drug repurposing in transcriptome-wide association studies.",
+    "authors": [
+      "Chachrit Khunsriraksakul",
+      "Daniel McGuire",
+      "Renan Sauteraud",
+      "Fang Chen",
+      "Lina Yang",
+      "Lida Wang",
+      "Jordan Hughey",
+      "Scott Eckert",
+      "J Dylan Weissenkampen",
+      "Ganesh Shenoy",
+      "Olivia Marx",
+      "Laura Carrel",
+      "Bibo Jiang",
+      "Dajiang J Liu"
+    ],
+    "journal": "Nat Commun",
+    "year": 2022,
+    "modified": "2024-09-28T20:55:09.000Z",
+    "doi": "10.1038/s41467-022-30956-7",
+    "relativeCitationRatio": 1.71,
+    "citations": 15,
+    "citationsPerYear": 7.5
   },
   {
     "id": 36802342,
@@ -1579,49 +1579,6 @@
     "citationsPerYear": 14.5
   },
   {
-    "id": 38446352,
-    "coreProject": "R03OD032624",
-    "application": 10357502,
-    "title": "Liver fibrosis pathologies and potentials of RNA based therapeutics modalities.",
-    "authors": [
-      "Rimpy Diwan",
-      "Samantha Lynn Gaytan",
-      "Himanshu Narendrakumar Bhatt",
-      "Jacqueline Pena-Zacarias",
-      "Md Nurunnabi"
-    ],
-    "journal": "Drug Deliv Transl Res",
-    "year": 2024,
-    "modified": "2024-09-28T20:26:41.000Z",
-    "doi": "10.1007/s13346-024-01551-8",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
-    "id": 37562554,
-    "coreProject": "R03OD032624",
-    "application": 10357502,
-    "title": "A photothermal driven chemotherapy for the treatment of metastatic melanoma.",
-    "authors": [
-      "Himanshu N Bhatt",
-      "Rimpy Diwan",
-      "Edgar A Borrego",
-      "Carlos Alberto Martínez Pérez",
-      "Armando Varela-Ramirez",
-      "Raj Kumar",
-      "Renato J Aguilera",
-      "Md Nurunnabi"
-    ],
-    "journal": "J Control Release",
-    "year": 2023,
-    "modified": "2024-09-28T21:09:17.000Z",
-    "doi": "10.1016/j.jconrel.2023.08.005",
-    "relativeCitationRatio": 0,
-    "citations": 2,
-    "citationsPerYear": 2
-  },
-  {
     "id": 36971908,
     "coreProject": "R03OD032624",
     "application": 10357502,
@@ -1684,6 +1641,49 @@
     "citationsPerYear": 4
   },
   {
+    "id": 38446352,
+    "coreProject": "R03OD032624",
+    "application": 10357502,
+    "title": "Liver fibrosis pathologies and potentials of RNA based therapeutics modalities.",
+    "authors": [
+      "Rimpy Diwan",
+      "Samantha Lynn Gaytan",
+      "Himanshu Narendrakumar Bhatt",
+      "Jacqueline Pena-Zacarias",
+      "Md Nurunnabi"
+    ],
+    "journal": "Drug Deliv Transl Res",
+    "year": 2024,
+    "modified": "2024-09-28T20:26:41.000Z",
+    "doi": "10.1007/s13346-024-01551-8",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
+    "id": 37562554,
+    "coreProject": "R03OD032624",
+    "application": 10357502,
+    "title": "A photothermal driven chemotherapy for the treatment of metastatic melanoma.",
+    "authors": [
+      "Himanshu N Bhatt",
+      "Rimpy Diwan",
+      "Edgar A Borrego",
+      "Carlos Alberto Martínez Pérez",
+      "Armando Varela-Ramirez",
+      "Raj Kumar",
+      "Renato J Aguilera",
+      "Md Nurunnabi"
+    ],
+    "journal": "J Control Release",
+    "year": 2023,
+    "modified": "2024-09-28T21:09:17.000Z",
+    "doi": "10.1016/j.jconrel.2023.08.005",
+    "relativeCitationRatio": 0,
+    "citations": 2,
+    "citationsPerYear": 2
+  },
+  {
     "id": 38104896,
     "coreProject": "R03OD032624",
     "application": 10357502,
@@ -1728,24 +1728,6 @@
     "citationsPerYear": 5
   },
   {
-    "id": 36116580,
-    "coreProject": "R03OD032624",
-    "application": 10357502,
-    "title": "Mucoadhesive carriers for oral drug delivery.",
-    "authors": [
-      "Raj Kumar",
-      "Tamanna Islam",
-      "Md Nurunnabi"
-    ],
-    "journal": "J Control Release",
-    "year": 2022,
-    "modified": "2024-09-28T21:19:40.000Z",
-    "doi": "10.1016/j.jconrel.2022.09.024",
-    "relativeCitationRatio": 5.13,
-    "citations": 22,
-    "citationsPerYear": 11
-  },
-  {
     "id": 37350332,
     "coreProject": "R03OD032624",
     "application": 10357502,
@@ -1769,26 +1751,22 @@
     "citationsPerYear": 3
   },
   {
-    "id": 37554053,
+    "id": 36116580,
     "coreProject": "R03OD032624",
     "application": 10357502,
-    "title": "Carbon Coated Iron-Cobalt Nanoparticles for Magnetic Particle Imaging.",
+    "title": "Mucoadhesive carriers for oral drug delivery.",
     "authors": [
       "Raj Kumar",
-      "Md Nurul Huda",
-      "Ahsan Habib",
-      "Md Nafiujjaman",
-      "Hyun-Joo Woo",
-      "Taeho Kim",
+      "Tamanna Islam",
       "Md Nurunnabi"
     ],
-    "journal": "ACS Appl Bio Mater",
-    "year": 2023,
-    "modified": "2024-09-28T21:08:56.000Z",
-    "doi": "10.1021/acsabm.3c00354",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
+    "journal": "J Control Release",
+    "year": 2022,
+    "modified": "2024-09-28T21:19:40.000Z",
+    "doi": "10.1016/j.jconrel.2022.09.024",
+    "relativeCitationRatio": 5.13,
+    "citations": 22,
+    "citationsPerYear": 11
   },
   {
     "id": 36753355,
@@ -1811,6 +1789,28 @@
     "relativeCitationRatio": 0,
     "citations": 2,
     "citationsPerYear": 2
+  },
+  {
+    "id": 37554053,
+    "coreProject": "R03OD032624",
+    "application": 10357502,
+    "title": "Carbon Coated Iron-Cobalt Nanoparticles for Magnetic Particle Imaging.",
+    "authors": [
+      "Raj Kumar",
+      "Md Nurul Huda",
+      "Ahsan Habib",
+      "Md Nafiujjaman",
+      "Hyun-Joo Woo",
+      "Taeho Kim",
+      "Md Nurunnabi"
+    ],
+    "journal": "ACS Appl Bio Mater",
+    "year": 2023,
+    "modified": "2024-09-28T21:08:56.000Z",
+    "doi": "10.1021/acsabm.3c00354",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
   },
   {
     "id": 38214231,
@@ -2066,7 +2066,7 @@
     ],
     "journal": "Nat Genet",
     "year": 2023,
-    "modified": "2024-09-28T20:16:37.000Z",
+    "modified": "2024-10-18T00:12:30.000Z",
     "doi": "10.1038/s41588-022-01225-6",
     "relativeCitationRatio": 4.34,
     "citations": 18,
@@ -2149,7 +2149,7 @@
     ],
     "journal": "Nat Methods",
     "year": 2022,
-    "modified": "2024-09-28T21:29:25.000Z",
+    "modified": "2024-10-18T00:12:30.000Z",
     "doi": "10.1038/s41592-022-01640-x",
     "relativeCitationRatio": 4.1,
     "citations": 39,
@@ -2182,25 +2182,6 @@
     "citationsPerYear": 1
   },
   {
-    "id": 37090499,
-    "coreProject": "R03OD030604",
-    "application": 10105688,
-    "title": "Evaluating cancer cell line and patient-derived xenograft recapitulation of tumor and non-diseased tissue gene expression profiles <i>in silico</i>.",
-    "authors": [
-      "Avery S Williams",
-      "Elizabeth J Wilk",
-      "Jennifer L Fisher",
-      "Brittany N Lasseigne"
-    ],
-    "journal": "bioRxiv",
-    "year": 2023,
-    "modified": "2024-09-28T20:43:07.000Z",
-    "doi": "10.1101/2023.04.11.536431",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
     "id": 36602970,
     "coreProject": "R03OD030604",
     "application": 10105688,
@@ -2227,6 +2208,25 @@
     "citationsPerYear": 2
   },
   {
+    "id": 37090499,
+    "coreProject": "R03OD030604",
+    "application": 10105688,
+    "title": "Evaluating cancer cell line and patient-derived xenograft recapitulation of tumor and non-diseased tissue gene expression profiles <i>in silico</i>.",
+    "authors": [
+      "Avery S Williams",
+      "Elizabeth J Wilk",
+      "Jennifer L Fisher",
+      "Brittany N Lasseigne"
+    ],
+    "journal": "bioRxiv",
+    "year": 2023,
+    "modified": "2024-09-28T20:43:07.000Z",
+    "doi": "10.1101/2023.04.11.536431",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 37362157,
     "coreProject": "R03OD030604",
     "application": 10105688,
@@ -2239,7 +2239,7 @@
     ],
     "journal": "bioRxiv",
     "year": 2023,
-    "modified": "2024-09-28T20:58:07.000Z",
+    "modified": "2024-10-17T23:57:24.000Z",
     "doi": "10.1101/2023.05.23.541950",
     "relativeCitationRatio": 0,
     "citations": 0,
@@ -2641,7 +2641,7 @@
     ],
     "journal": "PeerJ",
     "year": 2023,
-    "modified": "2024-09-28T21:25:43.000Z",
+    "modified": "2024-10-17T23:56:03.000Z",
     "doi": "10.7717/peerj.16351",
     "relativeCitationRatio": 0,
     "citations": 0,
@@ -3108,34 +3108,6 @@
     "citationsPerYear": 15
   },
   {
-    "id": 38165806,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Metabolic reprogramming by histone deacetylase inhibition preferentially targets NRF2-activated tumors.",
-    "authors": [
-      "Dimitris Karagiannis",
-      "Warren Wu",
-      "Albert Li",
-      "Makiko Hayashi",
-      "Xiao Chen",
-      "Michaela Yip",
-      "Vaibhav Mangipudy",
-      "Xinjing Xu",
-      "Francisco J Sánchez-Rivera",
-      "Yadira M Soto-Feliciano",
-      "Jiangbin Ye",
-      "Thales Papagiannakopoulos",
-      "Chao Lu"
-    ],
-    "journal": "Cell Rep",
-    "year": 2024,
-    "modified": "2024-09-28T20:13:34.000Z",
-    "doi": "10.1016/j.celrep.2023.113629",
-    "relativeCitationRatio": 0,
-    "citations": 2,
-    "citationsPerYear": 2
-  },
-  {
     "id": 37515770,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3193,6 +3165,44 @@
     "citationsPerYear": 0
   },
   {
+    "id": 37349305,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Defining diurnal fluctuations in mouse choroid plexus and CSF at high molecular, spatial, and temporal resolution.",
+    "authors": [
+      "Ryann M Fame",
+      "Peter N Kalugin",
+      "Boryana Petrova",
+      "Huixin Xu",
+      "Paul A Soden",
+      "Frederick B Shipley",
+      "Neil Dani",
+      "Bradford Grant",
+      "Aja Pragana",
+      "Joshua P Head",
+      "Suhasini Gupta",
+      "Morgan L Shannon",
+      "Fortunate F Chifamba",
+      "Hannah Hawks-Mayer",
+      "Amanda Vernon",
+      "Fan Gao",
+      "Yong Zhang",
+      "Michael J Holtzman",
+      "Myriam Heiman",
+      "Mark L Andermann",
+      "Naama Kanarek",
+      "Jonathan O Lipton",
+      "Maria K Lehtinen"
+    ],
+    "journal": "Nat Commun",
+    "year": 2023,
+    "modified": "2024-09-28T20:57:12.000Z",
+    "doi": "10.1038/s41467-023-39326-3",
+    "relativeCitationRatio": 3.37,
+    "citations": 10,
+    "citationsPerYear": 10
+  },
+  {
     "id": 37983749,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3235,42 +3245,32 @@
     "citationsPerYear": 0
   },
   {
-    "id": 37349305,
+    "id": 38165806,
     "coreProject": "OT2OD030544",
     "application": 11090253,
-    "title": "Defining diurnal fluctuations in mouse choroid plexus and CSF at high molecular, spatial, and temporal resolution.",
+    "title": "Metabolic reprogramming by histone deacetylase inhibition preferentially targets NRF2-activated tumors.",
     "authors": [
-      "Ryann M Fame",
-      "Peter N Kalugin",
-      "Boryana Petrova",
-      "Huixin Xu",
-      "Paul A Soden",
-      "Frederick B Shipley",
-      "Neil Dani",
-      "Bradford Grant",
-      "Aja Pragana",
-      "Joshua P Head",
-      "Suhasini Gupta",
-      "Morgan L Shannon",
-      "Fortunate F Chifamba",
-      "Hannah Hawks-Mayer",
-      "Amanda Vernon",
-      "Fan Gao",
-      "Yong Zhang",
-      "Michael J Holtzman",
-      "Myriam Heiman",
-      "Mark L Andermann",
-      "Naama Kanarek",
-      "Jonathan O Lipton",
-      "Maria K Lehtinen"
+      "Dimitris Karagiannis",
+      "Warren Wu",
+      "Albert Li",
+      "Makiko Hayashi",
+      "Xiao Chen",
+      "Michaela Yip",
+      "Vaibhav Mangipudy",
+      "Xinjing Xu",
+      "Francisco J Sánchez-Rivera",
+      "Yadira M Soto-Feliciano",
+      "Jiangbin Ye",
+      "Thales Papagiannakopoulos",
+      "Chao Lu"
     ],
-    "journal": "Nat Commun",
-    "year": 2023,
-    "modified": "2024-09-28T20:57:12.000Z",
-    "doi": "10.1038/s41467-023-39326-3",
-    "relativeCitationRatio": 3.37,
-    "citations": 10,
-    "citationsPerYear": 10
+    "journal": "Cell Rep",
+    "year": 2024,
+    "modified": "2024-09-28T20:13:34.000Z",
+    "doi": "10.1016/j.celrep.2023.113629",
+    "relativeCitationRatio": 0,
+    "citations": 2,
+    "citationsPerYear": 2
   },
   {
     "id": 38318337,
@@ -3378,53 +3378,6 @@
     "citationsPerYear": 1
   },
   {
-    "id": 38544285,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Repeated exposure to eucalyptus wood smoke alters pulmonary gene and metabolic profiles in male Long-Evans rats.",
-    "authors": [
-      "Samuel J Cochran",
-      "Katelyn Dunigan-Russell",
-      "Grace M Hutton",
-      "Helen Nguyen",
-      "Mette C Schladweiler",
-      "Dean P Jones",
-      "Wanda C Williams",
-      "Anna A Fisher",
-      "M Ian Gilmour",
-      "Janice A Dye",
-      "M Ryan Smith",
-      "Colette N Miller",
-      "Kymberly M Gowdy"
-    ],
-    "journal": "Toxicol Sci",
-    "year": 2024,
-    "modified": "2024-09-28T20:32:01.000Z",
-    "doi": "10.1093/toxsci/kfae040",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
-    "id": 38826219,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Single-cell transcriptomics reveals stage- and side-specificity of gene modules in colorectal cancer.",
-    "authors": [
-      "Sara Rahiminejad",
-      "Kavitha Mukund",
-      "Mano Ram Maurya",
-      "Shankar Subramaniam"
-    ],
-    "journal": "Res Sq",
-    "year": 2024,
-    "modified": "2024-09-28T20:48:31.000Z",
-    "doi": "10.21203/rs.3.rs-4402565/v1",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
     "id": 35448980,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3473,30 +3426,6 @@
     "citationsPerYear": 6
   },
   {
-    "id": 37798473,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Spatially resolved metabolomics and isotope tracing reveal dynamic metabolic responses of dentate granule neurons with acute stimulation.",
-    "authors": [
-      "Anne Miller",
-      "Elisa M York",
-      "Sylwia A Stopka",
-      "Juan Ramón Martínez-François",
-      "Md Amin Hossain",
-      "Gerard Baquer",
-      "Michael S Regan",
-      "Nathalie Y R Agar",
-      "Gary Yellen"
-    ],
-    "journal": "Nat Metab",
-    "year": 2023,
-    "modified": "2024-09-28T21:19:32.000Z",
-    "doi": "10.1038/s42255-023-00890-z",
-    "relativeCitationRatio": 3.35,
-    "citations": 10,
-    "citationsPerYear": 10
-  },
-  {
     "id": 38001239,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3525,6 +3454,52 @@
     "citationsPerYear": 2
   },
   {
+    "id": 37798473,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Spatially resolved metabolomics and isotope tracing reveal dynamic metabolic responses of dentate granule neurons with acute stimulation.",
+    "authors": [
+      "Anne Miller",
+      "Elisa M York",
+      "Sylwia A Stopka",
+      "Juan Ramón Martínez-François",
+      "Md Amin Hossain",
+      "Gerard Baquer",
+      "Michael S Regan",
+      "Nathalie Y R Agar",
+      "Gary Yellen"
+    ],
+    "journal": "Nat Metab",
+    "year": 2023,
+    "modified": "2024-09-28T21:19:32.000Z",
+    "doi": "10.1038/s42255-023-00890-z",
+    "relativeCitationRatio": 3.35,
+    "citations": 10,
+    "citationsPerYear": 10
+  },
+  {
+    "id": 38161977,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Gut microbiota and metabolites in estrus cycle and their changes in a menopausal transition rat model with typical neuroendocrine aging.",
+    "authors": [
+      "Ruoxi Dai",
+      "Jianqin Huang",
+      "Liyuan Cui",
+      "Ruiqi Sun",
+      "Xuemin Qiu",
+      "Yan Wang",
+      "Yan Sun"
+    ],
+    "journal": "Front Endocrinol (Lausanne)",
+    "year": 2023,
+    "modified": "2024-09-28T21:32:35.000Z",
+    "doi": "10.3389/fendo.2023.1282694",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 38313293,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3546,23 +3521,48 @@
     "citationsPerYear": 0
   },
   {
-    "id": 38161977,
+    "id": 38544285,
     "coreProject": "OT2OD030544",
     "application": 11090253,
-    "title": "Gut microbiota and metabolites in estrus cycle and their changes in a menopausal transition rat model with typical neuroendocrine aging.",
+    "title": "Repeated exposure to eucalyptus wood smoke alters pulmonary gene and metabolic profiles in male Long-Evans rats.",
     "authors": [
-      "Ruoxi Dai",
-      "Jianqin Huang",
-      "Liyuan Cui",
-      "Ruiqi Sun",
-      "Xuemin Qiu",
-      "Yan Wang",
-      "Yan Sun"
+      "Samuel J Cochran",
+      "Katelyn Dunigan-Russell",
+      "Grace M Hutton",
+      "Helen Nguyen",
+      "Mette C Schladweiler",
+      "Dean P Jones",
+      "Wanda C Williams",
+      "Anna A Fisher",
+      "M Ian Gilmour",
+      "Janice A Dye",
+      "M Ryan Smith",
+      "Colette N Miller",
+      "Kymberly M Gowdy"
     ],
-    "journal": "Front Endocrinol (Lausanne)",
-    "year": 2023,
-    "modified": "2024-09-28T21:32:35.000Z",
-    "doi": "10.3389/fendo.2023.1282694",
+    "journal": "Toxicol Sci",
+    "year": 2024,
+    "modified": "2024-09-28T20:32:01.000Z",
+    "doi": "10.1093/toxsci/kfae040",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
+    "id": 38826219,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Single-cell transcriptomics reveals stage- and side-specificity of gene modules in colorectal cancer.",
+    "authors": [
+      "Sara Rahiminejad",
+      "Kavitha Mukund",
+      "Mano Ram Maurya",
+      "Shankar Subramaniam"
+    ],
+    "journal": "Res Sq",
+    "year": 2024,
+    "modified": "2024-09-28T20:48:31.000Z",
+    "doi": "10.21203/rs.3.rs-4402565/v1",
     "relativeCitationRatio": 0,
     "citations": 0,
     "citationsPerYear": 0
@@ -3643,30 +3643,6 @@
     "citationsPerYear": 0
   },
   {
-    "id": 37398141,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Deficiency of the lipid flippase ATP10A causes diet-induced dyslipidemia in female mice.",
-    "authors": [
-      "Adriana C Norris",
-      "Eugenia M Yazlovitskaya",
-      "Lin Zhu",
-      "Bailey S Rose",
-      "Jody C May",
-      "Katherine N Gibson-Corley",
-      "John A McLean",
-      "John M Stafford",
-      "Todd R Graham"
-    ],
-    "journal": "bioRxiv",
-    "year": 2023,
-    "modified": "2024-09-28T21:00:39.000Z",
-    "doi": "10.1101/2023.06.16.545392",
-    "relativeCitationRatio": 0,
-    "citations": 1,
-    "citationsPerYear": 1
-  },
-  {
     "id": 37452018,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3698,92 +3674,6 @@
     "relativeCitationRatio": 1.77,
     "citations": 6,
     "citationsPerYear": 6
-  },
-  {
-    "id": 37815914,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "MYC is a regulator of androgen receptor inhibition-induced metabolic requirements in prostate cancer.",
-    "authors": [
-      "Preston D Crowell",
-      "Jenna M Giafaglione",
-      "Anthony E Jones",
-      "Nicholas M Nunley",
-      "Takao Hashimoto",
-      "Amelie M L Delcourt",
-      "Anton Petcherski",
-      "Raag Agrawal",
-      "Matthew J Bernard",
-      "Johnny A Diaz",
-      "Kylie Y Heering",
-      "Rong Rong Huang",
-      "Jin-Yih Low",
-      "Nedas Matulionis",
-      "Nora M Navone",
-      "Huihui Ye",
-      "Amina Zoubeidi",
-      "Heather R Christofk",
-      "Matthew B Rettig",
-      "Robert E Reiter",
-      "Michael C Haffner",
-      "Paul C Boutros",
-      "Orian S Shirihai",
-      "Ajit S Divakaruni",
-      "Andrew S Goldstein"
-    ],
-    "journal": "Cell Rep",
-    "year": 2023,
-    "modified": "2024-09-28T21:20:22.000Z",
-    "doi": "10.1016/j.celrep.2023.113221",
-    "relativeCitationRatio": 1.78,
-    "citations": 6,
-    "citationsPerYear": 6
-  },
-  {
-    "id": 38172157,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Deficiency of the lipid flippase ATP10A causes diet-induced dyslipidemia in female mice.",
-    "authors": [
-      "Adriana C Norris",
-      "Eugenia M Yazlovitskaya",
-      "Lin Zhu",
-      "Bailey S Rose",
-      "Jody C May",
-      "Katherine N Gibson-Corley",
-      "John A McLean",
-      "John M Stafford",
-      "Todd R Graham"
-    ],
-    "journal": "Sci Rep",
-    "year": 2024,
-    "modified": "2024-09-28T20:13:50.000Z",
-    "doi": "10.1038/s41598-023-50360-5",
-    "relativeCitationRatio": 0,
-    "citations": 3,
-    "citationsPerYear": 3
-  },
-  {
-    "id": 38102827,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Modeling transcriptional regulation of the cell cycle using a novel cybernetic-inspired approach.",
-    "authors": [
-      "Rubesh Raja",
-      "Sana Khanum",
-      "Lina Aboulmouna",
-      "Mano R Maurya",
-      "Shakti Gupta",
-      "Shankar Subramaniam",
-      "Doraiswami Ramkrishna"
-    ],
-    "journal": "Biophys J",
-    "year": 2024,
-    "modified": "2024-09-28T20:11:59.000Z",
-    "doi": "10.1016/j.bpj.2023.12.010",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
   },
   {
     "id": 38286827,
@@ -3844,6 +3734,116 @@
     "relativeCitationRatio": 0,
     "citations": 4,
     "citationsPerYear": 4
+  },
+  {
+    "id": 37398141,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Deficiency of the lipid flippase ATP10A causes diet-induced dyslipidemia in female mice.",
+    "authors": [
+      "Adriana C Norris",
+      "Eugenia M Yazlovitskaya",
+      "Lin Zhu",
+      "Bailey S Rose",
+      "Jody C May",
+      "Katherine N Gibson-Corley",
+      "John A McLean",
+      "John M Stafford",
+      "Todd R Graham"
+    ],
+    "journal": "bioRxiv",
+    "year": 2023,
+    "modified": "2024-09-28T21:00:39.000Z",
+    "doi": "10.1101/2023.06.16.545392",
+    "relativeCitationRatio": 0,
+    "citations": 1,
+    "citationsPerYear": 1
+  },
+  {
+    "id": 37815914,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "MYC is a regulator of androgen receptor inhibition-induced metabolic requirements in prostate cancer.",
+    "authors": [
+      "Preston D Crowell",
+      "Jenna M Giafaglione",
+      "Anthony E Jones",
+      "Nicholas M Nunley",
+      "Takao Hashimoto",
+      "Amelie M L Delcourt",
+      "Anton Petcherski",
+      "Raag Agrawal",
+      "Matthew J Bernard",
+      "Johnny A Diaz",
+      "Kylie Y Heering",
+      "Rong Rong Huang",
+      "Jin-Yih Low",
+      "Nedas Matulionis",
+      "Nora M Navone",
+      "Huihui Ye",
+      "Amina Zoubeidi",
+      "Heather R Christofk",
+      "Matthew B Rettig",
+      "Robert E Reiter",
+      "Michael C Haffner",
+      "Paul C Boutros",
+      "Orian S Shirihai",
+      "Ajit S Divakaruni",
+      "Andrew S Goldstein"
+    ],
+    "journal": "Cell Rep",
+    "year": 2023,
+    "modified": "2024-09-28T21:20:22.000Z",
+    "doi": "10.1016/j.celrep.2023.113221",
+    "relativeCitationRatio": 1.78,
+    "citations": 6,
+    "citationsPerYear": 6
+  },
+  {
+    "id": 38102827,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Modeling transcriptional regulation of the cell cycle using a novel cybernetic-inspired approach.",
+    "authors": [
+      "Rubesh Raja",
+      "Sana Khanum",
+      "Lina Aboulmouna",
+      "Mano R Maurya",
+      "Shakti Gupta",
+      "Shankar Subramaniam",
+      "Doraiswami Ramkrishna"
+    ],
+    "journal": "Biophys J",
+    "year": 2024,
+    "modified": "2024-09-28T20:11:59.000Z",
+    "doi": "10.1016/j.bpj.2023.12.010",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
+    "id": 38172157,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Deficiency of the lipid flippase ATP10A causes diet-induced dyslipidemia in female mice.",
+    "authors": [
+      "Adriana C Norris",
+      "Eugenia M Yazlovitskaya",
+      "Lin Zhu",
+      "Bailey S Rose",
+      "Jody C May",
+      "Katherine N Gibson-Corley",
+      "John A McLean",
+      "John M Stafford",
+      "Todd R Graham"
+    ],
+    "journal": "Sci Rep",
+    "year": 2024,
+    "modified": "2024-09-28T20:13:50.000Z",
+    "doi": "10.1038/s41598-023-50360-5",
+    "relativeCitationRatio": 0,
+    "citations": 3,
+    "citationsPerYear": 3
   },
   {
     "id": 38926365,
@@ -3926,7 +3926,7 @@
     ],
     "journal": "Nature",
     "year": 2024,
-    "modified": "2024-09-30T05:59:50.000Z",
+    "modified": "2024-10-17T23:51:28.000Z",
     "doi": "10.1038/s41586-024-07812-3",
     "relativeCitationRatio": 0,
     "citations": 0,
@@ -3988,30 +3988,6 @@
     "citationsPerYear": 2
   },
   {
-    "id": 33787872,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "Drugmonizome and Drugmonizome-ML: integration and abstraction of small molecule attributes for drug enrichment analysis and machine learning.",
-    "authors": [
-      "Eryk Kropiwnicki",
-      "John E Evangelista",
-      "Daniel J Stein",
-      "Daniel J B Clarke",
-      "Alexander Lachmann",
-      "Maxim V Kuleshov",
-      "Minji Jeon",
-      "Kathleen M Jagodnik",
-      "Avi Ma'ayan"
-    ],
-    "journal": "Database (Oxford)",
-    "year": 2021,
-    "modified": "2024-09-28T20:39:55.000Z",
-    "doi": "10.1093/database/baab017",
-    "relativeCitationRatio": 1.35,
-    "citations": 14,
-    "citationsPerYear": 4.666666666666667
-  },
-  {
     "id": 35524556,
     "coreProject": "OT2OD030160",
     "application": 11089689,
@@ -4038,6 +4014,30 @@
     "relativeCitationRatio": 4.19,
     "citations": 30,
     "citationsPerYear": 15
+  },
+  {
+    "id": 33787872,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "Drugmonizome and Drugmonizome-ML: integration and abstraction of small molecule attributes for drug enrichment analysis and machine learning.",
+    "authors": [
+      "Eryk Kropiwnicki",
+      "John E Evangelista",
+      "Daniel J Stein",
+      "Daniel J B Clarke",
+      "Alexander Lachmann",
+      "Maxim V Kuleshov",
+      "Minji Jeon",
+      "Kathleen M Jagodnik",
+      "Avi Ma'ayan"
+    ],
+    "journal": "Database (Oxford)",
+    "year": 2021,
+    "modified": "2024-09-28T20:39:55.000Z",
+    "doi": "10.1093/database/baab017",
+    "relativeCitationRatio": 1.35,
+    "citations": 14,
+    "citationsPerYear": 4.666666666666667
   },
   {
     "id": 37082798,
@@ -4098,7 +4098,7 @@
     ],
     "journal": "Nucleic Acids Res",
     "year": 2023,
-    "modified": "2024-09-28T20:47:17.000Z",
+    "modified": "2024-10-18T00:08:03.000Z",
     "doi": "10.1093/nar/gkad399",
     "relativeCitationRatio": 0,
     "citations": 2,
@@ -4223,6 +4223,24 @@
     "citationsPerYear": 8
   },
   {
+    "id": 35143610,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "blitzGSEA: efficient computation of gene set enrichment analysis through gamma distribution approximation.",
+    "authors": [
+      "Alexander Lachmann",
+      "Zhuorui Xie",
+      "Avi Ma'ayan"
+    ],
+    "journal": "Bioinformatics",
+    "year": 2022,
+    "modified": "2024-09-28T20:27:42.000Z",
+    "doi": "10.1093/bioinformatics/btac076",
+    "relativeCitationRatio": 1.02,
+    "citations": 9,
+    "citationsPerYear": 4.5
+  },
+  {
     "id": 33748796,
     "coreProject": "OT2OD030160",
     "application": 11089689,
@@ -4260,24 +4278,6 @@
     "relativeCitationRatio": 4.58,
     "citations": 55,
     "citationsPerYear": 18.333333333333332
-  },
-  {
-    "id": 35143610,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "blitzGSEA: efficient computation of gene set enrichment analysis through gamma distribution approximation.",
-    "authors": [
-      "Alexander Lachmann",
-      "Zhuorui Xie",
-      "Avi Ma'ayan"
-    ],
-    "journal": "Bioinformatics",
-    "year": 2022,
-    "modified": "2024-09-28T20:27:42.000Z",
-    "doi": "10.1093/bioinformatics/btac076",
-    "relativeCitationRatio": 1.02,
-    "citations": 9,
-    "citationsPerYear": 4.5
   },
   {
     "id": 36869839,

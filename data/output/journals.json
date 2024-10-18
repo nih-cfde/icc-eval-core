@@ -91,22 +91,6 @@
     ]
   },
   {
-    "id": "Mol Cell",
-    "name": "Molecular Cell",
-    "rank": 9.332,
-    "issns": [
-      "10972765",
-      "10974164",
-      "10972765"
-    ]
-  },
-  {
-    "id": "Pharmaceuticals (Basel)",
-    "name": "Pharmaceuticals (Basel)",
-    "rank": 0,
-    "issns": []
-  },
-  {
     "id": "Front Cell Dev Biol",
     "name": "Frontiers in Cell and Developmental Biology",
     "rank": 1.576,
@@ -116,6 +100,12 @@
     ]
   },
   {
+    "id": "Pharmaceuticals (Basel)",
+    "name": "Pharmaceuticals (Basel)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "Drug Discov Today",
     "name": "Drug Discovery Today",
     "rank": 1.586,
@@ -123,6 +113,16 @@
       "13596446",
       "18785832",
       "13596446"
+    ]
+  },
+  {
+    "id": "Mol Cell",
+    "name": "Molecular Cell",
+    "rank": 9.332,
+    "issns": [
+      "10972765",
+      "10974164",
+      "10972765"
     ]
   },
   {
@@ -186,15 +186,6 @@
     ]
   },
   {
-    "id": "Front Aging",
-    "name": "Frontiers in Aging",
-    "rank": 1.062,
-    "issns": [
-      "26736217",
-      "26736217"
-    ]
-  },
-  {
     "id": "Am J Physiol Heart Circ Physiol",
     "name": "American Journal of Physiology - Heart and Circulatory Physiology",
     "rank": 1.452,
@@ -202,6 +193,15 @@
       "03636135",
       "15221539",
       "03636135"
+    ]
+  },
+  {
+    "id": "Front Aging",
+    "name": "Frontiers in Aging",
+    "rank": 1.062,
+    "issns": [
+      "26736217",
+      "26736217"
     ]
   },
   {
@@ -281,26 +281,6 @@
     ]
   },
   {
-    "id": "Drug Deliv Transl Res",
-    "name": "Drug Delivery and Translational Research",
-    "rank": 0.994,
-    "issns": [
-      "2190393",
-      "21903948",
-      "2190393"
-    ]
-  },
-  {
-    "id": "J Control Release",
-    "name": "Journal of Controlled Release",
-    "rank": 2.157,
-    "issns": [
-      "01683659",
-      "18734995",
-      "01683659"
-    ]
-  },
-  {
     "id": "Cancer Metastasis Rev",
     "name": "Cancer and Metastasis Reviews",
     "rank": 2.866,
@@ -318,6 +298,26 @@
       "0169409",
       "18728294",
       "0169409"
+    ]
+  },
+  {
+    "id": "Drug Deliv Transl Res",
+    "name": "Drug Delivery and Translational Research",
+    "rank": 0.994,
+    "issns": [
+      "2190393",
+      "21903948",
+      "2190393"
+    ]
+  },
+  {
+    "id": "J Control Release",
+    "name": "Journal of Controlled Release",
+    "rank": 2.157,
+    "issns": [
+      "01683659",
+      "18734995",
+      "01683659"
     ]
   },
   {
@@ -614,16 +614,6 @@
     ]
   },
   {
-    "id": "Toxicol Sci",
-    "name": "Toxicological Sciences",
-    "rank": 0.911,
-    "issns": [
-      "10966080",
-      "10960929",
-      "10960929"
-    ]
-  },
-  {
     "id": "BMC Cancer",
     "name": "BMC Cancer",
     "rank": 1.087,
@@ -655,6 +645,16 @@
     "name": "Front Endocrinol (Lausanne)",
     "rank": 0,
     "issns": []
+  },
+  {
+    "id": "Toxicol Sci",
+    "name": "Toxicological Sciences",
+    "rank": 0.911,
+    "issns": [
+      "10966080",
+      "10960929",
+      "10960929"
+    ]
   },
   {
     "id": "Nat Cancer",
