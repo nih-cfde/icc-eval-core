@@ -145,3 +145,13 @@ See readmes in sub folders for all commands.
   Set to `true` (or any string) for true.
   Leave blank/unset for false.
   `false` by default.
+
+# Additional thoughts
+
+- [ ] Integration of events (collaboration with Training and Outreach Center)
+- [ ] Notebook-based reporting
+- [ ] Data asset catalogs (collaboration with DRC)
+- [ ] User engagement metrics (collaboration with Cloud Center)
+- [ ] Integrate with Common Fund Program metrics (integration with SPECS/NIH)
+- [ ] Evaluation and Impact Working Group
+- [ ] Bibliometrics (including PMC mining for CFDE assets)
