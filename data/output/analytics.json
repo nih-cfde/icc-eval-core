@@ -571,21 +571,21 @@
     },
     "topContinents": {
       "byActiveUsers": {
-        "Americas": 496,
+        "Americas": 497,
         "Europe": 24,
         "Asia": 13,
         "(not set)": 3,
         "Africa": 1
       },
       "byNewUsers": {
-        "Americas": 495,
+        "Americas": 496,
         "Europe": 24,
         "Asia": 13,
         "(not set)": 3,
         "Africa": 1
       },
       "byEngagedSessions": {
-        "Americas": 748,
+        "Americas": 752,
         "Europe": 13,
         "Asia": 4,
         "Africa": 1
@@ -593,21 +593,21 @@
     },
     "topCountries": {
       "byActiveUsers": {
-        "United States": 493,
+        "United States": 494,
         "India": 5,
         "Singapore": 5,
         "France": 4,
         "Italy": 4
       },
       "byNewUsers": {
-        "United States": 492,
+        "United States": 493,
         "India": 5,
         "Singapore": 5,
         "France": 4,
         "United Kingdom": 4
       },
       "byEngagedSessions": {
-        "United States": 747,
+        "United States": 751,
         "Italy": 4,
         "India": 3,
         "United Kingdom": 3,
@@ -632,7 +632,7 @@
       "byEngagedSessions": {
         "California": 396,
         "Maryland": 98,
-        "Colorado": 80,
+        "Colorado": 83,
         "Virginia": 34,
         "North Carolina": 17
       }
@@ -662,21 +662,21 @@
     },
     "topLanguages": {
       "byActiveUsers": {
-        "English": 524,
-        "Chinese": 3,
-        "French": 2,
-        "Spanish": 2,
-        "Hungarian": 1
-      },
-      "byNewUsers": {
         "English": 525,
         "Chinese": 3,
         "French": 2,
         "Spanish": 2,
         "Hungarian": 1
       },
+      "byNewUsers": {
+        "English": 526,
+        "Chinese": 3,
+        "French": 2,
+        "Spanish": 2,
+        "Hungarian": 1
+      },
       "byEngagedSessions": {
-        "English": 755,
+        "English": 759,
         "Chinese": 4,
         "French": 2,
         "Hungarian": 1,
@@ -685,36 +685,36 @@
     },
     "topDevices": {
       "byActiveUsers": {
-        "desktop": 426,
-        "mobile": 110
-      },
-      "byNewUsers": {
         "desktop": 427,
         "mobile": 110
       },
+      "byNewUsers": {
+        "desktop": 428,
+        "mobile": 110
+      },
       "byEngagedSessions": {
-        "desktop": 714,
+        "desktop": 718,
         "mobile": 51
       }
     },
     "topOSes": {
       "byActiveUsers": {
         "Windows": 257,
-        "Macintosh": 159,
+        "Macintosh": 160,
         "iOS": 93,
         "Android": 17,
         "Linux": 10
       },
       "byNewUsers": {
         "Windows": 258,
-        "Macintosh": 159,
+        "Macintosh": 160,
         "iOS": 93,
         "Android": 17,
         "Linux": 10
       },
       "byEngagedSessions": {
         "Windows": 391,
-        "Macintosh": 316,
+        "Macintosh": 320,
         "iOS": 42,
         "Android": 9,
         "Linux": 7
