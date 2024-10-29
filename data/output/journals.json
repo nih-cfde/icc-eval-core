@@ -120,6 +120,12 @@
     ]
   },
   {
+    "id": "Pharmaceuticals (Basel)",
+    "name": "Pharmaceuticals (Basel)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "Biomolecules",
     "name": "Biomolecules",
     "rank": 1.179,
@@ -127,12 +133,6 @@
       "2218273",
       "2218273"
     ]
-  },
-  {
-    "id": "Pharmaceuticals (Basel)",
-    "name": "Pharmaceuticals (Basel)",
-    "rank": 0,
-    "issns": []
   },
   {
     "id": "Drug Discov Today",
@@ -145,16 +145,6 @@
     ]
   },
   {
-    "id": "Cancer Cell",
-    "name": "Cancer Cell",
-    "rank": 17.507,
-    "issns": [
-      "15356108",
-      "18783686",
-      "15356108"
-    ]
-  },
-  {
     "id": "Mol Cell",
     "name": "Molecular Cell",
     "rank": 9.332,
@@ -162,6 +152,16 @@
       "10972765",
       "10974164",
       "10972765"
+    ]
+  },
+  {
+    "id": "Cancer Cell",
+    "name": "Cancer Cell",
+    "rank": 17.507,
+    "issns": [
+      "15356108",
+      "18783686",
+      "15356108"
     ]
   },
   {
@@ -244,16 +244,6 @@
     ]
   },
   {
-    "id": "Nature",
-    "name": "Nature",
-    "rank": 18.509,
-    "issns": [
-      "00280836",
-      "14764687",
-      "00280836"
-    ]
-  },
-  {
     "id": "Nat Genet",
     "name": "Nature Genetics",
     "rank": 17.3,
@@ -270,6 +260,16 @@
     "issns": [
       "20411723",
       "20411723"
+    ]
+  },
+  {
+    "id": "Nature",
+    "name": "Nature",
+    "rank": 18.509,
+    "issns": [
+      "00280836",
+      "14764687",
+      "00280836"
     ]
   },
   {
@@ -336,16 +336,6 @@
     ]
   },
   {
-    "id": "Adv Drug Deliv Rev",
-    "name": "Advanced Drug Delivery Reviews",
-    "rank": 3.411,
-    "issns": [
-      "0169409",
-      "18728294",
-      "0169409"
-    ]
-  },
-  {
     "id": "Cancer Metastasis Rev",
     "name": "Cancer and Metastasis Reviews",
     "rank": 2.866,
@@ -353,6 +343,16 @@
       "01677659",
       "15737233",
       "01677659"
+    ]
+  },
+  {
+    "id": "Adv Drug Deliv Rev",
+    "name": "Advanced Drug Delivery Reviews",
+    "rank": 3.411,
+    "issns": [
+      "0169409",
+      "18728294",
+      "0169409"
     ]
   },
   {
@@ -439,21 +439,21 @@
     ]
   },
   {
-    "id": "JCO Precis Oncol",
-    "name": "JCO Precision Oncology",
-    "rank": 2.249,
-    "issns": [
-      "24734284",
-      "24734284"
-    ]
-  },
-  {
     "id": "Biol Sex Differ",
     "name": "Biology of Sex Differences",
     "rank": 2.03,
     "issns": [
       "20426410",
       "20426410"
+    ]
+  },
+  {
+    "id": "JCO Precis Oncol",
+    "name": "JCO Precision Oncology",
+    "rank": 2.249,
+    "issns": [
+      "24734284",
+      "24734284"
     ]
   },
   {
@@ -513,6 +513,12 @@
     ]
   },
   {
+    "id": "Commun Med (Lond)",
+    "name": "Commun Med (Lond)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "PeerJ",
     "name": "PeerJ",
     "rank": 0.623,
@@ -524,12 +530,6 @@
   {
     "id": "Cancers (Basel)",
     "name": "Cancers (Basel)",
-    "rank": 0,
-    "issns": []
-  },
-  {
-    "id": "Commun Med (Lond)",
-    "name": "Commun Med (Lond)",
     "rank": 0,
     "issns": []
   },
@@ -605,6 +605,15 @@
     ]
   },
   {
+    "id": "Elife",
+    "name": "eLife",
+    "rank": 3.932,
+    "issns": [
+      "2050084",
+      "2050084"
+    ]
+  },
+  {
     "id": "Toxicol Sci",
     "name": "Toxicological Sciences",
     "rank": 0.911,
@@ -612,15 +621,6 @@
       "10966080",
       "10960929",
       "10960929"
-    ]
-  },
-  {
-    "id": "Elife",
-    "name": "eLife",
-    "rank": 3.932,
-    "issns": [
-      "2050084",
-      "2050084"
     ]
   },
   {
@@ -642,6 +642,15 @@
     ]
   },
   {
+    "id": "Front Microbiol",
+    "name": "Frontiers in Microbiology",
+    "rank": 1.065,
+    "issns": [
+      "1664302",
+      "1664302"
+    ]
+  },
+  {
     "id": "Biophys J",
     "name": "Biophysical Journal",
     "rank": 1.188,
@@ -649,15 +658,6 @@
       "00063495",
       "15420086",
       "00063495"
-    ]
-  },
-  {
-    "id": "Front Microbiol",
-    "name": "Frontiers in Microbiology",
-    "rank": 1.065,
-    "issns": [
-      "1664302",
-      "1664302"
     ]
   },
   {
@@ -724,6 +724,12 @@
     ]
   },
   {
+    "id": "Database (Oxford)",
+    "name": "Database (Oxford)",
+    "rank": 0,
+    "issns": []
+  },
+  {
     "id": "Aging Cell",
     "name": "Aging Cell",
     "rank": 2.904,
@@ -741,12 +747,6 @@
       "27310590",
       "27310590"
     ]
-  },
-  {
-    "id": "Database (Oxford)",
-    "name": "Database (Oxford)",
-    "rank": 0,
-    "issns": []
   },
   {
     "id": "Cell Rep Methods",
