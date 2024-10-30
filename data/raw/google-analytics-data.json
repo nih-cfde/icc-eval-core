@@ -8654,7 +8654,7 @@
             ],
             "metricValues": [
               {
-                "value": "501",
+                "value": "511",
                 "oneValue": "value"
               }
             ]
@@ -8668,7 +8668,7 @@
             ],
             "metricValues": [
               {
-                "value": "24",
+                "value": "25",
                 "oneValue": "value"
               }
             ]
@@ -8704,13 +8704,13 @@
           {
             "dimensionValues": [
               {
-                "value": "Africa",
+                "value": "Oceania",
                 "oneValue": "value"
               }
             ],
             "metricValues": [
               {
-                "value": "1",
+                "value": "2",
                 "oneValue": "value"
               }
             ]
@@ -8753,7 +8753,7 @@
             ],
             "metricValues": [
               {
-                "value": "501",
+                "value": "511",
                 "oneValue": "value"
               }
             ]
@@ -8803,13 +8803,13 @@
           {
             "dimensionValues": [
               {
-                "value": "Africa",
+                "value": "Oceania",
                 "oneValue": "value"
               }
             ],
             "metricValues": [
               {
-                "value": "1",
+                "value": "2",
                 "oneValue": "value"
               }
             ]
@@ -8852,7 +8852,7 @@
             ],
             "metricValues": [
               {
-                "value": "756",
+                "value": "764",
                 "oneValue": "value"
               }
             ]
@@ -8866,7 +8866,7 @@
             ],
             "metricValues": [
               {
-                "value": "13",
+                "value": "14",
                 "oneValue": "value"
               }
             ]
@@ -8898,12 +8898,26 @@
                 "oneValue": "value"
               }
             ]
+          },
+          {
+            "dimensionValues": [
+              {
+                "value": "Oceania",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "1",
+                "oneValue": "value"
+              }
+            ]
           }
         ],
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 4,
+        "rowCount": 5,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -8939,7 +8953,7 @@
             ],
             "metricValues": [
               {
-                "value": "498",
+                "value": "508",
                 "oneValue": "value"
               }
             ]
@@ -9004,7 +9018,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 20,
+        "rowCount": 21,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9038,7 +9052,7 @@
             ],
             "metricValues": [
               {
-                "value": "498",
+                "value": "508",
                 "oneValue": "value"
               }
             ]
@@ -9137,7 +9151,7 @@
             ],
             "metricValues": [
               {
-                "value": "755",
+                "value": "763",
                 "oneValue": "value"
               }
             ]
@@ -9202,7 +9216,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 12,
+        "rowCount": 14,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9238,7 +9252,7 @@
             ],
             "metricValues": [
               {
-                "value": "140",
+                "value": "144",
                 "oneValue": "value"
               }
             ]
@@ -9252,7 +9266,7 @@
             ],
             "metricValues": [
               {
-                "value": "60",
+                "value": "66",
                 "oneValue": "value"
               }
             ]
@@ -9303,7 +9317,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 65,
+        "rowCount": 66,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9337,7 +9351,7 @@
             ],
             "metricValues": [
               {
-                "value": "133",
+                "value": "137",
                 "oneValue": "value"
               }
             ]
@@ -9351,7 +9365,7 @@
             ],
             "metricValues": [
               {
-                "value": "56",
+                "value": "62",
                 "oneValue": "value"
               }
             ]
@@ -9436,7 +9450,7 @@
             ],
             "metricValues": [
               {
-                "value": "396",
+                "value": "399",
                 "oneValue": "value"
               }
             ]
@@ -9450,7 +9464,7 @@
             ],
             "metricValues": [
               {
-                "value": "98",
+                "value": "100",
                 "oneValue": "value"
               }
             ]
@@ -9464,7 +9478,7 @@
             ],
             "metricValues": [
               {
-                "value": "86",
+                "value": "89",
                 "oneValue": "value"
               }
             ]
@@ -9501,7 +9515,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 53,
+        "rowCount": 54,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9551,7 +9565,7 @@
             ],
             "metricValues": [
               {
-                "value": "31",
+                "value": "32",
                 "oneValue": "value"
               }
             ]
@@ -9573,6 +9587,20 @@
           {
             "dimensionValues": [
               {
+                "value": "Denver",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "29",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
                 "value": "Ashburn",
                 "oneValue": "value"
               }
@@ -9583,26 +9611,12 @@
                 "oneValue": "value"
               }
             ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Denver",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "26",
-                "oneValue": "value"
-              }
-            ]
           }
         ],
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 212,
+        "rowCount": 213,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9644,7 +9658,7 @@
           {
             "dimensionValues": [
               {
-                "value": "Cheyenne",
+                "value": "(not set)",
                 "oneValue": "value"
               }
             ],
@@ -9658,13 +9672,13 @@
           {
             "dimensionValues": [
               {
-                "value": "(not set)",
+                "value": "Cheyenne",
                 "oneValue": "value"
               }
             ],
             "metricValues": [
               {
-                "value": "29",
+                "value": "30",
                 "oneValue": "value"
               }
             ]
@@ -9749,7 +9763,7 @@
             ],
             "metricValues": [
               {
-                "value": "62",
+                "value": "64",
                 "oneValue": "value"
               }
             ]
@@ -9763,7 +9777,7 @@
             ],
             "metricValues": [
               {
-                "value": "24",
+                "value": "27",
                 "oneValue": "value"
               }
             ]
@@ -9800,7 +9814,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 151,
+        "rowCount": 152,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9836,7 +9850,7 @@
             ],
             "metricValues": [
               {
-                "value": "529",
+                "value": "540",
                 "oneValue": "value"
               }
             ]
@@ -9935,7 +9949,7 @@
             ],
             "metricValues": [
               {
-                "value": "531",
+                "value": "542",
                 "oneValue": "value"
               }
             ]
@@ -10034,7 +10048,7 @@
             ],
             "metricValues": [
               {
-                "value": "763",
+                "value": "772",
                 "oneValue": "value"
               }
             ]
@@ -10135,7 +10149,7 @@
             ],
             "metricValues": [
               {
-                "value": "431",
+                "value": "441",
                 "oneValue": "value"
               }
             ]
@@ -10149,7 +10163,7 @@
             ],
             "metricValues": [
               {
-                "value": "110",
+                "value": "111",
                 "oneValue": "value"
               }
             ]
@@ -10192,7 +10206,7 @@
             ],
             "metricValues": [
               {
-                "value": "433",
+                "value": "443",
                 "oneValue": "value"
               }
             ]
@@ -10206,7 +10220,7 @@
             ],
             "metricValues": [
               {
-                "value": "110",
+                "value": "111",
                 "oneValue": "value"
               }
             ]
@@ -10249,7 +10263,7 @@
             ],
             "metricValues": [
               {
-                "value": "722",
+                "value": "731",
                 "oneValue": "value"
               }
             ]
@@ -10308,7 +10322,7 @@
             ],
             "metricValues": [
               {
-                "value": "260",
+                "value": "268",
                 "oneValue": "value"
               }
             ]
@@ -10322,7 +10336,7 @@
             ],
             "metricValues": [
               {
-                "value": "161",
+                "value": "163",
                 "oneValue": "value"
               }
             ]
@@ -10336,7 +10350,7 @@
             ],
             "metricValues": [
               {
-                "value": "93",
+                "value": "94",
                 "oneValue": "value"
               }
             ]
@@ -10407,7 +10421,7 @@
             ],
             "metricValues": [
               {
-                "value": "262",
+                "value": "270",
                 "oneValue": "value"
               }
             ]
@@ -10421,7 +10435,7 @@
             ],
             "metricValues": [
               {
-                "value": "161",
+                "value": "163",
                 "oneValue": "value"
               }
             ]
@@ -10435,7 +10449,7 @@
             ],
             "metricValues": [
               {
-                "value": "93",
+                "value": "94",
                 "oneValue": "value"
               }
             ]
@@ -10506,7 +10520,7 @@
             ],
             "metricValues": [
               {
-                "value": "393",
+                "value": "399",
                 "oneValue": "value"
               }
             ]
@@ -10520,7 +10534,7 @@
             ],
             "metricValues": [
               {
-                "value": "322",
+                "value": "325",
                 "oneValue": "value"
               }
             ]
