@@ -3804,6 +3804,60 @@
         },
         "propertyQuota": null,
         "kind": "analyticsData#runReport"
+      },
+      {
+        "dateRange": {
+          "startDate": "2024-10-01",
+          "endDate": "2024-11-01"
+        },
+        "dimensionHeaders": [],
+        "metricHeaders": [
+          {
+            "name": "activeUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "engagedSessions",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [],
+            "metricValues": [
+              {
+                "value": "12",
+                "oneValue": "value"
+              },
+              {
+                "value": "11",
+                "oneValue": "value"
+              },
+              {
+                "value": "6",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
       }
     ],
     "topContinents": [
@@ -3829,7 +3883,7 @@
             ],
             "metricValues": [
               {
-                "value": "1146",
+                "value": "1147",
                 "oneValue": "value"
               }
             ]
@@ -3928,7 +3982,7 @@
             ],
             "metricValues": [
               {
-                "value": "1146",
+                "value": "1147",
                 "oneValue": "value"
               }
             ]
@@ -4027,7 +4081,7 @@
             ],
             "metricValues": [
               {
-                "value": "480",
+                "value": "481",
                 "oneValue": "value"
               }
             ]
@@ -4128,7 +4182,7 @@
             ],
             "metricValues": [
               {
-                "value": "1046",
+                "value": "1047",
                 "oneValue": "value"
               }
             ]
@@ -4227,7 +4281,7 @@
             ],
             "metricValues": [
               {
-                "value": "1046",
+                "value": "1047",
                 "oneValue": "value"
               }
             ]
@@ -4326,7 +4380,7 @@
             ],
             "metricValues": [
               {
-                "value": "431",
+                "value": "432",
                 "oneValue": "value"
               }
             ]
@@ -5025,7 +5079,7 @@
             ],
             "metricValues": [
               {
-                "value": "1572",
+                "value": "1573",
                 "oneValue": "value"
               }
             ]
@@ -5124,7 +5178,7 @@
             ],
             "metricValues": [
               {
-                "value": "1571",
+                "value": "1572",
                 "oneValue": "value"
               }
             ]
@@ -5223,7 +5277,7 @@
             ],
             "metricValues": [
               {
-                "value": "703",
+                "value": "704",
                 "oneValue": "value"
               }
             ]
@@ -5324,7 +5378,7 @@
             ],
             "metricValues": [
               {
-                "value": "1331",
+                "value": "1332",
                 "oneValue": "value"
               }
             ]
@@ -5395,7 +5449,7 @@
             ],
             "metricValues": [
               {
-                "value": "1327",
+                "value": "1328",
                 "oneValue": "value"
               }
             ]
@@ -5466,7 +5520,7 @@
             ],
             "metricValues": [
               {
-                "value": "697",
+                "value": "698",
                 "oneValue": "value"
               }
             ]
@@ -5553,7 +5607,7 @@
             ],
             "metricValues": [
               {
-                "value": "545",
+                "value": "546",
                 "oneValue": "value"
               }
             ]
@@ -5652,7 +5706,7 @@
             ],
             "metricValues": [
               {
-                "value": "545",
+                "value": "546",
                 "oneValue": "value"
               }
             ]
@@ -5751,7 +5805,7 @@
             ],
             "metricValues": [
               {
-                "value": "293",
+                "value": "294",
                 "oneValue": "value"
               }
             ]
@@ -8629,6 +8683,60 @@
         },
         "propertyQuota": null,
         "kind": "analyticsData#runReport"
+      },
+      {
+        "dateRange": {
+          "startDate": "2024-10-01",
+          "endDate": "2024-11-01"
+        },
+        "dimensionHeaders": [],
+        "metricHeaders": [
+          {
+            "name": "activeUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "engagedSessions",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [],
+            "metricValues": [
+              {
+                "value": "88",
+                "oneValue": "value"
+              },
+              {
+                "value": "86",
+                "oneValue": "value"
+              },
+              {
+                "value": "164",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/New_York",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
       }
     ],
     "topContinents": [
@@ -8654,7 +8762,7 @@
             ],
             "metricValues": [
               {
-                "value": "514",
+                "value": "521",
                 "oneValue": "value"
               }
             ]
@@ -8753,7 +8861,7 @@
             ],
             "metricValues": [
               {
-                "value": "514",
+                "value": "521",
                 "oneValue": "value"
               }
             ]
@@ -8852,7 +8960,7 @@
             ],
             "metricValues": [
               {
-                "value": "769",
+                "value": "782",
                 "oneValue": "value"
               }
             ]
@@ -8953,7 +9061,7 @@
             ],
             "metricValues": [
               {
-                "value": "511",
+                "value": "518",
                 "oneValue": "value"
               }
             ]
@@ -9052,7 +9160,7 @@
             ],
             "metricValues": [
               {
-                "value": "511",
+                "value": "518",
                 "oneValue": "value"
               }
             ]
@@ -9151,7 +9259,7 @@
             ],
             "metricValues": [
               {
-                "value": "768",
+                "value": "781",
                 "oneValue": "value"
               }
             ]
@@ -9266,7 +9374,7 @@
             ],
             "metricValues": [
               {
-                "value": "69",
+                "value": "74",
                 "oneValue": "value"
               }
             ]
@@ -9365,7 +9473,7 @@
             ],
             "metricValues": [
               {
-                "value": "65",
+                "value": "70",
                 "oneValue": "value"
               }
             ]
@@ -9464,7 +9572,7 @@
             ],
             "metricValues": [
               {
-                "value": "101",
+                "value": "109",
                 "oneValue": "value"
               }
             ]
@@ -9478,7 +9586,7 @@
             ],
             "metricValues": [
               {
-                "value": "92",
+                "value": "97",
                 "oneValue": "value"
               }
             ]
@@ -9559,6 +9667,20 @@
           {
             "dimensionValues": [
               {
+                "value": "Denver",
+                "oneValue": "value"
+              }
+            ],
+            "metricValues": [
+              {
+                "value": "36",
+                "oneValue": "value"
+              }
+            ]
+          },
+          {
+            "dimensionValues": [
+              {
                 "value": "(not set)",
                 "oneValue": "value"
               }
@@ -9587,27 +9709,13 @@
           {
             "dimensionValues": [
               {
-                "value": "Denver",
+                "value": "Aurora",
                 "oneValue": "value"
               }
             ],
             "metricValues": [
               {
-                "value": "30",
-                "oneValue": "value"
-              }
-            ]
-          },
-          {
-            "dimensionValues": [
-              {
-                "value": "Ashburn",
-                "oneValue": "value"
-              }
-            ],
-            "metricValues": [
-              {
-                "value": "27",
+                "value": "28",
                 "oneValue": "value"
               }
             ]
@@ -9616,7 +9724,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 214,
+        "rowCount": 215,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9700,13 +9808,13 @@
           {
             "dimensionValues": [
               {
-                "value": "Aurora",
+                "value": "Denver",
                 "oneValue": "value"
               }
             ],
             "metricValues": [
               {
-                "value": "24",
+                "value": "27",
                 "oneValue": "value"
               }
             ]
@@ -9715,7 +9823,7 @@
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 171,
+        "rowCount": 172,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -9763,7 +9871,7 @@
             ],
             "metricValues": [
               {
-                "value": "65",
+                "value": "73",
                 "oneValue": "value"
               }
             ]
@@ -9777,7 +9885,7 @@
             ],
             "metricValues": [
               {
-                "value": "30",
+                "value": "31",
                 "oneValue": "value"
               }
             ]
@@ -9791,7 +9899,7 @@
             ],
             "metricValues": [
               {
-                "value": "24",
+                "value": "28",
                 "oneValue": "value"
               }
             ]
@@ -9850,7 +9958,7 @@
             ],
             "metricValues": [
               {
-                "value": "543",
+                "value": "550",
                 "oneValue": "value"
               }
             ]
@@ -9949,7 +10057,7 @@
             ],
             "metricValues": [
               {
-                "value": "545",
+                "value": "552",
                 "oneValue": "value"
               }
             ]
@@ -10048,7 +10156,7 @@
             ],
             "metricValues": [
               {
-                "value": "777",
+                "value": "790",
                 "oneValue": "value"
               }
             ]
@@ -10149,7 +10257,7 @@
             ],
             "metricValues": [
               {
-                "value": "444",
+                "value": "450",
                 "oneValue": "value"
               }
             ]
@@ -10163,7 +10271,7 @@
             ],
             "metricValues": [
               {
-                "value": "111",
+                "value": "112",
                 "oneValue": "value"
               }
             ]
@@ -10206,7 +10314,7 @@
             ],
             "metricValues": [
               {
-                "value": "446",
+                "value": "452",
                 "oneValue": "value"
               }
             ]
@@ -10220,7 +10328,7 @@
             ],
             "metricValues": [
               {
-                "value": "111",
+                "value": "112",
                 "oneValue": "value"
               }
             ]
@@ -10263,7 +10371,7 @@
             ],
             "metricValues": [
               {
-                "value": "736",
+                "value": "749",
                 "oneValue": "value"
               }
             ]
@@ -10336,7 +10444,7 @@
             ],
             "metricValues": [
               {
-                "value": "166",
+                "value": "172",
                 "oneValue": "value"
               }
             ]
@@ -10350,7 +10458,7 @@
             ],
             "metricValues": [
               {
-                "value": "94",
+                "value": "95",
                 "oneValue": "value"
               }
             ]
@@ -10435,7 +10543,7 @@
             ],
             "metricValues": [
               {
-                "value": "166",
+                "value": "172",
                 "oneValue": "value"
               }
             ]
@@ -10449,7 +10557,7 @@
             ],
             "metricValues": [
               {
-                "value": "94",
+                "value": "95",
                 "oneValue": "value"
               }
             ]
@@ -10520,7 +10628,7 @@
             ],
             "metricValues": [
               {
-                "value": "399",
+                "value": "401",
                 "oneValue": "value"
               }
             ]
@@ -10534,7 +10642,7 @@
             ],
             "metricValues": [
               {
-                "value": "330",
+                "value": "341",
                 "oneValue": "value"
               }
             ]
