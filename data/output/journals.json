@@ -73,15 +73,6 @@
     ]
   },
   {
-    "id": "Metabolites",
-    "name": "Metabolites",
-    "rank": 0.903,
-    "issns": [
-      "22181989",
-      "22181989"
-    ]
-  },
-  {
     "id": "Nat Methods",
     "name": "Nature Methods",
     "rank": 14.796,
@@ -89,6 +80,15 @@
       "15487091",
       "15487105",
       "15487091"
+    ]
+  },
+  {
+    "id": "Metabolites",
+    "name": "Metabolites",
+    "rank": 0.903,
+    "issns": [
+      "22181989",
+      "22181989"
     ]
   },
   {
@@ -146,15 +146,6 @@
     ]
   },
   {
-    "id": "Front Cell Dev Biol",
-    "name": "Frontiers in Cell and Developmental Biology",
-    "rank": 1.576,
-    "issns": [
-      "2296634",
-      "2296634"
-    ]
-  },
-  {
     "id": "Drug Discov Today",
     "name": "Drug Discovery Today",
     "rank": 1.586,
@@ -162,6 +153,15 @@
       "13596446",
       "18785832",
       "13596446"
+    ]
+  },
+  {
+    "id": "Front Cell Dev Biol",
+    "name": "Frontiers in Cell and Developmental Biology",
+    "rank": 1.576,
+    "issns": [
+      "2296634",
+      "2296634"
     ]
   },
   {
@@ -225,16 +225,6 @@
     ]
   },
   {
-    "id": "PLoS Comput Biol",
-    "name": "PLoS Computational Biology",
-    "rank": 1.652,
-    "issns": [
-      "1553734",
-      "15537358",
-      "1553734"
-    ]
-  },
-  {
     "id": "Front Aging",
     "name": "Frontiers in Aging",
     "rank": 1.062,
@@ -244,21 +234,13 @@
     ]
   },
   {
-    "id": "Nat Hum Behav",
-    "name": "Nature Human Behaviour",
-    "rank": 6.097,
+    "id": "PLoS Comput Biol",
+    "name": "PLoS Computational Biology",
+    "rank": 1.652,
     "issns": [
-      "23973374",
-      "23973374"
-    ]
-  },
-  {
-    "id": "Front Immunol",
-    "name": "Frontiers in Immunology",
-    "rank": 1.868,
-    "issns": [
-      "16643224",
-      "16643224"
+      "1553734",
+      "15537358",
+      "1553734"
     ]
   },
   {
@@ -271,13 +253,21 @@
     ]
   },
   {
-    "id": "Nat Genet",
-    "name": "Nature Genetics",
-    "rank": 17.3,
+    "id": "Front Immunol",
+    "name": "Frontiers in Immunology",
+    "rank": 1.868,
     "issns": [
-      "10614036",
-      "15461718",
-      "10614036"
+      "16643224",
+      "16643224"
+    ]
+  },
+  {
+    "id": "Nat Hum Behav",
+    "name": "Nature Human Behaviour",
+    "rank": 6.097,
+    "issns": [
+      "23973374",
+      "23973374"
     ]
   },
   {
@@ -288,6 +278,16 @@
       "02776715",
       "10970258",
       "02776715"
+    ]
+  },
+  {
+    "id": "Nat Genet",
+    "name": "Nature Genetics",
+    "rank": 17.3,
+    "issns": [
+      "10614036",
+      "15461718",
+      "10614036"
     ]
   },
   {
@@ -320,6 +320,16 @@
     ]
   },
   {
+    "id": "Adv Drug Deliv Rev",
+    "name": "Advanced Drug Delivery Reviews",
+    "rank": 3.411,
+    "issns": [
+      "0169409",
+      "18728294",
+      "0169409"
+    ]
+  },
+  {
     "id": "ACS Appl Mater Interfaces",
     "name": "ACS applied materials &amp; interfaces",
     "rank": 2.058,
@@ -336,16 +346,6 @@
     "issns": [
       "25766422",
       "25766422"
-    ]
-  },
-  {
-    "id": "Adv Drug Deliv Rev",
-    "name": "Advanced Drug Delivery Reviews",
-    "rank": 3.411,
-    "issns": [
-      "0169409",
-      "18728294",
-      "0169409"
     ]
   },
   {
@@ -625,30 +625,6 @@
     ]
   },
   {
-    "id": "Front Endocrinol (Lausanne)",
-    "name": "Front Endocrinol (Lausanne)",
-    "rank": 0,
-    "issns": []
-  },
-  {
-    "id": "Cell Rep",
-    "name": "Cell Reports",
-    "rank": 4.279,
-    "issns": [
-      "22111247"
-    ]
-  },
-  {
-    "id": "Toxicol Sci",
-    "name": "Toxicological Sciences",
-    "rank": 0.911,
-    "issns": [
-      "10966080",
-      "10960929",
-      "10960929"
-    ]
-  },
-  {
     "id": "Nat Cancer",
     "name": "Nature Cancer",
     "rank": 11.9,
@@ -668,22 +644,36 @@
     ]
   },
   {
+    "id": "Toxicol Sci",
+    "name": "Toxicological Sciences",
+    "rank": 0.911,
+    "issns": [
+      "10966080",
+      "10960929",
+      "10960929"
+    ]
+  },
+  {
+    "id": "Front Endocrinol (Lausanne)",
+    "name": "Front Endocrinol (Lausanne)",
+    "rank": 0,
+    "issns": []
+  },
+  {
+    "id": "Cell Rep",
+    "name": "Cell Reports",
+    "rank": 4.279,
+    "issns": [
+      "22111247"
+    ]
+  },
+  {
     "id": "BMC Cancer",
     "name": "BMC Cancer",
     "rank": 1.087,
     "issns": [
       "14712407",
       "14712407"
-    ]
-  },
-  {
-    "id": "Biophys J",
-    "name": "Biophysical Journal",
-    "rank": 1.188,
-    "issns": [
-      "00063495",
-      "15420086",
-      "00063495"
     ]
   },
   {
@@ -696,13 +686,13 @@
     ]
   },
   {
-    "id": "Am J Physiol Lung Cell Mol Physiol",
-    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
-    "rank": 1.339,
+    "id": "Biophys J",
+    "name": "Biophysical Journal",
+    "rank": 1.188,
     "issns": [
-      "10400605",
-      "15221504",
-      "10400605"
+      "00063495",
+      "15420086",
+      "00063495"
     ]
   },
   {
@@ -721,6 +711,16 @@
     "issns": [
       "1664302",
       "1664302"
+    ]
+  },
+  {
+    "id": "Am J Physiol Lung Cell Mol Physiol",
+    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
+    "rank": 1.339,
+    "issns": [
+      "10400605",
+      "15221504",
+      "10400605"
     ]
   },
   {
