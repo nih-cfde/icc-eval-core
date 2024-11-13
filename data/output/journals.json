@@ -44,15 +44,6 @@
     ]
   },
   {
-    "id": "Res Sq",
-    "name": "Res Sq",
-    "rank": 0,
-    "issns": [
-      "26935015",
-      "26935015"
-    ]
-  },
-  {
     "id": "Bioinformatics",
     "name": "Bioinformatics",
     "rank": 2.574,
@@ -63,12 +54,12 @@
     ]
   },
   {
-    "id": "Metabolites",
-    "name": "Metabolites",
-    "rank": 0.903,
+    "id": "Res Sq",
+    "name": "Res Sq",
+    "rank": 0,
     "issns": [
-      "22181989",
-      "22181989"
+      "26935015",
+      "26935015"
     ]
   },
   {
@@ -79,6 +70,15 @@
       "00032700",
       "15206882",
       "00032700"
+    ]
+  },
+  {
+    "id": "Metabolites",
+    "name": "Metabolites",
+    "rank": 0.903,
+    "issns": [
+      "22181989",
+      "22181989"
     ]
   },
   {
@@ -175,16 +175,6 @@
     ]
   },
   {
-    "id": "J Proteome Res",
-    "name": "Journal of Proteome Research",
-    "rank": 1.299,
-    "issns": [
-      "15353893",
-      "15353907",
-      "15353893"
-    ]
-  },
-  {
     "id": "Nat Protoc",
     "name": "Nature Protocols",
     "rank": 7.419,
@@ -192,6 +182,16 @@
       "17502799",
       "17542189",
       "17502799"
+    ]
+  },
+  {
+    "id": "J Proteome Res",
+    "name": "Journal of Proteome Research",
+    "rank": 1.299,
+    "issns": [
+      "15353893",
+      "15353907",
+      "15353893"
     ]
   },
   {
@@ -263,6 +263,15 @@
     ]
   },
   {
+    "id": "Nat Commun",
+    "name": "Nature Communications",
+    "rank": 4.887,
+    "issns": [
+      "20411723",
+      "20411723"
+    ]
+  },
+  {
     "id": "Nat Genet",
     "name": "Nature Genetics",
     "rank": 17.3,
@@ -270,15 +279,6 @@
       "10614036",
       "15461718",
       "10614036"
-    ]
-  },
-  {
-    "id": "Nat Commun",
-    "name": "Nature Communications",
-    "rank": 4.887,
-    "issns": [
-      "20411723",
-      "20411723"
     ]
   },
   {
@@ -395,13 +395,12 @@
     ]
   },
   {
-    "id": "Dis Model Mech",
-    "name": "DMM Disease Models and Mechanisms",
-    "rank": 1.361,
+    "id": "BMC Biol",
+    "name": "BMC Biology",
+    "rank": 1.787,
     "issns": [
-      "17548403",
-      "17548411",
-      "17548403"
+      "17417007",
+      "17417007"
     ]
   },
   {
@@ -414,12 +413,13 @@
     ]
   },
   {
-    "id": "BMC Biol",
-    "name": "BMC Biology",
-    "rank": 1.787,
+    "id": "Dis Model Mech",
+    "name": "DMM Disease Models and Mechanisms",
+    "rank": 1.361,
     "issns": [
-      "17417007",
-      "17417007"
+      "17548403",
+      "17548411",
+      "17548403"
     ]
   },
   {
@@ -427,6 +427,15 @@
     "name": "Cancer Rep (Hoboken)",
     "rank": 0,
     "issns": []
+  },
+  {
+    "id": "Biol Sex Differ",
+    "name": "Biology of Sex Differences",
+    "rank": 2.03,
+    "issns": [
+      "20426410",
+      "20426410"
+    ]
   },
   {
     "id": "JCO Precis Oncol",
@@ -445,15 +454,6 @@
       "10761551",
       "15283658",
       "10761551"
-    ]
-  },
-  {
-    "id": "Biol Sex Differ",
-    "name": "Biology of Sex Differences",
-    "rank": 2.03,
-    "issns": [
-      "20426410",
-      "20426410"
     ]
   },
   {
@@ -588,10 +588,13 @@
     ]
   },
   {
-    "id": "Front Endocrinol (Lausanne)",
-    "name": "Front Endocrinol (Lausanne)",
-    "rank": 0,
-    "issns": []
+    "id": "Nat Cancer",
+    "name": "Nature Cancer",
+    "rank": 11.9,
+    "issns": [
+      "26621347",
+      "26621347"
+    ]
   },
   {
     "id": "Am J Physiol Lung Cell Mol Physiol",
@@ -601,33 +604,6 @@
       "10400605",
       "15221504",
       "10400605"
-    ]
-  },
-  {
-    "id": "Nat Metab",
-    "name": "Nature Metabolism",
-    "rank": 7.192,
-    "issns": [
-      "25225812",
-      "25225812"
-    ]
-  },
-  {
-    "id": "Front Fungal Biol",
-    "name": "Frontiers in Fungal Biology",
-    "rank": 0.491,
-    "issns": [
-      "26736128",
-      "26736128"
-    ]
-  },
-  {
-    "id": "Nat Cancer",
-    "name": "Nature Cancer",
-    "rank": 11.9,
-    "issns": [
-      "26621347",
-      "26621347"
     ]
   },
   {
@@ -641,11 +617,27 @@
     ]
   },
   {
-    "id": "Cell Rep",
-    "name": "Cell Reports",
-    "rank": 4.279,
+    "id": "Nat Metab",
+    "name": "Nature Metabolism",
+    "rank": 7.192,
     "issns": [
-      "22111247"
+      "25225812",
+      "25225812"
+    ]
+  },
+  {
+    "id": "Front Endocrinol (Lausanne)",
+    "name": "Front Endocrinol (Lausanne)",
+    "rank": 0,
+    "issns": []
+  },
+  {
+    "id": "Front Fungal Biol",
+    "name": "Frontiers in Fungal Biology",
+    "rank": 0.491,
+    "issns": [
+      "26736128",
+      "26736128"
     ]
   },
   {
@@ -655,6 +647,14 @@
     "issns": [
       "1664302",
       "1664302"
+    ]
+  },
+  {
+    "id": "Cell Rep",
+    "name": "Cell Reports",
+    "rank": 4.279,
+    "issns": [
+      "22111247"
     ]
   },
   {
@@ -677,21 +677,13 @@
     ]
   },
   {
-    "id": "J Alzheimers Dis Rep",
-    "name": "Journal of Alzheimer's Disease Reports",
-    "rank": 0.635,
+    "id": "Infect Immun",
+    "name": "Infection and Immunity",
+    "rank": 1.042,
     "issns": [
-      "25424823",
-      "25424823"
-    ]
-  },
-  {
-    "id": "Gigascience",
-    "name": "GigaScience",
-    "rank": 4.621,
-    "issns": [
-      "2047217",
-      "2047217"
+      "00199567",
+      "10985522",
+      "00199567"
     ]
   },
   {
@@ -714,13 +706,21 @@
     ]
   },
   {
-    "id": "Infect Immun",
-    "name": "Infection and Immunity",
-    "rank": 1.042,
+    "id": "Gigascience",
+    "name": "GigaScience",
+    "rank": 4.621,
     "issns": [
-      "00199567",
-      "10985522",
-      "00199567"
+      "2047217",
+      "2047217"
+    ]
+  },
+  {
+    "id": "J Alzheimers Dis Rep",
+    "name": "Journal of Alzheimer's Disease Reports",
+    "rank": 0.635,
+    "issns": [
+      "25424823",
+      "25424823"
     ]
   },
   {
