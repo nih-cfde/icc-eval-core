@@ -585,22 +585,22 @@
     },
     "topContinents": {
       "byActiveUsers": {
-        "Americas": 544,
-        "Europe": 30,
+        "Americas": 547,
+        "Europe": 33,
         "Asia": 13,
         "(not set)": 3,
         "Oceania": 2
       },
       "byNewUsers": {
-        "Americas": 545,
-        "Europe": 29,
+        "Americas": 547,
+        "Europe": 32,
         "Asia": 13,
         "(not set)": 3,
         "Oceania": 2
       },
       "byEngagedSessions": {
-        "Americas": 829,
-        "Europe": 17,
+        "Americas": 833,
+        "Europe": 21,
         "Asia": 4,
         "Africa": 1,
         "Oceania": 1
@@ -608,22 +608,22 @@
     },
     "topCountries": {
       "byActiveUsers": {
-        "United States": 541,
-        "Italy": 9,
+        "United States": 544,
+        "Italy": 12,
         "India": 5,
         "Singapore": 5,
         "France": 4
       },
       "byNewUsers": {
-        "United States": 542,
-        "Italy": 8,
+        "United States": 544,
+        "Italy": 11,
         "India": 5,
         "Singapore": 5,
         "France": 4
       },
       "byEngagedSessions": {
-        "United States": 828,
-        "Italy": 7,
+        "United States": 832,
+        "Italy": 11,
         "India": 3,
         "United Kingdom": 3,
         "France": 2
@@ -646,10 +646,10 @@
       },
       "byEngagedSessions": {
         "California": 399,
-        "Maryland": 139,
+        "Maryland": 140,
         "Colorado": 109,
         "Virginia": 35,
-        "New York": 17
+        "New York": 20
       }
     },
     "topCities": {
@@ -669,7 +669,7 @@
       },
       "byEngagedSessions": {
         "Irvine": 336,
-        "Ellicott City": 103,
+        "Ellicott City": 104,
         "Aurora": 37,
         "Denver": 33,
         "Los Angeles": 24
@@ -677,62 +677,62 @@
     },
     "topLanguages": {
       "byActiveUsers": {
-        "English": 573,
-        "Italian": 6,
+        "English": 578,
+        "Italian": 7,
         "Chinese": 3,
         "French": 2,
         "Spanish": 2
       },
       "byNewUsers": {
-        "English": 576,
-        "Italian": 6,
+        "English": 580,
+        "Italian": 7,
         "Chinese": 3,
         "French": 2,
         "Spanish": 2
       },
       "byEngagedSessions": {
-        "English": 837,
+        "English": 842,
+        "Italian": 7,
         "Chinese": 4,
-        "Italian": 4,
         "French": 2,
         "Hungarian": 1
       }
     },
     "topDevices": {
       "byActiveUsers": {
-        "desktop": 473,
-        "mobile": 117
+        "desktop": 478,
+        "mobile": 118
       },
       "byNewUsers": {
-        "desktop": 476,
-        "mobile": 117
+        "desktop": 480,
+        "mobile": 118
       },
       "byEngagedSessions": {
-        "desktop": 797,
+        "desktop": 805,
         "mobile": 52
       }
     },
     "topOSes": {
       "byActiveUsers": {
         "Windows": 278,
-        "Macintosh": 184,
-        "iOS": 100,
+        "Macintosh": 187,
+        "iOS": 101,
         "Android": 17,
-        "Linux": 11
+        "Linux": 13
       },
       "byNewUsers": {
         "Windows": 280,
-        "Macintosh": 184,
-        "iOS": 100,
+        "Macintosh": 187,
+        "iOS": 101,
         "Android": 17,
-        "Linux": 12
+        "Linux": 13
       },
       "byEngagedSessions": {
         "Windows": 406,
-        "Macintosh": 384,
+        "Macintosh": 390,
         "iOS": 43,
-        "Android": 9,
-        "Linux": 8
+        "Linux": 10,
+        "Android": 9
       }
     }
   }
