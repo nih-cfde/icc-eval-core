@@ -146,20 +146,14 @@ export const spawn = (
   });
 
 /** save data to file */
-export const saveFile = async (
-  data: unknown,
-  path: string,
-  format?: Extensions,
-  options?: StringifyOptions,
-) => {
+export const saveFile = async (data: unknown, path: string) => {
   let contents: string | NodeJS.ArrayBufferView = "";
 
-  if (format === "json" || path.endsWith(".json"))
-    contents = stringifyJson(data);
-  if (format === "csv" || path.endsWith(".csv"))
-    contents = stringifyCsv([data].flat(), { delimiter: ",", ...options });
-  if (format === "tsv" || path.endsWith(".tsv"))
-    contents = stringifyCsv([data].flat(), { delimiter: "\t", ...options });
+  if (path.endsWith(".json")) contents = stringifyJson(data);
+  if (path.endsWith(".csv"))
+    contents = stringifyCsv([data].flat(), { delimiter: "," });
+  if (path.endsWith(".tsv"))
+    contents = stringifyCsv([data].flat(), { delimiter: "\t" });
 
   try {
     /** create folders if needed */
