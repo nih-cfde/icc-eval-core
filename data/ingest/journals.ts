@@ -1,6 +1,6 @@
 import { uniq, uniqBy } from "lodash-es";
+import { getFullJournalName } from "@/api/entrez";
 import type { Rank } from "@/api/types/scimago-ranks";
-import { newPage } from "@/util/browser";
 import { downloadFile, loadFile } from "@/util/file";
 import { log } from "@/util/log";
 import { query, queryMulti } from "@/util/request";
@@ -8,11 +8,6 @@ import { count } from "@/util/string";
 
 /** ranks data download url */
 const ranksUrl = "https://www.scimagojr.com/journalrank.php?out=xls";
-/** full journal name search */
-const searchUrl =
-  "https://www.ncbi.nlm.nih.gov/nlmcatalog/?term=JOURNAL%5BTA%5D";
-/** locator for issns */
-const issnSelector = `dt:text("ISSN:") + dd`;
 
 /** get journal info */
 export const getJournals = async (journalIds: string[]) => {
@@ -37,19 +32,10 @@ export const getJournals = async (journalIds: string[]) => {
   log("Getting journal names");
 
   const journals = await queryMulti(
-    journalIds.map((id) => async (progress) => {
-      const page = await newPage();
-      progress(0.33);
-      await page.goto(searchUrl.replace("JOURNAL", id.replaceAll(" ", "+")));
-      progress(0.66);
-      /** get full journal name from abbreviated name/id via journal search */
-      const issns = (await page.locator(issnSelector).innerText())
-        .split("\n")
-        .map((number) => number.replaceAll(/[^0-9]/g, ""))
-        .filter(Boolean);
-      return { id, issns };
-    }),
-    "nlm-journals.json",
+    journalIds.map((id) => () => getFullJournalName(id)),
+    "entrez-journals.json",
+    /** one at a time ends up being faster due to rate-limiting */
+    1,
   );
 
   /** transform data into desired format, with fallbacks */
@@ -58,16 +44,14 @@ export const getJournals = async (journalIds: string[]) => {
       const id = journalIds[index]!;
       return { id, name: id, rank: 0, issns: [] };
     } else {
-      const { id, issns } = journal;
+      const { name, issn } = journal;
       /** find matching rank by issn */
-      const rank = ranks.find((rank) =>
-        issns.some((issn) => rank.Issn?.includes(issn)),
-      );
+      const rank = ranks.find((rank) => rank.Issn?.includes(issn));
       return {
-        id,
-        name: rank?.Title ?? id,
+        id: name,
+        name: rank?.Title ?? name,
         rank: Number(rank?.SJR?.replace(",", ".") ?? 0),
-        issns,
+        issn,
       };
     }
   });

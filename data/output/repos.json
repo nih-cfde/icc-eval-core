@@ -131,9 +131,15 @@
       "2024-11-05T11:38:50Z",
       "2024-11-05T13:53:13Z",
       "2024-11-09T03:52:46Z",
-      "2024-11-13T23:11:21Z"
+      "2024-11-13T23:11:21Z",
+      "2024-11-18T05:50:13Z",
+      "2024-11-19T19:13:35Z",
+      "2024-11-22T03:40:43Z",
+      "2024-11-22T12:16:16Z",
+      "2024-11-23T12:50:16Z",
+      "2024-11-25T03:08:54Z"
     ],
-    "watchers": 117,
+    "watchers": 123,
     "forks": [
       "2024-11-05T11:39:03Z",
       "2024-10-30T14:55:13Z",
@@ -408,6 +414,16 @@
       {
         "state": "open",
         "stateReason": null,
+        "created": "2024-11-22T22:11:54Z",
+        "modified": "2024-11-22T22:12:01Z",
+        "closed": null,
+        "labels": [
+          "enhancement"
+        ]
+      },
+      {
+        "state": "open",
+        "stateReason": null,
         "created": "2024-11-14T18:43:27Z",
         "modified": "2024-11-14T18:43:27Z",
         "closed": null,
@@ -558,9 +574,9 @@
         "labels": []
       }
     ],
-    "openIssues": 8,
+    "openIssues": 9,
     "closedIssues": 9,
-    "issueTimeOpen": 4486271,
+    "issueTimeOpen": 4550320,
     "pullRequests": [
       {
         "state": "closed",
@@ -655,6 +671,14 @@
     "closedPullRequests": 11,
     "pullRequestTimeOpen": 569241,
     "commits": [
+      "2024-11-25T00:24:14Z",
+      "2024-11-24T00:25:12Z",
+      "2024-11-23T00:23:11Z",
+      "2024-11-22T00:23:32Z",
+      "2024-11-21T00:23:03Z",
+      "2024-11-20T00:23:02Z",
+      "2024-11-19T00:26:39Z",
+      "2024-11-18T00:24:10Z",
       "2024-11-17T00:21:27Z",
       "2024-11-16T00:24:41Z",
       "2024-11-15T00:23:35Z",
@@ -781,7 +805,7 @@
       }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-11-17T00:21:29Z",
+    "modified": "2024-11-25T17:14:44Z",
     "license": "",
     "readme": true,
     "contributing": false,
@@ -1251,7 +1275,7 @@
     ],
     "openPullRequests": 2,
     "closedPullRequests": 50,
-    "pullRequestTimeOpen": 1509748,
+    "pullRequestTimeOpen": 1535659,
     "commits": [
       "2024-10-16T15:46:23Z",
       "2024-10-16T15:45:14Z",
