@@ -11,14 +11,22 @@
     >
       <template #status="{ row }">
         <template v-if="row.repos || row.analytics">
-          <div title="Owners have completed the submission process">
-            <Check class="icon good" />
-          </div>
+          <AppLink
+            :to="readmeLink"
+            class="score good"
+            title="Owners have completed the submission process"
+          >
+            <Check />
+          </AppLink>
         </template>
         <template v-else>
-          <div title="Owners have NOT completed the submission process">
-            <Xmark class="icon bad" />
-          </div>
+          <AppLink
+            :to="readmeLink"
+            title="Owners have NOT completed the submission process"
+            class="score bad"
+          >
+            <Xmark />
+          </AppLink>
         </template>
       </template>
 
@@ -52,6 +60,9 @@ import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import coreProjects from "~/core-projects.json";
+
+const readmeLink =
+  "https://github.com/nih-cfde/icc-eval-core?tab=readme-ov-file#submit-your-project";
 
 /** table row data */
 const rows = coreProjects.map((d) => ({ ...d, status: d.repos + d.analytics }));
@@ -115,8 +126,13 @@ const cols: Cols<typeof rows> = [
   gap: 10px;
 }
 
-.icon {
+.score > svg {
   height: 1.5em;
+}
+
+.score:hover {
+  background: unset;
+  color: black;
 }
 
 .good {
