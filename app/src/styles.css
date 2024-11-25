@@ -9,6 +9,10 @@
   --light-gray: hsl(var(--hue), var(--sat), 80%);
   --off-white: hsl(var(--hue), var(--sat), 90%);
 
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #f43f5e;
+
   --content: 1200px;
   --full: calc(100vw - 100px);
 

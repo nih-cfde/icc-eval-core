@@ -9,6 +9,19 @@
       :rows="rows"
       :sort="[{ id: 'awardAmount', desc: true }]"
     >
+      <template #status="{ row }">
+        <template v-if="row.repos || row.analytics">
+          <div title="Owners have completed the submission process">
+            <Check class="icon good" />
+          </div>
+        </template>
+        <template v-else>
+          <div title="Owners have NOT completed the submission process">
+            <Xmark class="icon bad" />
+          </div>
+        </template>
+      </template>
+
       <template #id="{ row }">
         <AppLink :to="`/core-project/${row.id}`">{{ row.id }}</AppLink>
       </template>
@@ -32,17 +45,24 @@
 
 <script setup lang="ts">
 import { truncate } from "lodash";
+import Check from "@/assets/check.svg";
 import Microscope from "@/assets/microscope.svg";
+import Xmark from "@/assets/xmark.svg";
 import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import coreProjects from "~/core-projects.json";
 
 /** table row data */
-const rows = coreProjects;
+const rows = coreProjects.map((d) => ({ ...d, status: d.repos + d.analytics }));
 
 /** table column definitions */
 const cols: Cols<typeof rows> = [
+  {
+    slot: "status",
+    key: "status",
+    name: "Status",
+  },
   {
     slot: "id",
     key: "id",
@@ -93,5 +113,17 @@ const cols: Cols<typeof rows> = [
   place-items: center;
   width: 100%;
   gap: 10px;
+}
+
+.icon {
+  height: 1.5em;
+}
+
+.good {
+  color: var(--success);
+}
+
+.bad {
+  color: var(--light-gray);
 }
 </style>
