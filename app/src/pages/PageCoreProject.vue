@@ -83,11 +83,12 @@
     <template v-if="Object.keys(publicationsOverTime).length > 1">
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
-      <AppLineChart
+      <AppTimeChart
         class="chart"
-        title="Publications Per Year"
+        title="Publications"
         :data="publicationsOverTime"
         :cumulative="cumulative"
+        by="month"
       />
     </template>
   </section>
@@ -193,35 +194,40 @@
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
       <div class="charts">
-        <AppLineChart
+        <AppTimeChart
           class="chart"
-          title="Stars Per Year"
+          title="Stars"
           :data="starsOverTime"
           :cumulative="cumulative"
+          by="month"
         />
-        <AppLineChart
+        <AppTimeChart
           class="chart"
-          title="Forks Per Year"
+          title="Forks"
           :data="forksOverTime"
           :cumulative="cumulative"
+          by="month"
         />
-        <AppLineChart
+        <AppTimeChart
           class="chart"
-          title="Issues Per Year"
+          title="Issues"
           :data="issuesOverTime"
           :cumulative="cumulative"
+          by="month"
         />
-        <AppLineChart
+        <AppTimeChart
           class="chart"
-          title="Pull Requests Per Year"
+          title="Pull Requests"
           :data="pullRequestsOverTime"
           :cumulative="cumulative"
+          by="month"
         />
-        <AppLineChart
+        <AppTimeChart
           class="chart"
-          title="Commits Per Year"
+          title="Commits"
           :data="commitsOverTime"
           :cumulative="cumulative"
+          by="month"
         />
       </div>
     </template>
@@ -257,11 +263,12 @@
           v-for="({ metric, data }, key) in overTimeAnalytics"
           :key="key"
         >
-          <AppLineChart
+          <AppTimeChart
             :title="startCase(metric)"
             :data="data"
             :cumulative="cumulative"
-            group="overTime"
+            by="month"
+            group="group"
           />
         </template>
       </div>
@@ -320,7 +327,6 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { connect } from "echarts";
 import {
   fromPairs,
   orderBy,
@@ -338,11 +344,10 @@ import Eye from "@/assets/eye.svg";
 import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppHeading from "@/components/AppHeading.vue";
-import AppLineChart from "@/components/AppLineChart.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
+import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve, limit } from "@/util/array";
-import { overTime } from "@/util/data";
 import { ago, match, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
 import analytics from "~/analytics.json";
@@ -359,11 +364,8 @@ const repos = rawRepos as Repo[];
 
 const route = useRoute();
 
-/** connect chart zooms together */
-connect("overTime");
-
 /** whether charts should be shown in cumulative mode */
-const cumulative = ref(false);
+const cumulative = ref(true);
 
 /** currently viewed core project id */
 const id = computed(() =>
@@ -493,7 +495,9 @@ const publicationCols: Cols<typeof projectPublications.value> = [
 
 /** publication chart data */
 const publicationsOverTime = computed(() =>
-  overTime(projectPublications.value, "year"),
+  projectPublications.value.map(
+    ({ year }) => [new Date(year, 0, 1), 1] as const,
+  ),
 );
 
 /** repo table row data */
@@ -616,45 +620,43 @@ const repoColsB: Cols<typeof projectRepos.value> = [
 
 /** star chart data */
 const starsOverTime = computed(() =>
-  overTime(projectRepos.value.map((repo) => repo.stars).flat(), (d) =>
-    new Date(d).getUTCFullYear(),
-  ),
+  projectRepos.value
+    .map(({ stars }) => stars.map((star) => [new Date(star), 1] as const))
+    .flat(),
 );
 
 /** fork chart data */
 const forksOverTime = computed(() =>
-  overTime(projectRepos.value.map((repo) => repo.forks).flat(), (d) =>
-    new Date(d).getUTCFullYear(),
-  ),
+  projectRepos.value
+    .map(({ forks }) => forks.map((fork) => [new Date(fork), 1] as const))
+    .flat(),
 );
 
 /** issue chart data */
 const issuesOverTime = computed(() =>
-  overTime(
-    projectRepos.value
-      .map((repo) => repo.issues.map((issue) => issue.created))
-      .flat(),
-    (d) => new Date(d).getUTCFullYear(),
-  ),
+  projectRepos.value
+    .map(({ issues }) =>
+      issues.map(({ created }) => [new Date(created), 1] as const),
+    )
+    .flat(),
 );
 
 /** issue chart data */
 const pullRequestsOverTime = computed(() =>
-  overTime(
-    projectRepos.value
-      .map((repo) =>
-        repo.pullRequests.map((pullRequest) => pullRequest.created),
-      )
-      .flat(),
-    (d) => new Date(d).getUTCFullYear(),
-  ),
+  projectRepos.value
+    .map(({ pullRequests }) =>
+      pullRequests.map(({ created }) => [new Date(created), 1] as const),
+    )
+    .flat(),
 );
 
 /** commit chart data */
 const commitsOverTime = computed(() =>
-  overTime(projectRepos.value.map((repo) => repo.commits).flat(), (d) =>
-    new Date(d).getUTCFullYear(),
-  ),
+  projectRepos.value
+    .map(({ commits }) =>
+      commits.map((commit) => [new Date(commit), 1] as const),
+    )
+    .flat(),
 );
 
 /** analytics properties that match this project */
@@ -664,19 +666,27 @@ const analyticsProperties = computed(() =>
 
 /** "over time" analytics data */
 const overTimeAnalytics = computed(() => {
+  /** all properties data */
   const properties = analyticsProperties.value.map((item) => item.overTime);
+  /** list of metric keys */
   const metrics = uniq(
     analyticsProperties.value.map((item) => Object.keys(item.overTime)).flat(),
   ) as (keyof (typeof properties)[number])[];
-
+  /** for each metric */
   return metrics.map((metric) => {
     const totals: Record<string, number> = {};
+    /** sum properties together */
     for (const property of properties)
       for (const [date, value] of Object.entries(property[metric])) {
         totals[date] ??= 0;
         totals[date] += value;
       }
-    return { metric, data: totals };
+    return {
+      metric,
+      data: Object.entries(totals).map(
+        ([date, value]) => [new Date(date), value] as const,
+      ),
+    };
   });
 });
 

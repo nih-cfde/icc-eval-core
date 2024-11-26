@@ -52,30 +52,36 @@
     <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
     <div class="charts">
-      <AppLineChart
-        title="Projects Per Year"
+      <AppTimeChart
+        title="Projects"
         :data="projectsOverTime"
         :cumulative="cumulative"
+        by="month"
+        group="group"
       />
 
-      <AppLineChart
-        title="Award Amount Per Year"
+      <AppTimeChart
+        title="Award Amount"
         :data="awardsOverTime"
         :cumulative="cumulative"
         :y-format="
-          (value) =>
+          (value: number) =>
             value.toLocaleString(undefined, {
               style: 'currency',
               currency: 'USD',
               notation: 'compact',
             })
         "
+        by="month"
+        group="group"
       />
 
-      <AppLineChart
-        title="Publications Per Year"
+      <AppTimeChart
+        title="Publications"
         :data="publicationsOverTime"
         :cumulative="cumulative"
+        by="year"
+        group="group"
       />
     </div>
   </section>
@@ -83,14 +89,13 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { sum, sumBy } from "lodash";
+import { sum } from "lodash";
 import Calculator from "@/assets/calculator.svg";
 import Chart from "@/assets/chart.svg";
 import Home from "@/assets/home.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppHeading from "@/components/AppHeading.vue";
-import AppLineChart from "@/components/AppLineChart.vue";
-import { overTime } from "@/util/data";
+import AppTimeChart from "@/components/AppTimeChart.vue";
 import coreProjects from "~/core-projects.json";
 import rawProjects from "~/projects.json";
 import publications from "~/publications.json";
@@ -105,17 +110,17 @@ const projects = rawProjects.map((raw) => ({
 const cumulative = ref(true);
 
 /** chart number of projects over time */
-const projectsOverTime = overTime(projects, (d) =>
-  d.dateStart.getUTCFullYear(),
+const projectsOverTime = projects.map(
+  ({ dateStart }) => [dateStart, 1] as const,
 );
 
 /** chart award amount over time */
-const awardsOverTime = overTime(
-  projects,
-  (d) => d.dateStart.getUTCFullYear(),
-  (d) => sumBy(d, "awardAmount"),
+const awardsOverTime = projects.map(
+  ({ dateStart, awardAmount }) => [dateStart, awardAmount] as const,
 );
 
 /** chart number of publications over time */
-const publicationsOverTime = overTime(publications, "year");
+const publicationsOverTime = publications.map(
+  ({ year }) => [new Date(year, 0, 1), 1] as const,
+);
 </script>
