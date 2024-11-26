@@ -6,11 +6,13 @@
 import { provide, ref, watchEffect, type ComponentInstance } from "vue";
 import VChart, { THEME_KEY } from "vue-echarts";
 import {
-  closestIndexTo,
   eachDayOfInterval,
   eachMonthOfInterval,
   eachWeekOfInterval,
   eachYearOfInterval,
+  isAfter,
+  isBefore,
+  isEqual,
   max,
   min,
 } from "date-fns";
@@ -96,19 +98,25 @@ watchEffect(() => {
   const end = max(inputDates);
 
   /** get date bins */
-  let dateBins: Date[] = [];
-  if (props.by === "year") dateBins = eachYearOfInterval({ start, end });
-  if (props.by === "month") dateBins = eachMonthOfInterval({ start, end });
-  if (props.by === "week") dateBins = eachWeekOfInterval({ start, end });
-  if (props.by === "day") dateBins = eachDayOfInterval({ start, end });
+  let bins: Date[] = [];
+  if (props.by === "year") bins = eachYearOfInterval({ start, end }, {});
+  if (props.by === "month") bins = eachMonthOfInterval({ start, end });
+  if (props.by === "week") bins = eachWeekOfInterval({ start, end });
+  if (props.by === "day") bins = eachDayOfInterval({ start, end });
 
   /** init bin values to 0 */
-  const data: [Date, number][] = dateBins.map((date) => [date, 0]);
+  const data: [Date, number][] = bins.map((date) => [date, 0]);
 
   /** total values for binned dates */
   for (const [date, value] of inputData) {
-    const index = closestIndexTo(date, dateBins);
-    if (index) data[index]![1] += value;
+    const index = bins.findIndex(
+      (bin, index) =>
+        /** is value >= lower bound of bin */
+        (isEqual(bin, date) || isBefore(bin, date)) &&
+        /** is value < upper bound of bin, or at last bin */
+        (index === bins.length - 1 || isAfter(bins[index + 1]!, date)),
+    );
+    if (index !== -1) data[index]![1] += value;
   }
 
   /** accumulate values */
@@ -133,14 +141,18 @@ watchEffect(() => {
   options.value.grid = {
     left: 60,
     top: 80,
-    bottom: zoom ? 80 : 50,
+    bottom: 50,
     right: 50,
   } satisfies GridComponentOption;
 
-  if (zoom) options.value.dataZoom = [{ xAxisIndex: 0, filterMode: "none" }];
+  if (zoom)
+    options.value.dataZoom = [
+      { xAxisIndex: 0, filterMode: "none", type: "inside" },
+    ];
 
   options.value.xAxis = {
     type: "time",
+    axisLabel: { showMaxLabel: true },
   } satisfies XAXisComponentOption;
 
   options.value.yAxis = {
