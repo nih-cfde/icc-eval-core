@@ -658,18 +658,18 @@ const overTimeAnalytics = computed(() => {
   const properties = analyticsProperties.value.map((item) => item.overTime);
 
   /** total values from all properties */
-  const total = properties[0];
-  if (properties.length > 0 && total) {
-    const metrics = total.metrics.length;
-    const values = total.metrics[0]?.values?.length ?? 0;
-    for (const property of properties.slice(1))
-      for (let metricIndex = 0; metricIndex < metrics; metricIndex++)
-        for (let valueIndex = 0; valueIndex < values; valueIndex++)
-          total!.metrics[metricIndex]!.values[valueIndex]! +=
-            property.metrics[metricIndex]!.values[valueIndex]!;
-  }
+  // const total = properties[0];
+  // if (properties.length > 0 && total) {
+  //   const metrics = total.metrics.length;
+  //   const values = total.metrics[0]?.values?.length ?? 0;
+  //   for (const property of properties.slice(1))
+  //     for (let metricIndex = 0; metricIndex < metrics; metricIndex++)
+  //       for (let valueIndex = 0; valueIndex < values; valueIndex++)
+  //         total!.metrics[metricIndex]!.values[valueIndex]! +=
+  //           property.metrics[metricIndex]!.values[valueIndex]!;
+  // }
 
-  return total;
+  return properties[0];
 });
 
 /** "top dimensions" analytics data */

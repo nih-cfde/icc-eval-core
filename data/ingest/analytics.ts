@@ -1,3 +1,4 @@
+import { addDays, eachDayOfInterval, subDays } from "date-fns";
 import { uniq, uniqBy } from "lodash-es";
 import {
   getCoreProject,
@@ -81,34 +82,62 @@ export const getAnalytics = async () => {
     );
 
   /** map "over time" data */
-  const mapOverTime = (reports: Awaited<ReturnType<typeof getOverTime>>) => {
-    const dateRanges = reports.map((report) => report.dateRange);
+  const mapOverTime = (report: Awaited<ReturnType<typeof getOverTime>>) => {
+    /** extract salient props */
+    const { dateRange, result } = report;
+    const { startDate, endDate } = dateRange;
+    const { metricHeaders, rows } = result ?? {};
+
+    if (!result || !metricHeaders || !rows)
+      throw Error("No analytics report response");
+
+    /** get uniq list of metric keys */
     const metricKeys = uniq(
-      reports
-        .map(
-          (report) =>
-            report.metricHeaders?.map((header) => header.name ?? "") ?? "",
-        )
-        .flat(),
+      metricHeaders.map((header) => header.name ?? "").flat(),
     );
 
-    const metrics = metricKeys.map((metric, index) => ({
-      metric,
-      values: reports.map(
-        (report) => Number(report.rows?.[0]?.metricValues?.[index]?.value) || 0,
-      ),
-    }));
+    /** get in-order list of days between date range */
+    const range = eachDayOfInterval({ start: startDate, end: endDate }).map(
+      /** convert to format that google analytics returns, YYYYMMDD */
+      (date) => date.toISOString().slice(0, 10).replaceAll("-", ""),
+    );
 
-    /** trim undefined values off of start */
-    for (let index = 0; index < dateRanges.length; index++) {
-      if (!metrics.every((metric) => metric.values[index] === 0)) {
-        dateRanges.splice(0, index - 1);
-        metrics.forEach((metric) => metric.values.splice(0, index - 1));
-        break;
-      }
-    }
+    return metricKeys.map((metric, index) => {
+      /** make map of date to value for quick lookup */
+      const dateToValue = Object.fromEntries(
+        rows.map((row) => [
+          row.dimensionValues?.[0]?.value ?? "",
+          Number(row.metricValues?.[index]?.value),
+        ]),
+      );
 
-    return { dateRanges, metrics };
+      /** get value from date */
+      const getValueFromDate = (date: string) => dateToValue[date] ?? 0;
+
+      /** make in-order list of values, with each day filled in */
+      let values = range.map(getValueFromDate);
+
+      /** default to full range */
+      let start = dateRange.startDate;
+      let end = dateRange.endDate;
+
+      /** find first and last 0 values */
+      let startIndex = values.findIndex(Boolean);
+      let endIndex = values.findLastIndex(Boolean);
+      if (startIndex === -1) startIndex = 0;
+      if (endIndex === -1) endIndex = values.length;
+
+      /** trim days off of start and end dates */
+      start = addDays(start, startIndex).toISOString().slice(0, 10);
+      end = subDays(end, values.length - endIndex)
+        .toISOString()
+        .slice(0, 10);
+
+      /** trim off values */
+      values = values.slice(startIndex, endIndex);
+
+      return { dateRange: { start, end }, metric, values };
+    });
   };
 
   /** transform data into desired format, with fallbacks */

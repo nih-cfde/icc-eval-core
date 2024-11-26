@@ -116,7 +116,7 @@ export const getRepos = async (coreProjects: string[]) => {
           (new Date(issue.closed_at ?? Date.now()).getTime() -
             new Date(issue.created_at).getTime()) /
           1000,
-      ),
+      ) ?? 0,
     );
 
   /** transform data into desired format, with fallbacks */
