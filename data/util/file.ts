@@ -13,6 +13,7 @@ import {
 } from "csv-stringify/sync";
 import { isEmpty } from "lodash-es";
 import Downloader from "nodejs-file-downloader";
+import * as prettier from "prettier";
 import { HttpRangeReader, ZipReader } from "@zip.js/zip.js";
 import { log } from "@/util/log";
 import { request } from "@/util/request";
@@ -149,7 +150,7 @@ export const spawn = (
 export const saveFile = async (data: unknown, path: string) => {
   let contents: string | NodeJS.ArrayBufferView = "";
 
-  if (path.endsWith(".json")) contents = stringifyJson(data);
+  if (path.endsWith(".json")) contents = await stringifyJson(data);
   if (path.endsWith(".csv"))
     contents = stringifyCsv([data].flat(), { delimiter: "," });
   if (path.endsWith(".tsv"))
@@ -175,7 +176,8 @@ export const parseJson = <Data>(data: string) => {
 };
 
 /** stringify json */
-export const stringifyJson = (data: unknown) => JSON.stringify(data, null, 2);
+export const stringifyJson = (data: unknown) =>
+  prettier.format(JSON.stringify(data), { parser: "json" });
 
 /** parse csv/tsv/etc contents */
 export const parseCsv = <Data>(

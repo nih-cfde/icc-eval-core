@@ -1,19 +1,14 @@
 <template>
-  <v-chart ref="chart" class="chart" :option="option" />
+  <v-chart ref="chart" class="chart" :option="options" />
 </template>
 
 <script setup lang="ts">
-import {
-  computed,
-  provide,
-  ref,
-  watchEffect,
-  type ComponentInstance,
-} from "vue";
+import { provide, ref, watchEffect, type ComponentInstance } from "vue";
 import VChart, { THEME_KEY } from "vue-echarts";
 import type { EChartsOption } from "echarts";
 import { LineChart } from "echarts/charts";
 import {
+  DataZoomComponent,
   GridComponent,
   TitleComponent,
   TooltipComponent,
@@ -50,19 +45,26 @@ watchEffect(() => {
   });
 });
 
-use([SVGRenderer, LineChart, TitleComponent, GridComponent, TooltipComponent]);
+use([
+  SVGRenderer,
+  LineChart,
+  TitleComponent,
+  GridComponent,
+  TooltipComponent,
+  DataZoomComponent,
+]);
 
 provide(THEME_KEY, "light");
 
 const theme = getCssVar("--theme");
 
-const option = computed(() => {
-  const options: EChartsOption = {};
+const options = ref<EChartsOption>({});
 
-  options.animation = false;
+watchEffect(() => {
+  options.value.animation = false;
 
-  options.title = {
-    text: props.title,
+  options.value.title = {
+    text: `${props.title}${props.cumulative ? " (cumulative)" : ""}`,
     subtext: `Total: ${props.yFormat(sum(Object.values(props.data)))}`,
     right: "center",
     top: 15,
@@ -70,28 +72,33 @@ const option = computed(() => {
     subtextStyle: { fontSize: 14 },
   };
 
-  options.grid = {
+  const zoom = Object.keys(props.data).length > 100;
+
+  options.value.grid = {
     left: 60,
     top: 80,
-    bottom: 50,
+    bottom: zoom ? 80 : 50,
     right: 50,
   };
 
-  options.xAxis = {
+  if (zoom) options.value.dataZoom = [{ xAxisIndex: 0 }];
+
+  options.value.xAxis = {
     type: "category",
     boundaryGap: false,
     data: Object.keys(props.data),
   };
 
-  options.yAxis = {
+  options.value.yAxis = {
     type: "value",
     axisLabel: {
       formatter: props.yFormat,
     },
   };
 
-  options.series = [
+  options.value.series = [
     {
+      showSymbol: false,
       areaStyle: {
         color: theme,
         opacity: 0.25,
@@ -111,8 +118,8 @@ const option = computed(() => {
     },
   ];
 
-  options.tooltip = {
-    trigger: "item",
+  options.value.tooltip = {
+    trigger: "axis",
     valueFormatter: (value) =>
       typeof value === "number" ? props.yFormat(value) : String(value),
     // type: "axis",
@@ -120,8 +127,6 @@ const option = computed(() => {
     //   type: "cross",
     // },
   };
-
-  return options;
 });
 </script>
 

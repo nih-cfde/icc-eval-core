@@ -53,6 +53,8 @@
         </template>
       </template>
 
+      <template #year="{ row }">{{ row.year }}</template>
+
       <template #modified="{ row }">
         {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
         <br />
@@ -83,9 +85,7 @@
 
       <AppLineChart
         class="chart"
-        :title="
-          cumulative ? 'Cumulative Publications' : 'Publications Per Year'
-        "
+        title="Publications Per Year"
         :data="publicationsOverTime"
         :cumulative="cumulative"
       />
@@ -195,33 +195,31 @@
       <div class="charts">
         <AppLineChart
           class="chart"
-          :title="cumulative ? 'Cumulative Stars' : 'Stars Per Year'"
+          title="Stars Per Year"
           :data="starsOverTime"
           :cumulative="cumulative"
         />
         <AppLineChart
           class="chart"
-          :title="cumulative ? 'Cumulative Forks' : 'Forks Per Year'"
+          title="Forks Per Year"
           :data="forksOverTime"
           :cumulative="cumulative"
         />
         <AppLineChart
           class="chart"
-          :title="cumulative ? 'Cumulative Issues' : 'Issues Per Year'"
+          title="Issues Per Year"
           :data="issuesOverTime"
           :cumulative="cumulative"
         />
         <AppLineChart
           class="chart"
-          :title="
-            cumulative ? 'Cumulative Pull Requests' : 'Pull Requests Per Year'
-          "
+          title="Pull Requests Per Year"
           :data="pullRequestsOverTime"
           :cumulative="cumulative"
         />
         <AppLineChart
           class="chart"
-          :title="cumulative ? 'Cumulative Commits' : 'Commits Per Year'"
+          title="Commits Per Year"
           :data="commitsOverTime"
           :cumulative="cumulative"
         />
@@ -252,21 +250,18 @@
         </div>
       </dl>
 
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
       <div class="charts">
         <template
-          v-for="({ metric, values }, key) in overTimeAnalytics?.metrics"
+          v-for="({ metric, data }, key) in overTimeAnalytics"
           :key="key"
         >
           <AppLineChart
             :title="startCase(metric)"
-            :data="
-              Object.fromEntries(
-                overTimeAnalytics?.dateRanges?.map((range, index) => [
-                  range.startDate,
-                  values[index]!,
-                ]) ?? [],
-              )
-            "
+            :data="data"
+            :cumulative="cumulative"
+            group="overTime"
           />
         </template>
       </div>
@@ -325,7 +320,16 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { fromPairs, orderBy, startCase, sum, sumBy, toPairs } from "lodash";
+import { connect } from "echarts";
+import {
+  fromPairs,
+  orderBy,
+  startCase,
+  sum,
+  sumBy,
+  toPairs,
+  uniq,
+} from "lodash";
 import { useTitle } from "@vueuse/core";
 import Analytics from "@/assets/analytics.svg";
 import Book from "@/assets/book.svg";
@@ -355,8 +359,11 @@ const repos = rawRepos as Repo[];
 
 const route = useRoute();
 
+/** connect chart zooms together */
+connect("overTime");
+
 /** whether charts should be shown in cumulative mode */
-const cumulative = ref(true);
+const cumulative = ref(false);
 
 /** currently viewed core project id */
 const id = computed(() =>
@@ -423,6 +430,7 @@ const projectPublications = computed(() =>
       /** include journal info */
       return {
         ...publication,
+        year: publication.year,
         modified: new Date(publication.modified),
         rank: journal?.rank ?? 0,
         journal: journal?.name ?? publication.journal,
@@ -472,6 +480,7 @@ const publicationCols: Cols<typeof projectPublications.value> = [
     align: "left",
   },
   {
+    slot: "year",
     key: "year",
     name: "Published",
   },
@@ -656,20 +665,19 @@ const analyticsProperties = computed(() =>
 /** "over time" analytics data */
 const overTimeAnalytics = computed(() => {
   const properties = analyticsProperties.value.map((item) => item.overTime);
+  const metrics = uniq(
+    analyticsProperties.value.map((item) => Object.keys(item.overTime)).flat(),
+  ) as (keyof (typeof properties)[number])[];
 
-  /** total values from all properties */
-  // const total = properties[0];
-  // if (properties.length > 0 && total) {
-  //   const metrics = total.metrics.length;
-  //   const values = total.metrics[0]?.values?.length ?? 0;
-  //   for (const property of properties.slice(1))
-  //     for (let metricIndex = 0; metricIndex < metrics; metricIndex++)
-  //       for (let valueIndex = 0; valueIndex < values; valueIndex++)
-  //         total!.metrics[metricIndex]!.values[valueIndex]! +=
-  //           property.metrics[metricIndex]!.values[valueIndex]!;
-  // }
-
-  return properties[0];
+  return metrics.map((metric) => {
+    const totals: Record<string, number> = {};
+    for (const property of properties)
+      for (const [date, value] of Object.entries(property[metric])) {
+        totals[date] ??= 0;
+        totals[date] += value;
+      }
+    return { metric, data: totals };
+  });
 });
 
 /** "top dimensions" analytics data */

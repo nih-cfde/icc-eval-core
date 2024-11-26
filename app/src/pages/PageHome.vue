@@ -53,15 +53,13 @@
 
     <div class="charts">
       <AppLineChart
-        :title="cumulative ? 'Cumulative Projects' : 'Projects Per Year'"
+        title="Projects Per Year"
         :data="projectsOverTime"
         :cumulative="cumulative"
       />
 
       <AppLineChart
-        :title="
-          cumulative ? 'Cumulative Award Amount' : 'Award Amount Per Year'
-        "
+        title="Award Amount Per Year"
         :data="awardsOverTime"
         :cumulative="cumulative"
         :y-format="
@@ -75,9 +73,7 @@
       />
 
       <AppLineChart
-        :title="
-          cumulative ? 'Cumulative Publications' : 'Publications Per Year'
-        "
+        title="Publications Per Year"
         :data="publicationsOverTime"
         :cumulative="cumulative"
       />

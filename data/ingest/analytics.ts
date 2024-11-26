@@ -1,4 +1,3 @@
-import { addDays, eachDayOfInterval, subDays } from "date-fns";
 import { uniq, uniqBy } from "lodash-es";
 import {
   getCoreProject,
@@ -28,6 +27,8 @@ export const getAnalytics = async () => {
 
   /** de-dupe */
   properties = uniqBy(properties, "property");
+
+  log("Getting Google Analytics data");
 
   /** get salient data about each property */
   const data = await queryMulti(
@@ -84,8 +85,7 @@ export const getAnalytics = async () => {
   /** map "over time" data */
   const mapOverTime = (report: Awaited<ReturnType<typeof getOverTime>>) => {
     /** extract salient props */
-    const { dateRange, result } = report;
-    const { startDate, endDate } = dateRange;
+    const { result } = report;
     const { metricHeaders, rows } = result ?? {};
 
     if (!result || !metricHeaders || !rows)
@@ -96,48 +96,24 @@ export const getAnalytics = async () => {
       metricHeaders.map((header) => header.name ?? "").flat(),
     );
 
-    /** get in-order list of days between date range */
-    const range = eachDayOfInterval({ start: startDate, end: endDate }).map(
-      /** convert to format that google analytics returns, YYYYMMDD */
-      (date) => date.toISOString().slice(0, 10).replaceAll("-", ""),
+    return Object.fromEntries(
+      metricKeys.map((metric, index) => [
+        metric,
+        Object.fromEntries(
+          rows
+            .map((row) => [
+              /** date */
+              (row.dimensionValues?.[0]?.value ?? "").replace(
+                /(\d\d\d\d)(\d\d)(\d\d)/,
+                "$1-$2-$3",
+              ),
+              /** value */
+              Number(row.metricValues?.[index]?.value ?? ""),
+            ])
+            .filter(([, value]) => value),
+        ),
+      ]),
     );
-
-    return metricKeys.map((metric, index) => {
-      /** make map of date to value for quick lookup */
-      const dateToValue = Object.fromEntries(
-        rows.map((row) => [
-          row.dimensionValues?.[0]?.value ?? "",
-          Number(row.metricValues?.[index]?.value),
-        ]),
-      );
-
-      /** get value from date */
-      const getValueFromDate = (date: string) => dateToValue[date] ?? 0;
-
-      /** make in-order list of values, with each day filled in */
-      let values = range.map(getValueFromDate);
-
-      /** default to full range */
-      let start = dateRange.startDate;
-      let end = dateRange.endDate;
-
-      /** find first and last 0 values */
-      let startIndex = values.findIndex(Boolean);
-      let endIndex = values.findLastIndex(Boolean);
-      if (startIndex === -1) startIndex = 0;
-      if (endIndex === -1) endIndex = values.length;
-
-      /** trim days off of start and end dates */
-      start = addDays(start, startIndex).toISOString().slice(0, 10);
-      end = subDays(end, values.length - endIndex)
-        .toISOString()
-        .slice(0, 10);
-
-      /** trim off values */
-      values = values.slice(startIndex, endIndex);
-
-      return { dateRange: { start, end }, metric, values };
-    });
   };
 
   /** transform data into desired format, with fallbacks */
