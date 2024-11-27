@@ -9,6 +9,27 @@
       :rows="rows"
       :sort="[{ id: 'awardAmount', desc: true }]"
     >
+      <template #status="{ row }">
+        <template v-if="row.repos || row.analytics">
+          <AppLink
+            :to="readmeLink"
+            class="score good"
+            title="Owners have completed the submission process"
+          >
+            <Check />
+          </AppLink>
+        </template>
+        <template v-else>
+          <AppLink
+            :to="readmeLink"
+            title="Owners have NOT completed the submission process"
+            class="score bad"
+          >
+            <Xmark />
+          </AppLink>
+        </template>
+      </template>
+
       <template #id="{ row }">
         <AppLink :to="`/core-project/${row.id}`">{{ row.id }}</AppLink>
       </template>
@@ -32,17 +53,27 @@
 
 <script setup lang="ts">
 import { truncate } from "lodash";
+import Check from "@/assets/check.svg";
 import Microscope from "@/assets/microscope.svg";
+import Xmark from "@/assets/xmark.svg";
 import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import coreProjects from "~/core-projects.json";
 
+const readmeLink =
+  "https://github.com/nih-cfde/icc-eval-core?tab=readme-ov-file#submit-your-project";
+
 /** table row data */
-const rows = coreProjects;
+const rows = coreProjects.map((d) => ({ ...d, status: d.repos + d.analytics }));
 
 /** table column definitions */
 const cols: Cols<typeof rows> = [
+  {
+    slot: "status",
+    key: "status",
+    name: "Status",
+  },
   {
     slot: "id",
     key: "id",
@@ -93,5 +124,22 @@ const cols: Cols<typeof rows> = [
   place-items: center;
   width: 100%;
   gap: 10px;
+}
+
+.score > svg {
+  height: 1.5em;
+}
+
+.score:hover {
+  background: unset;
+  color: black;
+}
+
+.good {
+  color: var(--success);
+}
+
+.bad {
+  color: var(--light-gray);
 }
 </style>

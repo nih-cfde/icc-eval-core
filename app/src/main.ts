@@ -1,4 +1,5 @@
 import { createApp } from "vue";
+import VueGtagPlugin from "vue-gtag";
 import { createRouter, createWebHistory } from "vue-router";
 import App from "./App.vue";
 import PageCoreProject from "./pages/PageCoreProject.vue";
@@ -30,4 +31,9 @@ const routes = [
 
 const router = createRouter({ history: createWebHistory(), routes });
 
-createApp(App).use(router).mount("#app");
+createApp(App)
+  .use(router)
+  .use(VueGtagPlugin, {
+    config: { id: "G-ES3DWJYSXR", enabled: import.meta.env.PROD },
+  })
+  .mount("#app");

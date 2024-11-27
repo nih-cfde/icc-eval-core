@@ -11,5 +11,6 @@ namespace NodeJS {
 
     // .env.local
     readonly AUTH_GITHUB: string;
+    readonly AUTH_ENTREZ: string;
   };
 }

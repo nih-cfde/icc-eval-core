@@ -1,4 +1,5 @@
 import { chunk, isEmpty } from "lodash-es";
+import { memoize } from "@/util/memoize";
 import { request } from "@/util/request";
 import type { Results } from "./types/icite-results";
 
@@ -12,7 +13,7 @@ const api = "https://icite.od.nih.gov/api/pubs";
  */
 
 /** run icite query */
-export const queryIcite = async (pmids: number[]) => {
+export const queryIcite = memoize(async (pmids: number[]) => {
   /** break ids into chunks of max allowed size */
   const chunks = chunk(pmids, 1000);
 
@@ -31,4 +32,4 @@ export const queryIcite = async (pmids: number[]) => {
   }
 
   return results;
-};
+});

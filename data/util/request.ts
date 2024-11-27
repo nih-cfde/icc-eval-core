@@ -44,7 +44,16 @@ export const request: Request = async <Parsed>(
     ...options,
     body: JSON.stringify(options.body),
   });
-  const response = await fetch(request);
+  let response = await fetch(request);
+
+  /** if rate limited, retry a few times */
+  let retry = 5;
+  while (response.status === 429 && retry-- > 0) {
+    const timeout = parseInt(response.headers.get("retry-after") ?? "1") + 1;
+    console.debug(`Retrying (${retry}) after ${timeout}s`);
+    await sleep(timeout * 1000);
+    response = await fetch(request.clone());
+  }
   if (!response.ok) throw Error(`Response for ${url} not OK`);
   if (raw) return response;
 
@@ -120,6 +129,8 @@ export const queryMulti = async <Result>(
   ) => Promise<Result>)[],
   /** raw (cache) filename */
   filename?: Filename,
+  /** max number of concurrent queries */
+  concurrency = 10,
 ): Promise<(NonNullable<Result> | Error)[]> => {
   /** if raw data already exists, return that without querying */
   if (filename) {
@@ -142,15 +153,12 @@ export const queryMulti = async <Result>(
   /** number of currently running promises */
   let running = 0;
 
-  /** max concurrent promises allowed */
-  const limit = 10;
-
   /** run promises */
   const settled = await Promise.allSettled(
     promises.map(async (promise, index) => {
       try {
         /** wait until # of running promises is less than limit */
-        while (running >= limit) await sleep(10);
+        while (running >= concurrency) await sleep(10);
 
         /** increment running promises */
         running++;

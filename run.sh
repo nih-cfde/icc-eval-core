@@ -3,7 +3,7 @@
 data="npm run --prefix data"
 app="npm run --prefix app"
 
-regex="^.*--([A-Za-z-]+) ?(.*)$"
+regex="--([A-Za-z0-9:-]+) ?(.*)$"
 
 # run script in /data and /app
 if [[ $* =~ $regex ]]; then
@@ -35,4 +35,3 @@ else
     $app dev
   fi
 fi
-
