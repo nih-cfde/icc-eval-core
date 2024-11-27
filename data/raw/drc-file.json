@@ -30857,6 +30857,92 @@
   ],
   [
     {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCRBP.Gene.nodes.csv",
+      "size": 1494270,
+      "date": "2024-05-03T19:19:10.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCREG.edges.csv",
+      "size": 1562648256,
+      "date": "2024-05-03T05:11:58.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCRBP.RBP Binding Loci.nodes.csv",
+      "size": 92995229,
+      "date": "2024-05-03T19:19:14.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCRBP.exRNA Loci.nodes.csv",
+      "size": 58515080,
+      "date": "2024-05-03T19:19:16.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCRBP.Biofluid.nodes.csv",
+      "size": 818,
+      "date": "2024-05-06T16:50:14.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCREG.Regulatory Element Activity.nodes.csv",
+      "size": 263112202,
+      "date": "2024-05-03T19:19:26.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCRBP.Protein.nodes.csv",
+      "size": 13431,
+      "date": "2024-05-03T19:19:26.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCREG.Anatomy.nodes.csv",
+      "size": 3913,
+      "date": "2024-05-06T16:50:16.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCREG.ENCODE CCRE Data Matrix.nodes.csv",
+      "size": 723,
+      "date": "2024-05-03T19:19:26.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCREG.Gene.nodes.csv",
+      "size": 3792244,
+      "date": "2024-05-03T19:19:26.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCRBP.edges.csv",
+      "size": 273325593,
+      "date": "2024-05-03T05:13:10.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCREG.GTEXEQTL.nodes.csv",
+      "size": 38737204,
+      "date": "2024-05-03T19:19:38.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCREG.CLINGEN ALLELE REGISTRY.nodes.csv",
+      "size": 5995371,
+      "date": "2024-05-03T19:19:38.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+      "path": "ERCCREG.ENCODE CCRE.nodes.csv",
+      "size": 31199374,
+      "date": "2024-05-03T19:19:42.000Z"
+    }
+  ],
+  [
+    {
       "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG%20Assertions/2024-05-08/GTEx.zip",
       "path": "GTEXEXP.Gene.nodes.csv",
       "size": 2950231,
@@ -31203,6 +31289,38 @@
       "path": "MW.Anatomy.nodes.csv",
       "size": 9364,
       "date": "2024-05-06T16:50:22.000Z"
+    }
+  ],
+  [
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG%20Assertions/2024-05-08/MoTrPAC.zip",
+      "path": "MOTRPAC.MOTRPAC.nodes.csv",
+      "size": 1063523,
+      "date": "2024-05-03T19:19:10.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG%20Assertions/2024-05-08/MoTrPAC.zip",
+      "path": "MOTRPAC.edges.csv",
+      "size": 2774399,
+      "date": "2024-05-03T05:10:32.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG%20Assertions/2024-05-08/MoTrPAC.zip",
+      "path": "MOTRPAC.Anatomy.nodes.csv",
+      "size": 609,
+      "date": "2024-05-06T16:50:16.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG%20Assertions/2024-05-08/MoTrPAC.zip",
+      "path": "MOTRPAC.Gene.nodes.csv",
+      "size": 544476,
+      "date": "2024-05-03T19:19:26.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG%20Assertions/2024-05-08/MoTrPAC.zip",
+      "path": "MOTRPAC.Sex.nodes.csv",
+      "size": 129,
+      "date": "2024-05-03T19:19:38.000Z"
     }
   ],
   [
@@ -35071,6 +35189,52 @@
       "path": "",
       "size": 16319270,
       "date": "2024-04-10T21:28:03.000Z"
+    }
+  ],
+  [
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt",
+      "path": "",
+      "size": 16319270,
+      "date": "2024-04-10T21:35:15.000Z"
+    }
+  ],
+  [
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29/IDG.zip",
+      "path": "IDGD.edges.csv",
+      "size": 394647,
+      "date": "2024-04-27T01:43:50.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29/IDG.zip",
+      "path": "IDGP.Protein.nodes.csv",
+      "size": 170522,
+      "date": "2024-04-25T18:12:40.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29/IDG.zip",
+      "path": "IDGP.edges.csv",
+      "size": 31796740,
+      "date": "2024-04-25T18:10:26.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29/IDG.zip",
+      "path": "IDGD.Disease or Phenotype.nodes.csv",
+      "size": 165740,
+      "date": "2024-04-27T01:43:58.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29/IDG.zip",
+      "path": "IDGP.Compound.nodes.csv",
+      "size": 39746857,
+      "date": "2024-04-25T18:12:36.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29/IDG.zip",
+      "path": "IDGD.Compound.nodes.csv",
+      "size": 116218,
+      "date": "2024-04-25T18:15:40.000Z"
     }
   ],
   [

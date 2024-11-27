@@ -2,6 +2,7 @@ import { Octokit, type RequestError } from "octokit";
 import { type Repository } from "@octokit/graphql-schema";
 import { throttling } from "@octokit/plugin-throttling";
 import { log } from "@/util/log";
+import { memoize } from "@/util/memoize";
 
 const { AUTH_GITHUB } = process.env;
 
@@ -44,26 +45,30 @@ export const octokit = new withPlugins({
 const maxPage = 100;
 
 /** search for repos that have topic */
-export const searchRepos = async (topic: string) =>
-  (await octokit.rest.search.repos({ q: `topic:${topic}` })).data.items;
+export const searchRepos = memoize(
+  async (topic: string) =>
+    (await octokit.rest.search.repos({ q: `topic:${topic}` })).data.items,
+);
 
 /** get commits for repo */
-export const getCommits = (owner: string, name: string) =>
+export const getCommits = memoize((owner: string, name: string) =>
   octokit.paginate(octokit.rest.repos.listCommits, {
     owner,
     repo: name,
     per_page: maxPage,
-  });
+  }),
+);
 
 /** get stars for repo */
-export const getStars = (owner: string, name: string) =>
+export const getStars = memoize((owner: string, name: string) =>
   octokit.paginate(octokit.rest.activity.listStargazersForRepo, {
     owner,
     repo: name,
     per_page: maxPage,
     /** https://docs.github.com/en/rest/activity/starring?apiVersion=2022-11-28#list-stargazers */
     headers: { accept: "application/vnd.github.star+json" },
-  });
+  }),
+);
 
 /**
  * watchers over time not possible
@@ -71,63 +76,71 @@ export const getStars = (owner: string, name: string) =>
  */
 
 /** get forks for repo */
-export const getForks = (owner: string, name: string) =>
+export const getForks = memoize((owner: string, name: string) =>
   octokit.paginate(octokit.rest.repos.listForks, {
     owner,
     repo: name,
     per_page: maxPage,
-  });
+  }),
+);
 
 /** get issues for repo */
-export const getIssues = async (owner: string, name: string) =>
+export const getIssues = memoize(async (owner: string, name: string) =>
   (
     await octokit.paginate(octokit.rest.issues.listForRepo, {
       owner,
       repo: name,
       state: "all",
     })
-  ).filter((issue) => !issue.pull_request);
+  ).filter((issue) => !issue.pull_request),
+);
 
 /** get pull requests for repo */
-export const getPullRequests = (owner: string, name: string) =>
+export const getPullRequests = memoize((owner: string, name: string) =>
   octokit.paginate(octokit.rest.pulls.list, {
     owner,
     repo: name,
     state: "all",
-  });
+  }),
+);
 
 /** check whether file exists in repo */
-export const fileExists = async (owner: string, name: string, path: string) => {
-  try {
-    await octokit.rest.repos.getContent({
-      owner,
-      repo: name,
-      path,
-    });
-    return true;
-  } catch (error) {
-    /** https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#get-repository-content--status-codes */
-    const status = (error as RequestError).status;
-    if (status === 302) return true;
-    if (status === 404) return false;
-    throw Error(
-      `Problem getting contents for repo ${owner}/${name}, status ${status}`,
-    );
-  }
-};
+export const fileExists = memoize(
+  async (owner: string, name: string, path: string) => {
+    try {
+      await octokit.rest.repos.getContent({
+        owner,
+        repo: name,
+        path,
+      });
+      return true;
+    } catch (error) {
+      /** https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#get-repository-content--status-codes */
+      const status = (error as RequestError).status;
+      if (status === 302) return true;
+      if (status === 404) return false;
+      throw Error(
+        `Problem getting contents for repo ${owner}/${name}, status ${status}`,
+      );
+    }
+  },
+);
 
 /** get contributors to repo */
-export const getContributors = (owner: string, name: string) =>
-  octokit.paginate(octokit.rest.repos.listContributors, { owner, repo: name });
+export const getContributors = memoize((owner: string, name: string) =>
+  octokit.paginate(octokit.rest.repos.listContributors, { owner, repo: name }),
+);
 
 /** get programming languages used in repo */
-export const getLanguages = async (owner: string, name: string) =>
-  (
-    await octokit.rest.repos.listLanguages({
-      owner,
-      repo: name,
-    })
-  ).data;
+export const getLanguages = memoize(
+  async (owner: string, name: string) =>
+    (
+      await octokit.rest.repos.listLanguages({
+        owner,
+        repo: name,
+      })
+    ).data,
+);
 
 /**
  * graph ql query to get dependency count. need to include "dependencies" too,
@@ -152,9 +165,10 @@ const dependencyQuery = `
 `;
 
 /** get dependency graph */
-export const getDependencies = (owner: string, name: string) =>
+export const getDependencies = memoize((owner: string, name: string) =>
   /** https://github.com/orgs/community/discussions/118753 */
   octokit.graphql<{ repository: Repository }>(dependencyQuery, {
     owner,
     repo: name,
-  });
+  }),
+);

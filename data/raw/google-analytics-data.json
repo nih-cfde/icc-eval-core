@@ -4,7 +4,7 @@
     "propertyName": "preprint-similarity-search",
     "coreProject": "R03OD034502",
     "overTime": {
-      "dateRange": { "startDate": "2015-08-14", "endDate": "2024-11-26" },
+      "dateRange": { "startDate": "2015-08-14", "endDate": "2024-11-27" },
       "result": {
         "dimensionHeaders": [{ "name": "date" }],
         "metricHeaders": [
@@ -5713,8 +5713,8 @@
             "dimensionValues": [{ "value": "20241125", "oneValue": "value" }],
             "metricValues": [
               { "value": "1", "oneValue": "value" },
-              { "value": "0", "oneValue": "value" },
-              { "value": "0", "oneValue": "value" }
+              { "value": "1", "oneValue": "value" },
+              { "value": "1", "oneValue": "value" }
             ]
           }
         ],
@@ -5785,7 +5785,7 @@
           },
           {
             "dimensionValues": [{ "value": "Europe", "oneValue": "value" }],
-            "metricValues": [{ "value": "489", "oneValue": "value" }]
+            "metricValues": [{ "value": "490", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "Asia", "oneValue": "value" }],
@@ -5827,7 +5827,7 @@
           },
           {
             "dimensionValues": [{ "value": "Europe", "oneValue": "value" }],
-            "metricValues": [{ "value": "263", "oneValue": "value" }]
+            "metricValues": [{ "value": "264", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "Asia", "oneValue": "value" }],
@@ -5921,7 +5921,7 @@
           },
           {
             "dimensionValues": [{ "value": "Germany", "oneValue": "value" }],
-            "metricValues": [{ "value": "61", "oneValue": "value" }]
+            "metricValues": [{ "value": "62", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "India", "oneValue": "value" }],
@@ -5967,7 +5967,7 @@
           },
           {
             "dimensionValues": [{ "value": "Germany", "oneValue": "value" }],
-            "metricValues": [{ "value": "35", "oneValue": "value" }]
+            "metricValues": [{ "value": "36", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "India", "oneValue": "value" }],
@@ -6301,7 +6301,7 @@
         "rows": [
           {
             "dimensionValues": [{ "value": "English", "oneValue": "value" }],
-            "metricValues": [{ "value": "1576", "oneValue": "value" }]
+            "metricValues": [{ "value": "1577", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "Chinese", "oneValue": "value" }],
@@ -6343,7 +6343,7 @@
         "rows": [
           {
             "dimensionValues": [{ "value": "English", "oneValue": "value" }],
-            "metricValues": [{ "value": "708", "oneValue": "value" }]
+            "metricValues": [{ "value": "709", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "Spanish", "oneValue": "value" }],
@@ -6417,7 +6417,7 @@
         "rows": [
           {
             "dimensionValues": [{ "value": "desktop", "oneValue": "value" }],
-            "metricValues": [{ "value": "1335", "oneValue": "value" }]
+            "metricValues": [{ "value": "1336", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "mobile", "oneValue": "value" }],
@@ -6451,7 +6451,7 @@
         "rows": [
           {
             "dimensionValues": [{ "value": "desktop", "oneValue": "value" }],
-            "metricValues": [{ "value": "703", "oneValue": "value" }]
+            "metricValues": [{ "value": "704", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "mobile", "oneValue": "value" }],
@@ -6529,7 +6529,7 @@
           },
           {
             "dimensionValues": [{ "value": "Windows", "oneValue": "value" }],
-            "metricValues": [{ "value": "549", "oneValue": "value" }]
+            "metricValues": [{ "value": "550", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "iOS", "oneValue": "value" }],
@@ -6571,7 +6571,7 @@
           },
           {
             "dimensionValues": [{ "value": "Windows", "oneValue": "value" }],
-            "metricValues": [{ "value": "294", "oneValue": "value" }]
+            "metricValues": [{ "value": "295", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "iOS", "oneValue": "value" }],
@@ -6608,7 +6608,7 @@
     "propertyName": "seandavi.github.io - GA4",
     "coreProject": "U54OD036472",
     "overTime": {
-      "dateRange": { "startDate": "2015-08-14", "endDate": "2024-11-26" },
+      "dateRange": { "startDate": "2015-08-14", "endDate": "2024-11-27" },
       "result": {
         "dimensionHeaders": [{ "name": "date" }],
         "metricHeaders": [

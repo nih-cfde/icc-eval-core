@@ -1371,7 +1371,8 @@
         "2024-11-06": 1,
         "2024-11-07": 1,
         "2024-11-10": 4,
-        "2024-11-11": 1
+        "2024-11-11": 1,
+        "2024-11-25": 1
       },
       "engagedSessions": {
         "2021-11-18": 2,
@@ -1765,7 +1766,8 @@
         "2024-10-31": 1,
         "2024-11-06": 1,
         "2024-11-07": 1,
-        "2024-11-10": 3
+        "2024-11-10": 3,
+        "2024-11-25": 1
       }
     },
     "topContinents": {
@@ -1778,14 +1780,14 @@
       },
       "byNewUsers": {
         "Americas": 1149,
-        "Europe": 489,
+        "Europe": 490,
         "Asia": 202,
         "Oceania": 25,
         "Africa": 11
       },
       "byEngagedSessions": {
         "Americas": 484,
-        "Europe": 263,
+        "Europe": 264,
         "Asia": 98,
         "Oceania": 17,
         "Africa": 7
@@ -1802,14 +1804,14 @@
       "byNewUsers": {
         "United States": 1049,
         "United Kingdom": 115,
-        "Germany": 61,
+        "Germany": 62,
         "India": 60,
         "Canada": 58
       },
       "byEngagedSessions": {
         "United States": 435,
         "United Kingdom": 60,
-        "Germany": 35,
+        "Germany": 36,
         "India": 33,
         "France": 31
       }
@@ -1869,14 +1871,14 @@
         "German": 41
       },
       "byNewUsers": {
-        "English": 1576,
+        "English": 1577,
         "Chinese": 63,
         "Spanish": 52,
         "French": 50,
         "German": 41
       },
       "byEngagedSessions": {
-        "English": 708,
+        "English": 709,
         "Spanish": 32,
         "Chinese": 31,
         "French": 31,
@@ -1885,8 +1887,8 @@
     },
     "topDevices": {
       "byActiveUsers": { "desktop": 1340, "mobile": 529, "tablet": 16 },
-      "byNewUsers": { "desktop": 1335, "mobile": 529, "tablet": 16 },
-      "byEngagedSessions": { "desktop": 703, "mobile": 165, "tablet": 2 }
+      "byNewUsers": { "desktop": 1336, "mobile": 529, "tablet": 16 },
+      "byEngagedSessions": { "desktop": 704, "mobile": 165, "tablet": 2 }
     },
     "topOSes": {
       "byActiveUsers": {
@@ -1898,14 +1900,14 @@
       },
       "byNewUsers": {
         "Macintosh": 628,
-        "Windows": 549,
+        "Windows": 550,
         "iOS": 347,
         "Android": 197,
         "Linux": 158
       },
       "byEngagedSessions": {
         "Macintosh": 371,
-        "Windows": 294,
+        "Windows": 295,
         "iOS": 106,
         "Android": 61,
         "Linux": 39

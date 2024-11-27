@@ -1,3 +1,4 @@
+import { memoize } from "@/util/memoize";
 import { request } from "@/util/request";
 import type { EsearchResults, EsummaryResults } from "./types/entrez";
 
@@ -7,7 +8,7 @@ const esummary = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi";
 const { AUTH_ENTREZ = "" } = process.env;
 
 /** get full journal name from abbreviated name */
-export const getFullJournalName = async (abbreviated: string) => {
+export const getFullJournalName = memoize(async (abbreviated: string) => {
   /** https://stackoverflow.com/questions/75512796/how-do-i-get-issns-and-full-journal-names-from-a-list-of-abbreviated-journal-nam */
 
   try {
@@ -32,4 +33,4 @@ export const getFullJournalName = async (abbreviated: string) => {
   } catch (error) {
     console.error(error);
   }
-};
+});

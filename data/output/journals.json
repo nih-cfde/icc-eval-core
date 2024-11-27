@@ -60,6 +60,12 @@
     "issn": "26935015"
   },
   {
+    "id": "Metabolites",
+    "name": "Ca-A Cancer Journal for Clinicians",
+    "rank": 106.094,
+    "issn": ""
+  },
+  {
     "id": "Analytical chemistry",
     "name": "Analytical Chemistry",
     "rank": 1.621,
@@ -70,12 +76,6 @@
     "name": "Environmental Science &amp; Technology",
     "rank": 3.516,
     "issn": "15205851"
-  },
-  {
-    "id": "Metabolites",
-    "name": "Metabolites",
-    "rank": 0.903,
-    "issn": "22181989"
   },
   {
     "id": "Nature methods",
@@ -90,16 +90,16 @@
     "issn": "20461402"
   },
   {
+    "id": "Frontiers in cell and developmental biology",
+    "name": "Frontiers in Cell and Developmental Biology",
+    "rank": 1.576,
+    "issn": "2296634X"
+  },
+  {
     "id": "Biomolecules",
     "name": "Biomolecules",
     "rank": 1.179,
     "issn": "2218273X"
-  },
-  {
-    "id": "Frontiers in cell and developmental biology",
-    "name": "Ca-A Cancer Journal for Clinicians",
-    "rank": 106.094,
-    "issn": ""
   },
   {
     "id": "Pharmaceuticals (Basel, Switzerland)",
@@ -336,6 +336,7 @@
     "rank": 2.797,
     "issn": "26628457"
   },
+  { "id": "Cancers", "name": "Cancers", "rank": 1.391, "issn": "20726694" },
   {
     "id": "Communications medicine",
     "name": "Communications medicine",
@@ -343,7 +344,6 @@
     "issn": "2730664X"
   },
   { "id": "PeerJ", "name": "PeerJ", "rank": 0.623, "issn": "21678359" },
-  { "id": "Cancers", "name": "Cancers", "rank": 1.391, "issn": "20726694" },
   {
     "id": "Cell genomics",
     "name": "Cell Genomics",
@@ -376,17 +376,24 @@
     "issn": "14712407"
   },
   {
-    "id": "International journal of tryptophan research : IJTR",
-    "name": "International Journal of Tryptophan Research",
-    "rank": 1.004,
-    "issn": "11786469"
-  },
-  {
     "id": "Frontiers in fungal biology",
     "name": "Frontiers in Fungal Biology",
     "rank": 0.491,
     "issn": "26736128"
   },
+  {
+    "id": "Toxicological sciences : an official journal of the Society of Toxicology",
+    "name": "Toxicological Sciences",
+    "rank": 0.911,
+    "issn": "10960929"
+  },
+  {
+    "id": "International journal of tryptophan research : IJTR",
+    "name": "International Journal of Tryptophan Research",
+    "rank": 1.004,
+    "issn": "11786469"
+  },
+  { "id": "eLife", "name": "eLife", "rank": 3.932, "issn": "2050084X" },
   {
     "id": "Biophysical journal",
     "name": "Biophysical Journal",
@@ -395,22 +402,21 @@
   },
   {
     "id": "Frontiers in microbiology",
-    "name": "Ca-A Cancer Journal for Clinicians",
-    "rank": 106.094,
-    "issn": ""
+    "name": "Frontiers in Microbiology",
+    "rank": 1.065,
+    "issn": "1664302X"
   },
-  { "id": "eLife", "name": "eLife", "rank": 3.932, "issn": "2050084X" },
   {
-    "id": "Toxicological sciences : an official journal of the Society of Toxicology",
-    "name": "Toxicological Sciences",
-    "rank": 0.911,
-    "issn": "10960929"
+    "id": "Nature cancer",
+    "name": "Nature Cancer",
+    "rank": 11.9,
+    "issn": "26621347"
   },
   {
     "id": "Frontiers in endocrinology",
-    "name": "Ca-A Cancer Journal for Clinicians",
-    "rank": 106.094,
-    "issn": ""
+    "name": "Frontiers in Endocrinology",
+    "rank": 1.24,
+    "issn": "16642392"
   },
   {
     "id": "Cell reports",
@@ -419,10 +425,10 @@
     "issn": "22111247"
   },
   {
-    "id": "Nature cancer",
-    "name": "Nature Cancer",
-    "rank": 11.9,
-    "issn": "26621347"
+    "id": "American journal of physiology. Lung cellular and molecular physiology",
+    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
+    "rank": 1.339,
+    "issn": "15221504"
   },
   {
     "id": "Nature metabolism",
@@ -435,12 +441,6 @@
     "name": "Journal of Alzheimer's Disease Reports",
     "rank": 0.635,
     "issn": "25424823"
-  },
-  {
-    "id": "American journal of physiology. Lung cellular and molecular physiology",
-    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
-    "rank": 1.339,
-    "issn": "15221504"
   },
   {
     "id": "International journal of cancer",

@@ -20,12 +20,21 @@ export const getJournals = async (journalIds: string[]) => {
 
   /** get journal rank data */
   const ranks = await query(async (progress) => {
-    const { path } = await downloadFile(
+    const { path, cached } = await downloadFile(
       ranksUrl,
       "scimago-ranks.csv",
       progress,
     );
-    const { data } = await loadFile<Rank[]>(path, "csv", { delimiter: ";" });
+    const { data } = await loadFile<Rank[]>(
+      path,
+      "csv",
+      /**
+       * raw file delimited with semi-colon (incorrectly), but query func saves
+       * csv with comma delimiter (correctly), so on next run downloadFile will
+       * return path to comma-delimited file
+       */
+      cached ? undefined : { delimiter: ";" },
+    );
     return data;
   }, "scimago-ranks.csv");
 
