@@ -1,3 +1,4 @@
+import { uniq, uniqBy } from "lodash-es";
 import { Octokit, type RequestError } from "octokit";
 import { type Repository } from "@octokit/graphql-schema";
 import { throttling } from "@octokit/plugin-throttling";
@@ -45,10 +46,27 @@ export const octokit = new withPlugins({
 const maxPage = 100;
 
 /** search for repos that have topic */
-export const searchRepos = memoize(
-  async (topic: string) =>
-    (await octokit.rest.search.repos({ q: `topic:${topic}` })).data.items,
-);
+export const searchRepos = memoize(async (topic: string) => {
+  const repos = (await octokit.rest.search.repos({ q: `topic:${topic}` })).data
+    .items;
+
+  /** if flag set, get all other repos in org */
+  const orgRepos = (
+    await Promise.all(
+      uniq(
+        repos
+          .filter((repo) => repo.topics?.includes("tag-all"))
+          .map((repo) => repo.owner?.login ?? ""),
+      )
+        .filter(Boolean)
+        .map((org) =>
+          octokit.rest.repos.listForOrg({ org }).then((result) => result.data),
+        ),
+    )
+  ).flat();
+
+  return uniqBy([...repos, ...orgRepos], "id");
+});
 
 /** get commits for repo */
 export const getCommits = memoize((owner: string, name: string) =>
