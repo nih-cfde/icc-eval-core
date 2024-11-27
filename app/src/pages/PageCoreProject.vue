@@ -267,7 +267,7 @@
             :title="startCase(metric)"
             :data="data"
             :cumulative="cumulative"
-            by="month"
+            by="week"
             group="group"
           />
         </template>
