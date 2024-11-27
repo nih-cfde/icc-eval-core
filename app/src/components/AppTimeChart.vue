@@ -125,7 +125,7 @@ watchEffect(() => {
       data[index]![1] += data[index - 1]![1];
 
   /** whether to enable zoom controls */
-  const zoom = Object.keys(props.data).length > 20;
+  const zoom = props.data.length > 20;
 
   options.value.animation = false;
 
