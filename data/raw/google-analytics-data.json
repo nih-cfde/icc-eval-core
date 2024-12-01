@@ -3858,6 +3858,60 @@
         },
         "propertyQuota": null,
         "kind": "analyticsData#runReport"
+      },
+      {
+        "dateRange": {
+          "startDate": "2024-11-01",
+          "endDate": "2024-12-01"
+        },
+        "dimensionHeaders": [],
+        "metricHeaders": [
+          {
+            "name": "activeUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "engagedSessions",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [],
+            "metricValues": [
+              {
+                "value": "9",
+                "oneValue": "value"
+              },
+              {
+                "value": "8",
+                "oneValue": "value"
+              },
+              {
+                "value": "6",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
       }
     ],
     "topContinents": [
@@ -8718,6 +8772,60 @@
               },
               {
                 "value": "176",
+                "oneValue": "value"
+              }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/New_York",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dateRange": {
+          "startDate": "2024-11-01",
+          "endDate": "2024-12-01"
+        },
+        "dimensionHeaders": [],
+        "metricHeaders": [
+          {
+            "name": "activeUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "newUsers",
+            "type": "TYPE_INTEGER"
+          },
+          {
+            "name": "engagedSessions",
+            "type": "TYPE_INTEGER"
+          }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [],
+            "metricValues": [
+              {
+                "value": "40",
+                "oneValue": "value"
+              },
+              {
+                "value": "31",
+                "oneValue": "value"
+              },
+              {
+                "value": "48",
                 "oneValue": "value"
               }
             ]
