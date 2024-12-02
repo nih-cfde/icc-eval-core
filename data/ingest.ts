@@ -1,3 +1,4 @@
+import { mkdirSync } from "fs";
 import { getAnalytics } from "@/ingest/analytics";
 import { getDrc } from "@/ingest/drc";
 import { getJournals } from "@/ingest/journals";
@@ -9,7 +10,11 @@ import { browser } from "@/util/browser";
 import { saveFile } from "@/util/file";
 import { divider } from "@/util/log";
 
-const { OUTPUT_PATH } = process.env;
+const { RAW_PATH, OUTPUT_PATH } = process.env;
+
+/** make folders if needed */
+mkdirSync(RAW_PATH, { recursive: true });
+mkdirSync(OUTPUT_PATH, { recursive: true });
 
 divider("Opportunities");
 

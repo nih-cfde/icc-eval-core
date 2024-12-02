@@ -157,8 +157,16 @@
     ],
     "openIssues": 8,
     "closedIssues": 10,
-    "issueTimeOpen": 4606132,
+    "issueTimeOpen": 4817738,
     "pullRequests": [
+      {
+        "state": "open",
+        "stateReason": "",
+        "created": "2024-11-27T15:47:56Z",
+        "modified": "2024-11-27T18:42:33Z",
+        "closed": null,
+        "labels": []
+      },
       {
         "state": "closed",
         "stateReason": "",
@@ -248,10 +256,15 @@
         "labels": []
       }
     ],
-    "openPullRequests": 0,
+    "openPullRequests": 1,
     "closedPullRequests": 11,
-    "pullRequestTimeOpen": 569241,
+    "pullRequestTimeOpen": 558656,
     "commits": [
+      "2024-12-02T00:24:53Z",
+      "2024-12-01T00:27:30Z",
+      "2024-11-30T00:23:46Z",
+      "2024-11-29T00:23:34Z",
+      "2024-11-28T00:23:23Z",
       "2024-11-27T00:23:04Z",
       "2024-11-26T00:24:43Z",
       "2024-11-25T00:24:14Z",
@@ -361,7 +374,7 @@
       { "language": "Shell", "count": 749 }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-11-27T00:23:06Z",
+    "modified": "2024-12-02T00:24:55Z",
     "license": "",
     "readme": true,
     "contributing": false,
@@ -819,7 +832,7 @@
     ],
     "openPullRequests": 2,
     "closedPullRequests": 50,
-    "pullRequestTimeOpen": 1540486,
+    "pullRequestTimeOpen": 1558798,
     "commits": [
       "2024-10-16T15:46:23Z",
       "2024-10-16T15:45:14Z",

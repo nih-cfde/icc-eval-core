@@ -5,6 +5,46 @@
     "name": "",
     "ext": "",
     "date": "2024-03-08T05:15:43.332Z",
+    "files": []
+  },
+  {
+    "url": "https://www.gtexportal.org/home/gene/{gene.ensembl}",
+    "dir": "https://www.gtexportal.org/home/gene{gene.ensembl}",
+    "name": "",
+    "ext": "",
+    "date": "2024-03-08T05:18:20.759Z",
+    "files": []
+  },
+  {
+    "url": "https://drugcentral.org/?q={drug.label}",
+    "dir": "https://drugcentral.org/?q={drug.label}",
+    "name": "",
+    "ext": "",
+    "date": "2024-03-08T05:15:16.867Z",
+    "files": []
+  },
+  {
+    "url": "https://idg.reactome.org/search/{gene.symbol}",
+    "dir": "https://idg.reactome.org/search{gene.symbol}",
+    "name": "",
+    "ext": "",
+    "date": "2024-03-08T05:14:30.105Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"{drug.label}\"]}",
+    "dir": "https://maayanlab.cloud/#/MetadataSearch/Signatures?query={\"search\":[\"{drug.label}\"]}sigcom-lincs",
+    "name": "",
+    "ext": "",
+    "date": "2024-03-08T05:06:57.680Z",
+    "files": []
+  },
+  {
+    "url": "https://bdcw.org/MetGENE/metGene.php?GeneInfoStr={gene.symbol}&GeneIDType=SYMBOL&species=hsa&anatomy=NA&disease_slim=&disease=NA",
+    "dir": "https://bdcw.org/MetGENE?GeneInfoStr={gene.symbol}&GeneIDType=SYMBOL&species=hsa&anatomy=NA&disease_slim=&disease=NA",
+    "name": "metGene",
+    "ext": "php",
+    "date": "2024-03-08T05:17:57.482Z",
     "files": [
       {
         "url": {
@@ -19,11 +59,11 @@
     ]
   },
   {
-    "url": "https://www.gtexportal.org/home/gene/{gene.ensembl}",
-    "dir": "https://www.gtexportal.org/home/gene{gene.ensembl}",
-    "name": "",
-    "ext": "",
-    "date": "2024-03-08T05:18:20.759Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-05-08/GlyGen.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-05-08",
+    "name": "GlyGen",
+    "ext": "zip",
+    "date": "2024-05-08T19:38:40.801Z",
     "files": [
       {
         "url": {
@@ -280,11 +320,35 @@
     ]
   },
   {
-    "url": "https://drugcentral.org/?q={drug.label}",
-    "dir": "https://drugcentral.org/?q={drug.label}",
+    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"{gene.symbol}\"]}",
+    "dir": "https://maayanlab.cloud/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"{gene.symbol}\"]}sigcom-lincs",
     "name": "",
     "ext": "",
-    "date": "2024-03-08T05:15:16.867Z",
+    "date": "2024-03-08T05:06:32.451Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/Harmonizome/gene/{gene.symbol}",
+    "dir": "https://maayanlab.cloud/Harmonizome/gene{gene.symbol}",
+    "name": "",
+    "ext": "",
+    "date": "2024-03-08T05:12:08.090Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"{drug.label}\"]}",
+    "dir": "https://maayanlab.cloud/#/TermSearch/Small molecules?query={\"limit\":10,\"search\":[\"{drug.label}\"]}drugmonizome",
+    "name": "",
+    "ext": "",
+    "date": "2024-03-08T05:07:34.891Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-05-08/4DN.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-05-08",
+    "name": "4DN",
+    "ext": "zip",
+    "date": "2024-05-08T19:34:36.239Z",
     "files": [
       {
         "url": {
@@ -369,11 +433,27 @@
     ]
   },
   {
-    "url": "https://idg.reactome.org/search/{gene.symbol}",
-    "dir": "https://idg.reactome.org/search{gene.symbol}",
+    "url": "https://pharos.nih.gov/search?q={gene.symbol}",
+    "dir": "https://pharos.nih.gov/?q={gene.symbol}search",
     "name": "",
     "ext": "",
-    "date": "2024-03-08T05:14:30.105Z",
+    "date": "2024-03-08T05:14:50.194Z",
+    "files": []
+  },
+  {
+    "url": "https://www.glygen.org/protein/{protein.uniprot}",
+    "dir": "https://www.glygen.org/protein{protein.uniprot}",
+    "name": "",
+    "ext": "",
+    "date": "2024-03-08T05:17:25.102Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/Kids%20First/C2M2/2024-04-03/KidsFirst_C2M2_2023-11-29_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03",
+    "name": "KidsFirst_C2M2_2023-11-29_datapackage",
+    "ext": "zip",
+    "date": "2023-11-29T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -1162,11 +1242,19 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"{drug.label}\"]}",
-    "dir": "https://maayanlab.cloud/#/MetadataSearch/Signatures?query={\"search\":[\"{drug.label}\"]}sigcom-lincs",
+    "url": "https://github.com/nih-cfde/playbook-partnership/tree/main/components/lincs/l1000-reverse-search",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/tree/main/components/lincsl1000-reverse-search",
     "name": "",
     "ext": "",
-    "date": "2024-03-08T05:06:57.680Z",
+    "date": "2023-07-19T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/ldh/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/ldh",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-10-19T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -1181,11 +1269,11 @@
     ]
   },
   {
-    "url": "https://bdcw.org/MetGENE/metGene.php?GeneInfoStr={gene.symbol}&GeneIDType=SYMBOL&species=hsa&anatomy=NA&disease_slim=&disease=NA",
-    "dir": "https://bdcw.org/MetGENE?GeneInfoStr={gene.symbol}&GeneIDType=SYMBOL&species=hsa&anatomy=NA&disease_slim=&disease=NA",
-    "name": "metGene",
-    "ext": "php",
-    "date": "2024-03-08T05:17:57.482Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-05-08",
+    "name": "ERCC",
+    "ext": "zip",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -1350,11 +1438,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-05-08/GlyGen.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-05-08",
-    "name": "GlyGen",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG%20Assertions/2024-05-08/GTEx.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-05-08",
+    "name": "GTEx",
     "ext": "zip",
-    "date": "2024-05-08T19:38:40.801Z",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -1473,11 +1561,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"{gene.symbol}\"]}",
-    "dir": "https://maayanlab.cloud/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"{gene.symbol}\"]}sigcom-lincs",
-    "name": "",
-    "ext": "",
-    "date": "2024-03-08T05:06:32.451Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG%20Assertions/2024-05-08/GlyGen.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-05-08",
+    "name": "GlyGen",
+    "ext": "zip",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -1734,11 +1822,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/Harmonizome/gene/{gene.symbol}",
-    "dir": "https://maayanlab.cloud/Harmonizome/gene{gene.symbol}",
-    "name": "",
-    "ext": "",
-    "date": "2024-03-08T05:12:08.090Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG%20Assertions/2024-05-08/HuBMAP.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-05-08",
+    "name": "HuBMAP",
+    "ext": "zip",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -1793,11 +1881,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"{drug.label}\"]}",
-    "dir": "https://maayanlab.cloud/#/TermSearch/Small molecules?query={\"limit\":10,\"search\":[\"{drug.label}\"]}drugmonizome",
-    "name": "",
-    "ext": "",
-    "date": "2024-03-08T05:07:34.891Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG%20Assertions/2024-05-08/IDG.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-05-08",
+    "name": "IDG",
+    "ext": "zip",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -1866,11 +1954,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-05-08/4DN.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-05-08",
-    "name": "4DN",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG%20Assertions/2024-05-08/KF.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-05-08",
+    "name": "KF",
     "ext": "zip",
-    "date": "2024-05-08T19:34:36.239Z",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -1939,11 +2027,11 @@
     ]
   },
   {
-    "url": "https://pharos.nih.gov/search?q={gene.symbol}",
-    "dir": "https://pharos.nih.gov/?q={gene.symbol}search",
-    "name": "",
-    "ext": "",
-    "date": "2024-03-08T05:14:50.194Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/KG%20Assertions/2024-05-08/SPARC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-05-08",
+    "name": "SPARC",
+    "ext": "zip",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -2058,11 +2146,11 @@
     ]
   },
   {
-    "url": "https://www.glygen.org/protein/{protein.uniprot}",
-    "dir": "https://www.glygen.org/protein{protein.uniprot}",
-    "name": "",
-    "ext": "",
-    "date": "2024-03-08T05:17:25.102Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG%20Assertions/2024-05-08/MW.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-05-08",
+    "name": "MW",
+    "ext": "zip",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -2121,11 +2209,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Kids%20First/C2M2/2024-04-03/KidsFirst_C2M2_2023-11-29_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03",
-    "name": "KidsFirst_C2M2_2023-11-29_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG%20Assertions/2024-05-08/MoTrPAC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-05-08",
+    "name": "MoTrPAC",
     "ext": "zip",
-    "date": "2023-11-29T05:00:00.000Z",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -2180,11 +2268,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/playbook-partnership/tree/main/components/lincs/l1000-reverse-search",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/tree/main/components/lincsl1000-reverse-search",
-    "name": "",
-    "ext": "",
-    "date": "2023-07-19T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG%20Assertions/2024-05-08/LINCS.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-05-08",
+    "name": "LINCS",
+    "ext": "zip",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -2219,11 +2307,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/ldh/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/ldh",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-10-19T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/KG%20Assertions/2024-05-08/4DN.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-05-08",
+    "name": "4DN",
+    "ext": "zip",
+    "date": "2024-05-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -2308,11 +2396,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG%20Assertions/2024-05-08/ERCC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-05-08",
-    "name": "ERCC",
+    "url": "https://cfde-drc.s3.amazonaws.com/Kids%20First/C2M2/2024-04-03/KidsFirst_C2M2_datapackage_2024-03-10.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03",
+    "name": "KidsFirst_C2M2_datapackage_2024-03-10",
     "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "date": "2024-03-10T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -3101,11 +3189,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG%20Assertions/2024-05-08/GTEx.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-05-08",
-    "name": "GTEx",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2023-09-29/MoTrPAC_XMT_2023-09-29_MoTrPAC_Rat_Exercise_Sigs_2023.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2023-09-29",
+    "name": "MoTrPAC_XMT_2023-09-29_MoTrPAC_Rat_Exercise_Sigs_2023",
+    "ext": "gmt",
+    "date": "2023-09-29T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -3120,11 +3208,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG%20Assertions/2024-05-08/GlyGen.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-05-08",
-    "name": "GlyGen",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/variant.ts",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives",
+    "name": "variant",
+    "ext": "ts",
+    "date": "2023-10-19T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -3139,11 +3227,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG%20Assertions/2024-05-08/HuBMAP.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-05-08",
-    "name": "HuBMAP",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/regulatoryElement.ts",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives",
+    "name": "regulatoryElement",
+    "ext": "ts",
+    "date": "2023-10-19T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -3158,11 +3246,75 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG%20Assertions/2024-05-08/IDG.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-05-08",
-    "name": "IDG",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf0a_c2m2.py",
+    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
+    "name": "process_mcf0a_c2m2",
+    "ext": "py",
+    "date": "2024-02-21T01:16:23.088Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mf10a_c2m2.py",
+    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
+    "name": "process_mf10a_c2m2",
+    "ext": "py",
+    "date": "2024-02-21T01:19:52.739Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/ain/scripts/process_mcf10a_c2m2.py",
+    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/ain/scripts",
+    "name": "process_mcf10a_c2m2",
+    "ext": "py",
+    "date": "2024-02-22T03:08:41.275Z",
+    "files": []
+  },
+  {
+    "url": "https://entity.api.hubmapconsortium.org",
+    "dir": "https://entity.api.hubmapconsortium.org",
+    "name": "",
+    "ext": "",
+    "date": "2024-04-26T20:55:07.893Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"Imatinib\"]}",
+    "dir": "https://maayanlab.cloud/#/MetadataSearch/Signatures?query={\"search\":[\"Imatinib\"]}sigcom-lincs",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-23T05:39:11.429Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"ACE2\"]}",
+    "dir": "https://maayanlab.cloud/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"ACE2\"]}sigcom-lincs",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-23T05:35:25.077Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"<DRUG_NAME>\"]}",
+    "dir": "https://maayanlab.cloud/#/MetadataSearch/Signatures?query={\"search\":[\"<DRUG_NAME>\"]}sigcom-lincs",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-22T03:13:41.936Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"<GENE_NAME>\"]}",
+    "dir": "https://maayanlab.cloud/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"<GENE_NAME>\"]}sigcom-lincs",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-22T01:54:33.202Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/dictionary_NAR_databases_deduplicate.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01",
+    "name": "dictionary_NAR_databases_deduplicate",
+    "ext": "csv",
+    "date": "2024-03-01T10:26:07.582Z",
     "files": [
       {
         "url": {
@@ -3177,11 +3329,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG%20Assertions/2024-05-08/KF.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-05-08",
-    "name": "KF",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-29/LINCS_L1000_CRISPR_KO_Perturbation_Consensus_CD_Sigs.h5",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-29",
+    "name": "LINCS_L1000_CRISPR_KO_Perturbation_Consensus_CD_Sigs",
+    "ext": "h5",
+    "date": "2024-03-29T22:02:52.044Z",
     "files": [
       {
         "url": {
@@ -3196,11 +3348,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/KG%20Assertions/2024-05-08/SPARC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-05-08",
-    "name": "SPARC",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/Papers.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01",
+    "name": "Papers",
+    "ext": "csv",
+    "date": "2024-03-01T10:36:02.019Z",
     "files": [
       {
         "url": {
@@ -3215,11 +3367,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG%20Assertions/2024-05-08/MW.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-05-08",
-    "name": "MW",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-01-07/4DN_C2M2_2022-01-07_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-01-07",
+    "name": "4DN_C2M2_2022-01-07_datapackage",
     "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "date": "2022-01-07T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -3694,11 +3846,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG%20Assertions/2024-05-08/MoTrPAC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-05-08",
-    "name": "MoTrPAC",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://playbook-workflow-builder.cloud/components/LINCSL1000ReverseSearchDashboard",
+    "dir": "https://playbook-workflow-builder.cloud/componentsLINCSL1000ReverseSearchDashboard",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-27T04:06:30.407Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-28/LINCS_L1000_Chemical_Perturbation_Consensus_CD_Sigs.h5",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-28",
+    "name": "LINCS_L1000_Chemical_Perturbation_Consensus_CD_Sigs",
+    "ext": "h5",
+    "date": "2024-03-29T00:39:23.396Z",
     "files": [
       {
         "url": {
@@ -3713,11 +3873,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG%20Assertions/2024-05-08/LINCS.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-05-08",
-    "name": "LINCS",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-11/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-11",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures",
+    "ext": "gmt",
+    "date": "2024-04-12T01:19:38.478Z",
     "files": [
       {
         "url": {
@@ -3732,11 +3892,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/KG%20Assertions/2024-05-08/4DN.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-05-08",
-    "name": "4DN",
-    "ext": "zip",
-    "date": "2024-05-08T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-23/testfile.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-23",
+    "name": "testfile",
+    "ext": "gmt",
+    "date": "2024-04-23T21:52:11.176Z",
     "files": [
       {
         "url": {
@@ -3751,11 +3911,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Kids%20First/C2M2/2024-04-03/KidsFirst_C2M2_datapackage_2024-03-10.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03",
-    "name": "KidsFirst_C2M2_datapackage_2024-03-10",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26/2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26",
+    "name": "2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1",
     "ext": "zip",
-    "date": "2024-03-10T05:00:00.000Z",
+    "date": "2024-04-26T20:42:12.982Z",
     "files": [
       {
         "url": {
@@ -4544,11 +4704,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2023-09-29/MoTrPAC_XMT_2023-09-29_MoTrPAC_Rat_Exercise_Sigs_2023.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2023-09-29",
-    "name": "MoTrPAC_XMT_2023-09-29_MoTrPAC_Rat_Exercise_Sigs_2023",
-    "ext": "gmt",
-    "date": "2023-09-29T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-04-02/LINCS_C2M2_2023-09-18_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-04-02",
+    "name": "LINCS_C2M2_2023-09-18_datapackage",
+    "ext": "zip",
+    "date": "2024-04-03T02:04:56.506Z",
     "files": [
       {
         "url": {
@@ -5101,11 +5261,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/variant.ts",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives",
-    "name": "variant",
-    "ext": "ts",
-    "date": "2023-10-19T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2024-03-05/MoTrPAC_Endurance_Trained_Rats_2023.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2024-03-05",
+    "name": "MoTrPAC_Endurance_Trained_Rats_2023",
+    "ext": "gmt",
+    "date": "2024-03-06T02:37:22.732Z",
     "files": [
       {
         "url": {
@@ -5120,11 +5280,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/regulatoryElement.ts",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives",
-    "name": "regulatoryElement",
-    "ext": "ts",
-    "date": "2023-10-19T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-04-29/4DN.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-04-29",
+    "name": "4DN",
+    "ext": "zip",
+    "date": "2024-04-29T23:56:24.174Z",
     "files": [
       {
         "url": {
@@ -5209,11 +5369,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf0a_c2m2.py",
-    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
-    "name": "process_mcf0a_c2m2",
-    "ext": "py",
-    "date": "2024-02-21T01:16:23.088Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-04-29/SPARC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-04-29",
+    "name": "SPARC",
+    "ext": "zip",
+    "date": "2024-04-30T00:08:29.598Z",
     "files": [
       {
         "url": {
@@ -5328,11 +5488,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mf10a_c2m2.py",
-    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
-    "name": "process_mf10a_c2m2",
-    "ext": "py",
-    "date": "2024-02-21T01:19:52.739Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-04-29/GTEx.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-04-29",
+    "name": "GTEx",
+    "ext": "zip",
+    "date": "2024-04-29T23:54:21.043Z",
     "files": [
       {
         "url": {
@@ -5451,11 +5611,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/ain/scripts/process_mcf10a_c2m2.py",
-    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/ain/scripts",
-    "name": "process_mcf10a_c2m2",
-    "ext": "py",
-    "date": "2024-02-22T03:08:41.275Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26/hubmap-test-submission.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26",
+    "name": "hubmap-test-submission",
+    "ext": "zip",
+    "date": "2024-04-26T20:49:36.953Z",
     "files": [
       {
         "url": {
@@ -6244,11 +6404,11 @@
     ]
   },
   {
-    "url": "https://entity.api.hubmapconsortium.org",
-    "dir": "https://entity.api.hubmapconsortium.org",
-    "name": "",
-    "ext": "",
-    "date": "2024-04-26T20:55:07.893Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-06-20/HMP_C2M2_2022-06-20_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-06-20",
+    "name": "HMP_C2M2_2022-06-20_datapackage",
+    "ext": "zip",
+    "date": "2022-06-20T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -6915,11 +7075,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"Imatinib\"]}",
-    "dir": "https://maayanlab.cloud/#/MetadataSearch/Signatures?query={\"search\":[\"Imatinib\"]}sigcom-lincs",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-23T05:39:11.429Z",
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/build_file_lincs2021.py",
+    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
+    "name": "build_file_lincs2021",
+    "ext": "py",
+    "date": "2021-06-23T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -6934,11 +7094,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"ACE2\"]}",
-    "dir": "https://maayanlab.cloud/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"ACE2\"]}sigcom-lincs",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-23T05:35:25.077Z",
+    "url": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/cp_coeff_mat.gctx",
+    "dir": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient",
+    "name": "cp_coeff_mat",
+    "ext": "gctx",
+    "date": "2021-06-23T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -6953,11 +7113,59 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={\"search\":[\"<DRUG_NAME>\"]}",
-    "dir": "https://maayanlab.cloud/#/MetadataSearch/Signatures?query={\"search\":[\"<DRUG_NAME>\"]}sigcom-lincs",
+    "url": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"Imatinib\"]}",
+    "dir": "https://maayanlab.cloud/#/TermSearch/Small molecules?query={\"limit\":10,\"search\":[\"Imatinib\"]}drugmonizome",
     "name": "",
     "ext": "",
-    "date": "2024-02-22T03:13:41.936Z",
+    "date": "2024-02-23T05:50:45.806Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"<DRUG_NAME>\"]}",
+    "dir": "https://maayanlab.cloud/#/TermSearch/Small molecules?query={\"limit\":10,\"search\":[\"<DRUG_NAME>\"]}drugmonizome",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-23T05:50:20.920Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/Harmonizome/gene/ACE2",
+    "dir": "https://maayanlab.cloud/Harmonizome/geneACE2",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-23T05:49:47.002Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/Harmonizome/gene/<GENE_NAME>",
+    "dir": "https://maayanlab.cloud/Harmonizome/gene<GENE_NAME>",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-23T05:49:23.806Z",
+    "files": []
+  },
+  {
+    "url": "http://lincsportal.ccs.miami.edu/signatures/perturbations/16646",
+    "dir": "http://lincsportal.ccs.miami.edu/signatures/perturbations16646",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-23T05:48:37.837Z",
+    "files": []
+  },
+  {
+    "url": "http://lincsportal.ccs.miami.edu/signatures/perturbations/<PERT_ID>",
+    "dir": "http://lincsportal.ccs.miami.edu/signatures/perturbations<PERT_ID>",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-23T05:47:48.565Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_c2m2.py",
+    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
+    "name": "process_mcf10a_c2m2",
+    "ext": "py",
+    "date": "2022-05-22T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -6972,11 +7180,19 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"<GENE_NAME>\"]}",
-    "dir": "https://maayanlab.cloud/#/MetadataSearch/Genes?query={\"skip\":0,\"limit\":10,\"search\":[\"<GENE_NAME>\"]}sigcom-lincs",
+    "url": "https://smart-api.info/ui/fdb3ecfcf5006a142d3f5522930324f1",
+    "dir": "https://smart-api.info/uifdb3ecfcf5006a142d3f5522930324f1",
     "name": "",
     "ext": "",
-    "date": "2024-02-22T01:54:33.202Z",
+    "date": "2022-05-22T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/xpr_coeff_mat.gctx",
+    "dir": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient",
+    "name": "xpr_coeff_mat",
+    "ext": "gctx",
+    "date": "2021-06-23T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -6991,11 +7207,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/dictionary_NAR_databases_deduplicate.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01",
-    "name": "dictionary_NAR_databases_deduplicate",
-    "ext": "csv",
-    "date": "2024-03-01T10:26:07.582Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-02/LINCS_XMT_2022-12-13_LINCS_L1000_CRISPR_KO_Consensus_Sigs.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-02",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_CRISPR_KO_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2024-04-03T02:18:23.640Z",
     "files": [
       {
         "url": {
@@ -7010,11 +7226,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-29/LINCS_L1000_CRISPR_KO_Perturbation_Consensus_CD_Sigs.h5",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-29",
-    "name": "LINCS_L1000_CRISPR_KO_Perturbation_Consensus_CD_Sigs",
-    "ext": "h5",
-    "date": "2024-03-29T22:02:52.044Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-04-02/LINCS_KG_2023-10-26_LINCS.edges(1).csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-04-02",
+    "name": "LINCS_KG_2023-10-26_LINCS.edges(1)",
+    "ext": "csv",
+    "date": "2024-04-03T02:08:10.713Z",
     "files": [
       {
         "url": {
@@ -7029,11 +7245,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/Papers.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01",
-    "name": "Papers",
-    "ext": "csv",
-    "date": "2024-03-01T10:36:02.019Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-09-08/4DN_C2M2_2023-09-08_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-09-08",
+    "name": "4DN_C2M2_2023-09-08_datapackage",
+    "ext": "zip",
+    "date": "2023-09-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -7822,11 +8038,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-01-07/4DN_C2M2_2022-01-07_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-01-07",
-    "name": "4DN_C2M2_2022-01-07_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-05-08/ERCC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-05-08",
+    "name": "ERCC",
     "ext": "zip",
-    "date": "2022-01-07T05:00:00.000Z",
+    "date": "2024-05-08T19:37:18.848Z",
     "files": [
       {
         "url": {
@@ -7991,11 +8207,11 @@
     ]
   },
   {
-    "url": "https://playbook-workflow-builder.cloud/components/LINCSL1000ReverseSearchDashboard",
-    "dir": "https://playbook-workflow-builder.cloud/componentsLINCSL1000ReverseSearchDashboard",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-27T04:06:30.407Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-05-08/GTEx.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-05-08",
+    "name": "GTEx",
+    "ext": "zip",
+    "date": "2024-05-08T19:40:12.832Z",
     "files": [
       {
         "url": {
@@ -8114,11 +8330,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-28/LINCS_L1000_Chemical_Perturbation_Consensus_CD_Sigs.h5",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-28",
-    "name": "LINCS_L1000_Chemical_Perturbation_Consensus_CD_Sigs",
-    "ext": "h5",
-    "date": "2024-03-29T00:39:23.396Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-02-27/4DN_C2M2_2023-02-27_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-02-27",
+    "name": "4DN_C2M2_2023-02-27_datapackage",
+    "ext": "zip",
+    "date": "2023-02-27T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -8907,11 +9123,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-11/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-11",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures",
-    "ext": "gmt",
-    "date": "2024-04-12T01:19:38.478Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-06-04/4DN_C2M2_2023-06-04_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-06-04",
+    "name": "4DN_C2M2_2023-06-04_datapackage",
+    "ext": "zip",
+    "date": "2023-06-04T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -9696,11 +9912,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-23/testfile.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-23",
-    "name": "testfile",
-    "ext": "gmt",
-    "date": "2024-04-23T21:52:11.176Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-03-18/ERCC_C2M2_2021-03-18_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-03-18",
+    "name": "ERCC_C2M2_2021-03-18_datapackage",
+    "ext": "zip",
+    "date": "2021-03-18T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -10069,11 +10285,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26/2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26",
-    "name": "2024-01-04T11_45_25.136063-a7bb912c-ab20-11ee-9ed4-02402ff490c1",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-05-08/KF.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-05-08",
+    "name": "KF",
     "ext": "zip",
-    "date": "2024-04-26T20:42:12.982Z",
+    "date": "2024-05-08T19:43:06.159Z",
     "files": [
       {
         "url": {
@@ -10142,11 +10358,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-04-02/LINCS_C2M2_2023-09-18_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-04-02",
-    "name": "LINCS_C2M2_2023-09-18_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-04-29/GlyGen.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-04-29",
+    "name": "GlyGen",
     "ext": "zip",
-    "date": "2024-04-03T02:04:56.506Z",
+    "date": "2024-04-30T00:01:52.578Z",
     "files": [
       {
         "url": {
@@ -10403,11 +10619,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2024-03-05/MoTrPAC_Endurance_Trained_Rats_2023.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/XMT/2024-03-05",
-    "name": "MoTrPAC_Endurance_Trained_Rats_2023",
-    "ext": "gmt",
-    "date": "2024-03-06T02:37:22.732Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-04-29/ERCC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-04-29",
+    "name": "ERCC",
+    "ext": "zip",
+    "date": "2024-04-30T00:00:54.153Z",
     "files": [
       {
         "url": {
@@ -10572,11 +10788,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-04-29/4DN.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/KG Assertions/2024-04-29",
-    "name": "4DN",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-01-03/SPARC_C2M2_2024-01-03_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-01-03",
+    "name": "SPARC_C2M2_2024-01-03_datapackage",
     "ext": "zip",
-    "date": "2024-04-29T23:56:24.174Z",
+    "date": "2024-01-03T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -11445,11 +11661,35 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-04-29/SPARC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-04-29",
-    "name": "SPARC",
+    "url": "https://playbook-workflow-builder.cloud/components/MyVariantInfo",
+    "dir": "https://playbook-workflow-builder.cloud/componentsMyVariantInfo",
+    "name": "",
+    "ext": "",
+    "date": "2023-10-19T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/RegulatoryElementInfo",
+    "dir": "https://playbook-workflow-builder.cloud/componentsRegulatoryElementInfo",
+    "name": "",
+    "ext": "",
+    "date": "2023-10-19T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/VariantInfo",
+    "dir": "https://playbook-workflow-builder.cloud/componentsVariantInfo",
+    "name": "",
+    "ext": "",
+    "date": "2023-10-19T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-06-11",
+    "name": "ERCC_C2M2_2021-06-11_datapackage",
     "ext": "zip",
-    "date": "2024-04-30T00:08:29.598Z",
+    "date": "2021-06-11T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -11856,11 +12096,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-04-29/GTEx.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-04-29",
-    "name": "GTEx",
+    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-08-19/ERCC_C2M2_2021-08-19_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-08-19",
+    "name": "ERCC_C2M2_2021-08-19_datapackage",
     "ext": "zip",
-    "date": "2024-04-29T23:54:21.043Z",
+    "date": "2021-08-19T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -12229,11 +12469,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26/hubmap-test-submission.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-26",
-    "name": "hubmap-test-submission",
+    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-01-21/ERCC_C2M2_2022-01-21_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-01-21",
+    "name": "ERCC_C2M2_2022-01-21_datapackage",
     "ext": "zip",
-    "date": "2024-04-26T20:49:36.953Z",
+    "date": "2022-01-21T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -12798,11 +13038,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-06-20/HMP_C2M2_2022-06-20_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-06-20",
-    "name": "HMP_C2M2_2022-06-20_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-04-16/ERCC_C2M2_2022-04-16_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-04-16",
+    "name": "ERCC_C2M2_2022-04-16_datapackage",
     "ext": "zip",
-    "date": "2022-06-20T04:00:00.000Z",
+    "date": "2022-04-16T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -14343,11 +14583,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/build_file_lincs2021.py",
-    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
-    "name": "build_file_lincs2021",
-    "ext": "py",
-    "date": "2021-06-23T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2023-03-23/ERCC_C2M2_2023-03-23_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2023-03-23",
+    "name": "ERCC_C2M2_2023-03-23_datapackage",
+    "ext": "zip",
+    "date": "2023-03-23T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -15126,11 +15366,11 @@
     ]
   },
   {
-    "url": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/cp_coeff_mat.gctx",
-    "dir": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient",
-    "name": "cp_coeff_mat",
-    "ext": "gctx",
-    "date": "2021-06-23T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-05-08/IDG.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-05-08",
+    "name": "IDG",
+    "ext": "zip",
+    "date": "2024-05-08T19:41:52.312Z",
     "files": [
       {
         "url": {
@@ -15199,11 +15439,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"Imatinib\"]}",
-    "dir": "https://maayanlab.cloud/#/TermSearch/Small molecules?query={\"limit\":10,\"search\":[\"Imatinib\"]}drugmonizome",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-23T05:50:45.806Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-04-29/HuBMAP.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-04-29",
+    "name": "HuBMAP",
+    "ext": "zip",
+    "date": "2024-04-30T00:03:27.284Z",
     "files": [
       {
         "url": {
@@ -15258,11 +15498,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={\"limit\":10,\"search\":[\"<DRUG_NAME>\"]}",
-    "dir": "https://maayanlab.cloud/#/TermSearch/Small molecules?query={\"limit\":10,\"search\":[\"<DRUG_NAME>\"]}drugmonizome",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-23T05:50:20.920Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-05-08/MoTrPAC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-05-08",
+    "name": "MoTrPAC",
+    "ext": "zip",
+    "date": "2024-05-08T19:45:21.225Z",
     "files": [
       {
         "url": {
@@ -15317,11 +15557,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/Harmonizome/gene/ACE2",
-    "dir": "https://maayanlab.cloud/Harmonizome/geneACE2",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-23T05:49:47.002Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-05-08/HuBMAP.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-05-08",
+    "name": "HuBMAP",
+    "ext": "zip",
+    "date": "2024-05-08T19:41:23.674Z",
     "files": [
       {
         "url": {
@@ -15376,11 +15616,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/Harmonizome/gene/<GENE_NAME>",
-    "dir": "https://maayanlab.cloud/Harmonizome/gene<GENE_NAME>",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-23T05:49:23.806Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-06-24/GlyGen_C2M2_2022-06-24_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-06-24",
+    "name": "GlyGen_C2M2_2022-06-24_datapackage",
+    "ext": "zip",
+    "date": "2022-06-24T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -16155,11 +16395,11 @@
     ]
   },
   {
-    "url": "http://lincsportal.ccs.miami.edu/signatures/perturbations/16646",
-    "dir": "http://lincsportal.ccs.miami.edu/signatures/perturbations16646",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-23T05:48:37.837Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-02/LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-02",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2024-04-03T02:32:21.350Z",
     "files": [
       {
         "url": {
@@ -16174,11 +16414,11 @@
     ]
   },
   {
-    "url": "http://lincsportal.ccs.miami.edu/signatures/perturbations/<PERT_ID>",
-    "dir": "http://lincsportal.ccs.miami.edu/signatures/perturbations<PERT_ID>",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-23T05:47:48.565Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-01-24/LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-01-24",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2024-01-24T21:57:15.195Z",
     "files": [
       {
         "url": {
@@ -16193,11 +16433,27 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_c2m2.py",
-    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
-    "name": "process_mcf10a_c2m2",
-    "ext": "py",
-    "date": "2022-05-22T04:00:00.000Z",
+    "url": "https://playbook-workflow-builder.cloud/components/SigComLINCSSignatureResults",
+    "dir": "https://playbook-workflow-builder.cloud/componentsSigComLINCSSignatureResults",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-08T00:59:08.594Z",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/SigComLINCSGeneSetResults",
+    "dir": "https://playbook-workflow-builder.cloud/componentsSigComLINCSGeneSetResults",
+    "name": "",
+    "ext": "",
+    "date": "2024-02-08T00:58:11.678Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-05-08/MW.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-05-08",
+    "name": "MW",
+    "ext": "zip",
+    "date": "2024-05-08T19:46:00.637Z",
     "files": [
       {
         "url": {
@@ -16256,11 +16512,11 @@
     ]
   },
   {
-    "url": "https://smart-api.info/ui/fdb3ecfcf5006a142d3f5522930324f1",
-    "dir": "https://smart-api.info/uifdb3ecfcf5006a142d3f5522930324f1",
-    "name": "",
-    "ext": "",
-    "date": "2022-05-22T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29/IDG.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29",
+    "name": "IDG",
+    "ext": "zip",
+    "date": "2024-04-30T00:04:46.887Z",
     "files": [
       {
         "url": {
@@ -16329,11 +16585,11 @@
     ]
   },
   {
-    "url": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient/xpr_coeff_mat.gctx",
-    "dir": "https://lincs-dcic.s3.amazonaws.com/LINCS-sigs-2021/gctx/cd-coefficient",
-    "name": "xpr_coeff_mat",
-    "ext": "gctx",
-    "date": "2021-06-23T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-05-08/LINCS.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-05-08",
+    "name": "LINCS",
+    "ext": "zip",
+    "date": "2024-05-08T19:44:35.620Z",
     "files": [
       {
         "url": {
@@ -16368,11 +16624,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-02/LINCS_XMT_2022-12-13_LINCS_L1000_CRISPR_KO_Consensus_Sigs.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-02",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_CRISPR_KO_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2024-04-03T02:18:23.640Z",
+    "url": "https://entity.api.hubmapconsortium.org/",
+    "dir": "https://entity.api.hubmapconsortium.org",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-10T23:04:01.444Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-09-15/GlyGen_C2M2_2022-09-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-09-15",
+    "name": "GlyGen_C2M2_2022-09-15_datapackage",
+    "ext": "zip",
+    "date": "2022-09-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -17147,11 +17411,91 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-04-02/LINCS_KG_2023-10-26_LINCS.edges(1).csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-04-02",
-    "name": "LINCS_KG_2023-10-26_LINCS.edges(1)",
-    "ext": "csv",
-    "date": "2024-04-03T02:08:10.713Z",
+    "url": "https://smart-api.info/api/metadata/75cfc060ea7bec431a356c00c4a67c74?raw=1",
+    "dir": "https://smart-api.info/api/metadata?raw=175cfc060ea7bec431a356c00c4a67c74",
+    "name": "",
+    "ext": "",
+    "date": "2024-01-17T21:36:05.739Z",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/01",
+    "dir": "https://smart-api.info/01",
+    "name": "",
+    "ext": "",
+    "date": "2024-01-17T21:41:06.156Z",
+    "files": []
+  },
+  {
+    "url": "https://smart-api.info/",
+    "dir": "https://smart-api.info",
+    "name": "",
+    "ext": "",
+    "date": "2024-01-17T21:41:06.112Z",
+    "files": []
+  },
+  {
+    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-17/LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
+    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-17",
+    "name": "LINCS_L1000_Chem_Pert_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2024-01-17T21:30:37.027Z",
+    "files": []
+  },
+  {
+    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-17/LINCS_L1000_CRISPR_KO_Consensus_Sigs.gmt",
+    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-17",
+    "name": "LINCS_L1000_CRISPR_KO_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2024-01-17T21:30:33.642Z",
+    "files": []
+  },
+  {
+    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/C2M2/2024-01-16/checking_rummagene_cell_types.zip",
+    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/C2M2/2024-01-16",
+    "name": "checking_rummagene_cell_types",
+    "ext": "zip",
+    "date": "2024-01-17T02:38:50.104Z",
+    "files": []
+  },
+  {
+    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/Attribute Table/2024-01-16/Azimuth_augmented.txt",
+    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/Attribute Table/2024-01-16",
+    "name": "Azimuth_augmented",
+    "ext": "txt",
+    "date": "2024-01-17T02:33:45.729Z",
+    "files": []
+  },
+  {
+    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-16/test.gmt",
+    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-16",
+    "name": "test",
+    "ext": "gmt",
+    "date": "2024-01-17T01:18:28.257Z",
+    "files": []
+  },
+  {
+    "url": "https://maayanlab.cloud/Enrichr/help#api",
+    "dir": "https://maayanlab.cloud/Enrichr#apihelp",
+    "name": "",
+    "ext": "",
+    "date": "2024-01-24T21:06:05.537Z",
+    "files": []
+  },
+  {
+    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/XMT/2023-12-11/testfile.gmt",
+    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/XMT/2023-12-11",
+    "name": "testfile",
+    "ext": "gmt",
+    "date": "2023-12-12T00:56:42.750Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-01-24/LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-01-24",
+    "name": "LINCS_L1000_Chem_Pert_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2024-01-24T21:03:54.106Z",
     "files": [
       {
         "url": {
@@ -17166,11 +17510,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-09-08/4DN_C2M2_2023-09-08_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-09-08",
-    "name": "4DN_C2M2_2023-09-08_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-02-01/LINCS_C2M2_2023-09-18_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-02-01",
+    "name": "LINCS_C2M2_2023-09-18_datapackage",
     "ext": "zip",
-    "date": "2023-09-08T04:00:00.000Z",
+    "date": "2024-02-01T23:45:49.239Z",
     "files": [
       {
         "url": {
@@ -17723,11 +18067,67 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-05-08/ERCC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-05-08",
-    "name": "ERCC",
+    "url": "https://https://s3.amazonaws.com/cfde-drc/Metabolomics/C2M2/2023-12-13/MW_C2M2_2023-09-08_datapackage.zip",
+    "dir": "https://https//s3.amazonaws.com/cfde-drc/Metabolomics/C2M2/2023-12-13",
+    "name": "MW_C2M2_2023-09-08_datapackage",
     "ext": "zip",
-    "date": "2024-05-08T19:37:18.848Z",
+    "date": "2023-12-14T01:28:12.282Z",
+    "files": []
+  },
+  {
+    "url": "https://data.sennetconsortium.org/",
+    "dir": "https://data.sennetconsortium.org",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-10T22:57:15.223Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_cm2.py",
+    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
+    "name": "process_mcf10a_cm2",
+    "ext": "py",
+    "date": "2024-02-07T04:15:14.695Z",
+    "files": []
+  },
+  {
+    "url": "https://genboree.org/cfde-gene-dev/ui/api-docs",
+    "dir": "https://genboree.org/cfde-gene-dev/uiapi-docs",
+    "name": "",
+    "ext": "",
+    "date": "2022-08-30T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://data.sennetconsortium.org/ccf-eui",
+    "dir": "https://data.sennetconsortium.org/ccf-eui",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-10T23:15:04.416Z",
+    "files": []
+  },
+  {
+    "url": "https://entity.api.sennetconsortium.org",
+    "dir": "https://entity.api.sennetconsortium.org",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-10T23:07:51.391Z",
+    "files": []
+  },
+  {
+    "url": "https://search.api.sennetconsortium.org",
+    "dir": "https://search.api.sennetconsortium.org",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-10T23:05:52.698Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-01-06/GlyGen_C2M2_2023-01-06_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-01-06",
+    "name": "GlyGen_C2M2_2023-01-06_datapackage",
+    "ext": "zip",
+    "date": "2023-01-06T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -18516,11 +18916,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-05-08/GTEx.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/KG Assertions/2024-05-08",
-    "name": "GTEx",
+    "url": "https://portal.hubmapconsortium.org/",
+    "dir": "https://portal.hubmapconsortium.org",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-10T22:54:19.353Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-06-14/fy2024q3-cfde-c2m2-kids-first.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-06-14",
+    "name": "fy2024q3-cfde-c2m2-kids-first",
     "ext": "zip",
-    "date": "2024-05-08T19:40:12.832Z",
+    "date": "2024-06-15T01:59:29.287Z",
     "files": [
       {
         "url": {
@@ -19235,11 +19643,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-02-27/4DN_C2M2_2023-02-27_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-02-27",
-    "name": "4DN_C2M2_2023-02-27_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-06-06/MW_submission_packet_20240605.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-06-06",
+    "name": "MW_submission_packet_20240605",
     "ext": "zip",
-    "date": "2023-02-27T05:00:00.000Z",
+    "date": "2024-06-06T05:34:33.870Z",
     "files": [
       {
         "url": {
@@ -19958,11 +20366,35 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-06-04/4DN_C2M2_2023-06-04_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2023-06-04",
-    "name": "4DN_C2M2_2023-06-04_datapackage",
+    "url": "https://sparc.science/tools-and-resources/tools",
+    "dir": "https://sparc.science/tools-and-resourcestools",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-16T02:53:26.888Z",
+    "files": []
+  },
+  {
+    "url": "https://search.api.hubmapconsortium.org/v3/",
+    "dir": "https://search.api.hubmapconsortium.org/v3",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-10T22:39:05.532Z",
+    "files": []
+  },
+  {
+    "url": "https://lincsproject.org/LINCS/tools",
+    "dir": "https://lincsproject.org/LINCStools",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-12T01:25:45.701Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-06-12/glygen_may_autogenerated_C2M2_term_tables.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-06-12",
+    "name": "glygen_may_autogenerated_C2M2_term_tables",
     "ext": "zip",
-    "date": "2023-06-04T04:00:00.000Z",
+    "date": "2024-06-12T21:21:13.580Z",
     "files": [
       {
         "url": {
@@ -20751,11 +21183,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-03-18/ERCC_C2M2_2021-03-18_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-03-18",
-    "name": "ERCC_C2M2_2021-03-18_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-06-13/submission.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-06-13",
+    "name": "submission",
     "ext": "zip",
-    "date": "2021-03-18T04:00:00.000Z",
+    "date": "2024-06-13T23:27:22.387Z",
     "files": [
       {
         "url": {
@@ -21388,11 +21820,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-05-08/KF.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-05-08",
-    "name": "KF",
-    "ext": "zip",
-    "date": "2024-05-08T19:43:06.159Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-02-12/testfile.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-02-12",
+    "name": "testfile",
+    "ext": "gmt",
+    "date": "2024-02-12T22:40:12.544Z",
     "files": [
       {
         "url": {
@@ -21407,11 +21839,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-04-29/GlyGen.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-04-29",
-    "name": "GlyGen",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-03/HuBMAP_C2M2_2024-01-04_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-03",
+    "name": "HuBMAP_C2M2_2024-01-04_datapackage",
     "ext": "zip",
-    "date": "2024-04-30T00:01:52.578Z",
+    "date": "2024-04-03T19:02:45.132Z",
     "files": [
       {
         "url": {
@@ -22200,11 +22632,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-04-29/ERCC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/KG Assertions/2024-04-29",
-    "name": "ERCC",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-04-03/Glycosciences_C2M2_datapackage_2024-03-14.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-04-03",
+    "name": "Glycosciences_C2M2_datapackage_2024-03-14",
     "ext": "zip",
-    "date": "2024-04-30T00:00:54.153Z",
+    "date": "2024-04-03T18:48:24.119Z",
     "files": [
       {
         "url": {
@@ -22993,11 +23425,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-01-03/SPARC_C2M2_2024-01-03_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-01-03",
-    "name": "SPARC_C2M2_2024-01-03_datapackage",
-    "ext": "zip",
-    "date": "2024-01-03T05:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures",
+    "ext": "gmt",
+    "date": "2024-04-11T01:35:21.626Z",
     "files": [
       {
         "url": {
@@ -23012,11 +23444,11 @@
     ]
   },
   {
-    "url": "https://playbook-workflow-builder.cloud/components/MyVariantInfo",
-    "dir": "https://playbook-workflow-builder.cloud/componentsMyVariantInfo",
-    "name": "",
-    "ext": "",
-    "date": "2023-10-19T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-04-03/SPARC_C2M2_datapackage_2024-03-17.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-04-03",
+    "name": "SPARC_C2M2_datapackage_2024-03-17",
+    "ext": "zip",
+    "date": "2024-04-03T18:34:40.919Z",
     "files": [
       {
         "url": {
@@ -23815,11 +24247,11 @@
     ]
   },
   {
-    "url": "https://playbook-workflow-builder.cloud/components/RegulatoryElementInfo",
-    "dir": "https://playbook-workflow-builder.cloud/componentsRegulatoryElementInfo",
-    "name": "",
-    "ext": "",
-    "date": "2023-10-19T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-04-03/4DN_C2M2_2023-11-28_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-04-03",
+    "name": "4DN_C2M2_2023-11-28_datapackage",
+    "ext": "zip",
+    "date": "2024-04-03T18:58:27.460Z",
     "files": [
       {
         "url": {
@@ -24608,11 +25040,11 @@
     ]
   },
   {
-    "url": "https://playbook-workflow-builder.cloud/components/VariantInfo",
-    "dir": "https://playbook-workflow-builder.cloud/componentsVariantInfo",
-    "name": "",
-    "ext": "",
-    "date": "2023-10-19T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03/Glycosciences_C2M2_datapackage_2024-03-14.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03",
+    "name": "Glycosciences_C2M2_datapackage_2024-03-14",
+    "ext": "zip",
+    "date": "2024-04-03T18:56:00.367Z",
     "files": [
       {
         "url": {
@@ -25401,11 +25833,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-06-11",
-    "name": "ERCC_C2M2_2021-06-11_datapackage",
-    "ext": "zip",
-    "date": "2021-06-11T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10/LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2024-04-11T01:21:25.310Z",
     "files": [
       {
         "url": {
@@ -25420,11 +25852,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-08-19/ERCC_C2M2_2021-08-19_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-08-19",
-    "name": "ERCC_C2M2_2021-08-19_datapackage",
-    "ext": "zip",
-    "date": "2021-08-19T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Sigs.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2024-04-11T01:28:07.212Z",
     "files": [
       {
         "url": {
@@ -25439,11 +25871,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-01-21/ERCC_C2M2_2022-01-21_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-01-21",
-    "name": "ERCC_C2M2_2022-01-21_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-04-05/4DN_C2M2_2022-04-05_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-04-05",
+    "name": "4DN_C2M2_2022-04-05_datapackage",
     "ext": "zip",
-    "date": "2022-01-21T05:00:00.000Z",
+    "date": "2022-04-05T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -26218,11 +26650,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-04-16/ERCC_C2M2_2022-04-16_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-04-16",
-    "name": "ERCC_C2M2_2022-04-16_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-05-20/4DN_C2M2_2022-05-20_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-05-20",
+    "name": "4DN_C2M2_2022-05-20_datapackage",
     "ext": "zip",
-    "date": "2022-04-16T04:00:00.000Z",
+    "date": "2022-05-20T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -26993,11 +27425,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2023-03-23/ERCC_C2M2_2023-03-23_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2023-03-23",
-    "name": "ERCC_C2M2_2023-03-23_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-09-09/4DN_C2M2_2022-09-09_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-09-09",
+    "name": "4DN_C2M2_2022-09-09_datapackage",
     "ext": "zip",
-    "date": "2023-03-23T04:00:00.000Z",
+    "date": "2022-09-09T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -27768,11 +28200,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-05-08/IDG.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-05-08",
-    "name": "IDG",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-12-13/4DN_C2M2_2022-12-13_datapckage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-12-13",
+    "name": "4DN_C2M2_2022-12-13_datapckage",
     "ext": "zip",
-    "date": "2024-05-08T19:41:52.312Z",
+    "date": "2022-12-13T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -28561,11 +28993,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-04-29/HuBMAP.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-04-29",
-    "name": "HuBMAP",
+    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2023-08-17/ERCC_C2M2_2023-08-17_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2023-08-17",
+    "name": "ERCC_C2M2_2023-08-17_datapackage",
     "ext": "zip",
-    "date": "2024-04-30T00:03:27.284Z",
+    "date": "2023-08-17T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -29350,11 +29782,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-05-08/MoTrPAC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-05-08",
-    "name": "MoTrPAC",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2021-03-17/GTEx_C2M2_2021-03-17_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2021-03-17",
+    "name": "GTEx_C2M2_2021-03-17_datapackage",
     "ext": "zip",
-    "date": "2024-05-08T19:45:21.225Z",
+    "date": "2021-03-17T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -29717,11 +30149,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-05-08/HuBMAP.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/KG Assertions/2024-05-08",
-    "name": "HuBMAP",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2021-06-08/GTEx_C2M2_2021-06-08_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2021-06-08",
+    "name": "GTEx_C2M2_2021-06-08_datapackage",
     "ext": "zip",
-    "date": "2024-05-08T19:41:23.674Z",
+    "date": "2021-06-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -30146,11 +30578,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-06-24/GlyGen_C2M2_2022-06-24_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-06-24",
-    "name": "GlyGen_C2M2_2022-06-24_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-01-18/GTEx_C2M2_2022-01-18_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-01-18",
+    "name": "GTEx_C2M2_2022-01-18_datapackage",
     "ext": "zip",
-    "date": "2022-06-24T04:00:00.000Z",
+    "date": "2022-01-18T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -30813,11 +31245,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-02/LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-02",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2024-04-03T02:32:21.350Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-04-07/GTEx_C2M2_2022-04-07_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-04-07",
+    "name": "GTEx_C2M2_2022-04-07_datapackage",
+    "ext": "zip",
+    "date": "2022-04-07T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -31620,11 +32052,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-01-24/LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-01-24",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2024-01-24T21:57:15.195Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-06-17/GTEx_C2M2_2022-06-17_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-06-17",
+    "name": "GTEx_C2M2_2022-06-17_datapackage",
+    "ext": "zip",
+    "date": "2022-06-17T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -32427,11 +32859,11 @@
     ]
   },
   {
-    "url": "https://playbook-workflow-builder.cloud/components/SigComLINCSSignatureResults",
-    "dir": "https://playbook-workflow-builder.cloud/componentsSigComLINCSSignatureResults",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-08T00:59:08.594Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2023-09-01/GTEx_C2M2_2023-09-01_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2023-09-01",
+    "name": "GTEx_C2M2_2023-09-01_datapackage",
+    "ext": "zip",
+    "date": "2023-09-01T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -33584,11 +34016,11 @@
     ]
   },
   {
-    "url": "https://playbook-workflow-builder.cloud/components/SigComLINCSGeneSetResults",
-    "dir": "https://playbook-workflow-builder.cloud/componentsSigComLINCSGeneSetResults",
-    "name": "",
-    "ext": "",
-    "date": "2024-02-08T00:58:11.678Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-04-15/GlyGen_C2M2_2022-04-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-04-15",
+    "name": "GlyGen_C2M2_2022-04-15_datapackage",
+    "ext": "zip",
+    "date": "2022-04-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -34363,11 +34795,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-05-08/MW.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-05-08",
-    "name": "MW",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-03-06/GlyGen_C2M2_2023-03-06_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-03-06",
+    "name": "GlyGen_C2M2_2023-03-06_datapackage",
     "ext": "zip",
-    "date": "2024-05-08T19:46:00.637Z",
+    "date": "2023-03-06T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -35380,11 +35812,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29/IDG.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/KG Assertions/2024-04-29",
-    "name": "IDG",
+    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-04-29/MW.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-04-29",
+    "name": "MW",
     "ext": "zip",
-    "date": "2024-04-30T00:04:46.887Z",
+    "date": "2024-04-30T00:07:55.154Z",
     "files": [
       {
         "url": {
@@ -35453,11 +35885,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-05-08/LINCS.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-05-08",
-    "name": "LINCS",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-04-29/MoTrPAC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-04-29",
+    "name": "MoTrPAC",
     "ext": "zip",
-    "date": "2024-05-08T19:44:35.620Z",
+    "date": "2024-04-30T00:07:23.576Z",
     "files": [
       {
         "url": {
@@ -35512,11 +35944,11 @@
     ]
   },
   {
-    "url": "https://entity.api.hubmapconsortium.org/",
-    "dir": "https://entity.api.hubmapconsortium.org",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T23:04:01.444Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-04-29/KF.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-04-29",
+    "name": "KF",
+    "ext": "zip",
+    "date": "2024-04-30T00:06:16.862Z",
     "files": [
       {
         "url": {
@@ -35585,11 +36017,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-09-15/GlyGen_C2M2_2022-09-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-09-15",
-    "name": "GlyGen_C2M2_2022-09-15_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2024-04-03/MoTrPAC_C2M2_datapackage_2024-03-12.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2024-04-03",
+    "name": "MoTrPAC_C2M2_datapackage_2024-03-12",
     "ext": "zip",
-    "date": "2022-09-15T04:00:00.000Z",
+    "date": "2024-04-03T18:33:29.904Z",
     "files": [
       {
         "url": {
@@ -36374,11 +36806,27 @@
     ]
   },
   {
-    "url": "https://smart-api.info/api/metadata/75cfc060ea7bec431a356c00c4a67c74?raw=1",
-    "dir": "https://smart-api.info/api/metadata?raw=175cfc060ea7bec431a356c00c4a67c74",
+    "url": "https://portal.hubmapconsortium.org/ccf-eui",
+    "dir": "https://portal.hubmapconsortium.org/ccf-eui",
     "name": "",
     "ext": "",
-    "date": "2024-01-17T21:36:05.739Z",
+    "date": "2024-06-10T23:20:44.995Z",
+    "files": []
+  },
+  {
+    "url": "https://humanatlas.io/",
+    "dir": "https://humanatlas.io",
+    "name": "",
+    "ext": "",
+    "date": "2024-06-10T23:15:50.158Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2024-07-03/IDG_C2M2_2024-01-09_datapackage_validated.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2024-07-03",
+    "name": "IDG_C2M2_2024-01-09_datapackage_validated",
+    "ext": "zip",
+    "date": "2024-07-03T22:19:15.671Z",
     "files": [
       {
         "url": {
@@ -38035,11 +38483,11 @@
     ]
   },
   {
-    "url": "https://smart-api.info/01",
-    "dir": "https://smart-api.info/01",
-    "name": "",
-    "ext": "",
-    "date": "2024-01-17T21:41:06.156Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-09-15/GlyGen_C2M2_2023-09-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-09-15",
+    "name": "GlyGen_C2M2_2023-09-15_datapackage",
+    "ext": "zip",
+    "date": "2023-09-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -38828,11 +39276,11 @@
     ]
   },
   {
-    "url": "https://smart-api.info/",
-    "dir": "https://smart-api.info",
-    "name": "",
-    "ext": "",
-    "date": "2024-01-17T21:41:06.112Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-04-03/MW_C2M2_datapackage_2024-03-10.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-04-03",
+    "name": "MW_C2M2_datapackage_2024-03-10",
+    "ext": "zip",
+    "date": "2024-04-03T18:34:56.883Z",
     "files": [
       {
         "url": {
@@ -39621,11 +40069,11 @@
     ]
   },
   {
-    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-17/LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
-    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-17",
-    "name": "LINCS_L1000_Chem_Pert_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2024-01-17T21:30:37.027Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2023-09-17/HuBMAP_C2M2_2023-09-17_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2023-09-17",
+    "name": "HuBMAP_C2M2_2023-09-17_datapackage",
+    "ext": "zip",
+    "date": "2023-09-17T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -40428,11 +40876,11 @@
     ]
   },
   {
-    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-17/LINCS_L1000_CRISPR_KO_Consensus_Sigs.gmt",
-    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-17",
-    "name": "LINCS_L1000_CRISPR_KO_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2024-01-17T21:30:33.642Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-04-03/4DN_C2M2_datapackage_2024-03-10.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-04-03",
+    "name": "4DN_C2M2_datapackage_2024-03-10",
+    "ext": "zip",
+    "date": "2024-04-03T18:38:19.410Z",
     "files": [
       {
         "url": {
@@ -41217,11 +41665,11 @@
     ]
   },
   {
-    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/C2M2/2024-01-16/checking_rummagene_cell_types.zip",
-    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/C2M2/2024-01-16",
-    "name": "checking_rummagene_cell_types",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-07-03/glygen_may_autogenerated_C2M2_term_tables_validated.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-07-03",
+    "name": "glygen_may_autogenerated_C2M2_term_tables_validated",
     "ext": "zip",
-    "date": "2024-01-17T02:38:50.104Z",
+    "date": "2024-07-03T22:20:39.985Z",
     "files": [
       {
         "url": {
@@ -42906,11 +43354,11 @@
     ]
   },
   {
-    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/Attribute Table/2024-01-16/Azimuth_augmented.txt",
-    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/Attribute Table/2024-01-16",
-    "name": "Azimuth_augmented",
-    "ext": "txt",
-    "date": "2024-01-17T02:33:45.729Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-06-15/c2m2_2024JUN15_submit.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-06-15",
+    "name": "c2m2_2024JUN15_submit",
+    "ext": "zip",
+    "date": "2024-06-16T02:50:35.958Z",
     "files": [
       {
         "url": {
@@ -43621,11 +44069,11 @@
     ]
   },
   {
-    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-16/test.gmt",
-    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/XMT/2024-01-16",
-    "name": "test",
-    "ext": "gmt",
-    "date": "2024-01-17T01:18:28.257Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2024-04-03/IDG_C2M2_2024-01-09_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2024-04-03",
+    "name": "IDG_C2M2_2024-01-09_datapackage",
+    "ext": "zip",
+    "date": "2024-04-03T19:03:48.586Z",
     "files": [
       {
         "url": {
@@ -44414,11 +44862,11 @@
     ]
   },
   {
-    "url": "https://maayanlab.cloud/Enrichr/help#api",
-    "dir": "https://maayanlab.cloud/Enrichr#apihelp",
-    "name": "",
-    "ext": "",
-    "date": "2024-01-24T21:06:05.537Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-06-13/GlyGen_C2M2_2023-06-13_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-06-13",
+    "name": "GlyGen_C2M2_2023-06-13_datapackage",
+    "ext": "zip",
+    "date": "2023-06-13T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -45207,11 +45655,11 @@
     ]
   },
   {
-    "url": "https://https://s3.amazonaws.com/cfde-drc/LINCS/XMT/2023-12-11/testfile.gmt",
-    "dir": "https://https//s3.amazonaws.com/cfde-drc/LINCS/XMT/2023-12-11",
-    "name": "testfile",
-    "ext": "gmt",
-    "date": "2023-12-12T00:56:42.750Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-03-24/HMP_C2M2_2021-03-24_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-03-24",
+    "name": "HMP_C2M2_2021-03-24_datapackage",
+    "ext": "zip",
+    "date": "2021-03-24T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -45618,11 +46066,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-01-24/LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-01-24",
-    "name": "LINCS_L1000_Chem_Pert_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2024-01-24T21:03:54.106Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-06-10/HMP_C2M2_2021-06-10_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-06-10",
+    "name": "HMP_C2M2_2021-06-10_datapackage",
+    "ext": "zip",
+    "date": "2021-06-10T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -45975,11 +46423,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-02-01/LINCS_C2M2_2023-09-18_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-02-01",
-    "name": "LINCS_C2M2_2023-09-18_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-08-11/HMP_C2M2_2021-08-11_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-08-11",
+    "name": "HMP_C2M2_2021-08-11_datapackage",
     "ext": "zip",
-    "date": "2024-02-01T23:45:49.239Z",
+    "date": "2021-08-11T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -46434,11 +46882,11 @@
     ]
   },
   {
-    "url": "https://https://s3.amazonaws.com/cfde-drc/Metabolomics/C2M2/2023-12-13/MW_C2M2_2023-09-08_datapackage.zip",
-    "dir": "https://https//s3.amazonaws.com/cfde-drc/Metabolomics/C2M2/2023-12-13",
-    "name": "MW_C2M2_2023-09-08_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-10-15/HMP_C2M2_2021-10-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-10-15",
+    "name": "HMP_C2M2_2021-10-15_datapackage",
     "ext": "zip",
-    "date": "2023-12-14T01:28:12.282Z",
+    "date": "2021-10-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -46999,11 +47447,11 @@
     ]
   },
   {
-    "url": "https://data.sennetconsortium.org/",
-    "dir": "https://data.sennetconsortium.org",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T22:57:15.223Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-01-11/HMP_C2M2_2022-01-11_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-01-11",
+    "name": "HMP_C2M2_2022-01-11_datapackage",
+    "ext": "zip",
+    "date": "2022-01-11T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -47476,11 +47924,11 @@
     ]
   },
   {
-    "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_cm2.py",
-    "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
-    "name": "process_mcf10a_cm2",
-    "ext": "py",
-    "date": "2024-02-07T04:15:14.695Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-04-26/HMP_C2M2_2022-04-26_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-04-26",
+    "name": "HMP_C2M2_2022-04-26_datapackage",
+    "ext": "zip",
+    "date": "2022-04-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -48255,11 +48703,11 @@
     ]
   },
   {
-    "url": "https://genboree.org/cfde-gene-dev/ui/api-docs",
-    "dir": "https://genboree.org/cfde-gene-dev/uiapi-docs",
-    "name": "",
-    "ext": "",
-    "date": "2022-08-30T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-03-19/HuBMAP_C2M2_2021-03-19_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-03-19",
+    "name": "HuBMAP_C2M2_2021-03-19_datapackage",
+    "ext": "zip",
+    "date": "2021-03-19T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -48670,11 +49118,11 @@
     ]
   },
   {
-    "url": "https://data.sennetconsortium.org/ccf-eui",
-    "dir": "https://data.sennetconsortium.org/ccf-eui",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T23:15:04.416Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-06-23/HuBMAP_C2M2_2021-06-23_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-06-23",
+    "name": "HuBMAP_C2M2_2021-06-23_datapackage",
+    "ext": "zip",
+    "date": "2021-06-23T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -49081,11 +49529,11 @@
     ]
   },
   {
-    "url": "https://entity.api.sennetconsortium.org",
-    "dir": "https://entity.api.sennetconsortium.org",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T23:07:51.391Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-10-15/HuBMAP_C2M2_2021-10-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-10-15",
+    "name": "HuBMAP_C2M2_2021-10-15_datapackage",
+    "ext": "zip",
+    "date": "2021-10-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -49512,11 +49960,11 @@
     ]
   },
   {
-    "url": "https://search.api.sennetconsortium.org",
-    "dir": "https://search.api.sennetconsortium.org",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T23:05:52.698Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2022-01-15/HuBMAP_C2M2_2022-01-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2022-01-15",
+    "name": "HuBMAP_C2M2_2022-01-15_datapackage",
+    "ext": "zip",
+    "date": "2022-01-15T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -50095,11 +50543,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-01-06/GlyGen_C2M2_2023-01-06_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-01-06",
-    "name": "GlyGen_C2M2_2023-01-06_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2022-06-19/HuBMAP_C2M2_2022-06-19_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2022-06-19",
+    "name": "HuBMAP_C2M2_2022-06-19_datapackage",
     "ext": "zip",
-    "date": "2023-01-06T05:00:00.000Z",
+    "date": "2022-06-19T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -50888,11 +51336,11 @@
     ]
   },
   {
-    "url": "https://portal.hubmapconsortium.org/",
-    "dir": "https://portal.hubmapconsortium.org",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T22:54:19.353Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2023-03-31/HuBMAP_C2M2_2023-03-31_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2023-03-31",
+    "name": "HuBMAP_C2M2_2023-03-31_datapackage",
+    "ext": "zip",
+    "date": "2023-03-31T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -51617,11 +52065,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-06-14/fy2024q3-cfde-c2m2-kids-first.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-06-14",
-    "name": "fy2024q3-cfde-c2m2-kids-first",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2021-03-30/IDG_C2M2_2021-03-30_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2021-03-30",
+    "name": "IDG_C2M2_2021-03-30_datapackage",
     "ext": "zip",
-    "date": "2024-06-15T01:59:29.287Z",
+    "date": "2021-03-30T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -52046,11 +52494,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-06-06/MW_submission_packet_20240605.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-06-06",
-    "name": "MW_submission_packet_20240605",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2021-09-29/IDG_C2M2_2021-09-29_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2021-09-29",
+    "name": "IDG_C2M2_2021-09-29_datapackage",
     "ext": "zip",
-    "date": "2024-06-06T05:34:33.870Z",
+    "date": "2021-09-29T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -52399,11 +52847,11 @@
     ]
   },
   {
-    "url": "https://sparc.science/tools-and-resources/tools",
-    "dir": "https://sparc.science/tools-and-resourcestools",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-16T02:53:26.888Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-01-19/IDG_C2M2_2022-01-19_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-01-19",
+    "name": "IDG_C2M2_2022-01-19_datapackage",
+    "ext": "zip",
+    "date": "2022-01-19T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -52948,11 +53396,11 @@
     ]
   },
   {
-    "url": "https://search.api.hubmapconsortium.org/v3/",
-    "dir": "https://search.api.hubmapconsortium.org/v3",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T22:39:05.532Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-04-13/IDG_C2M2_2022-04-13_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-04-13",
+    "name": "IDG_C2M2_2022-04-13_datapackage",
+    "ext": "zip",
+    "date": "2022-04-13T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -53615,11 +54063,11 @@
     ]
   },
   {
-    "url": "https://lincsproject.org/LINCS/tools",
-    "dir": "https://lincsproject.org/LINCStools",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-12T01:25:45.701Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-06-15/IDG_C2M2_2022-06-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-06-15",
+    "name": "IDG_C2M2_2022-06-15_datapackage",
+    "ext": "zip",
+    "date": "2022-06-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -54266,11 +54714,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-06-12/glygen_may_autogenerated_C2M2_term_tables.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-06-12",
-    "name": "glygen_may_autogenerated_C2M2_term_tables",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2021-03-26/KidsFirst_C2M2_2021-03-26_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2021-03-26",
+    "name": "KidsFirst_C2M2_2021-03-26_datapackage",
     "ext": "zip",
-    "date": "2024-06-12T21:21:13.580Z",
+    "date": "2021-03-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -54681,11 +55129,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-06-13/submission.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-06-13",
-    "name": "submission",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2021-06-18/KidsFirst_C2M2_2021-06-18_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2021-06-18",
+    "name": "KidsFirst_C2M2_2021-06-18_datapackage",
     "ext": "zip",
-    "date": "2024-06-13T23:27:22.387Z",
+    "date": "2021-06-18T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -55096,11 +55544,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-02-12/testfile.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-02-12",
-    "name": "testfile",
-    "ext": "gmt",
-    "date": "2024-02-12T22:40:12.544Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-01-10/KidsFirst_C2M2_2022-01-10_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-01-10",
+    "name": "KidsFirst_C2M2_2022-01-10_datapackage",
+    "ext": "zip",
+    "date": "2022-01-10T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -55665,11 +56113,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-03/HuBMAP_C2M2_2024-01-04_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-04-03",
-    "name": "HuBMAP_C2M2_2024-01-04_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-04-15/KidsFirst_C2M2_2022-04-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-04-15",
+    "name": "KidsFirst_C2M2_2022-04-15_datapackage",
     "ext": "zip",
-    "date": "2024-04-03T19:02:45.132Z",
+    "date": "2022-04-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -56458,11 +56906,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-04-03/Glycosciences_C2M2_datapackage_2024-03-14.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2024-04-03",
-    "name": "Glycosciences_C2M2_datapackage_2024-03-14",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-07-08/KidsFirst_C2M2_2022-07-08_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-07-08",
+    "name": "KidsFirst_C2M2_2022-07-08_datapackage",
     "ext": "zip",
-    "date": "2024-04-03T18:48:24.119Z",
+    "date": "2022-07-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -57251,11 +57699,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Signatures",
-    "ext": "gmt",
-    "date": "2024-04-11T01:35:21.626Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-09-02/KidsFirst_C2M2_2022-09-02_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-09-02",
+    "name": "KidsFirst_C2M2_2022-09-02_datapackage",
+    "ext": "zip",
+    "date": "2022-09-02T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -58044,11 +58492,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-04-03/SPARC_C2M2_datapackage_2024-03-17.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-04-03",
-    "name": "SPARC_C2M2_datapackage_2024-03-17",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-12-29/KidsFirst_C2M2_2022-12-29_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-12-29",
+    "name": "KidsFirst_C2M2_2022-12-29_datapackage",
     "ext": "zip",
-    "date": "2024-04-03T18:34:40.919Z",
+    "date": "2022-12-29T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -58837,11 +59285,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-04-03/4DN_C2M2_2023-11-28_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-04-03",
-    "name": "4DN_C2M2_2023-11-28_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2023-06-09/IDG_C2M2_2023-06-09_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2023-06-09",
+    "name": "IDG_C2M2_2023-06-09_datapackage",
     "ext": "zip",
-    "date": "2024-04-03T18:58:27.460Z",
+    "date": "2023-06-09T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -59630,11 +60078,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03/Glycosciences_C2M2_datapackage_2024-03-14.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03",
-    "name": "Glycosciences_C2M2_datapackage_2024-03-14",
+    "url": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03/KidsFirst_C2M2_2023-11-29_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03",
+    "name": "KidsFirst_C2M2_2023-11-29_datapackage",
     "ext": "zip",
-    "date": "2024-04-03T18:56:00.367Z",
+    "date": "2024-04-03T19:06:22.483Z",
     "files": [
       {
         "url": {
@@ -60423,11 +60871,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10/LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2024-04-11T01:21:25.310Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03/GlyGen_C2M2_datapackage_2024-03-14.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03",
+    "name": "GlyGen_C2M2_datapackage_2024-03-14",
+    "ext": "zip",
+    "date": "2024-04-03T19:11:37.063Z",
     "files": [
       {
         "url": {
@@ -61216,11 +61664,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10/LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Sigs.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-04-10",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chemical_Pertubation_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2024-04-11T01:28:07.212Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-04-29/LINCS.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-04-29",
+    "name": "LINCS",
+    "ext": "zip",
+    "date": "2024-04-30T00:06:50.101Z",
     "files": [
       {
         "url": {
@@ -61255,11 +61703,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-04-05/4DN_C2M2_2022-04-05_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-04-05",
-    "name": "4DN_C2M2_2022-04-05_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-03-10/MoTrPAC_C2M2_2023-03-10_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-03-10",
+    "name": "MoTrPAC_C2M2_2023-03-10_datapackage",
     "ext": "zip",
-    "date": "2022-04-05T04:00:00.000Z",
+    "date": "2023-03-10T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -62076,11 +62524,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-05-20/4DN_C2M2_2022-05-20_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-05-20",
-    "name": "4DN_C2M2_2022-05-20_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2024-04-03/MoTrPAC_C2M2_2023-11-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2024-04-03",
+    "name": "MoTrPAC_C2M2_2023-11-15_datapackage",
     "ext": "zip",
-    "date": "2022-05-20T04:00:00.000Z",
+    "date": "2024-04-03T19:06:46.991Z",
     "files": [
       {
         "url": {
@@ -62869,11 +63317,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-09-09/4DN_C2M2_2022-09-09_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-09-09",
-    "name": "4DN_C2M2_2022-09-09_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-04-03/MW_C2M2_2023-12-08_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-04-03",
+    "name": "MW_C2M2_2023-12-08_datapackage",
     "ext": "zip",
-    "date": "2022-09-09T04:00:00.000Z",
+    "date": "2024-04-03T19:07:11.315Z",
     "files": [
       {
         "url": {
@@ -63662,11 +64110,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-12-13/4DN_C2M2_2022-12-13_datapckage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-12-13",
-    "name": "4DN_C2M2_2022-12-13_datapckage",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-04-03/KidsFirst_C2M2_2023-04-03_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-04-03",
+    "name": "KidsFirst_C2M2_2023-04-03_datapackage",
     "ext": "zip",
-    "date": "2022-12-13T05:00:00.000Z",
+    "date": "2023-04-03T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -64455,11 +64903,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2023-08-17/ERCC_C2M2_2023-08-17_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2023-08-17",
-    "name": "ERCC_C2M2_2023-08-17_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-06-09/KidsFirst_C2M2_2023-06-09_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-06-09",
+    "name": "KidsFirst_C2M2_2023-06-09_datapackage",
     "ext": "zip",
-    "date": "2023-08-17T04:00:00.000Z",
+    "date": "2023-06-09T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -65248,11 +65696,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2021-03-17/GTEx_C2M2_2021-03-17_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2021-03-17",
-    "name": "GTEx_C2M2_2021-03-17_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-03-24/LINCS_C2M2_2021-03-24_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-03-24",
+    "name": "LINCS_C2M2_2021-03-24_datapackage",
     "ext": "zip",
-    "date": "2021-03-17T04:00:00.000Z",
+    "date": "2021-03-24T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -65663,11 +66111,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2021-06-08/GTEx_C2M2_2021-06-08_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2021-06-08",
-    "name": "GTEx_C2M2_2021-06-08_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-06-02/LINCS_C2M2_2021-06-02_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-06-02",
+    "name": "LINCS_C2M2_2021-06-02_datapackage",
     "ext": "zip",
-    "date": "2021-06-08T04:00:00.000Z",
+    "date": "2021-06-02T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -66074,11 +66522,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-01-18/GTEx_C2M2_2022-01-18_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-01-18",
-    "name": "GTEx_C2M2_2022-01-18_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-09-29/LINCS_C2M2_2021-09-29_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-09-29",
+    "name": "LINCS_C2M2_2021-09-29_datapackage",
     "ext": "zip",
-    "date": "2022-01-18T05:00:00.000Z",
+    "date": "2021-09-29T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -66545,11 +66993,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-04-07/GTEx_C2M2_2022-04-07_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-04-07",
-    "name": "GTEx_C2M2_2022-04-07_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-01-11/LINCS_C2M2_2022-01-11_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-01-11",
+    "name": "LINCS_C2M2_2022-01-11_datapackage",
     "ext": "zip",
-    "date": "2022-04-07T04:00:00.000Z",
+    "date": "2022-01-11T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -67152,11 +67600,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-06-17/GTEx_C2M2_2022-06-17_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2022-06-17",
-    "name": "GTEx_C2M2_2022-06-17_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-04-14/LINCS_C2M2_2022-04-14_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-04-14",
+    "name": "LINCS_C2M2_2022-04-14_datapackage",
     "ext": "zip",
-    "date": "2022-06-17T04:00:00.000Z",
+    "date": "2022-04-14T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -67969,11 +68417,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2023-09-01/GTEx_C2M2_2023-09-01_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/C2M2/2023-09-01",
-    "name": "GTEx_C2M2_2023-09-01_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-06-20/LINCS_C2M2_2022-06-20_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-06-20",
+    "name": "LINCS_C2M2_2022-06-20_datapackage",
     "ext": "zip",
-    "date": "2023-09-01T04:00:00.000Z",
+    "date": "2022-06-20T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -68772,11 +69220,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-04-15/GlyGen_C2M2_2022-04-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2022-04-15",
-    "name": "GlyGen_C2M2_2022-04-15_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-09-14/LINCS_C2M2_2022-09-14_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-09-14",
+    "name": "LINCS_C2M2_2022-09-14_datapackage",
     "ext": "zip",
-    "date": "2022-04-15T04:00:00.000Z",
+    "date": "2022-09-14T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -69561,11 +70009,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-03-06/GlyGen_C2M2_2023-03-06_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-03-06",
-    "name": "GlyGen_C2M2_2023-03-06_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-12-02/LINCS_C2M2_2022-12-02_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-12-02",
+    "name": "LINCS_C2M2_2022-12-02_datapackage",
     "ext": "zip",
-    "date": "2023-03-06T05:00:00.000Z",
+    "date": "2022-12-02T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -70378,11 +70826,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-04-29/MW.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-04-29",
-    "name": "MW",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-03-21/LINCS_C2M2_2023-03-21_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-03-21",
+    "name": "LINCS_C2M2_2023-03-21_datapackage",
     "ext": "zip",
-    "date": "2024-04-30T00:07:55.154Z",
+    "date": "2023-03-21T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -70915,11 +71363,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-04-29/MoTrPAC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG Assertions/2024-04-29",
-    "name": "MoTrPAC",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-06-15/LINCS_C2M2_2023-06-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-06-15",
+    "name": "LINCS_C2M2_2023-06-15_datapackage",
     "ext": "zip",
-    "date": "2024-04-30T00:07:23.576Z",
+    "date": "2023-06-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -71442,11 +71890,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-04-29/KF.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG Assertions/2024-04-29",
-    "name": "KF",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-09-18/LINCS_C2M2_2023-09-18_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-09-18",
+    "name": "LINCS_C2M2_2023-09-18_datapackage",
     "ext": "zip",
-    "date": "2024-04-30T00:06:16.862Z",
+    "date": "2023-09-18T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -71999,11 +72447,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2024-04-03/MoTrPAC_C2M2_datapackage_2024-03-12.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2024-04-03",
-    "name": "MoTrPAC_C2M2_datapackage_2024-03-12",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-03-24/MW_C2M2_2021-03-24_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-03-24",
+    "name": "MW_C2M2_2021-03-24_datapackage",
     "ext": "zip",
-    "date": "2024-04-03T18:33:29.904Z",
+    "date": "2021-03-24T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -72410,11 +72858,11 @@
     ]
   },
   {
-    "url": "https://portal.hubmapconsortium.org/ccf-eui",
-    "dir": "https://portal.hubmapconsortium.org/ccf-eui",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T23:20:44.995Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-06-10/MW_C2M2_2021-06-10_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-06-10",
+    "name": "MW_C2M2_2021-06-10_datapackage",
+    "ext": "zip",
+    "date": "2021-06-10T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -72821,11 +73269,11 @@
     ]
   },
   {
-    "url": "https://humanatlas.io/",
-    "dir": "https://humanatlas.io",
-    "name": "",
-    "ext": "",
-    "date": "2024-06-10T23:15:50.158Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-08-18/MW_C2M2_2021-08-18_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-08-18",
+    "name": "MW_C2M2_2021-08-18_datapackage",
+    "ext": "zip",
+    "date": "2021-08-18T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -73260,11 +73708,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2024-07-03/IDG_C2M2_2024-01-09_datapackage_validated.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2024-07-03",
-    "name": "IDG_C2M2_2024-01-09_datapackage_validated",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-10-15/MW_C2M2_2021-10-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-10-15",
+    "name": "MW_C2M2_2021-10-15_datapackage",
     "ext": "zip",
-    "date": "2024-07-03T22:19:15.671Z",
+    "date": "2021-10-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -73727,11 +74175,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-09-15/GlyGen_C2M2_2023-09-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-09-15",
-    "name": "GlyGen_C2M2_2023-09-15_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-01-12/MW_C2M2_2022-01-12_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-01-12",
+    "name": "MW_C2M2_2022-01-12_datapackage",
     "ext": "zip",
-    "date": "2023-09-15T04:00:00.000Z",
+    "date": "2022-01-12T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -74292,11 +74740,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-04-03/MW_C2M2_datapackage_2024-03-10.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-04-03",
-    "name": "MW_C2M2_datapackage_2024-03-10",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-04-15/MW_C2M2_2022-04-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-04-15",
+    "name": "MW_C2M2_2022-04-15_datapackage",
     "ext": "zip",
-    "date": "2024-04-03T18:34:56.883Z",
+    "date": "2022-04-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -75067,11 +75515,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2023-09-17/HuBMAP_C2M2_2023-09-17_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2023-09-17",
-    "name": "HuBMAP_C2M2_2023-09-17_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-09-14/KidsFirst_C2M2_2023-09-14_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-09-14",
+    "name": "KidsFirst_C2M2_2023-09-14_datapackage",
     "ext": "zip",
-    "date": "2023-09-17T04:00:00.000Z",
+    "date": "2023-09-14T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -75860,11 +76308,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-04-03/4DN_C2M2_datapackage_2024-03-10.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-04-03",
-    "name": "4DN_C2M2_datapackage_2024-03-10",
-    "ext": "zip",
-    "date": "2024-04-03T18:38:19.410Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06/LINCS_XMT_2022-06-06_LINCS_L1000_Ligand_Perturbations_up.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06",
+    "name": "LINCS_XMT_2022-06-06_LINCS_L1000_Ligand_Perturbations_up",
+    "ext": "gmt",
+    "date": "2022-06-06T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -75879,11 +76327,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-07-03/glygen_may_autogenerated_C2M2_term_tables_validated.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-07-03",
-    "name": "glygen_may_autogenerated_C2M2_term_tables_validated",
-    "ext": "zip",
-    "date": "2024-07-03T22:20:39.985Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06/LINCS_XMT_2022-06-06_LINCS_L1000_Chem_Pert_up.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06",
+    "name": "LINCS_XMT_2022-06-06_LINCS_L1000_Chem_Pert_up",
+    "ext": "gmt",
+    "date": "2022-06-06T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -75898,11 +76346,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-06-15/c2m2_2024JUN15_submit.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-06-15",
-    "name": "c2m2_2024JUN15_submit",
-    "ext": "zip",
-    "date": "2024-06-16T02:50:35.958Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06/LINCS_XMT_2022-06-06_LINCS_L1000_Ligand_Perturbations_down.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06",
+    "name": "LINCS_XMT_2022-06-06_LINCS_L1000_Ligand_Perturbations_down",
+    "ext": "gmt",
+    "date": "2022-06-06T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -75917,11 +76365,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2024-04-03/IDG_C2M2_2024-01-09_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2024-04-03",
-    "name": "IDG_C2M2_2024-01-09_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03/KidsFirst_C2M2_datapackage_2024-03-10.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03",
+    "name": "KidsFirst_C2M2_datapackage_2024-03-10",
     "ext": "zip",
-    "date": "2024-04-03T19:03:48.586Z",
+    "date": "2024-04-03T18:37:33.422Z",
     "files": [
       {
         "url": {
@@ -76710,11 +77158,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-06-13/GlyGen_C2M2_2023-06-13_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-06-13",
-    "name": "GlyGen_C2M2_2023-06-13_datapackage",
-    "ext": "zip",
-    "date": "2023-06-13T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-12-13/IDG_XMT_2022-12-13_IDG_Drug_Targets_2022.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-12-13",
+    "name": "IDG_XMT_2022-12-13_IDG_Drug_Targets_2022",
+    "ext": "gmt",
+    "date": "2022-12-13T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -76729,11 +77177,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-03-24/HMP_C2M2_2021-03-24_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-03-24",
-    "name": "HMP_C2M2_2021-03-24_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-07-03/submission_validated.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-07-03",
+    "name": "submission_validated",
     "ext": "zip",
-    "date": "2021-03-24T04:00:00.000Z",
+    "date": "2024-07-03T22:51:12.437Z",
     "files": [
       {
         "url": {
@@ -78086,11 +78534,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-06-10/HMP_C2M2_2021-06-10_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-06-10",
-    "name": "HMP_C2M2_2021-06-10_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-06-24/SPARC_C2M2_2022-06-24_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-06-24",
+    "name": "SPARC_C2M2_2022-06-24_datapackage",
     "ext": "zip",
-    "date": "2021-06-10T04:00:00.000Z",
+    "date": "2022-06-24T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -79463,11 +79911,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-08-11/HMP_C2M2_2021-08-11_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-08-11",
-    "name": "HMP_C2M2_2021-08-11_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-01-10/SPARC_C2M2_2023-01-10_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-01-10",
+    "name": "SPARC_C2M2_2023-01-10_datapackage",
     "ext": "zip",
-    "date": "2021-08-11T04:00:00.000Z",
+    "date": "2023-01-10T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -80280,11 +80728,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-10-15/HMP_C2M2_2021-10-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2021-10-15",
-    "name": "HMP_C2M2_2021-10-15_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03/GlyGen_C2M2_2023-12-14_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03",
+    "name": "GlyGen_C2M2_2023-12-14_datapackage",
     "ext": "zip",
-    "date": "2021-10-15T04:00:00.000Z",
+    "date": "2024-04-03T19:08:11.204Z",
     "files": [
       {
         "url": {
@@ -81073,11 +81521,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-01-11/HMP_C2M2_2022-01-11_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-01-11",
-    "name": "HMP_C2M2_2022-01-11_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-06-10/MW_C2M2_2022-06-10_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-06-10",
+    "name": "MW_C2M2_2022-06-10_datapackage",
     "ext": "zip",
-    "date": "2022-01-11T05:00:00.000Z",
+    "date": "2022-06-10T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -81848,11 +82296,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-04-26/HMP_C2M2_2022-04-26_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HMP/C2M2/2022-04-26",
-    "name": "HMP_C2M2_2022-04-26_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-09-09/MW_C2M2_2022-09-09_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-09-09",
+    "name": "MW_C2M2_2022-09-09_datapackage",
     "ext": "zip",
-    "date": "2022-04-26T04:00:00.000Z",
+    "date": "2022-09-09T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -82623,11 +83071,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-03-19/HuBMAP_C2M2_2021-03-19_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-03-19",
-    "name": "HuBMAP_C2M2_2021-03-19_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-12-21/MW_C2M2_2022-12-21_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-12-21",
+    "name": "MW_C2M2_2022-12-21_datapackage",
     "ext": "zip",
-    "date": "2021-03-19T04:00:00.000Z",
+    "date": "2022-12-21T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -83412,11 +83860,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-06-23/HuBMAP_C2M2_2021-06-23_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-06-23",
-    "name": "HuBMAP_C2M2_2021-06-23_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-03-09/MW_C2M2_2023-03-09_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-03-09",
+    "name": "MW_C2M2_2023-03-09_datapackage",
     "ext": "zip",
-    "date": "2021-06-23T04:00:00.000Z",
+    "date": "2023-03-09T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -84201,11 +84649,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-10-15/HuBMAP_C2M2_2021-10-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2021-10-15",
-    "name": "HuBMAP_C2M2_2021-10-15_datapackage",
-    "ext": "zip",
-    "date": "2021-10-15T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG/2023-10-26/IDG_KG_2023-10-26_IDG.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/KG/2023-10-26",
+    "name": "IDG_KG_2023-10-26_IDG.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -84220,11 +84668,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2022-01-15/HuBMAP_C2M2_2022-01-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2022-01-15",
-    "name": "HuBMAP_C2M2_2022-01-15_datapackage",
-    "ext": "zip",
-    "date": "2022-01-15T05:00:00.000Z",
+    "url": "https://ga4gh-rnaseq.github.io/schema/docs/index.html",
+    "dir": "https://ga4gh-rnaseq.github.io/schema/docs",
+    "name": "index",
+    "ext": "html",
+    "date": "2023-04-20T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -84239,11 +84687,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2022-06-19/HuBMAP_C2M2_2022-06-19_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2022-06-19",
-    "name": "HuBMAP_C2M2_2022-06-19_datapackage",
-    "ext": "zip",
-    "date": "2022-06-19T04:00:00.000Z",
+    "url": "https://gtexportal.org/api/v2/redoc#tag/GTEx-Portal-API-Info",
+    "dir": "https://gtexportal.org/api/v2#tag/GTEx-Portal-API-Inforedoc",
+    "name": "",
+    "ext": "",
+    "date": "2023-10-01T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/KG/2023-10-26/MW_KG_2023-10-26_MW.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/KG/2023-10-26",
+    "name": "MW_KG_2023-10-26_MW.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -84258,11 +84714,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2023-03-31/HuBMAP_C2M2_2023-03-31_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2023-03-31",
-    "name": "HuBMAP_C2M2_2023-03-31_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-06-07/MW_C2M2_2023-06-07_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-06-07",
+    "name": "MW_C2M2_2023-06-07_datapackage",
     "ext": "zip",
-    "date": "2023-03-31T04:00:00.000Z",
+    "date": "2023-06-07T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -85047,11 +85503,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2021-03-30/IDG_C2M2_2021-03-30_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2021-03-30",
-    "name": "IDG_C2M2_2021-03-30_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-06-14/MoTrPAC_C2M2_2023-06-14_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-06-14",
+    "name": "MoTrPAC_C2M2_2023-06-14_datapackage",
     "ext": "zip",
-    "date": "2021-03-30T04:00:00.000Z",
+    "date": "2023-06-14T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -85854,11 +86310,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2021-09-29/IDG_C2M2_2021-09-29_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2021-09-29",
-    "name": "IDG_C2M2_2021-09-29_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-07-14/MoTrPAC_C2M2_2023-07-14_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-07-14",
+    "name": "MoTrPAC_C2M2_2023-07-14_datapackage",
     "ext": "zip",
-    "date": "2021-09-29T04:00:00.000Z",
+    "date": "2023-07-14T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86647,11 +87103,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-01-19/IDG_C2M2_2022-01-19_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-01-19",
-    "name": "IDG_C2M2_2022-01-19_datapackage",
-    "ext": "zip",
-    "date": "2022-01-19T05:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2023-03-10/GTEx_XMT_2023-03-10_GTEx_Tissues_V8_2023.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2023-03-10",
+    "name": "GTEx_XMT_2023-03-10_GTEx_Tissues_V8_2023",
+    "ext": "gmt",
+    "date": "2023-03-10T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86666,11 +87122,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-04-13/IDG_C2M2_2022-04-13_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-04-13",
-    "name": "IDG_C2M2_2022-04-13_datapackage",
-    "ext": "zip",
-    "date": "2022-04-13T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09/GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Down.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09",
+    "name": "GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Down",
+    "ext": "gmt",
+    "date": "2019-09-09T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86685,11 +87141,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-06-15/IDG_C2M2_2022-06-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2022-06-15",
-    "name": "IDG_C2M2_2022-06-15_datapackage",
-    "ext": "zip",
-    "date": "2022-06-15T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09/GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Up.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09",
+    "name": "GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Up",
+    "ext": "gmt",
+    "date": "2019-09-09T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86704,11 +87160,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2021-03-26/KidsFirst_C2M2_2021-03-26_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2021-03-26",
-    "name": "KidsFirst_C2M2_2021-03-26_datapackage",
-    "ext": "zip",
-    "date": "2021-03-26T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2022-06-06/GTEx_XMT_2022-06-06_GTEx_Aging_Signatures_2021.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2022-06-06",
+    "name": "GTEx_XMT_2022-06-06_GTEx_Aging_Signatures_2021",
+    "ext": "gmt",
+    "date": "2022-06-06T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86723,11 +87179,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2021-06-18/KidsFirst_C2M2_2021-06-18_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2021-06-18",
-    "name": "KidsFirst_C2M2_2021-06-18_datapackage",
-    "ext": "zip",
-    "date": "2021-06-18T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/XMT/2022-12-13/GlyGen_XMT_2022-12-13_GlyGen_Glycosylated_Proteins_2022.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/XMT/2022-12-13",
+    "name": "GlyGen_XMT_2022-12-13_GlyGen_Glycosylated_Proteins_2022",
+    "ext": "gmt",
+    "date": "2022-12-13T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86742,11 +87198,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-01-10/KidsFirst_C2M2_2022-01-10_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-01-10",
-    "name": "KidsFirst_C2M2_2022-01-10_datapackage",
-    "ext": "zip",
-    "date": "2022-01-10T05:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-06-06/IDG_XMT_2022-06-06_ARCHS4_IDG_Coexp.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-06-06",
+    "name": "IDG_XMT_2022-06-06_ARCHS4_IDG_Coexp",
+    "ext": "gmt",
+    "date": "2022-06-06T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86761,11 +87217,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-04-15/KidsFirst_C2M2_2022-04-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-04-15",
-    "name": "KidsFirst_C2M2_2022-04-15_datapackage",
-    "ext": "zip",
-    "date": "2022-04-15T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2020-03-10/IDG_XMT_2020-03-10_DrugCentral_Target.dmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2020-03-10",
+    "name": "IDG_XMT_2020-03-10_DrugCentral_Target",
+    "ext": "dmt",
+    "date": "2020-03-10T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86780,11 +87236,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-07-08/KidsFirst_C2M2_2022-07-08_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-07-08",
-    "name": "KidsFirst_C2M2_2022-07-08_datapackage",
-    "ext": "zip",
-    "date": "2022-07-08T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/XMT/2022-12-13/MW_XMT_2022-12-13_Metabolomics_Workbench_Metabolites_2022.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/XMT/2022-12-13",
+    "name": "MW_XMT_2022-12-13_Metabolomics_Workbench_Metabolites_2022",
+    "ext": "gmt",
+    "date": "2022-12-13T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86799,11 +87255,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-09-02/KidsFirst_C2M2_2022-09-02_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-09-02",
-    "name": "KidsFirst_C2M2_2022-09-02_datapackage",
-    "ext": "zip",
-    "date": "2022-09-02T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/KOMP2/XMT/2022-12-13/KOMP2_XMT_2022-12-13_KOMP2_Mouse_Phenotypes_2022.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KOMP2/XMT/2022-12-13",
+    "name": "KOMP2_XMT_2022-12-13_KOMP2_Mouse_Phenotypes_2022",
+    "ext": "gmt",
+    "date": "2022-12-13T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86818,11 +87274,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-12-29/KidsFirst_C2M2_2022-12-29_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2022-12-29",
-    "name": "KidsFirst_C2M2_2022-12-29_datapackage",
-    "ext": "zip",
-    "date": "2022-12-29T05:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG/2023-10-26/LINCS_KG_2023-10-26_LINCS.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG/2023-10-26",
+    "name": "LINCS_KG_2023-10-26_LINCS.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86837,11 +87293,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2023-06-09/IDG_C2M2_2023-06-09_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/C2M2/2023-06-09",
-    "name": "IDG_C2M2_2023-06-09_datapackage",
-    "ext": "zip",
-    "date": "2023-06-09T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/KG/2023-10-26/ERCC_KG_2023-10-26_ERCC.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/KG/2023-10-26",
+    "name": "ERCC_KG_2023-10-26_ERCC.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86856,11 +87312,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03/KidsFirst_C2M2_2023-11-29_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03",
-    "name": "KidsFirst_C2M2_2023-11-29_datapackage",
-    "ext": "zip",
-    "date": "2024-04-03T19:06:22.483Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG/2023-10-26/KidsFirst_KG_2023-10-26_KF.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG/2023-10-26",
+    "name": "KidsFirst_KG_2023-10-26_KF.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86875,11 +87331,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03/GlyGen_C2M2_datapackage_2024-03-14.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03",
-    "name": "GlyGen_C2M2_datapackage_2024-03-14",
-    "ext": "zip",
-    "date": "2024-04-03T19:11:37.063Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG/2023-10-26/GlyGen_KG_2023-10-26_GLYGEN.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG/2023-10-26",
+    "name": "GlyGen_KG_2023-10-26_GLYGEN.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -86894,11 +87350,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-04-29/LINCS.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG Assertions/2024-04-29",
-    "name": "LINCS",
+    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-09-08/MW_C2M2_2023-09-08_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-09-08",
+    "name": "MW_C2M2_2023-09-08_datapackage",
     "ext": "zip",
-    "date": "2024-04-30T00:06:50.101Z",
+    "date": "2023-09-08T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -87683,11 +88139,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-03-10/MoTrPAC_C2M2_2023-03-10_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-03-10",
-    "name": "MoTrPAC_C2M2_2023-03-10_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-09-12/MoTrPAC_C2M2_2023-09-12_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-09-12",
+    "name": "MoTrPAC_C2M2_2023-09-12_datapackage",
     "ext": "zip",
-    "date": "2023-03-10T05:00:00.000Z",
+    "date": "2023-09-12T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -88476,11 +88932,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2024-04-03/MoTrPAC_C2M2_2023-11-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2024-04-03",
-    "name": "MoTrPAC_C2M2_2023-11-15_datapackage",
-    "ext": "zip",
-    "date": "2024-04-03T19:06:46.991Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-12-13/LINCS_XMT_2022-12-13_LINCS_L1000_CRISPR_KO_Consensus_Sigs.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-12-13",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_CRISPR_KO_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2022-12-13T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -88495,11 +88951,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-04-03/MW_C2M2_2023-12-08_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-04-03",
-    "name": "MW_C2M2_2023-12-08_datapackage",
-    "ext": "zip",
-    "date": "2024-04-03T19:07:11.315Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-12-13/LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-12-13",
+    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs",
+    "ext": "gmt",
+    "date": "2022-12-13T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -88514,11 +88970,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-04-03/KidsFirst_C2M2_2023-04-03_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-04-03",
-    "name": "KidsFirst_C2M2_2023-04-03_datapackage",
-    "ext": "zip",
-    "date": "2023-04-03T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06/LINCS_XMT_2022-06-06_LINCS_L1000_Chem_Pert_down.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06",
+    "name": "LINCS_XMT_2022-06-06_LINCS_L1000_Chem_Pert_down",
+    "ext": "gmt",
+    "date": "2022-06-06T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -88533,11 +88989,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-06-09/KidsFirst_C2M2_2023-06-09_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-06-09",
-    "name": "KidsFirst_C2M2_2023-06-09_datapackage",
-    "ext": "zip",
-    "date": "2023-06-09T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG/2023-10-26/GTEx_KG_2023-10-26_GTEX.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/KG/2023-10-26",
+    "name": "GTEx_KG_2023-10-26_GTEX.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -88552,11 +89008,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-03-24/LINCS_C2M2_2021-03-24_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-03-24",
-    "name": "LINCS_C2M2_2021-03-24_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2021-08-20/SPARC_C2M2_2021-08-20_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2021-08-20",
+    "name": "SPARC_C2M2_2021-08-20_datapackage",
     "ext": "zip",
-    "date": "2021-03-24T04:00:00.000Z",
+    "date": "2021-08-20T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -88981,11 +89437,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-06-02/LINCS_C2M2_2021-06-02_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-06-02",
-    "name": "LINCS_C2M2_2021-06-02_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-01-15/SPARC_C2M2_2022-01-15_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-01-15",
+    "name": "SPARC_C2M2_2022-01-15_datapackage",
     "ext": "zip",
-    "date": "2021-06-02T04:00:00.000Z",
+    "date": "2022-01-15T05:00:00.000Z",
     "files": [
       {
         "url": {
@@ -89672,11 +90128,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-09-29/LINCS_C2M2_2021-09-29_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2021-09-29",
-    "name": "LINCS_C2M2_2021-09-29_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-04-16/SPARC_C2M2_2022-04-16_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-04-16",
+    "name": "SPARC_C2M2_2022-04-16_datapackage",
     "ext": "zip",
-    "date": "2021-09-29T04:00:00.000Z",
+    "date": "2022-04-16T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -91105,11 +91561,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-01-11/LINCS_C2M2_2022-01-11_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-01-11",
-    "name": "LINCS_C2M2_2022-01-11_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-09-17/SPARC_C2M2_2022-09-17_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-09-17",
+    "name": "SPARC_C2M2_2022-09-17_datapackage",
     "ext": "zip",
-    "date": "2022-01-11T05:00:00.000Z",
+    "date": "2022-09-17T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -93490,11 +93946,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-04-14/LINCS_C2M2_2022-04-14_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-04-14",
-    "name": "LINCS_C2M2_2022-04-14_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-06-16/SPARC_C2M2_2023-06-16_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-06-16",
+    "name": "SPARC_C2M2_2023-06-16_datapackage",
     "ext": "zip",
-    "date": "2022-04-14T04:00:00.000Z",
+    "date": "2023-06-16T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -94545,11 +95001,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-06-20/LINCS_C2M2_2022-06-20_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-06-20",
-    "name": "LINCS_C2M2_2022-06-20_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-09-18/SPARC_C2M2_2023-09-18_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-09-18",
+    "name": "SPARC_C2M2_2023-09-18_datapackage",
     "ext": "zip",
-    "date": "2022-06-20T04:00:00.000Z",
+    "date": "2023-09-18T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -95446,11 +95902,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-09-14/LINCS_C2M2_2022-09-14_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-09-14",
-    "name": "LINCS_C2M2_2022-09-14_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2021-06-10/SPARC_C2M2_2021-06-10_datapackage.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2021-06-10",
+    "name": "SPARC_C2M2_2021-06-10_datapackage",
     "ext": "zip",
-    "date": "2022-09-14T04:00:00.000Z",
+    "date": "2021-06-10T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -95889,11 +96345,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-12-02/LINCS_C2M2_2022-12-02_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2022-12-02",
-    "name": "LINCS_C2M2_2022-12-02_datapackage",
-    "ext": "zip",
-    "date": "2022-12-02T05:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/KG/2023-10-26/4DN_KG_2023-10-26_4DN.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/KG/2023-10-26",
+    "name": "4DN_KG_2023-10-26_4DN.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -95908,11 +96364,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-03-21/LINCS_C2M2_2023-03-21_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-03-21",
-    "name": "LINCS_C2M2_2023-03-21_datapackage",
-    "ext": "zip",
-    "date": "2023-03-21T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG/2023-10-26/MoTrPAC_KG_2023-10-26_MOTORPAC.edges.csv",
+    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG/2023-10-26",
+    "name": "MoTrPAC_KG_2023-10-26_MOTORPAC.edges",
+    "ext": "csv",
+    "date": "2023-10-26T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -95927,11 +96383,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-06-15/LINCS_C2M2_2023-06-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-06-15",
-    "name": "LINCS_C2M2_2023-06-15_datapackage",
-    "ext": "zip",
-    "date": "2023-06-15T04:00:00.000Z",
+    "url": "https://smart-api.info/ui/b8399f43cd71264faca4d798c793aa30",
+    "dir": "https://smart-api.info/uib8399f43cd71264faca4d798c793aa30",
+    "name": "",
+    "ext": "",
+    "date": "2023-02-03T05:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/ConvertedGeneID/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/ConvertedGeneID",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-07-28T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -95946,11 +96410,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-09-18/LINCS_C2M2_2023-09-18_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2023-09-18",
-    "name": "LINCS_C2M2_2023-09-18_datapackage",
-    "ext": "zip",
-    "date": "2023-09-18T04:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/geneidconv/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/geneidconv",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-07-28T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -95965,11 +96429,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-03-24/MW_C2M2_2021-03-24_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-03-24",
-    "name": "MW_C2M2_2021-03-24_datapackage",
-    "ext": "zip",
-    "date": "2021-03-24T04:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxn_table/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxn_table",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-05-22T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -95984,11 +96448,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-06-10/MW_C2M2_2021-06-10_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-06-10",
-    "name": "MW_C2M2_2021-06-10_datapackage",
-    "ext": "zip",
-    "date": "2021-06-10T04:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary_table/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary_table",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-05-04T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96003,11 +96467,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-08-18/MW_C2M2_2021-08-18_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-08-18",
-    "name": "MW_C2M2_2021-08-18_datapackage",
-    "ext": "zip",
-    "date": "2021-08-18T04:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-04-06T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96022,11 +96486,27 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-10-15/MW_C2M2_2021-10-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2021-10-15",
-    "name": "MW_C2M2_2021-10-15_datapackage",
-    "ext": "zip",
-    "date": "2021-10-15T04:00:00.000Z",
+    "url": "https://smart-api.info/ui/e712b9eb07e637a00ae468f757ce2a1f",
+    "dir": "https://smart-api.info/uie712b9eb07e637a00ae468f757ce2a1f",
+    "name": "",
+    "ext": "",
+    "date": "2022-06-14T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://biocomputeobject.org/api/docs/",
+    "dir": "https://biocomputeobject.org/apidocs",
+    "name": "",
+    "ext": "",
+    "date": "2023-10-17T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolites/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolites",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-09-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96041,11 +96521,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-01-12/MW_C2M2_2022-01-12_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-01-12",
-    "name": "MW_C2M2_2022-01-12_datapackage",
-    "ext": "zip",
-    "date": "2022-01-12T05:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_study_table/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_study_table",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-04-06T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96060,11 +96540,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-04-15/MW_C2M2_2022-04-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-04-15",
-    "name": "MW_C2M2_2022-04-15_datapackage",
-    "ext": "zip",
-    "date": "2022-04-15T04:00:00.000Z",
+    "url": "https://brl-bcm.stoplight.io/docs/exrna-atlas-json-api/ZG9jOjQ1Mg-overview",
+    "dir": "https://brl-bcm.stoplight.io/docs/exrna-atlas-json-apiZG9jOjQ1Mg-overview",
+    "name": "",
+    "ext": "",
+    "date": "2019-02-20T05:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/MetENP_on_MetSet/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/MetENP_on_MetSet",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-09-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96079,11 +96567,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-09-14/KidsFirst_C2M2_2023-09-14_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2023-09-14",
-    "name": "KidsFirst_C2M2_2023-09-14_datapackage",
-    "ext": "zip",
-    "date": "2023-09-14T04:00:00.000Z",
+    "url": "https://reg.clinicalgenome.org/doc/",
+    "dir": "https://reg.clinicalgenome.org/doc",
+    "name": "",
+    "ext": "",
+    "date": "2019-08-29T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metabolite_summary/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metabolite_summary",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-09-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96098,11 +96594,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06/LINCS_XMT_2022-06-06_LINCS_L1000_Ligand_Perturbations_up.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06",
-    "name": "LINCS_XMT_2022-06-06_LINCS_L1000_Ligand_Perturbations_up",
-    "ext": "gmt",
-    "date": "2022-06-06T04:00:00.000Z",
+    "url": "https://ldh.clinicalgenome.org/ldh/ui/api-docs",
+    "dir": "https://ldh.clinicalgenome.org/ldh/uiapi-docs",
+    "name": "",
+    "ext": "",
+    "date": "2019-09-05T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metaboliteInfo/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metaboliteInfo",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-09-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96117,11 +96621,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06/LINCS_XMT_2022-06-06_LINCS_L1000_Chem_Pert_up.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06",
-    "name": "LINCS_XMT_2022-06-06_LINCS_L1000_Chem_Pert_up",
-    "ext": "gmt",
-    "date": "2022-06-06T04:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/variantinfo/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/variantinfo",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-10-19T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96136,11 +96640,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06/LINCS_XMT_2022-06-06_LINCS_L1000_Ligand_Perturbations_down.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06",
-    "name": "LINCS_XMT_2022-06-06_LINCS_L1000_Ligand_Perturbations_down",
-    "ext": "gmt",
-    "date": "2022-06-06T04:00:00.000Z",
+    "url": "https://smart-api.info/ui/342e4cec92030d74efd84b61650fb0ea",
+    "dir": "https://smart-api.info/ui342e4cec92030d74efd84b61650fb0ea",
+    "name": "",
+    "ext": "",
+    "date": "2022-06-10T04:00:00.000Z",
+    "files": []
+  },
+  {
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolite_table/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolite_table",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-09-15T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96155,11 +96667,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03/KidsFirst_C2M2_datapackage_2024-03-10.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Kids First/C2M2/2024-04-03",
-    "name": "KidsFirst_C2M2_datapackage_2024-03-10",
-    "ext": "zip",
-    "date": "2024-04-03T18:37:33.422Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/PPI_StringDB/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/PPI_StringDB",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-07-31T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96174,11 +96686,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-12-13/IDG_XMT_2022-12-13_IDG_Drug_Targets_2022.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-12-13",
-    "name": "IDG_XMT_2022-12-13_IDG_Drug_Targets_2022",
-    "ext": "gmt",
-    "date": "2022-12-13T05:00:00.000Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_studies/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_studies",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-07-31T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96193,11 +96705,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-07-03/submission_validated.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-07-03",
-    "name": "submission_validated",
-    "ext": "zip",
-    "date": "2024-07-03T22:51:12.437Z",
+    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxns/index.tsx",
+    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxns",
+    "name": "index",
+    "ext": "tsx",
+    "date": "2023-07-28T04:00:00.000Z",
     "files": [
       {
         "url": {
@@ -96212,11 +96724,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-06-24/SPARC_C2M2_2022-06-24_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-06-24",
-    "name": "SPARC_C2M2_2022-06-24_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-05-08/SPARC.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-05-08",
+    "name": "SPARC",
     "ext": "zip",
-    "date": "2022-06-24T04:00:00.000Z",
+    "date": "2024-05-08T19:47:03.429Z",
     "files": [
       {
         "url": {
@@ -96331,11 +96843,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-01-10/SPARC_C2M2_2023-01-10_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-01-10",
-    "name": "SPARC_C2M2_2023-01-10_datapackage",
-    "ext": "zip",
-    "date": "2023-01-10T05:00:00.000Z",
+    "url": "https://github.com/jiaweixu98/cm4ai-teaming-recommendation",
+    "dir": "https://github.com/jiaweixu98cm4ai-teaming-recommendation",
+    "name": "",
+    "ext": "",
+    "date": "2024-07-18T07:21:02.265Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2.pdf",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03",
+    "name": "Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2",
+    "ext": "pdf",
+    "date": "2024-08-03T13:29:32.620Z",
     "files": [
       {
         "url": {
@@ -96350,11 +96870,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03/GlyGen_C2M2_2023-12-14_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-04-03",
-    "name": "GlyGen_C2M2_2023-12-14_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/tkg 2.0.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01",
+    "name": "tkg 2.0",
     "ext": "zip",
-    "date": "2024-04-03T19:08:11.204Z",
+    "date": "2024-03-01T10:45:05.879Z",
     "files": [
       {
         "url": {
@@ -97373,11 +97893,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-06-10/MW_C2M2_2022-06-10_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-06-10",
-    "name": "MW_C2M2_2022-06-10_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03",
+    "name": "Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402",
     "ext": "zip",
-    "date": "2022-06-10T04:00:00.000Z",
+    "date": "2024-08-03T13:43:53.326Z",
     "files": [
       {
         "url": {
@@ -98382,11 +98902,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-09-09/MW_C2M2_2022-09-09_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-09-09",
-    "name": "MW_C2M2_2022-09-09_datapackage",
-    "ext": "zip",
-    "date": "2022-09-09T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402.pdf",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03",
+    "name": "Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402",
+    "ext": "pdf",
+    "date": "2024-08-03T13:44:39.385Z",
     "files": [
       {
         "url": {
@@ -98401,11 +98921,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-12-21/MW_C2M2_2022-12-21_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-12-21",
-    "name": "MW_C2M2_2022-12-21_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17/c2m2_2024SEP16_submit.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
+    "name": "c2m2_2024SEP16_submit",
     "ext": "zip",
-    "date": "2022-12-21T05:00:00.000Z",
+    "date": "2024-09-17T10:18:42.117Z",
     "files": [
       {
         "url": {
@@ -99816,11 +100336,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-03-09/MW_C2M2_2023-03-09_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-03-09",
-    "name": "MW_C2M2_2023-03-09_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-09-11/MW_submission_packet_20240906.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-09-11",
+    "name": "MW_submission_packet_20240906",
     "ext": "zip",
-    "date": "2023-03-09T05:00:00.000Z",
+    "date": "2024-09-11T21:30:21.042Z",
     "files": [
       {
         "url": {
@@ -100539,11 +101059,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/KG/2023-10-26/IDG_KG_2023-10-26_IDG.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/KG/2023-10-26",
-    "name": "IDG_KG_2023-10-26_IDG.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-09-05/240905_c2m2_4dn_sub .zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-09-05",
+    "name": "240905_c2m2_4dn_sub ",
+    "ext": "zip",
+    "date": "2024-09-05T22:19:36.084Z",
     "files": [
       {
         "url": {
@@ -101274,11 +101794,11 @@
     ]
   },
   {
-    "url": "https://ga4gh-rnaseq.github.io/schema/docs/index.html",
-    "dir": "https://ga4gh-rnaseq.github.io/schema/docs",
-    "name": "index",
-    "ext": "html",
-    "date": "2023-04-20T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-16/data.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-16",
+    "name": "data",
+    "ext": "zip",
+    "date": "2024-09-16T23:43:31.396Z",
     "files": [
       {
         "url": {
@@ -101833,11 +102353,11 @@
     ]
   },
   {
-    "url": "https://gtexportal.org/api/v2/redoc#tag/GTEx-Portal-API-Info",
-    "dir": "https://gtexportal.org/api/v2#tag/GTEx-Portal-API-Inforedoc",
-    "name": "",
-    "ext": "",
-    "date": "2023-10-01T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-17/data.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-17",
+    "name": "data",
+    "ext": "zip",
+    "date": "2024-09-17T18:21:33.561Z",
     "files": [
       {
         "url": {
@@ -103046,11 +103566,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/KG/2023-10-26/MW_KG_2023-10-26_MW.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/KG/2023-10-26",
-    "name": "MW_KG_2023-10-26_MW.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23/RBP_Unique_Loci.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
+    "name": "RBP_Unique_Loci",
+    "ext": "zip",
+    "date": "2024-09-23T20:02:20.328Z",
     "files": [
       {
         "url": {
@@ -104771,11 +105291,19 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-06-07/MW_C2M2_2023-06-07_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-06-07",
-    "name": "MW_C2M2_2023-06-07_datapackage",
+    "url": "https://fairshake.cloud",
+    "dir": "https://fairshake.cloud",
+    "name": "",
+    "ext": "",
+    "date": "2024-09-25T02:24:48.335Z",
+    "files": []
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-09-17/20240821_frictionless.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-09-17",
+    "name": "20240821_frictionless",
     "ext": "zip",
-    "date": "2023-06-07T04:00:00.000Z",
+    "date": "2024-09-18T01:07:19.620Z",
     "files": [
       {
         "url": {
@@ -105490,11 +106018,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-06-14/MoTrPAC_C2M2_2023-06-14_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-06-14",
-    "name": "MoTrPAC_C2M2_2023-06-14_datapackage",
+    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-06-05/240605_c2m2_4dn_submission.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-06-05",
+    "name": "240605_c2m2_4dn_submission",
     "ext": "zip",
-    "date": "2023-06-14T04:00:00.000Z",
+    "date": "2024-06-06T00:34:20.286Z",
     "files": [
       {
         "url": {
@@ -106209,11 +106737,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-07-14/MoTrPAC_C2M2_2023-07-14_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-07-14",
-    "name": "MoTrPAC_C2M2_2023-07-14_datapackage",
-    "ext": "zip",
-    "date": "2023-07-14T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-09-14/LINCS_L1000_Consensus_Median_Signatures.gmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-09-14",
+    "name": "LINCS_L1000_Consensus_Median_Signatures",
+    "ext": "gmt",
+    "date": "2024-09-14T07:01:01.053Z",
     "files": [
       {
         "url": {
@@ -106228,11 +106756,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2023-03-10/GTEx_XMT_2023-03-10_GTEx_Tissues_V8_2023.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2023-03-10",
-    "name": "GTEx_XMT_2023-03-10_GTEx_Tissues_V8_2023",
-    "ext": "gmt",
-    "date": "2023-03-10T05:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-24/RBP_unique_loci_in_biofluids.rbpmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-24",
+    "name": "RBP_unique_loci_in_biofluids",
+    "ext": "rbpmt",
+    "date": "2024-09-24T21:21:37.515Z",
     "files": [
       {
         "url": {
@@ -106247,11 +106775,11 @@
     ]
   },
   {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09/GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Down.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09",
-    "name": "GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Down",
-    "ext": "gmt",
-    "date": "2019-09-09T04:00:00.000Z",
+    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-25/RBP_unique_loci_in_biofluids.rbpmt",
+    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-25",
+    "name": "RBP_unique_loci_in_biofluids",
+    "ext": "rbpmt",
+    "date": "2024-09-25T18:39:20.448Z",
     "files": [
       {
         "url": {
@@ -106264,545 +106792,6 @@
         "date": "2024-09-25T14:39:21.000Z"
       }
     ]
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09/GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Up.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09",
-    "name": "GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Up",
-    "ext": "gmt",
-    "date": "2019-09-09T04:00:00.000Z",
-    "files": [
-      {
-        "url": {
-          "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/regulatoryElementInfo",
-          "name": "index",
-          "ext": "tsx"
-        },
-        "path": { "dir": "", "name": "", "ext": "" },
-        "size": 0,
-        "date": ""
-      }
-    ]
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2022-06-06/GTEx_XMT_2022-06-06_GTEx_Aging_Signatures_2021.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2022-06-06",
-    "name": "GTEx_XMT_2022-06-06_GTEx_Aging_Signatures_2021",
-    "ext": "gmt",
-    "date": "2022-06-06T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/XMT/2022-12-13/GlyGen_XMT_2022-12-13_GlyGen_Glycosylated_Proteins_2022.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/XMT/2022-12-13",
-    "name": "GlyGen_XMT_2022-12-13_GlyGen_Glycosylated_Proteins_2022",
-    "ext": "gmt",
-    "date": "2022-12-13T05:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-06-06/IDG_XMT_2022-06-06_ARCHS4_IDG_Coexp.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-06-06",
-    "name": "IDG_XMT_2022-06-06_ARCHS4_IDG_Coexp",
-    "ext": "gmt",
-    "date": "2022-06-06T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2020-03-10/IDG_XMT_2020-03-10_DrugCentral_Target.dmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/IDG/XMT/2020-03-10",
-    "name": "IDG_XMT_2020-03-10_DrugCentral_Target",
-    "ext": "dmt",
-    "date": "2020-03-10T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/XMT/2022-12-13/MW_XMT_2022-12-13_Metabolomics_Workbench_Metabolites_2022.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/XMT/2022-12-13",
-    "name": "MW_XMT_2022-12-13_Metabolomics_Workbench_Metabolites_2022",
-    "ext": "gmt",
-    "date": "2022-12-13T05:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/KOMP2/XMT/2022-12-13/KOMP2_XMT_2022-12-13_KOMP2_Mouse_Phenotypes_2022.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KOMP2/XMT/2022-12-13",
-    "name": "KOMP2_XMT_2022-12-13_KOMP2_Mouse_Phenotypes_2022",
-    "ext": "gmt",
-    "date": "2022-12-13T05:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/KG/2023-10-26/LINCS_KG_2023-10-26_LINCS.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/KG/2023-10-26",
-    "name": "LINCS_KG_2023-10-26_LINCS.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/ERCC/KG/2023-10-26/ERCC_KG_2023-10-26_ERCC.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ERCC/KG/2023-10-26",
-    "name": "ERCC_KG_2023-10-26_ERCC.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG/2023-10-26/KidsFirst_KG_2023-10-26_KF.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/KG/2023-10-26",
-    "name": "KidsFirst_KG_2023-10-26_KF.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG/2023-10-26/GlyGen_KG_2023-10-26_GLYGEN.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/KG/2023-10-26",
-    "name": "GlyGen_KG_2023-10-26_GLYGEN.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-09-08/MW_C2M2_2023-09-08_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-09-08",
-    "name": "MW_C2M2_2023-09-08_datapackage",
-    "ext": "zip",
-    "date": "2023-09-08T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-09-12/MoTrPAC_C2M2_2023-09-12_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2023-09-12",
-    "name": "MoTrPAC_C2M2_2023-09-12_datapackage",
-    "ext": "zip",
-    "date": "2023-09-12T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-12-13/LINCS_XMT_2022-12-13_LINCS_L1000_CRISPR_KO_Consensus_Sigs.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-12-13",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_CRISPR_KO_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2022-12-13T05:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-12-13/LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-12-13",
-    "name": "LINCS_XMT_2022-12-13_LINCS_L1000_Chem_Pert_Consensus_Sigs",
-    "ext": "gmt",
-    "date": "2022-12-13T05:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06/LINCS_XMT_2022-06-06_LINCS_L1000_Chem_Pert_down.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2022-06-06",
-    "name": "LINCS_XMT_2022-06-06_LINCS_L1000_Chem_Pert_down",
-    "ext": "gmt",
-    "date": "2022-06-06T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/GTEx/KG/2023-10-26/GTEx_KG_2023-10-26_GTEX.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GTEx/KG/2023-10-26",
-    "name": "GTEx_KG_2023-10-26_GTEX.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2021-08-20/SPARC_C2M2_2021-08-20_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2021-08-20",
-    "name": "SPARC_C2M2_2021-08-20_datapackage",
-    "ext": "zip",
-    "date": "2021-08-20T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-01-15/SPARC_C2M2_2022-01-15_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-01-15",
-    "name": "SPARC_C2M2_2022-01-15_datapackage",
-    "ext": "zip",
-    "date": "2022-01-15T05:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-04-16/SPARC_C2M2_2022-04-16_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-04-16",
-    "name": "SPARC_C2M2_2022-04-16_datapackage",
-    "ext": "zip",
-    "date": "2022-04-16T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-09-17/SPARC_C2M2_2022-09-17_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2022-09-17",
-    "name": "SPARC_C2M2_2022-09-17_datapackage",
-    "ext": "zip",
-    "date": "2022-09-17T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-06-16/SPARC_C2M2_2023-06-16_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-06-16",
-    "name": "SPARC_C2M2_2023-06-16_datapackage",
-    "ext": "zip",
-    "date": "2023-06-16T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-09-18/SPARC_C2M2_2023-09-18_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2023-09-18",
-    "name": "SPARC_C2M2_2023-09-18_datapackage",
-    "ext": "zip",
-    "date": "2023-09-18T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2021-06-10/SPARC_C2M2_2021-06-10_datapackage.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2021-06-10",
-    "name": "SPARC_C2M2_2021-06-10_datapackage",
-    "ext": "zip",
-    "date": "2021-06-10T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/KG/2023-10-26/4DN_KG_2023-10-26_4DN.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/KG/2023-10-26",
-    "name": "4DN_KG_2023-10-26_4DN.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG/2023-10-26/MoTrPAC_KG_2023-10-26_MOTORPAC.edges.csv",
-    "dir": "https://cfde-drc.s3.amazonaws.com/MoTrPAC/KG/2023-10-26",
-    "name": "MoTrPAC_KG_2023-10-26_MOTORPAC.edges",
-    "ext": "csv",
-    "date": "2023-10-26T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://smart-api.info/ui/b8399f43cd71264faca4d798c793aa30",
-    "dir": "https://smart-api.info/uib8399f43cd71264faca4d798c793aa30",
-    "name": "",
-    "ext": "",
-    "date": "2023-02-03T05:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/ConvertedGeneID/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/ConvertedGeneID",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-07-28T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/geneidconv/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/geneidconv",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-07-28T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxn_table/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxn_table",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-05-22T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary_table/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary_table",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-05-04T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_summary",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-04-06T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://smart-api.info/ui/e712b9eb07e637a00ae468f757ce2a1f",
-    "dir": "https://smart-api.info/uie712b9eb07e637a00ae468f757ce2a1f",
-    "name": "",
-    "ext": "",
-    "date": "2022-06-14T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://biocomputeobject.org/api/docs/",
-    "dir": "https://biocomputeobject.org/apidocs",
-    "name": "",
-    "ext": "",
-    "date": "2023-10-17T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolites/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolites",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-09-15T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_study_table/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_study_table",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-04-06T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://brl-bcm.stoplight.io/docs/exrna-atlas-json-api/ZG9jOjQ1Mg-overview",
-    "dir": "https://brl-bcm.stoplight.io/docs/exrna-atlas-json-apiZG9jOjQ1Mg-overview",
-    "name": "",
-    "ext": "",
-    "date": "2019-02-20T05:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/MetENP_on_MetSet/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/MetENP_on_MetSet",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-09-15T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://reg.clinicalgenome.org/doc/",
-    "dir": "https://reg.clinicalgenome.org/doc",
-    "name": "",
-    "ext": "",
-    "date": "2019-08-29T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metabolite_summary/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metabolite_summary",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-09-15T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://ldh.clinicalgenome.org/ldh/ui/api-docs",
-    "dir": "https://ldh.clinicalgenome.org/ldh/uiapi-docs",
-    "name": "",
-    "ext": "",
-    "date": "2019-09-05T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metaboliteInfo/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metaboliteInfo",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-09-15T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/variantinfo/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/variantinfo",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-10-19T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://smart-api.info/ui/342e4cec92030d74efd84b61650fb0ea",
-    "dir": "https://smart-api.info/ui342e4cec92030d74efd84b61650fb0ea",
-    "name": "",
-    "ext": "",
-    "date": "2022-06-10T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolite_table/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolite_table",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-09-15T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/PPI_StringDB/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/PPI_StringDB",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-07-31T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_studies/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_studies",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-07-31T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxns/index.tsx",
-    "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxns",
-    "name": "index",
-    "ext": "tsx",
-    "date": "2023-07-28T04:00:00.000Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-05-08/SPARC.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2024-05-08",
-    "name": "SPARC",
-    "ext": "zip",
-    "date": "2024-05-08T19:47:03.429Z",
-    "files": []
-  },
-  {
-    "url": "https://github.com/jiaweixu98/cm4ai-teaming-recommendation",
-    "dir": "https://github.com/jiaweixu98cm4ai-teaming-recommendation",
-    "name": "",
-    "ext": "",
-    "date": "2024-07-18T07:21:02.265Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2.pdf",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03",
-    "name": "Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2",
-    "ext": "pdf",
-    "date": "2024-08-03T13:29:32.620Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/tkg 2.0.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01",
-    "name": "tkg 2.0",
-    "ext": "zip",
-    "date": "2024-03-01T10:45:05.879Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03",
-    "name": "Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402",
-    "ext": "zip",
-    "date": "2024-08-03T13:43:53.326Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402.pdf",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03",
-    "name": "Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402",
-    "ext": "pdf",
-    "date": "2024-08-03T13:44:39.385Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17/c2m2_2024SEP16_submit.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17",
-    "name": "c2m2_2024SEP16_submit",
-    "ext": "zip",
-    "date": "2024-09-17T10:18:42.117Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-09-11/MW_submission_packet_20240906.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-09-11",
-    "name": "MW_submission_packet_20240906",
-    "ext": "zip",
-    "date": "2024-09-11T21:30:21.042Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-09-05/240905_c2m2_4dn_sub .zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-09-05",
-    "name": "240905_c2m2_4dn_sub ",
-    "ext": "zip",
-    "date": "2024-09-05T22:19:36.084Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-16/data.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-16",
-    "name": "data",
-    "ext": "zip",
-    "date": "2024-09-16T23:43:31.396Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-17/data.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-17",
-    "name": "data",
-    "ext": "zip",
-    "date": "2024-09-17T18:21:33.561Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23/RBP_Unique_Loci.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-23",
-    "name": "RBP_Unique_Loci",
-    "ext": "zip",
-    "date": "2024-09-23T20:02:20.328Z",
-    "files": []
-  },
-  {
-    "url": "https://fairshake.cloud",
-    "dir": "https://fairshake.cloud",
-    "name": "",
-    "ext": "",
-    "date": "2024-09-25T02:24:48.335Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-09-17/20240821_frictionless.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-09-17",
-    "name": "20240821_frictionless",
-    "ext": "zip",
-    "date": "2024-09-18T01:07:19.620Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-06-05/240605_c2m2_4dn_submission.zip",
-    "dir": "https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2024-06-05",
-    "name": "240605_c2m2_4dn_submission",
-    "ext": "zip",
-    "date": "2024-06-06T00:34:20.286Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-09-14/LINCS_L1000_Consensus_Median_Signatures.gmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-09-14",
-    "name": "LINCS_L1000_Consensus_Median_Signatures",
-    "ext": "gmt",
-    "date": "2024-09-14T07:01:01.053Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-24/RBP_unique_loci_in_biofluids.rbpmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-24",
-    "name": "RBP_unique_loci_in_biofluids",
-    "ext": "rbpmt",
-    "date": "2024-09-24T21:21:37.515Z",
-    "files": []
-  },
-  {
-    "url": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-25/RBP_unique_loci_in_biofluids.rbpmt",
-    "dir": "https://cfde-drc.s3.amazonaws.com/ExRNA/XMT/2024-09-25",
-    "name": "RBP_unique_loci_in_biofluids",
-    "ext": "rbpmt",
-    "date": "2024-09-25T18:39:20.448Z",
-    "files": []
   },
   {
     "url": "https://api.glygen.org/",
@@ -106818,7 +106807,18 @@
     "name": "index",
     "ext": "tsx",
     "date": "2023-10-19T04:00:00.000Z",
-    "files": []
+    "files": [
+      {
+        "url": {
+          "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/regulatoryElementInfo",
+          "name": "index",
+          "ext": "tsx"
+        },
+        "path": { "dir": "", "name": "", "ext": "" },
+        "size": 0,
+        "date": ""
+      }
+    ]
   },
   {
     "url": "https://smart-api.info/ui/c8e4c6c6633ead7ddc2ecf3dc6ac97b2",

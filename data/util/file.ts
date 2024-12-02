@@ -34,12 +34,6 @@ const getStats = async (path: string) => {
 
 export type Stats = Awaited<ReturnType<typeof getStats>>;
 
-/** make fresh folder */
-export const clearFolder = async (path: string) => {
-  await rm(path, { force: true, recursive: true });
-  await mkdir(path, { recursive: true });
-};
-
 /** download file from url (if filename not already present) */
 export const downloadFile = async (
   url: string,

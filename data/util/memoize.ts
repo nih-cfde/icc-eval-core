@@ -1,12 +1,14 @@
 import { createHash } from "crypto";
 import { existsSync, readFileSync, writeFileSync } from "fs";
+import { throttle } from "lodash-es";
+import { log } from "@/util/log";
 
-const { CACHE } = process.env;
+const { CACHE, RAW_PATH } = process.env;
 
 /**
- * make simple persistent disk cache with function memoization and per-func ttl.
- * explored third party libraries: cacache, memoize, memoize-fs, and much more.
- * none met all requirements.
+ * make simple cache mechanism with: persistent/disk cache, func memoization,
+ * per-func ttl, single cache file. explored third party libraries: cacache,
+ * memoize, memoize-fs, and much more. none met all requirements.
  */
 export const memoize =
   <Args extends unknown[], Return>(
@@ -34,6 +36,7 @@ export const memoize =
 
     /** if cached value valid */
     if (CACHE && cached && !expired) {
+      log("Using cache", "secondary");
       /** use cached value */
       result = cached.data as Return;
     } else {
@@ -41,10 +44,10 @@ export const memoize =
       result = await func(...args);
       /** set cache */
       cache[hash] = { timestamp: now, data: result };
+      /** update cache */
+      saveCache();
     }
 
-    /** update cache */
-    saveCache();
     return result;
   };
 
@@ -54,7 +57,7 @@ type Options = {
 };
 
 /** on-disk cache */
-const cachePath = "./raw/cache.json";
+const cachePath = RAW_PATH + "/cache.json";
 
 /** global in-memory cache */
 let cache: Cache = {};
@@ -73,4 +76,7 @@ if (existsSync(cachePath))
   cache = JSON.parse(readFileSync(cachePath, "utf-8")) as Cache;
 
 /** save memory cache to disk cache */
-const saveCache = () => writeFileSync(cachePath, JSON.stringify(cache));
+const saveCache = throttle(
+  () => writeFileSync(cachePath, JSON.stringify(cache)),
+  1000,
+);
