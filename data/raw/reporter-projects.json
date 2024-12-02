@@ -1,6 +1,6 @@
 {
   "meta": {
-    "search_id": "Qh9RyhsXgEiDQ4bk1RmAKA",
+    "search_id": "zuce-UWyXUKgbtix2c_Osg",
     "total": 117,
     "offset": 0,
     "limit": 500,
@@ -8,7 +8,7 @@
     "sort_order": "ASC",
     "sorted_by_relevance": false,
     "properties": {
-      "URL": "https:/reporter.nih.gov/search/Qh9RyhsXgEiDQ4bk1RmAKA/projects"
+      "URL": "https:/reporter.nih.gov/search/zuce-UWyXUKgbtix2c_Osg/projects"
     }
   },
   "results": [
@@ -990,6 +990,147 @@
       "date_added": "2022-09-24T04:09:44Z"
     },
     {
+      "appl_id": 10217839,
+      "subproject_id": null,
+      "fiscal_year": 2020,
+      "project_num": "1OT2OD030545-01",
+      "project_serial_num": "OD030545",
+      "organization": {
+        "org_name": "CARNEGIE-MELLON UNIVERSITY",
+        "city": null,
+        "country": null,
+        "org_city": "PITTSBURGH",
+        "org_country": "UNITED STATES",
+        "org_state": "PA",
+        "org_state_name": null,
+        "dept_type": "PHYSICS",
+        "fips_country_code": null,
+        "org_duns": [
+          "052184116"
+        ],
+        "org_ueis": [
+          "G4P3TF8PFH73",
+          " KZV2XNZZN3A8",
+          " MJ5BDF8KMQ43",
+          " U3NKNFLNQ613",
+          " U9C6D6YR7P69"
+        ],
+        "primary_duns": "052184116",
+        "primary_uei": "U3NKNFLNQ613",
+        "org_fips": "US",
+        "org_ipf_code": "247601",
+        "org_zipcode": "152133815",
+        "external_org_id": 247601
+      },
+      "award_type": "1",
+      "activity_code": "OT2",
+      "award_amount": 500000,
+      "is_active": true,
+      "project_num_split": {
+        "appl_type_code": "1",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030545",
+        "support_year": "01",
+        "full_support_year": "01",
+        "suffix_code": ""
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 6869311,
+          "first_name": "KATY",
+          "middle_name": "",
+          "last_name": "BORNER",
+          "is_contact_pi": false,
+          "full_name": "KATY  BORNER",
+          "title": ""
+        },
+        {
+          "profile_id": 12023650,
+          "first_name": "Philip",
+          "middle_name": "D.",
+          "last_name": "Blood",
+          "is_contact_pi": true,
+          "full_name": "Philip D. Blood",
+          "title": "SCIENTIFIC DIRECTOR"
+        },
+        {
+          "profile_id": 1905297,
+          "first_name": "JONATHAN",
+          "middle_name": "C.",
+          "last_name": "SILVERSTEIN",
+          "is_contact_pi": false,
+          "full_name": "JONATHAN C. SILVERSTEIN",
+          "title": ""
+        }
+      ],
+      "contact_pi_name": "BLOOD, PHILIP D.",
+      "program_officers": [
+        {
+          "first_name": "Christopher",
+          "middle_name": "",
+          "last_name": "Kinsinger",
+          "full_name": "Christopher  Kinsinger"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2020,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 500000
+        }
+      ],
+      "cong_dist": "PA-12",
+      "spending_categories": [
+        4531,
+        329
+      ],
+      "project_start_date": "2020-09-25T12:09:00Z",
+      "project_end_date": "2025-09-24T12:09:00Z",
+      "organization_type": {
+        "name": "SCHOOLS OF ARTS AND SCIENCES",
+        "code": null,
+        "is_other": false
+      },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2020-09-25T12:09:00Z",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030545",
+      "terms": "<Periodicity><Cyclicity><Rhythmicity><Pilot Projects><pilot study><Research><Tissues><Body Tissues><Dataset><Data Set><base><Peripheral><Medical><Funding><Collaborations><human data><Data><Transmission><transmission process><Process><meta data><Metadata><Data Coordination Center><Data Coordinating Center><interoperability><data access><FAIR data><Findable, Accessible, Interoperable, and Reusable><FAIR principles><HuBMAP><Human BioMolecular Atlas Program><data interoperability><data sharing ecosystem><data ecosystem>",
+      "pref_terms": "Collaborations;Data;Data Coordinating Center;Data Set;FAIR principles;Funding;Human BioMolecular Atlas Program;Medical;Metadata;Periodicity;Peripheral;Pilot Projects;Process;Research;Tissues;base;data access;data ecosystem;data interoperability;human data;interoperability;transmission process",
+      "abstract_text": "The Human BioMolecular Atlas Program (HuBMAP) is developing a comprehensive baseline for normal\n(healthy) tissue. This baseline will have great value, but only through comparison of complementary\ndatasets against it. We propose accelerating research to be based on the interoperation of HuBMAP data\nwith complementary datasets through a two-year Common Fund Data Ecosystem (CFDE) project. In this\nproject, HuBMAP will: 1) partner closely with the CFDE Coordinating Center (CFDE-CC) on CF-wide data\nactivities, and 2) engage in pilot projects with two other Data Coordination Centers (DCCs) – Stimulating\nPeripheral Activity to Relieve Conditions (SPARC) and Gabriella Miller Kids First – to demonstrate the value\nof establishing interoperability between appropriately chosen datasets.",
+      "project_title": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
+      "phr_text": null,
+      "spending_categories_desc": "Data Science; Networking and Information Technology R&D (NITRD)",
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2020-09-25T12:09:00Z",
+      "budget_end": "2025-09-24T12:09:00Z",
+      "cfda_code": "310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 444037,
+      "indirect_cost_amt": 55963,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10217839",
+      "date_added": "2020-09-26T07:09:48Z"
+    },
+    {
       "appl_id": 10683509,
       "subproject_id": null,
       "fiscal_year": 2022,
@@ -1270,147 +1411,6 @@
       "indirect_cost_amt": 0,
       "project_detail_url": "https://reporter.nih.gov/project-details/10707603",
       "date_added": "2022-10-01T04:10:19Z"
-    },
-    {
-      "appl_id": 10217839,
-      "subproject_id": null,
-      "fiscal_year": 2020,
-      "project_num": "1OT2OD030545-01",
-      "project_serial_num": "OD030545",
-      "organization": {
-        "org_name": "CARNEGIE-MELLON UNIVERSITY",
-        "city": null,
-        "country": null,
-        "org_city": "PITTSBURGH",
-        "org_country": "UNITED STATES",
-        "org_state": "PA",
-        "org_state_name": null,
-        "dept_type": "PHYSICS",
-        "fips_country_code": null,
-        "org_duns": [
-          "052184116"
-        ],
-        "org_ueis": [
-          "G4P3TF8PFH73",
-          " KZV2XNZZN3A8",
-          " MJ5BDF8KMQ43",
-          " U3NKNFLNQ613",
-          " U9C6D6YR7P69"
-        ],
-        "primary_duns": "052184116",
-        "primary_uei": "U3NKNFLNQ613",
-        "org_fips": "US",
-        "org_ipf_code": "247601",
-        "org_zipcode": "152133815",
-        "external_org_id": 247601
-      },
-      "award_type": "1",
-      "activity_code": "OT2",
-      "award_amount": 500000,
-      "is_active": true,
-      "project_num_split": {
-        "appl_type_code": "1",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030545",
-        "support_year": "01",
-        "full_support_year": "01",
-        "suffix_code": ""
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 6869311,
-          "first_name": "KATY",
-          "middle_name": "",
-          "last_name": "BORNER",
-          "is_contact_pi": false,
-          "full_name": "KATY  BORNER",
-          "title": ""
-        },
-        {
-          "profile_id": 12023650,
-          "first_name": "Philip",
-          "middle_name": "D.",
-          "last_name": "Blood",
-          "is_contact_pi": true,
-          "full_name": "Philip D. Blood",
-          "title": "SCIENTIFIC DIRECTOR"
-        },
-        {
-          "profile_id": 1905297,
-          "first_name": "JONATHAN",
-          "middle_name": "C.",
-          "last_name": "SILVERSTEIN",
-          "is_contact_pi": false,
-          "full_name": "JONATHAN C. SILVERSTEIN",
-          "title": ""
-        }
-      ],
-      "contact_pi_name": "BLOOD, PHILIP D.",
-      "program_officers": [
-        {
-          "first_name": "Christopher",
-          "middle_name": "",
-          "last_name": "Kinsinger",
-          "full_name": "Christopher  Kinsinger"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2020,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 500000
-        }
-      ],
-      "cong_dist": "PA-12",
-      "spending_categories": [
-        4531,
-        329
-      ],
-      "project_start_date": "2020-09-25T12:09:00Z",
-      "project_end_date": "2025-09-24T12:09:00Z",
-      "organization_type": {
-        "name": "SCHOOLS OF ARTS AND SCIENCES",
-        "code": null,
-        "is_other": false
-      },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2020-09-25T12:09:00Z",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030545",
-      "terms": "<Periodicity><Cyclicity><Rhythmicity><Pilot Projects><pilot study><Research><Tissues><Body Tissues><Dataset><Data Set><base><Peripheral><Medical><Funding><Collaborations><human data><Data><Transmission><transmission process><Process><meta data><Metadata><Data Coordination Center><Data Coordinating Center><interoperability><data access><FAIR data><Findable, Accessible, Interoperable, and Reusable><FAIR principles><HuBMAP><Human BioMolecular Atlas Program><data interoperability><data sharing ecosystem><data ecosystem>",
-      "pref_terms": "Collaborations;Data;Data Coordinating Center;Data Set;FAIR principles;Funding;Human BioMolecular Atlas Program;Medical;Metadata;Periodicity;Peripheral;Pilot Projects;Process;Research;Tissues;base;data access;data ecosystem;data interoperability;human data;interoperability;transmission process",
-      "abstract_text": "The Human BioMolecular Atlas Program (HuBMAP) is developing a comprehensive baseline for normal\n(healthy) tissue. This baseline will have great value, but only through comparison of complementary\ndatasets against it. We propose accelerating research to be based on the interoperation of HuBMAP data\nwith complementary datasets through a two-year Common Fund Data Ecosystem (CFDE) project. In this\nproject, HuBMAP will: 1) partner closely with the CFDE Coordinating Center (CFDE-CC) on CF-wide data\nactivities, and 2) engage in pilot projects with two other Data Coordination Centers (DCCs) – Stimulating\nPeripheral Activity to Relieve Conditions (SPARC) and Gabriella Miller Kids First – to demonstrate the value\nof establishing interoperability between appropriately chosen datasets.",
-      "project_title": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
-      "phr_text": null,
-      "spending_categories_desc": "Data Science; Networking and Information Technology R&D (NITRD)",
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2020-09-25T12:09:00Z",
-      "budget_end": "2025-09-24T12:09:00Z",
-      "cfda_code": "310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 444037,
-      "indirect_cost_amt": 55963,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10217839",
-      "date_added": "2020-09-26T07:09:48Z"
     },
     {
       "appl_id": 10444351,
@@ -5435,131 +5435,6 @@
       "date_added": "2024-09-28T04:09:47Z"
     },
     {
-      "appl_id": 10468527,
-      "subproject_id": null,
-      "fiscal_year": 2021,
-      "project_num": "3OT2OD030546-01S1",
-      "project_serial_num": "OD030546",
-      "organization": {
-        "org_name": "UNIVERSITY OF NEW MEXICO HEALTH SCIS CTR",
-        "city": null,
-        "country": null,
-        "org_city": "ALBUQUERQUE",
-        "org_country": "UNITED STATES",
-        "org_state": "NM",
-        "org_state_name": null,
-        "dept_type": "INTERNAL MEDICINE/MEDICINE",
-        "fips_country_code": null,
-        "org_duns": [
-          "829868723"
-        ],
-        "org_ueis": [
-          "G389MFAYJNG9"
-        ],
-        "primary_duns": "829868723",
-        "primary_uei": "G389MFAYJNG9",
-        "org_fips": "US",
-        "org_ipf_code": "10021612",
-        "org_zipcode": "871310001",
-        "external_org_id": 10021612
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 745261,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030546",
-        "support_year": "01",
-        "full_support_year": "01S1",
-        "suffix_code": "S1"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 7825052,
-          "first_name": "Christophe",
-          "middle_name": "G.",
-          "last_name": "Lambert",
-          "is_contact_pi": true,
-          "full_name": "Christophe G. Lambert",
-          "title": "PROFESSOR"
-        },
-        {
-          "profile_id": 7869507,
-          "first_name": "Avi",
-          "middle_name": "",
-          "last_name": "Ma'ayan",
-          "is_contact_pi": false,
-          "full_name": "Avi  Ma'ayan",
-          "title": ""
-        }
-      ],
-      "contact_pi_name": "LAMBERT, CHRISTOPHE G.",
-      "program_officers": [
-        {
-          "first_name": "KRISTIN",
-          "middle_name": "KATHLEEN",
-          "last_name": "Kano",
-          "full_name": "KRISTIN KATHLEEN Kano"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2021,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 745261
-        }
-      ],
-      "cong_dist": "NM-01",
-      "spending_categories": null,
-      "project_start_date": "2020-09-23T12:09:00Z",
-      "project_end_date": "2023-09-22T12:09:00Z",
-      "organization_type": {
-        "name": "SCHOOLS OF MEDICINE",
-        "code": null,
-        "is_other": false
-      },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2021-09-17T12:09:00Z",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030546",
-      "terms": null,
-      "pref_terms": null,
-      "abstract_text": "The Illuminating the Druggable Genome (IDG) consortium has two major goals: First, consolidate disparate\nprotein- and disease-centric data types from multiple sources, integrate and harmonize them, then make them\nreadily available to the public; Second, adapt and scale existing technologies to unveil the function of selected\nunderstudied members of the G-protein coupled receptor, ion channel and protein kinase families. Within the\nIDG, the Knowledge Management Center (IDG-KMC) integrates data from a wide range of chemical, biological\nand clinical resources, and has developed platforms that can be used to navigate understudied proteins (the\n“dark genome”), and their potential contribution to specific pathologies. Specifically, the IDG KMC is creating\nautomated workflows to capture relevant public data for the entire proteome including manual annotations for\nthe IDG list, covering five major areas: genotype, phenotype, expression, structure & function, and interactions\n& pathways. The IDG KMC designs, develops, implements, and updates the Target Central Repository Database\n(TCRD), a protein knowledgebase. The IDG KMC also expands, improves, and maintains Pharos, the TCRD\nportal, with support for automated data summaries, and active community feedback. Both TCRD and Pharos\nalready integrate data from three Common Fund projects: GTEx, IMPC/KOMP and LINCS. The IDG KMC\nconsolidates all the data generated by the Data and Resource Generation Centers (DRGCs), improving these\ndata findability, accessibility, interoperability, reusability (FAIRness) and serving these data on the Pharos portal.\nThe IDG program interface with the CFDE will enable hypothesis generation about novel drug targets for complex\ndiseases. Many other Common Fund (CF) programs produce data about genetic variants and differentially\nexpressed genes and proteins in the context of many complex human diseases. These genes in many cases do\nnot have much information about them. For example, the CF program Undiagnosed Disease Network (UDN)\nidentifies mutations in genes associated with undiagnosed diseases. The IDG-KMC has information from\nempirical evidence and from computational predictions about the function of these genes, which are commonly\nunder-studied. Hence, data from the IDG-KMC can enrich the CFDE users who examine datasets that list genes\nand proteins. Several IDG resources provide gene landing pages that provide unique information about genes.\nThese landing pages can be improved regarding FAIRness and can become a resource for the CFDE. In\naddition, data collected by the DRGCs and by the R03 IDG awardees can enrich the content of the CFDE portal. In\nparticular, results from the R03 projects (Fig. 1) are currently not evaluated or stored in one place and are at risk\nof becoming lost. The CFDE engagement will ensure that data from this investment remains available long term.",
-      "project_title": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
-      "phr_text": "",
-      "spending_categories_desc": null,
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2021-09-23T12:09:00Z",
-      "budget_end": "2022-09-22T12:09:00Z",
-      "cfda_code": "310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 745261,
-      "indirect_cost_amt": 0,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10468527",
-      "date_added": "2021-09-25T04:09:53Z"
-    },
-    {
       "appl_id": 10217890,
       "subproject_id": null,
       "fiscal_year": 2020,
@@ -5686,6 +5561,131 @@
       "indirect_cost_amt": 81885,
       "project_detail_url": "https://reporter.nih.gov/project-details/10217890",
       "date_added": "2020-09-26T07:09:48Z"
+    },
+    {
+      "appl_id": 10468527,
+      "subproject_id": null,
+      "fiscal_year": 2021,
+      "project_num": "3OT2OD030546-01S1",
+      "project_serial_num": "OD030546",
+      "organization": {
+        "org_name": "UNIVERSITY OF NEW MEXICO HEALTH SCIS CTR",
+        "city": null,
+        "country": null,
+        "org_city": "ALBUQUERQUE",
+        "org_country": "UNITED STATES",
+        "org_state": "NM",
+        "org_state_name": null,
+        "dept_type": "INTERNAL MEDICINE/MEDICINE",
+        "fips_country_code": null,
+        "org_duns": [
+          "829868723"
+        ],
+        "org_ueis": [
+          "G389MFAYJNG9"
+        ],
+        "primary_duns": "829868723",
+        "primary_uei": "G389MFAYJNG9",
+        "org_fips": "US",
+        "org_ipf_code": "10021612",
+        "org_zipcode": "871310001",
+        "external_org_id": 10021612
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 745261,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030546",
+        "support_year": "01",
+        "full_support_year": "01S1",
+        "suffix_code": "S1"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 7825052,
+          "first_name": "Christophe",
+          "middle_name": "G.",
+          "last_name": "Lambert",
+          "is_contact_pi": true,
+          "full_name": "Christophe G. Lambert",
+          "title": "PROFESSOR"
+        },
+        {
+          "profile_id": 7869507,
+          "first_name": "Avi",
+          "middle_name": "",
+          "last_name": "Ma'ayan",
+          "is_contact_pi": false,
+          "full_name": "Avi  Ma'ayan",
+          "title": ""
+        }
+      ],
+      "contact_pi_name": "LAMBERT, CHRISTOPHE G.",
+      "program_officers": [
+        {
+          "first_name": "KRISTIN",
+          "middle_name": "KATHLEEN",
+          "last_name": "Kano",
+          "full_name": "KRISTIN KATHLEEN Kano"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2021,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 745261
+        }
+      ],
+      "cong_dist": "NM-01",
+      "spending_categories": null,
+      "project_start_date": "2020-09-23T12:09:00Z",
+      "project_end_date": "2023-09-22T12:09:00Z",
+      "organization_type": {
+        "name": "SCHOOLS OF MEDICINE",
+        "code": null,
+        "is_other": false
+      },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2021-09-17T12:09:00Z",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030546",
+      "terms": null,
+      "pref_terms": null,
+      "abstract_text": "The Illuminating the Druggable Genome (IDG) consortium has two major goals: First, consolidate disparate\nprotein- and disease-centric data types from multiple sources, integrate and harmonize them, then make them\nreadily available to the public; Second, adapt and scale existing technologies to unveil the function of selected\nunderstudied members of the G-protein coupled receptor, ion channel and protein kinase families. Within the\nIDG, the Knowledge Management Center (IDG-KMC) integrates data from a wide range of chemical, biological\nand clinical resources, and has developed platforms that can be used to navigate understudied proteins (the\n“dark genome”), and their potential contribution to specific pathologies. Specifically, the IDG KMC is creating\nautomated workflows to capture relevant public data for the entire proteome including manual annotations for\nthe IDG list, covering five major areas: genotype, phenotype, expression, structure & function, and interactions\n& pathways. The IDG KMC designs, develops, implements, and updates the Target Central Repository Database\n(TCRD), a protein knowledgebase. The IDG KMC also expands, improves, and maintains Pharos, the TCRD\nportal, with support for automated data summaries, and active community feedback. Both TCRD and Pharos\nalready integrate data from three Common Fund projects: GTEx, IMPC/KOMP and LINCS. The IDG KMC\nconsolidates all the data generated by the Data and Resource Generation Centers (DRGCs), improving these\ndata findability, accessibility, interoperability, reusability (FAIRness) and serving these data on the Pharos portal.\nThe IDG program interface with the CFDE will enable hypothesis generation about novel drug targets for complex\ndiseases. Many other Common Fund (CF) programs produce data about genetic variants and differentially\nexpressed genes and proteins in the context of many complex human diseases. These genes in many cases do\nnot have much information about them. For example, the CF program Undiagnosed Disease Network (UDN)\nidentifies mutations in genes associated with undiagnosed diseases. The IDG-KMC has information from\nempirical evidence and from computational predictions about the function of these genes, which are commonly\nunder-studied. Hence, data from the IDG-KMC can enrich the CFDE users who examine datasets that list genes\nand proteins. Several IDG resources provide gene landing pages that provide unique information about genes.\nThese landing pages can be improved regarding FAIRness and can become a resource for the CFDE. In\naddition, data collected by the DRGCs and by the R03 IDG awardees can enrich the content of the CFDE portal. In\nparticular, results from the R03 projects (Fig. 1) are currently not evaluated or stored in one place and are at risk\nof becoming lost. The CFDE engagement will ensure that data from this investment remains available long term.",
+      "project_title": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
+      "phr_text": "",
+      "spending_categories_desc": null,
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2021-09-23T12:09:00Z",
+      "budget_end": "2022-09-22T12:09:00Z",
+      "cfda_code": "310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 745261,
+      "indirect_cost_amt": 0,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10468527",
+      "date_added": "2021-09-25T04:09:53Z"
     },
     {
       "appl_id": 10907966,
@@ -7560,6 +7560,122 @@
       "date_added": "2024-09-28T04:09:47Z"
     },
     {
+      "appl_id": 10444350,
+      "subproject_id": null,
+      "fiscal_year": 2021,
+      "project_num": "3OT2OD030160-01S1",
+      "project_serial_num": "OD030160",
+      "organization": {
+        "org_name": "ICAHN SCHOOL OF MEDICINE AT MOUNT SINAI",
+        "city": null,
+        "country": null,
+        "org_city": "NEW YORK",
+        "org_country": "UNITED STATES",
+        "org_state": "NY",
+        "org_state_name": null,
+        "dept_type": "PHARMACOLOGY",
+        "fips_country_code": null,
+        "org_duns": [
+          "078861598"
+        ],
+        "org_ueis": [
+          "C8H9CNG1VBD9"
+        ],
+        "primary_duns": "078861598",
+        "primary_uei": "C8H9CNG1VBD9",
+        "org_fips": "US",
+        "org_ipf_code": "3839801",
+        "org_zipcode": "100296574",
+        "external_org_id": 3839801
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 210000,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030160",
+        "support_year": "01",
+        "full_support_year": "01S1",
+        "suffix_code": "S1"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 7869507,
+          "first_name": "Avi",
+          "middle_name": "",
+          "last_name": "Ma'ayan",
+          "is_contact_pi": true,
+          "full_name": "Avi  Ma'ayan",
+          "title": "PROFESSOR"
+        }
+      ],
+      "contact_pi_name": "MA'AYAN, AVI ",
+      "program_officers": [
+        {
+          "first_name": "SAHANA",
+          "middle_name": "NALINI",
+          "last_name": "Kukke",
+          "full_name": "SAHANA NALINI Kukke"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2021,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 210000
+        }
+      ],
+      "cong_dist": "NY-13",
+      "spending_categories": null,
+      "project_start_date": "2020-09-23T12:09:00Z",
+      "project_end_date": "2022-09-22T12:09:00Z",
+      "organization_type": {
+        "name": "SCHOOLS OF MEDICINE",
+        "code": null,
+        "is_other": false
+      },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2021-07-20T12:07:00Z",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030160",
+      "terms": null,
+      "pref_terms": null,
+      "abstract_text": "Driving scientific questions that will be addressed by engaging with the CFDE and why it has not\nyet been feasible\nThe Library of Integrated Network-based Cellular Signatures (LINCS) program (1) collected massive data\nfrom human cells perturbed by thousands of single small molecules as well as knockouts, knockdowns,\nand over-expression of single genes. The diverse collections of perturbed human cells (n>50) were profiled\nbefore and after the perturbations with an array of omics assays that include transcriptomics, proteomics,\nepigenomics, cell viability, and imaging at different time points and where the small molecules were applied\nin different concentrations. Altogether, over 2 million signatures are expected to be produced and provided\nas a resource for the community for query and reuse at the time when the LINCS program officially ends\n(6/2020). Such a resource can be used for limitless applications, for example, to study molecular\nmechanisms of disease, repurpose existing drugs, predict side effects and indications for pre-clinical small\nmolecules, associate small molecules with the targets that they likely affect directly and indirectly,\nreconstruct cell signaling and gene regulatory networks, understand the global space of all possible cellular\nstates in response to all possible perturbations of all human cells, and many more applications and use\ncases. This utilization of LINCS resources is already happening but can be significantly enhanced via\ncontinued efforts led by the LINCS Data Coordination and Integration Center (DCIC) through interactions\nwith the CFDE and other CF DCCs in the next 3 years.\nSo far, the ~400 publications produced by the LINCS consortium have been cited by ~6,000 other papers,\ndemonstrating the high impact of the program on the research community. In particular, the computational\nresources developed by the LINCS DCIC have been very successful. These tools and databases were\nalready visited by >1 million unique users, with currently ~30,000 unique users per month (based on Google\nAnalytics). These strong usage statistics demonstrate the value of LINCS resources and their potential for\nmaking long-lasting impact on drug discovery, and the biomedical research community in general. The\nLINCS DCIC developed web-based resources to enable the federated access, intuitive querying, and\nintegrative analysis and visualization of the LINCS data combined with other relevant data. To achieve this\nthe LINCS DCIC also processed many additional external data types from other relevant resources to be\nintegrated with LINCS data including data from other Common Fund programs such as GTEx, Epigenomics\nRoadmap, and IMPC. However, such data integration efforts were achieved with little consideration of\ncommunity standards to ensure their long term findability, accessibility, interoperability and reusability\n(FAIR) (2). Our involvement with the NIH Data Commons Pilot Project Consortium (DCPPC) and the\nCommon Fund Data Ecosystem (CFDE) taught us many lessons on how to better achieve data\nharmonization via the adoption of community standards to achieve long term sustainability of LINCS\nresources. Hence, by interacting with the CFDE, adhering to the requirements that the CFDE will establish,\nwe will be able to reprocess the LINCS data, and the other data we use to integrate with LINCS, with\ntransformations that will enable improved FAIRness, further enabling more complex use cases.\nIn addition, by interacting directly with other CF DCCs we will enable the direct integration of LINCS data\nwith other CF generated resources. Our plan is to develop an interactive web-based data visualization\ncomponent that will enable users to project RNA-seq samples (patients, single cells, or signatures) into a\nlower dimensional space based on their transcriptomics data profiling. Such visualization will be linked to\nthe metadata describing each sample, as well as automatically identified clusters, enrichment analysis\nresults for each sample or cluster, and predictions of drugs and small molecules from the LINCS resource.\nThis interactive web-based data visualization component will enable, for example, assisting KidsFirst portal\nusers, including physicians, to prescribe the most appropriate therapeutics to the right subtype of patients,\nas well as trace patients over time to monitor their response to treatment enable decision support for\nchanging treatment course early, if necessary.\nFinally, by moving all LINCS resources into a cloud environment through STRIDES, we will ensure that\nLINCS resources are archived for the long term ensuring maximal reuse and enabling applications that are\ncurrently not even imagined or possible.",
+      "project_title": "The LINCS DCIC Engagement Plan with the CFDE",
+      "phr_text": "",
+      "spending_categories_desc": null,
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2021-07-07T12:07:00Z",
+      "budget_end": "2022-06-30T12:06:00Z",
+      "cfda_code": "310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 210000,
+      "indirect_cost_amt": null,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10444350",
+      "date_added": "2021-07-24T04:07:32Z"
+    },
+    {
       "appl_id": 10682935,
       "subproject_id": null,
       "fiscal_year": 2022,
@@ -7678,122 +7794,6 @@
       "indirect_cost_amt": 0,
       "project_detail_url": "https://reporter.nih.gov/project-details/10682935",
       "date_added": "2022-09-24T04:09:44Z"
-    },
-    {
-      "appl_id": 10444350,
-      "subproject_id": null,
-      "fiscal_year": 2021,
-      "project_num": "3OT2OD030160-01S1",
-      "project_serial_num": "OD030160",
-      "organization": {
-        "org_name": "ICAHN SCHOOL OF MEDICINE AT MOUNT SINAI",
-        "city": null,
-        "country": null,
-        "org_city": "NEW YORK",
-        "org_country": "UNITED STATES",
-        "org_state": "NY",
-        "org_state_name": null,
-        "dept_type": "PHARMACOLOGY",
-        "fips_country_code": null,
-        "org_duns": [
-          "078861598"
-        ],
-        "org_ueis": [
-          "C8H9CNG1VBD9"
-        ],
-        "primary_duns": "078861598",
-        "primary_uei": "C8H9CNG1VBD9",
-        "org_fips": "US",
-        "org_ipf_code": "3839801",
-        "org_zipcode": "100296574",
-        "external_org_id": 3839801
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 210000,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030160",
-        "support_year": "01",
-        "full_support_year": "01S1",
-        "suffix_code": "S1"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 7869507,
-          "first_name": "Avi",
-          "middle_name": "",
-          "last_name": "Ma'ayan",
-          "is_contact_pi": true,
-          "full_name": "Avi  Ma'ayan",
-          "title": "PROFESSOR"
-        }
-      ],
-      "contact_pi_name": "MA'AYAN, AVI ",
-      "program_officers": [
-        {
-          "first_name": "SAHANA",
-          "middle_name": "NALINI",
-          "last_name": "Kukke",
-          "full_name": "SAHANA NALINI Kukke"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2021,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 210000
-        }
-      ],
-      "cong_dist": "NY-13",
-      "spending_categories": null,
-      "project_start_date": "2020-09-23T12:09:00Z",
-      "project_end_date": "2022-09-22T12:09:00Z",
-      "organization_type": {
-        "name": "SCHOOLS OF MEDICINE",
-        "code": null,
-        "is_other": false
-      },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2021-07-20T12:07:00Z",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030160",
-      "terms": null,
-      "pref_terms": null,
-      "abstract_text": "Driving scientific questions that will be addressed by engaging with the CFDE and why it has not\nyet been feasible\nThe Library of Integrated Network-based Cellular Signatures (LINCS) program (1) collected massive data\nfrom human cells perturbed by thousands of single small molecules as well as knockouts, knockdowns,\nand over-expression of single genes. The diverse collections of perturbed human cells (n>50) were profiled\nbefore and after the perturbations with an array of omics assays that include transcriptomics, proteomics,\nepigenomics, cell viability, and imaging at different time points and where the small molecules were applied\nin different concentrations. Altogether, over 2 million signatures are expected to be produced and provided\nas a resource for the community for query and reuse at the time when the LINCS program officially ends\n(6/2020). Such a resource can be used for limitless applications, for example, to study molecular\nmechanisms of disease, repurpose existing drugs, predict side effects and indications for pre-clinical small\nmolecules, associate small molecules with the targets that they likely affect directly and indirectly,\nreconstruct cell signaling and gene regulatory networks, understand the global space of all possible cellular\nstates in response to all possible perturbations of all human cells, and many more applications and use\ncases. This utilization of LINCS resources is already happening but can be significantly enhanced via\ncontinued efforts led by the LINCS Data Coordination and Integration Center (DCIC) through interactions\nwith the CFDE and other CF DCCs in the next 3 years.\nSo far, the ~400 publications produced by the LINCS consortium have been cited by ~6,000 other papers,\ndemonstrating the high impact of the program on the research community. In particular, the computational\nresources developed by the LINCS DCIC have been very successful. These tools and databases were\nalready visited by >1 million unique users, with currently ~30,000 unique users per month (based on Google\nAnalytics). These strong usage statistics demonstrate the value of LINCS resources and their potential for\nmaking long-lasting impact on drug discovery, and the biomedical research community in general. The\nLINCS DCIC developed web-based resources to enable the federated access, intuitive querying, and\nintegrative analysis and visualization of the LINCS data combined with other relevant data. To achieve this\nthe LINCS DCIC also processed many additional external data types from other relevant resources to be\nintegrated with LINCS data including data from other Common Fund programs such as GTEx, Epigenomics\nRoadmap, and IMPC. However, such data integration efforts were achieved with little consideration of\ncommunity standards to ensure their long term findability, accessibility, interoperability and reusability\n(FAIR) (2). Our involvement with the NIH Data Commons Pilot Project Consortium (DCPPC) and the\nCommon Fund Data Ecosystem (CFDE) taught us many lessons on how to better achieve data\nharmonization via the adoption of community standards to achieve long term sustainability of LINCS\nresources. Hence, by interacting with the CFDE, adhering to the requirements that the CFDE will establish,\nwe will be able to reprocess the LINCS data, and the other data we use to integrate with LINCS, with\ntransformations that will enable improved FAIRness, further enabling more complex use cases.\nIn addition, by interacting directly with other CF DCCs we will enable the direct integration of LINCS data\nwith other CF generated resources. Our plan is to develop an interactive web-based data visualization\ncomponent that will enable users to project RNA-seq samples (patients, single cells, or signatures) into a\nlower dimensional space based on their transcriptomics data profiling. Such visualization will be linked to\nthe metadata describing each sample, as well as automatically identified clusters, enrichment analysis\nresults for each sample or cluster, and predictions of drugs and small molecules from the LINCS resource.\nThis interactive web-based data visualization component will enable, for example, assisting KidsFirst portal\nusers, including physicians, to prescribe the most appropriate therapeutics to the right subtype of patients,\nas well as trace patients over time to monitor their response to treatment enable decision support for\nchanging treatment course early, if necessary.\nFinally, by moving all LINCS resources into a cloud environment through STRIDES, we will ensure that\nLINCS resources are archived for the long term ensuring maximal reuse and enabling applications that are\ncurrently not even imagined or possible.",
-      "project_title": "The LINCS DCIC Engagement Plan with the CFDE",
-      "phr_text": "",
-      "spending_categories_desc": null,
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2021-07-07T12:07:00Z",
-      "budget_end": "2022-06-30T12:06:00Z",
-      "cfda_code": "310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 210000,
-      "indirect_cost_amt": null,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10444350",
-      "date_added": "2021-07-24T04:07:32Z"
     },
     {
       "appl_id": 10851224,
@@ -11116,6 +11116,149 @@
       "date_added": "2024-04-06T04:04:19Z"
     },
     {
+      "appl_id": 10444365,
+      "subproject_id": null,
+      "fiscal_year": 2021,
+      "project_num": "3OT2OD030162-01S1",
+      "project_serial_num": "OD030162",
+      "organization": {
+        "org_name": "CHILDREN'S HOSP OF PHILADELPHIA",
+        "city": null,
+        "country": null,
+        "org_city": "PHILADELPHIA",
+        "org_country": "UNITED STATES",
+        "org_state": "PA",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": [
+          "073757627"
+        ],
+        "org_ueis": [
+          "G7MQPLSUX1L4"
+        ],
+        "primary_duns": "073757627",
+        "primary_uei": "G7MQPLSUX1L4",
+        "org_fips": "US",
+        "org_ipf_code": "1499101",
+        "org_zipcode": "191462305",
+        "external_org_id": 1499101
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 357776,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030162",
+        "support_year": "01",
+        "full_support_year": "01S1",
+        "suffix_code": "S1"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 14376558,
+          "first_name": "Jack",
+          "middle_name": "",
+          "last_name": "DiGiovanna",
+          "is_contact_pi": false,
+          "full_name": "Jack  DiGiovanna",
+          "title": ""
+        },
+        {
+          "profile_id": 10817313,
+          "first_name": "Vincent",
+          "middle_name": "",
+          "last_name": "Ferretti",
+          "is_contact_pi": false,
+          "full_name": "Vincent  Ferretti",
+          "title": ""
+        },
+        {
+          "profile_id": 14887857,
+          "first_name": "Allison",
+          "middle_name": "",
+          "last_name": "Heath",
+          "is_contact_pi": false,
+          "full_name": "Allison  Heath",
+          "title": ""
+        },
+        {
+          "profile_id": 9238231,
+          "first_name": "Adam",
+          "middle_name": "Cain",
+          "last_name": "Resnick",
+          "is_contact_pi": true,
+          "full_name": "Adam Cain Resnick",
+          "title": "CENTER DIRECTOR"
+        }
+      ],
+      "contact_pi_name": "RESNICK, ADAM CAIN",
+      "program_officers": [
+        {
+          "first_name": "George",
+          "middle_name": "",
+          "last_name": "Papanicolaou",
+          "full_name": "George  Papanicolaou"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2021,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 357776
+        }
+      ],
+      "cong_dist": "PA-03",
+      "spending_categories": null,
+      "project_start_date": "2020-09-25T12:09:00Z",
+      "project_end_date": "2023-09-24T12:09:00Z",
+      "organization_type": {
+        "name": "Independent Hospitals",
+        "code": null,
+        "is_other": false
+      },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2021-07-29T12:07:00Z",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030162",
+      "terms": null,
+      "pref_terms": null,
+      "abstract_text": "Rationale for Multiple PI Proposal\nThis proposal focuses on activities and collaborations with an initial set of Common Fund DCCs and the\nCFDE-CC in response to the Engagement Opportunity “Engaging Common Fund Data Coordinating\nCenters to Establish the Common Fund Data Ecosystem (CFDE)” OTA-20-2005. Our proposed\nengagements span the 3 key areas defined in the OT EOA and include GTEx, LINCS, HUBMAP, and\nSPARC as well as the activities the Kids First DRC is leading as part of the NIH Interoperability Working\nGroup to further the establishment of the Common Fund Data Ecosystem (CFDE).\nThe four investigators collaborating on this proposal have distinct professional backgrounds, areas of\nexpertise, and research tools at their disposal including leading the Kids First DCC/DRP and CAVATICA\nefforts.\nAt the Children’s Hospital of Philadelphia, Dr. Adam Resnick is a cancer and neuroscience research\nscientist with expertise in pediatric brain tumors and Dr. Allison Heath is a computer science expert in\nlarge-scale data bioinformatics and compute infrastructure. These experts will work together to lead the\nCHOP project team. At Centre Hospitalier Universitaire Sainte-Justine, Dr. Vincent Ferretti develops\nbioinformatics software for both large-scale software development and computational genomics. At Seven\nBridges, Dr. Jack DiGiovanna is an expert in cloud-based analysis platforms for bioinformatics that are\nscalable, collaborative, and reproducible.\nResponsibilities of Investigators\nAll PIs will share responsibility for ensuring the ethical conduct of the project, upholding the scientific\nintegrity of the project, administration, oversight and coordination of the project’s management.\nDr. Adam Resnick will serve as the contact PI. He will be responsible for the overall strategy, determining\nthe prioritization of scientific use cases, and ensuring that the project meets its goals of scientific impact.\nDr. Heath will oversee and facilitate the completion of the technical milestones and deliverables across all\nCDFE engagements. Dr. Heath will also be responsible for the execution of interoperability strategies with\nCFDE and the NIH IC Stacks. Dr. Ferretti will supervise the KFDRC portal development team and will be\nresponsible for all of their relevant deliverables, such as authentication with NIH RAS and visualization\nintegrations with LINCS. Dr. DiGiovanna will supervise the CAVATICA development team and will be\nresponsible for all of their relevant deliverables, such as GA4GH DRS integration and multi-cloud\ncapabilities.\nCommunication and Data Sharing\nThe PIs will communicate weekly and hold monthly teleconferences with PIs at the other organizations to\ndiscuss the CFDE and all administrative responsibilities. In addition, PIs will meet in person with all\npersonnel at least annually to assess progress and make major decisions about the direction of the\nprogram. If changes are warranted, PIs will work together to discuss those modifications and the\nredistribution of funds, if necessary. A publication policy will be established based on the relative scientific\ncontributions of the PIs and key personnel. Dr. Resnick will serve as contact PI and be responsible for\nsubmission of progress reports, annual reports to the NIH and all other communication.",
+      "project_title": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
+      "phr_text": "",
+      "spending_categories_desc": null,
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2021-07-07T12:07:00Z",
+      "budget_end": "2022-06-30T12:06:00Z",
+      "cfda_code": "310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 357776,
+      "indirect_cost_amt": null,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10444365",
+      "date_added": "2021-07-31T04:07:26Z"
+    },
+    {
       "appl_id": 10683508,
       "subproject_id": null,
       "fiscal_year": 2022,
@@ -11273,149 +11416,6 @@
       "indirect_cost_amt": 0,
       "project_detail_url": "https://reporter.nih.gov/project-details/10683508",
       "date_added": "2022-10-01T04:10:19Z"
-    },
-    {
-      "appl_id": 10444365,
-      "subproject_id": null,
-      "fiscal_year": 2021,
-      "project_num": "3OT2OD030162-01S1",
-      "project_serial_num": "OD030162",
-      "organization": {
-        "org_name": "CHILDREN'S HOSP OF PHILADELPHIA",
-        "city": null,
-        "country": null,
-        "org_city": "PHILADELPHIA",
-        "org_country": "UNITED STATES",
-        "org_state": "PA",
-        "org_state_name": null,
-        "dept_type": null,
-        "fips_country_code": null,
-        "org_duns": [
-          "073757627"
-        ],
-        "org_ueis": [
-          "G7MQPLSUX1L4"
-        ],
-        "primary_duns": "073757627",
-        "primary_uei": "G7MQPLSUX1L4",
-        "org_fips": "US",
-        "org_ipf_code": "1499101",
-        "org_zipcode": "191462305",
-        "external_org_id": 1499101
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 357776,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030162",
-        "support_year": "01",
-        "full_support_year": "01S1",
-        "suffix_code": "S1"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 14376558,
-          "first_name": "Jack",
-          "middle_name": "",
-          "last_name": "DiGiovanna",
-          "is_contact_pi": false,
-          "full_name": "Jack  DiGiovanna",
-          "title": ""
-        },
-        {
-          "profile_id": 10817313,
-          "first_name": "Vincent",
-          "middle_name": "",
-          "last_name": "Ferretti",
-          "is_contact_pi": false,
-          "full_name": "Vincent  Ferretti",
-          "title": ""
-        },
-        {
-          "profile_id": 14887857,
-          "first_name": "Allison",
-          "middle_name": "",
-          "last_name": "Heath",
-          "is_contact_pi": false,
-          "full_name": "Allison  Heath",
-          "title": ""
-        },
-        {
-          "profile_id": 9238231,
-          "first_name": "Adam",
-          "middle_name": "Cain",
-          "last_name": "Resnick",
-          "is_contact_pi": true,
-          "full_name": "Adam Cain Resnick",
-          "title": "CENTER DIRECTOR"
-        }
-      ],
-      "contact_pi_name": "RESNICK, ADAM CAIN",
-      "program_officers": [
-        {
-          "first_name": "George",
-          "middle_name": "",
-          "last_name": "Papanicolaou",
-          "full_name": "George  Papanicolaou"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2021,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 357776
-        }
-      ],
-      "cong_dist": "PA-03",
-      "spending_categories": null,
-      "project_start_date": "2020-09-25T12:09:00Z",
-      "project_end_date": "2023-09-24T12:09:00Z",
-      "organization_type": {
-        "name": "Independent Hospitals",
-        "code": null,
-        "is_other": false
-      },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2021-07-29T12:07:00Z",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030162",
-      "terms": null,
-      "pref_terms": null,
-      "abstract_text": "Rationale for Multiple PI Proposal\nThis proposal focuses on activities and collaborations with an initial set of Common Fund DCCs and the\nCFDE-CC in response to the Engagement Opportunity “Engaging Common Fund Data Coordinating\nCenters to Establish the Common Fund Data Ecosystem (CFDE)” OTA-20-2005. Our proposed\nengagements span the 3 key areas defined in the OT EOA and include GTEx, LINCS, HUBMAP, and\nSPARC as well as the activities the Kids First DRC is leading as part of the NIH Interoperability Working\nGroup to further the establishment of the Common Fund Data Ecosystem (CFDE).\nThe four investigators collaborating on this proposal have distinct professional backgrounds, areas of\nexpertise, and research tools at their disposal including leading the Kids First DCC/DRP and CAVATICA\nefforts.\nAt the Children’s Hospital of Philadelphia, Dr. Adam Resnick is a cancer and neuroscience research\nscientist with expertise in pediatric brain tumors and Dr. Allison Heath is a computer science expert in\nlarge-scale data bioinformatics and compute infrastructure. These experts will work together to lead the\nCHOP project team. At Centre Hospitalier Universitaire Sainte-Justine, Dr. Vincent Ferretti develops\nbioinformatics software for both large-scale software development and computational genomics. At Seven\nBridges, Dr. Jack DiGiovanna is an expert in cloud-based analysis platforms for bioinformatics that are\nscalable, collaborative, and reproducible.\nResponsibilities of Investigators\nAll PIs will share responsibility for ensuring the ethical conduct of the project, upholding the scientific\nintegrity of the project, administration, oversight and coordination of the project’s management.\nDr. Adam Resnick will serve as the contact PI. He will be responsible for the overall strategy, determining\nthe prioritization of scientific use cases, and ensuring that the project meets its goals of scientific impact.\nDr. Heath will oversee and facilitate the completion of the technical milestones and deliverables across all\nCDFE engagements. Dr. Heath will also be responsible for the execution of interoperability strategies with\nCFDE and the NIH IC Stacks. Dr. Ferretti will supervise the KFDRC portal development team and will be\nresponsible for all of their relevant deliverables, such as authentication with NIH RAS and visualization\nintegrations with LINCS. Dr. DiGiovanna will supervise the CAVATICA development team and will be\nresponsible for all of their relevant deliverables, such as GA4GH DRS integration and multi-cloud\ncapabilities.\nCommunication and Data Sharing\nThe PIs will communicate weekly and hold monthly teleconferences with PIs at the other organizations to\ndiscuss the CFDE and all administrative responsibilities. In addition, PIs will meet in person with all\npersonnel at least annually to assess progress and make major decisions about the direction of the\nprogram. If changes are warranted, PIs will work together to discuss those modifications and the\nredistribution of funds, if necessary. A publication policy will be established based on the relative scientific\ncontributions of the PIs and key personnel. Dr. Resnick will serve as contact PI and be responsible for\nsubmission of progress reports, annual reports to the NIH and all other communication.",
-      "project_title": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
-      "phr_text": "",
-      "spending_categories_desc": null,
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2021-07-07T12:07:00Z",
-      "budget_end": "2022-06-30T12:06:00Z",
-      "cfda_code": "310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 357776,
-      "indirect_cost_amt": null,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10444365",
-      "date_added": "2021-07-31T04:07:26Z"
     },
     {
       "appl_id": 10468523,
@@ -12374,122 +12374,6 @@
       "date_added": "2020-09-19T07:09:38Z"
     },
     {
-      "appl_id": 10468524,
-      "subproject_id": null,
-      "fiscal_year": 2021,
-      "project_num": "3OT2OD030544-01S1",
-      "project_serial_num": "OD030544",
-      "organization": {
-        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
-        "city": null,
-        "country": null,
-        "org_city": "LA JOLLA",
-        "org_country": "UNITED STATES",
-        "org_state": "CA",
-        "org_state_name": null,
-        "dept_type": "ENGINEERING (ALL TYPES)",
-        "fips_country_code": null,
-        "org_duns": [
-          "804355790"
-        ],
-        "org_ueis": [
-          "UYTTZT6G9DT1"
-        ],
-        "primary_duns": "804355790",
-        "primary_uei": "UYTTZT6G9DT1",
-        "org_fips": "US",
-        "org_ipf_code": "577507",
-        "org_zipcode": "920930621",
-        "external_org_id": 577507
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 798176,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030544",
-        "support_year": "01",
-        "full_support_year": "01S1",
-        "suffix_code": "S1"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 1936703,
-          "first_name": "Shankar",
-          "middle_name": "",
-          "last_name": "Subramaniam",
-          "is_contact_pi": true,
-          "full_name": "Shankar  Subramaniam",
-          "title": "PROFESSOR"
-        }
-      ],
-      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
-      "program_officers": [
-        {
-          "first_name": "George",
-          "middle_name": "",
-          "last_name": "Papanicolaou",
-          "full_name": "George  Papanicolaou"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2021,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 798176
-        }
-      ],
-      "cong_dist": "CA-50",
-      "spending_categories": null,
-      "project_start_date": "2020-09-23T12:09:00Z",
-      "project_end_date": "2023-09-22T12:09:00Z",
-      "organization_type": {
-        "name": "SCHOOLS OF ARTS AND SCIENCES",
-        "code": null,
-        "is_other": false
-      },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2021-09-17T12:09:00Z",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030544",
-      "terms": null,
-      "pref_terms": null,
-      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
-      "project_title": "Biomedical Data Commons Workbench (BDCW)",
-      "phr_text": "",
-      "spending_categories_desc": null,
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2021-09-23T12:09:00Z",
-      "budget_end": "2022-09-22T12:09:00Z",
-      "cfda_code": "310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 798176,
-      "indirect_cost_amt": null,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10468524",
-      "date_added": "2021-09-25T04:09:53Z"
-    },
-    {
       "appl_id": 10217619,
       "subproject_id": null,
       "fiscal_year": 2020,
@@ -12607,6 +12491,122 @@
       "indirect_cost_amt": 182540,
       "project_detail_url": "https://reporter.nih.gov/project-details/10217619",
       "date_added": "2020-09-26T07:09:48Z"
+    },
+    {
+      "appl_id": 10468524,
+      "subproject_id": null,
+      "fiscal_year": 2021,
+      "project_num": "3OT2OD030544-01S1",
+      "project_serial_num": "OD030544",
+      "organization": {
+        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+        "city": null,
+        "country": null,
+        "org_city": "LA JOLLA",
+        "org_country": "UNITED STATES",
+        "org_state": "CA",
+        "org_state_name": null,
+        "dept_type": "ENGINEERING (ALL TYPES)",
+        "fips_country_code": null,
+        "org_duns": [
+          "804355790"
+        ],
+        "org_ueis": [
+          "UYTTZT6G9DT1"
+        ],
+        "primary_duns": "804355790",
+        "primary_uei": "UYTTZT6G9DT1",
+        "org_fips": "US",
+        "org_ipf_code": "577507",
+        "org_zipcode": "920930621",
+        "external_org_id": 577507
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 798176,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030544",
+        "support_year": "01",
+        "full_support_year": "01S1",
+        "suffix_code": "S1"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 1936703,
+          "first_name": "Shankar",
+          "middle_name": "",
+          "last_name": "Subramaniam",
+          "is_contact_pi": true,
+          "full_name": "Shankar  Subramaniam",
+          "title": "PROFESSOR"
+        }
+      ],
+      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
+      "program_officers": [
+        {
+          "first_name": "George",
+          "middle_name": "",
+          "last_name": "Papanicolaou",
+          "full_name": "George  Papanicolaou"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2021,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 798176
+        }
+      ],
+      "cong_dist": "CA-50",
+      "spending_categories": null,
+      "project_start_date": "2020-09-23T12:09:00Z",
+      "project_end_date": "2023-09-22T12:09:00Z",
+      "organization_type": {
+        "name": "SCHOOLS OF ARTS AND SCIENCES",
+        "code": null,
+        "is_other": false
+      },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2021-09-17T12:09:00Z",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030544",
+      "terms": null,
+      "pref_terms": null,
+      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
+      "project_title": "Biomedical Data Commons Workbench (BDCW)",
+      "phr_text": "",
+      "spending_categories_desc": null,
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2021-09-23T12:09:00Z",
+      "budget_end": "2022-09-22T12:09:00Z",
+      "cfda_code": "310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 798176,
+      "indirect_cost_amt": null,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10468524",
+      "date_added": "2021-09-25T04:09:53Z"
     },
     {
       "appl_id": 10907953,
@@ -12851,122 +12851,6 @@
       "date_added": "2024-09-21T04:09:10Z"
     },
     {
-      "appl_id": 11090253,
-      "subproject_id": null,
-      "fiscal_year": 2024,
-      "project_num": "3OT2OD030544-01S4",
-      "project_serial_num": "OD030544",
-      "organization": {
-        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
-        "city": null,
-        "country": null,
-        "org_city": "LA JOLLA",
-        "org_country": "UNITED STATES",
-        "org_state": "CA",
-        "org_state_name": null,
-        "dept_type": "ENGINEERING (ALL TYPES)",
-        "fips_country_code": null,
-        "org_duns": [
-          "804355790"
-        ],
-        "org_ueis": [
-          "UYTTZT6G9DT1"
-        ],
-        "primary_duns": "804355790",
-        "primary_uei": "UYTTZT6G9DT1",
-        "org_fips": "US",
-        "org_ipf_code": "577507",
-        "org_zipcode": "920930621",
-        "external_org_id": 577507
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 298514,
-      "is_active": true,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030544",
-        "support_year": "01",
-        "full_support_year": "01S4",
-        "suffix_code": "S4"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 1936703,
-          "first_name": "Shankar",
-          "middle_name": "",
-          "last_name": "Subramaniam",
-          "is_contact_pi": true,
-          "full_name": "Shankar  Subramaniam",
-          "title": "PROFESSOR"
-        }
-      ],
-      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
-      "program_officers": [
-        {
-          "first_name": "George",
-          "middle_name": "",
-          "last_name": "Papanicolaou",
-          "full_name": "George  Papanicolaou"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2024,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 298514
-        }
-      ],
-      "cong_dist": "CA-50",
-      "spending_categories": null,
-      "project_start_date": "2020-09-23T12:09:00Z",
-      "project_end_date": "2025-09-22T12:09:00Z",
-      "organization_type": {
-        "name": "SCHOOLS OF ARTS AND SCIENCES",
-        "code": null,
-        "is_other": false
-      },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2024-09-12T12:09:00Z",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030544",
-      "terms": null,
-      "pref_terms": null,
-      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
-      "project_title": "Biomedical Data Commons Workbench (BDCW)",
-      "phr_text": "",
-      "spending_categories_desc": null,
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2024-09-23T12:09:00Z",
-      "budget_end": "2025-09-22T12:09:00Z",
-      "cfda_code": "310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 298514,
-      "indirect_cost_amt": 0,
-      "project_detail_url": "https://reporter.nih.gov/project-details/11090253",
-      "date_added": "2024-09-28T04:09:47Z"
-    },
-    {
       "appl_id": 10683515,
       "subproject_id": null,
       "fiscal_year": 2022,
@@ -13084,6 +12968,122 @@
       "indirect_cost_amt": 0,
       "project_detail_url": "https://reporter.nih.gov/project-details/10683515",
       "date_added": "2022-09-24T04:09:44Z"
+    },
+    {
+      "appl_id": 11090253,
+      "subproject_id": null,
+      "fiscal_year": 2024,
+      "project_num": "3OT2OD030544-01S4",
+      "project_serial_num": "OD030544",
+      "organization": {
+        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+        "city": null,
+        "country": null,
+        "org_city": "LA JOLLA",
+        "org_country": "UNITED STATES",
+        "org_state": "CA",
+        "org_state_name": null,
+        "dept_type": "ENGINEERING (ALL TYPES)",
+        "fips_country_code": null,
+        "org_duns": [
+          "804355790"
+        ],
+        "org_ueis": [
+          "UYTTZT6G9DT1"
+        ],
+        "primary_duns": "804355790",
+        "primary_uei": "UYTTZT6G9DT1",
+        "org_fips": "US",
+        "org_ipf_code": "577507",
+        "org_zipcode": "920930621",
+        "external_org_id": 577507
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 298514,
+      "is_active": true,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030544",
+        "support_year": "01",
+        "full_support_year": "01S4",
+        "suffix_code": "S4"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 1936703,
+          "first_name": "Shankar",
+          "middle_name": "",
+          "last_name": "Subramaniam",
+          "is_contact_pi": true,
+          "full_name": "Shankar  Subramaniam",
+          "title": "PROFESSOR"
+        }
+      ],
+      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
+      "program_officers": [
+        {
+          "first_name": "George",
+          "middle_name": "",
+          "last_name": "Papanicolaou",
+          "full_name": "George  Papanicolaou"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2024,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 298514
+        }
+      ],
+      "cong_dist": "CA-50",
+      "spending_categories": null,
+      "project_start_date": "2020-09-23T12:09:00Z",
+      "project_end_date": "2025-09-22T12:09:00Z",
+      "organization_type": {
+        "name": "SCHOOLS OF ARTS AND SCIENCES",
+        "code": null,
+        "is_other": false
+      },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2024-09-12T12:09:00Z",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030544",
+      "terms": null,
+      "pref_terms": null,
+      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
+      "project_title": "Biomedical Data Commons Workbench (BDCW)",
+      "phr_text": "",
+      "spending_categories_desc": null,
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2024-09-23T12:09:00Z",
+      "budget_end": "2025-09-22T12:09:00Z",
+      "cfda_code": "310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 298514,
+      "indirect_cost_amt": 0,
+      "project_detail_url": "https://reporter.nih.gov/project-details/11090253",
+      "date_added": "2024-09-28T04:09:47Z"
     },
     {
       "appl_id": 10994331,
