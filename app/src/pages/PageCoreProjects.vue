@@ -35,7 +35,7 @@
       </template>
 
       <template #name="{ row }">
-        {{ truncate(row.name, { length: 50 }) }}
+        {{ row.name }}
       </template>
 
       <template #award-amount="{ row }">
@@ -52,7 +52,6 @@
 </template>
 
 <script setup lang="ts">
-import { truncate } from "lodash";
 import Check from "@/assets/check.svg";
 import Microscope from "@/assets/microscope.svg";
 import Xmark from "@/assets/xmark.svg";
