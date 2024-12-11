@@ -13,8 +13,10 @@ import {
 } from "csv-stringify/sync";
 import { isEmpty } from "lodash-es";
 import Downloader from "nodejs-file-downloader";
+import * as prettier from "prettier";
 import { HttpRangeReader, ZipReader } from "@zip.js/zip.js";
 import { log } from "@/util/log";
+import { memoize } from "@/util/memoize";
 import { request } from "@/util/request";
 import { formatDate, midTrunc } from "@/util/string";
 
@@ -32,12 +34,6 @@ const getStats = async (path: string) => {
 
 export type Stats = Awaited<ReturnType<typeof getStats>>;
 
-/** make fresh folder */
-export const clearFolder = async (path: string) => {
-  await rm(path, { force: true, recursive: true });
-  await mkdir(path, { recursive: true });
-};
-
 /** download file from url (if filename not already present) */
 export const downloadFile = async (
   url: string,
@@ -54,32 +50,32 @@ export const downloadFile = async (
   const cached = CACHE && existsSync(path);
 
   if (cached) log(`Using cache ${midTrunc(path, 40)}`, "secondary");
+  else {
+    /** create downloader */
+    const downloader = new Downloader({
+      url,
+      fileName: path,
+      cloneFiles: false,
+      maxAttempts: 3,
+      onProgress: (percentage) =>
+        /** call provided progress callback */
+        onProgress?.(Number(percentage) / 100),
+    });
 
-  const downloader = new Downloader({
-    url,
-    fileName: path,
-    skipExistingFileName: !!CACHE,
-    cloneFiles: false,
-    maxAttempts: 3,
-    onProgress: (percentage) => {
-      /** call provided progress callback */
-      !cached && onProgress?.(Number(percentage) / 100);
-    },
-  });
+    /** trigger download */
+    await downloader.download();
+  }
 
-  /** trigger download */
-  await downloader.download();
-
-  return { path, ...(await getStats(path)) };
+  return { path, ...(await getStats(path)), cached };
 };
 
 /** get info of remote file without downloading */
-export const liteDownloadFile = async (url: string) => {
+export const liteDownloadFile = memoize(async (url: string) => {
   const response = await request(url, { method: "HEAD" }, true);
   const size = Number(response.headers.get("Content-Length"));
   const date = formatDate(response.headers.get("Last-Modified") ?? "");
   return { url, path: "", size, date };
-};
+});
 
 /** load data from file */
 export const loadFile = async <Data>(
@@ -105,20 +101,19 @@ export const loadFile = async <Data>(
 };
 
 /** get file listing of remote zip file without downloading entire file */
-export const liteUnzip = async (
-  url: string,
-  onProgress?: (percent: number) => void,
-) =>
-  (
-    await new ZipReader(new HttpRangeReader(url)).getEntries({
-      onprogress: async (progress, total) => onProgress?.(progress / total),
-    })
-  ).map((entry) => ({
-    url,
-    path: entry.filename,
-    size: entry.uncompressedSize,
-    date: formatDate(entry.lastModDate),
-  }));
+export const liteUnzip = memoize(
+  async (url: string, onProgress?: (percent: number) => void) =>
+    (
+      await new ZipReader(new HttpRangeReader(url)).getEntries({
+        onprogress: async (progress, total) => onProgress?.(progress / total),
+      })
+    ).map((entry) => ({
+      url,
+      path: entry.filename,
+      size: entry.uncompressedSize,
+      date: formatDate(entry.lastModDate),
+    })),
+);
 
 type Spawn = Parameters<typeof nodeSpawn>;
 
@@ -146,20 +141,14 @@ export const spawn = (
   });
 
 /** save data to file */
-export const saveFile = async (
-  data: unknown,
-  path: string,
-  format?: Extensions,
-  options?: StringifyOptions,
-) => {
+export const saveFile = async (data: unknown, path: string) => {
   let contents: string | NodeJS.ArrayBufferView = "";
 
-  if (format === "json" || path.endsWith(".json"))
-    contents = stringifyJson(data);
-  if (format === "csv" || path.endsWith(".csv"))
-    contents = stringifyCsv([data].flat(), { delimiter: ",", ...options });
-  if (format === "tsv" || path.endsWith(".tsv"))
-    contents = stringifyCsv([data].flat(), { delimiter: "\t", ...options });
+  if (path.endsWith(".json")) contents = await stringifyJson(data);
+  if (path.endsWith(".csv"))
+    contents = stringifyCsv([data].flat(), { delimiter: "," });
+  if (path.endsWith(".tsv"))
+    contents = stringifyCsv([data].flat(), { delimiter: "\t" });
 
   try {
     /** create folders if needed */
@@ -181,7 +170,8 @@ export const parseJson = <Data>(data: string) => {
 };
 
 /** stringify json */
-export const stringifyJson = (data: unknown) => JSON.stringify(data, null, 2);
+export const stringifyJson = (data: unknown) =>
+  prettier.format(JSON.stringify(data), { parser: "json" });
 
 /** parse csv/tsv/etc contents */
 export const parseCsv = <Data>(

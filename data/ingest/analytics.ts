@@ -28,6 +28,8 @@ export const getAnalytics = async () => {
   /** de-dupe */
   properties = uniqBy(properties, "property");
 
+  log("Getting Google Analytics data");
+
   /** get salient data about each property */
   const data = await queryMulti(
     properties.map(({ property, displayName }) => async (progress) => {
@@ -81,34 +83,37 @@ export const getAnalytics = async () => {
     );
 
   /** map "over time" data */
-  const mapOverTime = (reports: Awaited<ReturnType<typeof getOverTime>>) => {
-    const dateRanges = reports.map((report) => report.dateRange);
+  const mapOverTime = (report: Awaited<ReturnType<typeof getOverTime>>) => {
+    /** extract salient props */
+    const { result } = report;
+    const { metricHeaders, rows } = result ?? {};
+
+    if (!result || !metricHeaders || !rows)
+      throw Error("No analytics report response");
+
+    /** get uniq list of metric keys */
     const metricKeys = uniq(
-      reports
-        .map(
-          (report) =>
-            report.metricHeaders?.map((header) => header.name ?? "") ?? "",
-        )
-        .flat(),
+      metricHeaders.map((header) => header.name ?? "").flat(),
     );
 
-    const metrics = metricKeys.map((metric, index) => ({
-      metric,
-      values: reports.map(
-        (report) => Number(report.rows?.[0]?.metricValues?.[index]?.value) || 0,
-      ),
-    }));
-
-    /** trim undefined values off of start */
-    for (let index = 0; index < dateRanges.length; index++) {
-      if (!metrics.every((metric) => metric.values[index] === 0)) {
-        dateRanges.splice(0, index - 1);
-        metrics.forEach((metric) => metric.values.splice(0, index - 1));
-        break;
-      }
-    }
-
-    return { dateRanges, metrics };
+    return Object.fromEntries(
+      metricKeys.map((metric, index) => [
+        metric,
+        Object.fromEntries(
+          rows
+            .map((row) => [
+              /** date */
+              (row.dimensionValues?.[0]?.value ?? "").replace(
+                /(\d\d\d\d)(\d\d)(\d\d)/,
+                "$1-$2-$3",
+              ),
+              /** value */
+              Number(row.metricValues?.[index]?.value ?? ""),
+            ])
+            .filter(([, value]) => value),
+        ),
+      ]),
+    );
   };
 
   /** transform data into desired format, with fallbacks */

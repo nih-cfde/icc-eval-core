@@ -1,13 +1,13 @@
 import { countBy, truncate } from "lodash-es";
 import stripAnsi from "strip-ansi";
-import { loadFile, saveFile, type Filename } from "@/util/file";
+import { saveFile, type Filename } from "@/util/file";
 import { log, progress } from "@/util/log";
 import { sleep } from "@/util/misc";
 import { count } from "@/util/string";
 
 export type Params = Record<string, unknown | unknown[]>;
 
-const { RAW_PATH, CACHE } = process.env;
+const { RAW_PATH } = process.env;
 
 /** request */
 type Url = string | URL;
@@ -44,7 +44,16 @@ export const request: Request = async <Parsed>(
     ...options,
     body: JSON.stringify(options.body),
   });
-  const response = await fetch(request);
+  let response = await fetch(request);
+
+  /** if rate limited, retry a few times */
+  let retry = 5;
+  while (response.status === 429 && retry-- > 0) {
+    const timeout = parseInt(response.headers.get("retry-after") ?? "1") + 1;
+    console.debug(`Retrying (${retry}) after ${timeout}s`);
+    await sleep(timeout * 1000);
+    response = await fetch(request.clone());
+  }
   if (!response.ok) throw Error(`Response for ${url} not OK`);
   if (raw) return response;
 
@@ -62,29 +71,18 @@ export const request: Request = async <Parsed>(
 export const isEmpty = (data: unknown) =>
   data === undefined ||
   data === null ||
-  (typeof data === "object" && !Object.keys(data).length) ||
-  (Array.isArray(data) && !data.length);
+  (Array.isArray(data) && !data.length) ||
+  (typeof data === "object" && !Object.keys(data).length);
+
+export type Progress = (progress: number) => void;
 
 /** run task, with caching, progress logging, and error catching */
 export const query = async <Result>(
   /** async func to run */
-  promise: (progress: (progress: number) => void) => Promise<Result>,
+  promise: (progress: Progress) => Promise<Result>,
   /** raw filename */
   filename?: Filename,
 ): Promise<NonNullable<Result>> => {
-  /** if raw data already exists, return that without querying */
-  if (filename) {
-    try {
-      const { data } = await loadFile<Result>(`${RAW_PATH}/${filename}`);
-      if (data && CACHE) {
-        log(`Using cache, ${count(data)} items`, "secondary");
-        return data;
-      }
-    } catch (error) {
-      log("No cache found", "secondary");
-    }
-  }
-
   let result: Result;
 
   /** progress bar */
@@ -116,41 +114,25 @@ export const queryMulti = async <Result>(
   /** async funcs to run */
   promises: ((
     /** func to call to update progress of promise */
-    progress: (progress: number) => void,
+    progress: Progress,
   ) => Promise<Result>)[],
   /** raw (cache) filename */
   filename?: Filename,
+  /** max number of concurrent queries */
+  concurrency = 10,
 ): Promise<(NonNullable<Result> | Error)[]> => {
-  /** if raw data already exists, return that without querying */
-  if (filename) {
-    try {
-      const { data } = await loadFile<NonNullable<Result>[]>(
-        `${RAW_PATH}/${filename}`,
-      );
-      if (data && CACHE) {
-        log(`Using cache, ${count(data)} items`, "secondary");
-        return data;
-      }
-    } catch (error) {
-      log("No cache found", "secondary");
-    }
-  }
-
   /** progress bar */
   const bar = progress(promises.length);
 
   /** number of currently running promises */
   let running = 0;
 
-  /** max concurrent promises allowed */
-  const limit = 10;
-
   /** run promises */
   const settled = await Promise.allSettled(
     promises.map(async (promise, index) => {
       try {
         /** wait until # of running promises is less than limit */
-        while (running >= limit) await sleep(10);
+        while (running >= concurrency) await sleep(10);
 
         /** increment running promises */
         running++;

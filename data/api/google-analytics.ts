@@ -1,10 +1,9 @@
-import { eachMonthOfInterval, isAfter, isBefore } from "date-fns";
 import { chunk } from "lodash-es";
 import { AnalyticsAdminServiceClient } from "@google-analytics/admin";
 import type { protos as AdminTypes } from "@google-analytics/admin";
 import type { protos as DataTypes } from "@google-analytics/data";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
-import { pairs } from "@/util/array";
+import { memoize } from "@/util/memoize";
 
 /**
  * REFERENCES
@@ -41,52 +40,58 @@ const handleError =
   };
 
 /** list all analytics properties we have access to */
-export const getProperties = handleError(async () => {
-  const properties: PropertyDetails[] = [];
-  for await (const account of adminClient.listAccountSummariesAsync())
-    for (const property of account.propertySummaries ?? [])
-      if (property.property)
-        properties.push(property as { property: PropertyId });
-  return properties;
-});
+export const getProperties = memoize(
+  handleError(async () => {
+    const properties: PropertyDetails[] = [];
+    for await (const account of adminClient.listAccountSummariesAsync())
+      for (const property of account.propertySummaries ?? [])
+        if (property.property)
+          properties.push(property as { property: PropertyId });
+    return properties;
+  }),
+);
 
 /** extract core project id from custom key event that property owner defines */
-export const getCoreProject = handleError(async (property: PropertyId) => {
-  const metadata = await dataClient.getMetadata({
-    name: `${property}/metadata`,
-  });
-  const pattern = /^keyEvents:cfde_/i;
-  const keyEvent = metadata[0].metrics?.find((metric) =>
-    metric.apiName?.match(pattern),
-  )?.apiName;
-  return keyEvent?.replace(pattern, "");
-});
+export const getCoreProject = memoize(
+  handleError(async (property: PropertyId) => {
+    const metadata = await dataClient.getMetadata({
+      name: `${property}/metadata`,
+    });
+    const pattern = /^keyEvents:cfde_/i;
+    const keyEvent = metadata[0].metrics?.find((metric) =>
+      metric.apiName?.match(pattern),
+    )?.apiName;
+    return keyEvent?.replace(pattern, "");
+  }),
+);
 
 /** make unlimited batch requests */
-const batchReports = async (
-  property: PropertyId,
-  requests: BatchReportRequest["requests"],
-) => {
-  /** google limits us to only a few requests at a time */
-  const chunks = chunk(requests, 5);
+const batchReports = memoize(
+  async (property: PropertyId, requests: BatchReportRequest["requests"]) => {
+    /** google limits us to only a few requests at a time */
+    const chunks = chunk(requests, 5);
 
-  /** all reports */
-  const reports: BatchReportResponse["reports"] = [];
+    /** all reports */
+    const reports: BatchReportResponse["reports"] = [];
 
-  /** perform batch reports, chunk by chunk */
-  for (const requests of chunks) {
-    const [response] = await dataClient.batchRunReports({ property, requests });
-    reports.push(...(response?.reports ?? []));
-  }
+    /** perform batch reports, chunk by chunk */
+    for (const requests of chunks) {
+      const [response] = await dataClient.batchRunReports({
+        property,
+        requests,
+      });
+      reports.push(...(response?.reports ?? []));
+    }
 
-  return reports;
+    return reports;
+  },
+);
+
+/** earliest allowed (~launch of google analytics) to present */
+const defaultDateRange = {
+  startDate: "2015-08-14",
+  endDate: new Date().toISOString().slice(0, 10),
 };
-
-/** default date range, from earliest allowed to present */
-const dateRanges = [{ startDate: "2015-08-14", endDate: "today" }];
-
-/** results limit */
-const limit = 5;
 
 /** default set of metrics */
 const metrics = [
@@ -97,41 +102,18 @@ const metrics = [
   // "screenPageViews",
 ];
 
-/** get metric value over time (chunked monthly) */
+/** get metric value over time */
 export const getOverTime = async (property: PropertyId) => {
-  /** earliest possible date */
-  const start = new Date(dateRanges[0]!.startDate);
-  /** latest possible date */
-  const end = new Date();
-
-  /** chunk earliest to latest possible date into ranges */
-  const ranges: typeof dateRanges = pairs(
-    eachMonthOfInterval({ start, end })
-      .map((date) => {
-        if (isBefore(date, start)) return start;
-        if (isAfter(date, end)) return end;
-        else return date;
-      })
-      .map((date) => date.toISOString().slice(0, 10)),
-  ).map(([startDate, endDate]) => ({ startDate, endDate }));
-
-  /** batch reports by date range */
-  const results = await batchReports(
-    property,
-    ranges.map((range) => ({
-      /**
-       * supports multiple, but only up to 4, so just keep it simple and do 1 at
-       * a time
-       */
-      dateRanges: [range],
+  const [result] = await batchReports(property, [
+    {
+      dateRanges: [defaultDateRange],
+      dimensions: [{ name: "date" }],
       metrics: metrics.map((metric) => ({ name: metric })),
-    })),
-  );
+      orderBys: [{ desc: false, dimension: { dimensionName: "date" } }],
+    },
+  ]);
 
-  return results.map((result, index) => ({
-    dateRange: ranges[index]!,
-    ...result,
-  }));
+  return { dateRange: defaultDateRange, result };
 };
 
 /** get "top" (by different metrics) dimensions (regions/languages/etc.) */
@@ -142,11 +124,11 @@ export const getTopDimension = async (
   batchReports(
     property,
     metrics.map((metric) => ({
-      dateRanges,
+      dateRanges: [defaultDateRange],
       dimensions: [{ name: dimension }],
       metrics: [{ name: metric }],
       orderBys: [{ desc: true, metric: { metricName: metric } }],
-      limit,
+      limit: 5,
     })),
   );
 
