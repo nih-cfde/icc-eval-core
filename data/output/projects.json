@@ -39,19 +39,6 @@
     "isActive": 0
   },
   {
-    "id": "1OT2OD030161-01",
-    "coreProject": "OT2OD030161",
-    "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
-    "opportunity": "OTA-20-005",
-    "application": 10129013,
-    "awardAmount": 556197,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T12:09:00Z",
-    "dateEnd": "2025-09-22T12:09:00Z",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030161-01S3",
     "coreProject": "OT2OD030161",
     "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
@@ -63,6 +50,19 @@
     "dateStart": "2020-09-23T12:09:00Z",
     "dateEnd": "2023-09-22T12:09:00Z",
     "isActive": 0
+  },
+  {
+    "id": "1OT2OD030161-01",
+    "coreProject": "OT2OD030161",
+    "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
+    "opportunity": "OTA-20-005",
+    "application": 10129013,
+    "awardAmount": 556197,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T12:09:00Z",
+    "dateEnd": "2025-09-22T12:09:00Z",
+    "isActive": 1
   },
   {
     "id": "3OT2OD030161-01S4",
@@ -117,12 +117,12 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030545-01S3",
+    "id": "3OT2OD030545-01S4",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10683509,
-    "awardAmount": 554624,
+    "application": 10707603,
+    "awardAmount": 700000,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T12:09:00Z",
@@ -130,12 +130,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030545-01S4",
+    "id": "3OT2OD030545-01S3",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10707603,
-    "awardAmount": 700000,
+    "application": 10683509,
+    "awardAmount": 554624,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T12:09:00Z",
@@ -295,8 +295,8 @@
     "activityCode": "R03",
     "agencyCode": "NIH",
     "dateStart": "2022-09-20T12:09:00Z",
-    "dateEnd": "2024-09-19T12:09:00Z",
-    "isActive": 0
+    "dateEnd": "2025-09-19T12:09:00Z",
+    "isActive": 1
   },
   {
     "id": "1R03OD036493-01",
@@ -715,19 +715,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD036435-01S1",
-    "coreProject": "OT2OD036435",
-    "name": "The CFDE Workbench",
-    "opportunity": "OTA-23-004",
-    "application": 11080094,
-    "awardAmount": 1750000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2023-09-18T12:09:00Z",
-    "dateEnd": "2028-09-17T12:09:00Z",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030160-01S5",
     "coreProject": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
@@ -738,6 +725,19 @@
     "agencyCode": "NIH",
     "dateStart": "2020-09-23T12:09:00Z",
     "dateEnd": "2025-09-22T12:09:00Z",
+    "isActive": 1
+  },
+  {
+    "id": "3OT2OD036435-01S1",
+    "coreProject": "OT2OD036435",
+    "name": "The CFDE Workbench",
+    "opportunity": "OTA-23-004",
+    "application": 11080094,
+    "awardAmount": 1750000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2023-09-18T12:09:00Z",
+    "dateEnd": "2028-09-17T12:09:00Z",
     "isActive": 1
   },
   {
@@ -767,19 +767,6 @@
     "isActive": 0
   },
   {
-    "id": "1OT2OD036435-01",
-    "coreProject": "OT2OD036435",
-    "name": "The CFDE Workbench",
-    "opportunity": "OTA-23-004",
-    "application": 10851224,
-    "awardAmount": 1500000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2023-09-18T12:09:00Z",
-    "dateEnd": "2028-09-17T12:09:00Z",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030160-01S4",
     "coreProject": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
@@ -791,6 +778,19 @@
     "dateStart": "2020-09-23T12:09:00Z",
     "dateEnd": "2024-09-22T12:09:00Z",
     "isActive": 0
+  },
+  {
+    "id": "1OT2OD036435-01",
+    "coreProject": "OT2OD036435",
+    "name": "The CFDE Workbench",
+    "opportunity": "OTA-23-004",
+    "application": 10851224,
+    "awardAmount": 1500000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2023-09-18T12:09:00Z",
+    "dateEnd": "2028-09-17T12:09:00Z",
+    "isActive": 1
   },
   {
     "id": "1R03OD032627-01",
@@ -1274,19 +1274,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030544-01S2",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10683515,
-    "awardAmount": 807151,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T12:09:00Z",
-    "dateEnd": "2023-09-22T12:09:00Z",
-    "isActive": 0
-  },
-  {
     "id": "3OT2OD030544-01S4",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1298,6 +1285,19 @@
     "dateStart": "2020-09-23T12:09:00Z",
     "dateEnd": "2025-09-22T12:09:00Z",
     "isActive": 1
+  },
+  {
+    "id": "3OT2OD030544-01S2",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10683515,
+    "awardAmount": 807151,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T12:09:00Z",
+    "dateEnd": "2023-09-22T12:09:00Z",
+    "isActive": 0
   },
   {
     "id": "1U24OD038422-01",

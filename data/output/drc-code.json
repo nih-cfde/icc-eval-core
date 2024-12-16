@@ -423,6 +423,15 @@
     "files": []
   },
   {
+    "url": "https://fairshake.cloud",
+    "dir": "https://fairshake.cloud",
+    "name": "FAIRshake",
+    "ext": "",
+    "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
     "url": "https://genboree.org/cfde-gene-dev/ui/api-docs",
     "dir": "https://genboree.org/cfde-gene-dev/uiapi-docs",
     "name": "CFDE GeneReg Linked Data Hub",
@@ -696,6 +705,51 @@
     "url": "https://github.com/jiaweixu98/cm4ai-teaming-recommendation",
     "dir": "https://github.com/jiaweixu98cm4ai-teaming-recommendation",
     "name": "Bridge2AI CM4AI DGP Teaming recommendation algorithms",
+    "ext": "",
+    "type": "ETL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://ldh.genome.network/cfde/ldh/Gene/id/",
+    "dir": "https://ldh.genome.network/cfde/ldh/Geneid",
+    "name": "CFDE Gene Regulatory Elements",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://ldh.genome.network/cfde/ldh/Gene/id/{GENE_NAME}",
+    "dir": "https://ldh.genome.network/cfde/ldh/Gene/id{GENE_NAME}",
+    "name": "CFDE Gene Regulatory Elements",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/MaayanLab/LINCS-metadata/tree/main/scripts",
+    "dir": "https://github.com/MaayanLab/LINCS-metadata/tree/mainscripts",
+    "name": "LINCS_C2M2_Metadata_ETL_Scripts",
+    "ext": "",
+    "type": "ETL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/MaayanLab/LINCS-metadata",
+    "dir": "https://github.com/MaayanLabLINCS-metadata",
+    "name": "LINCS_C2M2_Metadata_ETL_Scripts",
+    "ext": "",
+    "type": "ETL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/idekerlab/cellmaps_utils/tree/c2m2/cellmaps_utils",
+    "dir": "https://github.com/idekerlab/cellmaps_utils/tree/c2m2cellmaps_utils",
+    "name": "C2M2Creator",
     "ext": "",
     "type": "ETL",
     "date": "",

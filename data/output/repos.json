@@ -13,17 +13,25 @@
       {
         "state": "open",
         "stateReason": null,
-        "created": "2024-11-22T22:11:54Z",
-        "modified": "2024-11-22T22:12:01Z",
+        "created": "2024-12-10T19:32:58Z",
+        "modified": "2024-12-11T17:43:59Z",
         "closed": null,
+        "labels": []
+      },
+      {
+        "state": "closed",
+        "stateReason": "completed",
+        "created": "2024-11-22T22:11:54Z",
+        "modified": "2024-12-11T17:40:17Z",
+        "closed": "2024-12-11T17:40:17Z",
         "labels": ["enhancement"]
       },
       {
-        "state": "open",
-        "stateReason": null,
+        "state": "closed",
+        "stateReason": "completed",
         "created": "2024-11-14T18:43:27Z",
-        "modified": "2024-11-14T18:43:27Z",
-        "closed": null,
+        "modified": "2024-12-11T17:40:17Z",
+        "closed": "2024-12-11T17:40:17Z",
         "labels": ["enhancement"]
       },
       {
@@ -35,19 +43,19 @@
         "labels": ["enhancement"]
       },
       {
-        "state": "open",
-        "stateReason": null,
+        "state": "closed",
+        "stateReason": "completed",
         "created": "2024-10-09T15:12:41Z",
-        "modified": "2024-10-09T15:12:46Z",
-        "closed": null,
+        "modified": "2024-12-11T17:40:17Z",
+        "closed": "2024-12-11T17:40:17Z",
         "labels": ["enhancement"]
       },
       {
-        "state": "open",
-        "stateReason": null,
+        "state": "closed",
+        "stateReason": "completed",
         "created": "2024-09-25T15:18:13Z",
-        "modified": "2024-11-26T20:34:39Z",
-        "closed": null,
+        "modified": "2024-12-11T17:40:16Z",
+        "closed": "2024-12-11T17:40:16Z",
         "labels": ["enhancement"]
       },
       {
@@ -59,11 +67,11 @@
         "labels": ["enhancement"]
       },
       {
-        "state": "open",
-        "stateReason": null,
+        "state": "closed",
+        "stateReason": "completed",
         "created": "2024-07-29T17:54:56Z",
-        "modified": "2024-11-25T19:36:29Z",
-        "closed": null,
+        "modified": "2024-12-11T17:40:16Z",
+        "closed": "2024-12-11T17:40:16Z",
         "labels": ["enhancement"]
       },
       {
@@ -155,16 +163,16 @@
         "labels": []
       }
     ],
-    "openIssues": 8,
-    "closedIssues": 10,
-    "issueTimeOpen": 4817738,
+    "openIssues": 4,
+    "closedIssues": 15,
+    "issueTimeOpen": 4985641,
     "pullRequests": [
       {
-        "state": "open",
+        "state": "closed",
         "stateReason": "",
         "created": "2024-11-27T15:47:56Z",
-        "modified": "2024-11-27T18:42:33Z",
-        "closed": null,
+        "modified": "2024-12-11T17:40:17Z",
+        "closed": "2024-12-11T17:40:15Z",
         "labels": []
       },
       {
@@ -256,10 +264,28 @@
         "labels": []
       }
     ],
-    "openPullRequests": 1,
-    "closedPullRequests": 11,
-    "pullRequestTimeOpen": 558656,
+    "openPullRequests": 0,
+    "closedPullRequests": 12,
+    "pullRequestTimeOpen": 623166,
     "commits": [
+      "2024-12-16T18:01:47Z",
+      "2024-12-16T17:32:59Z",
+      "2024-12-16T00:22:29Z",
+      "2024-12-15T00:22:25Z",
+      "2024-12-14T00:20:55Z",
+      "2024-12-13T00:20:56Z",
+      "2024-12-12T00:20:21Z",
+      "2024-12-11T17:42:16Z",
+      "2024-12-11T17:40:15Z",
+      "2024-12-11T00:24:31Z",
+      "2024-12-10T00:25:01Z",
+      "2024-12-09T00:25:32Z",
+      "2024-12-08T00:27:25Z",
+      "2024-12-07T00:23:34Z",
+      "2024-12-06T00:23:52Z",
+      "2024-12-05T00:23:36Z",
+      "2024-12-04T00:23:35Z",
+      "2024-12-03T00:24:31Z",
       "2024-12-02T00:24:53Z",
       "2024-12-01T00:27:30Z",
       "2024-11-30T00:23:46Z",
@@ -361,29 +387,71 @@
       "2024-05-31T14:46:26Z"
     ],
     "contributors": [
-      { "name": "vincerubinetti", "contributions": 35 },
+      { "name": "vincerubinetti", "contributions": 38 },
       { "name": "seandavi", "contributions": 2 },
       { "name": "cgreene", "contributions": 1 }
     ],
     "languages": [
-      { "language": "TypeScript", "count": 80429 },
-      { "language": "Vue", "count": 44286 },
-      { "language": "CSS", "count": 5391 },
+      { "language": "TypeScript", "count": 85279 },
+      { "language": "Vue", "count": 47199 },
+      { "language": "CSS", "count": 5456 },
       { "language": "JavaScript", "count": 2426 },
       { "language": "HTML", "count": 1072 },
-      { "language": "Shell", "count": 749 }
+      { "language": "Shell", "count": 757 }
     ],
     "created": "2024-05-31T14:46:25Z",
-    "modified": "2024-12-02T00:24:55Z",
+    "modified": "2024-12-16T18:01:49Z",
     "license": "",
     "readme": true,
     "contributing": false,
     "dependencies": {
-      "app/package.json": 30,
-      "data/package.json": 29,
+      "app/package.json": 31,
+      "data/package.json": 26,
       ".github/workflows/pipeline.yaml": 7,
       ".github/workflows/test.yaml": 4
     }
+  },
+  {
+    "coreProject": "U54OD036472",
+    "id": 901913204,
+    "owner": "nih-cfde",
+    "name": "icc-eval-reports",
+    "description": "Reporting infrastructure for CFDE Centers, DCCs, and Partnerships",
+    "topics": [],
+    "stars": [],
+    "watchers": 0,
+    "forks": [],
+    "issues": [],
+    "openIssues": 0,
+    "closedIssues": 0,
+    "issueTimeOpen": 0,
+    "pullRequests": [],
+    "openPullRequests": 0,
+    "closedPullRequests": 0,
+    "pullRequestTimeOpen": 0,
+    "commits": [
+      "2024-12-11T22:19:20Z",
+      "2024-12-11T22:18:40Z",
+      "2024-12-11T15:05:57Z",
+      "2024-12-11T14:57:21Z",
+      "2024-12-11T14:56:40Z",
+      "2024-12-11T14:56:16Z",
+      "2024-12-11T14:47:39Z",
+      "2024-12-11T14:43:35Z",
+      "2024-12-11T14:43:04Z",
+      "2024-12-11T14:23:52Z",
+      "2024-12-11T14:23:32Z",
+      "2024-12-11T14:03:56Z",
+      "2024-12-11T13:45:58Z"
+    ],
+    "contributors": [{ "name": "seandavi", "contributions": 13 }],
+    "languages": [{ "language": "TeX", "count": 417 }],
+    "created": "2024-12-11T14:50:26Z",
+    "modified": "2024-12-11T22:19:26Z",
+    "license": "",
+    "readme": false,
+    "contributing": false,
+    "dependencies": {}
   },
   {
     "coreProject": "OT2OD036440",
@@ -832,7 +900,7 @@
     ],
     "openPullRequests": 2,
     "closedPullRequests": 50,
-    "pullRequestTimeOpen": 1558798,
+    "pullRequestTimeOpen": 1605257,
     "commits": [
       "2024-10-16T15:46:23Z",
       "2024-10-16T15:45:14Z",
@@ -1479,7 +1547,7 @@
       { "language": "Dockerfile", "count": 1144 }
     ],
     "created": "2019-11-11T19:59:39Z",
-    "modified": "2024-10-16T15:46:23Z",
+    "modified": "2024-12-13T15:41:57Z",
     "license": "BSD 3-Clause \"New\" or \"Revised\" License",
     "readme": true,
     "contributing": false,

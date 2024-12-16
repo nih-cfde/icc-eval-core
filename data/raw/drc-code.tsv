@@ -46,6 +46,7 @@ API	SenNet Search API	https://search.api.sennetconsortium.org	The SenNet Search 
 API	SenNet Entity API	https://entity.api.sennetconsortium.org	The SenNet Entity API is a standard RESTful web service with create, update and read operations for the standard SenNet provenance graph entities.	False	True	https://smart-api.info/ui/7d838c9dee0caa2f8fe57173282c5812	
 Apps URL	SenNet Exploration User Interface	https://data.sennetconsortium.org/ccf-eui		False	False		
 Apps URL	LINCS Tools Marketplace	https://lincsproject.org/LINCS/tools	The LINCS Tools Marketplace page serves a listing of applications produced  using LINCS datasets by the LINCS consortium. 	False	False		
+API	FAIRshake	https://fairshake.cloud		True	True	https://smart-api.info/ui/8113167e81987d36b707ae4aa795b17e	
 API	CFDE GeneReg Linked Data Hub	https://genboree.org/cfde-gene-dev/ui/api-docs		False	False		
 API	Allele Registry	https://reg.clinicalgenome.org/doc/		False	False		
 API	Linked Data Hub	https://ldh.clinicalgenome.org/ldh/ui/api-docs		False	False		
@@ -77,6 +78,11 @@ Entity Page Template	Harmonizome Example (ACE2)	https://maayanlab.cloud/Harmoniz
 Entity Page Template	Drugmonizome Template	https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={"limit":10,"search":["<DRUG_NAME>"]}	Template drug page URL for Drugmonizome	False	False		
 Entity Page Template	Drugmonizome Example (Imatinib)	https://maayanlab.cloud/drugmonizome/#/TermSearch/Small%20molecules?query={"limit":10,"search":["Imatinib"]}	Example drug page for imatinib in Drugmonizome	False	False		
 ETL	Bridge2AI CM4AI DGP Teaming recommendation algorithms	https://github.com/jiaweixu98/cm4ai-teaming-recommendation	Bridge2AI CM4AI Data Generation Project. Teaming recommendation algorithms.	False	False		
+Entity Page Template	CFDE Gene Regulatory Elements	https://ldh.genome.network/cfde/ldh/Gene/id/		False	False		https://ldh.genome.network/cfde/ldh/Gene/id/A1CF
+Entity Page Template	CFDE Gene Regulatory Elements	https://ldh.genome.network/cfde/ldh/Gene/id/{GENE_NAME}		False	False		https://ldh.genome.network/cfde/ldh/Gene/id/A1CF
+ETL	LINCS_C2M2_Metadata_ETL_Scripts	https://github.com/MaayanLab/LINCS-metadata/tree/main/scripts	GitHub repo containing ETL scripts to convert the LINCS metadata into C2M2 data packages.	False	False		
+ETL	LINCS_C2M2_Metadata_ETL_Scripts	https://github.com/MaayanLab/LINCS-metadata	GitHub repo that contains scripts to convert the LINCS metadata into C2M2 packages. 	False	False		
+ETL	C2M2Creator	https://github.com/idekerlab/cellmaps_utils/tree/c2m2/cellmaps_utils	Command line script to generate C2M2 data from CM4AI RO-Crates	False	False		
 API	GlyGen API	https://api.glygen.org/		True	False		
 PWB Metanodes	Variant	https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/variant.ts					
 PWB Metanodes	Regulatory Element	https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/regulatoryElement.ts					
