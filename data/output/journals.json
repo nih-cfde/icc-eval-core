@@ -36,16 +36,16 @@
     "issn": "26663899"
   },
   {
-    "id": "Communications biology",
-    "name": "Communications Biology",
-    "rank": 2.09,
-    "issn": "23993642"
-  },
-  {
     "id": "Alzheimer's & dementia : the journal of the Alzheimer's Association",
     "name": "Alzheimer's and Dementia",
     "rank": 3.226,
     "issn": "15525279"
+  },
+  {
+    "id": "Communications biology",
+    "name": "Communications Biology",
+    "rank": 2.09,
+    "issn": "23993642"
   },
   {
     "id": "Nature biotechnology",
@@ -54,16 +54,16 @@
     "issn": "15461696"
   },
   {
-    "id": "Briefings in bioinformatics",
-    "name": "Briefings in Bioinformatics",
-    "rank": 2.143,
-    "issn": "14774054"
-  },
-  {
     "id": "Research square",
     "name": "Research square",
     "rank": 0,
     "issn": "26935015"
+  },
+  {
+    "id": "Briefings in bioinformatics",
+    "name": "Briefings in Bioinformatics",
+    "rank": 2.143,
+    "issn": "14774054"
   },
   {
     "id": "Nature methods",
@@ -96,28 +96,22 @@
     "issn": "20461402"
   },
   {
-    "id": "Molecular cell",
-    "name": "Molecular Cell",
-    "rank": 9.332,
-    "issn": "10974164"
-  },
-  {
     "id": "Biomolecules",
     "name": "Biomolecules",
     "rank": 1.179,
     "issn": "2218273X"
   },
   {
+    "id": "Molecular cell",
+    "name": "Molecular Cell",
+    "rank": 9.332,
+    "issn": "10974164"
+  },
+  {
     "id": "Cancer cell",
     "name": "Cancer Cell",
     "rank": 17.507,
     "issn": "18783686"
-  },
-  {
-    "id": "Drug discovery today",
-    "name": "Drug Discovery Today",
-    "rank": 1.586,
-    "issn": "18785832"
   },
   {
     "id": "Frontiers in cell and developmental biology",
@@ -130,6 +124,12 @@
     "name": "Pharmaceuticals",
     "rank": 0.845,
     "issn": "14248247"
+  },
+  {
+    "id": "Drug discovery today",
+    "name": "Drug Discovery Today",
+    "rank": 1.586,
+    "issn": "18785832"
   },
   {
     "id": "Nature protocols",
@@ -179,13 +179,13 @@
     "rank": 1.062,
     "issn": "26736217"
   },
-  { "id": "Nature", "name": "Nature", "rank": 18.509, "issn": "14764687" },
   {
     "id": "Nature genetics",
     "name": "Nature Genetics",
     "rank": 17.3,
     "issn": "15461718"
   },
+  { "id": "Nature", "name": "Nature", "rank": 18.509, "issn": "14764687" },
   {
     "id": "Statistics in medicine",
     "name": "Statistics in Medicine",
@@ -223,16 +223,16 @@
     "issn": "21903948"
   },
   {
-    "id": "Cancer metastasis reviews",
-    "name": "Cancer and Metastasis Reviews",
-    "rank": 2.866,
-    "issn": "15737233"
-  },
-  {
     "id": "ACS applied materials & interfaces",
     "name": "ACS applied materials &amp; interfaces",
     "rank": 2.058,
     "issn": "19448252"
+  },
+  {
+    "id": "Cancer metastasis reviews",
+    "name": "Cancer and Metastasis Reviews",
+    "rank": 2.866,
+    "issn": "15737233"
   },
   {
     "id": "ACS applied bio materials",
@@ -301,16 +301,16 @@
     "issn": "24734284"
   },
   {
-    "id": "Cancer reports (Hoboken, N.J.)",
-    "name": "Cancer Reports",
-    "rank": 0.571,
-    "issn": "25738348"
-  },
-  {
     "id": "FEBS open bio",
     "name": "FEBS Open Bio",
     "rank": 0.789,
     "issn": "22115463"
+  },
+  {
+    "id": "Cancer reports (Hoboken, N.J.)",
+    "name": "Cancer Reports",
+    "rank": 0.571,
+    "issn": "25738348"
   },
   {
     "id": "BMC pharmacology & toxicology",
@@ -342,13 +342,13 @@
     "rank": 2.797,
     "issn": "26628457"
   },
-  { "id": "Cancers", "name": "Cancers", "rank": 1.391, "issn": "20726694" },
   {
     "id": "PeerJ. Computer science",
     "name": "PeerJ Computer Science",
     "rank": 0.876,
     "issn": "23765992"
   },
+  { "id": "Cancers", "name": "Cancers", "rank": 1.391, "issn": "20726694" },
   {
     "id": "Communications medicine",
     "name": "Communications medicine",
@@ -381,12 +381,6 @@
     "issn": "20524463"
   },
   {
-    "id": "Biophysical journal",
-    "name": "Biophysical Journal",
-    "rank": 1.188,
-    "issn": "15420086"
-  },
-  {
     "id": "Cell reports",
     "name": "Cell Reports",
     "rank": 4.279,
@@ -403,6 +397,12 @@
     "name": "Journal of Alzheimer's Disease Reports",
     "rank": 0.635,
     "issn": "25424823"
+  },
+  {
+    "id": "Biophysical journal",
+    "name": "Biophysical Journal",
+    "rank": 1.188,
+    "issn": "15420086"
   },
   { "id": "eLife", "name": "eLife", "rank": 3.932, "issn": "2050084X" },
   {
@@ -442,6 +442,12 @@
     "issn": "25225812"
   },
   {
+    "id": "Frontiers in microbiology",
+    "name": "Ca-A Cancer Journal for Clinicians",
+    "rank": 106.094,
+    "issn": ""
+  },
+  {
     "id": "Frontiers in endocrinology",
     "name": "Ca-A Cancer Journal for Clinicians",
     "rank": 106.094,
@@ -452,12 +458,6 @@
     "name": "Toxicological Sciences",
     "rank": 0.911,
     "issn": "10960929"
-  },
-  {
-    "id": "Frontiers in microbiology",
-    "name": "Ca-A Cancer Journal for Clinicians",
-    "rank": 106.094,
-    "issn": ""
   },
   {
     "id": "International journal of tryptophan research : IJTR",

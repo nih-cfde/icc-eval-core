@@ -1,5 +1,60 @@
 [
   {
+    "property": "properties/468624767",
+    "propertyName": "ICC-eval-core-dashboard",
+    "coreProject": "U54OD036472",
+    "overTime": {
+      "activeUsers": { "2024-12-12": 4, "2024-12-13": 7 },
+      "newUsers": { "2024-12-12": 4, "2024-12-13": 7 },
+      "engagedSessions": { "2024-12-13": 2 }
+    },
+    "topContinents": {
+      "byActiveUsers": { "Americas": 11 },
+      "byNewUsers": { "Americas": 11 },
+      "byEngagedSessions": { "Americas": 2 }
+    },
+    "topCountries": {
+      "byActiveUsers": { "United States": 11 },
+      "byNewUsers": { "United States": 11 },
+      "byEngagedSessions": { "United States": 2 }
+    },
+    "topRegions": {
+      "byActiveUsers": { "(not set)": 6, "Virginia": 3, "Maryland": 2 },
+      "byNewUsers": { "(not set)": 6, "Virginia": 3, "Maryland": 2 },
+      "byEngagedSessions": { "Maryland": 2 }
+    },
+    "topCities": {
+      "byActiveUsers": {
+        "(not set)": 8,
+        "Arlington": 1,
+        "Bethesda": 1,
+        "Ellicott City": 1
+      },
+      "byNewUsers": {
+        "(not set)": 8,
+        "Arlington": 1,
+        "Bethesda": 1,
+        "Ellicott City": 1
+      },
+      "byEngagedSessions": { "Bethesda": 1, "Ellicott City": 1 }
+    },
+    "topLanguages": {
+      "byActiveUsers": { "English": 11 },
+      "byNewUsers": { "English": 11 },
+      "byEngagedSessions": { "English": 2 }
+    },
+    "topDevices": {
+      "byActiveUsers": { "desktop": 11 },
+      "byNewUsers": { "desktop": 11 },
+      "byEngagedSessions": { "desktop": 2 }
+    },
+    "topOSes": {
+      "byActiveUsers": { "Windows": 10, "Macintosh": 1 },
+      "byNewUsers": { "Windows": 10, "Macintosh": 1 },
+      "byEngagedSessions": { "Macintosh": 1, "Windows": 1 }
+    }
+  },
+  {
     "property": "properties/470063880",
     "propertyName": "CFDE Website",
     "coreProject": "U54OD03647202",

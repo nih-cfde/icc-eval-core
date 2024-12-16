@@ -1,5 +1,653 @@
 [
   {
+    "property": "properties/468624767",
+    "propertyName": "ICC-eval-core-dashboard",
+    "coreProject": "U54OD036472",
+    "overTime": {
+      "dateRange": { "startDate": "2015-08-14", "endDate": "2024-12-16" },
+      "result": {
+        "dimensionHeaders": [{ "name": "date" }],
+        "metricHeaders": [
+          { "name": "activeUsers", "type": "TYPE_INTEGER" },
+          { "name": "newUsers", "type": "TYPE_INTEGER" },
+          { "name": "engagedSessions", "type": "TYPE_INTEGER" }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "20241212", "oneValue": "value" }],
+            "metricValues": [
+              { "value": "4", "oneValue": "value" },
+              { "value": "4", "oneValue": "value" },
+              { "value": "0", "oneValue": "value" }
+            ]
+          },
+          {
+            "dimensionValues": [{ "value": "20241213", "oneValue": "value" }],
+            "metricValues": [
+              { "value": "7", "oneValue": "value" },
+              { "value": "7", "oneValue": "value" },
+              { "value": "2", "oneValue": "value" }
+            ]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 2,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      }
+    },
+    "topContinents": [
+      {
+        "dimensionHeaders": [{ "name": "continent" }],
+        "metricHeaders": [{ "name": "activeUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "Americas", "oneValue": "value" }],
+            "metricValues": [{ "value": "11", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "continent" }],
+        "metricHeaders": [{ "name": "newUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "Americas", "oneValue": "value" }],
+            "metricValues": [{ "value": "11", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "continent" }],
+        "metricHeaders": [
+          { "name": "engagedSessions", "type": "TYPE_INTEGER" }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "Americas", "oneValue": "value" }],
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      }
+    ],
+    "topCountries": [
+      {
+        "dimensionHeaders": [{ "name": "country" }],
+        "metricHeaders": [{ "name": "activeUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [
+              { "value": "United States", "oneValue": "value" }
+            ],
+            "metricValues": [{ "value": "11", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "country" }],
+        "metricHeaders": [{ "name": "newUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [
+              { "value": "United States", "oneValue": "value" }
+            ],
+            "metricValues": [{ "value": "11", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "country" }],
+        "metricHeaders": [
+          { "name": "engagedSessions", "type": "TYPE_INTEGER" }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [
+              { "value": "United States", "oneValue": "value" }
+            ],
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      }
+    ],
+    "topRegions": [
+      {
+        "dimensionHeaders": [{ "name": "region" }],
+        "metricHeaders": [{ "name": "activeUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "(not set)", "oneValue": "value" }],
+            "metricValues": [{ "value": "6", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Virginia", "oneValue": "value" }],
+            "metricValues": [{ "value": "3", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Maryland", "oneValue": "value" }],
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 3,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "region" }],
+        "metricHeaders": [{ "name": "newUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "(not set)", "oneValue": "value" }],
+            "metricValues": [{ "value": "6", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Virginia", "oneValue": "value" }],
+            "metricValues": [{ "value": "3", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Maryland", "oneValue": "value" }],
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 3,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "region" }],
+        "metricHeaders": [
+          { "name": "engagedSessions", "type": "TYPE_INTEGER" }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "Maryland", "oneValue": "value" }],
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      }
+    ],
+    "topCities": [
+      {
+        "dimensionHeaders": [{ "name": "city" }],
+        "metricHeaders": [{ "name": "activeUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "(not set)", "oneValue": "value" }],
+            "metricValues": [{ "value": "8", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Arlington", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Bethesda", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [
+              { "value": "Ellicott City", "oneValue": "value" }
+            ],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 4,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "city" }],
+        "metricHeaders": [{ "name": "newUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "(not set)", "oneValue": "value" }],
+            "metricValues": [{ "value": "8", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Arlington", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Bethesda", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [
+              { "value": "Ellicott City", "oneValue": "value" }
+            ],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 4,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "city" }],
+        "metricHeaders": [
+          { "name": "engagedSessions", "type": "TYPE_INTEGER" }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "Bethesda", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [
+              { "value": "Ellicott City", "oneValue": "value" }
+            ],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 2,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      }
+    ],
+    "topLanguages": [
+      {
+        "dimensionHeaders": [{ "name": "language" }],
+        "metricHeaders": [{ "name": "activeUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "English", "oneValue": "value" }],
+            "metricValues": [{ "value": "11", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "language" }],
+        "metricHeaders": [{ "name": "newUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "English", "oneValue": "value" }],
+            "metricValues": [{ "value": "11", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "language" }],
+        "metricHeaders": [
+          { "name": "engagedSessions", "type": "TYPE_INTEGER" }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "English", "oneValue": "value" }],
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      }
+    ],
+    "topDevices": [
+      {
+        "dimensionHeaders": [{ "name": "deviceCategory" }],
+        "metricHeaders": [{ "name": "activeUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "desktop", "oneValue": "value" }],
+            "metricValues": [{ "value": "11", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "deviceCategory" }],
+        "metricHeaders": [{ "name": "newUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "desktop", "oneValue": "value" }],
+            "metricValues": [{ "value": "11", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "deviceCategory" }],
+        "metricHeaders": [
+          { "name": "engagedSessions", "type": "TYPE_INTEGER" }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "desktop", "oneValue": "value" }],
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 1,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      }
+    ],
+    "topOSes": [
+      {
+        "dimensionHeaders": [{ "name": "operatingSystem" }],
+        "metricHeaders": [{ "name": "activeUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "Windows", "oneValue": "value" }],
+            "metricValues": [{ "value": "10", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Macintosh", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 2,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "operatingSystem" }],
+        "metricHeaders": [{ "name": "newUsers", "type": "TYPE_INTEGER" }],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "Windows", "oneValue": "value" }],
+            "metricValues": [{ "value": "10", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Macintosh", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 2,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      },
+      {
+        "dimensionHeaders": [{ "name": "operatingSystem" }],
+        "metricHeaders": [
+          { "name": "engagedSessions", "type": "TYPE_INTEGER" }
+        ],
+        "rows": [
+          {
+            "dimensionValues": [{ "value": "Macintosh", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          },
+          {
+            "dimensionValues": [{ "value": "Windows", "oneValue": "value" }],
+            "metricValues": [{ "value": "1", "oneValue": "value" }]
+          }
+        ],
+        "totals": [],
+        "maximums": [],
+        "minimums": [],
+        "rowCount": 2,
+        "metadata": {
+          "samplingMetadatas": [],
+          "dataLossFromOtherRow": false,
+          "currencyCode": "USD",
+          "_currencyCode": "currencyCode",
+          "timeZone": "America/Los_Angeles",
+          "_timeZone": "timeZone"
+        },
+        "propertyQuota": null,
+        "kind": "analyticsData#runReport"
+      }
+    ]
+  },
+  {
     "property": "properties/470063880",
     "propertyName": "CFDE Website",
     "coreProject": "U54OD03647202",
