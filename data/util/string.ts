@@ -13,6 +13,9 @@ export const count = (value: unknown) => {
   return String(value);
 };
 
+/** case insensitive match */
+export const match = (a: string, b: string) => !!a.match(new RegExp(b, "i"));
+
 /** format bytes */
 export const bytes = (bytes: number) => {
   const units = ["B", "KB", "MB", "GB"];

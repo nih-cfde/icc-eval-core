@@ -5,7 +5,7 @@ on:
     inputs:
       cache:
         type: boolean
-        description: Use cache (files in /raw)
+        description: Use cache
         default: false
 
   schedule:

@@ -9,6 +9,7 @@ import { getRepos } from "@/ingest/repos";
 import { browser } from "@/util/browser";
 import { saveFile } from "@/util/file";
 import { divider } from "@/util/log";
+import { match } from "@/util/string";
 
 const { RAW_PATH, OUTPUT_PATH } = process.env;
 
@@ -49,14 +50,14 @@ const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
 divider("Supplemental counts");
 
 for (const coreProject of coreProjects) {
-  coreProject.publications = publications.filter(
-    (publication) => publication.coreProject === coreProject.id,
+  coreProject.publications = publications.filter((publication) =>
+    match(publication.coreProject, coreProject.id),
   ).length;
-  coreProject.analytics = analytics.filter(
-    (analytic) => analytic.coreProject === coreProject.id,
+  coreProject.analytics = analytics.filter((analytic) =>
+    match(analytic.coreProject, coreProject.id),
   ).length;
-  coreProject.repos = repos.filter(
-    (repo) => repo.coreProject === coreProject.id,
+  coreProject.repos = repos.filter((repo) =>
+    match(repo.coreProject, coreProject.id),
   ).length;
 }
 

@@ -108,8 +108,7 @@ The automated steps in this repo are roughly as follows:
   - `/public/pdfs` - Outputted PDF reports.
 - `/data` - All other functionality involving data (e.g. ingesting/collating/etc).
   - `/api` - Types and functions for getting raw data from external APIs.
-  - `/raw` - Raw data gathered from external sources.
-    Primarily for provenance, but also acts as ingest cache (delete files to re-fetch from external providers).
+  - `/raw` - Raw data gathered from external sources for provenance.
   - `/ingest` - Functions for scraping webpages and calling APIs, and collating that data into a common format.
   - `/output` - Collated data in format for making desired reports.
   - `/print` - Functions specific to making printed reports.
@@ -145,7 +144,7 @@ See readmes in sub folders for all commands.
 
 ## Environment variables
 
-- `CACHE` - Whether to use cached files in `/raw` to skip time-consuming network requests.
+- `CACHE` - Whether to use cached responses (stored in `/raw/cache.json`) to skip time-consuming network requests.
   Set to `true` (or any string) for true.
   Leave blank/unset for false.
   `false` by default.
