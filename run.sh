@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 data="npm run --prefix data"
 app="npm run --prefix app"
 

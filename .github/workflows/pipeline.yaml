@@ -54,7 +54,9 @@ jobs:
           touch data/.env.local
           ./run.sh
         env:
+          AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
+          AUTH_GOOGLE: ${{ secrets.AUTH_GOOGLE }}
           CACHE: ${{ inputs.cache && 'true' || '' }}
 
       - name: Commit results

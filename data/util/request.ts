@@ -46,6 +46,11 @@ export const request: Request = async <Parsed>(
   });
   let response = await fetch(request);
 
+  /** truncate params for logging */
+  url.searchParams.forEach((value, key) =>
+    url.searchParams.set(key, truncate(value, { length: 20 })),
+  );
+
   /** if rate limited, retry a few times */
   let retry = 5;
   while (response.status === 429 && retry-- > 0) {
@@ -63,7 +68,7 @@ export const request: Request = async <Parsed>(
     if (options.parse === "text") return (await response.text()) as Parsed;
     throw Error();
   } catch (error) {
-    throw Error(`Problem parsing ${url.pathname} as ${options.parse}`);
+    throw Error(`Problem parsing ${url} as ${options.parse}`);
   }
 };
 
