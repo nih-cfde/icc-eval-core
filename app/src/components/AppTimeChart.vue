@@ -164,7 +164,6 @@ watchEffect(() => {
 
   options.value.series = [
     {
-      showSymbol: false,
       areaStyle: {
         color: theme,
         opacity: 0.25,
