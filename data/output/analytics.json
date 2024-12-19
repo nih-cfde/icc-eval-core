@@ -80,43 +80,53 @@
     "propertyName": "CFDE Website",
     "coreProject": "U54OD03647202",
     "overTime": {
-      "activeUsers": { "2024-12-11": 2, "2024-12-13": 1, "2024-12-14": 4 },
-      "newUsers": { "2024-12-11": 2, "2024-12-13": 1, "2024-12-14": 4 },
+      "activeUsers": {
+        "2024-12-11": 2,
+        "2024-12-13": 1,
+        "2024-12-14": 4,
+        "2024-12-17": 1
+      },
+      "newUsers": {
+        "2024-12-11": 2,
+        "2024-12-13": 1,
+        "2024-12-14": 4,
+        "2024-12-17": 1
+      },
       "engagedSessions": { "2024-12-14": 1 }
     },
     "topContinents": {
-      "byActiveUsers": { "(not set)": 3, "Americas": 3, "Asia": 1 },
-      "byNewUsers": { "(not set)": 3, "Americas": 3, "Asia": 1 },
+      "byActiveUsers": { "Americas": 4, "(not set)": 3, "Asia": 1 },
+      "byNewUsers": { "Americas": 4, "(not set)": 3, "Asia": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topCountries": {
-      "byActiveUsers": { "(not set)": 3, "United States": 3, "India": 1 },
-      "byNewUsers": { "(not set)": 3, "United States": 3, "India": 1 },
+      "byActiveUsers": { "United States": 4, "(not set)": 3, "India": 1 },
+      "byNewUsers": { "United States": 4, "(not set)": 3, "India": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topRegions": {
-      "byActiveUsers": { "(not set)": 7 },
-      "byNewUsers": { "(not set)": 7 },
+      "byActiveUsers": { "(not set)": 7, "Oregon": 1 },
+      "byNewUsers": { "(not set)": 7, "Oregon": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topCities": {
-      "byActiveUsers": { "(not set)": 7 },
-      "byNewUsers": { "(not set)": 7 },
+      "byActiveUsers": { "(not set)": 7, "Boardman": 1 },
+      "byNewUsers": { "(not set)": 7, "Boardman": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topLanguages": {
-      "byActiveUsers": { "English": 7 },
-      "byNewUsers": { "English": 7 },
+      "byActiveUsers": { "English": 8 },
+      "byNewUsers": { "English": 8 },
       "byEngagedSessions": { "English": 1 }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 4, "mobile": 3 },
-      "byNewUsers": { "desktop": 4, "mobile": 3 },
+      "byActiveUsers": { "desktop": 5, "mobile": 3 },
+      "byNewUsers": { "desktop": 5, "mobile": 3 },
       "byEngagedSessions": { "desktop": 1 }
     },
     "topOSes": {
-      "byActiveUsers": { "Windows": 3, "Android": 2, "Linux": 1, "iOS": 1 },
-      "byNewUsers": { "Windows": 3, "Android": 2, "Linux": 1, "iOS": 1 },
+      "byActiveUsers": { "Windows": 4, "Android": 2, "Linux": 1, "iOS": 1 },
+      "byNewUsers": { "Windows": 4, "Android": 2, "Linux": 1, "iOS": 1 },
       "byEngagedSessions": { "Linux": 1 }
     }
   }
