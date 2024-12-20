@@ -4,75 +4,92 @@
     "propertyName": "ICC-eval-core-dashboard",
     "coreProject": "U54OD036472",
     "overTime": {
-      "activeUsers": { "2024-12-12": 4, "2024-12-13": 7, "2024-12-16": 5 },
-      "newUsers": { "2024-12-12": 4, "2024-12-13": 7, "2024-12-16": 4 },
-      "engagedSessions": { "2024-12-13": 2, "2024-12-16": 2 }
+      "activeUsers": {
+        "2024-12-12": 4,
+        "2024-12-13": 7,
+        "2024-12-16": 5,
+        "2024-12-18": 4
+      },
+      "newUsers": {
+        "2024-12-12": 4,
+        "2024-12-13": 7,
+        "2024-12-16": 4,
+        "2024-12-18": 4
+      },
+      "engagedSessions": { "2024-12-13": 2, "2024-12-16": 2, "2024-12-18": 2 }
     },
     "topContinents": {
-      "byActiveUsers": { "Americas": 14, "(not set)": 1 },
-      "byNewUsers": { "Americas": 14, "(not set)": 1 },
-      "byEngagedSessions": { "Americas": 4 }
+      "byActiveUsers": { "Americas": 18, "(not set)": 1 },
+      "byNewUsers": { "Americas": 18, "(not set)": 1 },
+      "byEngagedSessions": { "Americas": 6 }
     },
     "topCountries": {
-      "byActiveUsers": { "United States": 14, "(not set)": 1 },
-      "byNewUsers": { "United States": 14, "(not set)": 1 },
-      "byEngagedSessions": { "United States": 4 }
+      "byActiveUsers": { "United States": 18, "(not set)": 1 },
+      "byNewUsers": { "United States": 18, "(not set)": 1 },
+      "byEngagedSessions": { "United States": 6 }
     },
     "topRegions": {
       "byActiveUsers": {
         "(not set)": 7,
         "Virginia": 5,
-        "Maryland": 2,
-        "Pennsylvania": 1
+        "Maryland": 3,
+        "Colorado": 2,
+        "Massachusetts": 1
       },
       "byNewUsers": {
         "(not set)": 7,
         "Virginia": 5,
-        "Maryland": 2,
-        "Pennsylvania": 1
+        "Maryland": 3,
+        "Colorado": 2,
+        "Massachusetts": 1
       },
-      "byEngagedSessions": { "Maryland": 3, "Pennsylvania": 1 }
+      "byEngagedSessions": {
+        "Maryland": 4,
+        "Massachusetts": 1,
+        "Pennsylvania": 1
+      }
     },
     "topCities": {
       "byActiveUsers": {
         "(not set)": 9,
+        "Bethesda": 2,
         "Boydton": 2,
-        "Arlington": 1,
-        "Bethesda": 1,
-        "Ellicott City": 1
+        "Denver": 2,
+        "Arlington": 1
       },
       "byNewUsers": {
         "(not set)": 9,
+        "Bethesda": 2,
         "Boydton": 2,
-        "Arlington": 1,
-        "Bethesda": 1,
-        "Ellicott City": 1
+        "Denver": 2,
+        "Arlington": 1
       },
       "byEngagedSessions": {
+        "Bethesda": 2,
         "Ellicott City": 2,
-        "Bethesda": 1,
-        "Philadelphia": 1
+        "Philadelphia": 1,
+        "Somerville": 1
       }
     },
     "topLanguages": {
-      "byActiveUsers": { "English": 15 },
-      "byNewUsers": { "English": 15 },
-      "byEngagedSessions": { "English": 4 }
+      "byActiveUsers": { "English": 19 },
+      "byNewUsers": { "English": 19 },
+      "byEngagedSessions": { "English": 6 }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 13, "mobile": 2 },
-      "byNewUsers": { "desktop": 13, "mobile": 2 },
-      "byEngagedSessions": { "desktop": 3, "mobile": 1 }
+      "byActiveUsers": { "desktop": 17, "mobile": 2 },
+      "byNewUsers": { "desktop": 17, "mobile": 2 },
+      "byEngagedSessions": { "desktop": 5, "mobile": 1 }
     },
     "topOSes": {
       "byActiveUsers": {
-        "Windows": 12,
+        "Windows": 14,
+        "Macintosh": 3,
         "Android": 1,
-        "Macintosh": 1,
         "iOS": 1
       },
-      "byNewUsers": { "Windows": 12, "Android": 1, "Macintosh": 1, "iOS": 1 },
-      "byEngagedSessions": { "Macintosh": 2, "Windows": 1, "iOS": 1 }
+      "byNewUsers": { "Windows": 14, "Macintosh": 3, "Android": 1, "iOS": 1 },
+      "byEngagedSessions": { "Macintosh": 3, "Windows": 2, "iOS": 1 }
     }
   },
   {
