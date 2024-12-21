@@ -8,39 +8,41 @@
         "2024-12-12": 4,
         "2024-12-13": 7,
         "2024-12-16": 5,
-        "2024-12-18": 4
+        "2024-12-18": 4,
+        "2024-12-19": 1
       },
       "newUsers": {
         "2024-12-12": 4,
         "2024-12-13": 7,
         "2024-12-16": 4,
-        "2024-12-18": 4
+        "2024-12-18": 4,
+        "2024-12-19": 1
       },
       "engagedSessions": { "2024-12-13": 2, "2024-12-16": 2, "2024-12-18": 2 }
     },
     "topContinents": {
-      "byActiveUsers": { "Americas": 18, "(not set)": 1 },
-      "byNewUsers": { "Americas": 18, "(not set)": 1 },
+      "byActiveUsers": { "Americas": 19, "(not set)": 1 },
+      "byNewUsers": { "Americas": 19, "(not set)": 1 },
       "byEngagedSessions": { "Americas": 6 }
     },
     "topCountries": {
-      "byActiveUsers": { "United States": 18, "(not set)": 1 },
-      "byNewUsers": { "United States": 18, "(not set)": 1 },
+      "byActiveUsers": { "United States": 19, "(not set)": 1 },
+      "byNewUsers": { "United States": 19, "(not set)": 1 },
       "byEngagedSessions": { "United States": 6 }
     },
     "topRegions": {
       "byActiveUsers": {
         "(not set)": 7,
         "Virginia": 5,
+        "Colorado": 3,
         "Maryland": 3,
-        "Colorado": 2,
         "Massachusetts": 1
       },
       "byNewUsers": {
         "(not set)": 7,
         "Virginia": 5,
+        "Colorado": 3,
         "Maryland": 3,
-        "Colorado": 2,
         "Massachusetts": 1
       },
       "byEngagedSessions": {
@@ -72,23 +74,23 @@
       }
     },
     "topLanguages": {
-      "byActiveUsers": { "English": 19 },
-      "byNewUsers": { "English": 19 },
+      "byActiveUsers": { "English": 20 },
+      "byNewUsers": { "English": 20 },
       "byEngagedSessions": { "English": 6 }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 17, "mobile": 2 },
-      "byNewUsers": { "desktop": 17, "mobile": 2 },
+      "byActiveUsers": { "desktop": 18, "mobile": 2 },
+      "byNewUsers": { "desktop": 18, "mobile": 2 },
       "byEngagedSessions": { "desktop": 5, "mobile": 1 }
     },
     "topOSes": {
       "byActiveUsers": {
         "Windows": 14,
-        "Macintosh": 3,
+        "Macintosh": 4,
         "Android": 1,
         "iOS": 1
       },
-      "byNewUsers": { "Windows": 14, "Macintosh": 3, "Android": 1, "iOS": 1 },
+      "byNewUsers": { "Windows": 14, "Macintosh": 4, "Android": 1, "iOS": 1 },
       "byEngagedSessions": { "Macintosh": 3, "Windows": 2, "iOS": 1 }
     }
   },
@@ -101,49 +103,51 @@
         "2024-12-11": 2,
         "2024-12-13": 1,
         "2024-12-14": 4,
-        "2024-12-17": 1
+        "2024-12-17": 1,
+        "2024-12-19": 1
       },
       "newUsers": {
         "2024-12-11": 2,
         "2024-12-13": 1,
         "2024-12-14": 4,
-        "2024-12-17": 1
+        "2024-12-17": 1,
+        "2024-12-19": 1
       },
       "engagedSessions": { "2024-12-14": 1 }
     },
     "topContinents": {
-      "byActiveUsers": { "Americas": 4, "(not set)": 3, "Asia": 1 },
-      "byNewUsers": { "Americas": 4, "(not set)": 3, "Asia": 1 },
+      "byActiveUsers": { "Americas": 5, "(not set)": 3, "Asia": 1 },
+      "byNewUsers": { "Americas": 5, "(not set)": 3, "Asia": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topCountries": {
-      "byActiveUsers": { "United States": 4, "(not set)": 3, "India": 1 },
-      "byNewUsers": { "United States": 4, "(not set)": 3, "India": 1 },
+      "byActiveUsers": { "United States": 5, "(not set)": 3, "India": 1 },
+      "byNewUsers": { "United States": 5, "(not set)": 3, "India": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topRegions": {
-      "byActiveUsers": { "(not set)": 7, "Oregon": 1 },
-      "byNewUsers": { "(not set)": 7, "Oregon": 1 },
+      "byActiveUsers": { "(not set)": 7, "Illinois": 1, "Oregon": 1 },
+      "byNewUsers": { "(not set)": 7, "Illinois": 1, "Oregon": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topCities": {
-      "byActiveUsers": { "(not set)": 7, "Boardman": 1 },
-      "byNewUsers": { "(not set)": 7, "Boardman": 1 },
+      "byActiveUsers": { "(not set)": 7, "Boardman": 1, "Chicago": 1 },
+      "byNewUsers": { "(not set)": 7, "Boardman": 1, "Chicago": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topLanguages": {
-      "byActiveUsers": { "English": 8 },
-      "byNewUsers": { "English": 8 },
+      "byActiveUsers": { "English": 9 },
+      "byNewUsers": { "English": 9 },
       "byEngagedSessions": { "English": 1 }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 5, "mobile": 3 },
-      "byNewUsers": { "desktop": 5, "mobile": 3 },
+      "byActiveUsers": { "desktop": 5, "mobile": 4 },
+      "byNewUsers": { "desktop": 5, "mobile": 4 },
       "byEngagedSessions": { "desktop": 1 }
     },
     "topOSes": {
-      "byActiveUsers": { "Windows": 4, "Android": 2, "Linux": 1, "iOS": 1 },
-      "byNewUsers": { "Windows": 4, "Android": 2, "Linux": 1, "iOS": 1 },
+      "byActiveUsers": { "Windows": 4, "Android": 2, "iOS": 2, "Linux": 1 },
+      "byNewUsers": { "Windows": 4, "Android": 2, "iOS": 2, "Linux": 1 },
       "byEngagedSessions": { "Linux": 1 }
     }
   }
