@@ -54,16 +54,16 @@
     "issn": "26935015"
   },
   {
+    "id": "BMC bioinformatics",
+    "name": "BMC Bioinformatics",
+    "rank": 1.005,
+    "issn": "14712105"
+  },
+  {
     "id": "Nature biotechnology",
     "name": "Nature Biotechnology",
     "rank": 18.117,
     "issn": "15461696"
-  },
-  {
-    "id": "Briefings in bioinformatics",
-    "name": "Briefings in Bioinformatics",
-    "rank": 2.143,
-    "issn": "14774054"
   },
   {
     "id": "Analytical chemistry",
@@ -91,9 +91,9 @@
   },
   {
     "id": "Metabolites",
-    "name": "Ca-A Cancer Journal for Clinicians",
-    "rank": 106.094,
-    "issn": ""
+    "name": "Metabolites",
+    "rank": 0.903,
+    "issn": "22181989"
   },
   {
     "id": "Drug discovery today",
@@ -102,16 +102,22 @@
     "issn": "18785832"
   },
   {
+    "id": "Pharmaceuticals (Basel, Switzerland)",
+    "name": "Pharmaceuticals",
+    "rank": 0.845,
+    "issn": "14248247"
+  },
+  {
     "id": "Cancer cell",
     "name": "Cancer Cell",
     "rank": 17.507,
     "issn": "18783686"
   },
   {
-    "id": "Pharmaceuticals (Basel, Switzerland)",
-    "name": "Pharmaceuticals",
-    "rank": 0.845,
-    "issn": "14248247"
+    "id": "Biomolecules",
+    "name": "Biomolecules",
+    "rank": 1.179,
+    "issn": "2218273X"
   },
   {
     "id": "Frontiers in cell and developmental biology",
@@ -124,12 +130,6 @@
     "name": "Molecular Cell",
     "rank": 9.332,
     "issn": "10974164"
-  },
-  {
-    "id": "Biomolecules",
-    "name": "Biomolecules",
-    "rank": 1.179,
-    "issn": "2218273X"
   },
   {
     "id": "Journal of proteome research",
@@ -198,17 +198,12 @@
     "issn": "23973374"
   },
   {
-    "id": "Nature. Mental health",
-    "name": "Nature. Mental health",
-    "rank": 0,
-    "issn": "27316076"
-  },
-  {
     "id": "Frontiers in immunology",
     "name": "Frontiers in Immunology",
     "rank": 1.868,
     "issn": "16643224"
   },
+  { "id": "Nature", "name": "Nature", "rank": 18.509, "issn": "14764687" },
   {
     "id": "Biology open",
     "name": "Biology Open",
@@ -240,28 +235,28 @@
     "issn": "21903948"
   },
   {
-    "id": "ACS applied materials & interfaces",
-    "name": "ACS applied materials &amp; interfaces",
-    "rank": 2.058,
-    "issn": "19448252"
-  },
-  {
     "id": "Journal of controlled release : official journal of the Controlled Release Society",
     "name": "Journal of Controlled Release",
     "rank": 2.157,
     "issn": "18734995"
   },
   {
-    "id": "Cancer metastasis reviews",
-    "name": "Cancer and Metastasis Reviews",
-    "rank": 2.866,
-    "issn": "15737233"
+    "id": "ACS applied materials & interfaces",
+    "name": "ACS applied materials &amp; interfaces",
+    "rank": 2.058,
+    "issn": "19448252"
   },
   {
     "id": "Chemical communications (Cambridge, England)",
     "name": "Chemical Communications",
     "rank": 1.133,
     "issn": "1364548X"
+  },
+  {
+    "id": "Cancer metastasis reviews",
+    "name": "Cancer and Metastasis Reviews",
+    "rank": 2.866,
+    "issn": "15737233"
   },
   {
     "id": "Nucleic acids research",
@@ -288,16 +283,16 @@
     "issn": "20452322"
   },
   {
-    "id": "Molecular medicine (Cambridge, Mass.)",
-    "name": "Molecular Medicine",
-    "rank": 1.446,
-    "issn": "15283658"
-  },
-  {
     "id": "BMC pharmacology & toxicology",
     "name": "BMC pharmacology &amp; toxicology",
     "rank": 0.71,
     "issn": "20506511"
+  },
+  {
+    "id": "Molecular medicine (Cambridge, Mass.)",
+    "name": "Molecular Medicine",
+    "rank": 1.446,
+    "issn": "15283658"
   },
   {
     "id": "Biology of sex differences",
@@ -324,12 +319,6 @@
     "issn": "22115463"
   },
   {
-    "id": "BMC bioinformatics",
-    "name": "BMC Bioinformatics",
-    "rank": 1.005,
-    "issn": "14712105"
-  },
-  {
     "id": "American journal of human genetics",
     "name": "American Journal of Human Genetics",
     "rank": 4.516,
@@ -347,8 +336,8 @@
     "rank": 2.797,
     "issn": "26628457"
   },
-  { "id": "PeerJ", "name": "PeerJ", "rank": 0.623, "issn": "21678359" },
   { "id": "Cancers", "name": "Cancers", "rank": 1.391, "issn": "20726694" },
+  { "id": "PeerJ", "name": "PeerJ", "rank": 0.623, "issn": "21678359" },
   {
     "id": "Communications medicine",
     "name": "Communications medicine",
@@ -362,16 +351,16 @@
     "issn": "2666979X"
   },
   {
-    "id": "Current protocols",
-    "name": "Current Protocols",
-    "rank": 1.52,
-    "issn": "26911299"
-  },
-  {
     "id": "Bioinformatics advances",
     "name": "Bioinformatics Advances",
     "rank": 1.329,
     "issn": "26350041"
+  },
+  {
+    "id": "Current protocols",
+    "name": "Current Protocols",
+    "rank": 1.52,
+    "issn": "26911299"
   },
   { "id": "PloS one", "name": "PLoS ONE", "rank": 0.839, "issn": "19326203" },
   {
@@ -379,18 +368,6 @@
     "name": "Scientific data",
     "rank": 1.937,
     "issn": "20524463"
-  },
-  {
-    "id": "Nature metabolism",
-    "name": "Nature Metabolism",
-    "rank": 7.192,
-    "issn": "25225812"
-  },
-  {
-    "id": "Cell reports",
-    "name": "Cell Reports",
-    "rank": 4.279,
-    "issn": "22111247"
   },
   {
     "id": "Frontiers in microbiology",
@@ -403,6 +380,18 @@
     "name": "Biophysical Journal",
     "rank": 1.188,
     "issn": "15420086"
+  },
+  {
+    "id": "Nature metabolism",
+    "name": "Nature Metabolism",
+    "rank": 7.192,
+    "issn": "25225812"
+  },
+  {
+    "id": "Cell reports",
+    "name": "Cell Reports",
+    "rank": 4.279,
+    "issn": "22111247"
   },
   {
     "id": "Toxicological sciences : an official journal of the Society of Toxicology",
@@ -423,6 +412,12 @@
     "issn": "11786469"
   },
   {
+    "id": "Journal of Alzheimer's disease reports",
+    "name": "Journal of Alzheimer's Disease Reports",
+    "rank": 0.635,
+    "issn": "25424823"
+  },
+  {
     "id": "Frontiers in fungal biology",
     "name": "Frontiers in Fungal Biology",
     "rank": 0.491,
@@ -433,12 +428,6 @@
     "name": "Infection and Immunity",
     "rank": 1.042,
     "issn": "10985522"
-  },
-  {
-    "id": "Journal of Alzheimer's disease reports",
-    "name": "Journal of Alzheimer's Disease Reports",
-    "rank": 0.635,
-    "issn": "25424823"
   },
   {
     "id": "American journal of physiology. Lung cellular and molecular physiology",
@@ -458,18 +447,18 @@
     "rank": 4.621,
     "issn": "2047217X"
   },
-  {
-    "id": "Frontiers in endocrinology",
-    "name": "Frontiers in Endocrinology",
-    "rank": 1.24,
-    "issn": "16642392"
-  },
   { "id": "eLife", "name": "eLife", "rank": 3.932, "issn": "2050084X" },
   {
     "id": "Developmental cell",
     "name": "Developmental Cell",
     "rank": 5.828,
     "issn": "18781551"
+  },
+  {
+    "id": "Frontiers in endocrinology",
+    "name": "Frontiers in Endocrinology",
+    "rank": 1.24,
+    "issn": "16642392"
   },
   {
     "id": "International journal of cancer",
