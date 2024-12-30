@@ -104,50 +104,84 @@
         "2024-12-13": 1,
         "2024-12-14": 4,
         "2024-12-17": 1,
-        "2024-12-19": 1
+        "2024-12-19": 1,
+        "2024-12-28": 1
       },
       "newUsers": {
         "2024-12-11": 2,
         "2024-12-13": 1,
         "2024-12-14": 4,
         "2024-12-17": 1,
-        "2024-12-19": 1
+        "2024-12-19": 1,
+        "2024-12-28": 1
       },
       "engagedSessions": { "2024-12-14": 1 }
     },
     "topContinents": {
-      "byActiveUsers": { "Americas": 5, "(not set)": 3, "Asia": 1 },
-      "byNewUsers": { "Americas": 5, "(not set)": 3, "Asia": 1 },
+      "byActiveUsers": { "Americas": 6, "(not set)": 3, "Asia": 1 },
+      "byNewUsers": { "Americas": 6, "(not set)": 3, "Asia": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topCountries": {
-      "byActiveUsers": { "United States": 5, "(not set)": 3, "India": 1 },
-      "byNewUsers": { "United States": 5, "(not set)": 3, "India": 1 },
+      "byActiveUsers": { "United States": 6, "(not set)": 3, "India": 1 },
+      "byNewUsers": { "United States": 6, "(not set)": 3, "India": 1 },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topRegions": {
-      "byActiveUsers": { "(not set)": 7, "Illinois": 1, "Oregon": 1 },
-      "byNewUsers": { "(not set)": 7, "Illinois": 1, "Oregon": 1 },
+      "byActiveUsers": {
+        "(not set)": 7,
+        "Alabama": 1,
+        "Illinois": 1,
+        "Oregon": 1
+      },
+      "byNewUsers": {
+        "(not set)": 7,
+        "Alabama": 1,
+        "Illinois": 1,
+        "Oregon": 1
+      },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topCities": {
-      "byActiveUsers": { "(not set)": 7, "Boardman": 1, "Chicago": 1 },
-      "byNewUsers": { "(not set)": 7, "Boardman": 1, "Chicago": 1 },
+      "byActiveUsers": {
+        "(not set)": 7,
+        "Birmingham": 1,
+        "Boardman": 1,
+        "Chicago": 1
+      },
+      "byNewUsers": {
+        "(not set)": 7,
+        "Birmingham": 1,
+        "Boardman": 1,
+        "Chicago": 1
+      },
       "byEngagedSessions": { "(not set)": 1 }
     },
     "topLanguages": {
-      "byActiveUsers": { "English": 9 },
-      "byNewUsers": { "English": 9 },
+      "byActiveUsers": { "English": 9, "Russian": 1 },
+      "byNewUsers": { "English": 9, "Russian": 1 },
       "byEngagedSessions": { "English": 1 }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 5, "mobile": 4 },
-      "byNewUsers": { "desktop": 5, "mobile": 4 },
+      "byActiveUsers": { "desktop": 6, "mobile": 4 },
+      "byNewUsers": { "desktop": 6, "mobile": 4 },
       "byEngagedSessions": { "desktop": 1 }
     },
     "topOSes": {
-      "byActiveUsers": { "Windows": 4, "Android": 2, "iOS": 2, "Linux": 1 },
-      "byNewUsers": { "Windows": 4, "Android": 2, "iOS": 2, "Linux": 1 },
+      "byActiveUsers": {
+        "Windows": 4,
+        "Android": 2,
+        "iOS": 2,
+        "Linux": 1,
+        "Macintosh": 1
+      },
+      "byNewUsers": {
+        "Windows": 4,
+        "Android": 2,
+        "iOS": 2,
+        "Linux": 1,
+        "Macintosh": 1
+      },
       "byEngagedSessions": { "Linux": 1 }
     }
   }
