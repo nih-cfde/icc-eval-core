@@ -44,8 +44,8 @@
       "1OT2OD030545-01",
       "3OT2OD030545-01S3",
       "3OT2OD030545-01S4",
-      "3OT2OD030545-01S1",
       "3OT2OD030545-01S2",
+      "3OT2OD030545-01S1",
       "3OT2OD030545-01S5"
     ],
     "awardAmount": 3089131,
@@ -99,6 +99,16 @@
     "activityCode": "R03",
     "projects": ["1R03OD038393-01"],
     "awardAmount": 311000,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R25OD039833",
+    "name": "Short Course on Methods for MultiOmics Data Analysis",
+    "activityCode": "R25",
+    "projects": ["1R25OD039833-01"],
+    "awardAmount": 327935,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -214,6 +224,16 @@
     "analytics": 0
   },
   {
+    "id": "R25OD039834",
+    "name": "Developing a Hive Learning and Datathon Supported Course on Imaging and Multimodal Data for Resource-Limited Institutions (CIMDAR-HIVE)",
+    "activityCode": "R25",
+    "projects": ["1R25OD039834-01"],
+    "awardAmount": 370177,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "R03OD036489",
     "name": "Leveraging multiple Common Fund datasets to rank cell-cell interactions for faster hypothesis generation",
     "activityCode": "R03",
@@ -259,6 +279,16 @@
     "activityCode": "OT2",
     "projects": ["1OT2OD030164-01"],
     "awardAmount": 494117,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R25OD039835",
+    "name": "Human Microbiome Data Discovery: A short course on unveiling microbial insights to human health through Common Fund Data",
+    "activityCode": "R25",
+    "projects": ["1R25OD039835-01"],
+    "awardAmount": 256325,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -407,8 +437,8 @@
       "1OT2OD030160-01",
       "3OT2OD030160-01S2",
       "3OT2OD030160-01S5",
-      "3OT2OD030160-01S3",
       "3OT2OD030160-01S1",
+      "3OT2OD030160-01S3",
       "3OT2OD030160-01S4"
     ],
     "awardAmount": 3420175,
@@ -567,8 +597,8 @@
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030162-01S3",
       "3OT2OD030162-01S1",
+      "3OT2OD030162-01S3",
       "3OT2OD030162-01S2",
       "1OT2OD030162-01",
       "3OT2OD030162-01S4",
@@ -621,7 +651,7 @@
       "3OT2OD030544-01S4"
     ],
     "awardAmount": 3229346,
-    "publications": 38,
+    "publications": 40,
     "repos": 0,
     "analytics": 0
   },
@@ -651,7 +681,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD030600-01"],
     "awardAmount": 363306,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
