@@ -9,26 +9,33 @@
         "2024-12-13": 7,
         "2024-12-16": 5,
         "2024-12-18": 4,
-        "2024-12-19": 1
+        "2024-12-19": 1,
+        "2025-01-08": 2
       },
       "newUsers": {
         "2024-12-12": 4,
         "2024-12-13": 7,
         "2024-12-16": 4,
         "2024-12-18": 4,
-        "2024-12-19": 1
+        "2024-12-19": 1,
+        "2025-01-08": 1
       },
-      "engagedSessions": { "2024-12-13": 2, "2024-12-16": 2, "2024-12-18": 2 }
+      "engagedSessions": {
+        "2024-12-13": 2,
+        "2024-12-16": 2,
+        "2024-12-18": 2,
+        "2025-01-08": 2
+      }
     },
     "topContinents": {
-      "byActiveUsers": { "Americas": 19, "(not set)": 1 },
-      "byNewUsers": { "Americas": 19, "(not set)": 1 },
-      "byEngagedSessions": { "Americas": 6 }
+      "byActiveUsers": { "Americas": 19, "(not set)": 1, "Europe": 1 },
+      "byNewUsers": { "Americas": 19, "(not set)": 1, "Europe": 1 },
+      "byEngagedSessions": { "Americas": 7, "Europe": 1 }
     },
     "topCountries": {
-      "byActiveUsers": { "United States": 19, "(not set)": 1 },
-      "byNewUsers": { "United States": 19, "(not set)": 1 },
-      "byEngagedSessions": { "United States": 6 }
+      "byActiveUsers": { "United States": 19, "(not set)": 1, "Italy": 1 },
+      "byNewUsers": { "United States": 19, "(not set)": 1, "Italy": 1 },
+      "byEngagedSessions": { "United States": 7, "Italy": 1 }
     },
     "topRegions": {
       "byActiveUsers": {
@@ -46,9 +53,10 @@
         "Massachusetts": 1
       },
       "byEngagedSessions": {
-        "Maryland": 4,
+        "Maryland": 5,
         "Massachusetts": 1,
-        "Pennsylvania": 1
+        "Pennsylvania": 1,
+        "Veneto": 1
       }
     },
     "topCities": {
@@ -67,31 +75,32 @@
         "Arlington": 1
       },
       "byEngagedSessions": {
+        "Ellicott City": 3,
         "Bethesda": 2,
-        "Ellicott City": 2,
+        "Padua": 1,
         "Philadelphia": 1,
         "Somerville": 1
       }
     },
     "topLanguages": {
-      "byActiveUsers": { "English": 20 },
-      "byNewUsers": { "English": 20 },
-      "byEngagedSessions": { "English": 6 }
+      "byActiveUsers": { "English": 21 },
+      "byNewUsers": { "English": 21 },
+      "byEngagedSessions": { "English": 8 }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 18, "mobile": 2 },
-      "byNewUsers": { "desktop": 18, "mobile": 2 },
-      "byEngagedSessions": { "desktop": 5, "mobile": 1 }
+      "byActiveUsers": { "desktop": 19, "mobile": 2 },
+      "byNewUsers": { "desktop": 19, "mobile": 2 },
+      "byEngagedSessions": { "desktop": 7, "mobile": 1 }
     },
     "topOSes": {
       "byActiveUsers": {
         "Windows": 14,
-        "Macintosh": 4,
+        "Macintosh": 5,
         "Android": 1,
         "iOS": 1
       },
-      "byNewUsers": { "Windows": 14, "Macintosh": 4, "Android": 1, "iOS": 1 },
-      "byEngagedSessions": { "Macintosh": 3, "Windows": 2, "iOS": 1 }
+      "byNewUsers": { "Windows": 14, "Macintosh": 5, "Android": 1, "iOS": 1 },
+      "byEngagedSessions": { "Macintosh": 5, "Windows": 2, "iOS": 1 }
     }
   },
   {
@@ -106,7 +115,8 @@
         "2024-12-17": 1,
         "2024-12-19": 1,
         "2024-12-28": 1,
-        "2025-01-06": 3
+        "2025-01-06": 3,
+        "2025-01-07": 1
       },
       "newUsers": {
         "2024-12-11": 2,
@@ -115,19 +125,20 @@
         "2024-12-17": 1,
         "2024-12-19": 1,
         "2024-12-28": 1,
-        "2025-01-06": 3
+        "2025-01-06": 3,
+        "2025-01-07": 1
       },
-      "engagedSessions": { "2024-12-14": 1, "2025-01-06": 1 }
+      "engagedSessions": { "2024-12-14": 1, "2025-01-06": 1, "2025-01-07": 1 }
     },
     "topContinents": {
-      "byActiveUsers": { "Americas": 9, "(not set)": 3, "Asia": 1 },
-      "byNewUsers": { "Americas": 9, "(not set)": 3, "Asia": 1 },
-      "byEngagedSessions": { "(not set)": 1, "Americas": 1 }
+      "byActiveUsers": { "Americas": 10, "(not set)": 3, "Asia": 1 },
+      "byNewUsers": { "Americas": 10, "(not set)": 3, "Asia": 1 },
+      "byEngagedSessions": { "Americas": 2, "(not set)": 1 }
     },
     "topCountries": {
-      "byActiveUsers": { "United States": 9, "(not set)": 3, "India": 1 },
-      "byNewUsers": { "United States": 9, "(not set)": 3, "India": 1 },
-      "byEngagedSessions": { "(not set)": 1, "United States": 1 }
+      "byActiveUsers": { "United States": 10, "(not set)": 3, "India": 1 },
+      "byNewUsers": { "United States": 10, "(not set)": 3, "India": 1 },
+      "byEngagedSessions": { "United States": 2, "(not set)": 1 }
     },
     "topRegions": {
       "byActiveUsers": {
@@ -144,7 +155,7 @@
         "Illinois": 1,
         "Maryland": 1
       },
-      "byEngagedSessions": { "(not set)": 1, "Maryland": 1 }
+      "byEngagedSessions": { "(not set)": 1, "Maryland": 1, "New York": 1 }
     },
     "topCities": {
       "byActiveUsers": {
@@ -161,34 +172,34 @@
         "Boardman": 1,
         "Chicago": 1
       },
-      "byEngagedSessions": { "(not set)": 1, "Baltimore": 1 }
+      "byEngagedSessions": { "(not set)": 1, "Baltimore": 1, "New York": 1 }
     },
     "topLanguages": {
-      "byActiveUsers": { "English": 12, "Russian": 1 },
-      "byNewUsers": { "English": 12, "Russian": 1 },
-      "byEngagedSessions": { "English": 2 }
+      "byActiveUsers": { "English": 13, "Russian": 1 },
+      "byNewUsers": { "English": 13, "Russian": 1 },
+      "byEngagedSessions": { "English": 3 }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 9, "mobile": 4 },
-      "byNewUsers": { "desktop": 9, "mobile": 4 },
-      "byEngagedSessions": { "desktop": 2 }
+      "byActiveUsers": { "desktop": 10, "mobile": 4 },
+      "byNewUsers": { "desktop": 10, "mobile": 4 },
+      "byEngagedSessions": { "desktop": 3 }
     },
     "topOSes": {
       "byActiveUsers": {
         "Windows": 5,
-        "Macintosh": 3,
+        "Macintosh": 4,
         "Android": 2,
         "iOS": 2,
         "Linux": 1
       },
       "byNewUsers": {
         "Windows": 5,
-        "Macintosh": 3,
+        "Macintosh": 4,
         "Android": 2,
         "iOS": 2,
         "Linux": 1
       },
-      "byEngagedSessions": { "Linux": 1, "Macintosh": 1 }
+      "byEngagedSessions": { "Macintosh": 2, "Linux": 1 }
     }
   }
 ]
