@@ -3,19 +3,14 @@
 [![Run pipeline](https://github.com/nih-cfde/icc-eval-core/actions/workflows/pipeline.yaml/badge.svg)](https://github.com/nih-cfde/icc-eval-core/actions/workflows/pipeline.yaml)
 [![Run tests](https://github.com/nih-cfde/icc-eval-core/actions/workflows/test.yaml/badge.svg)](https://github.com/nih-cfde/icc-eval-core/actions/workflows/test.yaml)
 
-## Provide Feedback
-
-File a [New Issue](https://github.com/nih-cfde/icc-eval-core/issues/new) with any questions, suggestions, comments, or feedback. 
-
 ## Overview
 
-The [Common Fund Data Ecosystem (CFDE)](https://commonfund.nih.gov/dataecosystem) is an effort to bring together knowledge across [Common Fund](https://commonfund.nih.gov/) programs into a cohesive resource.
-The Integration and Coordination Center (ICC) is a center within the CFDE responsible for, among other things, reporting on the impact and influence of the CFDE.
+See the [CFDE Submission Evaluation](https://github.com/nih-cfde/eval-submission?tab=readme-ov-file) repo for background context.
 
 This repository is a place to:
 
 - View a high-level dashboard of Common Fund and CFDE activities (e.g. projects over time, dollars awarded, # of publications produced, etc.).
-- Ensure your project is fully included in the dashboard by aligning with our ingest process.
+- Gather and compile data needed for the dashboard and other reporting needs.
 - Maintain code used to coordinate the above.
 
 You can view the information as a live dashboard webapp or as separate PDF reports.
@@ -23,60 +18,6 @@ You can view the information as a live dashboard webapp or as separate PDF repor
 [🖱️ The Dashboard Webapp](https://cfde-eval.netlify.app)
 
 [📜 PDF Reports](https://cfde-eval.netlify.app/reports)
-
-## Contact
-
-Current maintainers and team members:
-
-- [Casey Greene](mailto:casey.s.greene@cuanschutz.edu) - Evaluation Core Lead
-- [Sean Davis](mailto:sean.2.davis@cuanschutz.edu) - Evaluation Core Lead
-- [Vincent Rubinetti](mailto:vincent.rubinetti@cuanschutz.edu) ([@vincerubinetti](https://github.com/vincerubinetti)) - Software developer
-
-## Submit your project
-
-We gather most details about Common Fund projects automatically from NIH systems, but there are some pieces of info that require manual actions to be integrated.
-If you would like your project to be included in the dashboard to the fullest extent, please follow the instructions in the sections below as applicable.
-We've tried to make this process as easy and automated as possible.
-
-Once you've made a submission (and once your project is in NIH systems), your project should appear here the next time our ingest process runs.
-We try to run the ingest process regularly and frequently, but if you'd like your project to show up faster or are otherwise having issues, please [contact us](#contact).
-
-### Submit software repositories
-
-Repositories ("repos") are places for storing, tracking changes to, and collaborating on software.
-
-Currently, we only take submissions of software kept in _public_ GitHub.com repos.
-Private repos and other platforms such as GitLab aren't supported yet.
-
-1. Find all GitHub repos that are associated with your project.
-   1. If you're unsure where to find these, ask members of your project about any software that was written in support of it, and where the code for the software resides.
-1. "Tag" each repo with the project.
-   1. See [GitHub's instructions for tagging repos](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) for reference.
-   1. On the main page of the repo, click on the gear ⚙ next to "About".
-   1. Under "Topics", type in your _core project number_†, e.g. `U54OD036472` (case-insensitive).
-
-[This repository itself](https://github.com/nih-cfde/icc-eval-core) has been [tagged with its core project number](https://github.com/topics/u54od036472), so use it as a reference.
-
-† Do not confuse this with a (sub) "project" number, which is longer, e.g. `1U54OD036472-01`.
-
-### Submit analytics
-
-Analytics are services that monitor traffic (number of visits over time, number of unique visitors, visitor demographics, etc.) on publicly accessible webpages.
-
-Currently, we only take submissions of webpages using Google Analytics.
-Other analytics services may supported in the future.
-
-1. Find all Google Analytics properties that are associated with your project.
-   1. If you're unsure where to find these, ask members of your project about any webpages related to it, and if anyone set up analytics for them.
-1. Allow us access to each property.
-   1. Go to the [Google Analytics dashboard](https://analytics.google.com/) and make sure you are [on the right property](https://support.google.com/analytics/answer/10252712?hl=en).
-   1. Find "Property Access Management" from the main search bar (or the "Admin" side menu).
-   1. Add a new user with the email `api-access@cfde-icc-eval-core-433116.iam.gserviceaccount.com`, uncheck "Notify by email", and select the "Viewer" role.
-1. "Tag" each property so we can associate it with a particular project.
-   1. Find "Key Events" from the "Admin" side menu,under "Data Display".
-   1. Create a new key event with the name `cfde_XXX` (case-insensitive), where XXX is the _core_ project number, e.g. `cfde_R03OD034502`.
-
----
 
 # Development
 
@@ -148,13 +89,3 @@ See readmes in sub folders for all commands.
   Set to `true` (or any string) for true.
   Leave blank/unset for false.
   `false` by default.
-
-# Additional thoughts
-
-- [ ] Integration of events (collaboration with Training and Outreach Center)
-- [ ] Notebook-based reporting
-- [ ] Data asset catalogs (collaboration with DRC)
-- [ ] User engagement metrics (collaboration with Cloud Center)
-- [ ] Integrate with Common Fund Program metrics (integration with SPECS/NIH)
-- [ ] Evaluation and Impact Working Group
-- [ ] Bibliometrics (including PMC mining for CFDE assets)
