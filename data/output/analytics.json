@@ -10,7 +10,7 @@
         "2024-12-16": 5,
         "2024-12-18": 4,
         "2024-12-19": 1,
-        "2025-01-08": 2
+        "2025-01-08": 5
       },
       "newUsers": {
         "2024-12-12": 4,
@@ -18,24 +18,24 @@
         "2024-12-16": 4,
         "2024-12-18": 4,
         "2024-12-19": 1,
-        "2025-01-08": 1
+        "2025-01-08": 4
       },
       "engagedSessions": {
         "2024-12-13": 2,
         "2024-12-16": 2,
         "2024-12-18": 2,
-        "2025-01-08": 2
+        "2025-01-08": 7
       }
     },
     "topContinents": {
-      "byActiveUsers": { "Americas": 19, "(not set)": 1, "Europe": 1 },
-      "byNewUsers": { "Americas": 19, "(not set)": 1, "Europe": 1 },
-      "byEngagedSessions": { "Americas": 7, "Europe": 1 }
+      "byActiveUsers": { "Americas": 22, "(not set)": 1, "Europe": 1 },
+      "byNewUsers": { "Americas": 22, "(not set)": 1, "Europe": 1 },
+      "byEngagedSessions": { "Americas": 12, "Europe": 1 }
     },
     "topCountries": {
-      "byActiveUsers": { "United States": 19, "(not set)": 1, "Italy": 1 },
-      "byNewUsers": { "United States": 19, "(not set)": 1, "Italy": 1 },
-      "byEngagedSessions": { "United States": 7, "Italy": 1 }
+      "byActiveUsers": { "United States": 22, "(not set)": 1, "Italy": 1 },
+      "byNewUsers": { "United States": 22, "(not set)": 1, "Italy": 1 },
+      "byEngagedSessions": { "United States": 12, "Italy": 1 }
     },
     "topRegions": {
       "byActiveUsers": {
@@ -43,20 +43,21 @@
         "Virginia": 5,
         "Colorado": 3,
         "Maryland": 3,
-        "Massachusetts": 1
+        "Tennessee": 2
       },
       "byNewUsers": {
         "(not set)": 7,
         "Virginia": 5,
         "Colorado": 3,
         "Maryland": 3,
-        "Massachusetts": 1
+        "Tennessee": 2
       },
       "byEngagedSessions": {
-        "Maryland": 5,
+        "Maryland": 6,
+        "Tennessee": 3,
         "Massachusetts": 1,
-        "Pennsylvania": 1,
-        "Veneto": 1
+        "New York": 1,
+        "Pennsylvania": 1
       }
     },
     "topCities": {
@@ -65,42 +66,42 @@
         "Bethesda": 2,
         "Boydton": 2,
         "Denver": 2,
-        "Arlington": 1
+        "Oak Ridge": 2
       },
       "byNewUsers": {
         "(not set)": 9,
         "Bethesda": 2,
         "Boydton": 2,
         "Denver": 2,
-        "Arlington": 1
+        "Oak Ridge": 2
       },
       "byEngagedSessions": {
-        "Ellicott City": 3,
+        "Ellicott City": 4,
+        "Oak Ridge": 3,
         "Bethesda": 2,
-        "Padua": 1,
-        "Philadelphia": 1,
-        "Somerville": 1
+        "New York": 1,
+        "Padua": 1
       }
     },
     "topLanguages": {
-      "byActiveUsers": { "English": 21 },
-      "byNewUsers": { "English": 21 },
-      "byEngagedSessions": { "English": 8 }
+      "byActiveUsers": { "English": 24 },
+      "byNewUsers": { "English": 24 },
+      "byEngagedSessions": { "English": 13 }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 19, "mobile": 2 },
-      "byNewUsers": { "desktop": 19, "mobile": 2 },
-      "byEngagedSessions": { "desktop": 7, "mobile": 1 }
+      "byActiveUsers": { "desktop": 22, "mobile": 2 },
+      "byNewUsers": { "desktop": 22, "mobile": 2 },
+      "byEngagedSessions": { "desktop": 12, "mobile": 1 }
     },
     "topOSes": {
       "byActiveUsers": {
-        "Windows": 14,
-        "Macintosh": 5,
+        "Windows": 16,
+        "Macintosh": 6,
         "Android": 1,
         "iOS": 1
       },
-      "byNewUsers": { "Windows": 14, "Macintosh": 5, "Android": 1, "iOS": 1 },
-      "byEngagedSessions": { "Macintosh": 5, "Windows": 2, "iOS": 1 }
+      "byNewUsers": { "Windows": 16, "Macintosh": 6, "Android": 1, "iOS": 1 },
+      "byEngagedSessions": { "Macintosh": 7, "Windows": 5, "iOS": 1 }
     }
   },
   {
