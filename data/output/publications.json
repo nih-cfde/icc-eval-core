@@ -104,6 +104,27 @@
     "citationsPerYear": 0
   },
   {
+    "id": 39605468,
+    "coreProject": "R03OD038391",
+    "application": 10990280,
+    "title": "Functional Connectivity Alterations in Cocaine Use Disorder: Insights from the Triple Network Model and the Addictions Neuroclinical Assessment Framework.",
+    "authors": [
+      "Ziyang Xu",
+      "Lie Li",
+      "Ruobing Liu",
+      "Mohamed Azzam",
+      "Shibiao Wan",
+      "Jieqiong Wang"
+    ],
+    "journal": "bioRxiv",
+    "year": 2024,
+    "modified": "2024-12-29T00:48:25.000Z",
+    "doi": "10.1101/2024.11.12.623073",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 39386448,
     "coreProject": "R03OD038391",
     "application": 10990280,
@@ -121,27 +142,6 @@
     "year": 2024,
     "modified": "2024-12-29T00:37:08.000Z",
     "doi": "10.1101/2024.09.24.614777",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
-    "id": 39605468,
-    "coreProject": "R03OD038391",
-    "application": 10990280,
-    "title": "Functional Connectivity Alterations in Cocaine Use Disorder: Insights from the Triple Network Model and the Addictions Neuroclinical Assessment Framework.",
-    "authors": [
-      "Ziyang Xu",
-      "Lie Li",
-      "Ruobing Liu",
-      "Mohamed Azzam",
-      "Shibiao Wan",
-      "Jieqiong Wang"
-    ],
-    "journal": "bioRxiv",
-    "year": 2024,
-    "modified": "2024-12-29T00:48:25.000Z",
-    "doi": "10.1101/2024.11.12.623073",
     "relativeCitationRatio": 0,
     "citations": 0,
     "citationsPerYear": 0
@@ -221,6 +221,30 @@
     "citationsPerYear": 10
   },
   {
+    "id": 39345388,
+    "coreProject": "R03OD038390",
+    "application": 10986325,
+    "title": "Dynamics of microcompartment formation at the mitosis-to-G1 transition.",
+    "authors": [
+      "Viraat Y Goel",
+      "Nicholas G Aboreden",
+      "James M Jusuf",
+      "Haoyue Zhang",
+      "Luisa P Mori",
+      "Leonid A Mirny",
+      "Gerd A Blobel",
+      "Edward J Banigan",
+      "Anders S Hansen"
+    ],
+    "journal": "bioRxiv",
+    "year": 2024,
+    "modified": "2025-01-05T05:47:49.000Z",
+    "doi": "10.1101/2024.09.16.611917",
+    "relativeCitationRatio": 0,
+    "citations": 1,
+    "citationsPerYear": 1
+  },
+  {
     "id": 39229045,
     "coreProject": "R03OD038390",
     "application": 10986325,
@@ -244,30 +268,6 @@
     "year": 2024,
     "modified": "2024-12-29T00:27:03.000Z",
     "doi": "10.1101/2024.08.23.609430",
-    "relativeCitationRatio": 0,
-    "citations": 1,
-    "citationsPerYear": 1
-  },
-  {
-    "id": 39345388,
-    "coreProject": "R03OD038390",
-    "application": 10986325,
-    "title": "Dynamics of microcompartment formation at the mitosis-to-G1 transition.",
-    "authors": [
-      "Viraat Y Goel",
-      "Nicholas G Aboreden",
-      "James M Jusuf",
-      "Haoyue Zhang",
-      "Luisa P Mori",
-      "Leonid A Mirny",
-      "Gerd A Blobel",
-      "Edward J Banigan",
-      "Anders S Hansen"
-    ],
-    "journal": "bioRxiv",
-    "year": 2024,
-    "modified": "2025-01-05T05:47:49.000Z",
-    "doi": "10.1101/2024.09.16.611917",
     "relativeCitationRatio": 0,
     "citations": 1,
     "citationsPerYear": 1
@@ -434,20 +434,6 @@
     "citationsPerYear": 0
   },
   {
-    "id": 38168620,
-    "coreProject": "R03OD034501",
-    "application": 10575440,
-    "title": "scMD facilitates cell type deconvolution using single-cell DNA methylation references.",
-    "authors": ["Manqi Cai", "Jingtian Zhou", "Chris McKennan", "Jiebiao Wang"],
-    "journal": "Commun Biol",
-    "year": 2024,
-    "modified": "2024-12-28T23:26:52.000Z",
-    "doi": "10.1038/s42003-023-05690-5",
-    "relativeCitationRatio": 0,
-    "citations": 1,
-    "citationsPerYear": 1
-  },
-  {
     "id": 36993280,
     "coreProject": "R03OD034501",
     "application": 10575440,
@@ -464,6 +450,20 @@
     "modified": "2024-12-28T23:51:21.000Z",
     "doi": "10.1101/2023.03.15.532820",
     "relativeCitationRatio": 0.27,
+    "citations": 1,
+    "citationsPerYear": 1
+  },
+  {
+    "id": 38168620,
+    "coreProject": "R03OD034501",
+    "application": 10575440,
+    "title": "scMD facilitates cell type deconvolution using single-cell DNA methylation references.",
+    "authors": ["Manqi Cai", "Jingtian Zhou", "Chris McKennan", "Jiebiao Wang"],
+    "journal": "Commun Biol",
+    "year": 2024,
+    "modified": "2024-12-28T23:26:52.000Z",
+    "doi": "10.1038/s42003-023-05690-5",
+    "relativeCitationRatio": 0,
     "citations": 1,
     "citationsPerYear": 1
   },
@@ -607,20 +607,6 @@
     "citationsPerYear": 0
   },
   {
-    "id": 37735567,
-    "coreProject": "R03OD034497",
-    "application": 10576770,
-    "title": "Flash entropy search to query all mass spectral libraries in real time.",
-    "authors": ["Yuanyue Li", "Oliver Fiehn"],
-    "journal": "Nat Methods",
-    "year": 2023,
-    "modified": "2024-12-29T00:34:11.000Z",
-    "doi": "10.1038/s41592-023-02012-9",
-    "relativeCitationRatio": 3.36,
-    "citations": 10,
-    "citationsPerYear": 10
-  },
-  {
     "id": 37390485,
     "coreProject": "R03OD034497",
     "application": 10576770,
@@ -639,6 +625,40 @@
     "relativeCitationRatio": 0.55,
     "citations": 1,
     "citationsPerYear": 1
+  },
+  {
+    "id": 37735567,
+    "coreProject": "R03OD034497",
+    "application": 10576770,
+    "title": "Flash entropy search to query all mass spectral libraries in real time.",
+    "authors": ["Yuanyue Li", "Oliver Fiehn"],
+    "journal": "Nat Methods",
+    "year": 2023,
+    "modified": "2024-12-29T00:34:11.000Z",
+    "doi": "10.1038/s41592-023-02012-9",
+    "relativeCitationRatio": 3.36,
+    "citations": 10,
+    "citationsPerYear": 10
+  },
+  {
+    "id": 36945517,
+    "coreProject": "R03OD034497",
+    "application": 10576770,
+    "title": "A pilot study on metabolomic characterization of human glioblastomas and patient plasma.",
+    "authors": [
+      "Allison Liu",
+      "Orwa Aboud",
+      "Lina A Dahabiyeh",
+      "Orin Bloch",
+      "Oliver Fiehn"
+    ],
+    "journal": "Res Sq",
+    "year": 2023,
+    "modified": "2024-12-28T23:48:51.000Z",
+    "doi": "10.21203/rs.3.rs-2662020/v1",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
   },
   {
     "id": 37623865,
@@ -660,26 +680,6 @@
     "relativeCitationRatio": 0.43,
     "citations": 1,
     "citationsPerYear": 1
-  },
-  {
-    "id": 36945517,
-    "coreProject": "R03OD034497",
-    "application": 10576770,
-    "title": "A pilot study on metabolomic characterization of human glioblastomas and patient plasma.",
-    "authors": [
-      "Allison Liu",
-      "Orwa Aboud",
-      "Lina A Dahabiyeh",
-      "Orin Bloch",
-      "Oliver Fiehn"
-    ],
-    "journal": "Res Sq",
-    "year": 2023,
-    "modified": "2024-12-28T23:48:51.000Z",
-    "doi": "10.21203/rs.3.rs-2662020/v1",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
   },
   {
     "id": 37939222,
@@ -858,32 +858,6 @@
     "citationsPerYear": 4
   },
   {
-    "id": 37371475,
-    "coreProject": "R03OD034496",
-    "application": 10564098,
-    "title": "SPIN-AI: A Deep Learning Model That Identifies Spatially Predictive Genes.",
-    "authors": [
-      "Kevin Meng-Lin",
-      "Choong-Yong Ung",
-      "Cheng Zhang",
-      "Taylor M Weiskittel",
-      "Philip Wisniewski",
-      "Zhuofei Zhang",
-      "Shyang-Hong Tan",
-      "Kok-Siong Yeo",
-      "Shizhen Zhu",
-      "Cristina Correia",
-      "Hu Li"
-    ],
-    "journal": "Biomolecules",
-    "year": 2023,
-    "modified": "2024-12-29T00:13:39.000Z",
-    "doi": "10.3390/biom13060895",
-    "relativeCitationRatio": 0.14,
-    "citations": 1,
-    "citationsPerYear": 1
-  },
-  {
     "id": 36866271,
     "coreProject": "R03OD034496",
     "application": 10564098,
@@ -933,6 +907,32 @@
     "relativeCitationRatio": 0,
     "citations": 0,
     "citationsPerYear": 0
+  },
+  {
+    "id": 37371475,
+    "coreProject": "R03OD034496",
+    "application": 10564098,
+    "title": "SPIN-AI: A Deep Learning Model That Identifies Spatially Predictive Genes.",
+    "authors": [
+      "Kevin Meng-Lin",
+      "Choong-Yong Ung",
+      "Cheng Zhang",
+      "Taylor M Weiskittel",
+      "Philip Wisniewski",
+      "Zhuofei Zhang",
+      "Shyang-Hong Tan",
+      "Kok-Siong Yeo",
+      "Shizhen Zhu",
+      "Cristina Correia",
+      "Hu Li"
+    ],
+    "journal": "Biomolecules",
+    "year": 2023,
+    "modified": "2024-12-29T00:13:39.000Z",
+    "doi": "10.3390/biom13060895",
+    "relativeCitationRatio": 0.14,
+    "citations": 1,
+    "citationsPerYear": 1
   },
   {
     "id": 37967790,
@@ -1399,27 +1399,6 @@
     "citationsPerYear": 22
   },
   {
-    "id": 35833142,
-    "coreProject": "R03OD032630",
-    "application": 10357165,
-    "title": "Construction and Application of Polygenic Risk Scores in Autoimmune Diseases.",
-    "authors": [
-      "Chachrit Khunsriraksakul",
-      "Havell Markus",
-      "Nancy J Olsen",
-      "Laura Carrel",
-      "Bibo Jiang",
-      "Dajiang J Liu"
-    ],
-    "journal": "Front Immunol",
-    "year": 2022,
-    "modified": "2024-12-29T00:20:05.000Z",
-    "doi": "10.3389/fimmu.2022.889296",
-    "relativeCitationRatio": 0.86,
-    "citations": 7,
-    "citationsPerYear": 3.5
-  },
-  {
     "id": 35672318,
     "coreProject": "R03OD032630",
     "application": 10357165,
@@ -1447,6 +1426,27 @@
     "relativeCitationRatio": 1.84,
     "citations": 16,
     "citationsPerYear": 8
+  },
+  {
+    "id": 35833142,
+    "coreProject": "R03OD032630",
+    "application": 10357165,
+    "title": "Construction and Application of Polygenic Risk Scores in Autoimmune Diseases.",
+    "authors": [
+      "Chachrit Khunsriraksakul",
+      "Havell Markus",
+      "Nancy J Olsen",
+      "Laura Carrel",
+      "Bibo Jiang",
+      "Dajiang J Liu"
+    ],
+    "journal": "Front Immunol",
+    "year": 2022,
+    "modified": "2024-12-29T00:20:05.000Z",
+    "doi": "10.3389/fimmu.2022.889296",
+    "relativeCitationRatio": 0.86,
+    "citations": 7,
+    "citationsPerYear": 3.5
   },
   {
     "id": 30643251,
@@ -1585,6 +1585,20 @@
     "relativeCitationRatio": 63.31,
     "citations": 1129,
     "citationsPerYear": 225.8
+  },
+  {
+    "id": 35178743,
+    "coreProject": "R03OD032630",
+    "application": 10357165,
+    "title": "Assessing reproducibility of high-throughput experiments in the case of missing data.",
+    "authors": ["Roopali Singh", "Feipeng Zhang", "Qunhua Li"],
+    "journal": "Stat Med",
+    "year": 2022,
+    "modified": "2024-12-28T23:42:53.000Z",
+    "doi": "10.1002/sim.9334",
+    "relativeCitationRatio": 0.45,
+    "citations": 3,
+    "citationsPerYear": 1.5
   },
   {
     "id": 36477530,
@@ -1819,20 +1833,6 @@
     "citationsPerYear": 79.5
   },
   {
-    "id": 35178743,
-    "coreProject": "R03OD032630",
-    "application": 10357165,
-    "title": "Assessing reproducibility of high-throughput experiments in the case of missing data.",
-    "authors": ["Roopali Singh", "Feipeng Zhang", "Qunhua Li"],
-    "journal": "Stat Med",
-    "year": 2022,
-    "modified": "2024-12-28T23:42:53.000Z",
-    "doi": "10.1002/sim.9334",
-    "relativeCitationRatio": 0.45,
-    "citations": 3,
-    "citationsPerYear": 1.5
-  },
-  {
     "id": 36750564,
     "coreProject": "R03OD032630",
     "application": 10357165,
@@ -2031,6 +2031,28 @@
     "citationsPerYear": 0
   },
   {
+    "id": 37554053,
+    "coreProject": "R03OD032624",
+    "application": 10357502,
+    "title": "Carbon Coated Iron-Cobalt Nanoparticles for Magnetic Particle Imaging.",
+    "authors": [
+      "Raj Kumar",
+      "Md Nurul Huda",
+      "Ahsan Habib",
+      "Md Nafiujjaman",
+      "Hyun-Joo Woo",
+      "Taeho Kim",
+      "Md Nurunnabi"
+    ],
+    "journal": "ACS Appl Bio Mater",
+    "year": 2023,
+    "modified": "2024-12-29T00:24:15.000Z",
+    "doi": "10.1021/acsabm.3c00354",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 37350332,
     "coreProject": "R03OD032624",
     "application": 10357502,
@@ -2052,28 +2074,6 @@
     "relativeCitationRatio": 1.63,
     "citations": 3,
     "citationsPerYear": 3
-  },
-  {
-    "id": 37554053,
-    "coreProject": "R03OD032624",
-    "application": 10357502,
-    "title": "Carbon Coated Iron-Cobalt Nanoparticles for Magnetic Particle Imaging.",
-    "authors": [
-      "Raj Kumar",
-      "Md Nurul Huda",
-      "Ahsan Habib",
-      "Md Nafiujjaman",
-      "Hyun-Joo Woo",
-      "Taeho Kim",
-      "Md Nurunnabi"
-    ],
-    "journal": "ACS Appl Bio Mater",
-    "year": 2023,
-    "modified": "2024-12-29T00:24:15.000Z",
-    "doi": "10.1021/acsabm.3c00354",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
   },
   {
     "id": 36116580,
@@ -2111,28 +2111,6 @@
     "citationsPerYear": 11
   },
   {
-    "id": 36753355,
-    "coreProject": "R03OD032624",
-    "application": 10357502,
-    "title": "Potential and Progress of 2D Materials in Photomedicine for Cancer Treatment.",
-    "authors": [
-      "Himanshu N Bhatt",
-      "Jaqueline Pena-Zacarias",
-      "Elfa Beaven",
-      "Md Ikhtiar Zahid",
-      "Sheikh Shafin Ahmad",
-      "Rimpy Diwan",
-      "Md Nurunnabi"
-    ],
-    "journal": "ACS Appl Bio Mater",
-    "year": 2023,
-    "modified": "2024-12-28T23:37:56.000Z",
-    "doi": "10.1021/acsabm.2c00981",
-    "relativeCitationRatio": 0.79,
-    "citations": 2,
-    "citationsPerYear": 2
-  },
-  {
     "id": 37238639,
     "coreProject": "R03OD032624",
     "application": 10357502,
@@ -2153,6 +2131,28 @@
     "relativeCitationRatio": 4.46,
     "citations": 7,
     "citationsPerYear": 7
+  },
+  {
+    "id": 36753355,
+    "coreProject": "R03OD032624",
+    "application": 10357502,
+    "title": "Potential and Progress of 2D Materials in Photomedicine for Cancer Treatment.",
+    "authors": [
+      "Himanshu N Bhatt",
+      "Jaqueline Pena-Zacarias",
+      "Elfa Beaven",
+      "Md Ikhtiar Zahid",
+      "Sheikh Shafin Ahmad",
+      "Rimpy Diwan",
+      "Md Nurunnabi"
+    ],
+    "journal": "ACS Appl Bio Mater",
+    "year": 2023,
+    "modified": "2024-12-28T23:37:56.000Z",
+    "doi": "10.1021/acsabm.2c00981",
+    "relativeCitationRatio": 0.79,
+    "citations": 2,
+    "citationsPerYear": 2
   },
   {
     "id": 37562554,
@@ -2319,6 +2319,81 @@
     "citationsPerYear": 2
   },
   {
+    "id": 36564505,
+    "coreProject": "R03OD030608",
+    "application": 10112018,
+    "title": "Powerful, scalable and resource-efficient meta-analysis of rare variant associations in large whole genome sequencing studies.",
+    "authors": [
+      "Xihao Li",
+      "Corbin Quick",
+      "Hufeng Zhou",
+      "Sheila M Gaynor",
+      "Yaowu Liu",
+      "Han Chen",
+      "Margaret Sunitha Selvaraj",
+      "Ryan Sun",
+      "Rounak Dey",
+      "Donna K Arnett",
+      "Lawrence F Bielak",
+      "Joshua C Bis",
+      "John Blangero",
+      "Eric Boerwinkle",
+      "Donald W Bowden",
+      "Jennifer A Brody",
+      "Brian E Cade",
+      "Adolfo Correa",
+      "L Adrienne Cupples",
+      "Joanne E Curran",
+      "Paul S de Vries",
+      "Ravindranath Duggirala",
+      "Barry I Freedman",
+      "Harald H H Göring",
+      "Xiuqing Guo",
+      "Jeffrey Haessler",
+      "Rita R Kalyani",
+      "Charles Kooperberg",
+      "Brian G Kral",
+      "Leslie A Lange",
+      "Ani Manichaikul",
+      "Lisa W Martin",
+      "Stephen T McGarvey",
+      "Braxton D Mitchell",
+      "May E Montasser",
+      "Alanna C Morrison",
+      "Take Naseri",
+      "Jeffrey R O'Connell",
+      "Nicholette D Palmer",
+      "Patricia A Peyser",
+      "Bruce M Psaty",
+      "Laura M Raffield",
+      "Susan Redline",
+      "Alexander P Reiner",
+      "Muagututi'a Sefuiva Reupena",
+      "Kenneth M Rice",
+      "Stephen S Rich",
+      "Colleen M Sitlani",
+      "Jennifer A Smith",
+      "Kent D Taylor",
+      "Ramachandran S Vasan",
+      "Cristen J Willer",
+      "James G Wilson",
+      "Lisa R Yanek",
+      "Wei Zhao",
+      "Jerome I Rotter",
+      "Pradeep Natarajan",
+      "Gina M Peloso",
+      "Zilin Li",
+      "Xihong Lin"
+    ],
+    "journal": "Nat Genet",
+    "year": 2023,
+    "modified": "2024-12-28T23:29:18.000Z",
+    "doi": "10.1038/s41588-022-01225-6",
+    "relativeCitationRatio": 3.83,
+    "citations": 22,
+    "citationsPerYear": 22
+  },
+  {
     "id": 36303018,
     "coreProject": "R03OD030608",
     "application": 10112018,
@@ -2399,81 +2474,6 @@
     "doi": "10.1038/s41592-022-01640-x",
     "relativeCitationRatio": 4.35,
     "citations": 44,
-    "citationsPerYear": 22
-  },
-  {
-    "id": 36564505,
-    "coreProject": "R03OD030608",
-    "application": 10112018,
-    "title": "Powerful, scalable and resource-efficient meta-analysis of rare variant associations in large whole genome sequencing studies.",
-    "authors": [
-      "Xihao Li",
-      "Corbin Quick",
-      "Hufeng Zhou",
-      "Sheila M Gaynor",
-      "Yaowu Liu",
-      "Han Chen",
-      "Margaret Sunitha Selvaraj",
-      "Ryan Sun",
-      "Rounak Dey",
-      "Donna K Arnett",
-      "Lawrence F Bielak",
-      "Joshua C Bis",
-      "John Blangero",
-      "Eric Boerwinkle",
-      "Donald W Bowden",
-      "Jennifer A Brody",
-      "Brian E Cade",
-      "Adolfo Correa",
-      "L Adrienne Cupples",
-      "Joanne E Curran",
-      "Paul S de Vries",
-      "Ravindranath Duggirala",
-      "Barry I Freedman",
-      "Harald H H Göring",
-      "Xiuqing Guo",
-      "Jeffrey Haessler",
-      "Rita R Kalyani",
-      "Charles Kooperberg",
-      "Brian G Kral",
-      "Leslie A Lange",
-      "Ani Manichaikul",
-      "Lisa W Martin",
-      "Stephen T McGarvey",
-      "Braxton D Mitchell",
-      "May E Montasser",
-      "Alanna C Morrison",
-      "Take Naseri",
-      "Jeffrey R O'Connell",
-      "Nicholette D Palmer",
-      "Patricia A Peyser",
-      "Bruce M Psaty",
-      "Laura M Raffield",
-      "Susan Redline",
-      "Alexander P Reiner",
-      "Muagututi'a Sefuiva Reupena",
-      "Kenneth M Rice",
-      "Stephen S Rich",
-      "Colleen M Sitlani",
-      "Jennifer A Smith",
-      "Kent D Taylor",
-      "Ramachandran S Vasan",
-      "Cristen J Willer",
-      "James G Wilson",
-      "Lisa R Yanek",
-      "Wei Zhao",
-      "Jerome I Rotter",
-      "Pradeep Natarajan",
-      "Gina M Peloso",
-      "Zilin Li",
-      "Xihong Lin"
-    ],
-    "journal": "Nat Genet",
-    "year": 2023,
-    "modified": "2024-12-28T23:29:18.000Z",
-    "doi": "10.1038/s41588-022-01225-6",
-    "relativeCitationRatio": 3.83,
-    "citations": 22,
     "citationsPerYear": 22
   },
   {
@@ -2644,6 +2644,25 @@
     "citationsPerYear": 4.5
   },
   {
+    "id": 37533331,
+    "coreProject": "R03OD030604",
+    "application": 10105688,
+    "title": "Evaluating cancer cell line and patient-derived xenograft recapitulation of tumor and non-diseased tissue gene expression profiles in silico.",
+    "authors": [
+      "Avery S Williams",
+      "Elizabeth J Wilk",
+      "Jennifer L Fisher",
+      "Brittany N Lasseigne"
+    ],
+    "journal": "Cancer Rep (Hoboken)",
+    "year": 2023,
+    "modified": "2024-12-29T00:23:12.000Z",
+    "doi": "10.1002/cnr2.1874",
+    "relativeCitationRatio": 0.92,
+    "citations": 3,
+    "citationsPerYear": 3
+  },
+  {
     "id": 37217845,
     "coreProject": "R03OD030604",
     "application": 10105688,
@@ -2668,25 +2687,6 @@
     "relativeCitationRatio": 0.34,
     "citations": 1,
     "citationsPerYear": 1
-  },
-  {
-    "id": 37533331,
-    "coreProject": "R03OD030604",
-    "application": 10105688,
-    "title": "Evaluating cancer cell line and patient-derived xenograft recapitulation of tumor and non-diseased tissue gene expression profiles in silico.",
-    "authors": [
-      "Avery S Williams",
-      "Elizabeth J Wilk",
-      "Jennifer L Fisher",
-      "Brittany N Lasseigne"
-    ],
-    "journal": "Cancer Rep (Hoboken)",
-    "year": 2023,
-    "modified": "2024-12-29T00:23:12.000Z",
-    "doi": "10.1002/cnr2.1874",
-    "relativeCitationRatio": 0.92,
-    "citations": 3,
-    "citationsPerYear": 3
   },
   {
     "id": 37824797,
@@ -3343,6 +3343,29 @@
     "citationsPerYear": 4
   },
   {
+    "id": 34721400,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Immune Response in Severe and Non-Severe Coronavirus Disease 2019 (COVID-19) Infection: A Mechanistic Landscape.",
+    "authors": [
+      "Kavitha Mukund",
+      "Priya Nayak",
+      "Chethan Ashokkumar",
+      "Sohail Rao",
+      "Jose Almeda",
+      "Monica M Betancourt-Garcia",
+      "Rakesh Sindhi",
+      "Shankar Subramaniam"
+    ],
+    "journal": "Front Immunol",
+    "year": 2021,
+    "modified": "2024-12-29T00:44:06.000Z",
+    "doi": "10.3389/fimmu.2021.738073",
+    "relativeCitationRatio": 1.73,
+    "citations": 23,
+    "citationsPerYear": 7.666666666666667
+  },
+  {
     "id": 34862502,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3393,29 +3416,6 @@
     "citationsPerYear": 16
   },
   {
-    "id": 34721400,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Immune Response in Severe and Non-Severe Coronavirus Disease 2019 (COVID-19) Infection: A Mechanistic Landscape.",
-    "authors": [
-      "Kavitha Mukund",
-      "Priya Nayak",
-      "Chethan Ashokkumar",
-      "Sohail Rao",
-      "Jose Almeda",
-      "Monica M Betancourt-Garcia",
-      "Rakesh Sindhi",
-      "Shankar Subramaniam"
-    ],
-    "journal": "Front Immunol",
-    "year": 2021,
-    "modified": "2024-12-29T00:44:06.000Z",
-    "doi": "10.3389/fimmu.2021.738073",
-    "relativeCitationRatio": 1.73,
-    "citations": 23,
-    "citationsPerYear": 7.666666666666667
-  },
-  {
     "id": 37515770,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3447,6 +3447,25 @@
     "relativeCitationRatio": 1.09,
     "citations": 5,
     "citationsPerYear": 5
+  },
+  {
+    "id": 37849634,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Endotype Characterization Reveals Mechanistic Differences Across Brain Regions in Sporadic Alzheimer's Disease.",
+    "authors": [
+      "Ashay O Patel",
+      "Andrew B Caldwell",
+      "Srinivasan Ramachandran",
+      "Shankar Subramaniam"
+    ],
+    "journal": "J Alzheimers Dis Rep",
+    "year": 2023,
+    "modified": "2024-12-29T00:39:29.000Z",
+    "doi": "10.3233/ADR-220098",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
   },
   {
     "id": 38318337,
@@ -3559,25 +3578,6 @@
     "citationsPerYear": 3
   },
   {
-    "id": 37849634,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Endotype Characterization Reveals Mechanistic Differences Across Brain Regions in Sporadic Alzheimer's Disease.",
-    "authors": [
-      "Ashay O Patel",
-      "Andrew B Caldwell",
-      "Srinivasan Ramachandran",
-      "Shankar Subramaniam"
-    ],
-    "journal": "J Alzheimers Dis Rep",
-    "year": 2023,
-    "modified": "2024-12-29T00:39:29.000Z",
-    "doi": "10.3233/ADR-220098",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
     "id": 39707873,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3599,43 +3599,6 @@
     "relativeCitationRatio": 0,
     "citations": 0,
     "citationsPerYear": 0
-  },
-  {
-    "id": 38226418,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Fatty acid metabolism promotes TRPV4 activity in lung microvascular endothelial cells in pulmonary arterial hypertension.",
-    "authors": [
-      "Nicolas Philip",
-      "Xin Yun",
-      "Hongyang Pi",
-      "Samuel Murray",
-      "Zack Hill",
-      "Jay Fonticella",
-      "Preston Perez",
-      "Cissy Zhang",
-      "Wimal Pathmasiri",
-      "Susan Sumner",
-      "Laura Servinsky",
-      "Haiyang Jiang",
-      "John C Huetsch",
-      "William M Oldham",
-      "Scott Visovatti",
-      "Peter J Leary",
-      "Sina A Gharib",
-      "Evan Brittain",
-      "Catherine E Simpson",
-      "Anne Le",
-      "Larissa A Shimoda",
-      "Karthik Suresh"
-    ],
-    "journal": "Am J Physiol Lung Cell Mol Physiol",
-    "year": 2024,
-    "modified": "2024-12-28T23:28:48.000Z",
-    "doi": "10.1152/ajplung.00199.2023",
-    "relativeCitationRatio": 0,
-    "citations": 2,
-    "citationsPerYear": 2
   },
   {
     "id": 37349305,
@@ -3676,30 +3639,6 @@
     "citationsPerYear": 11
   },
   {
-    "id": 39206133,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Phosphate availability conditions caspofungin tolerance, capsule attachment and titan cell formation in <i>Cryptococcus neoformans</i>.",
-    "authors": [
-      "Xianya Qu",
-      "Kabir Bhalla",
-      "Linda C Horianopoulos",
-      "Guanggan Hu",
-      "Armando Alcázar Magaña",
-      "Leonard J Foster",
-      "Leandro Buffoni Roque da Silva",
-      "Matthias Kretschmer",
-      "James W Kronstad"
-    ],
-    "journal": "Front Fungal Biol",
-    "year": 2024,
-    "modified": "2024-12-29T00:25:42.000Z",
-    "doi": "10.3389/ffunb.2024.1447588",
-    "relativeCitationRatio": 0,
-    "citations": 1,
-    "citationsPerYear": 1
-  },
-  {
     "id": 37983749,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3720,26 +3659,41 @@
     "citationsPerYear": 0.5
   },
   {
-    "id": 38975764,
+    "id": 38226418,
     "coreProject": "OT2OD030544",
     "application": 11090253,
-    "title": "Taurine modulates host cell responses to <i>Helicobacter pylori</i> VacA toxin.",
+    "title": "Fatty acid metabolism promotes TRPV4 activity in lung microvascular endothelial cells in pulmonary arterial hypertension.",
     "authors": [
-      "Mandy D Westland",
-      "Alexandra C Schrimpe-Rutledge",
-      "Simona G Codreanu",
-      "Stacy D Sherrod",
-      "John A McLean",
-      "Mark S McClain",
-      "Timothy L Cover"
+      "Nicolas Philip",
+      "Xin Yun",
+      "Hongyang Pi",
+      "Samuel Murray",
+      "Zack Hill",
+      "Jay Fonticella",
+      "Preston Perez",
+      "Cissy Zhang",
+      "Wimal Pathmasiri",
+      "Susan Sumner",
+      "Laura Servinsky",
+      "Haiyang Jiang",
+      "John C Huetsch",
+      "William M Oldham",
+      "Scott Visovatti",
+      "Peter J Leary",
+      "Sina A Gharib",
+      "Evan Brittain",
+      "Catherine E Simpson",
+      "Anne Le",
+      "Larissa A Shimoda",
+      "Karthik Suresh"
     ],
-    "journal": "Infect Immun",
+    "journal": "Am J Physiol Lung Cell Mol Physiol",
     "year": 2024,
-    "modified": "2024-12-29T00:11:30.000Z",
-    "doi": "10.1128/iai.00224-24",
+    "modified": "2024-12-28T23:28:48.000Z",
+    "doi": "10.1152/ajplung.00199.2023",
     "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
+    "citations": 2,
+    "citationsPerYear": 2
   },
   {
     "id": 38102827,
@@ -3824,23 +3778,50 @@
     "citationsPerYear": 0
   },
   {
-    "id": 35448980,
+    "id": 39206133,
     "coreProject": "OT2OD030544",
     "application": 11090253,
-    "title": "Modular and mechanistic changes across stages of colorectal cancer.",
+    "title": "Phosphate availability conditions caspofungin tolerance, capsule attachment and titan cell formation in <i>Cryptococcus neoformans</i>.",
     "authors": [
-      "Sara Rahiminejad",
-      "Mano R Maurya",
-      "Kavitha Mukund",
-      "Shankar Subramaniam"
+      "Xianya Qu",
+      "Kabir Bhalla",
+      "Linda C Horianopoulos",
+      "Guanggan Hu",
+      "Armando Alcázar Magaña",
+      "Leonard J Foster",
+      "Leandro Buffoni Roque da Silva",
+      "Matthias Kretschmer",
+      "James W Kronstad"
     ],
-    "journal": "BMC Cancer",
-    "year": 2022,
-    "modified": "2024-12-28T23:58:53.000Z",
-    "doi": "10.1186/s12885-022-09479-3",
-    "relativeCitationRatio": 0.26,
-    "citations": 3,
-    "citationsPerYear": 1.5
+    "journal": "Front Fungal Biol",
+    "year": 2024,
+    "modified": "2024-12-29T00:25:42.000Z",
+    "doi": "10.3389/ffunb.2024.1447588",
+    "relativeCitationRatio": 0,
+    "citations": 1,
+    "citationsPerYear": 1
+  },
+  {
+    "id": 38975764,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Taurine modulates host cell responses to <i>Helicobacter pylori</i> VacA toxin.",
+    "authors": [
+      "Mandy D Westland",
+      "Alexandra C Schrimpe-Rutledge",
+      "Simona G Codreanu",
+      "Stacy D Sherrod",
+      "John A McLean",
+      "Mark S McClain",
+      "Timothy L Cover"
+    ],
+    "journal": "Infect Immun",
+    "year": 2024,
+    "modified": "2024-12-29T00:11:30.000Z",
+    "doi": "10.1128/iai.00224-24",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
   },
   {
     "id": 38161977,
@@ -3889,6 +3870,28 @@
     "citationsPerYear": 3
   },
   {
+    "id": 38187579,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Matrix Linear Models for connecting metabolite composition to individual characteristics.",
+    "authors": [
+      "Gregory Farage",
+      "Chenhao Zhao",
+      "Hyo Young Choi",
+      "Timothy J Garrett",
+      "Katerina Kechris",
+      "Marshall B Elam",
+      "Śaunak Sen"
+    ],
+    "journal": "bioRxiv",
+    "year": 2023,
+    "modified": "2024-12-29T00:50:41.000Z",
+    "doi": "10.1101/2023.12.19.572450",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 38001239,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -3915,28 +3918,6 @@
     "relativeCitationRatio": 0.45,
     "citations": 2,
     "citationsPerYear": 2
-  },
-  {
-    "id": 38187579,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Matrix Linear Models for connecting metabolite composition to individual characteristics.",
-    "authors": [
-      "Gregory Farage",
-      "Chenhao Zhao",
-      "Hyo Young Choi",
-      "Timothy J Garrett",
-      "Katerina Kechris",
-      "Marshall B Elam",
-      "Śaunak Sen"
-    ],
-    "journal": "bioRxiv",
-    "year": 2023,
-    "modified": "2024-12-29T00:50:41.000Z",
-    "doi": "10.1101/2023.12.19.572450",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
   },
   {
     "id": 37798473,
@@ -4073,6 +4054,44 @@
     "citationsPerYear": 7
   },
   {
+    "id": 35448980,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Modular and mechanistic changes across stages of colorectal cancer.",
+    "authors": [
+      "Sara Rahiminejad",
+      "Mano R Maurya",
+      "Kavitha Mukund",
+      "Shankar Subramaniam"
+    ],
+    "journal": "BMC Cancer",
+    "year": 2022,
+    "modified": "2024-12-28T23:58:53.000Z",
+    "doi": "10.1186/s12885-022-09479-3",
+    "relativeCitationRatio": 0.26,
+    "citations": 3,
+    "citationsPerYear": 1.5
+  },
+  {
+    "id": 38826219,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Single-cell transcriptomics reveals stage- and side-specificity of gene modules in colorectal cancer.",
+    "authors": [
+      "Sara Rahiminejad",
+      "Kavitha Mukund",
+      "Mano Ram Maurya",
+      "Shankar Subramaniam"
+    ],
+    "journal": "Res Sq",
+    "year": 2024,
+    "modified": "2024-12-29T00:02:38.000Z",
+    "doi": "10.21203/rs.3.rs-4402565/v1",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 38844817,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -4124,25 +4143,6 @@
     "relativeCitationRatio": 2.22,
     "citations": 5,
     "citationsPerYear": 5
-  },
-  {
-    "id": 38826219,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Single-cell transcriptomics reveals stage- and side-specificity of gene modules in colorectal cancer.",
-    "authors": [
-      "Sara Rahiminejad",
-      "Kavitha Mukund",
-      "Mano Ram Maurya",
-      "Shankar Subramaniam"
-    ],
-    "journal": "Res Sq",
-    "year": 2024,
-    "modified": "2024-12-29T00:02:38.000Z",
-    "doi": "10.21203/rs.3.rs-4402565/v1",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
   },
   {
     "id": 38651675,
@@ -4225,117 +4225,6 @@
     "relativeCitationRatio": 0,
     "citations": 3,
     "citationsPerYear": 3
-  },
-  {
-    "id": 39702518,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Proteomic and metabolomic analyses of the human adult myocardium reveal ventricle-specific regulation in end-stage cardiomyopathies.",
-    "authors": [
-      "Benjamin Hunter",
-      "Mengbo Li",
-      "Benjamin L Parker",
-      "Yen Chin Koay",
-      "Dylan J Harney",
-      "Evangeline Pearson",
-      "Jacob Cao",
-      "Gavin T Chen",
-      "Oneka Guneratne",
-      "Gordon K Smyth",
-      "Mark Larance",
-      "John F O'Sullivan",
-      "Sean Lal"
-    ],
-    "journal": "Commun Biol",
-    "year": 2024,
-    "modified": "2025-01-05T05:49:49.000Z",
-    "doi": "10.1038/s42003-024-07306-y",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
-    "id": 37815914,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "MYC is a regulator of androgen receptor inhibition-induced metabolic requirements in prostate cancer.",
-    "authors": [
-      "Preston D Crowell",
-      "Jenna M Giafaglione",
-      "Anthony E Jones",
-      "Nicholas M Nunley",
-      "Takao Hashimoto",
-      "Amelie M L Delcourt",
-      "Anton Petcherski",
-      "Raag Agrawal",
-      "Matthew J Bernard",
-      "Johnny A Diaz",
-      "Kylie Y Heering",
-      "Rong Rong Huang",
-      "Jin-Yih Low",
-      "Nedas Matulionis",
-      "Nora M Navone",
-      "Huihui Ye",
-      "Amina Zoubeidi",
-      "Heather R Christofk",
-      "Matthew B Rettig",
-      "Robert E Reiter",
-      "Michael C Haffner",
-      "Paul C Boutros",
-      "Orian S Shirihai",
-      "Ajit S Divakaruni",
-      "Andrew S Goldstein"
-    ],
-    "journal": "Cell Rep",
-    "year": 2023,
-    "modified": "2024-12-29T00:38:12.000Z",
-    "doi": "10.1016/j.celrep.2023.113221",
-    "relativeCitationRatio": 1.58,
-    "citations": 8,
-    "citationsPerYear": 8
-  },
-  {
-    "id": 38018851,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Lipidomic Analysis Reveals Differences in the Extent of Remyelination in the Brain and Spinal Cord.",
-    "authors": [
-      "Nishama De Silva Mohotti",
-      "Hiroko Kobayashi",
-      "Jenna M Williams",
-      "Rashmi Binjawadagi",
-      "Michel P Evertsen",
-      "Ethan G Christ",
-      "Meredith D Hartley"
-    ],
-    "journal": "J Proteome Res",
-    "year": 2024,
-    "modified": "2024-12-28T23:23:34.000Z",
-    "doi": "10.1021/acs.jproteome.3c00443",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
-    "id": 38313293,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Metabolic abnormalities in the bone marrow cells of young offspring born to obese mothers.",
-    "authors": [
-      "Maloyan Alina",
-      "Elysse Phillips",
-      "Yem Alharithi",
-      "Leena Kadam",
-      "Lisa Coussens",
-      "Sushil Kumar"
-    ],
-    "journal": "Res Sq",
-    "year": 2024,
-    "modified": "2024-12-28T23:32:55.000Z",
-    "doi": "10.21203/rs.3.rs-3830161/v1",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
   },
   {
     "id": 38165806,
@@ -4426,6 +4315,89 @@
     "citationsPerYear": 5
   },
   {
+    "id": 38313293,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Metabolic abnormalities in the bone marrow cells of young offspring born to obese mothers.",
+    "authors": [
+      "Maloyan Alina",
+      "Elysse Phillips",
+      "Yem Alharithi",
+      "Leena Kadam",
+      "Lisa Coussens",
+      "Sushil Kumar"
+    ],
+    "journal": "Res Sq",
+    "year": 2024,
+    "modified": "2024-12-28T23:32:55.000Z",
+    "doi": "10.21203/rs.3.rs-3830161/v1",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
+    "id": 37815914,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "MYC is a regulator of androgen receptor inhibition-induced metabolic requirements in prostate cancer.",
+    "authors": [
+      "Preston D Crowell",
+      "Jenna M Giafaglione",
+      "Anthony E Jones",
+      "Nicholas M Nunley",
+      "Takao Hashimoto",
+      "Amelie M L Delcourt",
+      "Anton Petcherski",
+      "Raag Agrawal",
+      "Matthew J Bernard",
+      "Johnny A Diaz",
+      "Kylie Y Heering",
+      "Rong Rong Huang",
+      "Jin-Yih Low",
+      "Nedas Matulionis",
+      "Nora M Navone",
+      "Huihui Ye",
+      "Amina Zoubeidi",
+      "Heather R Christofk",
+      "Matthew B Rettig",
+      "Robert E Reiter",
+      "Michael C Haffner",
+      "Paul C Boutros",
+      "Orian S Shirihai",
+      "Ajit S Divakaruni",
+      "Andrew S Goldstein"
+    ],
+    "journal": "Cell Rep",
+    "year": 2023,
+    "modified": "2024-12-29T00:38:12.000Z",
+    "doi": "10.1016/j.celrep.2023.113221",
+    "relativeCitationRatio": 1.58,
+    "citations": 8,
+    "citationsPerYear": 8
+  },
+  {
+    "id": 38018851,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Lipidomic Analysis Reveals Differences in the Extent of Remyelination in the Brain and Spinal Cord.",
+    "authors": [
+      "Nishama De Silva Mohotti",
+      "Hiroko Kobayashi",
+      "Jenna M Williams",
+      "Rashmi Binjawadagi",
+      "Michel P Evertsen",
+      "Ethan G Christ",
+      "Meredith D Hartley"
+    ],
+    "journal": "J Proteome Res",
+    "year": 2024,
+    "modified": "2024-12-28T23:23:34.000Z",
+    "doi": "10.1021/acs.jproteome.3c00443",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 38544285,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -4483,6 +4455,34 @@
     "year": 2024,
     "modified": "2024-12-29T00:08:22.000Z",
     "doi": "10.1038/s41467-024-49745-5",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
+    "id": 39702518,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Proteomic and metabolomic analyses of the human adult myocardium reveal ventricle-specific regulation in end-stage cardiomyopathies.",
+    "authors": [
+      "Benjamin Hunter",
+      "Mengbo Li",
+      "Benjamin L Parker",
+      "Yen Chin Koay",
+      "Dylan J Harney",
+      "Evangeline Pearson",
+      "Jacob Cao",
+      "Gavin T Chen",
+      "Oneka Guneratne",
+      "Gordon K Smyth",
+      "Mark Larance",
+      "John F O'Sullivan",
+      "Sean Lal"
+    ],
+    "journal": "Commun Biol",
+    "year": 2024,
+    "modified": "2025-01-05T05:49:49.000Z",
+    "doi": "10.1038/s42003-024-07306-y",
     "relativeCitationRatio": 0,
     "citations": 0,
     "citationsPerYear": 0
@@ -4573,6 +4573,57 @@
     "citationsPerYear": 2
   },
   {
+    "id": 37166973,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "Enrichr-KG: bridging enrichment analysis across multiple libraries.",
+    "authors": [
+      "John Erol Evangelista",
+      "Zhuorui Xie",
+      "Giacomo B Marino",
+      "Nhi Nguyen",
+      "Daniel J B Clarke",
+      "Avi Ma'ayan"
+    ],
+    "journal": "Nucleic Acids Res",
+    "year": 2023,
+    "modified": "2024-12-29T00:02:04.000Z",
+    "doi": "10.1093/nar/gkad393",
+    "relativeCitationRatio": 10.03,
+    "citations": 35,
+    "citationsPerYear": 35
+  },
+  {
+    "id": 35876555,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "Getting Started with LINCS Datasets and Tools.",
+    "authors": [
+      "Zhuorui Xie",
+      "Eryk Kropiwnicki",
+      "Megan L Wojciechowicz",
+      "Kathleen M Jagodnik",
+      "Ingrid Shu",
+      "Allison Bailey",
+      "Daniel J B Clarke",
+      "Minji Jeon",
+      "John Erol Evangelista",
+      "Maxim V Kuleshov",
+      "Alexander Lachmann",
+      "Abhijna A Parigi",
+      "Jose M Sanchez",
+      "Sherry L Jenkins",
+      "Avi Ma'ayan"
+    ],
+    "journal": "Curr Protoc",
+    "year": 2022,
+    "modified": "2024-12-29T00:22:23.000Z",
+    "doi": "10.1002/cpz1.487",
+    "relativeCitationRatio": 0.54,
+    "citations": 3,
+    "citationsPerYear": 1.5
+  },
+  {
     "id": 33748796,
     "coreProject": "OT2OD030160",
     "application": 11089689,
@@ -4610,57 +4661,6 @@
     "relativeCitationRatio": 4.53,
     "citations": 58,
     "citationsPerYear": 19.333333333333332
-  },
-  {
-    "id": 35876555,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "Getting Started with LINCS Datasets and Tools.",
-    "authors": [
-      "Zhuorui Xie",
-      "Eryk Kropiwnicki",
-      "Megan L Wojciechowicz",
-      "Kathleen M Jagodnik",
-      "Ingrid Shu",
-      "Allison Bailey",
-      "Daniel J B Clarke",
-      "Minji Jeon",
-      "John Erol Evangelista",
-      "Maxim V Kuleshov",
-      "Alexander Lachmann",
-      "Abhijna A Parigi",
-      "Jose M Sanchez",
-      "Sherry L Jenkins",
-      "Avi Ma'ayan"
-    ],
-    "journal": "Curr Protoc",
-    "year": 2022,
-    "modified": "2024-12-29T00:22:23.000Z",
-    "doi": "10.1002/cpz1.487",
-    "relativeCitationRatio": 0.54,
-    "citations": 3,
-    "citationsPerYear": 1.5
-  },
-  {
-    "id": 37166973,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "Enrichr-KG: bridging enrichment analysis across multiple libraries.",
-    "authors": [
-      "John Erol Evangelista",
-      "Zhuorui Xie",
-      "Giacomo B Marino",
-      "Nhi Nguyen",
-      "Daniel J B Clarke",
-      "Avi Ma'ayan"
-    ],
-    "journal": "Nucleic Acids Res",
-    "year": 2023,
-    "modified": "2024-12-29T00:02:04.000Z",
-    "doi": "10.1093/nar/gkad393",
-    "relativeCitationRatio": 10.03,
-    "citations": 35,
-    "citationsPerYear": 35
   },
   {
     "id": 37771373,
@@ -4781,6 +4781,20 @@
     "citationsPerYear": 4.5
   },
   {
+    "id": 35143610,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "blitzGSEA: efficient computation of gene set enrichment analysis through gamma distribution approximation.",
+    "authors": ["Alexander Lachmann", "Zhuorui Xie", "Avi Ma'ayan"],
+    "journal": "Bioinformatics",
+    "year": 2022,
+    "modified": "2024-12-28T23:40:42.000Z",
+    "doi": "10.1093/bioinformatics/btac076",
+    "relativeCitationRatio": 1.12,
+    "citations": 11,
+    "citationsPerYear": 5.5
+  },
+  {
     "id": 37166966,
     "coreProject": "OT2OD030160",
     "application": 11089689,
@@ -4800,93 +4814,6 @@
     "modified": "2024-12-29T00:02:04.000Z",
     "doi": "10.1093/nar/gkad399",
     "relativeCitationRatio": 0.96,
-    "citations": 4,
-    "citationsPerYear": 4
-  },
-  {
-    "id": 35143610,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "blitzGSEA: efficient computation of gene set enrichment analysis through gamma distribution approximation.",
-    "authors": ["Alexander Lachmann", "Zhuorui Xie", "Avi Ma'ayan"],
-    "journal": "Bioinformatics",
-    "year": 2022,
-    "modified": "2024-12-28T23:40:42.000Z",
-    "doi": "10.1093/bioinformatics/btac076",
-    "relativeCitationRatio": 1.12,
-    "citations": 11,
-    "citationsPerYear": 5.5
-  },
-  {
-    "id": 35524556,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "SigCom LINCS: data and metadata search engine for a million gene expression signatures.",
-    "authors": [
-      "John Erol Evangelista",
-      "Daniel J B Clarke",
-      "Zhuorui Xie",
-      "Alexander Lachmann",
-      "Minji Jeon",
-      "Kerwin Chen",
-      "Kathleen M Jagodnik",
-      "Sherry L Jenkins",
-      "Maxim V Kuleshov",
-      "Megan L Wojciechowicz",
-      "Stephan C Schürer",
-      "Mario Medvedovic",
-      "Avi Ma'ayan"
-    ],
-    "journal": "Nucleic Acids Res",
-    "year": 2022,
-    "modified": "2024-12-29T00:02:51.000Z",
-    "doi": "10.1093/nar/gkac328",
-    "relativeCitationRatio": 4.15,
-    "citations": 33,
-    "citationsPerYear": 16.5
-  },
-  {
-    "id": 33787872,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "Drugmonizome and Drugmonizome-ML: integration and abstraction of small molecule attributes for drug enrichment analysis and machine learning.",
-    "authors": [
-      "Eryk Kropiwnicki",
-      "John E Evangelista",
-      "Daniel J Stein",
-      "Daniel J B Clarke",
-      "Alexander Lachmann",
-      "Maxim V Kuleshov",
-      "Minji Jeon",
-      "Kathleen M Jagodnik",
-      "Avi Ma'ayan"
-    ],
-    "journal": "Database (Oxford)",
-    "year": 2021,
-    "modified": "2024-12-28T23:54:15.000Z",
-    "doi": "10.1093/database/baab017",
-    "relativeCitationRatio": 1.29,
-    "citations": 15,
-    "citationsPerYear": 5
-  },
-  {
-    "id": 37082798,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "Computational screen to identify potential targets for immunotherapeutic identification and removal of senescence cells.",
-    "authors": [
-      "Eden Z Deng",
-      "Reid H Fleishman",
-      "Zhuorui Xie",
-      "Giacomo B Marino",
-      "Daniel J B Clarke",
-      "Avi Ma'ayan"
-    ],
-    "journal": "Aging Cell",
-    "year": 2023,
-    "modified": "2024-12-28T23:56:48.000Z",
-    "doi": "10.1111/acel.13809",
-    "relativeCitationRatio": 0.92,
     "citations": 4,
     "citationsPerYear": 4
   },
@@ -4935,6 +4862,27 @@
     "citationsPerYear": 4
   },
   {
+    "id": 37082798,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "Computational screen to identify potential targets for immunotherapeutic identification and removal of senescence cells.",
+    "authors": [
+      "Eden Z Deng",
+      "Reid H Fleishman",
+      "Zhuorui Xie",
+      "Giacomo B Marino",
+      "Daniel J B Clarke",
+      "Avi Ma'ayan"
+    ],
+    "journal": "Aging Cell",
+    "year": 2023,
+    "modified": "2024-12-28T23:56:48.000Z",
+    "doi": "10.1111/acel.13809",
+    "relativeCitationRatio": 0.92,
+    "citations": 4,
+    "citationsPerYear": 4
+  },
+  {
     "id": 39127042,
     "coreProject": "OT2OD030160",
     "application": 11089689,
@@ -4956,5 +4904,57 @@
     "relativeCitationRatio": 0,
     "citations": 1,
     "citationsPerYear": 1
+  },
+  {
+    "id": 33787872,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "Drugmonizome and Drugmonizome-ML: integration and abstraction of small molecule attributes for drug enrichment analysis and machine learning.",
+    "authors": [
+      "Eryk Kropiwnicki",
+      "John E Evangelista",
+      "Daniel J Stein",
+      "Daniel J B Clarke",
+      "Alexander Lachmann",
+      "Maxim V Kuleshov",
+      "Minji Jeon",
+      "Kathleen M Jagodnik",
+      "Avi Ma'ayan"
+    ],
+    "journal": "Database (Oxford)",
+    "year": 2021,
+    "modified": "2024-12-28T23:54:15.000Z",
+    "doi": "10.1093/database/baab017",
+    "relativeCitationRatio": 1.29,
+    "citations": 15,
+    "citationsPerYear": 5
+  },
+  {
+    "id": 35524556,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "SigCom LINCS: data and metadata search engine for a million gene expression signatures.",
+    "authors": [
+      "John Erol Evangelista",
+      "Daniel J B Clarke",
+      "Zhuorui Xie",
+      "Alexander Lachmann",
+      "Minji Jeon",
+      "Kerwin Chen",
+      "Kathleen M Jagodnik",
+      "Sherry L Jenkins",
+      "Maxim V Kuleshov",
+      "Megan L Wojciechowicz",
+      "Stephan C Schürer",
+      "Mario Medvedovic",
+      "Avi Ma'ayan"
+    ],
+    "journal": "Nucleic Acids Res",
+    "year": 2022,
+    "modified": "2024-12-29T00:02:51.000Z",
+    "doi": "10.1093/nar/gkac328",
+    "relativeCitationRatio": 4.15,
+    "citations": 33,
+    "citationsPerYear": 16.5
   }
 ]

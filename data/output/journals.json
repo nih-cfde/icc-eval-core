@@ -60,22 +60,22 @@
     "issn": "26935015"
   },
   {
-    "id": "Briefings in bioinformatics",
-    "name": "Briefings in Bioinformatics",
-    "rank": 2.143,
-    "issn": "14774054"
-  },
-  {
-    "id": "Nature methods",
-    "name": "Nature Methods",
-    "rank": 14.796,
-    "issn": "15487105"
+    "id": "BMC bioinformatics",
+    "name": "BMC Bioinformatics",
+    "rank": 1.005,
+    "issn": "14712105"
   },
   {
     "id": "Analytical chemistry",
     "name": "Analytical Chemistry",
     "rank": 1.621,
     "issn": "15206882"
+  },
+  {
+    "id": "Nature methods",
+    "name": "Nature Methods",
+    "rank": 14.796,
+    "issn": "15487105"
   },
   {
     "id": "Metabolites",
@@ -114,16 +114,16 @@
     "issn": "10974164"
   },
   {
-    "id": "Biomolecules",
-    "name": "Biomolecules",
-    "rank": 1.179,
-    "issn": "2218273X"
-  },
-  {
     "id": "Frontiers in cell and developmental biology",
     "name": "Frontiers in Cell and Developmental Biology",
     "rank": 1.576,
     "issn": "2296634X"
+  },
+  {
+    "id": "Biomolecules",
+    "name": "Biomolecules",
+    "rank": 1.179,
+    "issn": "2218273X"
   },
   {
     "id": "Drug discovery today",
@@ -197,13 +197,13 @@
     "rank": 1.868,
     "issn": "16643224"
   },
-  { "id": "Nature", "name": "Nature", "rank": 18.509, "issn": "14764687" },
   {
     "id": "Statistics in medicine",
     "name": "Statistics in Medicine",
     "rank": 1.348,
     "issn": "10970258"
   },
+  { "id": "Nature", "name": "Nature", "rank": 18.509, "issn": "14764687" },
   {
     "id": "Biology open",
     "name": "Biology Open",
@@ -235,16 +235,16 @@
     "issn": "21903948"
   },
   {
-    "id": "ACS applied materials & interfaces",
-    "name": "ACS applied materials &amp; interfaces",
-    "rank": 2.058,
-    "issn": "19448252"
-  },
-  {
     "id": "ACS applied bio materials",
     "name": "ACS Applied Bio Materials",
     "rank": 0.9,
     "issn": "25766422"
+  },
+  {
+    "id": "ACS applied materials & interfaces",
+    "name": "ACS applied materials &amp; interfaces",
+    "rank": 2.058,
+    "issn": "19448252"
   },
   {
     "id": "Journal of controlled release : official journal of the Controlled Release Society",
@@ -301,28 +301,22 @@
     "issn": "20426410"
   },
   {
-    "id": "Molecular medicine (Cambridge, Mass.)",
-    "name": "Molecular Medicine",
-    "rank": 1.446,
-    "issn": "15283658"
-  },
-  {
     "id": "Cancer reports (Hoboken, N.J.)",
     "name": "Cancer Reports",
     "rank": 0.571,
     "issn": "25738348"
   },
   {
+    "id": "Molecular medicine (Cambridge, Mass.)",
+    "name": "Molecular Medicine",
+    "rank": 1.446,
+    "issn": "15283658"
+  },
+  {
     "id": "JCO precision oncology",
     "name": "JCO Precision Oncology",
     "rank": 2.249,
     "issn": "24734284"
-  },
-  {
-    "id": "BMC bioinformatics",
-    "name": "BMC Bioinformatics",
-    "rank": 1.005,
-    "issn": "14712105"
   },
   {
     "id": "Scientific data",
@@ -354,7 +348,12 @@
     "rank": 0,
     "issn": "2730664X"
   },
-  { "id": "Cancers", "name": "Cancers", "rank": 1.391, "issn": "20726694" },
+  {
+    "id": "Cancers",
+    "name": "Ca-A Cancer Journal for Clinicians",
+    "rank": 106.094,
+    "issn": ""
+  },
   { "id": "PeerJ", "name": "PeerJ", "rank": 0.623, "issn": "21678359" },
   {
     "id": "Cell genomics",
@@ -382,6 +381,12 @@
     "issn": "22111247"
   },
   {
+    "id": "Journal of Alzheimer's disease reports",
+    "name": "Journal of Alzheimer's Disease Reports",
+    "rank": 0.635,
+    "issn": "25424823"
+  },
+  {
     "id": "Frontiers in microbiology",
     "name": "Frontiers in Microbiology",
     "rank": 1.065,
@@ -394,28 +399,10 @@
     "issn": "18781551"
   },
   {
-    "id": "Journal of Alzheimer's disease reports",
-    "name": "Journal of Alzheimer's Disease Reports",
-    "rank": 0.635,
-    "issn": "25424823"
-  },
-  {
     "id": "Allergy",
     "name": "Allergy: European Journal of Allergy and Clinical Immunology",
     "rank": 3.073,
     "issn": "13989995"
-  },
-  {
-    "id": "American journal of physiology. Lung cellular and molecular physiology",
-    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
-    "rank": 1.339,
-    "issn": "15221504"
-  },
-  {
-    "id": "Frontiers in fungal biology",
-    "name": "Frontiers in Fungal Biology",
-    "rank": 0.491,
-    "issn": "26736128"
   },
   {
     "id": "GigaScience",
@@ -424,10 +411,10 @@
     "issn": "2047217X"
   },
   {
-    "id": "Infection and immunity",
-    "name": "Infection and Immunity",
-    "rank": 1.042,
-    "issn": "10985522"
+    "id": "American journal of physiology. Lung cellular and molecular physiology",
+    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
+    "rank": 1.339,
+    "issn": "15221504"
   },
   {
     "id": "Biophysical journal",
@@ -437,10 +424,16 @@
   },
   { "id": "eLife", "name": "eLife", "rank": 3.932, "issn": "2050084X" },
   {
-    "id": "BMC cancer",
-    "name": "BMC Cancer",
-    "rank": 1.087,
-    "issn": "14712407"
+    "id": "Frontiers in fungal biology",
+    "name": "Frontiers in Fungal Biology",
+    "rank": 0.491,
+    "issn": "26736128"
+  },
+  {
+    "id": "Infection and immunity",
+    "name": "Infection and Immunity",
+    "rank": 1.042,
+    "issn": "10985522"
   },
   {
     "id": "Frontiers in endocrinology",
@@ -459,6 +452,12 @@
     "name": "International Journal of Tryptophan Research",
     "rank": 1.004,
     "issn": "11786469"
+  },
+  {
+    "id": "BMC cancer",
+    "name": "BMC Cancer",
+    "rank": 1.087,
+    "issn": "14712407"
   },
   {
     "id": "Nature cancer",
