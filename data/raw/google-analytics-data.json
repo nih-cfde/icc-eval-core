@@ -4,7 +4,7 @@
     "propertyName": "ICC-eval-core-dashboard",
     "coreProject": "U54OD036472",
     "overTime": {
-      "dateRange": { "startDate": "2015-08-14", "endDate": "2025-01-12" },
+      "dateRange": { "startDate": "2015-08-14", "endDate": "2025-01-13" },
       "result": {
         "dimensionHeaders": [{ "name": "date" }],
         "metricHeaders": [
@@ -816,7 +816,7 @@
     "propertyName": "CFDE Website",
     "coreProject": "U54OD03647202",
     "overTime": {
-      "dateRange": { "startDate": "2015-08-14", "endDate": "2025-01-12" },
+      "dateRange": { "startDate": "2015-08-14", "endDate": "2025-01-13" },
       "result": {
         "dimensionHeaders": [{ "name": "date" }],
         "metricHeaders": [
@@ -904,12 +904,20 @@
               { "value": "33", "oneValue": "value" },
               { "value": "5", "oneValue": "value" }
             ]
+          },
+          {
+            "dimensionValues": [{ "value": "20250111", "oneValue": "value" }],
+            "metricValues": [
+              { "value": "1", "oneValue": "value" },
+              { "value": "0", "oneValue": "value" },
+              { "value": "1", "oneValue": "value" }
+            ]
           }
         ],
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 10,
+        "rowCount": 11,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -1003,7 +1011,7 @@
         "rows": [
           {
             "dimensionValues": [{ "value": "Americas", "oneValue": "value" }],
-            "metricValues": [{ "value": "8", "oneValue": "value" }]
+            "metricValues": [{ "value": "9", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "(not set)", "oneValue": "value" }],
@@ -1121,7 +1129,7 @@
             "dimensionValues": [
               { "value": "United States", "oneValue": "value" }
             ],
-            "metricValues": [{ "value": "8", "oneValue": "value" }]
+            "metricValues": [{ "value": "9", "oneValue": "value" }]
           },
           {
             "dimensionValues": [{ "value": "(not set)", "oneValue": "value" }],
@@ -1248,14 +1256,14 @@
             "metricValues": [{ "value": "1", "oneValue": "value" }]
           },
           {
-            "dimensionValues": [{ "value": "Indiana", "oneValue": "value" }],
+            "dimensionValues": [{ "value": "Illinois", "oneValue": "value" }],
             "metricValues": [{ "value": "1", "oneValue": "value" }]
           }
         ],
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 7,
+        "rowCount": 8,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -1378,18 +1386,18 @@
             "metricValues": [{ "value": "1", "oneValue": "value" }]
           },
           {
-            "dimensionValues": [{ "value": "Homewood", "oneValue": "value" }],
+            "dimensionValues": [{ "value": "Chicago", "oneValue": "value" }],
             "metricValues": [{ "value": "1", "oneValue": "value" }]
           },
           {
-            "dimensionValues": [{ "value": "Hoover", "oneValue": "value" }],
+            "dimensionValues": [{ "value": "Homewood", "oneValue": "value" }],
             "metricValues": [{ "value": "1", "oneValue": "value" }]
           }
         ],
         "totals": [],
         "maximums": [],
         "minimums": [],
-        "rowCount": 8,
+        "rowCount": 9,
         "metadata": {
           "samplingMetadatas": [],
           "dataLossFromOtherRow": false,
@@ -1467,7 +1475,7 @@
         "rows": [
           {
             "dimensionValues": [{ "value": "English", "oneValue": "value" }],
-            "metricValues": [{ "value": "9", "oneValue": "value" }]
+            "metricValues": [{ "value": "10", "oneValue": "value" }]
           }
         ],
         "totals": [],
@@ -1555,7 +1563,7 @@
           },
           {
             "dimensionValues": [{ "value": "mobile", "oneValue": "value" }],
-            "metricValues": [{ "value": "1", "oneValue": "value" }]
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
           }
         ],
         "totals": [],
@@ -1670,11 +1678,11 @@
             "metricValues": [{ "value": "2", "oneValue": "value" }]
           },
           {
-            "dimensionValues": [{ "value": "Windows", "oneValue": "value" }],
-            "metricValues": [{ "value": "1", "oneValue": "value" }]
+            "dimensionValues": [{ "value": "iOS", "oneValue": "value" }],
+            "metricValues": [{ "value": "2", "oneValue": "value" }]
           },
           {
-            "dimensionValues": [{ "value": "iOS", "oneValue": "value" }],
+            "dimensionValues": [{ "value": "Windows", "oneValue": "value" }],
             "metricValues": [{ "value": "1", "oneValue": "value" }]
           }
         ],

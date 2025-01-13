@@ -328,6 +328,39 @@
       "last_modified": "12/28/2024, 23:55:24"
     },
     {
+      "pmid": 34600126,
+      "year": 2022,
+      "title": "Manifold medicine: A schema that expands treatment dimensionality.",
+      "authors": "Choong Yong Ung, Taylor M Weiskittel, Cristina Correia, Scott H Kaufmann, Hu Li",
+      "journal": "Drug Discov Today",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": 0.23,
+      "nih_percentile": 11.9,
+      "human": 1,
+      "animal": 0,
+      "molecular_cellular": 0,
+      "apt": 0.25,
+      "is_clinical": "No",
+      "citation_count": 3,
+      "citations_per_year": 1.5,
+      "expected_citations_per_year": 6.471403431241869,
+      "field_citation_rate": 15.67198610594216,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": 1,
+      "cited_by_clin": null,
+      "cited_by": [36866271, 37967790, 38398213],
+      "references": [
+        17502601, 26186195, 17738519, 21701501, 25303533, 28854168, 26836780,
+        31874609, 17848919, 29439024, 22411464, 24238873, 17183312, 30209245,
+        25907346, 32699310, 21164525, 15635412, 26301841, 17047687, 30839905,
+        18207016, 31390550, 26824647, 18469827, 24239728, 19119265, 30953865,
+        30035545, 25031615, 27231050, 23004922, 13718526
+      ],
+      "doi": "10.1016/j.drudis.2021.09.016",
+      "last_modified": "12/28/2024, 23:24:04"
+    },
+    {
       "pmid": 34705835,
       "year": 2021,
       "title": "3D virtual reality vs. 2D desktop registration user interface comparison.",
@@ -440,6 +473,43 @@
       ],
       "doi": "10.1038/s41592-021-01339-5",
       "last_modified": "12/28/2024, 23:29:13"
+    },
+    {
+      "pmid": 34876496,
+      "year": 2022,
+      "title": "De novo individualized disease modules reveal the synthetic penetrance of genes and inform personalized treatment regimens.",
+      "authors": "Taylor M Weiskittel, Choong Y Ung, Cristina Correia, Cheng Zhang, Hu Li",
+      "journal": "Genome Res",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": 0.58,
+      "nih_percentile": 31.6,
+      "human": 1,
+      "animal": 0,
+      "molecular_cellular": 0,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 4,
+      "citations_per_year": 2,
+      "expected_citations_per_year": 3.4296912542517575,
+      "field_citation_rate": 8.037528647149099,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": 1,
+      "cited_by_clin": null,
+      "cited_by": [37242535, 37930015, 37967790, 37717209],
+      "references": [
+        24516372, 22155872, 18043264, 14501829, 30920923, 33398197, 29115304,
+        28477017, 11001876, 25126793, 32296183, 28120890, 29977601, 30423088,
+        20169195, 30736752, 11504849, 30655732, 23576899, 30293088, 30602758,
+        26456849, 27333808, 30096302, 28692140, 25700523, 30445495, 24688047,
+        31327751, 32821429, 28649135, 23383675, 32374631, 30341162, 18048412,
+        22235860, 30769902, 28706266, 18426776, 17447836, 29099487, 30674894,
+        18823568, 26469045, 28805797, 26469044, 31066443, 32487143, 22300766,
+        26975659, 15740614, 19030232, 25516281, 27557938, 32296018, 30847042,
+        19888216, 23000897, 32199228, 28649439, 28926426, 30981959, 23396013
+      ],
+      "doi": "10.1101/gr.275889.121",
+      "last_modified": "12/28/2024, 23:29:37"
     },
     {
       "pmid": 35085427,
@@ -4803,6 +4873,42 @@
       "last_modified": "12/28/2024, 23:35:26"
     },
     {
+      "pmid": 38398213,
+      "year": 2024,
+      "title": "The Rise of Hypothesis-Driven Artificial Intelligence in Oncology.",
+      "authors": "Zilin Xianyu, Cristina Correia, Choong Yong Ung, Shizhen Zhu, Daniel D Billadeau, Hu Li",
+      "journal": "Cancers (Basel)",
+      "is_research_article": "No",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 1,
+      "animal": 0,
+      "molecular_cellular": 0,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 1,
+      "citations_per_year": 1,
+      "expected_citations_per_year": null,
+      "field_citation_rate": 10.984700902721231,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": 1,
+      "cited_by_clin": null,
+      "cited_by": [38920371],
+      "references": [
+        34707284, 34062119, 17214507, 26257935, 25407411, 33824268, 29505029,
+        29650952, 27364481, 34552244, 12042769, 33137719, 31748748, 31114928,
+        29553579, 29097493, 34002060, 19342586, 18469827, 31988518, 28303905,
+        36917948, 19767600, 34600126, 37550415, 37967790, 34054126, 37296102,
+        23430648, 33056981, 34535775, 35911770, 36690644, 16873662, 32426452,
+        32579974, 25140961, 20738055, 37130342, 28706266, 31186547, 34060483,
+        26975659, 16426740, 37535875, 32541867, 21386836, 33096023, 37371475,
+        34771708, 35832612, 28765560, 30980030
+      ],
+      "doi": "10.3390/cancers16040822",
+      "last_modified": "12/28/2024, 23:36:40"
+    },
+    {
       "pmid": 38413840,
       "year": 2024,
       "title": "Enhancer selectivity in space and time: from enhancer-promoter interactions to promoter activation.",
@@ -5122,6 +5228,33 @@
       ],
       "doi": "10.1101/2024.04.09.588712",
       "last_modified": "12/28/2024, 23:50:46"
+    },
+    {
+      "pmid": 38648957,
+      "year": 2024,
+      "title": "Cadherin-11 targeted cell-specific liposomes enabled skin fibrosis treatment by inducing apoptosis.",
+      "authors": "Himanshu N Bhatt, Rimpy Diwan, Igor L Estevao, Rui Dong, Jennifer Smith, Chuan Xiao, Sandeep K Agarwal, Md Nurunnabi",
+      "journal": "J Control Release",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.17,
+      "animal": 0.5,
+      "molecular_cellular": 0.33,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": 0.14433756729740643,
+      "y_coord": -0.25,
+      "cited_by_clin": null,
+      "cited_by": [],
+      "references": [26518604, 10029089],
+      "doi": "10.1016/j.jconrel.2024.04.029",
+      "last_modified": "01/12/2025, 16:09:17"
     },
     {
       "pmid": 38651675,
@@ -5561,6 +5694,41 @@
       "last_modified": "12/29/2024, 00:03:41"
     },
     {
+      "pmid": 38882600,
+      "year": 2024,
+      "title": "Glycogen synthase kinase 3 activity enhances liver inflammation in MASH.",
+      "authors": "Mireille Khoury, Qianqian Guo, Kunimaro Furuta, Cristina Correia, Chady Meroueh, Hyun Se Kim Lee, Khaled Warasnhe, Lucía Valenzuela-Pérez, Andrew P Mazar, Iljung Kim, Yung-Kyun Noh, Heather Holmes, Michael F Romero, Caroline R Sussman, Kevin D Pavelko, Shahidul Islam, Adebowale O Bamidele, Petra Hirsova, Hu Li, Samar H Ibrahim",
+      "journal": "JHEP Rep",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.2,
+      "animal": 0.07,
+      "molecular_cellular": 0.73,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 1,
+      "citations_per_year": 1,
+      "expected_citations_per_year": null,
+      "field_citation_rate": 3.46163727984244,
+      "provisional": "No",
+      "x_coord": -0.5773502691896256,
+      "y_coord": -0.19999999999999996,
+      "cited_by_clin": null,
+      "cited_by": [39606726],
+      "references": [
+        26403509, 21886606, 25125077, 31433301, 28297678, 30446388, 28258704,
+        22110425, 23372021, 36894027, 20441224, 28824887, 12127930, 8382613,
+        10894547, 29844586, 33476308, 2164470, 31831767, 27558328, 19176546,
+        30703432, 20056834, 17908561, 34431475, 36091042, 37601629, 31076404,
+        33198153, 31395618, 30414863, 29967350, 37511396, 20683968, 25435019,
+        34828637, 30102569, 25490937, 36626620, 29454647, 30745182, 30556038,
+        36499109, 21995961, 35438255, 34037463, 26214582, 23305254, 28435674
+      ],
+      "doi": "10.1016/j.jhepr.2024.101073",
+      "last_modified": "12/29/2024, 00:05:51"
+    },
+    {
       "pmid": 38918178,
       "year": 2024,
       "title": "Leptochelins A-C, Cytotoxic Metallophores Produced by Geographically Dispersed <i>Leptothoe</i> Strains of Marine Cyanobacteria.",
@@ -5667,7 +5835,7 @@
         34019663, 37492197, 19457415, 20628077, 37215542, 34443494
       ],
       "doi": "10.1128/iai.00224-24",
-      "last_modified": "12/29/2024, 00:11:30"
+      "last_modified": "01/12/2025, 16:22:04"
     },
     {
       "pmid": 38984754,
@@ -5745,7 +5913,7 @@
         28391690, 26812473, 37233689, 34161887, 30505142, 35997016, 35461097
       ],
       "doi": "10.1021/acs.est.4c01156",
-      "last_modified": "12/29/2024, 00:11:58"
+      "last_modified": "01/12/2025, 16:09:25"
     },
     {
       "pmid": 39127042,
@@ -6236,7 +6404,7 @@
         30154186, 38196033, 32213323, 32213324, 38918438
       ],
       "doi": "10.1101/2024.09.16.611917",
-      "last_modified": "01/05/2025, 05:47:49"
+      "last_modified": "01/12/2025, 16:09:40"
     },
     {
       "pmid": 39371551,
@@ -6479,6 +6647,33 @@
       ],
       "doi": "10.3390/bioengineering11100984",
       "last_modified": "01/05/2025, 05:47:58"
+    },
+    {
+      "pmid": 39535921,
+      "year": 2024,
+      "title": "Cancer-associated fibroblasts maintain critical pancreatic cancer cell lipid homeostasis in the tumor microenvironment.",
+      "authors": "Xu Han, Michelle Burrows, Laura C Kim, Jimmy P Xu, Will Vostrejs, Tran Ngoc Van Le, Carson Poltorack, Yanqing Jiang, Edna Cukierman, Ben Z Stanger, Kim A Reiss, Sydney M Shaffer, Clementina Mesaros, Brian Keith, M Celeste Simon",
+      "journal": "Cell Rep",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.12,
+      "animal": 0.25,
+      "molecular_cellular": 0.62,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": -0.75,
+      "cited_by_clin": null,
+      "cited_by": [],
+      "references": [30919589, 37745612],
+      "doi": "10.1016/j.celrep.2024.114972",
+      "last_modified": "01/05/2025, 05:48:06"
     },
     {
       "pmid": 39554050,
@@ -6828,7 +7023,7 @@
     },
     {
       "pmid": 39707873,
-      "year": 2024,
+      "year": 2025,
       "title": "Salivary Metabolomic Signatures in Pediatric Eosinophilic Esophagitis.",
       "authors": "Girish Hiremath, Simona G Codreanu, Stacy D Sherrod, Regina Tyree, Hernan Correa, Yash Choksi, John A McLean, Andrea Locke",
       "journal": "Allergy",
@@ -6851,7 +7046,34 @@
       "cited_by": [],
       "references": [],
       "doi": "10.1111/all.16450",
-      "last_modified": "12/29/2024, 00:53:51"
+      "last_modified": "01/12/2025, 16:22:23"
+    },
+    {
+      "pmid": 39754192,
+      "year": 2025,
+      "title": "Integrative multiomics reveals common endotypes across PSEN1, PSEN2, and APP mutations in familial Alzheimer's disease.",
+      "authors": "Phoebe Valdes, Andrew B Caldwell, Qing Liu, Michael Q Fitzgerald, Srinivasan Ramachandran, Celeste M Karch, Douglas R Galasko, Shauna H Yuan, Steven L Wagner, Shankar Subramaniam",
+      "journal": "Alzheimers Res Ther",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.33,
+      "animal": 0,
+      "molecular_cellular": 0.67,
+      "apt": 0,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": null,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": -0.75,
+      "cited_by_clin": [],
+      "cited_by": [],
+      "references": [],
+      "doi": "10.1186/s13195-024-01659-6",
+      "last_modified": "01/07/2025, 08:54:43"
     }
   ]
 }

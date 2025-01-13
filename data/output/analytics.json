@@ -121,7 +121,8 @@
         "2025-01-06": 3,
         "2025-01-07": 1,
         "2025-01-09": 2,
-        "2025-01-10": 34
+        "2025-01-10": 34,
+        "2025-01-11": 1
       },
       "newUsers": {
         "2024-12-11": 2,
@@ -140,7 +141,8 @@
         "2025-01-06": 1,
         "2025-01-07": 1,
         "2025-01-09": 1,
-        "2025-01-10": 5
+        "2025-01-10": 5,
+        "2025-01-11": 1
       }
     },
     "topContinents": {
@@ -151,7 +153,7 @@
         "Asia": 1
       },
       "byNewUsers": { "Americas": 41, "Europe": 4, "(not set)": 3, "Asia": 1 },
-      "byEngagedSessions": { "Americas": 8, "(not set)": 1 }
+      "byEngagedSessions": { "Americas": 9, "(not set)": 1 }
     },
     "topCountries": {
       "byActiveUsers": {
@@ -168,7 +170,7 @@
         "Belgium": 1,
         "India": 1
       },
-      "byEngagedSessions": { "United States": 8, "(not set)": 1 }
+      "byEngagedSessions": { "United States": 9, "(not set)": 1 }
     },
     "topRegions": {
       "byActiveUsers": {
@@ -190,7 +192,7 @@
         "New Mexico": 2,
         "(not set)": 1,
         "California": 1,
-        "Indiana": 1
+        "Illinois": 1
       }
     },
     "topCities": {
@@ -212,19 +214,19 @@
         "Albuquerque": 2,
         "(not set)": 1,
         "Baltimore": 1,
-        "Homewood": 1,
-        "Hoover": 1
+        "Chicago": 1,
+        "Homewood": 1
       }
     },
     "topLanguages": {
       "byActiveUsers": { "English": 48, "Russian": 1 },
       "byNewUsers": { "English": 48, "Russian": 1 },
-      "byEngagedSessions": { "English": 9 }
+      "byEngagedSessions": { "English": 10 }
     },
     "topDevices": {
       "byActiveUsers": { "desktop": 42, "mobile": 7 },
       "byNewUsers": { "desktop": 42, "mobile": 7 },
-      "byEngagedSessions": { "desktop": 8, "mobile": 1 }
+      "byEngagedSessions": { "desktop": 8, "mobile": 2 }
     },
     "topOSes": {
       "byActiveUsers": {
@@ -244,8 +246,8 @@
       "byEngagedSessions": {
         "Macintosh": 5,
         "Linux": 2,
-        "Windows": 1,
-        "iOS": 1
+        "iOS": 2,
+        "Windows": 1
       }
     }
   }
