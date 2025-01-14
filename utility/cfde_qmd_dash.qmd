@@ -1,0 +1,418 @@
+---
+title: "CFDE Evaluation Core"
+title-block-banner: true
+format: 
+    html:
+        toc: true
+        toc-location: left
+        toc-depth: 5
+        toc-expand: true
+        other-links:
+          - text: Support from U54 OD036472
+            href: https://cfde-eval.netlify.app/core-project/U54OD036472
+        smooth-scroll: true
+        embed-resources: true
+        page-layout: full
+        theme: cosmo
+server: shiny
+editor: source
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+## Packages
+library(tidyverse)
+library(magrittr)
+library(gh)
+library(jsonlite)
+library(scales)
+library(plotly)
+library(data.table)
+library(gt)
+library(shiny)
+
+## Read json files from '/data/output' directory in the icc-eval-core repo
+`core-projects` <- fromJSON(gh('GET https://raw.githubusercontent.com/nih-cfde/icc-eval-core/refs/heads/main/data/output/core-projects.json', .token = gitcreds::gitcreds_get()$password)$message) %>% 
+    as_tibble()
+projects <- fromJSON(gh('GET https://raw.githubusercontent.com/nih-cfde/icc-eval-core/refs/heads/main/data/output/projects.json', .token = gitcreds::gitcreds_get()$password)$message) %>% 
+    as_tibble()
+publications <- fromJSON(gh('GET https://raw.githubusercontent.com/nih-cfde/icc-eval-core/refs/heads/main/data/output/publications.json', .token = gitcreds::gitcreds_get()$password)$message) %>% 
+    as_tibble()
+`drc-dcc` <- fromJSON(gh('GET https://raw.githubusercontent.com/nih-cfde/icc-eval-core/refs/heads/main/data/output/drc-dcc.json', .token = gitcreds::gitcreds_get()$password)$message) %>% 
+    as_tibble()
+`drc-file` <- fromJSON(gh('GET https://raw.githubusercontent.com/nih-cfde/icc-eval-core/refs/heads/main/data/output/drc-file.json', .token = gitcreds::gitcreds_get()$password)$message) %>% 
+    as_tibble()
+```
+
+## Overview
+
+### Totals
+
+#### Core Projects
+
+```{r}
+#| label: core_projects_count
+#| include: false
+core_projects_count <- `core-projects` %>% count() %>% pull(n)
+```
+
+`r core_projects_count`
+
+#### Projects
+
+```{r}
+#| label: projects_count
+#| include: false
+projects_count <- `core-projects` %>% unnest(projects) %>% count() %>% pull(n)
+```
+
+`r projects_count`
+
+#### Awards
+
+```{r}
+#| label: award_sum
+#| include: false
+award_sum <- `core-projects` %>% pull(awardAmount) %>% sum() %>% dollar()
+```
+
+`r award_sum`
+
+#### Publications
+
+```{r}
+#| label: publication_sum
+#| include: false
+publication_sum <- `core-projects` %>% pull(publications) %>% sum()
+```
+
+`r publication_sum`
+
+### Over Time
+
+```{r}
+#| label: checkboxInput
+#| echo: false
+checkboxInput("cumulativeCheckbox", "Cumulative", value = TRUE)
+```
+
+
+```{r}
+#| label: projects_prep
+#| include: false
+first_project_date <- 
+    projects %>% 
+    mutate(dateStart_dttm = as_date(dateStart)) %>% 
+    pull(dateStart_dttm) %>% 
+    min()
+last_project_date <-
+    projects %>% 
+    mutate(dateStart_dttm = as_date(dateStart)) %>% 
+    pull(dateStart_dttm) %>% 
+    max()
+date_range <- 
+    seq(first_project_date, last_project_date, by = 'month') %>% floor_date(unit = 'month') %>% 
+    as_tibble() %>% 
+    rename(floor_date = value) %>% 
+    mutate(project_count = 0,
+           award_sum = 0)
+```
+
+```{r}
+#| label: projects_over_time
+#| echo: false
+#| message: false
+#| context: data
+projects_over_time_plot <-
+    projects %>% 
+    mutate(dateStart_dttm = as_date(dateStart),
+           floor_date = floor_date(dateStart_dttm, unit = 'month'),
+           ) %>% 
+    group_by(floor_date) %>% 
+    summarise(project_count = n(), .groups = 'drop') %>% 
+    full_join(date_range) %>% 
+    group_by(floor_date) %>% 
+    summarize(project_count = max(project_count)) %>% 
+    arrange(floor_date) %>% 
+    plot_ly(x = ~floor_date, y = ~project_count, type = 'scatter', mode = 'lines+markers', name = 'Projects', fill = 'tozeroy', showlegend=FALSE) %>% 
+    layout(xaxis = list(title = '', showgrid = FALSE),
+           annotations = list(x = 0.5, y = .95, text = glue::glue("<b>Projects</b>\nTotal: {projects_count}"), showarrow = FALSE, xref='x domain', yref='paper', xanchor='center', yanchor='bottom')
+           )
+
+cumulative_projects_over_time_plot <-
+    projects %>%
+    mutate(dateStart_dttm = as_date(dateStart),
+           floor_date = floor_date(dateStart_dttm, unit = 'month'),
+           ) %>% 
+    group_by(floor_date) %>% 
+    summarise(project_count = n(), .groups = 'drop') %>% 
+    full_join(date_range) %>% 
+    group_by(floor_date) %>% 
+    summarize(project_count = max(project_count)) %>% 
+    arrange(floor_date) %>% 
+    mutate(cumulative_project_count = cumsum(project_count)) %>% 
+    plot_ly(x = ~floor_date, y = ~cumulative_project_count, type = 'scatter', mode = 'lines+markers', name = 'Projects', fill = 'tozeroy', showlegend=FALSE) %>%
+    layout(xaxis = list(title = '', showgrid = FALSE),
+           annotations = list(x = 0.5, y = .95, text = glue::glue("<b>Projects (cumulative)</b>\nTotal: {projects_count}"), showarrow = FALSE, xref='x domain', yref='paper', xanchor='center', yanchor='bottom')
+           ) 
+```
+
+```{r}
+#| label: awards_over_time
+#| echo: false
+#| message: false
+#| context: data
+awards_over_time_plot <-
+    projects %>% 
+    mutate(dateStart_dttm = as_date(dateStart),
+           floor_date = floor_date(dateStart_dttm, unit = 'month')
+           ) %>% 
+    group_by(floor_date) %>% 
+    summarise(award_sum = sum(awardAmount)) %>% 
+    full_join(date_range) %>% 
+    group_by(floor_date) %>% 
+    summarize(award_sum = max(award_sum)) %>% 
+    arrange(floor_date) %>% 
+    plot_ly(x = ~floor_date, y = ~award_sum, type = 'scatter', mode = 'lines+markers', name = 'Awards', fill = 'tozeroy', showlegend=FALSE) %>% 
+    layout(yaxis = list(tickformat = "$~s"),
+           xaxis = list(title = '', showgrid = FALSE),
+           annotations = list(x = 0.5, y = .95, text = glue::glue("<b>Award Amount</b>\nTotal: {projects_count}"), showarrow = FALSE, xref='x2 domain', yref='paper', xanchor='center', yanchor='bottom')
+           )
+
+
+cumulative_awards_over_time_plot <-
+    projects %>% 
+    mutate(dateStart_dttm = as_date(dateStart),
+           floor_date = floor_date(dateStart_dttm, unit = 'month')
+           ) %>% 
+    group_by(floor_date) %>% 
+    summarise(award_sum = sum(awardAmount)) %>% 
+    full_join(date_range) %>% 
+    group_by(floor_date) %>% 
+    summarize(award_sum = max(award_sum)) %>% 
+    arrange(floor_date) %>% 
+    mutate(cumulative_award_sum = cumsum(award_sum)) %>% 
+    plot_ly(x = ~floor_date, y = ~cumulative_award_sum, type = 'scatter', mode = 'lines+markers', name = 'Awards', fill = 'tozeroy', showlegend=FALSE) %>% 
+    layout(yaxis = list(tickformat = "$~s"),
+           xaxis = list(title = '', showgrid = FALSE),
+           annotations = list(x = 0.5, y = .95, text = glue::glue("<b>Award Amount (cumulative)</b>\nTotal: {projects_count}"), showarrow = FALSE, xref='x2 domain', yref='paper', xanchor='center', yanchor='bottom')
+           )
+```
+
+```{r}
+#| label: publications_over_time
+#| echo: false
+#| message: false
+#| context: data
+publication_date_range <-
+    date_range %>% 
+    mutate(floor_date = floor_date(floor_date, unit = 'year')) %>% 
+    distinct(floor_date) %>% 
+    mutate(publication_sum = 0)
+publications_over_time_plot <- 
+    publications %>% 
+    mutate(floor_date = ymd(year, truncated = 2L)) %>% 
+    group_by(floor_date) %>% 
+    summarise(publication_sum = n()) %>% 
+    full_join(publication_date_range) %>% 
+    group_by(floor_date) %>% 
+    summarise(publication_sum = max(publication_sum)) %>% 
+    arrange(floor_date) %>% 
+    plot_ly(x = ~floor_date, y = ~publication_sum, type = 'scatter', mode = 'lines+markers', name = 'Publications', fill = 'tozeroy', showlegend=FALSE) %>% 
+    layout(xaxis = list(title = '', showgrid = FALSE),
+           annotations = list(x = 0.5, y = .95, text = glue::glue("<b>Publications</b>\nTotal: {projects_count}"), showarrow = FALSE, xref='x3 domain', yref='paper', xanchor='center', yanchor='bottom')
+           )
+
+cumulative_publications_over_time_plot <- 
+    publications %>% 
+    mutate(floor_date = ymd(year, truncated = 2L)) %>% 
+    group_by(floor_date) %>% 
+    summarise(publication_sum = n()) %>% 
+    full_join(publication_date_range) %>% 
+    group_by(floor_date) %>% 
+    summarise(publication_sum = max(publication_sum)) %>% 
+    arrange(floor_date) %>% 
+    mutate(cumulative_publication_sum = cumsum(publication_sum)) %>% 
+    plot_ly(x = ~floor_date, y = ~cumulative_publication_sum, type = 'scatter', mode = 'lines+markers', name = 'Publications', fill = 'tozeroy', showlegend=FALSE) %>% 
+    layout(xaxis = list(title = '', showgrid = FALSE),
+           annotations = list(x = 0.5, y = .95, text = glue::glue("<b>Publications (cumulative)</b>\nTotal: {projects_count}"), showarrow = FALSE, xref='x3 domain', yref='paper', xanchor='center', yanchor='bottom')
+           )
+```
+
+```{r}
+#| label: plots-output
+plotlyOutput("plots")
+```
+
+```{r}
+#| label: render-plots
+#| context: server
+output$plots <- renderPlotly({
+  if (input$cumulativeCheckbox) {
+    subplot(cumulative_projects_over_time_plot, cumulative_awards_over_time_plot, cumulative_publications_over_time_plot, shareX = TRUE) %>% 
+        layout(hovermode = 'x unified') %>% 
+        config(displayModeBar = FALSE)
+        } else {
+            subplot(projects_over_time_plot, awards_over_time_plot, publications_over_time_plot, shareX = TRUE) %>% 
+                layout(hovermode = 'x unified') %>% 
+                config(displayModeBar = FALSE)
+                }
+            })
+```
+
+##  Core Projects
+
+```{r}
+`core-projects` %>% 
+    mutate(awardAmount = case_when(awardAmount >= 1e6 ~ glue::glue("${round(awardAmount / 1e6, 0)}M"),
+                                   awardAmount >= 1e3 ~ glue::glue("${round(awardAmount / 1e3, 0)}K"),
+                                   TRUE ~ glue::glue("${awardAmount}")
+                                   ),
+           projects = map_int(.x = projects, ~length(.x))
+           ) %>% 
+    rename(ID = id, Name = name, "Activity Code" = activityCode, Projects = projects, "Award" = awardAmount, Publications = publications, Repositories = repos, Analytics = analytics) %>% 
+    DT::datatable(rownames = FALSE)
+```
+
+## Data Resource Center
+
+## Total
+
+```{r}
+#| label: output-total_table
+gt_output("total_gt")
+```
+
+## DCC
+
+```{r}
+#| label: output-dcc_table
+gt_output("dcc_gt")
+```
+
+```{r}
+#| label: render-dcc_table
+#| context: server
+qty_dcc_files <- 
+    `drc-dcc` %>% 
+    unnest(files, names_sep = '_') %>% 
+    count() %>% 
+    pull(n)
+sum_dcc_filesize <- 
+    `drc-dcc` %>% 
+    unnest(files, names_sep = '_') %>% 
+    pull(files_size) %>% 
+    sum() %>% 
+    fs::as_fs_bytes()
+dcc_count <- 
+    `drc-dcc` %>% 
+    unnest(files, names_sep = '_') %>% 
+    count(files_url$ext, sort = T)
+dcc_types <- 
+    dcc_count %>% 
+    mutate(types = glue::glue("{n}.{`files_url$ext`}")) %>% 
+    pull(types) %>% 
+    glue::glue_collapse(sep = ", ")
+dcc <- tibble(Files = qty_dcc_files, Size = sum_dcc_filesize %>% as.character(), Types = dcc_types)
+dcc_gt <- 
+    dcc %>% 
+    gt() %>% 
+    cols_width(
+        Files ~ px(100),
+        Size ~ px(100),
+        Types ~ px(800)
+        ) %>%
+    cols_align(
+        align = "left",  # Align text to the left
+        columns = c(Files, Size, Types)
+        ) %>%
+    tab_style(
+        style = cell_text(whitespace = "normal"),  # Enable text wrapping
+        locations = cells_body(columns = c(Files, Size, Types))
+    )
+output$dcc_gt <- render_gt({dcc_gt})
+```
+
+## File
+
+```{r}
+#| label: output-files_table
+gt_output("files_gt")
+```
+
+```{r}
+#| label: render-files_table
+#| context: server
+qty_files <- 
+    `drc-file` %>% 
+    unnest(files, names_sep = '_') %>% 
+    count() %>% 
+    pull(n)
+sum_filesize <- 
+    `drc-file` %>% 
+    unnest(files, names_sep = '_') %>% 
+    pull(files_size) %>% 
+    sum() %>% 
+    fs::as_fs_bytes()
+types_count <- 
+    `drc-file` %>% 
+    unnest(files, names_sep = '_') %>% 
+    count(files_url$ext, sort = T) 
+types <-
+    types_count %>% 
+    mutate(types = glue::glue("{n}.{`files_url$ext`}")) %>% 
+    pull(types) %>% 
+    glue::glue_collapse(sep = ", ")
+files <- tibble(Files = qty_files, Size = sum_filesize %>% as.character(), Types = types)
+files_gt <-
+    files %>% 
+    gt() %>% 
+    cols_width(
+        Files ~ px(100),
+        Size ~ px(100),
+        Types ~ px(800)
+        ) %>%
+    cols_align(
+        align = "left",  # Align text to the left
+        columns = c(Files, Size, Types)
+        ) %>%
+    tab_style(
+        style = cell_text(whitespace = "normal"),  # Enable text wrapping
+        locations = cells_body(columns = c(Files, Size, Types))
+    )
+output$files_gt <- render_gt({files_gt})
+```
+
+```{r}
+#| label: render-total_table
+#| context: server
+qty_total <- qty_dcc_files + qty_files
+sum_filesize_total <- sum_dcc_filesize + sum_filesize
+types_total <- union_all(types_count, dcc_count) %>% 
+    group_by(`files_url$ext`) %>% 
+    summarise(n = sum(n)) %>% 
+    arrange(desc(n)) %>% 
+    mutate(types = glue::glue("{n}.{`files_url$ext`}")) %>% 
+    pull(types) %>% 
+    glue::glue_collapse(sep = ", ")
+total <- tibble(Files = qty_total, Size = sum_filesize_total %>% as.character(), Types = types_total)
+total_gt <-
+    total %>% 
+    gt() %>% 
+    cols_width(
+        Files ~ px(100),
+        Size ~ px(100),
+        Types ~ px(800)
+        ) %>%
+    cols_align(
+        align = "left",  # Align text to the left
+        columns = c(Files, Size, Types)
+        ) %>%
+    tab_style(
+        style = cell_text(whitespace = "normal"),  # Enable text wrapping
+        locations = cells_body(columns = c(Files, Size, Types))
+    )
+output$total_gt <- render_gt({total_gt})
+```

@@ -1,0 +1,37 @@
+---
+title: "Explore: Analytics"
+format: html
+---
+
+## Setup
+
+```{r}
+library(tidyverse)
+library(magrittr)
+library(jsonlite)
+
+## Helper function to load all JSON files into Environment
+json_readr <- function(object_name, json_file) {
+    data <- jsonlite::fromJSON(json_file) %>% 
+        as_tibble()
+    assign(x = object_name, value = data, pos = sys.frame())
+    }
+```
+
+## Ingest Data
+
+Quick method to ingest all json data for this project and place into the global environment for analysis purposes.
+
+```{r}
+## Locate all JSON Files
+all_json <- fs::dir_ls(fs::path_abs('data/output/'), type = 'file', regexp = '[.]json$', ) %>% 
+    as_tibble() %>% 
+    rename(file_path = value) %>% 
+    mutate(object = basename(file_path),
+           object = str_remove(object, '.json$')
+           )
+## Read into Environment
+map2(.x = all_json$object, .y = all_json$file_path, ~json_readr(.x, .y))
+```
+
+## Explore

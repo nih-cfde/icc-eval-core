@@ -1,0 +1,63 @@
+---
+title: "Core Project: Template"
+title-block-banner: true
+format: 
+    html:
+        toc: true
+        toc-location: left
+        toc-depth: 5
+        toc-expand: true
+        smooth-scroll: true
+        embed-resources: true
+        page-layout: full
+        theme: cosmo
+editor: source
+params: 
+    core_project: "U54OD036472"
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+## Packages
+library(tidyverse)
+library(magrittr)
+library(jsonlite)
+library(scales)
+library(plotly)
+library(data.table)
+library(shiny)
+
+## Read json files from '/data/output' directory in the icc-eval-core repo
+`core-projects` <- fromJSON(gh('GET https://raw.githubusercontent.com/nih-cfde/icc-eval-core/refs/heads/main/data/output/core-projects.json', .token = gitcreds::gitcreds_get()$password)$message) %>% 
+    as_tibble()
+
+## Add params for interactive use (PositronIDE fix)
+if(interactive()) {
+  params <- list(core_project = "U54OD036472")
+} 
+```
+
+## Details
+
+```{r}
+
+`core-projects` %>% 
+    filter(id == params$core_project) %>% 
+    mutate(awardAmount = dollar(awardAmount),
+           projects = map_int(.x = projects, ~length(.x))
+           ) %>% 
+    rename(ID = id, Name = name, "Activity Code" = activityCode, Projects = projects, "Award" = awardAmount, Publications = publications, Repositories = repos, Analytics = analytics) %>% 
+    DT::datatable(rownames = FALSE)
+```
+
+## Publications
+
+## Repositories
+
+### Notes
+
+## Analytics
+
+### Notes
