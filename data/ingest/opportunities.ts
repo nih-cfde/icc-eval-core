@@ -29,14 +29,13 @@ const getPrefix = (id: string) => {
 export const getDocuments = memoize(async () => {
   const page = await newPage();
   await page.goto(opportunitiesUrl);
+  const links = Array.from(await page.locator(documentsSelector).all());
   return await Promise.all(
-    Array.from(await page.locator(documentsSelector).all()).map(
-      async (link) => {
-        const href = await link.getAttribute("href");
-        if (href) return href;
-        else throw Error("No href");
-      },
-    ),
+    links.map(async (link) => {
+      const href = await link.getAttribute("href");
+      if (href) return href;
+      else throw Error("No href");
+    }),
   );
 });
 

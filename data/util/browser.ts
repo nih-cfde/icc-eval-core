@@ -2,7 +2,7 @@ import playwright from "playwright";
 import { deindent, indent, log } from "@/util/log";
 
 /** set up browser instance, page, etc */
-export const browser = await playwright.chromium.launch({ headless: true });
+export const browser = await playwright.chromium.launch({ headless: false });
 export const context = await browser.newContext();
 
 /** options */
