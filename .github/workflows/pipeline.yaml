@@ -13,7 +13,7 @@ on:
 
 jobs:
   pipeline:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Debug dump
@@ -25,7 +25,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.x
+          node-version: lts/*
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
@@ -50,9 +50,7 @@ jobs:
           credentials_json: ${{ secrets.AUTH_GOOGLE }}
 
       - name: Run pipeline
-        run: |
-          touch data/.env.local
-          ./run.sh
+        run: xvfb-run ./run.sh --ingest
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}

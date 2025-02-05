@@ -2,7 +2,7 @@
   "type": "module",
   "scripts": {
     "install-playwright": "npx playwright install chromium --with-deps",
-    "script": "tsx --env-file=.env --env-file=.env.local",
+    "script": "tsx --env-file-if-exists=.env --env-file-if-exists=.env.local",
     "ingest": "npm run script -- ./ingest.ts",
     "print": "npm run script -- ./print.ts",
     "lint": "eslint . --fix && prettier **/*.{ts,md} --write",
