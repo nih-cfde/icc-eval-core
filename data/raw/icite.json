@@ -2430,7 +2430,7 @@
       "cited_by": [38449289, 37577719],
       "references": [18516045, 35072136, 29409532, 27863956, 28821273],
       "doi": "10.1093/bioinformatics/btad126",
-      "last_modified": "02/01/2025, 23:22:24"
+      "last_modified": "02/09/2025, 05:40:06"
     },
     {
       "pmid": 36945517,
@@ -5715,7 +5715,7 @@
         31600070, 34862502, 31930757, 22976213, 25157598, 29086039, 36409434
       ],
       "doi": "10.1021/jasms.4c00061",
-      "last_modified": "02/01/2025, 23:45:53"
+      "last_modified": "02/08/2025, 05:51:16"
     },
     {
       "pmid": 38844817,
@@ -6733,7 +6733,7 @@
         34460370
       ],
       "doi": "10.1093/bfgp/elae042",
-      "last_modified": "02/02/2025, 05:50:58"
+      "last_modified": "02/06/2025, 06:07:11"
     },
     {
       "pmid": 39451360,
@@ -7230,7 +7230,43 @@
         10802651
       ],
       "doi": "10.1186/s13195-024-01659-6",
-      "last_modified": "02/01/2025, 22:52:32"
+      "last_modified": "02/06/2025, 06:07:51"
+    },
+    {
+      "pmid": 39764040,
+      "year": 2024,
+      "title": "Construction, Deployment, and Usage of the Human Reference Atlas Knowledge Graph for Linked Open Data.",
+      "authors": "Andreas Bueckle, Bruce W Herr, Josef Hardi, Ellen M Quardokus, Mark A Musen, Katy Börner",
+      "journal": "bioRxiv",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.75,
+      "animal": 0,
+      "molecular_cellular": 0.25,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": -0.75,
+      "cited_by_clin": null,
+      "cited_by": [],
+      "references": [
+        34062119, 32591513, 37468756, 32939066, 37337100, 36175836, 34795433,
+        35549406, 27170830, 23273493, 29072289, 27377652, 39174566, 38134877,
+        36093122, 36759942, 26112029, 28905911, 30398643, 33197228, 26978244,
+        34750582, 37468557, 39567746, 38834597, 28936969, 23715323, 29409532,
+        14759820, 18287559, 31651362, 38253604, 22293552, 37181487, 14681409,
+        36513738, 36090663, 16381955, 36243972, 37468619, 39516256, 39695169,
+        37537179, 36936385, 29377902, 31597973, 36693887, 32232057, 37941124,
+        32308863, 23044550, 36318249, 36973309, 36280720, 33339830
+      ],
+      "doi": "10.1101/2024.12.22.630006",
+      "last_modified": "02/02/2025, 00:42:57"
     },
     {
       "pmid": 39799122,
@@ -7261,42 +7297,6 @@
       ],
       "doi": "10.1038/s41597-024-04358-x",
       "last_modified": "02/01/2025, 22:54:07"
-    },
-    {
-      "pmid": 39824876,
-      "year": 2025,
-      "title": "Unveiling cellular changes in leukaemia cell lines after cannabidiol treatment through lipidomics.",
-      "authors": "David Chamoso-Sanchez, Martina Panini, Clarissa Caroli, Matilde Marani, Lorenzo Corsi, Francisco J Rupérez, Antonia Garcia, Federica Pellati",
-      "journal": "Sci Rep",
-      "is_research_article": "Yes",
-      "relative_citation_ratio": null,
-      "nih_percentile": null,
-      "human": 0.14,
-      "animal": 0,
-      "molecular_cellular": 0.86,
-      "apt": 0.05,
-      "is_clinical": "No",
-      "citation_count": 0,
-      "citations_per_year": 0,
-      "expected_citations_per_year": null,
-      "field_citation_rate": null,
-      "provisional": "No",
-      "x_coord": 0,
-      "y_coord": -0.75,
-      "cited_by_clin": null,
-      "cited_by": [],
-      "references": [
-        24813885, 35277658, 33171772, 31775230, 942051, 32969034, 9374036,
-        30996793, 30627539, 32606298, 26853145, 36388050, 25938372, 19001123,
-        28753264, 34321638, 38419070, 28609672, 34259916, 25561239, 30574788,
-        35111195, 34537622, 32178227, 32980261, 30058036, 36592059, 32456134,
-        21707511, 16888643, 27239293, 29748461, 8456305, 16740248, 22399377,
-        28823764, 20339442, 35107862, 33037133, 30047983, 33740240, 9714780,
-        12620240, 34719798, 33570627, 32285184, 29473338, 17294083, 10391908,
-        32541957, 21196579, 26376450, 11953830, 36386183, 12006562, 35083862
-      ],
-      "doi": "10.1038/s41598-025-86044-5",
-      "last_modified": "02/01/2025, 22:55:34"
     },
     {
       "pmid": 39833678,

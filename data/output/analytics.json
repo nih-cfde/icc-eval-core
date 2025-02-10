@@ -11,7 +11,8 @@
         "2024-12-18": 4,
         "2024-12-19": 1,
         "2025-01-08": 5,
-        "2025-01-10": 2
+        "2025-01-10": 2,
+        "2025-02-06": 1
       },
       "newUsers": {
         "2024-12-12": 4,
@@ -26,18 +27,19 @@
         "2024-12-16": 2,
         "2024-12-18": 2,
         "2025-01-08": 7,
-        "2025-01-10": 2
+        "2025-01-10": 2,
+        "2025-02-06": 1
       }
     },
     "topContinents": {
       "byActiveUsers": { "Americas": 22, "(not set)": 1, "Europe": 1 },
       "byNewUsers": { "Americas": 22, "(not set)": 1, "Europe": 1 },
-      "byEngagedSessions": { "Americas": 14, "Europe": 1 }
+      "byEngagedSessions": { "Americas": 15, "Europe": 1 }
     },
     "topCountries": {
       "byActiveUsers": { "United States": 22, "(not set)": 1, "Italy": 1 },
       "byNewUsers": { "United States": 22, "(not set)": 1, "Italy": 1 },
-      "byEngagedSessions": { "United States": 14, "Italy": 1 }
+      "byEngagedSessions": { "United States": 15, "Italy": 1 }
     },
     "topRegions": {
       "byActiveUsers": {
@@ -55,7 +57,7 @@
         "Tennessee": 2
       },
       "byEngagedSessions": {
-        "Maryland": 8,
+        "Maryland": 9,
         "Tennessee": 3,
         "Massachusetts": 1,
         "New York": 1,
@@ -78,7 +80,7 @@
         "Oak Ridge": 2
       },
       "byEngagedSessions": {
-        "Ellicott City": 4,
+        "Ellicott City": 5,
         "Bethesda": 3,
         "Oak Ridge": 3,
         "Darnestown": 1,
@@ -88,12 +90,12 @@
     "topLanguages": {
       "byActiveUsers": { "English": 24 },
       "byNewUsers": { "English": 24 },
-      "byEngagedSessions": { "English": 15 }
+      "byEngagedSessions": { "English": 16 }
     },
     "topDevices": {
       "byActiveUsers": { "desktop": 22, "mobile": 2 },
       "byNewUsers": { "desktop": 22, "mobile": 2 },
-      "byEngagedSessions": { "desktop": 14, "mobile": 1 }
+      "byEngagedSessions": { "desktop": 15, "mobile": 1 }
     },
     "topOSes": {
       "byActiveUsers": {
@@ -103,7 +105,7 @@
         "iOS": 1
       },
       "byNewUsers": { "Windows": 16, "Macintosh": 6, "Android": 1, "iOS": 1 },
-      "byEngagedSessions": { "Macintosh": 7, "Windows": 7, "iOS": 1 }
+      "byEngagedSessions": { "Macintosh": 8, "Windows": 7, "iOS": 1 }
     }
   },
   {
@@ -173,7 +175,11 @@
         "2025-02-02": 4,
         "2025-02-03": 10,
         "2025-02-04": 23,
-        "2025-02-05": 4
+        "2025-02-05": 12,
+        "2025-02-06": 14,
+        "2025-02-07": 29,
+        "2025-02-08": 7,
+        "2025-02-09": 1
       },
       "newUsers": {
         "2024-12-04": 1,
@@ -232,7 +238,12 @@
         "2025-02-01": 4,
         "2025-02-02": 1,
         "2025-02-03": 4,
-        "2025-02-04": 16
+        "2025-02-04": 16,
+        "2025-02-05": 5,
+        "2025-02-06": 2,
+        "2025-02-07": 19,
+        "2025-02-08": 4,
+        "2025-02-09": 1
       },
       "engagedSessions": {
         "2024-12-04": 1,
@@ -284,27 +295,30 @@
         "2025-02-01": 1,
         "2025-02-03": 8,
         "2025-02-04": 11,
-        "2025-02-05": 2
+        "2025-02-05": 14,
+        "2025-02-06": 12,
+        "2025-02-07": 16,
+        "2025-02-08": 1
       }
     },
     "topContinents": {
       "byActiveUsers": {
-        "Americas": 874,
-        "Europe": 53,
-        "Asia": 51,
+        "Americas": 884,
+        "Europe": 74,
+        "Asia": 54,
         "Oceania": 6,
         "(not set)": 5
       },
       "byNewUsers": {
-        "Americas": 880,
-        "Europe": 51,
-        "Asia": 34,
+        "Americas": 889,
+        "Europe": 72,
+        "Asia": 35,
         "(not set)": 5,
         "Oceania": 5
       },
       "byEngagedSessions": {
-        "Americas": 422,
-        "Europe": 24,
+        "Americas": 461,
+        "Europe": 26,
         "Asia": 11,
         "(not set)": 4,
         "Africa": 4
@@ -312,119 +326,119 @@
     },
     "topCountries": {
       "byActiveUsers": {
-        "United States": 858,
-        "China": 20,
+        "United States": 868,
+        "Germany": 26,
+        "China": 22,
         "Canada": 13,
-        "Iran": 12,
-        "United Kingdom": 9
+        "Iran": 12
       },
       "byNewUsers": {
-        "United States": 864,
+        "United States": 873,
+        "Germany": 25,
         "Canada": 13,
         "Iran": 11,
-        "United Kingdom": 9,
-        "Japan": 7
+        "United Kingdom": 9
       },
       "byEngagedSessions": {
-        "United States": 414,
+        "United States": 453,
+        "Denmark": 6,
         "Canada": 5,
-        "Denmark": 5,
         "Iran": 5,
         "(not set)": 4
       }
     },
     "topRegions": {
       "byActiveUsers": {
-        "Texas": 142,
+        "Texas": 144,
         "Virginia": 142,
         "Arizona": 90,
-        "California": 71,
+        "California": 73,
         "Massachusetts": 71
       },
       "byNewUsers": {
-        "Texas": 142,
+        "Texas": 144,
         "Virginia": 142,
         "Arizona": 91,
         "Massachusetts": 73,
-        "California": 71
+        "California": 72
       },
       "byEngagedSessions": {
-        "Massachusetts": 133,
-        "Maryland": 61,
-        "California": 34,
-        "New York": 27,
-        "Rhode Island": 24
+        "Massachusetts": 144,
+        "Maryland": 66,
+        "California": 37,
+        "New York": 32,
+        "Rhode Island": 27
       }
     },
     "topCities": {
       "byActiveUsers": {
-        "San Antonio": 127,
+        "San Antonio": 129,
+        "(not set)": 110,
         "Phoenix": 90,
-        "(not set)": 89,
         "Moses Lake": 62,
         "Ashburn": 61
       },
       "byNewUsers": {
-        "San Antonio": 127,
+        "San Antonio": 129,
+        "(not set)": 106,
         "Phoenix": 91,
-        "(not set)": 85,
         "Moses Lake": 62,
         "Ashburn": 61
       },
       "byEngagedSessions": {
-        "Boston": 57,
-        "Bethesda": 28,
-        "New York": 23,
-        "Barrington": 19,
+        "Boston": 62,
+        "Bethesda": 33,
+        "New York": 28,
+        "Barrington": 22,
         "Brookline": 17
       }
     },
     "topLanguages": {
       "byActiveUsers": {
-        "English": 967,
+        "English": 1001,
         "Japanese": 6,
         "Chinese": 4,
         "Korean": 3,
         "Spanish": 3
       },
       "byNewUsers": {
-        "English": 958,
+        "English": 989,
         "Japanese": 6,
         "Chinese": 4,
         "Korean": 3,
         "Spanish": 3
       },
       "byEngagedSessions": {
-        "English": 452,
-        "Spanish": 5,
+        "English": 492,
+        "Spanish": 6,
         "Japanese": 4,
         "French": 2,
         "Chinese": 1
       }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 915, "mobile": 71, "tablet": 1 },
-      "byNewUsers": { "desktop": 906, "mobile": 71, "tablet": 1 },
-      "byEngagedSessions": { "desktop": 440, "mobile": 24 }
+      "byActiveUsers": { "desktop": 949, "mobile": 71, "tablet": 1 },
+      "byNewUsers": { "desktop": 937, "mobile": 71, "tablet": 1 },
+      "byEngagedSessions": { "desktop": 481, "mobile": 24 }
     },
     "topOSes": {
       "byActiveUsers": {
-        "Windows": 698,
+        "Windows": 714,
+        "Macintosh": 204,
+        "iOS": 51,
+        "Linux": 33,
+        "Android": 21
+      },
+      "byNewUsers": {
+        "Windows": 717,
         "Macintosh": 188,
         "iOS": 51,
         "Linux": 31,
         "Android": 21
       },
-      "byNewUsers": {
-        "Windows": 702,
-        "Macintosh": 174,
-        "iOS": 51,
-        "Linux": 29,
-        "Android": 21
-      },
       "byEngagedSessions": {
-        "Macintosh": 234,
-        "Windows": 203,
+        "Macintosh": 261,
+        "Windows": 217,
         "iOS": 13,
         "Android": 11,
         "Linux": 3
@@ -469,8 +483,12 @@
         "2025-01-31": 13,
         "2025-02-02": 3,
         "2025-02-03": 13,
-        "2025-02-04": 26,
-        "2025-02-05": 4
+        "2025-02-04": 55,
+        "2025-02-05": 26,
+        "2025-02-06": 22,
+        "2025-02-07": 20,
+        "2025-02-08": 1,
+        "2025-02-09": 1
       },
       "newUsers": {
         "2024-12-11": 2,
@@ -504,8 +522,12 @@
         "2025-01-31": 9,
         "2025-02-02": 3,
         "2025-02-03": 8,
-        "2025-02-04": 21,
-        "2025-02-05": 4
+        "2025-02-04": 43,
+        "2025-02-05": 23,
+        "2025-02-06": 17,
+        "2025-02-07": 17,
+        "2025-02-08": 1,
+        "2025-02-09": 1
       },
       "engagedSessions": {
         "2024-12-14": 1,
@@ -533,28 +555,31 @@
         "2025-01-30": 7,
         "2025-01-31": 10,
         "2025-02-03": 5,
-        "2025-02-04": 13,
-        "2025-02-05": 1
+        "2025-02-04": 28,
+        "2025-02-05": 8,
+        "2025-02-06": 8,
+        "2025-02-07": 3,
+        "2025-02-08": 1
       }
     },
     "topContinents": {
       "byActiveUsers": {
-        "Americas": 258,
-        "Europe": 14,
+        "Americas": 334,
+        "Europe": 20,
         "Asia": 4,
         "(not set)": 3,
-        "Oceania": 1
+        "Oceania": 2
       },
       "byNewUsers": {
-        "Americas": 263,
-        "Europe": 14,
+        "Americas": 334,
+        "Europe": 20,
         "Asia": 4,
         "(not set)": 3,
         "Oceania": 2
       },
       "byEngagedSessions": {
-        "Americas": 123,
-        "Europe": 2,
+        "Americas": 156,
+        "Europe": 3,
         "(not set)": 1,
         "Asia": 1,
         "Oceania": 1
@@ -562,21 +587,21 @@
     },
     "topCountries": {
       "byActiveUsers": {
-        "United States": 255,
-        "Germany": 5,
-        "(not set)": 3,
-        "Canada": 3,
-        "United Kingdom": 3
+        "United States": 330,
+        "Germany": 6,
+        "United Kingdom": 6,
+        "Belgium": 4,
+        "Canada": 4
       },
       "byNewUsers": {
-        "United States": 259,
-        "Germany": 5,
-        "Canada": 4,
-        "(not set)": 3,
-        "Belgium": 3
+        "United States": 329,
+        "Germany": 6,
+        "United Kingdom": 6,
+        "Canada": 5,
+        "Belgium": 4
       },
       "byEngagedSessions": {
-        "United States": 120,
+        "United States": 153,
         "Canada": 3,
         "(not set)": 1,
         "France": 1,
@@ -585,91 +610,91 @@
     },
     "topRegions": {
       "byActiveUsers": {
-        "Virginia": 43,
-        "Texas": 29,
-        "California": 28,
+        "Virginia": 62,
+        "California": 36,
+        "Texas": 31,
         "Arizona": 22,
-        "Iowa": 15
+        "Massachusetts": 19
       },
       "byNewUsers": {
-        "Virginia": 45,
-        "Texas": 29,
-        "California": 26,
+        "Virginia": 62,
+        "California": 33,
+        "Texas": 31,
         "Arizona": 22,
-        "Iowa": 15
+        "Massachusetts": 19
       },
       "byEngagedSessions": {
-        "California": 26,
+        "California": 30,
+        "Maryland": 18,
         "New Mexico": 15,
-        "Massachusetts": 13,
-        "Maryland": 12,
-        "Pennsylvania": 9
+        "Pennsylvania": 15,
+        "Massachusetts": 13
       }
     },
     "topCities": {
       "byActiveUsers": {
-        "(not set)": 28,
-        "Ashburn": 24,
-        "San Antonio": 23,
+        "(not set)": 39,
+        "Ashburn": 36,
+        "San Antonio": 24,
         "Phoenix": 22,
-        "Des Moines": 14
+        "Moses Lake": 18
       },
       "byNewUsers": {
-        "(not set)": 28,
-        "Ashburn": 25,
-        "San Antonio": 23,
+        "(not set)": 39,
+        "Ashburn": 36,
+        "San Antonio": 24,
         "Phoenix": 22,
-        "Des Moines": 14
+        "Moses Lake": 18
       },
       "byEngagedSessions": {
         "Albuquerque": 15,
+        "New York": 11,
         "Los Angeles": 7,
-        "New York": 7,
-        "Boston": 6,
-        "Pittsburgh": 5
+        "Pittsburgh": 7,
+        "Bethesda": 6
       }
     },
     "topLanguages": {
       "byActiveUsers": {
-        "English": 274,
+        "English": 357,
         "Russian": 2,
         "French": 1,
         "Serbian": 1
       },
-      "byNewUsers": { "English": 282, "Russian": 2, "French": 1, "Serbian": 1 },
+      "byNewUsers": { "English": 359, "Russian": 2, "French": 1, "Serbian": 1 },
       "byEngagedSessions": {
-        "English": 120,
-        "French": 3,
-        "Russian": 2,
+        "English": 150,
+        "French": 6,
+        "Russian": 3,
         "Serbian": 2
       }
     },
     "topDevices": {
-      "byActiveUsers": { "desktop": 262, "mobile": 16 },
-      "byNewUsers": { "desktop": 268, "mobile": 18 },
-      "byEngagedSessions": { "desktop": 119, "mobile": 8 }
+      "byActiveUsers": { "desktop": 337, "mobile": 24 },
+      "byNewUsers": { "desktop": 339, "mobile": 24 },
+      "byEngagedSessions": { "desktop": 151, "mobile": 10 }
     },
     "topOSes": {
       "byActiveUsers": {
-        "Windows": 175,
-        "Macintosh": 79,
-        "Android": 8,
-        "iOS": 8,
-        "Linux": 7
+        "Windows": 221,
+        "Macintosh": 106,
+        "iOS": 16,
+        "Linux": 9,
+        "Android": 8
       },
       "byNewUsers": {
-        "Windows": 176,
-        "Macintosh": 82,
-        "iOS": 10,
-        "Android": 8,
-        "Linux": 7
+        "Windows": 221,
+        "Macintosh": 106,
+        "iOS": 16,
+        "Linux": 9,
+        "Android": 8
       },
       "byEngagedSessions": {
-        "Macintosh": 75,
-        "Windows": 37,
-        "Linux": 7,
-        "Android": 4,
-        "iOS": 4
+        "Macintosh": 93,
+        "Windows": 50,
+        "Linux": 8,
+        "iOS": 6,
+        "Android": 4
       }
     }
   }
