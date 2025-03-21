@@ -1,6 +1,6 @@
 import { spawn as nodeSpawn } from "child_process";
 import { existsSync } from "fs";
-import { mkdir, readFile, rm, stat, writeFile } from "fs/promises";
+import { mkdir, readFile, stat, writeFile } from "fs/promises";
 import { parse } from "path";
 import {
   parse as csvParse,
@@ -90,12 +90,13 @@ export const loadFile = async <Data>(
 
   if (format === "json" || path.endsWith(".json"))
     data = parseJson<Data>(contents);
-  if (format === "csv" || path.endsWith(".csv"))
+  else if (format === "csv" || path.endsWith(".csv"))
     data = parseCsv<Data>(contents, { delimiter: ",", ...options });
-  if (format === "tsv" || path.endsWith(".tsv"))
+  else if (format === "tsv" || path.endsWith(".tsv"))
     data = parseCsv<Data>(contents, { delimiter: "\t", ...options });
-  if (format === "txt" || path.endsWith(".txt") || path.endsWith(".gmt"))
+  else if (format === "txt" || path.endsWith(".txt") || path.endsWith(".gmt"))
     data = contents as Data;
+  else data = [] as Data;
 
   return { data, ...(await getStats(path)) };
 };

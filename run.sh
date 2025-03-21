@@ -31,7 +31,7 @@ if [[ $* =~ $regex ]]; then
 
 # run main pipeline steps
 else
-  $data ingest
+  $data gather
   $data print
   if [[ -z "$CI" ]]; then
     $app dev

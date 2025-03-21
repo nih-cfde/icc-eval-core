@@ -1,48 +1,36 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import prettier from "eslint-plugin-prettier";
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import eslintPluginVue from "eslint-plugin-vue";
+import {
+  defineConfigWithVueTs,
+  vueTsConfigs,
+} from "@vue/eslint-config-typescript";
 
-const compat = new FlatCompat({
-  baseDirectory: path.dirname(fileURLToPath(import.meta.url)),
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-export default [
-  ...compat.extends(
-    "plugin:vue/vue3-recommended",
-    "plugin:vuejs-accessibility/recommended",
-    "eslint:recommended",
-    "@vue/eslint-config-typescript",
-    "@vue/eslint-config-prettier/skip-formatting",
-  ),
+export default defineConfigWithVueTs(
   {
-    plugins: {
-      prettier,
-    },
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-    },
+    name: "app/files-to-lint",
+    files: ["**/*.{ts,vue}"],
+  },
+  {
+    name: "app/files-to-ignore",
+    ignores: ["**/dist/**", "vite.config.ts"],
+  },
+  {
+    extends: [
+      eslintPluginVue.configs["flat/essential"],
+      vueTsConfigs.recommended,
+      eslintConfigPrettier,
+      eslintPluginPrettierRecommended,
+    ],
     rules: {
       "prettier/prettier": "warn",
       "prefer-const": ["error", { destructuring: "all" }],
       "@typescript-eslint/no-unused-vars": [
         "warn",
-        { ignoreRestSiblings: true },
+        { ignoreRestSiblings: true, caughtErrors: "none" },
       ],
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-imports": "error",
-      "vuejs-accessibility/label-has-for": [
-        "error",
-        { required: { some: ["nesting", "id"] } },
-      ],
     },
-    files: ["**/*.ts", "**/*.vue"],
   },
-  {
-    ignores: ["dist"],
-  },
-];
+);

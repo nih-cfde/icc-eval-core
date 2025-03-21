@@ -50,7 +50,7 @@ jobs:
           credentials_json: ${{ secrets.AUTH_GOOGLE }}
 
       - name: Run pipeline
-        run: xvfb-run ./run.sh --ingest
+        run: xvfb-run ./run.sh --gather
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
