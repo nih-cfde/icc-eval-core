@@ -5,7 +5,7 @@
 | `bun install`                      | Install packages             |
 | `npm run install-playwright`       | Install Playwright           |
 | `npm run script -- ./some-file.ts` | Run arbitrary ts file        |
-| `npm run ingest`                   | Ingest data                  |
+| `npm run gather`                   | gather data                  |
 | `npm run print`                    | Print PDFs                   |
 | `npm run lint`                     | Fix linting and formatting   |
 | `npm run test:lint`                | Check linting and formatting |

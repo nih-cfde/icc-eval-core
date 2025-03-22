@@ -16,9 +16,9 @@
     "projects": [
       "3OT2OD030161-01S2",
       "3OT2OD030161-01S1",
+      "1OT2OD030161-01",
       "3OT2OD030161-01S3",
       "3OT2OD030161-01S4",
-      "1OT2OD030161-01",
       "3OT2OD030161-01S5"
     ],
     "awardAmount": 3153200,
@@ -37,13 +37,23 @@
     "analytics": 0
   },
   {
+    "id": "R25OD039836",
+    "name": "FREEMIND: Focused Research Education and Experience using Multimodal and Interdisciplinary NIH Datasets",
+    "activityCode": "R25",
+    "projects": ["1R25OD039836-01"],
+    "awardAmount": 284459,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "activityCode": "OT2",
     "projects": [
       "1OT2OD030545-01",
-      "3OT2OD030545-01S3",
       "3OT2OD030545-01S4",
+      "3OT2OD030545-01S3",
       "3OT2OD030545-01S1",
       "3OT2OD030545-01S2",
       "3OT2OD030545-01S5"
@@ -81,7 +91,7 @@
     "awardAmount": 1480657,
     "publications": 2,
     "repos": 0,
-    "analytics": 2
+    "analytics": 0
   },
   {
     "id": "R03OD036494",
@@ -89,7 +99,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036494-01"],
     "awardAmount": 318000,
-    "publications": 2,
+    "publications": 3,
     "repos": 0,
     "analytics": 0
   },
@@ -139,7 +149,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD034493-01"],
     "awardAmount": 302764,
-    "publications": 4,
+    "publications": 5,
     "repos": 0,
     "analytics": 0
   },
@@ -180,8 +190,8 @@
     "projects": ["1OT2OD036440-01", "3OT2OD036440-01S1"],
     "awardAmount": 3222432,
     "publications": 2,
-    "repos": 1,
-    "analytics": 1
+    "repos": 0,
+    "analytics": 0
   },
   {
     "id": "OT2OD037936",
@@ -249,7 +259,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036491-01"],
     "awardAmount": 323817,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -259,7 +269,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036490-01"],
     "awardAmount": 300676,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -309,7 +319,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD038388-01"],
     "awardAmount": 308800,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -320,8 +330,8 @@
     "projects": [
       "3OT2OD030546-01S2",
       "3OT2OD030546-01S4",
-      "3OT2OD030546-01S1",
       "1OT2OD030546-01",
+      "3OT2OD030546-01S1",
       "3OT2OD030546-01S3"
     ],
     "awardAmount": 2460622,
@@ -375,7 +385,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036492-01"],
     "awardAmount": 298222,
-    "publications": 0,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
@@ -425,7 +435,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD038390-01"],
     "awardAmount": 308658,
-    "publications": 3,
+    "publications": 4,
     "repos": 0,
     "analytics": 0
   },
@@ -437,12 +447,12 @@
       "1OT2OD030160-01",
       "3OT2OD030160-01S2",
       "3OT2OD030160-01S5",
-      "3OT2OD030160-01S1",
       "3OT2OD030160-01S3",
+      "3OT2OD030160-01S1",
       "3OT2OD030160-01S4"
     ],
     "awardAmount": 3420175,
-    "publications": 14,
+    "publications": 15,
     "repos": 0,
     "analytics": 0
   },
@@ -452,7 +462,7 @@
     "activityCode": "OT2",
     "projects": ["3OT2OD036435-01S1", "1OT2OD036435-01"],
     "awardAmount": 3250000,
-    "publications": 6,
+    "publications": 8,
     "repos": 0,
     "analytics": 0
   },
@@ -597,11 +607,11 @@
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030162-01S3",
       "3OT2OD030162-01S1",
+      "3OT2OD030162-01S3",
       "3OT2OD030162-01S2",
-      "3OT2OD030162-01S4",
       "1OT2OD030162-01",
+      "3OT2OD030162-01S4",
       "3OT2OD030162-01S5"
     ],
     "awardAmount": 10363836,
@@ -625,7 +635,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036498-01"],
     "awardAmount": 356000,
-    "publications": 1,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
@@ -644,14 +654,14 @@
     "name": "Biomedical Data Commons Workbench (BDCW)",
     "activityCode": "OT2",
     "projects": [
+      "1OT2OD030544-01",
       "3OT2OD030544-01S1",
       "3OT2OD030544-01S3",
-      "1OT2OD030544-01",
       "3OT2OD030544-01S2",
       "3OT2OD030544-01S4"
     ],
     "awardAmount": 3229346,
-    "publications": 43,
+    "publications": 48,
     "repos": 0,
     "analytics": 0
   },
@@ -671,7 +681,7 @@
     "activityCode": "U24",
     "projects": ["1U24OD038422-01"],
     "awardAmount": 1489695,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -691,7 +701,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD038391-01"],
     "awardAmount": 307000,
-    "publications": 5,
+    "publications": 6,
     "repos": 0,
     "analytics": 0
   },
@@ -771,7 +781,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036499-01"],
     "awardAmount": 390000,
-    "publications": 2,
+    "publications": 3,
     "repos": 0,
     "analytics": 0
   },

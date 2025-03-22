@@ -354,13 +354,7 @@ import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
 import journals from "~/journals.json";
 import publications from "~/publications.json";
-import rawRepos from "~/repos.json";
-
-type Repo = Omit<(typeof rawRepos)[number], "dependencies"> & {
-  dependencies: Record<string, number | undefined>;
-};
-
-const repos = rawRepos as Repo[];
+import repos from "~/repos.json";
 
 const route = useRoute();
 

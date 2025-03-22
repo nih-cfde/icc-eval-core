@@ -18,6 +18,7 @@ import {
 } from "date-fns";
 import {
   connect,
+  type EChartsOption,
   type GridComponentOption,
   type SeriesOption,
   type TitleComponentOption,
@@ -82,7 +83,7 @@ provide(THEME_KEY, "light");
 
 const theme = getCssVar("--theme");
 
-const options = ref<any>({});
+const options = ref<EChartsOption>({});
 
 /** connect chart zooms together */
 watchEffect(() => props.group && connect(props.group));

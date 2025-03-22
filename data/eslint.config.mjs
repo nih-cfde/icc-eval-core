@@ -1,43 +1,24 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import prettier from "eslint-plugin-prettier";
-import { FlatCompat } from "@eslint/eslintrc";
-import js from "@eslint/js";
-import tsParser from "@typescript-eslint/parser";
+import eslintConfigPrettier from "eslint-config-prettier";
+import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
+import typescriptEslint from "typescript-eslint";
+import eslint from "@eslint/js";
 
-const compat = new FlatCompat({
-  baseDirectory: path.dirname(fileURLToPath(import.meta.url)),
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
+export default typescriptEslint.config({
+  extends: [
+    eslint.configs.recommended,
+    typescriptEslint.configs.recommended,
+    typescriptEslint.configs.stylistic,
+    eslintConfigPrettier,
+    eslintPluginPrettierRecommended,
+  ],
+  rules: {
+    "prettier/prettier": "warn",
+    "prefer-const": ["error", { destructuring: "all" }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { ignoreRestSiblings: true, caughtErrors: "none" },
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/consistent-type-imports": "error",
+  },
 });
-
-export default [
-  {
-    ignores: ["**/temp/*"],
-  },
-  ...compat.extends(
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/stylistic",
-  ),
-  {
-    plugins: {
-      prettier,
-    },
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-      parser: tsParser,
-    },
-    rules: {
-      "prettier/prettier": "warn",
-      "prefer-const": ["error", { destructuring: "all" }],
-      "@typescript-eslint/no-unused-vars": [
-        "warn",
-        { ignoreRestSiblings: true },
-      ],
-      "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-      "@typescript-eslint/consistent-type-imports": "error",
-    },
-  },
-];

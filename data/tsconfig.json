@@ -8,16 +8,16 @@
     "noEmit": true,
     "noErrorTruncation": true,
     "noUncheckedIndexedAccess": true,
-    "strict": true,
-    "verbatimModuleSyntax": true,
-    "skipLibCheck": true,
-
     "paths": {
       "@/*": ["./*"]
     },
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext",
+    "types": ["node"],
+    "verbatimModuleSyntax": true
   },
-  "extends": "@tsconfig/node22/tsconfig.json",
-  "include": ["*", "*/*"],
-  "exclude": ["**/temp"]
+  "exclude": ["**/temp"],
+  "include": ["*", "*/*"]
 }
