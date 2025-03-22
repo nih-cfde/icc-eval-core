@@ -98,7 +98,13 @@ for (const coreProject of coreProjects) {
 
 divider("DRC");
 
-const { dcc, file, code } = await getDrc();
+const { dcc, file, code }: Result<typeof getDrc> = PRIVATE
+  ? {
+      dcc: await loadPublic(drcDccFile),
+      file: await loadPublic(drcFileFile),
+      code: await loadPublic(drcCodeFile),
+    }
+  : await getDrc();
 
 divider("Saving");
 

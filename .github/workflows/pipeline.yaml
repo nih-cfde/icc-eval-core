@@ -73,4 +73,5 @@ jobs:
         with:
           commit_message: Update files
           commit_author: "Bot <>"
-          file_pattern: "/app/dist/** /data/raw/** /data/output/**"
+          add_options: "-f"
+          file_pattern: "./app/dist/** ./data/raw/** ./data/output/**"
