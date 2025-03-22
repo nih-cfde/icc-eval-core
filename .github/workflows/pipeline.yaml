@@ -68,6 +68,10 @@ jobs:
         if: ${{ env.PRIVATE == 'true' }}
         run: ./run.sh --build
 
+      - name: SSH debug
+        if: runner.debug == '1'
+        uses: mxschmitt/action-tmate@v3
+
       - name: Commit results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
