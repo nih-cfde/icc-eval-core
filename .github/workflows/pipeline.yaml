@@ -11,6 +11,11 @@ on:
   schedule:
     - cron: "0 0 * * 1"
 
+env:
+  FORCE_COLOR: true
+  # PRIVATE: true
+  # CHECKOUT_REPO: nih-cfde/icc-eval-core
+
 jobs:
   pipeline:
     runs-on: ubuntu-latest
@@ -21,6 +26,8 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          repository: "${{ env.CHECKOUT_REPO || github.repository }}"
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -57,8 +64,13 @@ jobs:
           AUTH_GOOGLE: ${{ secrets.AUTH_GOOGLE }}
           CACHE: ${{ inputs.cache && 'true' || '' }}
 
+      - name: Build dashboard
+        if: ${{ env.PRIVATE == 'true' }}
+        run: ./run.sh --build
+
       - name: Commit results
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update files
           commit_author: "Bot <>"
+          file_pattern: "/app/dist/** /data/raw/** /data/output/**"

@@ -5,7 +5,7 @@
 
 ## Overview
 
-This repo is the code that supports the activities described in [this repo](https://github.com/nih-cfde/icc-eval-coordination?tab=readme-ov-file) for background context.
+This repo supports the activities described in [this repo](https://github.com/nih-cfde/icc-eval-coordination?tab=readme-ov-file).
 
 # Development
 

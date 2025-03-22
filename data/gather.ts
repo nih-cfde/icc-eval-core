@@ -33,12 +33,13 @@ mkdirSync(OUTPUT_PATH, { recursive: true });
 
 // eslint-disable-next-line
 type AsyncFunc = (...args: any) => Promise<unknown>;
+type Result<Func extends AsyncFunc> = Awaited<ReturnType<Func>>;
 
 /** load existing data from public repo when running in private mode */
-const loadPublic = async <Func extends AsyncFunc>(file: string) => {
+const loadPublic = async <Result>(file: string) => {
   const path = `${OUTPUT_PATH}/${file}`;
   try {
-    return (await loadFile<Awaited<ReturnType<Func>>>(path)).data;
+    return (await loadFile<Result>(path)).data;
   } catch (error) {
     throw Error(`Couldn't load ${file}`);
   }
@@ -46,26 +47,29 @@ const loadPublic = async <Func extends AsyncFunc>(file: string) => {
 
 divider("Opportunities");
 
-const opportunities = PRIVATE
-  ? await loadPublic<typeof getOpportunities>(opportunitiesFile)
+const opportunities: Result<typeof getOpportunities> = PRIVATE
+  ? await loadPublic(opportunitiesFile)
   : await getOpportunities();
 
 divider("Projects");
 
-const { coreProjects, projects } = PRIVATE
-  ? await loadPublic<typeof getProjects>(coreProjectsFile)
+const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
+  ? {
+      coreProjects: await loadPublic(coreProjectsFile),
+      projects: await loadPublic(projectsFile),
+    }
   : await getProjects(opportunities.map((opportunity) => opportunity.id));
 
 divider("Publications");
 
-const publications = PRIVATE
-  ? await loadPublic<typeof getPublications>(publicationsFile)
+const publications: Result<typeof getPublications> = PRIVATE
+  ? await loadPublic(publicationsFile)
   : await getPublications(projects.map((project) => project.coreProject));
 
 divider("Journals");
 
-const journals = PRIVATE
-  ? await loadPublic<typeof getJournals>(journalsFile)
+const journals: Result<typeof getJournals> = PRIVATE
+  ? await loadPublic(journalsFile)
   : await getJournals(publications.map((publication) => publication.journal));
 
 divider("Analytics");
