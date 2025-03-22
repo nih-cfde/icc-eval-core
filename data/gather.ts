@@ -11,9 +11,10 @@ import { loadFile, saveFile } from "@/util/file";
 import { divider, log } from "@/util/log";
 import { match } from "@/util/string";
 
-const { PRIVATE, RAW_PATH, OUTPUT_PATH } = process.env;
+const { PRIVATE, CACHE, RAW_PATH, OUTPUT_PATH } = process.env;
 
-log(`Running in ${PRIVATE ? "PRIVATE" : "PUBLIC"} mode`, "primary");
+log(`Running in ${PRIVATE ? "PRIVATE" : "PUBLIC"} mode`);
+log(`Cache ${CACHE ? "ON" : "OFF"}`);
 
 /** output file names */
 const opportunitiesFile = "opportunities.json";
@@ -51,6 +52,8 @@ const opportunities: Result<typeof getOpportunities> = PRIVATE
   ? await loadPublic(opportunitiesFile)
   : await getOpportunities();
 
+log(`${opportunities.length} opportunities`);
+
 divider("Projects");
 
 const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
@@ -60,11 +63,16 @@ const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
     }
   : await getProjects(opportunities.map((opportunity) => opportunity.id));
 
+log(`${coreProjects.length} core projects`);
+log(`${projects.length} projects`);
+
 divider("Publications");
 
 const publications: Result<typeof getPublications> = PRIVATE
   ? await loadPublic(publicationsFile)
   : await getPublications(projects.map((project) => project.coreProject));
+
+log(`${publications.length} publications`);
 
 divider("Journals");
 
@@ -72,15 +80,21 @@ const journals: Result<typeof getJournals> = PRIVATE
   ? await loadPublic(journalsFile)
   : await getJournals(publications.map((publication) => publication.journal));
 
+log(`${journals.length} journals`);
+
 divider("Analytics");
 
 const analytics = PRIVATE ? await getAnalytics() : [];
+
+log(`${analytics.length} analytics`);
 
 divider("Repos");
 
 const repos = PRIVATE
   ? await getRepos(coreProjects.map((coreProject) => coreProject.id))
   : [];
+
+log(`${repos.length} repos`);
 
 divider("Supplemental counts");
 
@@ -109,18 +123,17 @@ const { dcc, file, code }: Result<typeof getDrc> = PRIVATE
 divider("Saving");
 
 /** save output data */
+saveFile(opportunities, `${OUTPUT_PATH}/${opportunitiesFile}`);
+saveFile(coreProjects, `${OUTPUT_PATH}/${coreProjectsFile}`);
+saveFile(projects, `${OUTPUT_PATH}/${projectsFile}`);
+saveFile(publications, `${OUTPUT_PATH}/${publicationsFile}`);
+saveFile(journals, `${OUTPUT_PATH}/${journalsFile}`);
+saveFile(dcc, `${OUTPUT_PATH}/${drcDccFile}`);
+saveFile(file, `${OUTPUT_PATH}/${drcFileFile}`);
+saveFile(code, `${OUTPUT_PATH}/${drcCodeFile}`);
 if (PRIVATE) {
   saveFile(analytics, `${OUTPUT_PATH}/${analyticsFile}`);
   saveFile(repos, `${OUTPUT_PATH}/${reposFile}`);
-} else {
-  saveFile(opportunities, `${OUTPUT_PATH}/${opportunitiesFile}`);
-  saveFile(coreProjects, `${OUTPUT_PATH}/${coreProjectsFile}`);
-  saveFile(projects, `${OUTPUT_PATH}/${projectsFile}`);
-  saveFile(publications, `${OUTPUT_PATH}/${publicationsFile}`);
-  saveFile(journals, `${OUTPUT_PATH}/${journalsFile}`);
-  saveFile(dcc, `${OUTPUT_PATH}/${drcDccFile}`);
-  saveFile(file, `${OUTPUT_PATH}/${drcFileFile}`);
-  saveFile(code, `${OUTPUT_PATH}/${drcCodeFile}`);
 }
 
 await browser.close();
