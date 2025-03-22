@@ -13,8 +13,6 @@ on:
 
 env:
   FORCE_COLOR: true
-  # PRIVATE: true
-  # CHECKOUT_REPO: nih-cfde/icc-eval-core
 
 jobs:
   pipeline:
@@ -24,10 +22,8 @@ jobs:
       - name: Debug dump
         uses: crazy-max/ghaction-dump-context@v2
 
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          repository: "${{ env.CHECKOUT_REPO || github.repository }}"
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -51,31 +47,14 @@ jobs:
         with:
           working-directory: ./data
 
-      - name: Google auth
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.AUTH_GOOGLE }}
-
       - name: Run pipeline
         run: xvfb-run ./run.sh --gather
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
-          AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
-          AUTH_GOOGLE: ${{ secrets.AUTH_GOOGLE }}
           CACHE: ${{ inputs.cache && 'true' || '' }}
 
-      - name: Build dashboard
-        if: ${{ env.PRIVATE == 'true' }}
-        run: ./run.sh --build
-
-      - name: SSH debug
-        if: runner.debug == '1'
-        uses: mxschmitt/action-tmate@v3
-
-      - name: Commit results
+      - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update files
           commit_author: "Bot <>"
-          add_options: "-f"
-          file_pattern: "./app/dist/** ./data/raw/** ./data/output/**"
