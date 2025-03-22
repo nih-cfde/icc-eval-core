@@ -1,15 +1,15 @@
 name: Run pipeline
 
 on:
+  schedule:
+    - cron: "0 0 * * 1"
+
   workflow_dispatch:
     inputs:
       cache:
         type: boolean
         description: Use cache
         default: false
-
-  schedule:
-    - cron: "0 0 * * 1"
 
 env:
   FORCE_COLOR: true

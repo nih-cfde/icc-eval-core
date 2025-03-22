@@ -21,7 +21,8 @@ export const printObject = (object: object | undefined | null) =>
     .join("\n");
 
 /** case insensitive match */
-export const match = (a: string, b: string) => !!a.match(new RegExp(b, "i"));
+export const match = (a: string, b: string) =>
+  a.toLowerCase() === b.toLowerCase();
 
 /** format bytes */
 export const bytes = (bytes: number) => {

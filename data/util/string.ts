@@ -14,7 +14,8 @@ export const count = (value: unknown) => {
 };
 
 /** case insensitive match */
-export const match = (a: string, b: string) => !!a.match(new RegExp(b, "i"));
+export const match = (a: string, b: string) =>
+  a.toLowerCase() === b.toLowerCase();
 
 /** format bytes */
 export const bytes = (bytes: number) => {
