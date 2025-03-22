@@ -11,15 +11,15 @@
         <Download />
       </AppLink>
 
-      <AppLink to="https://github.com/nih-cfde/icc-eval-core">
+      <AppLink
+        to="https://github.com/nih-cfde/icc-eval-core"
+        :title="`Built on ${builtOn}`"
+      >
         Learn more
       </AppLink>
     </div>
 
-    <div class="row print-show">
-      Generated on
-      {{ new Date().toLocaleString(undefined, { dateStyle: "medium" }) }}
-    </div>
+    <div class="row print-show">Generated on {{ builtOn }}</div>
 
     <div class="row">
       <span>
@@ -41,6 +41,8 @@ const route = useRoute();
 
 /** download link for pre-generated pdf file associated with this route */
 const pdf = computed(() => pdfs.value[route.fullPath]);
+
+const builtOn = BUILT_ON;
 </script>
 
 <style scoped>
