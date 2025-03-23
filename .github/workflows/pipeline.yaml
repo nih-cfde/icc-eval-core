@@ -36,7 +36,6 @@ jobs:
 
       - name: Install Playwright
         run: ./run.sh --install-playwright
-        working-directory: ./public
 
       - name: Run pipeline
         run: xvfb-run ./run.sh --gather
