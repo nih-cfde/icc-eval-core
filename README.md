@@ -69,10 +69,3 @@ Most important scripts:
 | `--dev`                | Run dashboard webapp in dev mode                               |
 
 See readmes in sub folders for all commands.
-
-## Environment variables
-
-- `CACHE` - Whether to use cached responses (stored in `/raw/cache.json`) to skip time-consuming network requests.
-  Set to `true` (or any string) for true.
-  Leave blank/unset for false.
-  `false` by default.

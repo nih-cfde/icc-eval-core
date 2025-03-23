@@ -5,11 +5,6 @@ on:
     - cron: "0 0 * * 1"
 
   workflow_dispatch:
-    inputs:
-      cache:
-        type: boolean
-        description: Use cache
-        default: false
 
 env:
   FORCE_COLOR: true
@@ -19,9 +14,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Debug dump
-        uses: crazy-max/ghaction-dump-context@v2
-
       - name: Checkout repo
         uses: actions/checkout@v4
 
@@ -57,3 +49,10 @@ jobs:
         with:
           commit_message: Update files
           commit_author: "Bot <>"
+
+      - name: Trigger private repo
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.AUTH_PRIVATE }}
+          repository: nih-cfde/icc-eval-core-private
+          event-type: pipeline
