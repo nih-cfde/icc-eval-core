@@ -95006,18 +95006,7 @@
     "name": "index",
     "ext": "tsx",
     "date": "2023-07-28T00:00:00.000Z",
-    "files": [
-      {
-        "url": {
-          "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/geneidconv",
-          "name": "index",
-          "ext": "tsx"
-        },
-        "path": { "dir": "", "name": "", "ext": "" },
-        "size": 0,
-        "date": ""
-      }
-    ]
+    "files": []
   },
   {
     "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_rxn_table/index.tsx",
@@ -105574,7 +105563,18 @@
     "name": "build_file_lincs2021",
     "ext": "py",
     "date": "2021-06-23T00:00:00.000Z",
-    "files": []
+    "files": [
+      {
+        "url": {
+          "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
+          "name": "build_file_lincs2021",
+          "ext": "py"
+        },
+        "path": { "dir": "", "name": "", "ext": "" },
+        "size": 0,
+        "date": ""
+      }
+    ]
   },
   {
     "url": "https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2024-12-16/20241202-submission-fixup.zip",
