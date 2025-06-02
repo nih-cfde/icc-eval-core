@@ -117,19 +117,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030545-01S4",
-    "coreProject": "OT2OD030545",
-    "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
-    "opportunity": "OTA-20-005",
-    "application": 10707603,
-    "awardAmount": 700000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-25T00:00:00",
-    "dateEnd": "2023-09-24T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "1OT2OD030545-01",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
@@ -141,6 +128,19 @@
     "dateStart": "2020-09-25T00:00:00",
     "dateEnd": "2025-09-24T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "3OT2OD030545-01S4",
+    "coreProject": "OT2OD030545",
+    "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
+    "opportunity": "OTA-20-005",
+    "application": 10707603,
+    "awardAmount": 700000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-25T00:00:00",
+    "dateEnd": "2023-09-24T00:00:00",
+    "isActive": 0
   },
   {
     "id": "3OT2OD030545-01S3",
@@ -156,12 +156,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030545-01S2",
+    "id": "3OT2OD030545-01S1",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10468526,
-    "awardAmount": 500000,
+    "application": 10444351,
+    "awardAmount": 150000,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -169,12 +169,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030545-01S1",
+    "id": "3OT2OD030545-01S2",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10444351,
-    "awardAmount": 150000,
+    "application": 10468526,
+    "awardAmount": 500000,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -754,19 +754,6 @@
     "isActive": 1
   },
   {
-    "id": "1OT2OD030160-01",
-    "coreProject": "OT2OD030160",
-    "name": "The LINCS DCIC Engagement Plan with the CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 10128125,
-    "awardAmount": 508500,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030160-01S2",
     "coreProject": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
@@ -780,12 +767,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030160-01S5",
+    "id": "1OT2OD030160-01",
     "coreProject": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
     "opportunity": "OTA-20-005",
-    "application": 11089689,
-    "awardAmount": 300000,
+    "application": 10128125,
+    "awardAmount": 508500,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-23T00:00:00",
@@ -803,6 +790,19 @@
     "agencyCode": "NIH",
     "dateStart": "2023-09-18T00:00:00",
     "dateEnd": "2028-09-17T00:00:00",
+    "isActive": 1
+  },
+  {
+    "id": "3OT2OD030160-01S5",
+    "coreProject": "OT2OD030160",
+    "name": "The LINCS DCIC Engagement Plan with the CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 11089689,
+    "awardAmount": 300000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2025-09-22T00:00:00",
     "isActive": 1
   },
   {
@@ -897,19 +897,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD032619-01S3",
-    "coreProject": "OT2OD032619",
-    "name": "SPARC Engagement Plan with the Common Fund Data Ecosystem",
-    "opportunity": "OTA-20-005",
-    "application": 11092964,
-    "awardAmount": 299972,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2021-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD032619-01S2",
     "coreProject": "OT2OD032619",
     "name": "SPARC Engagement Plan with the Common Fund Data Ecosystem",
@@ -921,6 +908,19 @@
     "dateStart": "2021-09-23T00:00:00",
     "dateEnd": "2024-09-22T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "3OT2OD032619-01S3",
+    "coreProject": "OT2OD032619",
+    "name": "SPARC Engagement Plan with the Common Fund Data Ecosystem",
+    "opportunity": "OTA-20-005",
+    "application": 11092964,
+    "awardAmount": 299972,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2021-09-23T00:00:00",
+    "dateEnd": "2025-09-22T00:00:00",
+    "isActive": 1
   },
   {
     "id": "3OT2OD032619-01S1",
@@ -1287,19 +1287,6 @@
     "isActive": 0
   },
   {
-    "id": "1OT2OD030544-01",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10217619,
-    "awardAmount": 500000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030544-01S1",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1311,6 +1298,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2023-09-22T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "1OT2OD030544-01",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10217619,
+    "awardAmount": 500000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2025-09-22T00:00:00",
+    "isActive": 1
   },
   {
     "id": "1U24OD038425-01",
