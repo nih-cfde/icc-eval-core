@@ -5704,15 +5704,15 @@
       "molecular_cellular": 0.4,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 1,
-      "citations_per_year": 1,
+      "citation_count": 2,
+      "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 14.178767154852014,
+      "field_citation_rate": 6.954591157555363,
       "provisional": "No",
       "x_coord": 0.17320508075688767,
       "y_coord": -0.5,
       "cited_by_clin": null,
-      "cited_by": [39330969],
+      "cited_by": [39330969, 40308032],
       "references": [
         33543862, 26657753, 17142669, 34343564, 28161643, 24523926, 21879449,
         23317907, 19028899, 36533558, 11834720, 22562152, 11035250, 30423086,
@@ -5732,7 +5732,7 @@
         34019663, 35119294, 22564549, 20732359, 18839041
       ],
       "doi": "10.1113/JP285339",
-      "last_modified": "04/28/2025, 05:58:39"
+      "last_modified": "06/03/2025, 08:14:44"
     },
     {
       "pmid": 38769143,
@@ -6667,7 +6667,7 @@
         33849055, 30226473, 31816440, 31101683, 21969607, 27867011
       ],
       "doi": "10.1101/2024.08.28.609894",
-      "last_modified": "04/27/2025, 04:38:32"
+      "last_modified": "06/08/2025, 05:45:00"
     },
     {
       "pmid": 39300135,
@@ -7022,22 +7022,22 @@
       "authors": "Chaoyi Xia, Pinghui Peng, Wenxia Zhang, Xiyue Xing, Xin Jin, Jianlan Du, Wanting Peng, Fengqi Hao, Zhexuan Zhao, Kejian Dong, Miaomiao Tian, Yunpeng Feng, Xueqing Ba, Min Wei, Yang Wang",
       "journal": "Nat Commun",
       "is_research_article": "Yes",
-      "relative_citation_ratio": null,
+      "relative_citation_ratio": 2.24,
       "nih_percentile": null,
       "human": 0.17,
       "animal": 0.5,
       "molecular_cellular": 0.33,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 4,
-      "citations_per_year": 4,
-      "expected_citations_per_year": null,
-      "field_citation_rate": 9.144570169450187,
-      "provisional": "No",
+      "citation_count": 6,
+      "citations_per_year": 6,
+      "expected_citations_per_year": 2.680909191992754,
+      "field_citation_rate": 8.817132924380497,
+      "provisional": "Yes",
       "x_coord": 0.14433756729740643,
       "y_coord": -0.25,
       "cited_by_clin": null,
-      "cited_by": [39689415, 39982573, 40107045, 39661331],
+      "cited_by": [39689415, 39982573, 40107045, 40268071, 40279813, 39661331],
       "references": [
         22632970, 15598895, 35527334, 16702335, 16614071, 37957306, 28985560,
         38504107, 36037337, 31634900, 37553341, 30581146, 26827090, 31634899,
@@ -7049,7 +7049,7 @@
         33357455, 31753803, 33217331
       ],
       "doi": "10.1038/s41467-024-53380-5",
-      "last_modified": "04/27/2025, 04:47:24"
+      "last_modified": "06/04/2025, 08:39:42"
     },
     {
       "pmid": 39436320,
@@ -7236,7 +7236,7 @@
         33159057, 28656622, 27626380, 15748111, 29606302, 20503313, 17924334
       ],
       "doi": "10.1101/2024.10.31.621187",
-      "last_modified": "04/27/2025, 04:53:48"
+      "last_modified": "06/04/2025, 08:39:44"
     },
     {
       "pmid": 39562549,
@@ -7836,7 +7836,7 @@
         32541957, 21196579, 26376450, 11953830, 36386183, 12006562, 35083862
       ],
       "doi": "10.1038/s41598-025-86044-5",
-      "last_modified": "05/03/2025, 06:03:35"
+      "last_modified": "06/05/2025, 06:54:10"
     },
     {
       "pmid": 39833678,
@@ -8518,15 +8518,15 @@
       "molecular_cellular": 0.5,
       "apt": 0.05,
       "is_clinical": "No",
-      "citation_count": 0,
-      "citations_per_year": 0,
-      "expected_citations_per_year": null,
-      "field_citation_rate": null,
+      "citation_count": 1,
+      "citations_per_year": 1,
+      "expected_citations_per_year": 1.0003622300035775,
+      "field_citation_rate": 8.467126070481651,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
       "cited_by_clin": null,
-      "cited_by": [],
+      "cited_by": [40308216],
       "references": [
         21785142, 38273783, 37582339, 37953324, 37941138, 31978347, 33184181,
         10592173, 29606502, 29991527, 37986229, 31114921, 31894257, 24861617,
@@ -8542,7 +8542,7 @@
         10802651, 36599353, 35963855
       ],
       "doi": "10.1016/j.jmb.2025.168938",
-      "last_modified": "04/27/2025, 03:54:36"
+      "last_modified": "06/08/2025, 05:45:08"
     },
     {
       "pmid": 40166563,
@@ -8587,20 +8587,29 @@
       "human": 1,
       "animal": 0,
       "molecular_cellular": 0,
-      "apt": 0,
+      "apt": 0.05,
       "is_clinical": "No",
       "citation_count": 0,
-      "citations_per_year": null,
+      "citations_per_year": 0,
       "expected_citations_per_year": null,
       "field_citation_rate": null,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
-      "cited_by_clin": [],
+      "cited_by_clin": null,
       "cited_by": [],
-      "references": [],
+      "references": [
+        38528186, 33538338, 38654142, 37779156, 38183204, 28242767, 22811581,
+        25338756, 32613204, 37459091, 39583094, 34216021, 37726551, 37359725,
+        27453968, 38341654, 15466206, 39609565, 24912477, 38326565, 38306900,
+        28388612, 28753430, 7063747, 37103744, 31501885, 31774113, 37278927,
+        30153250, 35739268, 36624321, 28622513, 37085753, 21159662, 14597658,
+        39343124, 31511426, 8978404, 29217837, 21300207, 37994677, 36327972,
+        33479224, 16161804, 38898292, 38447590, 37953380, 34753908, 31020319,
+        33776770, 12553907, 31186238, 22992668, 31831640
+      ],
       "doi": "10.1158/2767-9764.CRC-25-0030",
-      "last_modified": "05/15/2025, 05:58:36"
+      "last_modified": "06/07/2025, 05:51:39"
     },
     {
       "pmid": 40308032,
@@ -8711,6 +8720,33 @@
       "last_modified": "05/11/2025, 05:51:33"
     },
     {
+      "pmid": 40401984,
+      "year": 2025,
+      "title": "GlycoSiteMiner: an ML/AI-assisted literature mining-based pipeline for extracting glycosylation sites from PubMed abstracts.",
+      "authors": "Robel Kahsay, Urnisha Bhuiyan, Cyrus Chun Hong Au, Nathan Edwards, Luke Johnson, Sujeet Kulkarni, Karina Martinez, Rene Ranzinger, K Vijay-Shanker, Jeet Vora, Kate Warner, Michael Tiemeyer, Raja Mazumder",
+      "journal": "Glycobiology",
+      "is_research_article": "Yes",
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "human": 0.33,
+      "animal": 0,
+      "molecular_cellular": 0.67,
+      "apt": 0.05,
+      "is_clinical": "No",
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": "No",
+      "x_coord": 0,
+      "y_coord": -0.75,
+      "cited_by_clin": null,
+      "cited_by": [],
+      "references": [],
+      "doi": "10.1093/glycob/cwaf030",
+      "last_modified": "06/07/2025, 05:52:17"
+    },
+    {
       "pmid": 40421888,
       "year": 2025,
       "title": "Streamlining asymmetry quantification in fetal mouse imaging: A semi-automated pipeline supported by expert guidance.",
@@ -8722,20 +8758,26 @@
       "human": 0,
       "animal": 1,
       "molecular_cellular": 0,
-      "apt": 0,
+      "apt": 0.05,
       "is_clinical": "No",
       "citation_count": 0,
-      "citations_per_year": null,
+      "citations_per_year": 0,
       "expected_citations_per_year": null,
       "field_citation_rate": null,
       "provisional": "No",
       "x_coord": 0,
       "y_coord": -0.75,
-      "cited_by_clin": [],
+      "cited_by_clin": null,
       "cited_by": [],
-      "references": [],
+      "references": [
+        16405378, 12194662, 12220993, 22106030, 30209292, 12386931, 31673008,
+        33421919, 22770690, 32036154, 23505010, 14967549, 8957504, 30586353,
+        22872090, 20083809, 31493772, 36802342, 22504886, 18317467, 12943439,
+        27120260, 28600779, 20825432, 33259146, 33483951, 33159057, 27626380,
+        15748111, 17924334
+      ],
       "doi": "10.1002/dvdy.70028",
-      "last_modified": "05/28/2025, 05:46:41"
+      "last_modified": "06/04/2025, 08:40:38"
     },
     {
       "pmid": 40443365,
@@ -8762,7 +8804,7 @@
       "cited_by": [],
       "references": [],
       "doi": "10.1093/jimmun/vkae036",
-      "last_modified": "06/01/2025, 08:00:38"
+      "last_modified": "06/03/2025, 08:16:06"
     }
   ]
 }
