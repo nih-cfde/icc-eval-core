@@ -51,9 +51,9 @@
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "activityCode": "OT2",
     "projects": [
-      "1OT2OD030545-01",
       "3OT2OD030545-01S3",
       "3OT2OD030545-01S4",
+      "1OT2OD030545-01",
       "3OT2OD030545-01S1",
       "3OT2OD030545-01S2",
       "3OT2OD030545-01S5"
@@ -154,6 +154,16 @@
     "analytics": 0
   },
   {
+    "id": "R03OD036499",
+    "name": "Cell type harmonization of single cell data in HuBMAP and GTEx",
+    "activityCode": "R03",
+    "projects": ["1R03OD036499-01"],
+    "awardAmount": 390000,
+    "publications": 3,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "R03OD034495",
     "name": "Functional Annotation of Glycan Motifs using Common-Fund Data Resources",
     "activityCode": "R03",
@@ -187,7 +197,7 @@
     "id": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "activityCode": "OT2",
-    "projects": ["3OT2OD036440-01S1", "1OT2OD036440-01"],
+    "projects": ["1OT2OD036440-01", "3OT2OD036440-01S1"],
     "awardAmount": 3222432,
     "publications": 2,
     "repos": 0,
@@ -435,7 +445,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD038390-01"],
     "awardAmount": 308658,
-    "publications": 4,
+    "publications": 5,
     "repos": 0,
     "analytics": 0
   },
@@ -452,7 +462,7 @@
       "3OT2OD030160-01S4"
     ],
     "awardAmount": 3420175,
-    "publications": 15,
+    "publications": 14,
     "repos": 0,
     "analytics": 0
   },
@@ -462,7 +472,7 @@
     "activityCode": "OT2",
     "projects": ["3OT2OD036435-01S1", "1OT2OD036435-01"],
     "awardAmount": 3250000,
-    "publications": 9,
+    "publications": 10,
     "repos": 0,
     "analytics": 0
   },
@@ -492,8 +502,8 @@
     "activityCode": "OT2",
     "projects": [
       "1OT2OD032619-01",
-      "3OT2OD032619-01S3",
       "3OT2OD032619-01S2",
+      "3OT2OD032619-01S3",
       "3OT2OD032619-01S1"
     ],
     "awardAmount": 2877537,
@@ -657,11 +667,11 @@
       "1OT2OD030544-01",
       "3OT2OD030544-01S1",
       "3OT2OD030544-01S3",
-      "3OT2OD030544-01S2",
-      "3OT2OD030544-01S4"
+      "3OT2OD030544-01S4",
+      "3OT2OD030544-01S2"
     ],
     "awardAmount": 3229346,
-    "publications": 53,
+    "publications": 55,
     "repos": 0,
     "analytics": 0
   },
@@ -772,16 +782,6 @@
     "projects": ["1R03OD032623-01"],
     "awardAmount": 335000,
     "publications": 1,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "R03OD036499",
-    "name": "Cell type harmonization of single cell data in HuBMAP and GTEx",
-    "activityCode": "R03",
-    "projects": ["1R03OD036499-01"],
-    "awardAmount": 390000,
-    "publications": 3,
     "repos": 0,
     "analytics": 0
   },
