@@ -47,15 +47,25 @@
     "analytics": 0
   },
   {
+    "id": "R03OD039982",
+    "name": "Discovery of Chronotherapeutic Candidate Targets in Pancreatic Cancer",
+    "activityCode": "R03",
+    "projects": ["1R03OD039982-01"],
+    "awardAmount": 312000,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "activityCode": "OT2",
     "projects": [
+      "1OT2OD030545-01",
       "3OT2OD030545-01S3",
       "3OT2OD030545-01S4",
-      "1OT2OD030545-01",
-      "3OT2OD030545-01S1",
       "3OT2OD030545-01S2",
+      "3OT2OD030545-01S1",
       "3OT2OD030545-01S5"
     ],
     "awardAmount": 3089131,
@@ -69,6 +79,26 @@
     "activityCode": "R03",
     "projects": ["1R03OD030596-01"],
     "awardAmount": 304918,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD039970",
+    "name": "3D Human Reference Body: Multiscale Exploration and Visualization of Biomolecular Data in Virtual Reality",
+    "activityCode": "R03",
+    "projects": ["1R03OD039970-01"],
+    "awardAmount": 317000,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD039985",
+    "name": "A cell-type specific atlas of TF-element connectivity across human tissues",
+    "activityCode": "R03",
+    "projects": ["1R03OD039985-01"],
+    "awardAmount": 315061,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -90,6 +120,16 @@
     "projects": ["1U54OD036472-01", "5U54OD036472-02"],
     "awardAmount": 2205181,
     "publications": 2,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD039975",
+    "name": "Rare variant analysis integrating large public DNA sequencing controls and gene expression data for discovering novel predisposition genes of orofacial clefts",
+    "activityCode": "R03",
+    "projects": ["1R03OD039975-01"],
+    "awardAmount": 320800,
+    "publications": 0,
     "repos": 0,
     "analytics": 0
   },
@@ -224,6 +264,16 @@
     "analytics": 0
   },
   {
+    "id": "R03OD039978",
+    "name": "Personalized cancer drug repurposing using single cell RNA-Seq data",
+    "activityCode": "R03",
+    "projects": ["1R03OD039978-01"],
+    "awardAmount": 303258,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "U24OD038421",
     "name": "Community Data Hub for Integrative Visualization",
     "activityCode": "U24",
@@ -294,6 +344,16 @@
     "analytics": 0
   },
   {
+    "id": "R03OD039974",
+    "name": "Accurate, fast, and distributed atlas-scale integration of scRNAseq data",
+    "activityCode": "R03",
+    "projects": ["1R03OD039974-01"],
+    "awardAmount": 358000,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "OT2OD030164",
     "name": "Cross-CFDE semantic and spatial interoperability for anatomy",
     "activityCode": "OT2",
@@ -330,6 +390,16 @@
     "projects": ["1R03OD038388-01"],
     "awardAmount": 308800,
     "publications": 2,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD039972",
+    "name": "Uncovering incomplete penetrance genes in congenital heart disease by integrative analysis of Common Fund data",
+    "activityCode": "R03",
+    "projects": ["1R03OD039972-01"],
+    "awardAmount": 316000,
+    "publications": 0,
     "repos": 0,
     "analytics": 0
   },
@@ -477,6 +547,16 @@
     "analytics": 0
   },
   {
+    "id": "R03OD039980",
+    "name": "Integrative Machine Learning for Common Fund Spatial Omics",
+    "activityCode": "R03",
+    "projects": ["1R03OD039980-01"],
+    "awardAmount": 286327,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "R03OD032627",
     "name": "Deep Phenotyping of 3D Data for Candidate Gene Selection from Kids First Studies",
     "activityCode": "R03",
@@ -549,6 +629,16 @@
     ],
     "awardAmount": 3159152,
     "publications": 1,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD039976",
+    "name": "Integrating 4DN data to identify functional rare variants in UDN and GTEx",
+    "activityCode": "R03",
+    "projects": ["1R03OD039976-01"],
+    "awardAmount": 308800,
+    "publications": 0,
     "repos": 0,
     "analytics": 0
   },
@@ -650,6 +740,16 @@
     "analytics": 0
   },
   {
+    "id": "R03OD039983",
+    "name": "Multi omics mapping of exercise-induced interorgan communication",
+    "activityCode": "R03",
+    "projects": ["1R03OD039983-01"],
+    "awardAmount": 308800,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "R03OD030598",
     "name": "Using GTEx to assess the functionality of sex-biased variants",
     "activityCode": "R03",
@@ -736,6 +836,16 @@
     "analytics": 0
   },
   {
+    "id": "R03OD039969",
+    "name": "Co-informed prediction of microbiome-metabolome interactions through novel transfer learning models",
+    "activityCode": "R03",
+    "projects": ["1R03OD039969-01"],
+    "awardAmount": 277381,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "R03OD030608",
     "name": "Constructing multi-omics regulatory networks for functional variant annotation",
     "activityCode": "R03",
@@ -782,6 +892,16 @@
     "projects": ["1R03OD032623-01"],
     "awardAmount": 335000,
     "publications": 1,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD039979",
+    "name": "Glycan Utilization Profiling in Human Gut Microbiomes of Common Funds Data",
+    "activityCode": "R03",
+    "projects": ["1R03OD039979-01"],
+    "awardAmount": 294432,
+    "publications": 0,
     "repos": 0,
     "analytics": 0
   },
