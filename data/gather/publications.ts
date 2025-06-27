@@ -81,7 +81,6 @@ export const getPublications = async (coreProjects: string[]) => {
   /** transform data into desired format, with fallbacks */
   const transformedPublications = reporterPublications.map((result) => {
     const extras = extrasLookup[result.pmid ?? 0];
-    console.log();
     return {
       id: result.pmid ?? 0,
       coreProject: result.coreproject ?? "",

@@ -102,9 +102,10 @@ export const getRepos = async (coreProjects: string[]) => {
     created: issue.created_at,
     modified: issue.updated_at,
     closed: issue.closed_at,
-    labels: issue.labels.map((label) =>
-      typeof label === "string" ? label : label.name,
-    ),
+    labels:
+      issue.labels?.map((label) =>
+        typeof label === "string" ? label : label.name,
+      ) ?? [],
   });
 
   /** get average open time for issue/pr */
@@ -114,7 +115,7 @@ export const getRepos = async (coreProjects: string[]) => {
         issues,
         (issue) =>
           (new Date(issue.closed_at ?? Date.now()).getTime() -
-            new Date(issue.created_at).getTime()) /
+            new Date(issue.created_at ?? "").getTime()) /
           1000,
       ),
     ) || 0;
@@ -145,10 +146,7 @@ export const getRepos = async (coreProjects: string[]) => {
       (pullRequest) => pullRequest.state === "closed",
     ).length,
     pullRequestTimeOpen: getOpenTime(repo.pullRequests),
-    commits: repo.commits.map(
-      (commit) =>
-        commit.commit.committer?.date ?? commit.commit.author?.date ?? "",
-    ),
+    commits: repo.commits.map((commit) => commit.commit?.committer?.date ?? ""),
     contributors: repo.contributors.map((contributor) => ({
       name: contributor.login ?? contributor.name ?? "",
       contributions: contributor.contributions,
