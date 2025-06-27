@@ -62,6 +62,7 @@ export const getPublications = async (coreProjects: string[]) => {
     reporterPublications.map((result) => result.pmid),
   );
   const iciteSet = new Set(icitePublications.map((result) => result.pmid));
+
   const notInIcite = reporterSet.difference(iciteSet);
   const notInReporter = iciteSet.difference(reporterSet);
   if (
@@ -74,20 +75,21 @@ export const getPublications = async (coreProjects: string[]) => {
       `Not in RePORTER: ${Array.from(notInReporter).join(", ")}`,
       "secondary",
     );
-    log("Number of RePORTER and iCite pubs don't match", "error");
+    log("Number of RePORTER and iCite pubs don't match", "warn");
   }
 
   /** transform data into desired format, with fallbacks */
   const transformedPublications = reporterPublications.map((result) => {
     const extras = extrasLookup[result.pmid ?? 0];
+    console.log();
     return {
       id: result.pmid ?? 0,
       coreProject: result.coreproject ?? "",
       application: result.applid ?? 0,
       title: extras?.title ?? "",
-      authors: (extras?.authors ?? "")
-        .split(",")
-        .map((string) => string.trim()),
+      authors: (extras?.authors ?? []).map(
+        ({ fullName }) => fullName?.trim() ?? "",
+      ),
       journal: extras?.journal ?? "",
       year: extras?.year ?? 0,
       modified: formatDate(extras?.last_modified),

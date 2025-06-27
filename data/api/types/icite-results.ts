@@ -8,7 +8,11 @@ export type Datum = {
   pmid?: number;
   year?: number;
   title?: string;
-  authors?: string;
+  authors?: {
+    lastName?: string;
+    fullName?: string;
+    firstName?: string;
+  }[];
   journal?: string;
   is_research_article?: string;
   relative_citation_ratio?: number;
