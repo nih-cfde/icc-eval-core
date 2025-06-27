@@ -1,15 +1,15 @@
 [
   {
-    "id": "Bioengineering (Basel, Switzerland)",
-    "name": "Ca-A Cancer Journal for Clinicians",
-    "rank": 145.004,
-    "issn": ""
-  },
-  {
     "id": "bioRxiv : the preprint server for biology",
     "name": "bioRxiv : the preprint server for biology",
     "rank": 0,
     "issn": "26928205"
+  },
+  {
+    "id": "Bioengineering (Basel, Switzerland)",
+    "name": "Ca-A Cancer Journal for Clinicians",
+    "rank": 145.004,
+    "issn": ""
   },
   {
     "id": "medRxiv : the preprint server for health sciences",
@@ -127,16 +127,16 @@
     "issn": "22181989"
   },
   {
-    "id": "F1000Research",
-    "name": "F1000Research",
-    "rank": 0.537,
-    "issn": "20461402"
-  },
-  {
     "id": "Environmental science & technology",
     "name": "Environmental Science and Technology",
     "rank": 3.69,
     "issn": "15205851"
+  },
+  {
+    "id": "F1000Research",
+    "name": "F1000Research",
+    "rank": 0.537,
+    "issn": "20461402"
   },
   {
     "id": "Cancer cell",
@@ -151,22 +151,28 @@
     "issn": "18785832"
   },
   {
-    "id": "Molecular cell",
-    "name": "Molecular Cell",
-    "rank": 9.051,
-    "issn": "10974164"
-  },
-  {
     "id": "Pharmaceuticals (Basel, Switzerland)",
     "name": "Ca-A Cancer Journal for Clinicians",
     "rank": 145.004,
     "issn": ""
   },
   {
+    "id": "Molecular cell",
+    "name": "Molecular Cell",
+    "rank": 9.051,
+    "issn": "10974164"
+  },
+  {
     "id": "Cancers",
     "name": "Ca-A Cancer Journal for Clinicians",
     "rank": 145.004,
     "issn": ""
+  },
+  {
+    "id": "Frontiers in cell and developmental biology",
+    "name": "Frontiers in Cell and Developmental Biology",
+    "rank": 1.608,
+    "issn": "2296634X"
   },
   {
     "id": "Genome research",
@@ -187,22 +193,16 @@
     "issn": "25895559"
   },
   {
-    "id": "Frontiers in cell and developmental biology",
-    "name": "Frontiers in Cell and Developmental Biology",
-    "rank": 1.608,
-    "issn": "2296634X"
+    "id": "Journal of the American Society for Mass Spectrometry",
+    "name": "Journal of the American Society for Mass Spectrometry",
+    "rank": 0.704,
+    "issn": "18791123"
   },
   {
     "id": "Nature protocols",
     "name": "Nature Protocols",
     "rank": 5.854,
     "issn": "17502799"
-  },
-  {
-    "id": "Journal of the American Society for Mass Spectrometry",
-    "name": "Journal of the American Society for Mass Spectrometry",
-    "rank": 0.704,
-    "issn": "18791123"
   },
   {
     "id": "Journal of proteome research",
@@ -285,28 +285,28 @@
     "issn": "21598290"
   },
   {
-    "id": "Advanced drug delivery reviews",
-    "name": "Advanced Drug Delivery Reviews",
-    "rank": 3.721,
-    "issn": "18728294"
-  },
-  {
     "id": "Journal of controlled release : official journal of the Controlled Release Society",
     "name": "Journal of Controlled Release",
     "rank": 2.47,
     "issn": "18734995"
   },
   {
-    "id": "Cancer metastasis reviews",
-    "name": "Cancer and Metastasis Reviews",
-    "rank": 2.596,
-    "issn": "15737233"
-  },
-  {
     "id": "Chemical communications (Cambridge, England)",
     "name": "Chemical Communications",
     "rank": 1.037,
     "issn": "1364548X"
+  },
+  {
+    "id": "Advanced drug delivery reviews",
+    "name": "Advanced Drug Delivery Reviews",
+    "rank": 3.721,
+    "issn": "18728294"
+  },
+  {
+    "id": "Cancer metastasis reviews",
+    "name": "Cancer and Metastasis Reviews",
+    "rank": 2.596,
+    "issn": "15737233"
   },
   {
     "id": "Drug delivery and translational research",
@@ -363,16 +363,16 @@
     "issn": "15525783"
   },
   {
-    "id": "Molecular medicine (Cambridge, Mass.)",
-    "name": "Molecular Medicine",
-    "rank": 1.752,
-    "issn": "15283658"
-  },
-  {
     "id": "Cancer reports (Hoboken, N.J.)",
     "name": "Cancer Reports",
     "rank": 0.729,
     "issn": "25738348"
+  },
+  {
+    "id": "Molecular medicine (Cambridge, Mass.)",
+    "name": "Molecular Medicine",
+    "rank": 1.752,
+    "issn": "15283658"
   },
   {
     "id": "BMC pharmacology & toxicology",
@@ -381,16 +381,16 @@
     "issn": "20506511"
   },
   {
-    "id": "FEBS open bio",
-    "name": "FEBS Open Bio",
-    "rank": 0.857,
-    "issn": "22115463"
-  },
-  {
     "id": "JCO precision oncology",
     "name": "JCO Precision Oncology",
     "rank": 2.409,
     "issn": "24734284"
+  },
+  {
+    "id": "FEBS open bio",
+    "name": "FEBS Open Bio",
+    "rank": 0.857,
+    "issn": "22115463"
   },
   {
     "id": "Biology of sex differences",
@@ -477,6 +477,18 @@
     "issn": "26350041"
   },
   { "id": "PloS one", "name": "PLoS ONE", "rank": 0.803, "issn": "19326203" },
+  {
+    "id": "Frontiers in endocrinology",
+    "name": "Frontiers in Endocrinology",
+    "rank": 1.472,
+    "issn": "16642392"
+  },
+  {
+    "id": "Allergy",
+    "name": "Allergy: European Journal of Allergy and Clinical Immunology",
+    "rank": 3.622,
+    "issn": "13989995"
+  },
   { "id": "eLife", "name": "eLife", "rank": 3.379, "issn": "2050084X" },
   {
     "id": "Journal of lipid research",
@@ -485,16 +497,10 @@
     "issn": "15397262"
   },
   {
-    "id": "Allergy",
-    "name": "Allergy: European Journal of Allergy and Clinical Immunology",
-    "rank": 3.622,
-    "issn": "13989995"
-  },
-  {
-    "id": "Frontiers in endocrinology",
-    "name": "Frontiers in Endocrinology",
-    "rank": 1.472,
-    "issn": "16642392"
+    "id": "Nature cancer",
+    "name": "Nature Cancer",
+    "rank": 11.941,
+    "issn": "26621347"
   },
   {
     "id": "Cell reports",
@@ -503,10 +509,10 @@
     "issn": "22111247"
   },
   {
-    "id": "Nature cancer",
-    "name": "Nature Cancer",
-    "rank": 11.941,
-    "issn": "26621347"
+    "id": "The Journal of physiology",
+    "name": "Journal of Physiology",
+    "rank": 1.715,
+    "issn": "14697793"
   },
   {
     "id": "The Journal of biological chemistry",
@@ -514,36 +520,12 @@
     "rank": 1.705,
     "issn": "1083351X"
   },
-  {
-    "id": "The Journal of physiology",
-    "name": "Journal of Physiology",
-    "rank": 1.715,
-    "issn": "14697793"
-  },
   { "id": "iScience", "name": "iScience", "rank": 1.363, "issn": "25890042" },
   {
     "id": "Alzheimer's research & therapy",
     "name": "Alzheimer's Research and Therapy",
     "rank": 2.709,
     "issn": "17589193"
-  },
-  {
-    "id": "Developmental cell",
-    "name": "Developmental Cell",
-    "rank": 5.18,
-    "issn": "18781551"
-  },
-  {
-    "id": "GigaScience",
-    "name": "GigaScience",
-    "rank": 5.314,
-    "issn": "2047217X"
-  },
-  {
-    "id": "Frontiers in fungal biology",
-    "name": "Frontiers in Fungal Biology",
-    "rank": 0.76,
-    "issn": "26736128"
   },
   {
     "id": "BMC cancer",
@@ -558,6 +540,12 @@
     "issn": "25424823"
   },
   {
+    "id": "GigaScience",
+    "name": "GigaScience",
+    "rank": 5.314,
+    "issn": "2047217X"
+  },
+  {
     "id": "American journal of physiology. Lung cellular and molecular physiology",
     "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
     "rank": 1.24,
@@ -570,34 +558,28 @@
     "issn": "10985522"
   },
   {
+    "id": "Developmental cell",
+    "name": "Developmental Cell",
+    "rank": 5.18,
+    "issn": "18781551"
+  },
+  {
+    "id": "Frontiers in fungal biology",
+    "name": "Frontiers in Fungal Biology",
+    "rank": 0.76,
+    "issn": "26736128"
+  },
+  {
     "id": "FASEB journal : official publication of the Federation of American Societies for Experimental Biology",
     "name": "FASEB Journal",
     "rank": 1.319,
     "issn": "15306860"
   },
   {
-    "id": "Toxicological sciences : an official journal of the Society of Toxicology",
-    "name": "Toxicological Sciences",
-    "rank": 1.086,
-    "issn": "10960929"
-  },
-  {
     "id": "Nature metabolism",
     "name": "Nature Metabolism",
     "rank": 7.529,
     "issn": "25225812"
-  },
-  {
-    "id": "International journal of tryptophan research : IJTR",
-    "name": "International Journal of Tryptophan Research",
-    "rank": 1.108,
-    "issn": "11786469"
-  },
-  {
-    "id": "Biophysical journal",
-    "name": "Biophysical Journal",
-    "rank": 1.112,
-    "issn": "15420086"
   },
   {
     "id": "International journal of cancer",
@@ -610,6 +592,24 @@
     "name": "Frontiers in Microbiology",
     "rank": 1.172,
     "issn": "1664302X"
+  },
+  {
+    "id": "Toxicological sciences : an official journal of the Society of Toxicology",
+    "name": "Toxicological Sciences",
+    "rank": 1.086,
+    "issn": "10960929"
+  },
+  {
+    "id": "International journal of tryptophan research : IJTR",
+    "name": "International Journal of Tryptophan Research",
+    "rank": 1.108,
+    "issn": "11786469"
+  },
+  {
+    "id": "Biophysical journal",
+    "name": "Biophysical Journal",
+    "rank": 1.112,
+    "issn": "15420086"
   },
   {
     "id": "Journal of cachexia, sarcopenia and muscle",
