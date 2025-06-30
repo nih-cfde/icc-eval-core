@@ -46,9 +46,11 @@ export const getRepos = async (coreProjects: string[]) => {
   log(`Getting details for ${count(repos)} repos`);
 
   const repoDetails = await queryMulti(
-    repos.map((repo) => async (progress) => {
+    repos.map((repo) => async (progress, label) => {
       const owner = repo.owner?.login ?? "";
       const name = repo.name;
+
+      label(`${owner}/${name}`);
 
       /**
        * watchers over time not possible

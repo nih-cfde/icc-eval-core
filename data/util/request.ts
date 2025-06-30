@@ -1,4 +1,4 @@
-import { countBy, truncate } from "lodash-es";
+import { countBy } from "lodash-es";
 import stripAnsi from "strip-ansi";
 import { saveFile, type Filename } from "@/util/file";
 import { log, progress } from "@/util/log";
@@ -45,11 +45,6 @@ export const request: Request = async <Parsed>(
     body: JSON.stringify(options.body),
   });
   let response = await fetch(request);
-
-  /** truncate params for logging */
-  url.searchParams.forEach((value, key) =>
-    url.searchParams.set(key, truncate(value, { length: 20 })),
-  );
 
   /** if rate limited, retry a few times */
   let retry = 5;
@@ -120,6 +115,11 @@ export const queryMulti = async <Result>(
   promises: ((
     /** func to call to update progress of promise */
     progress: Progress,
+    /**
+     * func to call to set label for promise (easier to identify which promise
+     * caused error than array index number)
+     */
+    label: (value: string) => void,
   ) => Promise<Result>)[],
   /** raw (cache) filename */
   filename?: Filename,
@@ -135,6 +135,9 @@ export const queryMulti = async <Result>(
   /** run promises */
   const settled = await Promise.allSettled(
     promises.map(async (promise, index) => {
+      /** label for promise */
+      let label = "";
+
       try {
         /** wait until # of running promises is less than limit */
         while (running >= concurrency) await sleep(10);
@@ -145,7 +148,12 @@ export const queryMulti = async <Result>(
         bar(index, "start");
 
         /** run promise */
-        const result = await promise((progress) => bar(index, progress));
+        const result = await promise(
+          /** update progress */
+          (progress) => bar(index, progress),
+          /** update label */
+          (value) => (label = value),
+        );
 
         /** don't let empty be successful result */
         if (isEmpty(result)) throw Error("No results");
@@ -155,7 +163,10 @@ export const queryMulti = async <Result>(
         return result as NonNullable<Result>;
       } catch (error) {
         bar(index, "error");
-        throw error;
+        const e = error as Error;
+        /** include promise label in error */
+        if (label) e.message = `${label} ${e.message}`;
+        throw e;
       } finally {
         /** decrement running promises */
         running--;
@@ -178,9 +189,7 @@ export const queryMulti = async <Result>(
 
   /** logging */
   const messages = countBy(
-    errors.map((error) =>
-      truncate(error.message.replaceAll("\n", " "), { length: 80 }),
-    ),
+    errors.map((error) => error.message.replaceAll("\n", " ")),
   );
   for (const [message, number] of Object.entries(messages))
     log(`(${count(number)}): ${stripAnsi(message)}`, "warn");

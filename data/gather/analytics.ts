@@ -32,7 +32,9 @@ export const getAnalytics = async () => {
 
   /** get salient data about each property */
   const data = await queryMulti(
-    properties.map(({ property, displayName }) => async (progress) => {
+    properties.map(({ property, displayName }) => async (progress, label) => {
+      label(`${property} ${displayName}`);
+
       const coreProject = await getCoreProject(property);
       progress(0.1);
       const overTime = await getOverTime(property);

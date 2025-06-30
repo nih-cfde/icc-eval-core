@@ -44,9 +44,10 @@ export const printReports = async (
   await queryMulti(
     pages.map(
       ({ route, filename }: (typeof pages)[number]) =>
-        async (progress) => {
+        async (progress, label) => {
           /** go to route that shows report */
           const url = host + route;
+          label(url);
           const page = await newPage();
           await page.goto(url);
           progress(0.25);

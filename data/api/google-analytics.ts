@@ -43,7 +43,10 @@ const handleError =
 export const getProperties = memoize(
   handleError(async () => {
     const properties: PropertyDetails[] = [];
-    for await (const account of adminClient.listAccountSummariesAsync())
+    for await (const account of adminClient.listAccountSummariesAsync(
+      {},
+      { autoPaginate: false },
+    ))
       for (const property of account.propertySummaries ?? [])
         if (property.property)
           properties.push(property as { property: PropertyId });
