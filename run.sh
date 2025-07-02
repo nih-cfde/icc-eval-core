@@ -2,6 +2,8 @@
 
 set -e
 
+export NODE_OPTIONS="--max_old_space_size=8192"
+
 data="npm run --prefix data"
 app="npm run --prefix app"
 
