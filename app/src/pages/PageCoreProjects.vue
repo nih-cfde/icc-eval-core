@@ -4,11 +4,7 @@
   </section>
 
   <section>
-    <AppTable
-      :cols="cols"
-      :rows="rows"
-      :sort="[{ id: 'awardAmount', desc: true }]"
-    >
+    <AppTable :cols="cols" :rows="rows" :sort="[{ id: 'status', desc: true }]">
       <template #status="{ row }">
         <template v-if="row.repos || row.analytics">
           <AppLink
