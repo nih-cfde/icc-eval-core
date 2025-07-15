@@ -23,5 +23,10 @@ namespace NodeJS {
     readonly AUTH_GITHUB: string;
     /** authentication for entrez */
     readonly AUTH_ENTREZ: string;
+
+    /** misc */
+
+    /** whether script is being run on github actions */
+    readonly CI: string;
   };
 }

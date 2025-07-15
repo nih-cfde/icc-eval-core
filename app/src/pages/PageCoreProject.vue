@@ -348,6 +348,7 @@ import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve, limit } from "@/util/array";
+import { date } from "@/util/date";
 import { ago, match, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
 import analytics from "~/analytics.json";
@@ -427,7 +428,7 @@ const projectPublications = computed(() =>
       return {
         ...publication,
         year: publication.year,
-        modified: new Date(publication.modified),
+        modified: date(publication.modified),
         rank: journal?.rank ?? 0,
         journal: journal?.name ?? publication.journal,
       };
@@ -490,7 +491,7 @@ const publicationCols: Cols<typeof projectPublications.value> = [
 /** publication chart data */
 const publicationsOverTime = computed(() =>
   projectPublications.value.map(
-    ({ year }) => [new Date(year, 0, 1), 1] as const,
+    ({ year }) => [new Date(year || 2000, 0, 1), 1] as const,
   ),
 );
 
@@ -502,7 +503,7 @@ const projectRepos = computed(() =>
       ...repo,
       issueTimeOpen: span(repo.issueTimeOpen),
       pullRequestTimeOpen: span(repo.pullRequestTimeOpen),
-      modified: new Date(repo.modified),
+      modified: date(repo.modified),
       dependencyTotal: sum(Object.values(repo.dependencies)),
       ...repo.dependencies,
     })),
@@ -615,14 +616,14 @@ const repoColsB: Cols<typeof projectRepos.value> = [
 /** star chart data */
 const starsOverTime = computed(() =>
   projectRepos.value
-    .map(({ stars }) => stars.map((star) => [new Date(star), 1] as const))
+    .map(({ stars }) => stars.map((star) => [date(star), 1] as const))
     .flat(),
 );
 
 /** fork chart data */
 const forksOverTime = computed(() =>
   projectRepos.value
-    .map(({ forks }) => forks.map((fork) => [new Date(fork), 1] as const))
+    .map(({ forks }) => forks.map((fork) => [date(fork), 1] as const))
     .flat(),
 );
 
@@ -630,7 +631,7 @@ const forksOverTime = computed(() =>
 const issuesOverTime = computed(() =>
   projectRepos.value
     .map(({ issues }) =>
-      issues.map(({ created }) => [new Date(created), 1] as const),
+      issues.map(({ created }) => [date(created), 1] as const),
     )
     .flat(),
 );
@@ -639,7 +640,7 @@ const issuesOverTime = computed(() =>
 const pullRequestsOverTime = computed(() =>
   projectRepos.value
     .map(({ pullRequests }) =>
-      pullRequests.map(({ created }) => [new Date(created), 1] as const),
+      pullRequests.map(({ created }) => [date(created), 1] as const),
     )
     .flat(),
 );
@@ -647,9 +648,7 @@ const pullRequestsOverTime = computed(() =>
 /** commit chart data */
 const commitsOverTime = computed(() =>
   projectRepos.value
-    .map(({ commits }) =>
-      commits.map((commit) => [new Date(commit), 1] as const),
-    )
+    .map(({ commits }) => commits.map((commit) => [date(commit), 1] as const))
     .flat(),
 );
 
@@ -678,7 +677,7 @@ const overTimeAnalytics = computed(() => {
     return {
       metric,
       data: Object.entries(totals).map(
-        ([date, value]) => [new Date(date), value] as const,
+        ([d, value]) => [date(d), value] as const,
       ),
     };
   });

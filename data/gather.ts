@@ -11,7 +11,7 @@ import { loadFile, saveFile } from "@/util/file";
 import { divider, log } from "@/util/log";
 import { match } from "@/util/string";
 
-const { PRIVATE, CACHE, RAW_PATH, OUTPUT_PATH } = process.env;
+const { PRIVATE, CACHE, RAW_PATH, OUTPUT_PATH, CI } = process.env;
 
 log(`Running in ${PRIVATE ? "PRIVATE" : "PUBLIC"} mode`);
 log(`Cache ${CACHE ? "ON" : "OFF"}`);
@@ -76,9 +76,11 @@ log(`${publications.length} publications`);
 
 divider("Journals");
 
-const journals: Result<typeof getJournals> = PRIVATE
-  ? await loadPublic(journalsFile)
-  : await getJournals(publications.map((publication) => publication.journal));
+const journals: Result<typeof getJournals> =
+  /** scimago banning/limiting us when running on gh-actions */
+  PRIVATE || CI
+    ? await loadPublic(journalsFile)
+    : await getJournals(publications.map((publication) => publication.journal));
 
 log(`${journals.length} journals`);
 

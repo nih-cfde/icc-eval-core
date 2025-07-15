@@ -96,6 +96,7 @@ import Home from "@/assets/home.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppHeading from "@/components/AppHeading.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
+import { date } from "@/util/date";
 import coreProjects from "~/core-projects.json";
 import rawProjects from "~/projects.json";
 import publications from "~/publications.json";
@@ -103,7 +104,7 @@ import publications from "~/publications.json";
 /** parse dates */
 const projects = rawProjects.map((raw) => ({
   ...raw,
-  dateStart: new Date(raw.dateStart),
+  dateStart: date(raw.dateStart),
 }));
 
 /** whether charts should be shown in cumulative mode */

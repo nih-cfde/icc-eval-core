@@ -116,8 +116,8 @@ export const getRepos = async (coreProjects: string[]) => {
       meanBy(
         issues,
         (issue) =>
-          (new Date(issue.closed_at ?? Date.now()).getTime() -
-            new Date(issue.created_at ?? "").getTime()) /
+          (new Date(issue.closed_at || Date.now()).getTime() -
+            new Date(issue.created_at || Date.now()).getTime()) /
           1000,
       ),
     ) || 0;
