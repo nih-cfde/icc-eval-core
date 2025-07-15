@@ -61,15 +61,15 @@
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "activityCode": "OT2",
     "projects": [
-      "1OT2OD030545-01",
       "3OT2OD030545-01S3",
       "3OT2OD030545-01S4",
+      "1OT2OD030545-01",
       "3OT2OD030545-01S2",
       "3OT2OD030545-01S1",
       "3OT2OD030545-01S5"
     ],
     "awardAmount": 3089131,
-    "publications": 6,
+    "publications": 7,
     "repos": 0,
     "analytics": 0
   },
@@ -542,7 +542,7 @@
     "activityCode": "OT2",
     "projects": ["3OT2OD036435-01S1", "1OT2OD036435-01"],
     "awardAmount": 3250000,
-    "publications": 11,
+    "publications": 12,
     "repos": 0,
     "analytics": 0
   },
@@ -572,7 +572,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD032626-01"],
     "awardAmount": 298188,
-    "publications": 1,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
@@ -582,8 +582,8 @@
     "activityCode": "OT2",
     "projects": [
       "1OT2OD032619-01",
-      "3OT2OD032619-01S3",
       "3OT2OD032619-01S2",
+      "3OT2OD032619-01S3",
       "3OT2OD032619-01S1"
     ],
     "awardAmount": 2877537,
@@ -775,13 +775,13 @@
     "activityCode": "OT2",
     "projects": [
       "1OT2OD030544-01",
-      "3OT2OD030544-01S1",
       "3OT2OD030544-01S3",
+      "3OT2OD030544-01S1",
       "3OT2OD030544-01S2",
       "3OT2OD030544-01S4"
     ],
     "awardAmount": 3229346,
-    "publications": 58,
+    "publications": 59,
     "repos": 0,
     "analytics": 0
   },
@@ -932,6 +932,53 @@
     "projects": ["1R03OD030602-01"],
     "awardAmount": 308000,
     "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "U24OD036598",
+    "name": "Molecular Transducers of Physical Activity (MoTrPAC)",
+    "activityCode": "U24",
+    "projects": ["9U24OD036598-07", "3U24OD036598-07S2", "3U24OD036598-07S1"],
+    "awardAmount": 3077736,
+    "publications": 14,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "U54DA049110",
+    "name": "Data Center for Acute to Chronic Pain Biosignatures",
+    "activityCode": "U54",
+    "projects": [
+      "5U54DA049110-06",
+      "4U54DA049110-05",
+      "3U54DA049110-05S1",
+      "5U54DA049110-04",
+      "3U54DA049110-04S1",
+      "5U54DA049110-03",
+      "5U54DA049110-02",
+      "1U54DA049110-01"
+    ],
+    "awardAmount": 11346421,
+    "publications": 15,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "OT2OD026675",
+    "name": "Flexible Hybrid Cloud Infrastructure for Seamless Management of HuBMAP Resources",
+    "activityCode": "OT2",
+    "projects": [
+      "3OT2OD026675-01S6",
+      "3OT2OD026675-01S5",
+      "3OT2OD026675-01S4",
+      "3OT2OD026675-01S2",
+      "3OT2OD026675-01S1",
+      "3OT2OD026675-01S3",
+      "1OT2OD026675-01"
+    ],
+    "awardAmount": 8945779,
+    "publications": 11,
     "repos": 0,
     "analytics": 0
   }

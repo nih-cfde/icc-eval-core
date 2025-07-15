@@ -97259,6 +97259,604 @@
     ]
   },
   {
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11/glygen_cfde_june_2025_data_submission.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+    "name": "glygen_cfde_june_2025_data_submission.zip",
+    "ext": "zip",
+    "size": 32220548,
+    "date": "2025-07-11T00:00:00.000Z",
+    "files": [
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "C2M2_datapackage", "ext": "json" },
+        "size": 145433,
+        "date": "2025-07-11T15:09:54.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "analysis_type", "ext": "tsv" },
+        "size": 142,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "anatomy", "ext": "tsv" },
+        "size": 20999,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "assay_type", "ext": "tsv" },
+        "size": 142,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biofluid", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_disease", "ext": "tsv" },
+        "size": 67,
+        "date": "2025-07-11T15:10:16.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_from_subject", "ext": "tsv" },
+        "size": 96,
+        "date": "2025-07-11T15:10:08.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_gene", "ext": "tsv" },
+        "size": 47,
+        "date": "2025-07-11T15:10:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_in_collection", "ext": "tsv" },
+        "size": 86,
+        "date": "2025-07-11T15:10:08.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_ptm", "ext": "tsv" },
+        "size": 46,
+        "date": "2025-07-11T15:10:22.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_substance", "ext": "tsv" },
+        "size": 52,
+        "date": "2025-07-11T15:10:22.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample", "ext": "tsv" },
+        "size": 124,
+        "date": "2025-07-11T15:10:08.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_anatomy", "ext": "tsv" },
+        "size": 929459,
+        "date": "2025-07-11T15:10:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_biofluid", "ext": "tsv" },
+        "size": 53,
+        "date": "2025-07-11T15:10:19.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_compound", "ext": "tsv" },
+        "size": 34001147,
+        "date": "2025-07-11T15:10:13.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "",
+          "name": "collection_defined_by_project",
+          "ext": "tsv"
+        },
+        "size": 34123012,
+        "date": "2025-07-11T15:10:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_disease", "ext": "tsv" },
+        "size": 52,
+        "date": "2025-07-11T15:10:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_gene", "ext": "tsv" },
+        "size": 49,
+        "date": "2025-07-11T15:10:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_in_collection", "ext": "tsv" },
+        "size": 120,
+        "date": "2025-07-11T15:10:11.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_phenotype", "ext": "tsv" },
+        "size": 54,
+        "date": "2025-07-11T15:10:16.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_protein", "ext": "tsv" },
+        "size": 19827910,
+        "date": "2025-07-11T15:10:11.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_ptm", "ext": "tsv" },
+        "size": 70939649,
+        "date": "2025-07-11T15:10:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_substance", "ext": "tsv" },
+        "size": 54,
+        "date": "2025-07-11T15:10:19.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_taxonomy", "ext": "tsv" },
+        "size": 22165377,
+        "date": "2025-07-11T15:10:22.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection", "ext": "tsv" },
+        "size": 68396198,
+        "date": "2025-07-11T15:10:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "compound", "ext": "tsv" },
+        "size": 11524765,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "data_type", "ext": "tsv" },
+        "size": 1248,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "dcc", "ext": "tsv" },
+        "size": 788,
+        "date": "2025-07-11T15:10:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "disease", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T15:06:24.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "domain_location", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T15:10:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_describes_biosample", "ext": "tsv" },
+        "size": 74,
+        "date": "2025-07-11T15:10:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "",
+          "name": "file_describes_collection",
+          "ext": "tsv"
+        },
+        "size": 35756590,
+        "date": "2025-07-11T15:10:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_describes_subject", "ext": "tsv" },
+        "size": 70,
+        "date": "2025-07-11T15:10:22.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_format", "ext": "tsv" },
+        "size": 441,
+        "date": "2025-07-11T15:06:24.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_in_collection", "ext": "tsv" },
+        "size": 76,
+        "date": "2025-07-11T15:10:15.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file", "ext": "tsv" },
+        "size": 748595,
+        "date": "2025-07-11T15:10:16.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "gene", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-11T15:06:24.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "id_namespace", "ext": "tsv" },
+        "size": 103,
+        "date": "2025-07-11T15:10:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ncbi_taxonomy", "ext": "tsv" },
+        "size": 1395,
+        "date": "2025-07-11T15:06:24.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype_disease", "ext": "tsv" },
+        "size": 18,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype_gene", "ext": "tsv" },
+        "size": 15,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T15:06:24.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "project_in_project", "ext": "tsv" },
+        "size": 73537,
+        "date": "2025-07-11T15:10:15.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "project", "ext": "tsv" },
+        "size": 170564,
+        "date": "2025-07-11T15:10:13.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "protein_gene", "ext": "tsv" },
+        "size": 13,
+        "date": "2025-07-11T15:06:23.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "protein", "ext": "tsv" },
+        "size": 18238540,
+        "date": "2025-07-11T15:06:25.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ptm_subtype", "ext": "tsv" },
+        "size": 434,
+        "date": "2025-07-11T15:10:16.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ptm_type", "ext": "tsv" },
+        "size": 1886,
+        "date": "2025-07-11T15:10:22.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ptm", "ext": "tsv" },
+        "size": 57152860,
+        "date": "2025-07-11T15:10:15.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "sample_prep_method", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T15:06:25.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_disease", "ext": "tsv" },
+        "size": 63,
+        "date": "2025-07-11T15:10:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_in_collection", "ext": "tsv" },
+        "size": 82,
+        "date": "2025-07-11T15:10:08.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_phenotype", "ext": "tsv" },
+        "size": 65,
+        "date": "2025-07-11T15:10:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_race", "ext": "tsv" },
+        "size": 43,
+        "date": "2025-07-11T15:10:08.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_role_taxonomy", "ext": "tsv" },
+        "size": 58,
+        "date": "2025-07-11T15:10:14.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_substance", "ext": "tsv" },
+        "size": 48,
+        "date": "2025-07-11T15:10:15.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject", "ext": "tsv" },
+        "size": 132,
+        "date": "2025-07-11T15:10:22.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11",
+          "name": "glygen_cfde_june_2025_data_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "substance", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-11T15:06:25.000Z"
+      }
+    ]
+  },
+  {
     "url": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-09-14/LINCS_L1000_Consensus_Median_Signatures.gmt",
     "dir": "https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-09-14",
     "name": "LINCS_L1000_Consensus_Median_Signatures.gmt",
@@ -123346,6 +123944,286 @@
     ]
   },
   {
+    "url": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11/C2M2.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+    "name": "C2M2.zip",
+    "ext": "zip",
+    "size": 51084,
+    "date": "2025-07-11T00:00:00.000Z",
+    "files": [
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "analysis_type", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "anatomy", "ext": "tsv" },
+        "size": 14152,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "assay_type", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biofluid", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample", "ext": "tsv" },
+        "size": 298303,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_from_subject", "ext": "tsv" },
+        "size": 111786,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_in_project", "ext": "tsv" },
+        "size": 109877,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "compound", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "data_type", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "dcc", "ext": "tsv" },
+        "size": 592,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "disease", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_format", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "gene", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "id_namespace", "ext": "tsv" },
+        "size": 183,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ncbi_taxonomy", "ext": "tsv" },
+        "size": 35,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype_disease", "ext": "tsv" },
+        "size": 18,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype_gene", "ext": "tsv" },
+        "size": 15,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "project", "ext": "tsv" },
+        "size": 49467,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "project_in_project", "ext": "tsv" },
+        "size": 4182,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "protein", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "protein_gene", "ext": "tsv" },
+        "size": 13,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "sample_prep_method", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject", "ext": "tsv" },
+        "size": 11762,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "substance", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-11T20:02:39.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "manifest", "ext": "json" },
+        "size": 1396,
+        "date": "2025-07-11T20:02:36.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-11",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "C2M2_datapackage", "ext": "json" },
+        "size": 1845,
+        "date": "2025-07-09T18:19:54.000Z"
+      }
+    ]
+  },
+  {
     "url": "https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2025-03-06/SenNet_C2M2_Spring_2025.zip",
     "dir": "https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2025-03-06",
     "name": "SenNet_C2M2_Spring_2025.zip",
@@ -125370,6 +126248,408 @@
         },
         "size": 38,
         "date": "2025-06-16T20:29:49.000Z"
+      }
+    ]
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08/C2M2.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+    "name": "C2M2.zip",
+    "ext": "zip",
+    "size": 97399,
+    "date": "2025-07-08T00:00:00.000Z",
+    "files": [
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "",
+          "ext": ""
+        },
+        "size": 0,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "dcc",
+          "ext": "tsv"
+        },
+        "size": 592,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "id_namespace",
+          "ext": "tsv"
+        },
+        "size": 183,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "biosample_in_project",
+          "ext": "tsv"
+        },
+        "size": 224837,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "biosample_from_subject",
+          "ext": "tsv"
+        },
+        "size": 219752,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "project",
+          "ext": "tsv"
+        },
+        "size": 89040,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "manifest",
+          "ext": "json"
+        },
+        "size": 1396,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "biosample",
+          "ext": "tsv"
+        },
+        "size": 613307,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "subject",
+          "ext": "tsv"
+        },
+        "size": 21732,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "c2m2-simple-output-20250708-105902",
+          "name": "project_in_project",
+          "ext": "tsv"
+        },
+        "size": 7574,
+        "date": "2025-07-08T15:59:02.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "",
+          "ext": ""
+        },
+        "size": 0,
+        "date": "2025-07-08T17:13:48.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "disease",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "data_type",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "phenotype_disease",
+          "ext": "tsv"
+        },
+        "size": 18,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "protein_gene",
+          "ext": "tsv"
+        },
+        "size": 13,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "phenotype_gene",
+          "ext": "tsv"
+        },
+        "size": 15,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "phenotype",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "protein",
+          "ext": "tsv"
+        },
+        "size": 38,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "ncbi_taxonomy",
+          "ext": "tsv"
+        },
+        "size": 35,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "analysis_type",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "biofluid",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "anatomy",
+          "ext": "tsv"
+        },
+        "size": 36497,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "sample_prep_method",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "assay_type",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "gene",
+          "ext": "tsv"
+        },
+        "size": 38,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "file_format",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "compound",
+          "ext": "tsv"
+        },
+        "size": 29,
+        "date": "2025-07-08T17:19:09.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "C2M2",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "autogenerated_C2M2_term_tables",
+          "name": "substance",
+          "ext": "tsv"
+        },
+        "size": 38,
+        "date": "2025-07-08T17:19:09.000Z"
       }
     ]
   },
@@ -129160,6 +130440,276 @@
         "path": { "dir": "CFDE_20250612", "name": "substance", "ext": "tsv" },
         "size": 38,
         "date": "2025-06-17T19:00:10.000Z"
+      }
+    ]
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08/scge_c2m2.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+    "name": "scge_c2m2.zip",
+    "ext": "zip",
+    "size": 95326,
+    "date": "2025-07-08T00:00:00.000Z",
+    "files": [
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "analysis_type", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "anatomy", "ext": "tsv" },
+        "size": 36497,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "assay_type", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biofluid", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample", "ext": "tsv" },
+        "size": 613307,
+        "date": "2025-07-08T18:14:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_from_subject", "ext": "tsv" },
+        "size": 219752,
+        "date": "2025-07-08T18:14:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_in_project", "ext": "tsv" },
+        "size": 224837,
+        "date": "2025-07-08T18:14:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "compound", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "data_type", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "dcc", "ext": "tsv" },
+        "size": 592,
+        "date": "2025-07-08T18:14:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "disease", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_format", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "gene", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "id_namespace", "ext": "tsv" },
+        "size": 183,
+        "date": "2025-07-08T18:14:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ncbi_taxonomy", "ext": "tsv" },
+        "size": 35,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype_disease", "ext": "tsv" },
+        "size": 18,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype_gene", "ext": "tsv" },
+        "size": 15,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "project", "ext": "tsv" },
+        "size": 89040,
+        "date": "2025-07-08T18:14:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "project_in_project", "ext": "tsv" },
+        "size": 7574,
+        "date": "2025-07-08T18:14:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "protein", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "protein_gene", "ext": "tsv" },
+        "size": 13,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "sample_prep_method", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject", "ext": "tsv" },
+        "size": 21732,
+        "date": "2025-07-08T18:14:17.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "substance", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-08T18:14:21.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-08",
+          "name": "scge_c2m2",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "manifest", "ext": "json" },
+        "size": 1394,
+        "date": "2025-07-08T18:14:17.000Z"
       }
     ]
   },
@@ -135920,6 +137470,604 @@
         "path": { "dir": "", "name": "", "ext": "" },
         "size": 25640176,
         "date": "2025-06-25T14:48:36.000Z"
+      }
+    ]
+  },
+  {
+    "url": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09/glygen_data_june_2025_submission.zip",
+    "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+    "name": "glygen_data_june_2025_submission.zip",
+    "ext": "zip",
+    "size": 29232207,
+    "date": "2025-07-09T00:00:00.000Z",
+    "files": [
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "C2M2_datapackage", "ext": "json" },
+        "size": 145433,
+        "date": "2025-07-09T14:10:44.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "analysis_type", "ext": "tsv" },
+        "size": 142,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "anatomy", "ext": "tsv" },
+        "size": 20999,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "assay_type", "ext": "tsv" },
+        "size": 142,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biofluid", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_disease", "ext": "tsv" },
+        "size": 67,
+        "date": "2025-07-09T14:10:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_from_subject", "ext": "tsv" },
+        "size": 96,
+        "date": "2025-07-09T14:10:40.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_gene", "ext": "tsv" },
+        "size": 47,
+        "date": "2025-07-09T14:10:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_in_collection", "ext": "tsv" },
+        "size": 86,
+        "date": "2025-07-09T14:10:40.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_ptm", "ext": "tsv" },
+        "size": 46,
+        "date": "2025-07-09T14:10:50.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample_substance", "ext": "tsv" },
+        "size": 52,
+        "date": "2025-07-09T14:10:50.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "biosample", "ext": "tsv" },
+        "size": 124,
+        "date": "2025-07-09T14:10:40.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_anatomy", "ext": "tsv" },
+        "size": 929459,
+        "date": "2025-07-09T14:10:47.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_biofluid", "ext": "tsv" },
+        "size": 53,
+        "date": "2025-07-09T14:10:47.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_compound", "ext": "tsv" },
+        "size": 33976001,
+        "date": "2025-07-09T14:10:44.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "",
+          "name": "collection_defined_by_project",
+          "ext": "tsv"
+        },
+        "size": 34122925,
+        "date": "2025-07-09T14:10:48.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_disease", "ext": "tsv" },
+        "size": 52,
+        "date": "2025-07-09T14:10:47.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_gene", "ext": "tsv" },
+        "size": 49,
+        "date": "2025-07-09T14:10:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_in_collection", "ext": "tsv" },
+        "size": 120,
+        "date": "2025-07-09T14:10:42.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_phenotype", "ext": "tsv" },
+        "size": 54,
+        "date": "2025-07-09T14:10:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_protein", "ext": "tsv" },
+        "size": 19827910,
+        "date": "2025-07-09T14:10:42.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_ptm", "ext": "tsv" },
+        "size": 43153541,
+        "date": "2025-07-09T14:10:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_substance", "ext": "tsv" },
+        "size": 54,
+        "date": "2025-07-09T14:10:47.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection_taxonomy", "ext": "tsv" },
+        "size": 22165377,
+        "date": "2025-07-09T14:10:50.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "collection", "ext": "tsv" },
+        "size": 68396022,
+        "date": "2025-07-09T14:10:51.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "compound", "ext": "tsv" },
+        "size": 11524765,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "data_type", "ext": "tsv" },
+        "size": 1248,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "dcc", "ext": "tsv" },
+        "size": 788,
+        "date": "2025-07-09T14:10:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "disease", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "domain_location", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-09T14:10:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_describes_biosample", "ext": "tsv" },
+        "size": 74,
+        "date": "2025-07-09T14:10:49.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": {
+          "dir": "",
+          "name": "file_describes_collection",
+          "ext": "tsv"
+        },
+        "size": 35756380,
+        "date": "2025-07-09T14:10:47.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_describes_subject", "ext": "tsv" },
+        "size": 70,
+        "date": "2025-07-09T14:10:50.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_format", "ext": "tsv" },
+        "size": 441,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file_in_collection", "ext": "tsv" },
+        "size": 76,
+        "date": "2025-07-09T14:10:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "file", "ext": "tsv" },
+        "size": 747847,
+        "date": "2025-07-09T14:10:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "gene", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "id_namespace", "ext": "tsv" },
+        "size": 103,
+        "date": "2025-07-09T14:10:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ncbi_taxonomy", "ext": "tsv" },
+        "size": 1395,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype_disease", "ext": "tsv" },
+        "size": 18,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype_gene", "ext": "tsv" },
+        "size": 15,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "phenotype", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "project_in_project", "ext": "tsv" },
+        "size": 73463,
+        "date": "2025-07-09T14:10:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "project", "ext": "tsv" },
+        "size": 170420,
+        "date": "2025-07-09T14:10:44.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "protein_gene", "ext": "tsv" },
+        "size": 13,
+        "date": "2025-07-09T13:59:18.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "protein", "ext": "tsv" },
+        "size": 18238540,
+        "date": "2025-07-09T13:59:19.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ptm_subtype", "ext": "tsv" },
+        "size": 434,
+        "date": "2025-07-09T14:10:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ptm_type", "ext": "tsv" },
+        "size": 1886,
+        "date": "2025-07-09T14:10:50.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "ptm", "ext": "tsv" },
+        "size": 32938752,
+        "date": "2025-07-09T14:10:44.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "sample_prep_method", "ext": "tsv" },
+        "size": 29,
+        "date": "2025-07-09T13:59:19.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_disease", "ext": "tsv" },
+        "size": 63,
+        "date": "2025-07-09T14:10:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_in_collection", "ext": "tsv" },
+        "size": 82,
+        "date": "2025-07-09T14:10:40.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_phenotype", "ext": "tsv" },
+        "size": 65,
+        "date": "2025-07-09T14:10:46.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_race", "ext": "tsv" },
+        "size": 43,
+        "date": "2025-07-09T14:10:40.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_role_taxonomy", "ext": "tsv" },
+        "size": 58,
+        "date": "2025-07-09T14:10:44.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject_substance", "ext": "tsv" },
+        "size": 48,
+        "date": "2025-07-09T14:10:45.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "subject", "ext": "tsv" },
+        "size": 132,
+        "date": "2025-07-09T14:10:50.000Z"
+      },
+      {
+        "url": {
+          "dir": "https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09",
+          "name": "glygen_data_june_2025_submission",
+          "ext": "zip"
+        },
+        "path": { "dir": "", "name": "substance", "ext": "tsv" },
+        "size": 38,
+        "date": "2025-07-09T13:59:19.000Z"
       }
     ]
   }
