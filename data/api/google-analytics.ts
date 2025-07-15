@@ -54,17 +54,14 @@ export const getProperties = memoize(
   }),
 );
 
-/** extract core project id from custom key event that property owner defines */
+/** extract core project id from custom field that property owner defines */
 export const getCoreProject = memoize(
   handleError(async (property: PropertyId) => {
     const metadata = await dataClient.getMetadata({
       name: `${property}/metadata`,
     });
-    const pattern = /^keyEvents:cfde_/i;
-    const keyEvent = metadata[0].metrics?.find((metric) =>
-      metric.apiName?.match(pattern),
-    )?.apiName;
-    return keyEvent?.replace(pattern, "");
+    const json = JSON.stringify(metadata);
+    return json.match(/cfde_(.*?)"/i)?.[1] ?? "";
   }),
 );
 
