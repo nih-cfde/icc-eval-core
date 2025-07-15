@@ -19,7 +19,7 @@ export const getFullJournalName = memoize(async (abbreviated: string) => {
       params: { ...params, term: `${abbreviated}[TA]` },
     });
     /** get first paper id */
-    const id = searchResults.esearchresult.idlist[0] ?? "";
+    const id = searchResults.esearchresult.idlist?.[0] ?? "";
     /** look up full paper details */
     const summaryResults = await request<EsummaryResults>(esummary, {
       params: { ...params, id },
