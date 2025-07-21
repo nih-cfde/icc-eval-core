@@ -16,9 +16,9 @@
     "projects": [
       "3OT2OD030161-01S2",
       "3OT2OD030161-01S1",
-      "1OT2OD030161-01",
       "3OT2OD030161-01S3",
       "3OT2OD030161-01S4",
+      "1OT2OD030161-01",
       "3OT2OD030161-01S5"
     ],
     "awardAmount": 3153200,
@@ -114,6 +114,16 @@
     "analytics": 0
   },
   {
+    "id": "OT2OD037936",
+    "name": "The CFDE Cloud Workspace",
+    "activityCode": "OT2",
+    "projects": ["1OT2OD037936-01"],
+    "awardAmount": 749999,
+    "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "U54OD036472",
     "name": "CONNECT: Collaborative Network for Nurturing Ecosystems of Common Fund Team Science",
     "activityCode": "U54",
@@ -189,7 +199,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD034493-01"],
     "awardAmount": 302764,
-    "publications": 6,
+    "publications": 7,
     "repos": 0,
     "analytics": 0
   },
@@ -237,19 +247,9 @@
     "id": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "activityCode": "OT2",
-    "projects": ["1OT2OD036440-01", "3OT2OD036440-01S1"],
+    "projects": ["3OT2OD036440-01S1", "1OT2OD036440-01"],
     "awardAmount": 3222432,
     "publications": 2,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD037936",
-    "name": "The CFDE Cloud Workspace",
-    "activityCode": "OT2",
-    "projects": ["1OT2OD037936-01"],
-    "awardAmount": 749999,
-    "publications": 0,
     "repos": 0,
     "analytics": 0
   },
@@ -410,8 +410,8 @@
     "projects": [
       "3OT2OD030546-01S2",
       "3OT2OD030546-01S4",
-      "3OT2OD030546-01S1",
       "1OT2OD030546-01",
+      "3OT2OD030546-01S1",
       "3OT2OD030546-01S3"
     ],
     "awardAmount": 2460622,
@@ -582,8 +582,8 @@
     "activityCode": "OT2",
     "projects": [
       "1OT2OD032619-01",
-      "3OT2OD032619-01S2",
       "3OT2OD032619-01S3",
+      "3OT2OD032619-01S2",
       "3OT2OD032619-01S1"
     ],
     "awardAmount": 2877537,
@@ -621,11 +621,11 @@
     "name": "GENOMIC INDEXING OF COMMON FUND DATASETS",
     "activityCode": "OT2",
     "projects": [
-      "1OT2OD030547-01",
       "3OT2OD030547-01S3",
+      "1OT2OD030547-01",
       "3OT2OD030547-01S1",
-      "3OT2OD030547-01S2",
-      "3OT2OD030547-01S4"
+      "3OT2OD030547-01S4",
+      "3OT2OD030547-01S2"
     ],
     "awardAmount": 3159152,
     "publications": 1,

@@ -21535,6 +21535,267 @@
       ]
     },
     {
+      "_id": "38471500",
+      "animal": 0.5,
+      "authors": [
+        {
+          "lastName": "Mohanty",
+          "fullName": "Mohanty, Ipsita",
+          "firstName": "Ipsita"
+        },
+        {
+          "lastName": "Mannochio-Russo",
+          "fullName": "Mannochio-Russo, Helena",
+          "firstName": "Helena"
+        },
+        {
+          "lastName": "Schweer",
+          "fullName": "Schweer, Joshua V",
+          "firstName": "Joshua V"
+        },
+        {
+          "lastName": "El Abiead",
+          "fullName": "El Abiead, Yasin",
+          "firstName": "Yasin"
+        },
+        {
+          "lastName": "Bittremieux",
+          "fullName": "Bittremieux, Wout",
+          "firstName": "Wout"
+        },
+        {
+          "lastName": "Xing",
+          "fullName": "Xing, Shipei",
+          "firstName": "Shipei"
+        },
+        {
+          "lastName": "Schmid",
+          "fullName": "Schmid, Robin",
+          "firstName": "Robin"
+        },
+        {
+          "lastName": "Zuffa",
+          "fullName": "Zuffa, Simone",
+          "firstName": "Simone"
+        },
+        {
+          "lastName": "Vasquez",
+          "fullName": "Vasquez, Felipe",
+          "firstName": "Felipe"
+        },
+        {
+          "lastName": "Muti",
+          "fullName": "Muti, Valentina B",
+          "firstName": "Valentina B"
+        },
+        {
+          "lastName": "Zemlin",
+          "fullName": "Zemlin, Jasmine",
+          "firstName": "Jasmine"
+        },
+        {
+          "lastName": "Tovar-Herrera",
+          "fullName": "Tovar-Herrera, Omar E",
+          "firstName": "Omar E"
+        },
+        {
+          "lastName": "Moraïs",
+          "fullName": "Moraïs, Sarah",
+          "firstName": "Sarah"
+        },
+        {
+          "lastName": "Desai",
+          "fullName": "Desai, Dhimant",
+          "firstName": "Dhimant"
+        },
+        {
+          "lastName": "Amin",
+          "fullName": "Amin, Shantu",
+          "firstName": "Shantu"
+        },
+        { "lastName": "Koo", "fullName": "Koo, Imhoi", "firstName": "Imhoi" },
+        {
+          "lastName": "Turck",
+          "fullName": "Turck, Christoph W",
+          "firstName": "Christoph W"
+        },
+        {
+          "lastName": "Mizrahi",
+          "fullName": "Mizrahi, Itzhak",
+          "firstName": "Itzhak"
+        },
+        {
+          "lastName": "Kris-Etherton",
+          "fullName": "Kris-Etherton, Penny M",
+          "firstName": "Penny M"
+        },
+        {
+          "lastName": "Petersen",
+          "fullName": "Petersen, Kristina S",
+          "firstName": "Kristina S"
+        },
+        {
+          "lastName": "Fleming",
+          "fullName": "Fleming, Jennifer A",
+          "firstName": "Jennifer A"
+        },
+        { "lastName": "Huan", "fullName": "Huan, Tao", "firstName": "Tao" },
+        {
+          "lastName": "Patterson",
+          "fullName": "Patterson, Andrew D",
+          "firstName": "Andrew D"
+        },
+        {
+          "lastName": "Siegel",
+          "fullName": "Siegel, Dionicio",
+          "firstName": "Dionicio"
+        },
+        {
+          "lastName": "Hagey",
+          "fullName": "Hagey, Lee R",
+          "firstName": "Lee R"
+        },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Mingxun",
+          "firstName": "Mingxun"
+        },
+        {
+          "lastName": "Aron",
+          "fullName": "Aron, Allegra T",
+          "firstName": "Allegra T"
+        },
+        {
+          "lastName": "Dorrestein",
+          "fullName": "Dorrestein, Pieter C",
+          "firstName": "Pieter C"
+        }
+      ],
+      "doi": "10.1016/j.cell.2024.02.019",
+      "human": 0.5,
+      "pmid": 38471500,
+      "title": "The underappreciated diversity of bile acid modifications.",
+      "apt": 0.95,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [
+        { "40118285": 2025 },
+        { "39276930": 2024 },
+        { "39868271": 2025 },
+        { "40007142": 2025 },
+        { "40321269": 2025 },
+        { "39688414": 2025 },
+        { "38174933": 2024 },
+        { "40354934": 2025 },
+        { "39484483": 2025 },
+        { "39287458": 2024 },
+        { "39944283": 2025 },
+        { "39675817": 2025 },
+        { "38575682": 2024 },
+        { "40103814": 2025 },
+        { "39349254": 2025 },
+        { "40334660": 2025 },
+        { "38992131": 2024 },
+        { "39122016": 2024 },
+        { "40210868": 2025 },
+        { "39046079": 2024 },
+        { "40413169": 2025 },
+        { "38990360": 2025 },
+        { "39767816": 2024 },
+        { "40355727": 2025 },
+        { "40135169": 2024 },
+        { "38788691": 2024 },
+        { "39880843": 2025 },
+        { "38977324": 2024 },
+        { "37808758": 2023 },
+        { "39129061": 2024 },
+        { "40355728": 2025 },
+        { "39567665": 2024 },
+        { "38926031": 2025 },
+        { "40052709": 2025 },
+        { "40094101": 2024 },
+        { "40206435": 2025 },
+        { "38564329": 2024 },
+        { "39429880": 2024 },
+        { "40507096": 2025 },
+        { "39370521": 2024 },
+        { "40021805": 2025 },
+        { "39757322": 2025 },
+        { "40277921": 2025 },
+        { "40448906": 2025 },
+        { "39892203": 2025 },
+        { "40521991": 2025 },
+        { "40274344": 2025 },
+        { "39224076": 2024 },
+        { "40463087": 2025 },
+        { "40516019": 2025 },
+        { "38617281": 2024 },
+        { "38889717": 2025 },
+        { "39426134": 2024 },
+        { "39476841": 2024 },
+        { "38887367": 2024 },
+        { "39350733": 2024 },
+        { "39554097": 2024 },
+        { "39690861": 2025 },
+        { "39404413": 2024 },
+        { "39116092": 2024 },
+        { "40012771": 2025 },
+        { "40436017": 2025 },
+        { "40378940": 2025 },
+        { "40362481": 2025 },
+        { "40239649": 2025 },
+        { "40166938": 2025 },
+        { "39465691": 2025 },
+        { "39353099": 2024 },
+        { "40338467": 2025 },
+        { "39250501": 2024 }
+      ],
+      "year": 2024,
+      "journal": "Cell",
+      "is_research_article": true,
+      "relative_citation_ratio": 24.245115622834966,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "citation_count": 70,
+      "citations_per_year": 70,
+      "expected_citations_per_year": 2.887179466946792,
+      "field_citation_rate": 8.606812705003902,
+      "provisional": true,
+      "x_coord": 0.4330127018922193,
+      "y_coord": 0.25,
+      "cited_by_clin": null,
+      "cited_by": [
+        40118285, 39276930, 39868271, 40007142, 40321269, 39688414, 38174933,
+        40354934, 39484483, 39287458, 39944283, 39675817, 38575682, 40103814,
+        39349254, 40334660, 38992131, 39122016, 40210868, 39046079, 40413169,
+        38990360, 39767816, 40355727, 40135169, 38788691, 39880843, 38977324,
+        37808758, 39129061, 40355728, 39567665, 38926031, 40052709, 40094101,
+        40206435, 38564329, 39429880, 40507096, 39370521, 40021805, 39757322,
+        40277921, 40448906, 39892203, 40521991, 40274344, 39224076, 40463087,
+        40516019, 38617281, 38889717, 39426134, 39476841, 38887367, 39350733,
+        39554097, 39690861, 39404413, 39116092, 40012771, 40436017, 40378940,
+        40362481, 40239649, 40166938, 39465691, 39353099, 40338467, 39250501
+      ],
+      "references": [
+        26392543, 31557158, 7927225, 1797942, 35960544, 32103176, 29339445,
+        36243101, 10597755, 20173028, 38575682, 30109661, 20030469, 38123557,
+        34181976, 33885785, 32461639, 24291417, 29343438, 27504778, 1139398,
+        12527334, 33783283, 17256745, 27203081, 31984744, 31776512, 31875848,
+        35625615, 36915683, 36089004, 17276074, 24244729, 36914755, 36284750,
+        1591235, 22293552, 34463573, 11590212, 30559664, 35370774, 18404349,
+        38316926, 20113173, 33085065, 37055660, 32152097, 38052229, 35296854,
+        10334992, 22110577, 32139519, 37611587, 14485336, 29325602, 38326609,
+        24476540, 6430960, 33826691, 30674356, 38326608, 29144460, 34239273,
+        34533933, 1527482, 24103452, 34650271, 28265968, 28587687, 34183830,
+        31894142, 33104772, 37808758, 34986597, 35162998, 34416161, 6479887,
+        3110788, 32405051, 24039616, 26156863, 9799797, 30886413, 1602004,
+        30634578, 17416522, 32926372, 18757757, 33246156, 21572408, 17412828,
+        25378312, 29133785, 34127070, 32807955, 37471289, 19131563, 14057376,
+        36195095, 28645171, 33938389, 23756370, 10334993, 31098744, 33807488,
+        34903850
+      ]
+    },
+    {
       "_id": "38530364",
       "animal": 0.5714285714285714,
       "authors": [
