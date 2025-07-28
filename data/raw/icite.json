@@ -11816,26 +11816,27 @@
         { "37468756": 2023 },
         { "37181487": 2023 },
         { "38721662": 2024 },
+        { "40592888": 2025 },
         { "36824790": 2023 }
       ],
       "year": 2022,
       "journal": "Commun Biol",
       "is_research_article": true,
-      "relative_citation_ratio": 0.8883074447892444,
-      "nih_percentile": 45.8,
+      "relative_citation_ratio": 0.951445158373376,
+      "nih_percentile": 48.4,
       "molecular_cellular": 0,
       "is_clinical": false,
-      "citation_count": 11,
-      "citations_per_year": 3.6666666666666665,
-      "expected_citations_per_year": 4.127700030181107,
-      "field_citation_rate": 10.541528568483908,
+      "citation_count": 12,
+      "citations_per_year": 4,
+      "expected_citations_per_year": 4.204130910538806,
+      "field_citation_rate": 10.399271737825996,
       "provisional": false,
       "x_coord": 0,
       "y_coord": 1,
       "cited_by_clin": null,
       "cited_by": [
         38834597, 38826261, 39764040, 40082611, 36711953, 40133794, 39026885,
-        37468756, 37181487, 38721662, 36824790
+        37468756, 37181487, 38721662, 40592888, 36824790
       ],
       "references": [
         26842383, 20600960, 34062119, 14759820, 23818604, 23715323, 27635398,
@@ -12253,14 +12254,14 @@
       "year": 2022,
       "journal": "Front Oncol",
       "is_research_article": true,
-      "relative_citation_ratio": 0.4528266886685979,
-      "nih_percentile": 24.5,
+      "relative_citation_ratio": 0.43900389916278626,
+      "nih_percentile": 23.7,
       "molecular_cellular": 0,
       "is_clinical": false,
       "citation_count": 5,
       "citations_per_year": 1.6666666666666667,
-      "expected_citations_per_year": 3.680584003489291,
-      "field_citation_rate": 9.271837493870231,
+      "expected_citations_per_year": 3.796473493390666,
+      "field_citation_rate": 9.27362989549325,
       "provisional": false,
       "x_coord": 0,
       "y_coord": 1,
@@ -19315,14 +19316,14 @@
       "year": 2022,
       "journal": "Gigascience",
       "is_research_article": true,
-      "relative_citation_ratio": 0.17283974973452354,
-      "nih_percentile": 8.6,
+      "relative_citation_ratio": 0.16760658739736553,
+      "nih_percentile": 8.3,
       "molecular_cellular": 0,
       "is_clinical": false,
       "citation_count": 2,
       "citations_per_year": 0.6666666666666666,
-      "expected_citations_per_year": 3.8571374217484453,
-      "field_citation_rate": 9.773202432664286,
+      "expected_citations_per_year": 3.9775684059846528,
+      "field_citation_rate": 9.773677245239634,
       "provisional": false,
       "x_coord": 0,
       "y_coord": -0.75,
@@ -19924,14 +19925,14 @@
       "year": 2023,
       "journal": "Front Endocrinol (Lausanne)",
       "is_research_article": true,
-      "relative_citation_ratio": 1.185753543867008,
-      "nih_percentile": 56.5,
+      "relative_citation_ratio": 1.1224369177931894,
+      "nih_percentile": 54.5,
       "molecular_cellular": 0,
       "is_clinical": false,
       "citation_count": 5,
       "citations_per_year": 2.5,
-      "expected_citations_per_year": 2.108363928516663,
-      "field_citation_rate": 5.955010775667193,
+      "expected_citations_per_year": 2.2272966617270766,
+      "field_citation_rate": 5.9554851037212675,
       "provisional": true,
       "x_coord": 0.8660254037844386,
       "y_coord": -0.5,
@@ -20340,25 +20341,27 @@
         { "37398426": 2024 },
         { "40451243": 2025 },
         { "39362779": 2024 },
+        { "40583136": 2025 },
         { "39412125": 2025 }
       ],
       "year": 2023,
       "journal": "Nat Comput Sci",
       "is_research_article": true,
-      "relative_citation_ratio": 0.8710470149327324,
-      "nih_percentile": 45.1,
+      "relative_citation_ratio": 0.9429068168187099,
+      "nih_percentile": 48,
       "molecular_cellular": 0,
       "is_clinical": false,
-      "citation_count": 7,
-      "citations_per_year": 3.5,
-      "expected_citations_per_year": 4.01815279772274,
-      "field_citation_rate": 11.349152243157004,
+      "citation_count": 8,
+      "citations_per_year": 4,
+      "expected_citations_per_year": 4.24220074417923,
+      "field_citation_rate": 11.343061646473418,
       "provisional": true,
       "x_coord": 0,
       "y_coord": -0.75,
       "cited_by_clin": null,
       "cited_by": [
-        38915693, 40330081, 39576223, 37398426, 40451243, 39362779, 39412125
+        38915693, 40330081, 39576223, 37398426, 40451243, 39362779, 40583136,
+        39412125
       ],
       "references": [
         31138913, 33832990, 34616061, 32905524, 38509327, 27197224, 33950192,
@@ -20424,8 +20427,8 @@
       "is_clinical": false,
       "citation_count": 0,
       "citations_per_year": 0,
-      "expected_citations_per_year": 0.5895435366231662,
-      "field_citation_rate": 1.6651480637813212,
+      "expected_citations_per_year": 0.6162106176478962,
+      "field_citation_rate": 1.6476624857468642,
       "provisional": true,
       "x_coord": 0,
       "y_coord": -0.75,
@@ -29018,85 +29021,6 @@
       ]
     },
     {
-      "_id": "39451360",
-      "animal": 0,
-      "authors": [
-        {
-          "lastName": "Sankar",
-          "fullName": "Sankar, Baradwaj Simha",
-          "firstName": "Baradwaj Simha"
-        },
-        {
-          "lastName": "Gilliland",
-          "fullName": "Gilliland, Destiny",
-          "firstName": "Destiny"
-        },
-        {
-          "lastName": "Rincon",
-          "fullName": "Rincon, Jack",
-          "firstName": "Jack"
-        },
-        {
-          "lastName": "Hermjakob",
-          "fullName": "Hermjakob, Henning",
-          "firstName": "Henning"
-        },
-        { "lastName": "Yan", "fullName": "Yan, Yu", "firstName": "Yu" },
-        {
-          "lastName": "Adam",
-          "fullName": "Adam, Irsyad",
-          "firstName": "Irsyad"
-        },
-        {
-          "lastName": "Lemaster",
-          "fullName": "Lemaster, Gwyneth",
-          "firstName": "Gwyneth"
-        },
-        { "lastName": "Wang", "fullName": "Wang, Dean", "firstName": "Dean" },
-        {
-          "lastName": "Watson",
-          "fullName": "Watson, Karol",
-          "firstName": "Karol"
-        },
-        { "lastName": "Bui", "fullName": "Bui, Alex", "firstName": "Alex" },
-        { "lastName": "Wang", "fullName": "Wang, Wei", "firstName": "Wei" },
-        {
-          "lastName": "Ping",
-          "fullName": "Ping, Peipei",
-          "firstName": "Peipei"
-        }
-      ],
-      "doi": "10.3390/bioengineering11100984",
-      "human": 0,
-      "pmid": 39451360,
-      "title": "Building an Ethical and Trustworthy Biomedical AI Ecosystem for the Translational and Clinical Integration of Foundation Models.",
-      "apt": 0.05,
-      "citedByClinicalArticle": false,
-      "citedByPmidsByYear": [{ "40095575": 2025 }, { "40393855": 2025 }],
-      "year": 2024,
-      "journal": "Bioengineering (Basel)",
-      "is_research_article": false,
-      "relative_citation_ratio": null,
-      "nih_percentile": null,
-      "molecular_cellular": 0,
-      "is_clinical": false,
-      "citation_count": 2,
-      "citations_per_year": 2,
-      "expected_citations_per_year": null,
-      "field_citation_rate": 9.626764525259807,
-      "provisional": false,
-      "cited_by_clin": null,
-      "cited_by": [40095575, 40393855],
-      "references": [
-        36050406, 33122735, 26599027, 37658119, 33981009, 38475802, 35609108,
-        34525993, 27747607, 34920126, 37063644, 34748007, 34493770, 37280346,
-        33413897, 31234869, 34887331, 37045921, 33988081, 38641744, 36325058,
-        28501646, 33196975, 35953649, 34811466, 18652655, 35755876, 30059313,
-        28632438, 38401957, 36991077, 38844628, 26978244, 28040687, 31649194,
-        37864012, 36495075
-      ]
-    },
-    {
       "_id": "39464135",
       "animal": 0.1111111111111111,
       "authors": [
@@ -29312,6 +29236,284 @@
         32640203, 25259922, 31127034, 11072146, 26467476, 23665962, 30919589,
         28411170, 38695869, 20418756, 29381485, 30184495, 33444690, 31980749,
         28689662, 29480818, 25557080
+      ]
+    },
+    {
+      "_id": "39552041",
+      "animal": 0.5,
+      "authors": [{ "fullName": "UniProt Consortium\n" }],
+      "doi": "10.1093/nar/gkae1010",
+      "human": 0.5,
+      "pmid": 39552041,
+      "title": "UniProt: the Universal Protein Knowledgebase in 2025.",
+      "apt": 0.5,
+      "citedByClinicalArticle": true,
+      "citedByPmidsByYear": [
+        { "40155198": 2025 },
+        { "40327453": 2025 },
+        { "40396447": 2025 },
+        { "40237516": 2025 },
+        { "40280061": 2025 },
+        { "40501719": 2025 },
+        { "40143226": 2025 },
+        { "40670644": 2025 },
+        { "40111927": 2025 },
+        { "40249190": 2025 },
+        { "40649898": 2025 },
+        { "39868138": 2025 },
+        { "40216114": 2025 },
+        { "40631299": 2025 },
+        { "40139106": 2025 },
+        { "40301990": 2025 },
+        { "40286131": 2025 },
+        { "40088713": 2025 },
+        { "40399973": 2025 },
+        { "40142036": 2025 },
+        { "40661509": 2025 },
+        { "40545055": 2025 },
+        { "40601389": 2025 },
+        { "40537997": 2025 },
+        { "40282505": 2025 },
+        { "40583840": 2025 },
+        { "40643530": 2025 },
+        { "40661974": 2025 },
+        { "40422662": 2025 },
+        { "40248429": 2025 },
+        { "40417294": 2025 },
+        { "40331935": 2025 },
+        { "40564222": 2025 },
+        { "39868178": 2025 },
+        { "40404564": 2025 },
+        { "40516524": 2025 },
+        { "40520260": 2025 },
+        { "40612003": 2025 },
+        { "40593699": 2025 },
+        { "40093222": 2025 },
+        { "40543742": 2025 },
+        { "39371160": 2025 },
+        { "40665229": 2025 },
+        { "40666844": 2025 },
+        { "40360469": 2025 },
+        { "40445943": 2025 },
+        { "40492783": 2025 },
+        { "40599243": 2025 },
+        { "40667178": 2025 },
+        { "40341572": 2025 },
+        { "40061310": 2025 },
+        { "40656592": 2025 },
+        { "40558932": 2025 },
+        { "40161835": 2025 },
+        { "40257692": 2025 },
+        { "40248507": 2025 },
+        { "40317435": 2025 },
+        { "40650089": 2025 },
+        { "40654624": 2025 },
+        { "39940902": 2025 },
+        { "40124288": 2025 },
+        { "40243559": 2025 },
+        { "40457468": 2025 },
+        { "40661153": 2025 },
+        { "40667270": 2025 },
+        { "40162758": 2025 },
+        { "40565264": 2025 },
+        { "39677636": 2025 },
+        { "40501792": 2025 },
+        { "40093156": 2025 },
+        { "40247750": 2025 },
+        { "40117195": 2025 },
+        { "40463094": 2025 },
+        { "40563515": 2025 },
+        { "40346308": 2025 },
+        { "40593079": 2025 },
+        { "39960347": 2025 },
+        { "40610591": 2025 },
+        { "40335414": 2025 },
+        { "40318116": 2025 },
+        { "40421220": 2025 },
+        { "39416060": 2025 },
+        { "39904165": 2025 },
+        { "40181513": 2025 },
+        { "40449614": 2025 },
+        { "40308214": 2025 },
+        { "40251288": 2025 },
+        { "39558156": 2025 },
+        { "40552588": 2025 },
+        { "40200329": 2025 },
+        { "40116972": 2025 },
+        { "39746544": 2025 },
+        { "40363824": 2025 },
+        { "40615445": 2025 },
+        { "40609830": 2025 },
+        { "40137881": 2025 },
+        { "40662805": 2025 },
+        { "40501967": 2025 },
+        { "40366155": 2025 },
+        { "40369453": 2025 },
+        { "40568125": 2025 },
+        { "40299535": 2025 },
+        { "40592926": 2025 },
+        { "40463051": 2025 },
+        { "40431356": 2025 },
+        { "40441417": 2025 },
+        { "40331428": 2025 },
+        { "40381888": 2025 },
+        { "40464633": 2025 },
+        { "40534452": 2025 },
+        { "40650310": 2025 },
+        { "40219095": 2025 },
+        { "40419551": 2025 },
+        { "40276117": 2025 },
+        { "40183081": 2025 },
+        { "40641871": 2025 },
+        { "39976229": 2025 },
+        { "40193601": 2025 },
+        { "40337923": 2025 },
+        { "39975210": 2025 },
+        { "40268234": 2025 },
+        { "40475617": 2025 },
+        { "40262434": 2025 },
+        { "40661594": 2025 },
+        { "39858924": 2025 },
+        { "37398280": 2025 },
+        { "40295941": 2025 },
+        { "40641938": 2025 },
+        { "39942126": 2025 },
+        { "40366258": 2025 },
+        { "40503744": 2025 },
+        { "40450052": 2025 },
+        { "40473147": 2025 },
+        { "40567503": 2025 },
+        { "40662816": 2025 },
+        { "40154494": 2025 },
+        { "40274894": 2025 },
+        { "40134803": 2025 },
+        { "40309105": 2025 },
+        { "39909739": 2025 },
+        { "40651831": 2025 },
+        { "40357882": 2025 },
+        { "39985430": 2025 },
+        { "40331429": 2025 },
+        { "40362558": 2025 },
+        { "40447127": 2025 },
+        { "40518661": 2025 },
+        { "39988169": 2025 },
+        { "40265935": 2025 },
+        { "40060460": 2025 },
+        { "40133022": 2025 },
+        { "40641140": 2025 },
+        { "40347452": 2025 },
+        { "40341493": 2025 },
+        { "39658041": 2025 },
+        { "40650042": 2025 },
+        { "39954767": 2025 },
+        { "40183635": 2025 },
+        { "39996803": 2025 },
+        { "40522868": 2025 },
+        { "40510533": 2025 },
+        { "40659670": 2025 },
+        { "40242950": 2025 },
+        { "40570375": 2025 },
+        { "39796186": 2025 },
+        { "40411413": 2025 },
+        { "40007603": 2025 },
+        { "40563119": 2025 },
+        { "40607659": 2025 },
+        { "40027707": 2025 },
+        { "40027622": 2025 },
+        { "40613710": 2025 },
+        { "40021804": 2025 },
+        { "40362336": 2025 },
+        { "40635069": 2025 },
+        { "39999212": 2025 },
+        { "40603914": 2025 },
+        { "40381002": 2025 },
+        { "39909374": 2025 },
+        { "40597599": 2025 },
+        { "40141782": 2025 },
+        { "40276967": 2025 },
+        { "40562181": 2025 },
+        { "40462939": 2025 },
+        { "39935019": 2025 },
+        { "39997203": 2025 },
+        { "40332792": 2025 },
+        { "40430124": 2025 },
+        { "40514537": 2025 },
+        { "40127730": 2025 },
+        { "40541992": 2025 },
+        { "40650035": 2025 },
+        { "40353677": 2025 },
+        { "40236186": 2025 },
+        { "40599651": 2025 },
+        { "40259734": 2025 },
+        { "40060493": 2025 },
+        { "40530588": 2025 },
+        { "40360134": 2025 },
+        { "40381707": 2025 },
+        { "40437196": 2025 },
+        { "40595566": 2025 },
+        { "40317235": 2025 },
+        { "40630575": 2025 },
+        { "40666993": 2025 },
+        { "39923611": 2025 },
+        { "40541814": 2025 },
+        { "40688586": 2025 },
+        { "40183636": 2025 },
+        { "40543502": 2025 },
+        { "40141996": 2025 },
+        { "40560205": 2025 }
+      ],
+      "year": 2025,
+      "journal": "Nucleic Acids Res",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "citation_count": 212,
+      "citations_per_year": 212,
+      "expected_citations_per_year": 0.999999999335148,
+      "field_citation_rate": 7.55139169307275,
+      "provisional": false,
+      "cited_by_clin": [40341493],
+      "cited_by": [
+        40155198, 40327453, 40396447, 40237516, 40280061, 40501719, 40143226,
+        40670644, 40111927, 40249190, 40649898, 39868138, 40216114, 40631299,
+        40139106, 40301990, 40286131, 40088713, 40399973, 40142036, 40661509,
+        40545055, 40601389, 40537997, 40282505, 40583840, 40643530, 40661974,
+        40422662, 40248429, 40417294, 40331935, 40564222, 39868178, 40404564,
+        40516524, 40520260, 40612003, 40593699, 40093222, 40543742, 39371160,
+        40665229, 40666844, 40360469, 40445943, 40492783, 40599243, 40667178,
+        40341572, 40061310, 40656592, 40558932, 40161835, 40257692, 40248507,
+        40317435, 40650089, 40654624, 39940902, 40124288, 40243559, 40457468,
+        40661153, 40667270, 40162758, 40565264, 39677636, 40501792, 40093156,
+        40247750, 40117195, 40463094, 40563515, 40346308, 40593079, 39960347,
+        40610591, 40335414, 40318116, 40421220, 39416060, 39904165, 40181513,
+        40449614, 40308214, 40251288, 39558156, 40552588, 40200329, 40116972,
+        39746544, 40363824, 40615445, 40609830, 40137881, 40662805, 40501967,
+        40366155, 40369453, 40568125, 40299535, 40592926, 40463051, 40431356,
+        40441417, 40331428, 40381888, 40464633, 40534452, 40650310, 40219095,
+        40419551, 40276117, 40183081, 40641871, 39976229, 40193601, 40337923,
+        39975210, 40268234, 40475617, 40262434, 40661594, 39858924, 37398280,
+        40295941, 40641938, 39942126, 40366258, 40503744, 40450052, 40473147,
+        40567503, 40662816, 40154494, 40274894, 40134803, 40309105, 39909739,
+        40651831, 40357882, 39985430, 40331429, 40362558, 40447127, 40518661,
+        39988169, 40265935, 40060460, 40133022, 40641140, 40347452, 40341493,
+        39658041, 40650042, 39954767, 40183635, 39996803, 40522868, 40510533,
+        40659670, 40242950, 40570375, 39796186, 40411413, 40007603, 40563119,
+        40607659, 40027707, 40027622, 40613710, 40021804, 40362336, 40635069,
+        39999212, 40603914, 40381002, 39909374, 40597599, 40141782, 40276967,
+        40562181, 40462939, 39935019, 39997203, 40332792, 40430124, 40514537,
+        40127730, 40541992, 40650035, 40353677, 40236186, 40599651, 40259734,
+        40060493, 40530588, 40360134, 40381707, 40437196, 40595566, 40317235,
+        40630575, 40666993, 39923611, 40541814, 40688586, 40183636, 40543502,
+        40141996, 40560205
+      ],
+      "references": [
+        34755880, 27899279, 29040670, 37953337, 32399560, 29036573, 36408920,
+        34718729, 33237286, 37301379, 34717010, 34723319, 31688925, 37359723,
+        39251610, 31599596, 37994677, 33166387, 29112715, 33950204, 31548717,
+        33290552, 26467479, 38056462, 34320186, 36350672, 2231712, 36912607,
+        35532924, 36370099
       ]
     },
     {
@@ -30090,6 +30292,7 @@
       "apt": 0.25,
       "citedByClinicalArticle": false,
       "citedByPmidsByYear": [
+        { "40592888": 2025 },
         { "39764040": 2025 },
         { "40166563": 2025 },
         { "39799122": 2025 }
@@ -30101,13 +30304,13 @@
       "nih_percentile": null,
       "molecular_cellular": 0,
       "is_clinical": false,
-      "citation_count": 3,
-      "citations_per_year": 3,
+      "citation_count": 4,
+      "citations_per_year": 4,
       "expected_citations_per_year": null,
-      "field_citation_rate": 10.464388349420728,
+      "field_citation_rate": 9.903294654930422,
       "provisional": false,
       "cited_by_clin": null,
-      "cited_by": [39764040, 40166563, 39799122],
+      "cited_by": [40592888, 39764040, 40166563, 39799122],
       "references": [
         38531069, 34697637, 31616925, 33196056, 34755882, 36682018, 33959747,
         32637040, 36645245, 26771021, 33341877, 28905911, 21208450, 34119691,
@@ -30194,7 +30397,7 @@
       "citation_count": 2,
       "citations_per_year": 2,
       "expected_citations_per_year": null,
-      "field_citation_rate": 8.784787426008482,
+      "field_citation_rate": 8.770161475261792,
       "provisional": false,
       "cited_by_clin": null,
       "cited_by": [40544173, 40507801],
@@ -30286,6 +30489,78 @@
       "cited_by_clin": null,
       "cited_by": [40196486, 40539870],
       "references": [30009819, 34299305, 35696523, 23161693, 32359562, 33782490]
+    },
+    {
+      "_id": "39708803",
+      "animal": 0.25,
+      "authors": [
+        {
+          "lastName": "Narducci",
+          "fullName": "Narducci, Domenic N",
+          "firstName": "Domenic N"
+        },
+        {
+          "lastName": "Hansen",
+          "fullName": "Hansen, Anders S",
+          "firstName": "Anders S"
+        }
+      ],
+      "doi": "10.1016/j.molcel.2024.11.032",
+      "human": 0.125,
+      "pmid": 39708803,
+      "title": "Putative looping factor ZNF143/ZFP143 is an essential transcriptional regulator with no looping function.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [
+        { "39870618": 2025 },
+        { "39708805": 2025 },
+        { "39416077": 2024 },
+        { "38746164": 2025 },
+        { "38798607": 2024 },
+        { "39676670": 2025 },
+        { "39738122": 2024 },
+        { "39935886": 2025 },
+        { "40118069": 2025 },
+        { "40581091": 2025 }
+      ],
+      "year": 2025,
+      "journal": "Mol Cell",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.625,
+      "is_clinical": false,
+      "citation_count": 10,
+      "citations_per_year": 10,
+      "expected_citations_per_year": 0.999999999335148,
+      "field_citation_rate": 13.948236796657532,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": [
+        39870618, 39708805, 39416077, 38746164, 38798607, 39676670, 39738122,
+        39935886, 40118069, 40581091
+      ],
+      "references": [
+        24290376, 23539139, 30885238, 28467304, 36249565, 19525957, 25228660,
+        24157548, 32003791, 22495304, 22268977, 24141950, 26076956, 35420890,
+        29581585, 27380939, 28373276, 31029541, 24309898, 22951069, 25437553,
+        28763006, 34056637, 34321199, 30414923, 38149731, 28881991, 36471071,
+        31205001, 7641696, 25959774, 36335136, 9566884, 21909943, 10773080,
+        38709825, 28855260, 21177654, 29300163, 34414474, 25409824, 9705341,
+        28859663, 22682246, 34481381, 31925403, 35440598, 28111071, 37302180,
+        27210764, 31467088, 33177522, 28525758, 38413840, 31249361, 24213117,
+        25497547, 30935019, 36318249, 29065970, 28536180, 30933430, 32213324,
+        37182209, 27461729, 17297437, 33235358, 35780101, 31390831, 39210046,
+        32318100, 29706538, 24009065, 29272504, 24243024, 17478512, 31056445,
+        14702349, 19234473, 18176568, 33301730, 27449034, 33091336, 39229045,
+        17092945, 9009278, 24736586, 31713622, 36066004, 30120652, 15300802,
+        33397967, 31969120, 20860770, 39708805, 31666694, 31491387, 27349184,
+        20110278, 38206813, 9535833, 25910213, 28977568, 31522987, 24398455,
+        22388286, 18798982, 32998764, 24859337, 22495300, 39721581, 27079975,
+        35145304, 25645053, 27203237, 27442863, 31086298, 35418676, 22955619,
+        37157000, 29053968, 32987449, 33654751, 25516281, 15189848, 18687992,
+        24715461, 32213323, 23408857, 30262496
+      ]
     },
     {
       "_id": "39754192",
@@ -32619,6 +32894,47 @@
       ]
     },
     {
+      "_id": "40081334",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Nagano",
+          "fullName": "Nagano, Masahiro",
+          "firstName": "Masahiro"
+        },
+        {
+          "lastName": "Hansen",
+          "fullName": "Hansen, Anders S",
+          "firstName": "Anders S"
+        }
+      ],
+      "doi": "10.1016/j.xgen.2025.100817",
+      "human": 0.25,
+      "pmid": 40081334,
+      "title": "Distance matters: How protein regulators facilitate enhancer-promoter interactions and transcription.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Cell Genom",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.75,
+      "is_clinical": false,
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        35710842, 39547207, 39721581, 33318687, 33767413, 40010352, 29867216,
+        38413840, 35420890, 37157000
+      ]
+    },
+    {
       "_id": "40082611",
       "animal": 0,
       "authors": [
@@ -34020,6 +34336,446 @@
       ]
     },
     {
+      "_id": "40355727",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Damiani",
+          "fullName": "Damiani, Tito",
+          "firstName": "Tito"
+        },
+        {
+          "lastName": "Jarmusch",
+          "fullName": "Jarmusch, Alan K",
+          "firstName": "Alan K"
+        },
+        {
+          "lastName": "Aron",
+          "fullName": "Aron, Allegra T",
+          "firstName": "Allegra T"
+        },
+        {
+          "lastName": "Petras",
+          "fullName": "Petras, Daniel",
+          "firstName": "Daniel"
+        },
+        {
+          "lastName": "Phelan",
+          "fullName": "Phelan, Vanessa V",
+          "firstName": "Vanessa V"
+        },
+        {
+          "lastName": "Zhao",
+          "fullName": "Zhao, Haoqi Nina",
+          "firstName": "Haoqi Nina"
+        },
+        {
+          "lastName": "Bittremieux",
+          "fullName": "Bittremieux, Wout",
+          "firstName": "Wout"
+        },
+        {
+          "lastName": "Acharya",
+          "fullName": "Acharya, Deepa D",
+          "firstName": "Deepa D"
+        },
+        {
+          "lastName": "Ahmed",
+          "fullName": "Ahmed, Mohammed M A",
+          "firstName": "Mohammed M A"
+        },
+        {
+          "lastName": "Bauermeister",
+          "fullName": "Bauermeister, Anelize",
+          "firstName": "Anelize"
+        },
+        {
+          "lastName": "Bertin",
+          "fullName": "Bertin, Matthew J",
+          "firstName": "Matthew J"
+        },
+        {
+          "lastName": "Boudreau",
+          "fullName": "Boudreau, Paul D",
+          "firstName": "Paul D"
+        },
+        {
+          "lastName": "Borges",
+          "fullName": "Borges, Ricardo M",
+          "firstName": "Ricardo M"
+        },
+        {
+          "lastName": "Bowen",
+          "fullName": "Bowen, Benjamin P",
+          "firstName": "Benjamin P"
+        },
+        {
+          "lastName": "Brown",
+          "fullName": "Brown, Christopher J",
+          "firstName": "Christopher J"
+        },
+        {
+          "lastName": "Chagas",
+          "fullName": "Chagas, Fernanda O",
+          "firstName": "Fernanda O"
+        },
+        {
+          "lastName": "Clevenger",
+          "fullName": "Clevenger, Kenneth D",
+          "firstName": "Kenneth D"
+        },
+        {
+          "lastName": "Correia",
+          "fullName": "Correia, Mario S P",
+          "firstName": "Mario S P"
+        },
+        {
+          "lastName": "Crandall",
+          "fullName": "Crandall, William J",
+          "firstName": "William J"
+        },
+        {
+          "lastName": "Crüsemann",
+          "fullName": "Crüsemann, Max",
+          "firstName": "Max"
+        },
+        { "lastName": "Fahy", "fullName": "Fahy, Eoin", "firstName": "Eoin" },
+        {
+          "lastName": "Fiehn",
+          "fullName": "Fiehn, Oliver",
+          "firstName": "Oliver"
+        },
+        { "lastName": "Garg", "fullName": "Garg, Neha", "firstName": "Neha" },
+        {
+          "lastName": "Gerwick",
+          "fullName": "Gerwick, William H",
+          "firstName": "William H"
+        },
+        {
+          "lastName": "Gilbert",
+          "fullName": "Gilbert, Jeffrey R",
+          "firstName": "Jeffrey R"
+        },
+        {
+          "lastName": "Globisch",
+          "fullName": "Globisch, Daniel",
+          "firstName": "Daniel"
+        },
+        {
+          "lastName": "Gomes",
+          "fullName": "Gomes, Paulo Wender P",
+          "firstName": "Paulo Wender P"
+        },
+        {
+          "lastName": "Heuckeroth",
+          "fullName": "Heuckeroth, Steffen",
+          "firstName": "Steffen"
+        },
+        {
+          "lastName": "James",
+          "fullName": "James, C Andrew",
+          "firstName": "C Andrew"
+        },
+        {
+          "lastName": "Jarmusch",
+          "fullName": "Jarmusch, Scott A",
+          "firstName": "Scott A"
+        },
+        {
+          "lastName": "Kakhkhorov",
+          "fullName": "Kakhkhorov, Sarvar A",
+          "firstName": "Sarvar A"
+        },
+        {
+          "lastName": "Kang",
+          "fullName": "Kang, Kyo Bin",
+          "firstName": "Kyo Bin"
+        },
+        {
+          "lastName": "Kessler",
+          "fullName": "Kessler, Nikolas",
+          "firstName": "Nikolas"
+        },
+        {
+          "lastName": "Kersten",
+          "fullName": "Kersten, Roland D",
+          "firstName": "Roland D"
+        },
+        {
+          "lastName": "Kim",
+          "fullName": "Kim, Hyunwoo",
+          "firstName": "Hyunwoo"
+        },
+        {
+          "lastName": "Kirk",
+          "fullName": "Kirk, Riley D",
+          "firstName": "Riley D"
+        },
+        {
+          "lastName": "Kohlbacher",
+          "fullName": "Kohlbacher, Oliver",
+          "firstName": "Oliver"
+        },
+        {
+          "lastName": "Kontou",
+          "fullName": "Kontou, Eftychia E",
+          "firstName": "Eftychia E"
+        },
+        { "lastName": "Liu", "fullName": "Liu, Ken", "firstName": "Ken" },
+        {
+          "lastName": "Lizama-Chamu",
+          "fullName": "Lizama-Chamu, Itzel",
+          "firstName": "Itzel"
+        },
+        {
+          "lastName": "Luu",
+          "fullName": "Luu, Gordon T",
+          "firstName": "Gordon T"
+        },
+        {
+          "lastName": "Luzzatto Knaan",
+          "fullName": "Luzzatto Knaan, Tal",
+          "firstName": "Tal"
+        },
+        {
+          "lastName": "Mannochio-Russo",
+          "fullName": "Mannochio-Russo, Helena",
+          "firstName": "Helena"
+        },
+        {
+          "lastName": "Marty",
+          "fullName": "Marty, Michael T",
+          "firstName": "Michael T"
+        },
+        {
+          "lastName": "Matsuzawa",
+          "fullName": "Matsuzawa, Yuki",
+          "firstName": "Yuki"
+        },
+        {
+          "lastName": "McAvoy",
+          "fullName": "McAvoy, Andrew C",
+          "firstName": "Andrew C"
+        },
+        {
+          "lastName": "McCall",
+          "fullName": "McCall, Laura-Isobel",
+          "firstName": "Laura-Isobel"
+        },
+        {
+          "lastName": "Mohamed",
+          "fullName": "Mohamed, Osama G",
+          "firstName": "Osama G"
+        },
+        { "lastName": "Nahor", "fullName": "Nahor, Omri", "firstName": "Omri" },
+        {
+          "lastName": "Neuweger",
+          "fullName": "Neuweger, Heiko",
+          "firstName": "Heiko"
+        },
+        {
+          "lastName": "Niedermeyer",
+          "fullName": "Niedermeyer, Timo H J",
+          "firstName": "Timo H J"
+        },
+        {
+          "lastName": "Nishida",
+          "fullName": "Nishida, Kozo",
+          "firstName": "Kozo"
+        },
+        {
+          "lastName": "Northen",
+          "fullName": "Northen, Trent R",
+          "firstName": "Trent R"
+        },
+        {
+          "lastName": "Overdahl",
+          "fullName": "Overdahl, Kirsten E",
+          "firstName": "Kirsten E"
+        },
+        {
+          "lastName": "Rainer",
+          "fullName": "Rainer, Johannes",
+          "firstName": "Johannes"
+        },
+        {
+          "lastName": "Reher",
+          "fullName": "Reher, Raphael",
+          "firstName": "Raphael"
+        },
+        {
+          "lastName": "Rodriguez",
+          "fullName": "Rodriguez, Elys",
+          "firstName": "Elys"
+        },
+        {
+          "lastName": "Sachsenberg",
+          "fullName": "Sachsenberg, Timo T",
+          "firstName": "Timo T"
+        },
+        {
+          "lastName": "Sanchez",
+          "fullName": "Sanchez, Laura M",
+          "firstName": "Laura M"
+        },
+        {
+          "lastName": "Schmid",
+          "fullName": "Schmid, Robin",
+          "firstName": "Robin"
+        },
+        {
+          "lastName": "Stevens",
+          "fullName": "Stevens, Cole",
+          "firstName": "Cole"
+        },
+        {
+          "lastName": "Subramaniam",
+          "fullName": "Subramaniam, Shankar",
+          "firstName": "Shankar"
+        },
+        {
+          "lastName": "Tian",
+          "fullName": "Tian, Zhenyu",
+          "firstName": "Zhenyu"
+        },
+        {
+          "lastName": "Tripathi",
+          "fullName": "Tripathi, Ashootosh",
+          "firstName": "Ashootosh"
+        },
+        {
+          "lastName": "Tsugawa",
+          "fullName": "Tsugawa, Hiroshi",
+          "firstName": "Hiroshi"
+        },
+        {
+          "lastName": "van der Hooft",
+          "fullName": "van der Hooft, Justin J J",
+          "firstName": "Justin J J"
+        },
+        {
+          "lastName": "Vicini",
+          "fullName": "Vicini, Andrea",
+          "firstName": "Andrea"
+        },
+        {
+          "lastName": "Walter",
+          "fullName": "Walter, Axel",
+          "firstName": "Axel"
+        },
+        {
+          "lastName": "Weber",
+          "fullName": "Weber, Tilmann",
+          "firstName": "Tilmann"
+        },
+        {
+          "lastName": "Xiong",
+          "fullName": "Xiong, Quanbo",
+          "firstName": "Quanbo"
+        },
+        { "lastName": "Xu", "fullName": "Xu, Tao", "firstName": "Tao" },
+        {
+          "lastName": "Pluskal",
+          "fullName": "Pluskal, Tomáš",
+          "firstName": "Tomáš"
+        },
+        {
+          "lastName": "Dorrestein",
+          "fullName": "Dorrestein, Pieter C",
+          "firstName": "Pieter C"
+        },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Mingxun",
+          "firstName": "Mingxun"
+        }
+      ],
+      "doi": "10.1038/s41592-025-02660-z",
+      "human": 1,
+      "pmid": 40355727,
+      "title": "A universal language for finding mass spectrometry data patterns.",
+      "apt": 0.25,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [
+        { "40631287": 2025 },
+        { "40499541": 2025 },
+        { "38575682": 2024 },
+        { "39554097": 2024 },
+        { "40377209": 2025 },
+        { "38471500": 2024 },
+        { "40297700": 2025 },
+        { "40413169": 2025 }
+      ],
+      "year": 2025,
+      "journal": "Nat Methods",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "citation_count": 8,
+      "citations_per_year": 8,
+      "expected_citations_per_year": 0.999999999335148,
+      "field_citation_rate": 8.25817391412918,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": [
+        40631287, 40499541, 38575682, 39554097, 40377209, 38471500, 40297700,
+        40413169
+      ],
+      "references": [
+        34169593, 37693169, 23292976, 34158495, 35960544, 31691833, 35687946,
+        38649352, 24222034, 38366242, 18067247, 2376701, 36156231, 38385767,
+        36712343, 33891400, 25333600, 27504778, 25938372, 38559298, 26601589,
+        20376388, 31894142, 34862502, 22537891, 20716697, 34246143, 35208247,
+        35657593, 37593127, 32100996, 33467846, 38739531, 37409760, 34795435,
+        26467476, 28398311, 36649739, 38471500, 26675868, 8276425, 19772347,
+        36859716, 37880260
+      ]
+    },
+    {
+      "_id": "40359646",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Nollmann",
+          "fullName": "Nollmann, Marcelo",
+          "firstName": "Marcelo"
+        },
+        {
+          "lastName": "Hansen",
+          "fullName": "Hansen, Anders S",
+          "firstName": "Anders S"
+        }
+      ],
+      "doi": "10.1016/j.gde.2025.102355",
+      "human": 0,
+      "pmid": 40359646,
+      "title": "Editorial overview: Emerging perspectives in genome architecture and gene regulation.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Curr Opin Genet Dev",
+      "is_research_article": false,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        40107115, 39724779, 39368316, 39709822, 39383545, 39808848, 39146885,
+        39862605, 39591812, 39827577, 39579740, 39631290, 39813812, 39862604,
+        40188779, 39500079, 40080917, 39705880, 39947017
+      ]
+    },
+    {
       "_id": "40401984",
       "animal": 0,
       "authors": [
@@ -34501,6 +35257,83 @@
         17869223, 30038397, 34400557, 39169041, 34969825, 34341548, 39071311,
         37157000, 28008086, 9121580, 38413840, 31124784, 31127282, 25297814,
         31494034, 39276360, 40097581
+      ]
+    },
+    {
+      "_id": "40467932",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Fuentealba",
+          "fullName": "Fuentealba, Matías",
+          "firstName": "Matías"
+        },
+        {
+          "lastName": "Rouch",
+          "fullName": "Rouch, Laure",
+          "firstName": "Laure"
+        },
+        {
+          "lastName": "Guyonnet",
+          "fullName": "Guyonnet, Sophie",
+          "firstName": "Sophie"
+        },
+        {
+          "lastName": "Lemaitre",
+          "fullName": "Lemaitre, Jean-Marc",
+          "firstName": "Jean-Marc"
+        },
+        {
+          "lastName": "de Souto Barreto",
+          "fullName": "de Souto Barreto, Philipe",
+          "firstName": "Philipe"
+        },
+        {
+          "lastName": "Vellas",
+          "fullName": "Vellas, Bruno",
+          "firstName": "Bruno"
+        },
+        {
+          "lastName": "Andrieu",
+          "fullName": "Andrieu, Sandrine",
+          "firstName": "Sandrine"
+        },
+        {
+          "lastName": "Furman",
+          "fullName": "Furman, David",
+          "firstName": "David"
+        }
+      ],
+      "doi": "10.1038/s43587-025-00883-5",
+      "human": 0.8571428571428571,
+      "pmid": 40467932,
+      "title": "A blood-based epigenetic clock for intrinsic capacity predicts mortality and is associated with clinical, immunological and lifestyle factors.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "40467931": 2025 }],
+      "year": 2025,
+      "journal": "Nat Aging",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.14285714285714285,
+      "is_clinical": false,
+      "citation_count": 1,
+      "citations_per_year": 1,
+      "expected_citations_per_year": 0.999999999335148,
+      "field_citation_rate": 11.380795035745223,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": [40467931],
+      "references": [
+        36736466, 30462162, 32960939, 26864356, 30984377, 23175756, 38945125,
+        37044367, 38636565, 34557778, 26341720, 27207943, 38575601, 38584043,
+        37454096, 34888528, 5910392, 19540809, 1202204, 20808728, 17398228,
+        33875799, 35308493, 29306984, 38195493, 37946044, 36512074, 12023394,
+        25834109, 26016893, 8126356, 25982160, 39236871, 8717514, 33575699,
+        36813972, 36750172, 24336642, 29382735, 22935006, 37179335, 25969563,
+        34520466, 36660894, 32785021, 36356628, 39082762, 28035024, 15353480,
+        11556941, 28541466, 34569602
       ]
     },
     {

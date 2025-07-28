@@ -15,11 +15,11 @@
     "activityCode": "OT2",
     "projects": [
       "3OT2OD030161-01S2",
+      "3OT2OD030161-01S5",
       "3OT2OD030161-01S1",
-      "3OT2OD030161-01S3",
-      "3OT2OD030161-01S4",
       "1OT2OD030161-01",
-      "3OT2OD030161-01S5"
+      "3OT2OD030161-01S3",
+      "3OT2OD030161-01S4"
     ],
     "awardAmount": 3153200,
     "publications": 1,
@@ -64,9 +64,9 @@
       "1OT2OD030545-01",
       "3OT2OD030545-01S3",
       "3OT2OD030545-01S4",
+      "3OT2OD030545-01S5",
       "3OT2OD030545-01S2",
-      "3OT2OD030545-01S1",
-      "3OT2OD030545-01S5"
+      "3OT2OD030545-01S1"
     ],
     "awardAmount": 3089131,
     "publications": 7,
@@ -128,8 +128,8 @@
     "name": "CONNECT: Collaborative Network for Nurturing Ecosystems of Common Fund Team Science",
     "activityCode": "U54",
     "projects": ["1U54OD036472-01", "5U54OD036472-02"],
-    "awardAmount": 2205181,
-    "publications": 2,
+    "awardAmount": 3411549,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -199,7 +199,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD034493-01"],
     "awardAmount": 302764,
-    "publications": 7,
+    "publications": 8,
     "repos": 0,
     "analytics": 0
   },
@@ -247,7 +247,7 @@
     "id": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "activityCode": "OT2",
-    "projects": ["3OT2OD036440-01S1", "1OT2OD036440-01"],
+    "projects": ["1OT2OD036440-01", "3OT2OD036440-01S1"],
     "awardAmount": 3222432,
     "publications": 2,
     "repos": 0,
@@ -259,7 +259,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036497-01"],
     "awardAmount": 388000,
-    "publications": 1,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
@@ -410,9 +410,9 @@
     "projects": [
       "3OT2OD030546-01S2",
       "3OT2OD030546-01S4",
+      "3OT2OD030546-01S3",
       "1OT2OD030546-01",
-      "3OT2OD030546-01S1",
-      "3OT2OD030546-01S3"
+      "3OT2OD030546-01S1"
     ],
     "awardAmount": 2460622,
     "publications": 4,
@@ -460,22 +460,22 @@
     "analytics": 0
   },
   {
-    "id": "R03OD036492",
-    "name": "Predicting 3D physical gene-enhancer interactions through integration of GTEx and 4DN data",
-    "activityCode": "R03",
-    "projects": ["1R03OD036492-01"],
-    "awardAmount": 298222,
-    "publications": 2,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
     "id": "R03OD032628",
     "name": "Constructing High-Resolution Ensemble Models of 3D Single-Cell Chromatin Conformations of eQTL Loci from Integrated Analysis of 4DN-GTEx Data towards Structural Basis of Differential Gene Expression",
     "activityCode": "R03",
     "projects": ["1R03OD032628-01"],
     "awardAmount": 309427,
     "publications": 0,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD036492",
+    "name": "Predicting 3D physical gene-enhancer interactions through integration of GTEx and 4DN data",
+    "activityCode": "R03",
+    "projects": ["1R03OD036492-01"],
+    "awardAmount": 298222,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
@@ -500,6 +500,16 @@
     "analytics": 0
   },
   {
+    "id": "R03OD038390",
+    "name": "Ultra-high resolution 3D genome maps for multiple human tissues",
+    "activityCode": "R03",
+    "projects": ["1R03OD038390-01"],
+    "awardAmount": 308658,
+    "publications": 9,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "R03OD034500",
     "name": "Allele-specific analysis of human epigenome, transcriptome and high-resolution chromatin organization",
     "activityCode": "R03",
@@ -510,26 +520,16 @@
     "analytics": 0
   },
   {
-    "id": "R03OD038390",
-    "name": "Ultra-high resolution 3D genome maps for multiple human tissues",
-    "activityCode": "R03",
-    "projects": ["1R03OD038390-01"],
-    "awardAmount": 308658,
-    "publications": 6,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
     "id": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
     "activityCode": "OT2",
     "projects": [
-      "1OT2OD030160-01",
-      "3OT2OD030160-01S2",
-      "3OT2OD030160-01S5",
       "3OT2OD030160-01S3",
       "3OT2OD030160-01S4",
-      "3OT2OD030160-01S1"
+      "3OT2OD030160-01S1",
+      "1OT2OD030160-01",
+      "3OT2OD030160-01S2",
+      "3OT2OD030160-01S5"
     ],
     "awardAmount": 3420175,
     "publications": 14,
@@ -540,7 +540,7 @@
     "id": "OT2OD036435",
     "name": "The CFDE Workbench",
     "activityCode": "OT2",
-    "projects": ["3OT2OD036435-01S1", "1OT2OD036435-01"],
+    "projects": ["1OT2OD036435-01", "3OT2OD036435-01S1"],
     "awardAmount": 3250000,
     "publications": 12,
     "repos": 0,
@@ -581,10 +581,10 @@
     "name": "SPARC Engagement Plan with the Common Fund Data Ecosystem",
     "activityCode": "OT2",
     "projects": [
+      "3OT2OD032619-01S1",
       "1OT2OD032619-01",
       "3OT2OD032619-01S3",
-      "3OT2OD032619-01S2",
-      "3OT2OD032619-01S1"
+      "3OT2OD032619-01S2"
     ],
     "awardAmount": 2877537,
     "publications": 0,
@@ -621,11 +621,11 @@
     "name": "GENOMIC INDEXING OF COMMON FUND DATASETS",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030547-01S3",
       "1OT2OD030547-01",
+      "3OT2OD030547-01S3",
       "3OT2OD030547-01S1",
-      "3OT2OD030547-01S4",
-      "3OT2OD030547-01S2"
+      "3OT2OD030547-01S2",
+      "3OT2OD030547-01S4"
     ],
     "awardAmount": 3159152,
     "publications": 1,
@@ -709,10 +709,10 @@
     "projects": [
       "3OT2OD030162-01S3",
       "3OT2OD030162-01S1",
+      "3OT2OD030162-01S5",
       "3OT2OD030162-01S2",
       "1OT2OD030162-01",
-      "3OT2OD030162-01S4",
-      "3OT2OD030162-01S5"
+      "3OT2OD030162-01S4"
     ],
     "awardAmount": 10363836,
     "publications": 2,
@@ -760,6 +760,22 @@
     "analytics": 0
   },
   {
+    "id": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "activityCode": "OT2",
+    "projects": [
+      "3OT2OD030544-01S2",
+      "3OT2OD030544-01S4",
+      "1OT2OD030544-01",
+      "3OT2OD030544-01S3",
+      "3OT2OD030544-01S1"
+    ],
+    "awardAmount": 3229346,
+    "publications": 59,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
     "id": "U24OD038425",
     "name": "\"Defining the Human Metabotype\" [Human metabolic status defined through genetic, diet,environmental exposure and exercise perturbations]",
     "activityCode": "U24",
@@ -770,18 +786,12 @@
     "analytics": 0
   },
   {
-    "id": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "activityCode": "OT2",
-    "projects": [
-      "1OT2OD030544-01",
-      "3OT2OD030544-01S3",
-      "3OT2OD030544-01S1",
-      "3OT2OD030544-01S2",
-      "3OT2OD030544-01S4"
-    ],
-    "awardAmount": 3229346,
-    "publications": 59,
+    "id": "R03OD030600",
+    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
+    "activityCode": "R03",
+    "projects": ["1R03OD030600-01"],
+    "awardAmount": 363306,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -791,16 +801,6 @@
     "activityCode": "U24",
     "projects": ["1U24OD038422-01"],
     "awardAmount": 1489695,
-    "publications": 1,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "R03OD030600",
-    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
-    "activityCode": "R03",
-    "projects": ["1R03OD030600-01"],
-    "awardAmount": 363306,
     "publications": 1,
     "repos": 0,
     "analytics": 0
@@ -871,7 +871,7 @@
     "activityCode": "U24",
     "projects": ["1U24OD038424-01"],
     "awardAmount": 693012,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
