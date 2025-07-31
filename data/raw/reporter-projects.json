@@ -1,6 +1,6 @@
 {
   "meta": {
-    "search_id": "DkU8kJjGA0GFyOVDwxNt_g",
+    "search_id": "_acf7a9jeE-a0YmPfY2-bw",
     "total": 137,
     "offset": 0,
     "limit": 500,
@@ -8,7 +8,7 @@
     "sort_order": "ASC",
     "sorted_by_relevance": false,
     "properties": {
-      "URL": "https:/reporter.nih.gov/search/DkU8kJjGA0GFyOVDwxNt_g/projects"
+      "URL": "https:/reporter.nih.gov/search/_acf7a9jeE-a0YmPfY2-bw/projects"
     }
   },
   "results": [
@@ -14704,130 +14704,6 @@
       "date_added": "2024-09-28T16:29:47"
     },
     {
-      "appl_id": 10994353,
-      "subproject_id": null,
-      "fiscal_year": 2024,
-      "project_num": "1U24OD038425-01",
-      "project_serial_num": "OD038425",
-      "organization": {
-        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
-        "city": null,
-        "country": null,
-        "org_city": "LA JOLLA",
-        "org_country": "UNITED STATES",
-        "org_state": "CA",
-        "org_state_name": null,
-        "dept_type": "ENGINEERING (ALL TYPES)",
-        "fips_country_code": null,
-        "org_duns": ["804355790"],
-        "org_ueis": ["UYTTZT6G9DT1"],
-        "primary_duns": "804355790",
-        "primary_uei": "UYTTZT6G9DT1",
-        "org_fips": "US",
-        "org_ipf_code": "577507",
-        "org_zipcode": "920930621",
-        "external_org_id": 577507
-      },
-      "award_type": "1",
-      "activity_code": "U24",
-      "award_amount": 933739,
-      "is_active": true,
-      "project_num_split": {
-        "appl_type_code": "1",
-        "activity_code": "U24",
-        "ic_code": "OD",
-        "serial_num": "038425",
-        "support_year": "01",
-        "full_support_year": "01",
-        "suffix_code": ""
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 1936703,
-          "first_name": "Shankar",
-          "middle_name": "",
-          "last_name": "Subramaniam",
-          "is_contact_pi": true,
-          "full_name": "Shankar  Subramaniam",
-          "title": "PROFESSOR"
-        }
-      ],
-      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
-      "program_officers": [
-        {
-          "first_name": "KRISTIN",
-          "middle_name": "KATHLEEN",
-          "last_name": "KANO",
-          "full_name": "KRISTIN KATHLEEN KANO"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2024,
-          "code": "DE",
-          "name": "National Institute of Dental and Craniofacial Research",
-          "abbreviation": "NIDCR",
-          "total_cost": 1,
-          "direct_cost_ic": 1,
-          "indirect_cost_ic": 0
-        },
-        {
-          "fy": 2024,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 933738,
-          "direct_cost_ic": 787788,
-          "indirect_cost_ic": 145950
-        }
-      ],
-      "cong_dist": "CA-50",
-      "spending_categories": [176, 216, 276, 536, 3395, 3070, 701],
-      "project_start_date": "2024-09-17T00:00:00",
-      "project_end_date": "2027-08-31T00:00:00",
-      "organization_type": {
-        "name": "SCHOOLS OF ARTS AND SCIENCES",
-        "code": "10",
-        "is_other": false
-      },
-      "geo_lat_lon": { "lon": -117.24087, "lat": 32.876991 },
-      "opportunity_number": "RFA-RM-23-013",
-      "full_study_section": {
-        "srg_code": "ZRG1",
-        "srg_flex": null,
-        "sra_designator_code": "BBBT",
-        "sra_flex_code": "E",
-        "group_code": "56",
-        "name": "Special Emphasis Panel[ZRG1 BBBT-E (56)]"
-      },
-      "award_notice_date": "2024-09-17T00:00:00",
-      "is_new": false,
-      "mechanism_code_dc": "OR",
-      "core_project_num": "U24OD038425",
-      "terms": "<Address><Affect><Biological><Body Tissues><Classification><Collection><Communities><Data><Data Analytics><Data Banks><Data Set><Databanks><Development><Diet><Disease><Disorder><Documentation><Environment><Environmental Exposure><Exercise><Foundations><Funding><Genes><Genetic><Genome><Genotype><Goals><Graphical interface><Health><Human><Individual><Infrastructure><Intermediary Metabolism><Intervention><Intervention Strategies><Investigators><Life Style><Lifestyle><Machine Learning><Maps><Measurement><Measures><Metabolic><Metabolic Processes><Metabolism><Metadata><Methods><Modality><Modeling><Modern Man><Molecular><Monitor><NIEHS><NIH><National Institute of Environmental Health Sciences><National Institutes of Health><Nature><Pathologic><Physical activity><Physicians><Physiologic><Physiological><Physiology><Precision Health><Principal Investigator><Recommendation><Research Personnel><Research Resources><Researchers><Resources><Self Assessment><Site><Solid><System><Systematics><Technology><Time><Tissues><Transducers><United States National Institutes of Health><Variant><Variation><analytical tool><biologic><cohort><data depository><data ecosystem><data harmonization><data repository><data set repository><data sharing ecosystem><dataset repository><developmental><diet and exercise><diets><epigenomics><genome sequencing><genomic variation><graphic user interface><graphical user interface><harmonized data><human subject><individual heterogeneity><individual variability><individual variation><innovate><innovation><innovative><interventional strategy><learning activity><learning method><learning strategies><learning strategy><machine based learning><meta data><metabolic phenotype><metabolism measurement><metabolome><metabolomics><metabonome><metabonomics><metabotype><novel><precision nutrition><software user interface><success><tool><vector><web site><website>",
-      "pref_terms": "Address;Affect;Biological;Classification;Collection;Communities;Data;Data Analytics;Data Set;Development;Diet;Disease;Documentation;Environment;Environmental Exposure;Exercise;Foundations;Funding;Genes;Genetic;Genome;Genotype;Goals;Health;Human;Individual;Infrastructure;Intervention;Life Style;Machine Learning;Maps;Measurement;Measures;Metabolic;Metabolism;Metadata;Methods;Modality;Modeling;Molecular;Monitor;National Institute of Environmental Health Sciences;Nature;Pathologic;Physical activity;Physicians;Physiological;Physiology;Precision Health;Principal Investigator;Recommendation;Research Personnel;Resources;Self Assessment;Site;Solid;System;Technology;Time;Tissues;Transducers;United States National Institutes of Health;Variant;analytical tool;cohort;data ecosystem;data harmonization;data repository;diet and exercise;epigenomics;genome sequencing;genomic variation;graphical user interface;human subject;individual variation;innovation;learning strategy;metabolic phenotype;metabolome;metabolomics;novel;precision nutrition;success;tool;vector;web site",
-      "abstract_text": "PROJECT SUMMARY/ABSTRACT\nMolecular Transducers of Physical Activity (MoTrPAC), Nutrition for Precision Health (NPH), and the Human\nHealth Exposure Analysis Resource (HHEAR) are NIH-funded national projects (three originating from NIH\nCommon Fund initiatives) that measure thousands of metabolites in large cohorts of human subjects under\nexercise, diet, environmental exposure conditions respectively. The Common Fund initiated Metabolomics\nWorkbench, which serves as the data repository, the metabolomics harmonization center and the data analytics\nworkbench for deep analyses of human metabolomics and provides the infrastructure to develop the concept of\nhuman metabotype. We characterize the metabolomic state of groups of individuals with common homeostatic\npoints for a collection of metabolites as “human metabotypes”. More precisely, the metabotype defines a\ncollection of metabolites or metabolite classes that is unique (in the metabolomic hyperspace) to a class of\nindividuals – defined in this project through metabolomics measurements from humans subject to exercise and\ndiet perturbations and humans subject to distinct environmental exposures. Human subjects can be classified\nas belonging to one of several distinct groups (e.g., clusters in a UMAP) defining the metabotype for a chosen\nset of metabolites in a class. At the quantitative level, the distinct groups are defined by distinct profiles of\nmetabolites or metabolite classes.\nThe major goal of this project is to use the three national projects to develop the “metabotype” concept into a\nconcrete set of points in the metabolomics hyperspace that define the human physiological state. Towards this,\nwe harmonize the metabolomics data across the national projects, identify the clusters of metabolites/metabolite\nclasses that define a group of human subjects, and provide the biological context to the metabotype. The tools\nwe will develop will enable an end user to analyze and decipher the physiological function that further defines\nthe metabotype and explore perturbations such as exercise, diet, or changing environment to see how the\nhomeostatic endotype points change into another possible homeostatic state.\nMost importantly, given that the definition of the endotypes in the MoTrPAC, NPH and HHEAR projects largely\nrefer to healthy human subjects, we will develop the ability for any individual with their metabolomic\nmeasurements to map their data on the metabotype space. Using such a “Metabotype Calculator”, the most\nvaluable product of this project, a human subject will be able to assess their “state of health” and assess how\nperturbations such as exercise or diet will alter their homeostatic metabotype states. We anticipate that the\n“Metabotype Calculator” will serve as a dynamic living counterpart to the genotype in defining the human\nsubject’s state of physiology. All the resources developed in this project will be available on the Common Fund\nData Ecosystem Data Repository Center (CFDE DRC). The Principal Investigator (PI) of this U24, also the CFDE\nDRC PI, will facilitate making this resource available to the user community.",
-      "project_title": "\"Defining the Human Metabotype\" [Human metabolic status defined through genetic, diet,environmental exposure and exercise perturbations]",
-      "phr_text": "PROJECT NARRATIVE\nMetabolites are often endpoints and markers of human physiology, and a collection of metabolites can potentially\ndefine homeostatic states of human health. We bring together metabolomics measurements on human subjects\nfrom three defined perturbations, namely, exercise, diet, and environmental exposome, from the three national\nprojects, MoTrPAC, NPH, and HHEAR, respectively, in defining the metabotypes (homeostatic states) through\nexploration of the metabolomic hyperspace. We hypothesize that, from large-scale metabolomic measurements\non humans, we can define metabotypes that define the homeostatic state of a collection of metabotypes and\ndefine how perturbations from this state can be addressed through targeted interventions and provide the\nmetabotype calculator as the most valuable product from this project.",
-      "spending_categories_desc": "Clinical Research; Dental, Oral, and Craniofacial Disease; Genetics; Nutrition; Physical Activity; Precision Medicine; Prevention",
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2024-09-17T00:00:00",
-      "budget_end": "2025-08-31T00:00:00",
-      "cfda_code": "310",
-      "funding_mechanism": "Other Research-Related",
-      "direct_cost_amt": 787789,
-      "indirect_cost_amt": 145950,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10994353",
-      "date_added": "2024-09-21T16:30:10"
-    },
-    {
       "appl_id": 10217619,
       "subproject_id": null,
       "fiscal_year": 2020,
@@ -15171,6 +15047,130 @@
       "indirect_cost_amt": null,
       "project_detail_url": "https://reporter.nih.gov/project-details/10468524",
       "date_added": "2021-09-25T16:33:53"
+    },
+    {
+      "appl_id": 10994353,
+      "subproject_id": null,
+      "fiscal_year": 2024,
+      "project_num": "1U24OD038425-01",
+      "project_serial_num": "OD038425",
+      "organization": {
+        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+        "city": null,
+        "country": null,
+        "org_city": "LA JOLLA",
+        "org_country": "UNITED STATES",
+        "org_state": "CA",
+        "org_state_name": null,
+        "dept_type": "ENGINEERING (ALL TYPES)",
+        "fips_country_code": null,
+        "org_duns": ["804355790"],
+        "org_ueis": ["UYTTZT6G9DT1"],
+        "primary_duns": "804355790",
+        "primary_uei": "UYTTZT6G9DT1",
+        "org_fips": "US",
+        "org_ipf_code": "577507",
+        "org_zipcode": "920930621",
+        "external_org_id": 577507
+      },
+      "award_type": "1",
+      "activity_code": "U24",
+      "award_amount": 933739,
+      "is_active": true,
+      "project_num_split": {
+        "appl_type_code": "1",
+        "activity_code": "U24",
+        "ic_code": "OD",
+        "serial_num": "038425",
+        "support_year": "01",
+        "full_support_year": "01",
+        "suffix_code": ""
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 1936703,
+          "first_name": "Shankar",
+          "middle_name": "",
+          "last_name": "Subramaniam",
+          "is_contact_pi": true,
+          "full_name": "Shankar  Subramaniam",
+          "title": "PROFESSOR"
+        }
+      ],
+      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
+      "program_officers": [
+        {
+          "first_name": "KRISTIN",
+          "middle_name": "KATHLEEN",
+          "last_name": "KANO",
+          "full_name": "KRISTIN KATHLEEN KANO"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2024,
+          "code": "DE",
+          "name": "National Institute of Dental and Craniofacial Research",
+          "abbreviation": "NIDCR",
+          "total_cost": 1,
+          "direct_cost_ic": 1,
+          "indirect_cost_ic": 0
+        },
+        {
+          "fy": 2024,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 933738,
+          "direct_cost_ic": 787788,
+          "indirect_cost_ic": 145950
+        }
+      ],
+      "cong_dist": "CA-50",
+      "spending_categories": [176, 216, 276, 536, 3395, 3070, 701],
+      "project_start_date": "2024-09-17T00:00:00",
+      "project_end_date": "2027-08-31T00:00:00",
+      "organization_type": {
+        "name": "SCHOOLS OF ARTS AND SCIENCES",
+        "code": "10",
+        "is_other": false
+      },
+      "geo_lat_lon": { "lon": -117.24087, "lat": 32.876991 },
+      "opportunity_number": "RFA-RM-23-013",
+      "full_study_section": {
+        "srg_code": "ZRG1",
+        "srg_flex": null,
+        "sra_designator_code": "BBBT",
+        "sra_flex_code": "E",
+        "group_code": "56",
+        "name": "Special Emphasis Panel[ZRG1 BBBT-E (56)]"
+      },
+      "award_notice_date": "2024-09-17T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "OR",
+      "core_project_num": "U24OD038425",
+      "terms": "<Address><Affect><Biological><Body Tissues><Classification><Collection><Communities><Data><Data Analytics><Data Banks><Data Set><Databanks><Development><Diet><Disease><Disorder><Documentation><Environment><Environmental Exposure><Exercise><Foundations><Funding><Genes><Genetic><Genome><Genotype><Goals><Graphical interface><Health><Human><Individual><Infrastructure><Intermediary Metabolism><Intervention><Intervention Strategies><Investigators><Life Style><Lifestyle><Machine Learning><Maps><Measurement><Measures><Metabolic><Metabolic Processes><Metabolism><Metadata><Methods><Modality><Modeling><Modern Man><Molecular><Monitor><NIEHS><NIH><National Institute of Environmental Health Sciences><National Institutes of Health><Nature><Pathologic><Physical activity><Physicians><Physiologic><Physiological><Physiology><Precision Health><Principal Investigator><Recommendation><Research Personnel><Research Resources><Researchers><Resources><Self Assessment><Site><Solid><System><Systematics><Technology><Time><Tissues><Transducers><United States National Institutes of Health><Variant><Variation><analytical tool><biologic><cohort><data depository><data ecosystem><data harmonization><data repository><data set repository><data sharing ecosystem><dataset repository><developmental><diet and exercise><diets><epigenomics><genome sequencing><genomic variation><graphic user interface><graphical user interface><harmonized data><human subject><individual heterogeneity><individual variability><individual variation><innovate><innovation><innovative><interventional strategy><learning activity><learning method><learning strategies><learning strategy><machine based learning><meta data><metabolic phenotype><metabolism measurement><metabolome><metabolomics><metabonome><metabonomics><metabotype><novel><precision nutrition><software user interface><success><tool><vector><web site><website>",
+      "pref_terms": "Address;Affect;Biological;Classification;Collection;Communities;Data;Data Analytics;Data Set;Development;Diet;Disease;Documentation;Environment;Environmental Exposure;Exercise;Foundations;Funding;Genes;Genetic;Genome;Genotype;Goals;Health;Human;Individual;Infrastructure;Intervention;Life Style;Machine Learning;Maps;Measurement;Measures;Metabolic;Metabolism;Metadata;Methods;Modality;Modeling;Molecular;Monitor;National Institute of Environmental Health Sciences;Nature;Pathologic;Physical activity;Physicians;Physiological;Physiology;Precision Health;Principal Investigator;Recommendation;Research Personnel;Resources;Self Assessment;Site;Solid;System;Technology;Time;Tissues;Transducers;United States National Institutes of Health;Variant;analytical tool;cohort;data ecosystem;data harmonization;data repository;diet and exercise;epigenomics;genome sequencing;genomic variation;graphical user interface;human subject;individual variation;innovation;learning strategy;metabolic phenotype;metabolome;metabolomics;novel;precision nutrition;success;tool;vector;web site",
+      "abstract_text": "PROJECT SUMMARY/ABSTRACT\nMolecular Transducers of Physical Activity (MoTrPAC), Nutrition for Precision Health (NPH), and the Human\nHealth Exposure Analysis Resource (HHEAR) are NIH-funded national projects (three originating from NIH\nCommon Fund initiatives) that measure thousands of metabolites in large cohorts of human subjects under\nexercise, diet, environmental exposure conditions respectively. The Common Fund initiated Metabolomics\nWorkbench, which serves as the data repository, the metabolomics harmonization center and the data analytics\nworkbench for deep analyses of human metabolomics and provides the infrastructure to develop the concept of\nhuman metabotype. We characterize the metabolomic state of groups of individuals with common homeostatic\npoints for a collection of metabolites as “human metabotypes”. More precisely, the metabotype defines a\ncollection of metabolites or metabolite classes that is unique (in the metabolomic hyperspace) to a class of\nindividuals – defined in this project through metabolomics measurements from humans subject to exercise and\ndiet perturbations and humans subject to distinct environmental exposures. Human subjects can be classified\nas belonging to one of several distinct groups (e.g., clusters in a UMAP) defining the metabotype for a chosen\nset of metabolites in a class. At the quantitative level, the distinct groups are defined by distinct profiles of\nmetabolites or metabolite classes.\nThe major goal of this project is to use the three national projects to develop the “metabotype” concept into a\nconcrete set of points in the metabolomics hyperspace that define the human physiological state. Towards this,\nwe harmonize the metabolomics data across the national projects, identify the clusters of metabolites/metabolite\nclasses that define a group of human subjects, and provide the biological context to the metabotype. The tools\nwe will develop will enable an end user to analyze and decipher the physiological function that further defines\nthe metabotype and explore perturbations such as exercise, diet, or changing environment to see how the\nhomeostatic endotype points change into another possible homeostatic state.\nMost importantly, given that the definition of the endotypes in the MoTrPAC, NPH and HHEAR projects largely\nrefer to healthy human subjects, we will develop the ability for any individual with their metabolomic\nmeasurements to map their data on the metabotype space. Using such a “Metabotype Calculator”, the most\nvaluable product of this project, a human subject will be able to assess their “state of health” and assess how\nperturbations such as exercise or diet will alter their homeostatic metabotype states. We anticipate that the\n“Metabotype Calculator” will serve as a dynamic living counterpart to the genotype in defining the human\nsubject’s state of physiology. All the resources developed in this project will be available on the Common Fund\nData Ecosystem Data Repository Center (CFDE DRC). The Principal Investigator (PI) of this U24, also the CFDE\nDRC PI, will facilitate making this resource available to the user community.",
+      "project_title": "\"Defining the Human Metabotype\" [Human metabolic status defined through genetic, diet,environmental exposure and exercise perturbations]",
+      "phr_text": "PROJECT NARRATIVE\nMetabolites are often endpoints and markers of human physiology, and a collection of metabolites can potentially\ndefine homeostatic states of human health. We bring together metabolomics measurements on human subjects\nfrom three defined perturbations, namely, exercise, diet, and environmental exposome, from the three national\nprojects, MoTrPAC, NPH, and HHEAR, respectively, in defining the metabotypes (homeostatic states) through\nexploration of the metabolomic hyperspace. We hypothesize that, from large-scale metabolomic measurements\non humans, we can define metabotypes that define the homeostatic state of a collection of metabotypes and\ndefine how perturbations from this state can be addressed through targeted interventions and provide the\nmetabotype calculator as the most valuable product from this project.",
+      "spending_categories_desc": "Clinical Research; Dental, Oral, and Craniofacial Disease; Genetics; Nutrition; Physical Activity; Precision Medicine; Prevention",
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2024-09-17T00:00:00",
+      "budget_end": "2025-08-31T00:00:00",
+      "cfda_code": "310",
+      "funding_mechanism": "Other Research-Related",
+      "direct_cost_amt": 787789,
+      "indirect_cost_amt": 145950,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10994353",
+      "date_added": "2024-09-21T16:30:10"
     },
     {
       "appl_id": 10112014,
