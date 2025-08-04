@@ -1430,19 +1430,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030544-01S2",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10683515,
-    "awardAmount": 807151,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2023-09-22T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "3OT2OD030544-01S4",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1454,6 +1441,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2025-09-22T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "3OT2OD030544-01S2",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10683515,
+    "awardAmount": 807151,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2023-09-22T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1U24OD038425-01",
@@ -1703,6 +1703,19 @@
     "isActive": 0
   },
   {
+    "id": "4U24OD036598-08",
+    "coreProject": "U24OD036598",
+    "name": "Molecular Transducers of Physical Activity (MoTrPAC)",
+    "opportunity": "RFA-RM-23-020",
+    "application": 11125864,
+    "awardAmount": 4489725,
+    "activityCode": "U24",
+    "agencyCode": "NIH",
+    "dateStart": "2016-12-12T00:00:00",
+    "dateEnd": "2027-04-30T00:00:00",
+    "isActive": 1
+  },
+  {
     "id": "9U24OD036598-07",
     "coreProject": "U24OD036598",
     "name": "Molecular Transducers of Physical Activity (MoTrPAC)",
@@ -1726,7 +1739,7 @@
     "agencyCode": "NIH",
     "dateStart": "2019-09-01T00:00:00",
     "dateEnd": "2027-07-31T00:00:00",
-    "isActive": 1
+    "isActive": 0
   },
   {
     "id": "3U24OD036598-07S2",

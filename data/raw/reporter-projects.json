@@ -1,6 +1,6 @@
 {
   "meta": {
-    "search_id": "re_TbM-tQ0GBhBi5LAt-hA",
+    "search_id": "-k772oJ_tE-MZbNQ3YI-dA",
     "total": 137,
     "offset": 0,
     "limit": 500,
@@ -8,7 +8,7 @@
     "sort_order": "ASC",
     "sorted_by_relevance": false,
     "properties": {
-      "URL": "https:/reporter.nih.gov/search/re_TbM-tQ0GBhBi5LAt-hA/projects"
+      "URL": "https:/reporter.nih.gov/search/-k772oJ_tE-MZbNQ3YI-dA/projects"
     }
   },
   "results": [
@@ -2831,6 +2831,114 @@
       "date_added": "2024-04-06T16:18:19"
     },
     {
+      "appl_id": 10876609,
+      "subproject_id": "9427",
+      "fiscal_year": 2024,
+      "project_num": "1U54OD036472-01",
+      "project_serial_num": "OD036472",
+      "organization": {
+        "org_name": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
+        "city": null,
+        "country": null,
+        "org_city": "BIRMINGHAM",
+        "org_country": "UNITED STATES",
+        "org_state": "AL",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": ["063690705"],
+        "org_ueis": ["YND4PLMC9AN7"],
+        "primary_duns": "063690705",
+        "primary_uei": "YND4PLMC9AN7",
+        "org_fips": "US",
+        "org_ipf_code": "1288803",
+        "org_zipcode": "352940001",
+        "external_org_id": 1288803
+      },
+      "award_type": "1",
+      "activity_code": "U54",
+      "award_amount": 493553,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "1",
+        "activity_code": "U54",
+        "ic_code": "OD",
+        "serial_num": "036472",
+        "support_year": "01",
+        "full_support_year": "01",
+        "suffix_code": ""
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 8592482,
+          "first_name": "Jake",
+          "middle_name": "Yue",
+          "last_name": "Chen",
+          "is_contact_pi": true,
+          "full_name": "Jake Yue Chen",
+          "title": "PROFESSOR OF BIOMEDICAL INFORMATICS"
+        }
+      ],
+      "contact_pi_name": "CHEN, JAKE YUE",
+      "program_officers": [],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2024,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 493553,
+          "direct_cost_ic": 424653,
+          "indirect_cost_ic": 68900
+        }
+      ],
+      "cong_dist": "AL-07",
+      "spending_categories": null,
+      "project_start_date": "2024-04-01T00:00:00",
+      "project_end_date": "2029-03-31T00:00:00",
+      "organization_type": {
+        "name": "Domestic Higher Education",
+        "code": "10",
+        "is_other": true
+      },
+      "geo_lat_lon": { "lon": -86.799772, "lat": 33.50591 },
+      "opportunity_number": "RFA-RM-23-002",
+      "full_study_section": {
+        "srg_code": "ZRG1",
+        "srg_flex": null,
+        "sra_designator_code": "BBBT",
+        "sra_flex_code": "L",
+        "group_code": "52",
+        "name": "Special Emphasis Panel[ZRG1 BBBT-L (52)]"
+      },
+      "award_notice_date": "2024-03-12T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "RC",
+      "core_project_num": "U54OD036472",
+      "terms": "<AI based model><AI model><Academia><Accountability><Adopted><Advisory Committees><Alabama><Automobile Driving><B2AI><Biomedical Research><Bridge to Artificial Intelligence><Bridge2AI><Cell model><Cellular model><Clinical Sciences><Collaborations><Communication><Communication Methods><Communication Tools><Communities><Community Outreach><Complex><Computer software><Critiques><Data><Data Science><Decision Making><Dedications><Development><Ecologic Systems><Ecological Systems><Ecosystem><Ensure><Ethics><Evaluation><Event><Expedite Dissemination><Feedback><Fostering><Funding><Generations><Guidelines><Health><Individual><Industry><International><Internet><Leadership><Location><Mission><NIH><National Institutes of Health><Outcome><Outcomes Research><Performance><Play><Policies><Process><Protocol><Protocols documentation><Reporting><Research><Research Resources><Resource Allocation><Resources><Role><Science><Series><Software><System><Talents><Task Forces><Training><Transcend><Translational Research><Translational Science><United States National Institutes of Health><Universities><Update><WWW><Work><advisory team><artificial intelligence model><artificial intelligence-based model><clinical center><cohesion><community engagement><data dissemination><data ecosystem><data resource><data sharing ecosystem><developmental><driving><empowerment><engagement with communities><ethical><experience><hack day><hackathon><hackfest><improved><innovate><innovation><innovative><meeting><meetings><member><multidisciplinary><operation><operations><programs><social><social role><success><synergism><tool><translation research><translational investigation><web><world wide web>",
+      "pref_terms": "Academia;Accountability;Adopted;Advisory Committees;Alabama;Automobile Driving;Biomedical Research;Bridge to Artificial Intelligence;Cell model;Clinical Sciences;Collaborations;Communication;Communication Methods;Communication Tools;Communities;Community Outreach;Complex;Computer software;Critiques;Data;Data Science;Decision Making;Dedications;Development;Ecosystem;Ensure;Ethics;Evaluation;Event;Expedite Dissemination;Feedback;Fostering;Funding;Generations;Guidelines;Health;Individual;Industry;International;Internet;Leadership;Location;Mission;Outcome;Outcomes Research;Performance;Play;Policies;Process;Protocols documentation;Reporting;Research;Resource Allocation;Resources;Role;Science;Series;System;Talents;Training;Transcend;Translational Research;United States National Institutes of Health;Universities;Update;Work;artificial intelligence model;clinical center;cohesion;community engagement;data dissemination;data ecosystem;data resource;empowerment;experience;hackathon;improved;innovation;meetings;member;multidisciplinary;operation;programs;social;success;synergism;tool",
+      "abstract_text": "PROJECT SUMMARY – ADMINISTRATIVE CORE\nThe Administrative Core of the CONNECT Integration and Coordination Center (ICC), led by Prof. Jake Chen\nand Dr. Swathi Thaker from the University of Alabama at Birmingham (UAB), is dedicated to driving the success\nof the Common Fund Data Ecosystem (CFDE) through innovative and impactful initiatives. Our core team at\nUAB focuses on efficient operations, transparent communication, and continuous improvement in team science\npractices to revolutionize biomedical research. By developing comprehensive operation guidelines and\nengagement protocols, we ensure seamless integration and coordination within the CFDE, fostering effective\ncollaboration and maximizing research impact. Leveraging our expertise in agile project management and the\ncutting-edge U-BRITE platform, we optimize workflows, enhance communication, and allocate resources\nefficiently, pushing the boundaries of research efficiency and innovation. Through CFDE annual meetings,\nmultidisciplinary seminar series, and showcases for CF products, we facilitate information exchange, foster\ncollaboration, and promote the rapid dissemination and discussion of research findings. Our annual CONNECT\nhackathon brings together diverse teams to tackle complex challenges, fostering innovation and pushing the\nboundaries of scientific discovery. Engaging with CFDE stakeholders and gathering valuable feedback, we\ncontinuously assess and refine our operations to meet the evolving needs of the scientific community. Our work\nis not only significant in driving the success of the CFDE but also innovative in its approach, integrating\nadvanced agile project management and team-based online communication software, promoting open\ncollaboration, and enhancing research outcomes. Through our commitment to excellence, we strive to\nrevolutionize biomedical research, catalyze breakthrough discoveries, and improve health outcomes for all.",
+      "project_title": "CONNECT: Collaborative Network for Nurturing Ecosystems of Common Fund Team Science",
+      "phr_text": null,
+      "spending_categories_desc": null,
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2024-04-01T00:00:00",
+      "budget_end": "2025-03-31T00:00:00",
+      "cfda_code": null,
+      "funding_mechanism": "Research Centers",
+      "direct_cost_amt": 424653,
+      "indirect_cost_amt": 68900,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10876609",
+      "date_added": "2024-04-06T16:18:19"
+    },
+    {
       "appl_id": 11054656,
       "subproject_id": null,
       "fiscal_year": 2025,
@@ -2989,114 +3097,6 @@
       "indirect_cost_amt": 236629,
       "project_detail_url": "https://reporter.nih.gov/project-details/11054656",
       "date_added": "2025-05-17T16:13:35"
-    },
-    {
-      "appl_id": 10876609,
-      "subproject_id": "9427",
-      "fiscal_year": 2024,
-      "project_num": "1U54OD036472-01",
-      "project_serial_num": "OD036472",
-      "organization": {
-        "org_name": "UNIVERSITY OF ALABAMA AT BIRMINGHAM",
-        "city": null,
-        "country": null,
-        "org_city": "BIRMINGHAM",
-        "org_country": "UNITED STATES",
-        "org_state": "AL",
-        "org_state_name": null,
-        "dept_type": null,
-        "fips_country_code": null,
-        "org_duns": ["063690705"],
-        "org_ueis": ["YND4PLMC9AN7"],
-        "primary_duns": "063690705",
-        "primary_uei": "YND4PLMC9AN7",
-        "org_fips": "US",
-        "org_ipf_code": "1288803",
-        "org_zipcode": "352940001",
-        "external_org_id": 1288803
-      },
-      "award_type": "1",
-      "activity_code": "U54",
-      "award_amount": 493553,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "1",
-        "activity_code": "U54",
-        "ic_code": "OD",
-        "serial_num": "036472",
-        "support_year": "01",
-        "full_support_year": "01",
-        "suffix_code": ""
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 8592482,
-          "first_name": "Jake",
-          "middle_name": "Yue",
-          "last_name": "Chen",
-          "is_contact_pi": true,
-          "full_name": "Jake Yue Chen",
-          "title": "PROFESSOR OF BIOMEDICAL INFORMATICS"
-        }
-      ],
-      "contact_pi_name": "CHEN, JAKE YUE",
-      "program_officers": [],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2024,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 493553,
-          "direct_cost_ic": 424653,
-          "indirect_cost_ic": 68900
-        }
-      ],
-      "cong_dist": "AL-07",
-      "spending_categories": null,
-      "project_start_date": "2024-04-01T00:00:00",
-      "project_end_date": "2029-03-31T00:00:00",
-      "organization_type": {
-        "name": "Domestic Higher Education",
-        "code": "10",
-        "is_other": true
-      },
-      "geo_lat_lon": { "lon": -86.799772, "lat": 33.50591 },
-      "opportunity_number": "RFA-RM-23-002",
-      "full_study_section": {
-        "srg_code": "ZRG1",
-        "srg_flex": null,
-        "sra_designator_code": "BBBT",
-        "sra_flex_code": "L",
-        "group_code": "52",
-        "name": "Special Emphasis Panel[ZRG1 BBBT-L (52)]"
-      },
-      "award_notice_date": "2024-03-12T00:00:00",
-      "is_new": false,
-      "mechanism_code_dc": "RC",
-      "core_project_num": "U54OD036472",
-      "terms": "<AI based model><AI model><Academia><Accountability><Adopted><Advisory Committees><Alabama><Automobile Driving><B2AI><Biomedical Research><Bridge to Artificial Intelligence><Bridge2AI><Cell model><Cellular model><Clinical Sciences><Collaborations><Communication><Communication Methods><Communication Tools><Communities><Community Outreach><Complex><Computer software><Critiques><Data><Data Science><Decision Making><Dedications><Development><Ecologic Systems><Ecological Systems><Ecosystem><Ensure><Ethics><Evaluation><Event><Expedite Dissemination><Feedback><Fostering><Funding><Generations><Guidelines><Health><Individual><Industry><International><Internet><Leadership><Location><Mission><NIH><National Institutes of Health><Outcome><Outcomes Research><Performance><Play><Policies><Process><Protocol><Protocols documentation><Reporting><Research><Research Resources><Resource Allocation><Resources><Role><Science><Series><Software><System><Talents><Task Forces><Training><Transcend><Translational Research><Translational Science><United States National Institutes of Health><Universities><Update><WWW><Work><advisory team><artificial intelligence model><artificial intelligence-based model><clinical center><cohesion><community engagement><data dissemination><data ecosystem><data resource><data sharing ecosystem><developmental><driving><empowerment><engagement with communities><ethical><experience><hack day><hackathon><hackfest><improved><innovate><innovation><innovative><meeting><meetings><member><multidisciplinary><operation><operations><programs><social><social role><success><synergism><tool><translation research><translational investigation><web><world wide web>",
-      "pref_terms": "Academia;Accountability;Adopted;Advisory Committees;Alabama;Automobile Driving;Biomedical Research;Bridge to Artificial Intelligence;Cell model;Clinical Sciences;Collaborations;Communication;Communication Methods;Communication Tools;Communities;Community Outreach;Complex;Computer software;Critiques;Data;Data Science;Decision Making;Dedications;Development;Ecosystem;Ensure;Ethics;Evaluation;Event;Expedite Dissemination;Feedback;Fostering;Funding;Generations;Guidelines;Health;Individual;Industry;International;Internet;Leadership;Location;Mission;Outcome;Outcomes Research;Performance;Play;Policies;Process;Protocols documentation;Reporting;Research;Resource Allocation;Resources;Role;Science;Series;System;Talents;Training;Transcend;Translational Research;United States National Institutes of Health;Universities;Update;Work;artificial intelligence model;clinical center;cohesion;community engagement;data dissemination;data ecosystem;data resource;empowerment;experience;hackathon;improved;innovation;meetings;member;multidisciplinary;operation;programs;social;success;synergism;tool",
-      "abstract_text": "PROJECT SUMMARY – ADMINISTRATIVE CORE\nThe Administrative Core of the CONNECT Integration and Coordination Center (ICC), led by Prof. Jake Chen\nand Dr. Swathi Thaker from the University of Alabama at Birmingham (UAB), is dedicated to driving the success\nof the Common Fund Data Ecosystem (CFDE) through innovative and impactful initiatives. Our core team at\nUAB focuses on efficient operations, transparent communication, and continuous improvement in team science\npractices to revolutionize biomedical research. By developing comprehensive operation guidelines and\nengagement protocols, we ensure seamless integration and coordination within the CFDE, fostering effective\ncollaboration and maximizing research impact. Leveraging our expertise in agile project management and the\ncutting-edge U-BRITE platform, we optimize workflows, enhance communication, and allocate resources\nefficiently, pushing the boundaries of research efficiency and innovation. Through CFDE annual meetings,\nmultidisciplinary seminar series, and showcases for CF products, we facilitate information exchange, foster\ncollaboration, and promote the rapid dissemination and discussion of research findings. Our annual CONNECT\nhackathon brings together diverse teams to tackle complex challenges, fostering innovation and pushing the\nboundaries of scientific discovery. Engaging with CFDE stakeholders and gathering valuable feedback, we\ncontinuously assess and refine our operations to meet the evolving needs of the scientific community. Our work\nis not only significant in driving the success of the CFDE but also innovative in its approach, integrating\nadvanced agile project management and team-based online communication software, promoting open\ncollaboration, and enhancing research outcomes. Through our commitment to excellence, we strive to\nrevolutionize biomedical research, catalyze breakthrough discoveries, and improve health outcomes for all.",
-      "project_title": "CONNECT: Collaborative Network for Nurturing Ecosystems of Common Fund Team Science",
-      "phr_text": null,
-      "spending_categories_desc": null,
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2024-04-01T00:00:00",
-      "budget_end": "2025-03-31T00:00:00",
-      "cfda_code": null,
-      "funding_mechanism": "Research Centers",
-      "direct_cost_amt": 424653,
-      "indirect_cost_amt": 68900,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10876609",
-      "date_added": "2024-04-06T16:18:19"
     },
     {
       "appl_id": 11054657,
@@ -14474,121 +14474,6 @@
       "date_added": "2020-09-19T19:46:38"
     },
     {
-      "appl_id": 10683515,
-      "subproject_id": null,
-      "fiscal_year": 2022,
-      "project_num": "3OT2OD030544-01S2",
-      "project_serial_num": "OD030544",
-      "organization": {
-        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
-        "city": null,
-        "country": null,
-        "org_city": "LA JOLLA",
-        "org_country": "UNITED STATES",
-        "org_state": "CA",
-        "org_state_name": null,
-        "dept_type": "ENGINEERING (ALL TYPES)",
-        "fips_country_code": null,
-        "org_duns": ["804355790"],
-        "org_ueis": ["UYTTZT6G9DT1"],
-        "primary_duns": "804355790",
-        "primary_uei": "UYTTZT6G9DT1",
-        "org_fips": "US",
-        "org_ipf_code": "577507",
-        "org_zipcode": "920930621",
-        "external_org_id": 577507
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 807151,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030544",
-        "support_year": "01",
-        "full_support_year": "01S2",
-        "suffix_code": "S2"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 1936703,
-          "first_name": "Shankar",
-          "middle_name": "",
-          "last_name": "Subramaniam",
-          "is_contact_pi": true,
-          "full_name": "Shankar  Subramaniam",
-          "title": "PROFESSOR"
-        }
-      ],
-      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
-      "program_officers": [
-        {
-          "first_name": "GEORGE",
-          "middle_name": "",
-          "last_name": "PAPANICOLAOU",
-          "full_name": "GEORGE  PAPANICOLAOU"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2022,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 807151,
-          "direct_cost_ic": 807151,
-          "indirect_cost_ic": 0
-        }
-      ],
-      "cong_dist": "CA-50",
-      "spending_categories": [4531, 329],
-      "project_start_date": "2020-09-23T00:00:00",
-      "project_end_date": "2023-09-22T00:00:00",
-      "organization_type": {
-        "name": "SCHOOLS OF ARTS AND SCIENCES",
-        "code": "10",
-        "is_other": false
-      },
-      "geo_lat_lon": { "lon": -117.24087, "lat": 32.876991 },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2022-09-19T00:00:00",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030544",
-      "terms": "<Address><Biological><Biological Markers><Clinical><Computing Methodologies><Data><Data Commons><Data Sources><Data Systems><Development><Funding><Future><Genotype><IT Systems><Information Systems><Information Technology Systems><Infrastructure><Investigators><Knowledge><Modeling><Process><Research><Research Personnel><Researchers><Sight><System><Text><Vision><bio-markers><biologic><biologic marker><biological systems><biomarker><computational methodology><computational methods><computer based method><computer methods><computing method><data diversity><data integration><developmental><diverse data><multiple data types><phenotypic data><tool><visual function>",
-      "pref_terms": "Address;Biological;Biological Markers;Clinical;Computing Methodologies;Data;Data Commons;Data Sources;Development;Funding;Future;Genotype;Information Systems;Infrastructure;Knowledge;Modeling;Process;Research;Research Personnel;System;Text;Vision;biological systems;data integration;diverse data;multiple data types;phenotypic data;tool",
-      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
-      "project_title": "Biomedical Data Commons Workbench (BDCW)",
-      "phr_text": "No Text",
-      "spending_categories_desc": "Data Science; Networking and Information Technology R&D (NITRD)",
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2022-09-23T00:00:00",
-      "budget_end": "2023-09-22T00:00:00",
-      "cfda_code": "310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 807151,
-      "indirect_cost_amt": 0,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10683515",
-      "date_added": "2022-09-24T16:15:44"
-    },
-    {
       "appl_id": 11090253,
       "subproject_id": null,
       "fiscal_year": 2024,
@@ -14702,6 +14587,121 @@
       "indirect_cost_amt": 0,
       "project_detail_url": "https://reporter.nih.gov/project-details/11090253",
       "date_added": "2024-09-28T16:29:47"
+    },
+    {
+      "appl_id": 10683515,
+      "subproject_id": null,
+      "fiscal_year": 2022,
+      "project_num": "3OT2OD030544-01S2",
+      "project_serial_num": "OD030544",
+      "organization": {
+        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+        "city": null,
+        "country": null,
+        "org_city": "LA JOLLA",
+        "org_country": "UNITED STATES",
+        "org_state": "CA",
+        "org_state_name": null,
+        "dept_type": "ENGINEERING (ALL TYPES)",
+        "fips_country_code": null,
+        "org_duns": ["804355790"],
+        "org_ueis": ["UYTTZT6G9DT1"],
+        "primary_duns": "804355790",
+        "primary_uei": "UYTTZT6G9DT1",
+        "org_fips": "US",
+        "org_ipf_code": "577507",
+        "org_zipcode": "920930621",
+        "external_org_id": 577507
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 807151,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030544",
+        "support_year": "01",
+        "full_support_year": "01S2",
+        "suffix_code": "S2"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 1936703,
+          "first_name": "Shankar",
+          "middle_name": "",
+          "last_name": "Subramaniam",
+          "is_contact_pi": true,
+          "full_name": "Shankar  Subramaniam",
+          "title": "PROFESSOR"
+        }
+      ],
+      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
+      "program_officers": [
+        {
+          "first_name": "GEORGE",
+          "middle_name": "",
+          "last_name": "PAPANICOLAOU",
+          "full_name": "GEORGE  PAPANICOLAOU"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2022,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 807151,
+          "direct_cost_ic": 807151,
+          "indirect_cost_ic": 0
+        }
+      ],
+      "cong_dist": "CA-50",
+      "spending_categories": [4531, 329],
+      "project_start_date": "2020-09-23T00:00:00",
+      "project_end_date": "2023-09-22T00:00:00",
+      "organization_type": {
+        "name": "SCHOOLS OF ARTS AND SCIENCES",
+        "code": "10",
+        "is_other": false
+      },
+      "geo_lat_lon": { "lon": -117.24087, "lat": 32.876991 },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2022-09-19T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030544",
+      "terms": "<Address><Biological><Biological Markers><Clinical><Computing Methodologies><Data><Data Commons><Data Sources><Data Systems><Development><Funding><Future><Genotype><IT Systems><Information Systems><Information Technology Systems><Infrastructure><Investigators><Knowledge><Modeling><Process><Research><Research Personnel><Researchers><Sight><System><Text><Vision><bio-markers><biologic><biologic marker><biological systems><biomarker><computational methodology><computational methods><computer based method><computer methods><computing method><data diversity><data integration><developmental><diverse data><multiple data types><phenotypic data><tool><visual function>",
+      "pref_terms": "Address;Biological;Biological Markers;Clinical;Computing Methodologies;Data;Data Commons;Data Sources;Development;Funding;Future;Genotype;Information Systems;Infrastructure;Knowledge;Modeling;Process;Research;Research Personnel;System;Text;Vision;biological systems;data integration;diverse data;multiple data types;phenotypic data;tool",
+      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
+      "project_title": "Biomedical Data Commons Workbench (BDCW)",
+      "phr_text": "No Text",
+      "spending_categories_desc": "Data Science; Networking and Information Technology R&D (NITRD)",
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2022-09-23T00:00:00",
+      "budget_end": "2023-09-22T00:00:00",
+      "cfda_code": "310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 807151,
+      "indirect_cost_amt": 0,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10683515",
+      "date_added": "2022-09-24T16:15:44"
     },
     {
       "appl_id": 10994353,

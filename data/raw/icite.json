@@ -36442,6 +36442,109 @@
         3661694, 18492780, 38163866, 30563990, 9770446, 18347879, 34019663,
         25557080, 22075983
       ]
+    },
+    {
+      "_id": "40654659",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Hong",
+          "fullName": "Hong, Clarice K Y",
+          "firstName": "Clarice K Y"
+        },
+        { "lastName": "Feng", "fullName": "Feng, Fan", "firstName": "Fan" },
+        {
+          "lastName": "Ramanathan",
+          "fullName": "Ramanathan, Varshini",
+          "firstName": "Varshini"
+        },
+        { "lastName": "Liu", "fullName": "Liu, Jie", "firstName": "Jie" },
+        {
+          "lastName": "Hansen",
+          "fullName": "Hansen, Anders S",
+          "firstName": "Anders S"
+        }
+      ],
+      "doi": "10.1101/2025.05.06.650874",
+      "human": 0.5,
+      "pmid": 40654659,
+      "title": "Genome structure mapping with high-resolution 3D genomics and deep learning.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5,
+      "is_clinical": false,
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        32033565, 31147463, 25693563, 18775669, 25938943, 32103011, 38509385,
+        29641996, 34789882, 24185615, 20356413, 23810203, 34040254, 37280210,
+        22955616, 38014075, 39903776, 39093600, 35551308, 39487131, 26748519,
+        31713622, 38991604, 26287746, 34321199, 25693564, 39948336, 30612741,
+        32913098, 36495369, 37024980, 29467363, 25517091, 27708057, 37786671,
+        33046897, 31522987, 19923429, 32094911, 36351387, 22495300, 39862604,
+        35145304, 35686641, 31778014, 19815776, 26807528, 24470145, 7542362,
+        29053968, 31699985, 35704579, 33398174, 37066421, 33046896, 32647330,
+        38413840, 31124784, 39935886, 32728249, 25497547, 32817427, 26472760,
+        22265404, 37673975, 39026740, 35986016, 36914797, 30626972, 32213323,
+        32213324, 27461729, 34400841, 22941365
+      ]
+    },
+    {
+      "_id": "40718094",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Lahiri",
+          "fullName": "Lahiri, Aditya",
+          "firstName": "Aditya"
+        },
+        {
+          "lastName": "Shukla",
+          "fullName": "Shukla, Sangeeta",
+          "firstName": "Sangeeta"
+        },
+        { "lastName": "Stear", "fullName": "Stear, Ben", "firstName": "Ben" },
+        {
+          "lastName": "Ahooyi",
+          "fullName": "Ahooyi, Taha Mohseni",
+          "firstName": "Taha Mohseni"
+        },
+        {
+          "lastName": "Beigel",
+          "fullName": "Beigel, Katherine",
+          "firstName": "Katherine"
+        },
+        {
+          "lastName": "Margolskee",
+          "fullName": "Margolskee, Elizabeth",
+          "firstName": "Elizabeth"
+        },
+        {
+          "lastName": "Taylor",
+          "fullName": "Taylor, Deanne",
+          "firstName": "Deanne"
+        }
+      ],
+      "doi": "10.1016/j.mlwa.2025.100683",
+      "human": 0,
+      "pmid": 40718094,
+      "title": "Benchmarking Transformer Embedding Models for Biomedical Terminology Standardization.",
+      "year": 2025,
+      "journal": "Mach Learn Appl",
+      "is_research_article": true,
+      "molecular_cellular": 0,
+      "is_clinical": false
     }
   ]
 }
