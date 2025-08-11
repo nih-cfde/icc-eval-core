@@ -12,12 +12,6 @@ const retries = 4;
 /** multiply retry wait time for extra safety */
 const waitFactor = 2;
 
-if (!AUTH_GITHUB)
-  log(
-    "No GitHub token provided. Anonymous requests may be slower or fail.",
-    "warn",
-  );
-
 /** use provided rate-limiting middleware */
 const withPlugins = Octokit.plugin(throttling);
 
@@ -41,6 +35,13 @@ export const octokit = new withPlugins({
 
   retryAfterBaseValue: waitFactor * 1000,
 });
+
+/** check if authenticated */
+try {
+  await octokit.rest.users.getAuthenticated();
+} catch (error) {
+  console.warn("No GitHub auth. Requests might take longer or fail.");
+}
 
 /** increase page size */
 octokit.request = octokit.request.defaults({ per_page: 100 });
