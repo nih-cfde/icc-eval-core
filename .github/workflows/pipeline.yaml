@@ -38,7 +38,7 @@ jobs:
         run: ./run.sh --install-playwright
 
       - name: Run pipeline
-        run: xvfb-run ./run.sh --gather
+        run: xvfb-run ./run.sh
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           CACHE: ${{ inputs.cache && 'true' || '' }}

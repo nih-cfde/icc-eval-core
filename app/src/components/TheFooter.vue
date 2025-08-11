@@ -1,32 +1,28 @@
 <template>
   <footer>
-    <div class="row print-hide">
-      <AppLink
-        v-if="pdf"
-        :to="`/pdfs/${pdf}.pdf`"
-        :new-tab="true"
-        :external="true"
-      >
-        PDF of this page
-        <Download />
-      </AppLink>
+    <AppLink
+      v-if="pdf"
+      :to="`/pdfs/${pdf}.pdf`"
+      :new-tab="true"
+      :external="true"
+      class="print-hide"
+    >
+      PDF of this page
+      <Download />
+    </AppLink>
 
-      <AppLink
-        to="https://github.com/nih-cfde/icc-eval-core"
-        :title="`Built on ${builtOn}`"
-      >
-        Learn more
-      </AppLink>
-    </div>
+    <AppLink to="https://github.com/nih-cfde/icc-eval-core" class="print-hide">
+      Learn more
+    </AppLink>
 
-    <div class="row print-show">Generated on {{ builtOn }}</div>
+    <span>Built on {{ builtOn }}</span>
 
-    <div class="row">
-      <span>
-        Developed with support from NIH Award
-        <AppLink to="/core-project/U54OD036472">U54 OD036472</AppLink>
-      </span>
-    </div>
+    <span class="spacer" />
+
+    <span>
+      Developed with support from NIH Award
+      <AppLink to="/core-project/U54OD036472">U54 OD036472</AppLink>
+    </span>
   </footer>
 </template>
 
@@ -50,40 +46,21 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
   padding: 20px;
-  gap: 20px;
+  gap: 10px 20px;
   background: var(--off-white);
 }
 
 footer a {
-  padding: 2px 5px;
   text-decoration: none;
 }
 
-@media (max-width: 800px) {
-  footer {
-    flex-direction: column;
-  }
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  text-align: center;
+.spacer {
+  flex-grow: 1;
 }
 
 @media print {
   .print-hide {
-    display: none;
-  }
-}
-
-@media screen {
-  .print-show {
     display: none;
   }
 }
