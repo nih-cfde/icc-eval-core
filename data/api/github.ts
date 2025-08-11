@@ -42,8 +42,8 @@ export const octokit = new withPlugins({
   retryAfterBaseValue: waitFactor * 1000,
 });
 
-/** maximum allowed page size */
-const maxPage = 100;
+/** increase page size */
+octokit.request = octokit.request.defaults({ per_page: 100 });
 
 /** search for repos that have topic */
 export const searchRepos = memoize(async (topic: string) => {
@@ -69,26 +69,20 @@ export const searchRepos = memoize(async (topic: string) => {
 });
 
 /** get commits for repo */
-export const getCommits = memoize(async (owner: string, name: string) =>
-  (
-    await octokit.paginate(octokit.rest.repos.listCommits, {
-      owner,
-      repo: name,
-      per_page: maxPage,
-    })
-  ).map((commit) =>
-    /** only keep potentially useful fields */
-    pick(commit, ["sha", "commit.committer.date"]),
+export const getCommits = memoize(async (owner: string, repo: string) =>
+  (await octokit.paginate(octokit.rest.repos.listCommits, { owner, repo })).map(
+    (commit) =>
+      /** only keep potentially useful fields */
+      pick(commit, ["sha", "commit.committer.date"]),
   ),
 );
 
 /** get stars for repo */
-export const getStars = memoize(async (owner: string, name: string) =>
+export const getStars = memoize(async (owner: string, repo: string) =>
   (
     await octokit.paginate(octokit.rest.activity.listStargazersForRepo, {
       owner,
-      repo: name,
-      per_page: maxPage,
+      repo,
       /** https://docs.github.com/en/rest/activity/starring?apiVersion=2022-11-28#list-stargazers */
       headers: { accept: "application/vnd.github.star+json" },
     })
@@ -103,24 +97,18 @@ export const getStars = memoize(async (owner: string, name: string) =>
  */
 
 /** get forks for repo */
-export const getForks = memoize(async (owner: string, name: string) =>
-  (
-    await octokit.paginate(octokit.rest.repos.listForks, {
-      owner,
-      repo: name,
-      per_page: maxPage,
-    })
-  )
+export const getForks = memoize(async (owner: string, repo: string) =>
+  (await octokit.paginate(octokit.rest.repos.listForks, { owner, repo }))
     /** only keep potentially useful fields */
     .map((fork) => pick(fork, ["id", "name", "full_name", "created_at"])),
 );
 
 /** get issues for repo */
-export const getIssues = memoize(async (owner: string, name: string) =>
+export const getIssues = memoize(async (owner: string, repo: string) =>
   (
     await octokit.paginate(octokit.rest.issues.listForRepo, {
       owner,
-      repo: name,
+      repo,
       state: "all",
     })
   )
@@ -142,11 +130,11 @@ export const getIssues = memoize(async (owner: string, name: string) =>
 );
 
 /** get pull requests for repo */
-export const getPullRequests = memoize(async (owner: string, name: string) =>
+export const getPullRequests = memoize(async (owner: string, repo: string) =>
   (
     await octokit.paginate(octokit.rest.pulls.list, {
       owner,
-      repo: name,
+      repo,
       state: "all",
     })
   )
@@ -168,13 +156,9 @@ export const getPullRequests = memoize(async (owner: string, name: string) =>
 
 /** check whether file exists in repo */
 export const fileExists = memoize(
-  async (owner: string, name: string, path: string) => {
+  async (owner: string, repo: string, path: string) => {
     try {
-      await octokit.rest.repos.getContent({
-        owner,
-        repo: name,
-        path,
-      });
+      await octokit.rest.repos.getContent({ owner, repo, path });
       return true;
     } catch (error) {
       /** https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#get-repository-content--status-codes */
@@ -182,20 +166,15 @@ export const fileExists = memoize(
       if (status === 302) return true;
       if (status === 404) return false;
       throw Error(
-        `Problem getting contents for repo ${owner}/${name}, status ${status}`,
+        `Problem getting contents for repo ${owner}/${repo}, status ${status}`,
       );
     }
   },
 );
 
 /** get contributors to repo */
-export const getContributors = memoize(async (owner: string, name: string) =>
-  (
-    await octokit.paginate(octokit.rest.repos.listContributors, {
-      owner,
-      repo: name,
-    })
-  )
+export const getContributors = memoize(async (owner: string, repo: string) =>
+  (await octokit.paginate(octokit.rest.repos.listContributors, { owner, repo }))
     /** only keep potentially useful fields */
     .map((contributor) =>
       pick(contributor, ["id", "login", "name", "contributions"]),
@@ -204,13 +183,8 @@ export const getContributors = memoize(async (owner: string, name: string) =>
 
 /** get programming languages used in repo */
 export const getLanguages = memoize(
-  async (owner: string, name: string) =>
-    (
-      await octokit.rest.repos.listLanguages({
-        owner,
-        repo: name,
-      })
-    ).data,
+  async (owner: string, repo: string) =>
+    (await octokit.rest.repos.listLanguages({ owner, repo })).data,
 );
 
 /**
@@ -236,10 +210,7 @@ const dependencyQuery = `
 `;
 
 /** get dependency graph */
-export const getDependencies = memoize((owner: string, name: string) =>
+export const getDependencies = memoize((owner: string, repo: string) =>
   /** https://github.com/orgs/community/discussions/118753 */
-  octokit.graphql<{ repository: Repository }>(dependencyQuery, {
-    owner,
-    repo: name,
-  }),
+  octokit.graphql<{ repository: Repository }>(dependencyQuery, { owner, repo }),
 );
