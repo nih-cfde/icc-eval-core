@@ -29021,6 +29021,102 @@
       ]
     },
     {
+      "_id": "39448026",
+      "animal": 0.75,
+      "authors": [
+        {
+          "lastName": "Carvalho",
+          "fullName": "Carvalho, Diego",
+          "firstName": "Diego"
+        },
+        {
+          "lastName": "Diaz-Amarilla",
+          "fullName": "Diaz-Amarilla, Pablo",
+          "firstName": "Pablo"
+        },
+        {
+          "lastName": "Smith",
+          "fullName": "Smith, Mathew R",
+          "firstName": "Mathew R"
+        },
+        {
+          "lastName": "Santi",
+          "fullName": "Santi, María Daniela",
+          "firstName": "María Daniela"
+        },
+        {
+          "lastName": "Martinez-Busi",
+          "fullName": "Martinez-Busi, Marcela",
+          "firstName": "Marcela"
+        },
+        {
+          "lastName": "Go",
+          "fullName": "Go, Young-Mi",
+          "firstName": "Young-Mi"
+        },
+        {
+          "lastName": "Jones",
+          "fullName": "Jones, Dean P",
+          "firstName": "Dean P"
+        },
+        {
+          "lastName": "Duarte",
+          "fullName": "Duarte, Pablo",
+          "firstName": "Pablo"
+        },
+        {
+          "lastName": "Savio",
+          "fullName": "Savio, Eduardo",
+          "firstName": "Eduardo"
+        },
+        {
+          "lastName": "Abin-Carriquiry",
+          "fullName": "Abin-Carriquiry, Juan A",
+          "firstName": "Juan A"
+        },
+        {
+          "lastName": "Arredondo",
+          "fullName": "Arredondo, Florencia",
+          "firstName": "Florencia"
+        }
+      ],
+      "doi": "10.1016/j.jprot.2024.105336",
+      "human": 0,
+      "pmid": 39448026,
+      "title": "Untargeted metabolomics of 3xTg-AD neurotoxic astrocytes.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "J Proteomics",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.25,
+      "is_clinical": false,
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        16835632, 28261376, 33516810, 27140869, 33125081, 30022867, 20934413,
+        22322067, 30679434, 20107611, 11754077, 28575190, 28636962, 20012068,
+        28802884, 21546426, 35699653, 20711518, 17659878, 29553298, 2218183,
+        21920632, 31611796, 12895417, 29631391, 28410378, 33803760, 24595197,
+        29069296, 19937972, 32819810, 25337575, 32310340, 15808355, 34207264,
+        28245547, 16876668, 19553674, 22593726, 27977166, 34656878, 11567035,
+        25329995, 28380372, 20303879, 24636523, 32490663, 16731806, 31326607,
+        23063604, 29212304, 35853553, 24973918, 25605792, 22010221, 26269128,
+        19414529, 28598329, 29888263, 28545479, 25377480, 24398425, 26467476,
+        21075154, 23071356, 27501105, 22355651, 23323971, 11703566, 23161693,
+        26004930, 27025652, 37318736, 33972465, 25792098, 26150938, 11898502,
+        34019663, 27693378, 23861661, 26229523
+      ]
+    },
+    {
       "_id": "39464135",
       "animal": 0.1111111111111111,
       "authors": [
@@ -32109,6 +32205,53 @@
       ]
     },
     {
+      "_id": "39985215",
+      "animal": 0.5,
+      "authors": [
+        {
+          "lastName": "Johnson",
+          "fullName": "Johnson, Erynn E",
+          "firstName": "Erynn E"
+        },
+        {
+          "lastName": "Ervasti",
+          "fullName": "Ervasti, James M",
+          "firstName": "James M"
+        }
+      ],
+      "doi": "10.1111/febs.70029",
+      "human": 0,
+      "pmid": 39985215,
+      "title": "Stress exposure in the mdx mouse model of Duchenne muscular dystrophy provokes a widespread metabolic response.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "FEBS J",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5,
+      "is_clinical": false,
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        26239309, 16866345, 18927146, 25642938, 34780665, 28087735, 27035868,
+        38484964, 30312761, 17520339, 33734502, 27149418, 7424633, 22354781,
+        34354601, 36834757, 31852847, 35208266, 37705069, 26781281, 37670327,
+        26365249, 37017445, 36223763, 38181046, 28171583, 28029518, 33723234,
+        31740614, 28550500, 22500213, 37078061, 28472288, 26930370, 30262909,
+        26586008, 36594243, 22673895, 30050384, 35136951, 37015991, 34130633,
+        36293496, 32445384, 35381069, 34942978, 29326589, 28134998, 32192914,
+        30476171, 34174560, 19345493
+      ]
+    },
+    {
       "_id": "39990419",
       "animal": 0,
       "authors": [
@@ -34776,6 +34919,163 @@
       ]
     },
     {
+      "_id": "40369079",
+      "animal": 0.3333333333333333,
+      "authors": [
+        {
+          "lastName": "Sharma",
+          "fullName": "Sharma, Sonali",
+          "firstName": "Sonali"
+        },
+        {
+          "lastName": "Rodems",
+          "fullName": "Rodems, Benjamin J",
+          "firstName": "Benjamin J"
+        },
+        {
+          "lastName": "Baker",
+          "fullName": "Baker, Cameron D",
+          "firstName": "Cameron D"
+        },
+        {
+          "lastName": "Kaszuba",
+          "fullName": "Kaszuba, Christina M",
+          "firstName": "Christina M"
+        },
+        {
+          "lastName": "Franco",
+          "fullName": "Franco, Edgardo I",
+          "firstName": "Edgardo I"
+        },
+        {
+          "lastName": "Smith",
+          "fullName": "Smith, Bradley R",
+          "firstName": "Bradley R"
+        },
+        {
+          "lastName": "Ito",
+          "fullName": "Ito, Takashi",
+          "firstName": "Takashi"
+        },
+        {
+          "lastName": "Swovick",
+          "fullName": "Swovick, Kyle",
+          "firstName": "Kyle"
+        },
+        {
+          "lastName": "Welle",
+          "fullName": "Welle, Kevin",
+          "firstName": "Kevin"
+        },
+        { "lastName": "Zhang", "fullName": "Zhang, Yi", "firstName": "Yi" },
+        {
+          "lastName": "Rock",
+          "fullName": "Rock, Philip",
+          "firstName": "Philip"
+        },
+        {
+          "lastName": "Chaves",
+          "fullName": "Chaves, Francisco A",
+          "firstName": "Francisco A"
+        },
+        {
+          "lastName": "Ghaemmaghami",
+          "fullName": "Ghaemmaghami, Sina",
+          "firstName": "Sina"
+        },
+        {
+          "lastName": "Calvi",
+          "fullName": "Calvi, Laura M",
+          "firstName": "Laura M"
+        },
+        {
+          "lastName": "Ganguly",
+          "fullName": "Ganguly, Archan",
+          "firstName": "Archan"
+        },
+        {
+          "lastName": "Burack",
+          "fullName": "Burack, W Richard",
+          "firstName": "W Richard"
+        },
+        {
+          "lastName": "Becker",
+          "fullName": "Becker, Michael W",
+          "firstName": "Michael W"
+        },
+        {
+          "lastName": "Liesveld",
+          "fullName": "Liesveld, Jane L",
+          "firstName": "Jane L"
+        },
+        {
+          "lastName": "Brookes",
+          "fullName": "Brookes, Paul S",
+          "firstName": "Paul S"
+        },
+        {
+          "lastName": "Munger",
+          "fullName": "Munger, Joshua C",
+          "firstName": "Joshua C"
+        },
+        {
+          "lastName": "Jordan",
+          "fullName": "Jordan, Craig T",
+          "firstName": "Craig T"
+        },
+        {
+          "lastName": "Ashton",
+          "fullName": "Ashton, John M",
+          "firstName": "John M"
+        },
+        {
+          "lastName": "Bajaj",
+          "fullName": "Bajaj, Jeevisha",
+          "firstName": "Jeevisha"
+        }
+      ],
+      "doi": "10.1038/s41586-025-09018-7",
+      "human": 0.16666666666666666,
+      "pmid": 40369079,
+      "title": "Taurine from tumour niche drives glycolysis to promote leukaemogenesis.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [
+        { "40550327": 2025 },
+        { "40667251": 2025 },
+        { "40490473": 2025 },
+        { "40601627": 2025 },
+        { "40500341": 2025 }
+      ],
+      "year": 2025,
+      "journal": "Nature",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5,
+      "is_clinical": false,
+      "citation_count": 5,
+      "citations_per_year": 5,
+      "expected_citations_per_year": 0.999999999335148,
+      "field_citation_rate": 7.81106855541641,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": [40550327, 40667251, 40490473, 40601627, 40500341],
+      "references": [
+        25894527, 6795340, 18407290, 21049934, 38009736, 21368769, 36800999,
+        28360267, 15604256, 26972053, 28870739, 31130381, 20147550, 20418870,
+        18497260, 26148612, 38714197, 22414809, 12473676, 39478230, 31345061,
+        20616797, 22927967, 34296197, 31871321, 39300320, 21487041, 25112391,
+        31974170, 36917948, 31197017, 19632179, 8402909, 7143111, 29236692,
+        1411543, 30971824, 38565142, 26449471, 36581735, 28658204, 32733999,
+        31819264, 20639863, 39437546, 31107239, 21957195, 31712778, 20068163,
+        30842097, 37289866, 33811120, 26212080, 39112712, 27348712, 26467476,
+        25320078, 15882617, 22653972, 17576927, 29988129, 27042933, 11900251,
+        31874116, 34109316, 27124452, 34426439, 15034010, 25017722, 27546867,
+        29961579, 27908736, 15007824, 1465453, 22863786
+      ]
+    },
+    {
       "_id": "40401984",
       "animal": 0,
       "authors": [
@@ -36501,6 +36801,89 @@
       ]
     },
     {
+      "_id": "40672200",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Mesrizadeh",
+          "fullName": "Mesrizadeh, Zahra",
+          "firstName": "Zahra"
+        },
+        {
+          "lastName": "Mukund",
+          "fullName": "Mukund, Kavitha",
+          "firstName": "Kavitha"
+        },
+        {
+          "lastName": "Zabaleta",
+          "fullName": "Zabaleta, Jovanny",
+          "firstName": "Jovanny"
+        },
+        {
+          "lastName": "Del Valle",
+          "fullName": "Del Valle, Luis",
+          "firstName": "Luis"
+        },
+        {
+          "lastName": "Tomsic",
+          "fullName": "Tomsic, Jerneja",
+          "firstName": "Jerneja"
+        },
+        {
+          "lastName": "Neuhausen",
+          "fullName": "Neuhausen, Susan",
+          "firstName": "Susan"
+        },
+        {
+          "lastName": "Ding",
+          "fullName": "Ding, Yuan Chun",
+          "firstName": "Yuan Chun"
+        },
+        {
+          "lastName": "Seewaldt",
+          "fullName": "Seewaldt, Victoria",
+          "firstName": "Victoria"
+        },
+        {
+          "lastName": "Ochoa",
+          "fullName": "Ochoa, Augusto",
+          "firstName": "Augusto"
+        },
+        {
+          "lastName": "Miele",
+          "fullName": "Miele, Lucio",
+          "firstName": "Lucio"
+        },
+        {
+          "lastName": "Subramaniam",
+          "fullName": "Subramaniam, Shankar",
+          "firstName": "Shankar"
+        }
+      ],
+      "doi": "10.1101/2025.07.04.663242",
+      "human": 0.6666666666666666,
+      "pmid": 40672200,
+      "title": "A novel subtyping method for TNBC with implications for prognosis and therapy.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.3333333333333333,
+      "is_clinical": false,
+      "citation_count": 0,
+      "citations_per_year": 0,
+      "expected_citations_per_year": null,
+      "field_citation_rate": null,
+      "provisional": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": []
+    },
+    {
       "_id": "40718094",
       "animal": 0,
       "authors": [
@@ -36542,6 +36925,94 @@
       "title": "Benchmarking Transformer Embedding Models for Biomedical Terminology Standardization.",
       "year": 2025,
       "journal": "Mach Learn Appl",
+      "is_research_article": true,
+      "molecular_cellular": 0,
+      "is_clinical": false
+    },
+    {
+      "_id": "40735431",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Phan",
+          "fullName": "Phan, Nam Nhut",
+          "firstName": "Nam Nhut"
+        },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Hanzhou",
+          "firstName": "Hanzhou"
+        },
+        {
+          "lastName": "Nayak",
+          "fullName": "Nayak, Tapsya",
+          "firstName": "Tapsya"
+        },
+        {
+          "lastName": "Ye",
+          "fullName": "Ye, Zhenqing",
+          "firstName": "Zhenqing"
+        },
+        {
+          "lastName": "Chiu",
+          "fullName": "Chiu, Yu-Chiao",
+          "firstName": "Yu-Chiao"
+        },
+        { "lastName": "Jin", "fullName": "Jin, Yufang", "firstName": "Yufang" },
+        {
+          "lastName": "Huang",
+          "fullName": "Huang, Yufei",
+          "firstName": "Yufei"
+        },
+        {
+          "lastName": "Chen",
+          "fullName": "Chen, Yidong",
+          "firstName": "Yidong"
+        }
+      ],
+      "doi": "10.1016/j.csbj.2025.07.026",
+      "human": 0,
+      "pmid": 40735431,
+      "title": "Cell type prediction with neighborhood-enhanced cellular embedding using deep learning on hematoxylin and eosin-stained images.",
+      "year": 2025,
+      "journal": "Comput Struct Biotechnol J",
+      "is_research_article": true,
+      "molecular_cellular": 1,
+      "is_clinical": false
+    },
+    {
+      "_id": "40751246",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Zhou", "fullName": "Zhou, Meng", "firstName": "Meng" },
+        { "lastName": "Sun", "fullName": "Sun, Wenxiu", "firstName": "Wenxiu" },
+        { "lastName": "Gao", "fullName": "Gao, Yuhan", "firstName": "Yuhan" },
+        { "lastName": "Jiang", "fullName": "Jiang, Bei", "firstName": "Bei" },
+        {
+          "lastName": "Sun",
+          "fullName": "Sun, Tianwei",
+          "firstName": "Tianwei"
+        },
+        { "lastName": "Xu", "fullName": "Xu, Rui", "firstName": "Rui" },
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Xiujuan",
+          "firstName": "Xiujuan"
+        },
+        { "lastName": "Wang", "fullName": "Wang, Qian", "firstName": "Qian" },
+        {
+          "lastName": "Xuan",
+          "fullName": "Xuan, Qiuhui",
+          "firstName": "Qiuhui"
+        },
+        { "lastName": "Ma", "fullName": "Ma, Shizhan", "firstName": "Shizhan" }
+      ],
+      "doi": "10.1186/s12933-025-02881-8",
+      "human": 1,
+      "pmid": 40751246,
+      "title": "Metabolomic profiling reveals interindividual metabolic variability and its association with cardiovascular-kidney-metabolic syndrome risk.",
+      "year": 2025,
+      "journal": "Cardiovasc Diabetol",
       "is_research_article": true,
       "molecular_cellular": 0,
       "is_clinical": false
