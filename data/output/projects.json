@@ -442,12 +442,12 @@
     "isActive": 0
   },
   {
-    "id": "1OT2OD036440-01",
+    "id": "3OT2OD036440-01S1",
     "coreProject": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "opportunity": "OTA-23-004",
-    "application": 10851461,
-    "awardAmount": 1473390,
+    "application": 11083282,
+    "awardAmount": 1749042,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2023-09-18T00:00:00",
@@ -455,12 +455,12 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD036440-01S1",
+    "id": "1OT2OD036440-01",
     "coreProject": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "opportunity": "OTA-23-004",
-    "application": 11083282,
-    "awardAmount": 1749042,
+    "application": 10851461,
+    "awardAmount": 1473390,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2023-09-18T00:00:00",
@@ -1430,19 +1430,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030544-01S2",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10683515,
-    "awardAmount": 807151,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2023-09-22T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "3OT2OD030544-01S4",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1454,6 +1441,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2025-09-22T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "3OT2OD030544-01S2",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10683515,
+    "awardAmount": 807151,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2023-09-22T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1OT2OD030544-01",
