@@ -34887,6 +34887,95 @@
       "provisional": false
     },
     {
+      "_id": "40355673",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Fillingim",
+          "fullName": "Fillingim, Matt",
+          "firstName": "Matt"
+        },
+        {
+          "lastName": "Tanguay-Sabourin",
+          "fullName": "Tanguay-Sabourin, Christophe",
+          "firstName": "Christophe"
+        },
+        {
+          "lastName": "Parisien",
+          "fullName": "Parisien, Marc",
+          "firstName": "Marc"
+        },
+        { "lastName": "Zare", "fullName": "Zare, Azin", "firstName": "Azin" },
+        {
+          "lastName": "Guglietti",
+          "fullName": "Guglietti, Gianluca V",
+          "firstName": "Gianluca V"
+        },
+        { "lastName": "Norman", "fullName": "Norman, Jax", "firstName": "Jax" },
+        {
+          "lastName": "Petre",
+          "fullName": "Petre, Bogdan",
+          "firstName": "Bogdan"
+        },
+        {
+          "lastName": "Bortsov",
+          "fullName": "Bortsov, Andrey",
+          "firstName": "Andrey"
+        },
+        { "lastName": "Ware", "fullName": "Ware, Mark", "firstName": "Mark" },
+        {
+          "lastName": "Perez",
+          "fullName": "Perez, Jordi",
+          "firstName": "Jordi"
+        },
+        {
+          "lastName": "Roy",
+          "fullName": "Roy, Mathieu",
+          "firstName": "Mathieu"
+        },
+        {
+          "lastName": "Diatchenko",
+          "fullName": "Diatchenko, Luda",
+          "firstName": "Luda"
+        },
+        {
+          "lastName": "Vachon-Presseau",
+          "fullName": "Vachon-Presseau, Etienne",
+          "firstName": "Etienne"
+        }
+      ],
+      "doi": "10.1038/s41562-025-02156-y",
+      "human": 1,
+      "pmid": 40355673,
+      "title": "Biological markers and psychosocial factors predict chronic pain conditions.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "40722350": 2025 }],
+      "year": 2025,
+      "journal": "Nat Hum Behav",
+      "is_research_article": true,
+      "citation_count": 1,
+      "field_citation_rate": 4.2340252179641995,
+      "expected_citations_per_year": 1.0022546562879604,
+      "citations_per_year": 1,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [40722350],
+      "references": [
+        24473267, 34062144, 31008848, 36785994, 36138150, 37543299, 35255092,
+        21789182, 28711142, 35277962, 32541893, 30586067, 31774490, 28767506,
+        15042521, 35486643, 35981525, 27143481, 31015401, 32694387, 28230847,
+        37414898, 33293261, 12115241, 34858140, 39190340, 29079522, 20829200,
+        28841086, 27902569, 32391365, 37639943, 33398159, 35173213, 23393430,
+        34361986, 17592957, 36737450, 23571845, 35895072, 30305743, 22537768,
+        27008686, 31579847, 34727871, 38207039
+      ],
+      "provisional": false
+    },
+    {
       "_id": "40355727",
       "animal": 0,
       "authors": [
@@ -37509,6 +37598,104 @@
         39695774, 40001516, 29410529, 40020774, 40249367, 40063723, 36941259,
         38717747, 37134161, 34616096, 39866113, 29807422, 40033343, 39580049,
         35934383, 30602367, 29759231, 37308902, 37947094, 33240754
+      ],
+      "provisional": false
+    },
+    {
+      "_id": "40791373",
+      "animal": 0.14285714285714285,
+      "authors": [
+        {
+          "lastName": "Mitchell",
+          "fullName": "Mitchell, Dana V",
+          "firstName": "Dana V"
+        },
+        {
+          "lastName": "Iadarola",
+          "fullName": "Iadarola, Donna M",
+          "firstName": "Donna M"
+        },
+        {
+          "lastName": "Mathew",
+          "fullName": "Mathew, Neal D",
+          "firstName": "Neal D"
+        },
+        {
+          "lastName": "Keith",
+          "fullName": "Keith, Kelsey",
+          "firstName": "Kelsey"
+        },
+        {
+          "lastName": "Seiler",
+          "fullName": "Seiler, Christoph",
+          "firstName": "Christoph"
+        },
+        {
+          "lastName": "Yu",
+          "fullName": "Yu, Sanghyeon",
+          "firstName": "Sanghyeon"
+        },
+        { "lastName": "Kim", "fullName": "Kim, Man S", "firstName": "Man S" },
+        {
+          "lastName": "Woodard",
+          "fullName": "Woodard, Niki",
+          "firstName": "Niki"
+        },
+        {
+          "lastName": "Anderson",
+          "fullName": "Anderson, Vernon E",
+          "firstName": "Vernon E"
+        },
+        {
+          "lastName": "Nakamaru-Ogiso",
+          "fullName": "Nakamaru-Ogiso, Eiko",
+          "firstName": "Eiko"
+        },
+        {
+          "lastName": "Taylor",
+          "fullName": "Taylor, Deanne M",
+          "firstName": "Deanne M"
+        },
+        {
+          "lastName": "Falk",
+          "fullName": "Falk, Marni J",
+          "firstName": "Marni J"
+        }
+      ],
+      "doi": "10.1101/2025.07.16.664929",
+      "human": 0.14285714285714285,
+      "pmid": 40791373,
+      "title": "ndufs2<sup>-/-</sup> zebrafish have impaired survival, neuromuscular activity, morphology, and one-carbon metabolism treatable with folic acid.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.7142857142857143,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        15042513, 20819849, 36109795, 12089525, 39816196, 33812964, 23772060,
+        38808672, 25503498, 33204712, 11278828, 23927696, 35893052, 26041819,
+        14749350, 39385390, 38956599, 20553901, 33368420, 10802664, 37207286,
+        15370545, 22036843, 33105273, 36795052, 34282017, 33447730, 38871981,
+        31297047, 18708005, 25744875, 23266820, 26437605, 34732887, 34845393,
+        18413591, 26924217, 33640978, 36866529, 37941124, 33006762, 15448617,
+        18058625, 25539952, 36599942, 30668749, 7551821, 37941138, 29526616,
+        32618366, 33242417, 37255483, 34849584, 11691861, 15358637, 18178500,
+        32831172, 25978847, 27977873, 23894440, 37556555, 38949024, 32055031,
+        39163131, 19900588, 34268314, 11220739, 29903433, 36408801, 29771953,
+        22930834, 24569120, 23527692, 32187526, 10649489, 32975586, 25652200,
+        26467476, 26183769, 18055683, 35881484, 36859533, 25516281, 8488845,
+        31021000, 26942765, 19114008, 10205266, 36300620, 18437205
       ],
       "provisional": false
     }

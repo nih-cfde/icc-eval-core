@@ -442,12 +442,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD036440-01S1",
+    "id": "1OT2OD036440-01",
     "coreProject": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "opportunity": "OTA-23-004",
-    "application": 11083282,
-    "awardAmount": 1749042,
+    "application": 10851461,
+    "awardAmount": 1473390,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2023-09-18T00:00:00",
@@ -455,12 +455,12 @@
     "isActive": 1
   },
   {
-    "id": "1OT2OD036440-01",
+    "id": "3OT2OD036440-01S1",
     "coreProject": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "opportunity": "OTA-23-004",
-    "application": 10851461,
-    "awardAmount": 1473390,
+    "application": 11083282,
+    "awardAmount": 1749042,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2023-09-18T00:00:00",
@@ -1053,19 +1053,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD032092-01S3",
-    "coreProject": "OT2OD032092",
-    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 11087888,
-    "awardAmount": 299690,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2021-09-15T00:00:00",
-    "dateEnd": "2025-09-14T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD032092-01S2",
     "coreProject": "OT2OD032092",
     "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
@@ -1088,6 +1075,19 @@
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2021-09-15T00:00:00",
+    "dateEnd": "2027-03-14T00:00:00",
+    "isActive": 1
+  },
+  {
+    "id": "3OT2OD032092-01S3",
+    "coreProject": "OT2OD032092",
+    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 11087888,
+    "awardAmount": 299690,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2021-09-15T00:00:00",
     "dateEnd": "2025-09-14T00:00:00",
     "isActive": 1
   },
@@ -1101,7 +1101,7 @@
     "activityCode": "U24",
     "agencyCode": "NIH",
     "dateStart": "2024-09-17T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
+    "dateEnd": "2025-08-31T00:00:00",
     "isActive": 1
   },
   {
@@ -1300,12 +1300,12 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030162-01S3",
+    "id": "3OT2OD030162-01S1",
     "coreProject": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "opportunity": "OTA-20-005",
-    "application": 10683508,
-    "awardAmount": 3224707,
+    "application": 10444365,
+    "awardAmount": 357776,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -1313,12 +1313,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030162-01S1",
+    "id": "3OT2OD030162-01S3",
     "coreProject": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "opportunity": "OTA-20-005",
-    "application": 10444365,
-    "awardAmount": 357776,
+    "application": 10683508,
+    "awardAmount": 3224707,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -1430,19 +1430,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030544-01S4",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 11090253,
-    "awardAmount": 298514,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030544-01S2",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1454,6 +1441,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2023-09-22T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "3OT2OD030544-01S4",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 11090253,
+    "awardAmount": 298514,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2025-09-22T00:00:00",
+    "isActive": 1
   },
   {
     "id": "1OT2OD030544-01",
@@ -1530,7 +1530,7 @@
     "activityCode": "U24",
     "agencyCode": "NIH",
     "dateStart": "2024-09-19T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
+    "dateEnd": "2025-08-31T00:00:00",
     "isActive": 1
   },
   {
@@ -1556,7 +1556,7 @@
     "activityCode": "R03",
     "agencyCode": "NIH",
     "dateStart": "2024-09-05T00:00:00",
-    "dateEnd": "2025-09-04T00:00:00",
+    "dateEnd": "2026-09-04T00:00:00",
     "isActive": 1
   },
   {
@@ -1621,7 +1621,7 @@
     "activityCode": "U24",
     "agencyCode": "NIH",
     "dateStart": "2024-09-17T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
+    "dateEnd": "2025-08-31T00:00:00",
     "isActive": 1
   },
   {
@@ -1722,6 +1722,19 @@
     "opportunity": "RFA-RM-18-031",
     "application": 11166643,
     "awardAmount": 154675,
+    "activityCode": "U54",
+    "agencyCode": "NIH",
+    "dateStart": "2019-09-01T00:00:00",
+    "dateEnd": "2027-07-31T00:00:00",
+    "isActive": 1
+  },
+  {
+    "id": "3U54DA049110-07S1",
+    "coreProject": "U54DA049110",
+    "name": "Data Center for Acute to Chronic Pain Biosignatures",
+    "opportunity": "PA-20-272",
+    "application": 11328770,
+    "awardAmount": 696356,
     "activityCode": "U54",
     "agencyCode": "NIH",
     "dateStart": "2019-09-01T00:00:00",
