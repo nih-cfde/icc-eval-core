@@ -37698,6 +37698,472 @@
         31021000, 26942765, 19114008, 10205266, 36300620, 18437205
       ],
       "provisional": false
+    },
+    {
+      "_id": "40828023",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Loop Yao",
+          "fullName": "Loop Yao, McKenna",
+          "firstName": "McKenna"
+        },
+        {
+          "lastName": "Zill",
+          "fullName": "Zill, Nicholas A",
+          "firstName": "Nicholas A"
+        },
+        {
+          "lastName": "Barber",
+          "fullName": "Barber, Colin Charles",
+          "firstName": "Colin Charles"
+        },
+        { "lastName": "Du", "fullName": "Du, Yongle", "firstName": "Yongle" },
+        { "lastName": "Lin", "fullName": "Lin, Peijun", "firstName": "Peijun" },
+        { "lastName": "Zhai", "fullName": "Zhai, Rui", "firstName": "Rui" },
+        {
+          "lastName": "Yoon",
+          "fullName": "Yoon, Eunice",
+          "firstName": "Eunice"
+        },
+        {
+          "lastName": "Al Marzooqi",
+          "fullName": "Al Marzooqi, Dunya",
+          "firstName": "Dunya"
+        },
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Wenjun",
+          "firstName": "Wenjun"
+        }
+      ],
+      "doi": "10.1073/pnas.2504492122",
+      "human": 0.5,
+      "pmid": 40828023,
+      "title": "Synergistic action of specialized metabolites from divergent biosynthesis in the human oral microbiome.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Proc Natl Acad Sci U S A",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
+      "provisional": false
+    },
+    {
+      "_id": "40832173",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Byrd",
+          "fullName": "Byrd, Anna I",
+          "firstName": "Anna I"
+        },
+        {
+          "lastName": "Evangelista",
+          "fullName": "Evangelista, John Erol",
+          "firstName": "John Erol"
+        },
+        {
+          "lastName": "Lachmann",
+          "fullName": "Lachmann, Alexander",
+          "firstName": "Alexander"
+        },
+        {
+          "lastName": "Chung",
+          "fullName": "Chung, Ho-Young",
+          "firstName": "Ho-Young"
+        },
+        {
+          "lastName": "Jenkins",
+          "fullName": "Jenkins, Sherry L",
+          "firstName": "Sherry L"
+        },
+        {
+          "lastName": "Ma'ayan",
+          "fullName": "Ma'ayan, Avi",
+          "firstName": "Avi"
+        }
+      ],
+      "doi": "10.1101/2025.08.09.669505",
+      "human": 0.5,
+      "pmid": 40832173,
+      "title": "ChEA-KG: Human Transcription Factor Regulatory Network with a Knowledge Graph Interactive User Interface.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
+      "provisional": false
+    },
+    {
+      "_id": "40863167",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Rajula",
+          "fullName": "Rajula, Hema Sekhar Reddy",
+          "firstName": "Hema Sekhar Reddy"
+        },
+        {
+          "lastName": "Piras",
+          "fullName": "Piras, Cristina",
+          "firstName": "Cristina"
+        },
+        {
+          "lastName": "Kopeć",
+          "fullName": "Kopeć, Karolina Krystyna",
+          "firstName": "Karolina Krystyna"
+        },
+        {
+          "lastName": "Noto",
+          "fullName": "Noto, Antonio",
+          "firstName": "Antonio"
+        },
+        {
+          "lastName": "Spada",
+          "fullName": "Spada, Martina",
+          "firstName": "Martina"
+        },
+        {
+          "lastName": "Lilliu",
+          "fullName": "Lilliu, Katia",
+          "firstName": "Katia"
+        },
+        {
+          "lastName": "Manchia",
+          "fullName": "Manchia, Mirko",
+          "firstName": "Mirko"
+        },
+        {
+          "lastName": "Mussap",
+          "fullName": "Mussap, Michele",
+          "firstName": "Michele"
+        },
+        {
+          "lastName": "Atzori",
+          "fullName": "Atzori, Luigi",
+          "firstName": "Luigi"
+        },
+        {
+          "lastName": "Fanos",
+          "fullName": "Fanos, Vassilios",
+          "firstName": "Vassilios"
+        }
+      ],
+      "doi": "10.3390/metabo15080551",
+      "human": 0,
+      "pmid": 40863167,
+      "title": "Metabolomics Network Analysis of Various Genotypes Associated with Schizophrenia Gene Variant.",
+      "year": 2025,
+      "journal": "Metabolites",
+      "is_research_article": true,
+      "molecular_cellular": 0,
+      "is_clinical": false
+    },
+    {
+      "_id": "40891528",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Geng",
+          "fullName": "Geng, Zhuangzhuang",
+          "firstName": "Zhuangzhuang"
+        },
+        {
+          "lastName": "Wafula",
+          "fullName": "Wafula, Eric",
+          "firstName": "Eric"
+        },
+        {
+          "lastName": "Corbett",
+          "fullName": "Corbett, Ryan J",
+          "firstName": "Ryan J"
+        },
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Yuanchao",
+          "firstName": "Yuanchao"
+        },
+        { "lastName": "Jin", "fullName": "Jin, Run", "firstName": "Run" },
+        {
+          "lastName": "Gaonkar",
+          "fullName": "Gaonkar, Krutika S",
+          "firstName": "Krutika S"
+        },
+        {
+          "lastName": "Shukla",
+          "fullName": "Shukla, Sangeeta",
+          "firstName": "Sangeeta"
+        },
+        {
+          "lastName": "Rathi",
+          "fullName": "Rathi, Komal S",
+          "firstName": "Komal S"
+        },
+        { "lastName": "Hill", "fullName": "Hill, Dave", "firstName": "Dave" },
+        {
+          "lastName": "Lahiri",
+          "fullName": "Lahiri, Aditya",
+          "firstName": "Aditya"
+        },
+        {
+          "lastName": "Miller",
+          "fullName": "Miller, Daniel P",
+          "firstName": "Daniel P"
+        },
+        {
+          "lastName": "Sickler",
+          "fullName": "Sickler, Alex",
+          "firstName": "Alex"
+        },
+        {
+          "lastName": "Keith",
+          "fullName": "Keith, Kelsey",
+          "firstName": "Kelsey"
+        },
+        {
+          "lastName": "Blackden",
+          "fullName": "Blackden, Christopher",
+          "firstName": "Christopher"
+        },
+        {
+          "lastName": "Chroni",
+          "fullName": "Chroni, Antonia",
+          "firstName": "Antonia"
+        },
+        {
+          "lastName": "Brown",
+          "fullName": "Brown, Miguel A",
+          "firstName": "Miguel A"
+        },
+        {
+          "lastName": "Kraya",
+          "fullName": "Kraya, Adam A",
+          "firstName": "Adam A"
+        },
+        {
+          "lastName": "Clark",
+          "fullName": "Clark, Kaylyn L",
+          "firstName": "Kaylyn L"
+        },
+        {
+          "lastName": "Rood",
+          "fullName": "Rood, Brian R",
+          "firstName": "Brian R"
+        },
+        {
+          "lastName": "Resnick",
+          "fullName": "Resnick, Adam C",
+          "firstName": "Adam C"
+        },
+        {
+          "lastName": "Van Kuren",
+          "fullName": "Van Kuren, Nicholas",
+          "firstName": "Nicholas"
+        },
+        {
+          "lastName": "Maris",
+          "fullName": "Maris, John M",
+          "firstName": "John M"
+        },
+        {
+          "lastName": "Farrel",
+          "fullName": "Farrel, Alvin",
+          "firstName": "Alvin"
+        },
+        {
+          "lastName": "Koptyra",
+          "fullName": "Koptyra, Mateusz P",
+          "firstName": "Mateusz P"
+        },
+        {
+          "lastName": "Trooskin",
+          "fullName": "Trooskin, Gerri R",
+          "firstName": "Gerri R"
+        },
+        {
+          "lastName": "Coleman",
+          "fullName": "Coleman, Noel",
+          "firstName": "Noel"
+        },
+        {
+          "lastName": "Zhu",
+          "fullName": "Zhu, Yuankun",
+          "firstName": "Yuankun"
+        },
+        {
+          "lastName": "Stefankiewicz",
+          "fullName": "Stefankiewicz, Stephanie",
+          "firstName": "Stephanie"
+        },
+        {
+          "lastName": "Abdullaev",
+          "fullName": "Abdullaev, Zied",
+          "firstName": "Zied"
+        },
+        {
+          "lastName": "Chinwalla",
+          "fullName": "Chinwalla, Asif T",
+          "firstName": "Asif T"
+        },
+        {
+          "lastName": "Santi",
+          "fullName": "Santi, Mariarita",
+          "firstName": "Mariarita"
+        },
+        {
+          "lastName": "Naqvi",
+          "fullName": "Naqvi, Ammar S",
+          "firstName": "Ammar S"
+        },
+        {
+          "lastName": "Mason",
+          "fullName": "Mason, Jennifer L",
+          "firstName": "Jennifer L"
+        },
+        {
+          "lastName": "Koschmann",
+          "fullName": "Koschmann, Carl J",
+          "firstName": "Carl J"
+        },
+        {
+          "lastName": "Huang",
+          "fullName": "Huang, Xiaoyan",
+          "firstName": "Xiaoyan"
+        },
+        {
+          "lastName": "Diskin",
+          "fullName": "Diskin, Sharon J",
+          "firstName": "Sharon J"
+        },
+        {
+          "lastName": "Aldape",
+          "fullName": "Aldape, Kenneth",
+          "firstName": "Kenneth"
+        },
+        {
+          "lastName": "Farrow",
+          "fullName": "Farrow, Bailey K",
+          "firstName": "Bailey K"
+        },
+        { "lastName": "Ma", "fullName": "Ma, Weiping", "firstName": "Weiping" },
+        { "lastName": "Zhang", "fullName": "Zhang, Bo", "firstName": "Bo" },
+        {
+          "lastName": "Ennis",
+          "fullName": "Ennis, Brian M",
+          "firstName": "Brian M"
+        },
+        {
+          "lastName": "Tasian",
+          "fullName": "Tasian, Sarah",
+          "firstName": "Sarah"
+        },
+        {
+          "lastName": "Phul",
+          "fullName": "Phul, Saksham",
+          "firstName": "Saksham"
+        },
+        {
+          "lastName": "Lueder",
+          "fullName": "Lueder, Matthew R",
+          "firstName": "Matthew R"
+        },
+        {
+          "lastName": "Zhong",
+          "fullName": "Zhong, Chuwei",
+          "firstName": "Chuwei"
+        },
+        {
+          "lastName": "Dybas",
+          "fullName": "Dybas, Joseph M",
+          "firstName": "Joseph M"
+        },
+        { "lastName": "Wang", "fullName": "Wang, Pei", "firstName": "Pei" },
+        {
+          "lastName": "Taylor",
+          "fullName": "Taylor, Deanne",
+          "firstName": "Deanne"
+        },
+        {
+          "lastName": "Rokita",
+          "fullName": "Rokita, Jo Lynne",
+          "firstName": "Jo Lynne"
+        }
+      ],
+      "doi": "10.1093/gigascience/giaf093",
+      "human": 1,
+      "pmid": 40891528,
+      "title": "The Open Pediatric Cancer Project.",
+      "year": 2025,
+      "journal": "Gigascience",
+      "is_research_article": true,
+      "molecular_cellular": 0,
+      "is_clinical": false
+    },
+    {
+      "_id": "40893796",
+      "animal": 0.2,
+      "authors": [
+        { "lastName": "Liu", "fullName": "Liu, Angela", "firstName": "Angela" },
+        {
+          "lastName": "Peng",
+          "fullName": "Peng, Beverly",
+          "firstName": "Beverly"
+        },
+        {
+          "lastName": "Pankajam",
+          "fullName": "Pankajam, Ajith V",
+          "firstName": "Ajith V"
+        },
+        {
+          "lastName": "Duong",
+          "fullName": "Duong, Thu Elizabeth",
+          "firstName": "Thu Elizabeth"
+        },
+        {
+          "lastName": "Pryhuber",
+          "fullName": "Pryhuber, Gloria",
+          "firstName": "Gloria"
+        },
+        {
+          "lastName": "Scheuermann",
+          "fullName": "Scheuermann, Richard H",
+          "firstName": "Richard H"
+        },
+        { "lastName": "Zhang", "fullName": "Zhang, Yun", "firstName": "Yun" }
+      ],
+      "doi": "10.1186/s44330-024-00015-2",
+      "human": 0.4,
+      "pmid": 40893796,
+      "title": "Discovery of optimal cell type classification marker genes from single cell RNA sequencing data.",
+      "year": 2024,
+      "journal": "BMC Methods",
+      "is_research_article": true,
+      "molecular_cellular": 0.4,
+      "is_clinical": false
     }
   ]
 }

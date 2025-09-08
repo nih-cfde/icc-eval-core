@@ -17,8 +17,8 @@
       "3OT2OD030161-01S2",
       "3OT2OD030161-01S5",
       "3OT2OD030161-01S1",
-      "3OT2OD030161-01S3",
       "1OT2OD030161-01",
+      "3OT2OD030161-01S3",
       "3OT2OD030161-01S4"
     ],
     "awardAmount": 3153200,
@@ -209,7 +209,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036499-01"],
     "awardAmount": 390000,
-    "publications": 4,
+    "publications": 5,
     "repos": 0,
     "analytics": 0
   },
@@ -247,7 +247,7 @@
     "id": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "activityCode": "OT2",
-    "projects": ["3OT2OD036440-01S1", "1OT2OD036440-01"],
+    "projects": ["1OT2OD036440-01", "3OT2OD036440-01S1"],
     "awardAmount": 3222432,
     "publications": 2,
     "repos": 0,
@@ -299,7 +299,7 @@
     "activityCode": "R25",
     "projects": ["1R25OD039834-01"],
     "awardAmount": 370177,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -411,8 +411,8 @@
       "3OT2OD030546-01S2",
       "3OT2OD030546-01S4",
       "3OT2OD030546-01S3",
-      "3OT2OD030546-01S1",
-      "1OT2OD030546-01"
+      "1OT2OD030546-01",
+      "3OT2OD030546-01S1"
     ],
     "awardAmount": 2460622,
     "publications": 4,
@@ -527,8 +527,8 @@
       "3OT2OD030160-01S3",
       "3OT2OD030160-01S4",
       "3OT2OD030160-01S1",
-      "3OT2OD030160-01S2",
       "1OT2OD030160-01",
+      "3OT2OD030160-01S2",
       "3OT2OD030160-01S5"
     ],
     "awardAmount": 3420175,
@@ -542,7 +542,7 @@
     "activityCode": "OT2",
     "projects": ["1OT2OD036435-01", "3OT2OD036435-01S1"],
     "awardAmount": 3250000,
-    "publications": 13,
+    "publications": 14,
     "repos": 0,
     "analytics": 0
   },
@@ -596,9 +596,9 @@
     "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD032092-01S3",
       "3OT2OD032092-01S2",
       "1OT2OD032092-01",
+      "3OT2OD032092-01S3",
       "3OT2OD032092-01S1"
     ],
     "awardAmount": 2701311,
@@ -764,14 +764,14 @@
     "name": "Biomedical Data Commons Workbench (BDCW)",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030544-01S2",
       "3OT2OD030544-01S4",
+      "3OT2OD030544-01S2",
       "1OT2OD030544-01",
       "3OT2OD030544-01S3",
       "3OT2OD030544-01S1"
     ],
     "awardAmount": 3229346,
-    "publications": 64,
+    "publications": 66,
     "repos": 0,
     "analytics": 0
   },
@@ -781,7 +781,7 @@
     "activityCode": "U24",
     "projects": ["1U24OD038425-01"],
     "awardAmount": 933739,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -801,7 +801,7 @@
     "activityCode": "U24",
     "projects": ["1U24OD038422-01"],
     "awardAmount": 1489695,
-    "publications": 2,
+    "publications": 3,
     "repos": 0,
     "analytics": 0
   },
