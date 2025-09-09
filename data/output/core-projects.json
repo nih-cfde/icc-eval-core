@@ -277,8 +277,8 @@
     "id": "U24OD038421",
     "name": "Community Data Hub for Integrative Visualization",
     "activityCode": "U24",
-    "projects": ["1U24OD038421-01"],
-    "awardAmount": 969346,
+    "projects": ["1U24OD038421-01", "5U24OD038421-02"],
+    "awardAmount": 1854560,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -596,9 +596,9 @@
     "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
     "activityCode": "OT2",
     "projects": [
+      "3OT2OD032092-01S3",
       "3OT2OD032092-01S2",
       "1OT2OD032092-01",
-      "3OT2OD032092-01S3",
       "3OT2OD032092-01S1"
     ],
     "awardAmount": 2701311,
@@ -610,8 +610,8 @@
     "id": "U24OD038423",
     "name": "Enhancing and making Biomarker Knowledge FAIR using contextual CFDE data",
     "activityCode": "U24",
-    "projects": ["1U24OD038423-01"],
-    "awardAmount": 975028,
+    "projects": ["4U24OD038423-02", "1U24OD038423-01"],
+    "awardAmount": 2758588,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -764,8 +764,8 @@
     "name": "Biomedical Data Commons Workbench (BDCW)",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030544-01S4",
       "3OT2OD030544-01S2",
+      "3OT2OD030544-01S4",
       "1OT2OD030544-01",
       "3OT2OD030544-01S3",
       "3OT2OD030544-01S1"
@@ -799,8 +799,8 @@
     "id": "U24OD038422",
     "name": "U24-Uncovering the Shared Genetic Origins of Childhood Cancer and Structural Birth Defects Through Enhanced Data Integration and Analysis with the CFDE Data Distillery Knowledge Graph.",
     "activityCode": "U24",
-    "projects": ["1U24OD038422-01"],
-    "awardAmount": 1489695,
+    "projects": ["4U24OD038422-02", "1U24OD038422-01"],
+    "awardAmount": 4408884,
     "publications": 3,
     "repos": 0,
     "analytics": 0
@@ -869,8 +869,8 @@
     "id": "U24OD038424",
     "name": "UniProt Partnerships with Common Fund Data Ecosystem Resources for Protein-Centric Functional Genomics",
     "activityCode": "U24",
-    "projects": ["1U24OD038424-01"],
-    "awardAmount": 693012,
+    "projects": ["4U24OD038424-02", "1U24OD038424-01"],
+    "awardAmount": 1991822,
     "publications": 1,
     "repos": 0,
     "analytics": 0
@@ -941,11 +941,12 @@
     "activityCode": "U24",
     "projects": [
       "4U24OD036598-08",
+      "3U24OD036598-08S1",
       "9U24OD036598-07",
-      "3U24OD036598-07S2",
-      "3U24OD036598-07S1"
+      "3U24OD036598-07S1",
+      "3U24OD036598-07S2"
     ],
-    "awardAmount": 7567461,
+    "awardAmount": 7867462,
     "publications": 14,
     "repos": 0,
     "analytics": 0
