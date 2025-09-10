@@ -130,19 +130,6 @@
     "isActive": 1
   },
   {
-    "id": "1OT2OD030545-01",
-    "coreProject": "OT2OD030545",
-    "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
-    "opportunity": "OTA-20-005",
-    "application": 10217839,
-    "awardAmount": 500000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-25T00:00:00",
-    "dateEnd": "2025-09-24T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030545-01S3",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
@@ -167,6 +154,19 @@
     "dateStart": "2020-09-25T00:00:00",
     "dateEnd": "2023-09-24T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "1OT2OD030545-01",
+    "coreProject": "OT2OD030545",
+    "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
+    "opportunity": "OTA-20-005",
+    "application": 10217839,
+    "awardAmount": 500000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-25T00:00:00",
+    "dateEnd": "2025-09-24T00:00:00",
+    "isActive": 1
   },
   {
     "id": "3OT2OD030545-01S5",
@@ -494,19 +494,6 @@
     "isActive": 1
   },
   {
-    "id": "1U24OD038421-01",
-    "coreProject": "U24OD038421",
-    "name": "Community Data Hub for Integrative Visualization",
-    "opportunity": "RFA-RM-23-013",
-    "application": 10993963,
-    "awardAmount": 969346,
-    "activityCode": "U24",
-    "agencyCode": "NIH",
-    "dateStart": "2024-09-19T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "5U24OD038421-02",
     "coreProject": "U24OD038421",
     "name": "Community Data Hub for Integrative Visualization",
@@ -518,6 +505,19 @@
     "dateStart": "2024-09-19T00:00:00",
     "dateEnd": "2027-08-31T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "1U24OD038421-01",
+    "coreProject": "U24OD038421",
+    "name": "Community Data Hub for Integrative Visualization",
+    "opportunity": "RFA-RM-23-013",
+    "application": 10993963,
+    "awardAmount": 969346,
+    "activityCode": "U24",
+    "agencyCode": "NIH",
+    "dateStart": "2024-09-19T00:00:00",
+    "dateEnd": "2027-08-31T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1OT2OD037922-01",
@@ -1066,19 +1066,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD032092-01S3",
-    "coreProject": "OT2OD032092",
-    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 11087888,
-    "awardAmount": 299690,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2021-09-15T00:00:00",
-    "dateEnd": "2025-09-14T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD032092-01S2",
     "coreProject": "OT2OD032092",
     "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
@@ -1102,6 +1089,19 @@
     "agencyCode": "NIH",
     "dateStart": "2021-09-15T00:00:00",
     "dateEnd": "2027-03-14T00:00:00",
+    "isActive": 1
+  },
+  {
+    "id": "3OT2OD032092-01S3",
+    "coreProject": "OT2OD032092",
+    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 11087888,
+    "awardAmount": 299690,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2021-09-15T00:00:00",
+    "dateEnd": "2025-09-14T00:00:00",
     "isActive": 1
   },
   {
@@ -1326,12 +1326,12 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030162-01S3",
+    "id": "3OT2OD030162-01S1",
     "coreProject": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "opportunity": "OTA-20-005",
-    "application": 10683508,
-    "awardAmount": 3224707,
+    "application": 10444365,
+    "awardAmount": 357776,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -1339,12 +1339,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030162-01S1",
+    "id": "3OT2OD030162-01S3",
     "coreProject": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "opportunity": "OTA-20-005",
-    "application": 10444365,
-    "awardAmount": 357776,
+    "application": 10683508,
+    "awardAmount": 3224707,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -1456,19 +1456,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030544-01S2",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10683515,
-    "awardAmount": 807151,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2023-09-22T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "3OT2OD030544-01S4",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1480,6 +1467,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2026-09-22T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "3OT2OD030544-01S2",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10683515,
+    "awardAmount": 807151,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2023-09-22T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1U24OD038425-01",
