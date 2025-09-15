@@ -35,7 +35,7 @@
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
+    "dateEnd": "2026-03-22T00:00:00",
     "isActive": 1
   },
   {
@@ -61,7 +61,7 @@
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
+    "dateEnd": "2026-03-22T00:00:00",
     "isActive": 1
   },
   {
@@ -494,19 +494,6 @@
     "isActive": 1
   },
   {
-    "id": "1U24OD038421-01",
-    "coreProject": "U24OD038421",
-    "name": "Community Data Hub for Integrative Visualization",
-    "opportunity": "RFA-RM-23-013",
-    "application": 10993963,
-    "awardAmount": 969346,
-    "activityCode": "U24",
-    "agencyCode": "NIH",
-    "dateStart": "2024-09-19T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "5U24OD038421-02",
     "coreProject": "U24OD038421",
     "name": "Community Data Hub for Integrative Visualization",
@@ -518,6 +505,19 @@
     "dateStart": "2024-09-19T00:00:00",
     "dateEnd": "2027-08-31T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "1U24OD038421-01",
+    "coreProject": "U24OD038421",
+    "name": "Community Data Hub for Integrative Visualization",
+    "opportunity": "RFA-RM-23-013",
+    "application": 10993963,
+    "awardAmount": 969346,
+    "activityCode": "U24",
+    "agencyCode": "NIH",
+    "dateStart": "2024-09-19T00:00:00",
+    "dateEnd": "2027-08-31T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1OT2OD037922-01",
@@ -1036,7 +1036,7 @@
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2021-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
+    "dateEnd": "2027-03-22T00:00:00",
     "isActive": 1
   },
   {
@@ -1066,19 +1066,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD032092-01S3",
-    "coreProject": "OT2OD032092",
-    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 11087888,
-    "awardAmount": 299690,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2021-09-15T00:00:00",
-    "dateEnd": "2025-09-14T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD032092-01S2",
     "coreProject": "OT2OD032092",
     "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
@@ -1102,6 +1089,19 @@
     "agencyCode": "NIH",
     "dateStart": "2021-09-15T00:00:00",
     "dateEnd": "2027-03-14T00:00:00",
+    "isActive": 1
+  },
+  {
+    "id": "3OT2OD032092-01S3",
+    "coreProject": "OT2OD032092",
+    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 11087888,
+    "awardAmount": 299690,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2021-09-15T00:00:00",
+    "dateEnd": "2025-09-14T00:00:00",
     "isActive": 1
   },
   {
@@ -1456,17 +1456,17 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030544-01S2",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10683515,
-    "awardAmount": 807151,
-    "activityCode": "OT2",
+    "id": "4U24OD038425-02",
+    "coreProject": "U24OD038425",
+    "name": "\"Defining the Human Metabotype\" [Human metabolic status defined through genetic, diet,environmental exposure and exercise perturbations]",
+    "opportunity": "RFA-RM-23-013",
+    "application": 11193986,
+    "awardAmount": 1746329,
+    "activityCode": "U24",
     "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2023-09-22T00:00:00",
-    "isActive": 0
+    "dateStart": "2024-09-17T00:00:00",
+    "dateEnd": "2027-08-31T00:00:00",
+    "isActive": 1
   },
   {
     "id": "3OT2OD030544-01S4",
@@ -1482,6 +1482,19 @@
     "isActive": 1
   },
   {
+    "id": "3OT2OD030544-01S2",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10683515,
+    "awardAmount": 807151,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2023-09-22T00:00:00",
+    "isActive": 0
+  },
+  {
     "id": "1U24OD038425-01",
     "coreProject": "U24OD038425",
     "name": "\"Defining the Human Metabotype\" [Human metabolic status defined through genetic, diet,environmental exposure and exercise perturbations]",
@@ -1491,21 +1504,8 @@
     "activityCode": "U24",
     "agencyCode": "NIH",
     "dateStart": "2024-09-17T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
+    "dateEnd": "2025-08-31T00:00:00",
     "isActive": 0
-  },
-  {
-    "id": "1OT2OD030544-01",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10217619,
-    "awardAmount": 500000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2026-09-22T00:00:00",
-    "isActive": 1
   },
   {
     "id": "3OT2OD030544-01S3",
@@ -1532,6 +1532,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2023-09-22T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "1OT2OD030544-01",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10217619,
+    "awardAmount": 500000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2026-09-22T00:00:00",
+    "isActive": 1
   },
   {
     "id": "1R03OD030600-01",

@@ -35573,6 +35573,64 @@
       "provisional": false
     },
     {
+      "_id": "40400348",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Khatri",
+          "fullName": "Khatri, Minal",
+          "firstName": "Minal"
+        },
+        {
+          "lastName": "Shanmugam",
+          "fullName": "Shanmugam, N R Siva",
+          "firstName": "N R Siva"
+        },
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Xinpeng",
+          "firstName": "Xinpeng"
+        },
+        {
+          "lastName": "Patel",
+          "fullName": "Patel, Revanth Sai Kumar Reddy",
+          "firstName": "Revanth Sai Kumar Reddy"
+        },
+        { "lastName": "Yin", "fullName": "Yin, Yanbin", "firstName": "Yanbin" }
+      ],
+      "doi": "10.1002/pro.70177",
+      "human": 0.25,
+      "pmid": 40400348,
+      "title": "AcrDB update: Predicted 3D structures of anti-CRISPRs in human gut viromes.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "40400348": 2025 }],
+      "year": 2025,
+      "journal": "Protein Sci",
+      "is_research_article": true,
+      "citation_count": 1,
+      "field_citation_rate": 12.147667583495267,
+      "expected_citations_per_year": 1.0130084247154147,
+      "citations_per_year": 1,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.75,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [40400348],
+      "references": [
+        31021273, 34168315, 33137193, 39385022, 32286628, 34377978, 38245560,
+        30393777, 23242138, 37272863, 35348649, 31502535, 37158576, 36927031,
+        30208287, 32728052, 29251498, 37084259, 37679542, 36584777, 36645249,
+        32186918, 33068435, 29035372, 29062071, 10827456, 28749735, 33459763,
+        20164152, 20709691, 31506266, 35649413, 38987591, 36868398, 9254694,
+        20211023, 36413017, 36159887, 37156916, 35337108, 32402073, 34282049,
+        18000004, 33606979, 38613393, 38291236, 34265844, 36453861, 39657785,
+        32459325, 40400348, 33159058, 37889074, 27899584, 32841606
+      ],
+      "provisional": false
+    },
+    {
       "_id": "40401984",
       "animal": 0,
       "authors": [
@@ -37311,6 +37369,234 @@
       "provisional": false
     },
     {
+      "_id": "40670786",
+      "animal": 0.75,
+      "authors": [
+        {
+          "lastName": "Mastrangelo",
+          "fullName": "Mastrangelo, Annalaura",
+          "firstName": "Annalaura"
+        },
+        {
+          "lastName": "Robles-Vera",
+          "fullName": "Robles-Vera, Iñaki",
+          "firstName": "Iñaki"
+        },
+        {
+          "lastName": "Mañanes",
+          "fullName": "Mañanes, Diego",
+          "firstName": "Diego"
+        },
+        {
+          "lastName": "Galán",
+          "fullName": "Galán, Miguel",
+          "firstName": "Miguel"
+        },
+        {
+          "lastName": "Femenía-Muiña",
+          "fullName": "Femenía-Muiña, Marcos",
+          "firstName": "Marcos"
+        },
+        {
+          "lastName": "Redondo-Urzainqui",
+          "fullName": "Redondo-Urzainqui, Ana",
+          "firstName": "Ana"
+        },
+        {
+          "lastName": "Barrero-Rodríguez",
+          "fullName": "Barrero-Rodríguez, Rafael",
+          "firstName": "Rafael"
+        },
+        {
+          "lastName": "Papaioannou",
+          "fullName": "Papaioannou, Eleftheria",
+          "firstName": "Eleftheria"
+        },
+        {
+          "lastName": "Amores-Iniesta",
+          "fullName": "Amores-Iniesta, Joaquín",
+          "firstName": "Joaquín"
+        },
+        { "lastName": "Devesa", "fullName": "Devesa, Ana", "firstName": "Ana" },
+        {
+          "lastName": "Lobo-González",
+          "fullName": "Lobo-González, Manuel",
+          "firstName": "Manuel"
+        },
+        {
+          "lastName": "Carreras",
+          "fullName": "Carreras, Alba",
+          "firstName": "Alba"
+        },
+        {
+          "lastName": "Beck",
+          "fullName": "Beck, Katharina R",
+          "firstName": "Katharina R"
+        },
+        {
+          "lastName": "Ivarsson",
+          "fullName": "Ivarsson, Sophie",
+          "firstName": "Sophie"
+        },
+        {
+          "lastName": "Gummesson",
+          "fullName": "Gummesson, Anders",
+          "firstName": "Anders"
+        },
+        {
+          "lastName": "Georgiopoulos",
+          "fullName": "Georgiopoulos, Georgios",
+          "firstName": "Georgios"
+        },
+        {
+          "lastName": "Rodrigo-Tapias",
+          "fullName": "Rodrigo-Tapias, Manuel",
+          "firstName": "Manuel"
+        },
+        {
+          "lastName": "Martínez-Cano",
+          "fullName": "Martínez-Cano, Sarai",
+          "firstName": "Sarai"
+        },
+        {
+          "lastName": "Fernández-López",
+          "fullName": "Fernández-López, Ivan",
+          "firstName": "Ivan"
+        },
+        {
+          "lastName": "Nuñez",
+          "fullName": "Nuñez, Vanessa",
+          "firstName": "Vanessa"
+        },
+        {
+          "lastName": "Ferrarini",
+          "fullName": "Ferrarini, Alessia",
+          "firstName": "Alessia"
+        },
+        {
+          "lastName": "Inohara",
+          "fullName": "Inohara, Naohiro",
+          "firstName": "Naohiro"
+        },
+        {
+          "lastName": "Stamatelopoulos",
+          "fullName": "Stamatelopoulos, Kimon",
+          "firstName": "Kimon"
+        },
+        {
+          "lastName": "Benguría",
+          "fullName": "Benguría, Alberto",
+          "firstName": "Alberto"
+        },
+        {
+          "lastName": "Cibrian",
+          "fullName": "Cibrian, Danay",
+          "firstName": "Danay"
+        },
+        {
+          "lastName": "Sánchez-Madrid",
+          "fullName": "Sánchez-Madrid, Francisco",
+          "firstName": "Francisco"
+        },
+        {
+          "lastName": "Alonso-Herranz",
+          "fullName": "Alonso-Herranz, Vanesa",
+          "firstName": "Vanesa"
+        },
+        { "lastName": "Dopazo", "fullName": "Dopazo, Ana", "firstName": "Ana" },
+        {
+          "lastName": "Barbas",
+          "fullName": "Barbas, Coral",
+          "firstName": "Coral"
+        },
+        {
+          "lastName": "Vázquez",
+          "fullName": "Vázquez, Jesús",
+          "firstName": "Jesús"
+        },
+        {
+          "lastName": "López",
+          "fullName": "López, Juan Antonio",
+          "firstName": "Juan Antonio"
+        },
+        {
+          "lastName": "González-Martín",
+          "fullName": "González-Martín, Alicia",
+          "firstName": "Alicia"
+        },
+        {
+          "lastName": "Nuñez",
+          "fullName": "Nuñez, Gabriel",
+          "firstName": "Gabriel"
+        },
+        {
+          "lastName": "Stellos",
+          "fullName": "Stellos, Konstantinos",
+          "firstName": "Konstantinos"
+        },
+        {
+          "lastName": "Bergström",
+          "fullName": "Bergström, Göran",
+          "firstName": "Göran"
+        },
+        {
+          "lastName": "Bäckhed",
+          "fullName": "Bäckhed, Fredrik",
+          "firstName": "Fredrik"
+        },
+        {
+          "lastName": "Fuster",
+          "fullName": "Fuster, Valentín",
+          "firstName": "Valentín"
+        },
+        {
+          "lastName": "Ibañez",
+          "fullName": "Ibañez, Borja",
+          "firstName": "Borja"
+        },
+        {
+          "lastName": "Sancho",
+          "fullName": "Sancho, David",
+          "firstName": "David"
+        }
+      ],
+      "doi": "10.1038/s41586-025-09263-w",
+      "human": 0.25,
+      "pmid": 40670786,
+      "title": "Imidazole propionate is a driver and therapeutic target in atherosclerosis.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "40670741": 2025 }],
+      "year": 2025,
+      "journal": "Nature",
+      "is_research_article": true,
+      "citation_count": 1,
+      "field_citation_rate": 13.730923062614258,
+      "expected_citations_per_year": 1.0151598945440368,
+      "citations_per_year": 1,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [40670741],
+      "references": [
+        38409323, 20554950, 34062119, 24268213, 26253087, 27348412, 3203132,
+        30709742, 37342006, 37237391, 19801464, 35365353, 34876704, 26972052,
+        27207943, 20731543, 36158581, 30582450, 37558377, 15260992, 23793624,
+        10364084, 31259915, 25882487, 38235360, 28304224, 31819014, 31189120,
+        30922468, 16199517, 32142679, 21475195, 28886926, 30574788, 30653442,
+        38195204, 35561167, 29799975, 23104886, 40143816, 35715522, 39196141,
+        36241728, 24908616, 19351819, 34444866, 30917678, 20105389, 35394016,
+        29559675, 32762536, 32128508, 35274132, 28476288, 33208748, 16529547,
+        34120177, 38325523, 36049808, 26892962, 37055535, 20937873, 30401435,
+        35567559, 33883728, 29954621, 34095155, 33268892, 25516281, 32062353,
+        27163744, 21816040, 28845751, 27214047, 37115134, 31792435, 22473958,
+        34548614, 34389841, 36247305, 27682883, 19346248
+      ],
+      "provisional": false
+    },
+    {
       "_id": "40672200",
       "animal": 0,
       "authors": [
@@ -37819,6 +38105,310 @@
       "provisional": false
     },
     {
+      "_id": "40832322",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Tan", "fullName": "Tan, Jimin", "firstName": "Jimin" },
+        { "lastName": "Fu", "fullName": "Fu, Xi", "firstName": "Xi" },
+        { "lastName": "Ling", "fullName": "Ling, Xinyu", "firstName": "Xinyu" },
+        {
+          "lastName": "Mo",
+          "fullName": "Mo, Shentong",
+          "firstName": "Shentong"
+        },
+        {
+          "lastName": "Bai",
+          "fullName": "Bai, Jiangshan",
+          "firstName": "Jiangshan"
+        },
+        {
+          "lastName": "Rabadán",
+          "fullName": "Rabadán, Raúl",
+          "firstName": "Raúl"
+        },
+        {
+          "lastName": "Fenyö",
+          "fullName": "Fenyö, David",
+          "firstName": "David"
+        },
+        {
+          "lastName": "Boeke",
+          "fullName": "Boeke, Jef D",
+          "firstName": "Jef D"
+        },
+        {
+          "lastName": "Tsirigos",
+          "fullName": "Tsirigos, Aristotelis",
+          "firstName": "Aristotelis"
+        },
+        { "lastName": "Xia", "fullName": "Xia, Bo", "firstName": "Bo" }
+      ],
+      "doi": "10.1101/2025.08.17.670761",
+      "human": 0.2,
+      "pmid": 40832322,
+      "title": "Multimodal learning decodes the global binding landscape of chromatin-associated proteins.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.8,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        31209400, 39486420, 37258680, 39565202, 39567683, 17540862, 29414259,
+        33603233, 16153702, 37852782, 19736561, 34751401, 37595022, 35817977,
+        36370105, 38718835, 25693565, 18555785, 21145479, 23332764, 39843737,
+        23467089, 33353982, 37824643, 31207605, 31207604, 31207603, 25476604,
+        38262408, 27818507, 31375813, 32728244, 35750052, 38166256, 29409532,
+        36719906, 30602438, 22955990, 11237011, 25215497, 34608324, 17627883,
+        22955619, 37554723, 32728250, 11125145, 28079019, 39541441, 31152140,
+        19274049, 26970633, 31427776, 37443338, 31249361, 36693380, 29425488,
+        21221095, 39779956, 40780181
+      ],
+      "provisional": false
+    },
+    {
+      "_id": "40832351",
+      "animal": 0.5,
+      "authors": [
+        {
+          "lastName": "Ahooyi",
+          "fullName": "Ahooyi, Taha Mohseni",
+          "firstName": "Taha Mohseni"
+        },
+        {
+          "lastName": "Stear",
+          "fullName": "Stear, Benjamin",
+          "firstName": "Benjamin"
+        },
+        {
+          "lastName": "Simmons",
+          "fullName": "Simmons, J Alan",
+          "firstName": "J Alan"
+        },
+        {
+          "lastName": "Metzger",
+          "fullName": "Metzger, Vincent T",
+          "firstName": "Vincent T"
+        },
+        {
+          "lastName": "Kumar",
+          "fullName": "Kumar, Praveen",
+          "firstName": "Praveen"
+        },
+        {
+          "lastName": "Evangelista",
+          "fullName": "Evangelista, John Erol",
+          "firstName": "John Erol"
+        },
+        {
+          "lastName": "Clarke",
+          "fullName": "Clarke, Daniel J B",
+          "firstName": "Daniel J B"
+        },
+        {
+          "lastName": "Xie",
+          "fullName": "Xie, Zhuorui",
+          "firstName": "Zhuorui"
+        },
+        { "lastName": "Kim", "fullName": "Kim, Heesu", "firstName": "Heesu" },
+        {
+          "lastName": "Jenkins",
+          "fullName": "Jenkins, Sherry L",
+          "firstName": "Sherry L"
+        },
+        {
+          "lastName": "Maurya",
+          "fullName": "Maurya, Mano R",
+          "firstName": "Mano R"
+        },
+        {
+          "lastName": "Ramachandran",
+          "fullName": "Ramachandran, Srinivasan",
+          "firstName": "Srinivasan"
+        },
+        { "lastName": "Fahy", "fullName": "Fahy, Eoin", "firstName": "Eoin" },
+        {
+          "lastName": "Gillespie",
+          "fullName": "Gillespie, Thomas H",
+          "firstName": "Thomas H"
+        },
+        {
+          "lastName": "Imam",
+          "fullName": "Imam, Fahim T",
+          "firstName": "Fahim T"
+        },
+        {
+          "lastName": "Kokash",
+          "fullName": "Kokash, Natallia",
+          "firstName": "Natallia"
+        },
+        {
+          "lastName": "Roth",
+          "fullName": "Roth, Matthew E",
+          "firstName": "Matthew E"
+        },
+        {
+          "lastName": "Fullem",
+          "fullName": "Fullem, Robert",
+          "firstName": "Robert"
+        },
+        {
+          "lastName": "Jevtic",
+          "fullName": "Jevtic, Dubravka",
+          "firstName": "Dubravka"
+        },
+        {
+          "lastName": "Mihajlovic",
+          "fullName": "Mihajlovic, Aleks",
+          "firstName": "Aleks"
+        },
+        {
+          "lastName": "Tiemeyer",
+          "fullName": "Tiemeyer, Michael",
+          "firstName": "Michael"
+        },
+        {
+          "lastName": "Bakker",
+          "fullName": "Bakker, Clara",
+          "firstName": "Clara"
+        },
+        {
+          "lastName": "Schroeder",
+          "fullName": "Schroeder, Andrew J",
+          "firstName": "Andrew J"
+        },
+        {
+          "lastName": "Markowski",
+          "fullName": "Markowski, Julia",
+          "firstName": "Julia"
+        },
+        {
+          "lastName": "Nedzel",
+          "fullName": "Nedzel, Jared",
+          "firstName": "Jared"
+        },
+        {
+          "lastName": "Hill",
+          "fullName": "Hill, Dave D",
+          "firstName": "Dave D"
+        },
+        {
+          "lastName": "Terry",
+          "fullName": "Terry, James",
+          "firstName": "James"
+        },
+        {
+          "lastName": "Nemarich",
+          "fullName": "Nemarich, Christopher",
+          "firstName": "Christopher"
+        },
+        { "lastName": "Boline", "fullName": "Boline, Jyl", "firstName": "Jyl" },
+        {
+          "lastName": "Park",
+          "fullName": "Park, Peter J",
+          "firstName": "Peter J"
+        },
+        {
+          "lastName": "Ardlie",
+          "fullName": "Ardlie, Kristin G",
+          "firstName": "Kristin G"
+        },
+        { "lastName": "Vora", "fullName": "Vora, Jeet", "firstName": "Jeet" },
+        {
+          "lastName": "Mazumder",
+          "fullName": "Mazumder, Raja",
+          "firstName": "Raja"
+        },
+        {
+          "lastName": "Ranzinger",
+          "fullName": "Ranzinger, Rene",
+          "firstName": "Rene"
+        },
+        {
+          "lastName": "de Bono",
+          "fullName": "de Bono, Bernard",
+          "firstName": "Bernard"
+        },
+        {
+          "lastName": "Subramaniam",
+          "fullName": "Subramaniam, Shankar",
+          "firstName": "Shankar"
+        },
+        {
+          "lastName": "Grethe",
+          "fullName": "Grethe, Jeffrey S",
+          "firstName": "Jeffrey S"
+        },
+        {
+          "lastName": "Yang",
+          "fullName": "Yang, Jeremy J",
+          "firstName": "Jeremy J"
+        },
+        {
+          "lastName": "Lambert",
+          "fullName": "Lambert, Christophe G",
+          "firstName": "Christophe G"
+        },
+        {
+          "lastName": "Resnick",
+          "fullName": "Resnick, Adam",
+          "firstName": "Adam"
+        },
+        {
+          "lastName": "Milosavljevic",
+          "fullName": "Milosavljevic, Aleks",
+          "firstName": "Aleks"
+        },
+        {
+          "lastName": "Ma'ayan",
+          "fullName": "Ma'ayan, Avi",
+          "firstName": "Avi"
+        },
+        {
+          "lastName": "Silverstein",
+          "fullName": "Silverstein, Jonathan C",
+          "firstName": "Jonathan C"
+        },
+        {
+          "lastName": "Taylor",
+          "fullName": "Taylor, Deanne M",
+          "firstName": "Deanne M"
+        }
+      ],
+      "doi": "10.1101/2025.08.11.666099",
+      "human": 0.5,
+      "pmid": 40832351,
+      "title": "The Data Distillery: A Graph Framework for Semantic Integration and Querying of Biomedical Data.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
+      "provisional": false
+    },
+    {
       "_id": "40863167",
       "animal": 0,
       "authors": [
@@ -38163,6 +38753,151 @@
       "journal": "BMC Methods",
       "is_research_article": true,
       "molecular_cellular": 0.4,
+      "is_clinical": false
+    },
+    {
+      "_id": "40894635",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Bueckle",
+          "fullName": "Bueckle, Andreas",
+          "firstName": "Andreas"
+        },
+        {
+          "lastName": "Herr",
+          "fullName": "Herr, Bruce W",
+          "firstName": "Bruce W"
+        },
+        { "lastName": "Chen", "fullName": "Chen, Lu", "firstName": "Lu" },
+        {
+          "lastName": "Bolin",
+          "fullName": "Bolin, Daniel",
+          "firstName": "Daniel"
+        },
+        {
+          "lastName": "Qaurooni",
+          "fullName": "Qaurooni, Danial",
+          "firstName": "Danial"
+        },
+        {
+          "lastName": "Ginda",
+          "fullName": "Ginda, Michael",
+          "firstName": "Michael"
+        },
+        {
+          "lastName": "Jain",
+          "fullName": "Jain, Yashvardhan",
+          "firstName": "Yashvardhan"
+        },
+        {
+          "lastName": "Puig-Barbe",
+          "fullName": "Puig-Barbe, Aleix",
+          "firstName": "Aleix"
+        },
+        {
+          "lastName": "Ardlie",
+          "fullName": "Ardlie, Kristin",
+          "firstName": "Kristin"
+        },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Fusheng",
+          "firstName": "Fusheng"
+        },
+        {
+          "lastName": "Börner",
+          "fullName": "Börner, Katy",
+          "firstName": "Katy"
+        }
+      ],
+      "doi": "10.1101/2025.08.14.670406",
+      "human": 0.5,
+      "pmid": 40894635,
+      "title": "Constructing and Using Cell Type Populations of the Human Reference Atlas.",
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "molecular_cellular": 0.5,
+      "is_clinical": false
+    },
+    {
+      "_id": "40932625",
+      "animal": 0.5,
+      "authors": [
+        { "lastName": "Xu", "fullName": "Xu, Jinjin", "firstName": "Jinjin" },
+        {
+          "lastName": "Kong",
+          "fullName": "Kong, Lingjia",
+          "firstName": "Lingjia"
+        },
+        {
+          "lastName": "Creasey",
+          "fullName": "Creasey, Elizabeth A",
+          "firstName": "Elizabeth A"
+        },
+        { "lastName": "Rath", "fullName": "Rath, Sneha", "firstName": "Sneha" },
+        { "lastName": "Deng", "fullName": "Deng, Lei", "firstName": "Lei" },
+        {
+          "lastName": "Avila-Pacheco",
+          "fullName": "Avila-Pacheco, Julian",
+          "firstName": "Julian"
+        },
+        { "lastName": "Li", "fullName": "Li, Chenhao", "firstName": "Chenhao" },
+        {
+          "lastName": "Oliver",
+          "fullName": "Oliver, Blayne A",
+          "firstName": "Blayne A"
+        },
+        {
+          "lastName": "Dao",
+          "fullName": "Dao, Tyler T",
+          "firstName": "Tyler T"
+        },
+        {
+          "lastName": "Shih",
+          "fullName": "Shih, Angela R",
+          "firstName": "Angela R"
+        },
+        {
+          "lastName": "Daly",
+          "fullName": "Daly, Mark J",
+          "firstName": "Mark J"
+        },
+        {
+          "lastName": "Shalek",
+          "fullName": "Shalek, Alex K",
+          "firstName": "Alex K"
+        },
+        {
+          "lastName": "Clish",
+          "fullName": "Clish, Clary B",
+          "firstName": "Clary B"
+        },
+        {
+          "lastName": "Graham",
+          "fullName": "Graham, Daniel B",
+          "firstName": "Daniel B"
+        },
+        {
+          "lastName": "Deguine",
+          "fullName": "Deguine, Jacques",
+          "firstName": "Jacques"
+        },
+        {
+          "lastName": "Xavier",
+          "fullName": "Xavier, Ramnik J",
+          "firstName": "Ramnik J"
+        }
+      ],
+      "doi": "10.1084/jem.20250185",
+      "human": 0,
+      "pmid": 40932625,
+      "title": "Autoimmune disease risk gene ANKRD55 promotes TH17 effector function through metabolic modulation.",
+      "year": 2025,
+      "journal": "J Exp Med",
+      "is_research_article": true,
+      "molecular_cellular": 0.5,
       "is_clinical": false
     }
   ]
