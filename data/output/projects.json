@@ -442,12 +442,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD036440-01S1",
+    "id": "1OT2OD036440-01",
     "coreProject": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "opportunity": "OTA-23-004",
-    "application": 11083282,
-    "awardAmount": 1749042,
+    "application": 10851461,
+    "awardAmount": 1473390,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2023-09-18T00:00:00",
@@ -455,12 +455,12 @@
     "isActive": 1
   },
   {
-    "id": "1OT2OD036440-01",
+    "id": "3OT2OD036440-01S1",
     "coreProject": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "opportunity": "OTA-23-004",
-    "application": 10851461,
-    "awardAmount": 1473390,
+    "application": 11083282,
+    "awardAmount": 1749042,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2023-09-18T00:00:00",
@@ -676,19 +676,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030546-01S4",
-    "coreProject": "OT2OD030546",
-    "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 11086411,
-    "awardAmount": 300000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030546-01S2",
     "coreProject": "OT2OD030546",
     "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
@@ -700,6 +687,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2023-09-22T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "3OT2OD030546-01S4",
+    "coreProject": "OT2OD030546",
+    "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 11086411,
+    "awardAmount": 300000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2025-09-22T00:00:00",
+    "isActive": 1
   },
   {
     "id": "3OT2OD030546-01S3",
@@ -949,19 +949,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD036435-01S1",
-    "coreProject": "OT2OD036435",
-    "name": "The CFDE Workbench",
-    "opportunity": "OTA-23-004",
-    "application": 11080094,
-    "awardAmount": 1750000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2023-09-18T00:00:00",
-    "dateEnd": "2028-09-17T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030160-01S5",
     "coreProject": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
@@ -972,6 +959,19 @@
     "agencyCode": "NIH",
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2025-09-22T00:00:00",
+    "isActive": 1
+  },
+  {
+    "id": "3OT2OD036435-01S1",
+    "coreProject": "OT2OD036435",
+    "name": "The CFDE Workbench",
+    "opportunity": "OTA-23-004",
+    "application": 11080094,
+    "awardAmount": 1750000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2023-09-18T00:00:00",
+    "dateEnd": "2028-09-17T00:00:00",
     "isActive": 1
   },
   {
@@ -1066,19 +1066,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD032092-01S3",
-    "coreProject": "OT2OD032092",
-    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 11087888,
-    "awardAmount": 299690,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2021-09-15T00:00:00",
-    "dateEnd": "2025-09-14T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD032092-01S2",
     "coreProject": "OT2OD032092",
     "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
@@ -1102,6 +1089,19 @@
     "agencyCode": "NIH",
     "dateStart": "2021-09-15T00:00:00",
     "dateEnd": "2027-03-14T00:00:00",
+    "isActive": 1
+  },
+  {
+    "id": "3OT2OD032092-01S3",
+    "coreProject": "OT2OD032092",
+    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 11087888,
+    "awardAmount": 299690,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2021-09-15T00:00:00",
+    "dateEnd": "2025-09-14T00:00:00",
     "isActive": 1
   },
   {
@@ -1326,12 +1326,12 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030162-01S1",
+    "id": "3OT2OD030162-01S3",
     "coreProject": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "opportunity": "OTA-20-005",
-    "application": 10444365,
-    "awardAmount": 357776,
+    "application": 10683508,
+    "awardAmount": 3224707,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -1339,12 +1339,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030162-01S3",
+    "id": "3OT2OD030162-01S1",
     "coreProject": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "opportunity": "OTA-20-005",
-    "application": 10683508,
-    "awardAmount": 3224707,
+    "application": 10444365,
+    "awardAmount": 357776,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -1378,19 +1378,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030162-01S4",
-    "coreProject": "OT2OD030162",
-    "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
-    "opportunity": "OTA-20-005",
-    "application": 10907061,
-    "awardAmount": 2593513,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-25T00:00:00",
-    "dateEnd": "2024-09-24T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "1OT2OD030162-01",
     "coreProject": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
@@ -1402,6 +1389,19 @@
     "dateStart": "2020-09-25T00:00:00",
     "dateEnd": "2027-03-24T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "3OT2OD030162-01S4",
+    "coreProject": "OT2OD030162",
+    "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
+    "opportunity": "OTA-20-005",
+    "application": 10907061,
+    "awardAmount": 2593513,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-25T00:00:00",
+    "dateEnd": "2024-09-24T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1R03OD038387-01",
@@ -1547,19 +1547,6 @@
     "isActive": 1
   },
   {
-    "id": "4U24OD038422-02",
-    "coreProject": "U24OD038422",
-    "name": "U24-Uncovering the Shared Genetic Origins of Childhood Cancer and Structural Birth Defects Through Enhanced Data Integration and Analysis with the CFDE Data Distillery Knowledge Graph.",
-    "opportunity": "RFA-RM-23-013",
-    "application": 11195033,
-    "awardAmount": 2919189,
-    "activityCode": "U24",
-    "agencyCode": "NIH",
-    "dateStart": "2024-09-19T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "1R03OD030600-01",
     "coreProject": "R03OD030600",
     "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
@@ -1571,6 +1558,19 @@
     "dateStart": "2020-09-18T00:00:00",
     "dateEnd": "2023-08-31T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "4U24OD038422-02",
+    "coreProject": "U24OD038422",
+    "name": "U24-Uncovering the Shared Genetic Origins of Childhood Cancer and Structural Birth Defects Through Enhanced Data Integration and Analysis with the CFDE Data Distillery Knowledge Graph.",
+    "opportunity": "RFA-RM-23-013",
+    "application": 11195033,
+    "awardAmount": 2919189,
+    "activityCode": "U24",
+    "agencyCode": "NIH",
+    "dateStart": "2024-09-19T00:00:00",
+    "dateEnd": "2027-08-31T00:00:00",
+    "isActive": 1
   },
   {
     "id": "1U24OD038422-01",

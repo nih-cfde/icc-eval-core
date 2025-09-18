@@ -3232,7 +3232,18 @@
     "name": "regulatoryElement",
     "ext": "ts",
     "date": "2023-10-19T00:00:00.000Z",
-    "files": []
+    "files": [
+      {
+        "url": {
+          "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives",
+          "name": "regulatoryElement",
+          "ext": "ts"
+        },
+        "path": { "dir": "", "name": "", "ext": "" },
+        "size": 0,
+        "date": ""
+      }
+    ]
   },
   {
     "url": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf0a_c2m2.py",
@@ -12052,7 +12063,18 @@
     "name": "process_mcf10a_c2m2",
     "ext": "py",
     "date": "2022-05-22T00:00:00.000Z",
-    "files": []
+    "files": [
+      {
+        "url": {
+          "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
+          "name": "process_mcf10a_c2m2",
+          "ext": "py"
+        },
+        "path": { "dir": "", "name": "", "ext": "" },
+        "size": 0,
+        "date": ""
+      }
+    ]
   },
   {
     "url": "https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-08-19/ERCC_C2M2_2021-08-19_datapackage.zip",
@@ -108210,7 +108232,18 @@
     "name": "build_file_lincs2021",
     "ext": "py",
     "date": "2021-06-23T00:00:00.000Z",
-    "files": []
+    "files": [
+      {
+        "url": {
+          "dir": "https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts",
+          "name": "build_file_lincs2021",
+          "ext": "py"
+        },
+        "path": { "dir": "", "name": "", "ext": "" },
+        "size": 0,
+        "date": ""
+      }
+    ]
   },
   {
     "url": "https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2024-12-16/20241202-submission-fixup.zip",
