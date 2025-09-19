@@ -247,7 +247,7 @@
     "id": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "activityCode": "OT2",
-    "projects": ["1OT2OD036440-01", "3OT2OD036440-01S1"],
+    "projects": ["3OT2OD036440-01S1", "1OT2OD036440-01"],
     "awardAmount": 3222432,
     "publications": 2,
     "repos": 0,
@@ -408,8 +408,8 @@
     "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030546-01S2",
       "3OT2OD030546-01S4",
+      "3OT2OD030546-01S2",
       "3OT2OD030546-01S3",
       "1OT2OD030546-01",
       "3OT2OD030546-01S1"
@@ -596,9 +596,9 @@
     "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
     "activityCode": "OT2",
     "projects": [
+      "3OT2OD032092-01S3",
       "3OT2OD032092-01S2",
       "1OT2OD032092-01",
-      "3OT2OD032092-01S3",
       "3OT2OD032092-01S1"
     ],
     "awardAmount": 2701311,
@@ -707,12 +707,12 @@
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030162-01S3",
       "3OT2OD030162-01S1",
+      "3OT2OD030162-01S3",
       "3OT2OD030162-01S5",
       "3OT2OD030162-01S2",
-      "1OT2OD030162-01",
-      "3OT2OD030162-01S4"
+      "3OT2OD030162-01S4",
+      "1OT2OD030162-01"
     ],
     "awardAmount": 10363836,
     "publications": 2,
@@ -786,22 +786,22 @@
     "analytics": 0
   },
   {
-    "id": "R03OD030600",
-    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
-    "activityCode": "R03",
-    "projects": ["1R03OD030600-01"],
-    "awardAmount": 363306,
-    "publications": 1,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
     "id": "U24OD038422",
     "name": "U24-Uncovering the Shared Genetic Origins of Childhood Cancer and Structural Birth Defects Through Enhanced Data Integration and Analysis with the CFDE Data Distillery Knowledge Graph.",
     "activityCode": "U24",
     "projects": ["4U24OD038422-02", "1U24OD038422-01"],
     "awardAmount": 4408884,
     "publications": 3,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD030600",
+    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
+    "activityCode": "R03",
+    "projects": ["1R03OD030600-01"],
+    "awardAmount": 363306,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
