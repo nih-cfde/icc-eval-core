@@ -32271,6 +32271,45 @@
       "provisional": false
     },
     {
+      "_id": "39961523",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Siva Shanmugam",
+          "fullName": "Siva Shanmugam, N R",
+          "firstName": "N R"
+        },
+        { "lastName": "Yin", "fullName": "Yin, Yanbin", "firstName": "Yanbin" }
+      ],
+      "doi": "10.1016/j.jmb.2025.169001",
+      "human": 0.3333333333333333,
+      "pmid": 39961523,
+      "title": "CAZyme3D: A Database of 3D Structures for Carbohydrate-active Enzymes.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "40807682": 2025 }, { "40381984": 2025 }],
+      "year": 2025,
+      "journal": "J Mol Biol",
+      "is_research_article": true,
+      "citation_count": 2,
+      "field_citation_rate": 6.542922364737824,
+      "expected_citations_per_year": 1.0053921932263696,
+      "citations_per_year": 2,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.6666666666666666,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [40807682, 40381984],
+      "references": [
+        22645317, 32941621, 36477304, 36420884, 23748339, 31168320, 36399503,
+        35637307, 25925569, 36806678, 23060610, 37409346, 31794006, 37156916,
+        18838391, 36927031, 28062446, 37125649, 29771380, 34265844, 37933859,
+        37704730, 33828273, 30395287, 34850161, 27899584, 30053267, 38260309
+      ],
+      "provisional": false
+    },
+    {
       "_id": "39974082",
       "animal": 0,
       "authors": [
@@ -37888,6 +37927,150 @@
       "provisional": false
     },
     {
+      "_id": "40759793",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Hunter",
+          "fullName": "Hunter, Benjamin",
+          "firstName": "Benjamin"
+        },
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Yunwei",
+          "firstName": "Yunwei"
+        },
+        {
+          "lastName": "Harney",
+          "fullName": "Harney, Dylan",
+          "firstName": "Dylan"
+        },
+        {
+          "lastName": "McEwen",
+          "fullName": "McEwen, Holly",
+          "firstName": "Holly"
+        },
+        {
+          "lastName": "Koay",
+          "fullName": "Koay, Yen Chin",
+          "firstName": "Yen Chin"
+        },
+        {
+          "lastName": "Pan",
+          "fullName": "Pan, Michael",
+          "firstName": "Michael"
+        },
+        {
+          "lastName": "Malecki",
+          "fullName": "Malecki, Cassandra",
+          "firstName": "Cassandra"
+        },
+        {
+          "lastName": "Khor",
+          "fullName": "Khor, Jasmine",
+          "firstName": "Jasmine"
+        },
+        {
+          "lastName": "Hume",
+          "fullName": "Hume, Robert D",
+          "firstName": "Robert D"
+        },
+        {
+          "lastName": "Guglielmi",
+          "fullName": "Guglielmi, Giovanni",
+          "firstName": "Giovanni"
+        },
+        {
+          "lastName": "Walker",
+          "fullName": "Walker, Alicia",
+          "firstName": "Alicia"
+        },
+        {
+          "lastName": "Dutta",
+          "fullName": "Dutta, Shashwati",
+          "firstName": "Shashwati"
+        },
+        {
+          "lastName": "Rajagopal",
+          "fullName": "Rajagopal, Vijay",
+          "firstName": "Vijay"
+        },
+        {
+          "lastName": "Don",
+          "fullName": "Don, Anthony",
+          "firstName": "Anthony"
+        },
+        {
+          "lastName": "Larance",
+          "fullName": "Larance, Mark",
+          "firstName": "Mark"
+        },
+        {
+          "lastName": "O'Sullivan",
+          "fullName": "O'Sullivan, John F",
+          "firstName": "John F"
+        },
+        {
+          "lastName": "Yang",
+          "fullName": "Yang, Jean Y H",
+          "firstName": "Jean Y H"
+        },
+        { "lastName": "Lal", "fullName": "Lal, Sean", "firstName": "Sean" }
+      ],
+      "doi": "10.1038/s44321-025-00281-9",
+      "human": 1,
+      "pmid": 40759793,
+      "title": "Left ventricular myocardial molecular profile of human diabetic ischaemic cardiomyopathy.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "EMBO Mol Med",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        30909726, 31772123, 34656823, 19654119, 36453283, 23529112, 28444133,
+        17306367, 36776621, 24520200, 36370105, 14693681, 31297870, 30654890,
+        32521763, 11413087, 22430089, 31155234, 16307171, 32157127, 15647364,
+        10359773, 35219725, 34717010, 26819374, 32483830, 33038389, 11055985,
+        31308252, 36866529, 33803273, 34332599, 25095871, 24548633, 30856000,
+        16538615, 27435108, 2493058, 15403115, 22238215, 36691918, 28912180,
+        26756635, 33356362, 28436080, 26970214, 27364902, 30476243, 28190577,
+        28912179, 23740690, 12206992, 34723319, 32239128, 28484397, 11068176,
+        17698735, 19029910, 11227796, 8862513, 23423172, 11752295, 8849588,
+        24720791, 36973440, 32431666, 8418995, 38225249, 23349368, 31277657,
+        33983836, 9386162, 22897936, 25110346, 32133373, 28710072, 24485249,
+        34084135, 18794531, 30783653, 33077793, 11748057, 30012703, 19818871,
+        25962702, 22586215, 33602875, 31963121, 27353086, 32083075, 31028141,
+        34374300, 24175011, 26897485, 26998172, 21962016, 28161643, 35635592,
+        25640645, 16227502, 10751324, 15081316, 23302686, 30562098, 35065923,
+        29371055, 29572205, 24705922, 8373630, 22743772, 6406496, 22943504,
+        29606302, 25834111, 34800366, 16123357, 24140081, 37943830, 34140509,
+        29902536, 16163394, 20076942, 29884191, 29928647, 19493956, 29331057,
+        22335739, 17591785, 32283761, 16817780, 28772033, 15987803, 34355002,
+        24147975, 31079692, 29030372, 9465065, 29073779, 21254760, 11738057,
+        30871461, 24928681, 32483148, 32179913, 32428995, 17299101, 20000467,
+        10592173, 32296036, 37466141, 19356713, 37504301, 34557778, 37237146,
+        23220394, 27489254, 36157491, 21291388, 32424129, 32267921, 9288554,
+        25287287, 35369299, 32487995, 1008835, 18676612, 28554015, 35509833,
+        16987749, 34733953, 26621701, 15496480, 9218515, 33174596, 23931755,
+        31441146, 33028824, 24228979, 17921325, 32742886, 31184404, 36428511,
+        37870704, 19060128, 31768060, 31219741, 26467476, 31299062, 30724013,
+        33601938, 23115323, 30863992, 33089381, 26242711, 8062418, 36300620,
+        10802651
+      ],
+      "provisional": false
+    },
+    {
       "_id": "40791373",
       "animal": 0.14285714285714285,
       "authors": [
@@ -38898,6 +39081,56 @@
       "journal": "J Exp Med",
       "is_research_article": true,
       "molecular_cellular": 0.5,
+      "is_clinical": false
+    },
+    {
+      "_id": "40956607",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Evangelista",
+          "fullName": "Evangelista, John Erol",
+          "firstName": "John Erol"
+        },
+        {
+          "lastName": "Lutsky",
+          "fullName": "Lutsky, Andrew D",
+          "firstName": "Andrew D"
+        },
+        {
+          "lastName": "Byrd",
+          "fullName": "Byrd, Anna I",
+          "firstName": "Anna I"
+        },
+        {
+          "lastName": "Clarke",
+          "fullName": "Clarke, Daniel J B",
+          "firstName": "Daniel J B"
+        },
+        {
+          "lastName": "Prabhakaran",
+          "fullName": "Prabhakaran, Abinanda",
+          "firstName": "Abinanda"
+        },
+        {
+          "lastName": "Jenkins",
+          "fullName": "Jenkins, Sherry L",
+          "firstName": "Sherry L"
+        },
+        {
+          "lastName": "Ma'ayan",
+          "fullName": "Ma'ayan, Avi",
+          "firstName": "Avi"
+        }
+      ],
+      "doi": "10.1002/cpz1.70200",
+      "human": 1,
+      "pmid": 40956607,
+      "title": "Creating an Interactive Web Interface for Networks Stored in Knowledge Graph Databases.",
+      "year": 2025,
+      "journal": "Curr Protoc",
+      "is_research_article": true,
+      "molecular_cellular": 0,
       "is_clinical": false
     }
   ]

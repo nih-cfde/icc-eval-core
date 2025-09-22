@@ -17,9 +17,9 @@
       "3OT2OD030161-01S2",
       "3OT2OD030161-01S5",
       "3OT2OD030161-01S1",
-      "1OT2OD030161-01",
       "3OT2OD030161-01S3",
-      "3OT2OD030161-01S4"
+      "3OT2OD030161-01S4",
+      "1OT2OD030161-01"
     ],
     "awardAmount": 3153200,
     "publications": 1,
@@ -117,8 +117,8 @@
     "id": "OT2OD037936",
     "name": "The CFDE Cloud Workspace",
     "activityCode": "OT2",
-    "projects": ["1OT2OD037936-01"],
-    "awardAmount": 749999,
+    "projects": ["3OT2OD037936-01S1", "1OT2OD037936-01"],
+    "awardAmount": 4352171,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -247,8 +247,8 @@
     "id": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "activityCode": "OT2",
-    "projects": ["1OT2OD036440-01", "3OT2OD036440-01S1"],
-    "awardAmount": 3222432,
+    "projects": ["3OT2OD036440-01S2", "1OT2OD036440-01", "3OT2OD036440-01S1"],
+    "awardAmount": 7956517,
     "publications": 2,
     "repos": 0,
     "analytics": 0
@@ -287,8 +287,8 @@
     "id": "OT2OD037922",
     "name": "Fostering Meaningful Use of Common Fund Data",
     "activityCode": "OT2",
-    "projects": ["1OT2OD037922-01"],
-    "awardAmount": 1198151,
+    "projects": ["1OT2OD037922-01", "3OT2OD037922-01S1"],
+    "awardAmount": 4119781,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -411,8 +411,8 @@
       "3OT2OD030546-01S2",
       "3OT2OD030546-01S4",
       "3OT2OD030546-01S3",
-      "1OT2OD030546-01",
-      "3OT2OD030546-01S1"
+      "3OT2OD030546-01S1",
+      "1OT2OD030546-01"
     ],
     "awardAmount": 2460622,
     "publications": 4,
@@ -540,9 +540,9 @@
     "id": "OT2OD036435",
     "name": "The CFDE Workbench",
     "activityCode": "OT2",
-    "projects": ["1OT2OD036435-01", "3OT2OD036435-01S1"],
-    "awardAmount": 3250000,
-    "publications": 14,
+    "projects": ["1OT2OD036435-01", "3OT2OD036435-01S2", "3OT2OD036435-01S1"],
+    "awardAmount": 6500000,
+    "publications": 15,
     "repos": 0,
     "analytics": 0
   },
@@ -596,12 +596,13 @@
     "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD032092-01S2",
-      "1OT2OD032092-01",
+      "3OT2OD032092-01S4",
       "3OT2OD032092-01S3",
+      "1OT2OD032092-01",
+      "3OT2OD032092-01S2",
       "3OT2OD032092-01S1"
     ],
-    "awardAmount": 2701311,
+    "awardAmount": 3051311,
     "publications": 1,
     "repos": 0,
     "analytics": 0
@@ -781,17 +782,7 @@
       "1OT2OD030544-01"
     ],
     "awardAmount": 3229346,
-    "publications": 68,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "R03OD030600",
-    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
-    "activityCode": "R03",
-    "projects": ["1R03OD030600-01"],
-    "awardAmount": 363306,
-    "publications": 1,
+    "publications": 69,
     "repos": 0,
     "analytics": 0
   },
@@ -802,6 +793,16 @@
     "projects": ["4U24OD038422-02", "1U24OD038422-01"],
     "awardAmount": 4408884,
     "publications": 3,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD030600",
+    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
+    "activityCode": "R03",
+    "projects": ["1R03OD030600-01"],
+    "awardAmount": 363306,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -901,7 +902,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD039979-01"],
     "awardAmount": 294432,
-    "publications": 1,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
