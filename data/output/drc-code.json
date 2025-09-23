@@ -990,6 +990,15 @@
     "files": []
   },
   {
+    "url": "https://genboree.org/ldh/dss/exRNA/ns/exGL",
+    "dir": "https://genboree.org/ldh/dss/exRNA/nsexGL",
+    "name": "exGLid Service",
+    "ext": "",
+    "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
     "url": "https://api.glygen.org/",
     "dir": "https://api.glygen.org",
     "name": "GlyGen API",
@@ -1161,6 +1170,15 @@
     "files": []
   },
   {
+    "url": "https://genboree.org/docs/ldh-dss/",
+    "dir": "https://genboree.org/docsldh-dss",
+    "name": "exGLid service API (LDH-DSS Specification)",
+    "ext": "",
+    "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
     "url": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives/variant.ts",
     "dir": "https://github.com/nih-cfde/playbook-partnership/blob/main/components/core/primitives",
     "name": "Variant",
@@ -1247,6 +1265,42 @@
     "name": "SmartAPI URL",
     "ext": "",
     "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/unmtransinfo/IDG-CFDE-ETL",
+    "dir": "https://github.com/unmtransinfoIDG-CFDE-ETL",
+    "name": "Jeremy Yang",
+    "ext": "",
+    "type": "ETL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://genboree.org/ldh/dss/exRNA/ns/exGL/set/annotation_json/",
+    "dir": "https://genboree.org/ldh/dss/exRNA/ns/exGL/setannotation_json",
+    "name": "exGLid service",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://exrna-atlas.org/exrna/exgl-query/",
+    "dir": "https://exrna-atlas.org/exrnaexgl-query",
+    "name": "exGLid service UI",
+    "ext": "",
+    "type": "Apps URL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://genboree.org/ldh/dss/exRNA/ns/exGL/set/annotation_json/id/{exGLid}/data",
+    "dir": "https://genboree.org/ldh/dss/exRNA/ns/exGL/set/annotation_json/id/{exGLid}data",
+    "name": "exGLid service",
+    "ext": "",
+    "type": "Entity Page Template",
     "date": "",
     "files": []
   }
