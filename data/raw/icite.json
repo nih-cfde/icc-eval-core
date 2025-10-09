@@ -27905,13 +27905,18 @@
           "firstName": "Ammar S"
         },
         {
+          "lastName": "Sullivan",
+          "fullName": "Sullivan, Patricia J",
+          "firstName": "Patricia J"
+        },
+        {
           "lastName": "Corbett",
           "fullName": "Corbett, Ryan J",
           "firstName": "Ryan J"
         },
         {
-          "lastName": "Seghal",
-          "fullName": "Seghal, Priyanka",
+          "lastName": "Sehgal",
+          "fullName": "Sehgal, Priyanka",
           "firstName": "Priyanka"
         },
         {
@@ -27944,6 +27949,11 @@
           "lastName": "Miller",
           "fullName": "Miller, Daniel P",
           "firstName": "Daniel P"
+        },
+        {
+          "lastName": "Sickler",
+          "fullName": "Sickler, Alex",
+          "firstName": "Alex"
         },
         {
           "lastName": "Kraya",
@@ -28037,9 +28047,9 @@
         }
       ],
       "doi": "10.1101/2024.08.03.606419",
-      "human": 0.2,
+      "human": 0.16666666666666666,
       "pmid": 39149264,
-      "title": "Characterization of aberrant splicing in pediatric central nervous system tumors reveals CLK1 as a candidate oncogenic dependency.",
+      "title": "Characterization of aberrant splicing in pediatric central nervous system tumors reveals <i>CLK1</i> as a candidate oncogenic dependency.",
       "apt": 0.25,
       "citedByClinicalArticle": false,
       "citedByPmidsByYear": [
@@ -28056,7 +28066,7 @@
       "citations_per_year": 3,
       "relative_citation_ratio": null,
       "nih_percentile": null,
-      "molecular_cellular": 0.8,
+      "molecular_cellular": 0.8333333333333334,
       "x_coord": -0.6928203230275509,
       "y_coord": -0.2,
       "is_clinical": false,
@@ -32742,6 +32752,11 @@
           "firstName": "Chuwei"
         },
         {
+          "lastName": "Blauel",
+          "fullName": "Blauel, Emily",
+          "firstName": "Emily"
+        },
+        {
           "lastName": "Desai",
           "fullName": "Desai, Heena",
           "firstName": "Heena"
@@ -32755,6 +32770,26 @@
           "lastName": "Naqvi",
           "fullName": "Naqvi, Ammar S",
           "firstName": "Ammar S"
+        },
+        {
+          "lastName": "Daggett",
+          "fullName": "Daggett, Jessica M",
+          "firstName": "Jessica M"
+        },
+        {
+          "lastName": "Sickler",
+          "fullName": "Sickler, Alex",
+          "firstName": "Alex"
+        },
+        {
+          "lastName": "Cresswell-Clay",
+          "fullName": "Cresswell-Clay, Evan C",
+          "firstName": "Evan C"
+        },
+        {
+          "lastName": "Sullivan",
+          "fullName": "Sullivan, Patricia J",
+          "firstName": "Patricia J"
         },
         {
           "lastName": "Chroni",
@@ -33036,7 +33071,7 @@
     },
     {
       "_id": "39985215",
-      "animal": 0.5,
+      "animal": 1,
       "authors": [
         {
           "lastName": "Johnson",
@@ -33065,7 +33100,7 @@
       "citations_per_year": 0,
       "relative_citation_ratio": null,
       "nih_percentile": null,
-      "molecular_cellular": 0.5,
+      "molecular_cellular": 0,
       "is_clinical": false,
       "cited_by_clin": null,
       "cited_by": null,
@@ -37067,6 +37102,12 @@
           "firstName": "Rachel N"
         },
         {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Shile",
+          "firstName": "Shile"
+        },
+        { "lastName": "Lee", "fullName": "Lee, Ernie", "firstName": "Ernie" },
+        {
           "lastName": "Heering",
           "fullName": "Heering, Kylie Y",
           "firstName": "Kylie Y"
@@ -37112,6 +37153,11 @@
           "firstName": "Helen M"
         },
         {
+          "lastName": "Lee",
+          "fullName": "Lee, Sandy Che-Eun S",
+          "firstName": "Sandy Che-Eun S"
+        },
+        {
           "lastName": "Sharifi",
           "fullName": "Sharifi, Marina N",
           "firstName": "Marina N"
@@ -37132,6 +37178,11 @@
           "firstName": "Michael C"
         },
         {
+          "lastName": "Shackelford",
+          "fullName": "Shackelford, David B",
+          "firstName": "David B"
+        },
+        {
           "lastName": "Boutros",
           "fullName": "Boutros, Paul C",
           "firstName": "Paul C"
@@ -37150,7 +37201,7 @@
       "doi": "10.1101/2025.05.28.656673",
       "human": 0,
       "pmid": 40502162,
-      "title": "OGDHL regulates nucleotide metabolism, tumor growth, and neuroendocrine marker expression in prostate cancer.",
+      "title": "OGDHL regulates tumor growth, neuroendocrine marker expression, and nucleotide abundance in prostate cancer.",
       "apt": 0.05,
       "citedByClinicalArticle": false,
       "citedByPmidsByYear": null,
