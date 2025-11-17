@@ -1,39 +1,5 @@
 [
   {
-    "id": "OT2OD030161",
-    "name": "GTEx engagement with the CFDE-CC and other DCCs towards building a data ecosystem spanning the Common Fund projects",
-    "activityCode": "OT2",
-    "projects": [
-      "3OT2OD030161-01S2",
-      "3OT2OD030161-01S5",
-      "3OT2OD030161-01S1",
-      "1OT2OD030161-01",
-      "3OT2OD030161-01S3",
-      "3OT2OD030161-01S4"
-    ],
-    "awardAmount": 3153200,
-    "publications": 1,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD030545",
-    "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
-    "activityCode": "OT2",
-    "projects": [
-      "3OT2OD030545-01S3",
-      "3OT2OD030545-01S4",
-      "1OT2OD030545-01",
-      "3OT2OD030545-01S5",
-      "3OT2OD030545-01S2",
-      "3OT2OD030545-01S1"
-    ],
-    "awardAmount": 3089131,
-    "publications": 9,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
     "id": "OT2OD037936",
     "name": "The CFDE Cloud Workspace",
     "activityCode": "OT2",
@@ -44,138 +10,22 @@
     "analytics": 0
   },
   {
-    "id": "OT2OD030164",
-    "name": "Cross-CFDE semantic and spatial interoperability for anatomy",
+    "id": "OT2OD036440",
+    "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "activityCode": "OT2",
-    "projects": ["1OT2OD030164-01"],
-    "awardAmount": 494117,
-    "publications": 0,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD030546",
-    "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
-    "activityCode": "OT2",
-    "projects": [
-      "3OT2OD030546-01S2",
-      "3OT2OD030546-01S4",
-      "4OT2OD030546-02",
-      "3OT2OD030546-01S3",
-      "1OT2OD030546-01",
-      "3OT2OD030546-01S1"
-    ],
-    "awardAmount": 2810622,
-    "publications": 4,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD030160",
-    "name": "The LINCS DCIC Engagement Plan with the CFDE",
-    "activityCode": "OT2",
-    "projects": [
-      "3OT2OD030160-01S3",
-      "3OT2OD030160-01S4",
-      "3OT2OD030160-01S1",
-      "1OT2OD030160-01",
-      "3OT2OD030160-01S2",
-      "3OT2OD030160-01S5"
-    ],
-    "awardAmount": 3420175,
-    "publications": 24,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD032619",
-    "name": "SPARC Engagement Plan with the Common Fund Data Ecosystem",
-    "activityCode": "OT2",
-    "projects": [
-      "3OT2OD032619-01S1",
-      "1OT2OD032619-01",
-      "3OT2OD032619-01S4",
-      "3OT2OD032619-01S3",
-      "3OT2OD032619-01S2"
-    ],
-    "awardAmount": 3227536,
+    "projects": ["3OT2OD036440-01S2", "1OT2OD036440-01", "3OT2OD036440-01S1"],
+    "awardAmount": 7956517,
     "publications": 2,
     "repos": 0,
     "analytics": 0
   },
   {
-    "id": "OT2OD032092",
-    "name": "Harmonization of GlyGen glycoconjugate and glycan array data for integration into CFDE",
+    "id": "OT2OD036435",
+    "name": "The CFDE Workbench",
     "activityCode": "OT2",
-    "projects": [
-      "3OT2OD032092-01S4",
-      "1OT2OD032092-01",
-      "3OT2OD032092-01S2",
-      "3OT2OD032092-01S3",
-      "3OT2OD032092-01S1"
-    ],
-    "awardAmount": 3051311,
-    "publications": 1,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD030547",
-    "name": "GENOMIC INDEXING OF COMMON FUND DATASETS",
-    "activityCode": "OT2",
-    "projects": [
-      "1OT2OD030547-01",
-      "3OT2OD030547-01S3",
-      "3OT2OD030547-01S1",
-      "3OT2OD030547-01S2",
-      "3OT2OD030547-01S4"
-    ],
-    "awardAmount": 3159152,
-    "publications": 1,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD032119",
-    "name": "Interoperability and Collaboration with the Common Fund Data Ecosystem to Improve Utility of 4DN Data",
-    "activityCode": "OT2",
-    "projects": ["3OT2OD032119-01S1", "1OT2OD032119-01", "3OT2OD032119-01S2"],
-    "awardAmount": 1300851,
-    "publications": 0,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD030162",
-    "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
-    "activityCode": "OT2",
-    "projects": [
-      "4OT2OD030162-02",
-      "3OT2OD030162-01S3",
-      "3OT2OD030162-01S1",
-      "3OT2OD030162-01S5",
-      "3OT2OD030162-01S2",
-      "1OT2OD030162-01",
-      "3OT2OD030162-01S4"
-    ],
-    "awardAmount": 10663836,
-    "publications": 3,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
-    "id": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "activityCode": "OT2",
-    "projects": [
-      "3OT2OD030544-01S4",
-      "3OT2OD030544-01S2",
-      "1OT2OD030544-01",
-      "3OT2OD030544-01S3",
-      "3OT2OD030544-01S1"
-    ],
-    "awardAmount": 3229346,
-    "publications": 73,
+    "projects": ["1OT2OD036435-01", "3OT2OD036435-01S2", "3OT2OD036435-01S1"],
+    "awardAmount": 7184710,
+    "publications": 16,
     "repos": 0,
     "analytics": 0
   },
@@ -230,7 +80,7 @@
       "1OT2OD026675-01"
     ],
     "awardAmount": 8945779,
-    "publications": 13,
+    "publications": 20,
     "repos": 0,
     "analytics": 0
   }
