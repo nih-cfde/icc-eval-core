@@ -117,6 +117,7 @@ export const getOpportunities = async () => {
       (document) => async (progress) => getOpportunity(document, progress),
     ),
     "opportunities.json",
+    1,
   );
 
   /** de-dupe */
