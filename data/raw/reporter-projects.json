@@ -1,14 +1,14 @@
 {
   "meta": {
-    "search_id": "zKYn8EC6iE24_MMjLglFjQ",
-    "total": 8,
+    "search_id": "fxbgzunbNUmi-jAlp1hxhA",
+    "total": 10,
     "offset": 0,
     "limit": 500,
     "sort_field": null,
     "sort_order": "ASC",
     "sorted_by_relevance": false,
     "properties": {
-      "URL": "https:/reporter.nih.gov/search/zKYn8EC6iE24_MMjLglFjQ/projects"
+      "URL": "https:/reporter.nih.gov/search/fxbgzunbNUmi-jAlp1hxhA/projects"
     }
   },
   "results": [
@@ -694,6 +694,272 @@
       "indirect_cost_amt": 503951,
       "project_detail_url": "https://reporter.nih.gov/project-details/11083282",
       "date_added": "2024-09-21T16:30:10"
+    },
+    {
+      "appl_id": 11075663,
+      "subproject_id": null,
+      "fiscal_year": 2024,
+      "project_num": "1OT2OD037922-01",
+      "project_serial_num": "OD037922",
+      "organization": {
+        "org_name": "OAK RIDGE ASSOCIATED UNIVERSITIES",
+        "city": null,
+        "country": null,
+        "org_city": "OAK RIDGE",
+        "org_country": "UNITED STATES",
+        "org_state": "TN",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": ["041152224"],
+        "org_ueis": ["JW7MLW3RRK34"],
+        "primary_duns": "041152224",
+        "primary_uei": "JW7MLW3RRK34",
+        "org_fips": "US",
+        "org_ipf_code": "6182601",
+        "org_zipcode": "378306218",
+        "external_org_id": 6182601
+      },
+      "award_type": "1",
+      "activity_code": "OT2",
+      "award_amount": 1198151,
+      "is_active": true,
+      "project_num_split": {
+        "appl_type_code": "1",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "037922",
+        "support_year": "01",
+        "full_support_year": "01",
+        "suffix_code": ""
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 79657422,
+          "first_name": "Jennifer",
+          "middle_name": "",
+          "last_name": "Burnette",
+          "is_contact_pi": false,
+          "full_name": "Jennifer  Burnette",
+          "title": ""
+        },
+        {
+          "profile_id": 78315756,
+          "first_name": "Allissa",
+          "middle_name": "Amanda",
+          "last_name": "Dillman",
+          "is_contact_pi": false,
+          "full_name": "Allissa Amanda Dillman",
+          "title": ""
+        },
+        {
+          "profile_id": 79657413,
+          "first_name": "LaFrancis",
+          "middle_name": "",
+          "last_name": "Gibson",
+          "is_contact_pi": true,
+          "full_name": "LaFrancis  Gibson",
+          "title": ""
+        }
+      ],
+      "contact_pi_name": "GIBSON, LAFRANCIS ",
+      "program_officers": [
+        {
+          "first_name": "SAHANA",
+          "middle_name": "NALINI",
+          "last_name": "KUKKE",
+          "full_name": "SAHANA NALINI KUKKE"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2024,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 1198151,
+          "direct_cost_ic": 857419,
+          "indirect_cost_ic": 340732
+        }
+      ],
+      "cong_dist": "TN-03",
+      "spending_categories": [176, 4531],
+      "project_start_date": "2024-09-15T00:00:00",
+      "project_end_date": "2029-09-14T00:00:00",
+      "organization_type": {
+        "name": "Research Institutes",
+        "code": "20",
+        "is_other": false
+      },
+      "geo_lat_lon": { "lon": -84.253983, "lat": 36.020634 },
+      "opportunity_number": "OTA-24-004",
+      "full_study_section": {
+        "srg_code": "CFOT",
+        "srg_flex": null,
+        "sra_designator_code": null,
+        "sra_flex_code": null,
+        "group_code": "01",
+        "name": "Common Fund Other Transactions Programs[CFOT (01)]"
+      },
+      "award_notice_date": "2024-09-11T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD037922",
+      "terms": "<Achievement><Achievement Attainment><Address><Area><Awareness><Bio-Informatics><Bioinformatics><Biological><Biology><Biomedical Research><Budgets><Collaborations><Communication><Communities><Community Surveys><Complex><Data><Data Analytics><Data Coordinating Center><Data Coordination Center><Data Science><Data Scientist><Data Set><Development><Discipline><Education and Outreach><Ensure><Environment><Equity><Evaluation><FAIR data><FAIR guiding principles><FAIR principles><Feedback><Findable, Accessible, Interoperable and Re-usable><Findable, Accessible, Interoperable, and Reusable><Fostering><Funding><Future><Goals><Infrastructure><Instruction and Outreach><Interdisciplinary Research><Interdisciplinary Study><Internet><Interview><Investigators><Learning><Medical><Mentors><Metadata><Modeling><Multidisciplinary Collaboration><Multidisciplinary Research><NIH><National Institutes of Health><Outcome><Outcome Study><Pain><Painful><Participant><Population Heterogeneity><Process><Program Development><Qualifying><R-Series Research Projects><R01 Mechanism><R01 Program><Reporting><Research><Research Grants><Research Personnel><Research Project Grants><Research Projects><Research Resources><Researchers><Resource Sharing><Resources><Review Literature><Scientist><Structure><Students><Training><Training Activity><Training Programs><Training and Outreach><Tutoring and Outreach><United States><United States National Institutes of Health><Universities><WWW><biologic><career><cohort><data complexity><data ecosystem><data management and coordinating center><data management center><data resource><data sharing ecosystem><data tools><depository><design><designing><developmental><diverse populations><diversity, equity, and inclusiveness><equity, diversity, and inclusion><experience><flexibility><flexible><graduate student><heterogeneous population><informant><innovate><innovation><innovative><interdisciplinary collaboration><learning community><meeting><meetings><meta data><multiple data sets><multiple datasets><novel><on-line community><online community><outreach><population diversity><programs><recruit><repository><skills><tool><training module><training opportunity><training project><transdisciplinary collaboration><translational applications><virtual community><web><work group><working group><world wide web>",
+      "pref_terms": "Achievement;Address;Area;Awareness;Bioinformatics;Biological;Biology;Biomedical Research;Budgets;Collaborations;Communication;Communities;Community Surveys;Complex;Data;Data Analytics;Data Coordinating Center;Data Science;Data Scientist;Data Set;Development;Discipline;Education and Outreach;Ensure;Environment;Equity;Evaluation;FAIR principles;Feedback;Fostering;Funding;Future;Goals;Infrastructure;Interdisciplinary Study;Internet;Interview;Learning;Medical;Mentors;Metadata;Modeling;Outcome;Outcome Study;Pain;Participant;Population Heterogeneity;Process;Program Development;Qualifying;Reporting;Research;Research Personnel;Research Project Grants;Resource Sharing;Resources;Review Literature;Scientist;Structure;Students;Training;Training Activity;Training Programs;United States;United States National Institutes of Health;Universities;career;cohort;data complexity;data ecosystem;data resource;data tools;design;equity, diversity, and inclusion;experience;flexibility;graduate student;informant;innovation;interdisciplinary collaboration;learning community;meetings;multiple datasets;novel;online community;outreach;programs;recruit;repository;skills;tool;training opportunity;training project;translational applications;working group",
+      "abstract_text": "To help ensure that Common Fund Data Ecosystem (CFDE) data assets, data tools, and resources are findable, accessible, interoperable, and reusable (FAIR), the project will create a CFDE Training Center (TC) responsive to the needs of biomedical researchers and current and future CFDE data programs. The TC will serve as the central hub for training development, coordination, and evaluation across CFDE programs and data initiatives.",
+      "project_title": "Fostering Meaningful Use of Common Fund Data",
+      "phr_text": "This project supports public health by enhancing the accessibility and usability of biomedical data through the creation of a Common Fund Data Ecosystem (CFDE) Training Center. By equipping researchers with the skills and resources needed to utilize complex datasets, the initiative fosters advancements in bioinformatics and data sciences that can drive innovation in medical research and public health solutions.",
+      "spending_categories_desc": "Clinical Research; Data Science",
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2024-09-15T00:00:00",
+      "budget_end": "2027-09-14T00:00:00",
+      "cfda_code": "93.310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 857419,
+      "indirect_cost_amt": 340732,
+      "project_detail_url": "https://reporter.nih.gov/project-details/11075663",
+      "date_added": "2024-09-21T16:30:10"
+    },
+    {
+      "appl_id": 11327747,
+      "subproject_id": null,
+      "fiscal_year": 2025,
+      "project_num": "3OT2OD037922-01S1",
+      "project_serial_num": "OD037922",
+      "organization": {
+        "org_name": "OAK RIDGE ASSOCIATED UNIVERSITIES",
+        "city": null,
+        "country": null,
+        "org_city": "OAK RIDGE",
+        "org_country": "UNITED STATES",
+        "org_state": "TN",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": ["041152224"],
+        "org_ueis": ["JW7MLW3RRK34"],
+        "primary_duns": "041152224",
+        "primary_uei": "JW7MLW3RRK34",
+        "org_fips": "US",
+        "org_ipf_code": "6182601",
+        "org_zipcode": "378306218",
+        "external_org_id": 6182601
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 2921630,
+      "is_active": true,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "037922",
+        "support_year": "01",
+        "full_support_year": "01S1",
+        "suffix_code": "S1"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 79657422,
+          "first_name": "Jennifer",
+          "middle_name": "",
+          "last_name": "Burnette",
+          "is_contact_pi": false,
+          "full_name": "Jennifer  Burnette",
+          "title": ""
+        },
+        {
+          "profile_id": 78315756,
+          "first_name": "Allissa",
+          "middle_name": "Amanda",
+          "last_name": "Dillman",
+          "is_contact_pi": false,
+          "full_name": "Allissa Amanda Dillman",
+          "title": ""
+        },
+        {
+          "profile_id": 79657413,
+          "first_name": "LaFrancis",
+          "middle_name": "",
+          "last_name": "Gibson",
+          "is_contact_pi": true,
+          "full_name": "LaFrancis  Gibson",
+          "title": ""
+        }
+      ],
+      "contact_pi_name": "GIBSON, LAFRANCIS ",
+      "program_officers": [
+        {
+          "first_name": "SAHANA",
+          "middle_name": "NALINI",
+          "last_name": "KUKKE",
+          "full_name": "SAHANA NALINI KUKKE"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2025,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 2921630,
+          "direct_cost_ic": 2151952,
+          "indirect_cost_ic": 769678
+        }
+      ],
+      "cong_dist": "TN-03",
+      "spending_categories": null,
+      "project_start_date": "2024-09-15T00:00:00",
+      "project_end_date": "2029-09-14T00:00:00",
+      "organization_type": {
+        "name": "Research Institutes",
+        "code": "20",
+        "is_other": false
+      },
+      "geo_lat_lon": { "lon": -84.253983, "lat": 36.020634 },
+      "opportunity_number": "OTA-24-004",
+      "full_study_section": {
+        "srg_code": "CFOT",
+        "srg_flex": null,
+        "sra_designator_code": null,
+        "sra_flex_code": null,
+        "group_code": "01",
+        "name": "Common Fund Other Transactions Programs[CFOT(01)-1]"
+      },
+      "award_notice_date": "2025-09-08T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD037922",
+      "terms": "<Achievement><Achievement Attainment><Address><Awareness><Bioinformatics><Collaborations><Communication><Communities><Data><Data Coordinating Center><Data Coordination Center><Data Science><Data Set><Development><Ensure><Evaluation><FAIR data><FAIR guiding principles><FAIR principles><Findable, Accessible, Interoperable and Re-usable><Findable, Accessible, Interoperable, and Reusable><Fostering><Funding><Future><Investigators><Learning><Medical><Medical Research><Mentors><Outcome><Participant><Process><Public Health><Reporting><Research Personnel><Research Resources><Researchers><Resource Sharing><Resources><Scientist><Students><Training><Training Activity><Universities><career><complex data><data complexity><data ecosystem><data resource><data sharing ecosystem><data tools><design><designing><developmental><experience><graduate student><innovate><innovation><innovative><learning community><on-line community><online community><outreach><programs><recruit><skills><tool><training module><usability><virtual community><work group><working group>",
+      "pref_terms": "Achievement;Address;Awareness;Bioinformatics;Collaborations;Communication;Communities;Data;Data Coordinating Center;Data Science;Data Set;Development;Ensure;Evaluation;FAIR principles;Fostering;Funding;Future;Learning;Medical;Medical Research;Mentors;Outcome;Participant;Process;Public Health;Reporting;Research Personnel;Resource Sharing;Resources;Scientist;Students;Training;Training Activity;Universities;career;complex data;data complexity;data ecosystem;data resource;data tools;design;experience;graduate student;innovation;learning community;online community;outreach;programs;recruit;skills;tool;usability;working group",
+      "abstract_text": "To help ensure that Common Fund Data Ecosystem (CFDE) data assets, data tools, and resources are findable, accessible, interoperable, and reusable (FAIR), the project will create a CFDE Training Center (TC) responsive to the needs of biomedical researchers and current and future CFDE data programs. The TC will serve as the central hub for training development, coordination, and evaluation across CFDE programs and data initiatives.",
+      "project_title": "Fostering Meaningful Use of Common Fund Data",
+      "phr_text": "This project supports public health by enhancing the accessibility and usability of biomedical data through the creation of a Common Fund Data Ecosystem (CFDE) Training Center. By equipping researchers with the skills and resources needed to utilize complex datasets, the initiative fosters advancements in bioinformatics and data sciences that can drive innovation in medical research and public health solutions.",
+      "spending_categories_desc": null,
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2025-09-15T00:00:00",
+      "budget_end": "2027-09-14T00:00:00",
+      "cfda_code": "93.310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 2151952,
+      "indirect_cost_amt": 769678,
+      "project_detail_url": "https://reporter.nih.gov/project-details/11327747",
+      "date_added": "2025-09-20T17:03:49"
     },
     {
       "appl_id": 10851224,
