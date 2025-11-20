@@ -29,7 +29,8 @@ const getPrefix = (id: string) => {
 export const getDocuments = memoize(async () => {
   const page = await newPage();
   await page.goto(opportunitiesUrl);
-  const links = Array.from(await page.locator(documentsSelector).all());
+  await page.waitForSelector(documentsSelector);
+  const links = await page.locator(documentsSelector).all();
   return await Promise.all(
     links.map(async (link) => {
       const href = await link.getAttribute("href");

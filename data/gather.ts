@@ -1,4 +1,5 @@
 import { mkdirSync } from "fs";
+import { isEqual, uniqWith } from "lodash-es";
 import { getAnalytics } from "@/gather/analytics";
 import { getDrc } from "@/gather/drc";
 import { getJournals } from "@/gather/journals";
@@ -48,20 +49,41 @@ const loadPublic = async <Result>(file: string) => {
 
 divider("Opportunities");
 
-const opportunities: Result<typeof getOpportunities> = PRIVATE
-  ? await loadPublic(opportunitiesFile)
-  : await getOpportunities();
+let opportunities: Result<typeof getOpportunities> = [];
+
+try {
+  opportunities = PRIVATE
+    ? await loadPublic(opportunitiesFile)
+    : await getOpportunities();
+} catch (error) {
+  log("Couldn't get opportunities", "warn");
+}
+
+const manualOpportunities = (
+  await loadFile<Result<typeof getOpportunities>>(
+    `${RAW_PATH}/manual-opportunities.json`,
+  )
+).data;
+
+opportunities = uniqWith(opportunities.concat(manualOpportunities), isEqual);
 
 log(`${opportunities.length} opportunities`);
 
 divider("Projects");
+
+const manualCoreProjects = (
+  await loadFile<string[]>(`${RAW_PATH}/manual-core-projects.json`)
+).data;
 
 const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
   ? {
       coreProjects: await loadPublic(coreProjectsFile),
       projects: await loadPublic(projectsFile),
     }
-  : await getProjects(opportunities.map((opportunity) => opportunity.id));
+  : await getProjects(
+      opportunities.map((opportunity) => opportunity.id),
+      manualCoreProjects,
+    );
 
 log(`${coreProjects.length} core projects`);
 log(`${projects.length} projects`);

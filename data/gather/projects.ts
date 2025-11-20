@@ -2,15 +2,15 @@ import { sum, uniq, uniqBy } from "lodash-es";
 import { queryReporter } from "@/api/reporter";
 import type { ProjectsQuery } from "@/api/types/reporter-projects-query";
 import type { ProjectsResults } from "@/api/types/reporter-projects-results";
-import { loadFile } from "@/util/file";
 import { log } from "@/util/log";
 import { query } from "@/util/request";
 import { count } from "@/util/string";
 
-const { RAW_PATH } = process.env;
-
 /** get grant projects associated with funding opportunities */
-export const getProjects = async (opportunities: string[]) => {
+export const getProjects = async (
+  opportunities: string[],
+  manualCoreProjects?: string[],
+) => {
   log(`Getting projects for ${count(opportunities)} opportunities`);
 
   /** get projects associated with opportunities */
@@ -24,11 +24,6 @@ export const getProjects = async (opportunities: string[]) => {
 
   /** extract results */
   let projects = reporter.results ?? [];
-
-  /** include manually specified core projects */
-  const manualCoreProjects = (
-    await loadFile<string[]>(`${RAW_PATH}/manual-core-projects.json`)
-  ).data;
 
   log(`Adding ${count(manualCoreProjects)} manual core projects`);
 
