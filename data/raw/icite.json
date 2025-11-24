@@ -38146,6 +38146,86 @@
       "provisional": false
     },
     {
+      "_id": "40568082",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Hu", "fullName": "Hu, Joyce", "firstName": "Joyce" },
+        {
+          "lastName": "Peng",
+          "fullName": "Peng, Beverly",
+          "firstName": "Beverly"
+        },
+        {
+          "lastName": "Pankajam",
+          "fullName": "Pankajam, Ajith V",
+          "firstName": "Ajith V"
+        },
+        {
+          "lastName": "Xu",
+          "fullName": "Xu, Bingfang",
+          "firstName": "Bingfang"
+        },
+        {
+          "lastName": "Deshpande",
+          "fullName": "Deshpande, Vikrant Anil",
+          "firstName": "Vikrant Anil"
+        },
+        {
+          "lastName": "Bueckle",
+          "fullName": "Bueckle, Andreas",
+          "firstName": "Andreas"
+        },
+        {
+          "lastName": "Herr",
+          "fullName": "Herr, Bruce W",
+          "firstName": "Bruce W"
+        },
+        {
+          "lastName": "Börner",
+          "fullName": "Börner, Katy",
+          "firstName": "Katy"
+        },
+        {
+          "lastName": "Dupont",
+          "fullName": "Dupont, Christopher",
+          "firstName": "Christopher"
+        },
+        {
+          "lastName": "Scheuermann",
+          "fullName": "Scheuermann, Richard H",
+          "firstName": "Richard H"
+        },
+        { "lastName": "Zhang", "fullName": "Zhang, Yun", "firstName": "Yun" }
+      ],
+      "doi": "10.1101/2025.04.10.648034",
+      "human": 0.3333333333333333,
+      "pmid": 40568082,
+      "title": "Benchmarking single cell transcriptome matching methods for incremental growth of reference atlases.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "40894635": 2025 }],
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "citation_count": 1,
+      "field_citation_rate": 13.671868419631279,
+      "expected_citations_per_year": null,
+      "citations_per_year": 1,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.6666666666666666,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [40894635],
+      "references": [
+        31178118, 34062119, 29409532, 35705694, 37468756, 31178122, 33249453,
+        31740819, 37429993, 38429430, 37291214, 35549406, 39607691, 16151054,
+        40082611, 38134877, 35770795, 38409223, 29206104, 34949812, 34462589,
+        37502904, 30504886, 34088715, 37516747, 34548483, 36450281, 34750582
+      ],
+      "provisional": false
+    },
+    {
       "_id": "40592888",
       "animal": 0,
       "authors": [
@@ -40475,6 +40555,337 @@
         14735121
       ],
       "provisional": false
+    },
+    {
+      "_id": "41112940",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Cai", "fullName": "Cai, Manqi", "firstName": "Manqi" },
+        {
+          "lastName": "Zhao",
+          "fullName": "Zhao, Kangyi",
+          "firstName": "Kangyi"
+        },
+        {
+          "lastName": "Huang",
+          "fullName": "Huang, Penghui",
+          "firstName": "Penghui"
+        },
+        {
+          "lastName": "Celedón",
+          "fullName": "Celedón, Juan C",
+          "firstName": "Juan C"
+        },
+        {
+          "lastName": "McKennan",
+          "fullName": "McKennan, Chris",
+          "firstName": "Chris"
+        },
+        { "lastName": "Chen", "fullName": "Chen, Wei", "firstName": "Wei" },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Jiebiao",
+          "firstName": "Jiebiao"
+        }
+      ],
+      "doi": "10.6339/25-jds1170",
+      "human": 0,
+      "pmid": 41112940,
+      "title": "EMixed: Probabilistic Multi-Omics Cellular Deconvolution of Bulk Omics Data.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "J Data Sci",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 1,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        30045751, 35140201, 25822800, 32883324, 35419551, 35794707, 24495553,
+        28122605, 28069425, 35469013, 32804935, 30174778, 38168620, 2720055,
+        24586061, 23426267, 29130882, 37596691, 35438146, 37404460, 30923181,
+        33159064, 29310712
+      ],
+      "provisional": false
+    },
+    {
+      "_id": "41238532",
+      "animal": 0.4,
+      "authors": [
+        { "lastName": "Grubb", "fullName": "Grubb, Treg", "firstName": "Treg" },
+        {
+          "lastName": "Koochaki",
+          "fullName": "Koochaki, Pooneh",
+          "firstName": "Pooneh"
+        },
+        {
+          "lastName": "Matar",
+          "fullName": "Matar, Sayed",
+          "firstName": "Sayed"
+        },
+        {
+          "lastName": "Ghandour",
+          "fullName": "Ghandour, Fatme",
+          "firstName": "Fatme"
+        },
+        {
+          "lastName": "Machaalani",
+          "fullName": "Machaalani, Marc",
+          "firstName": "Marc"
+        },
+        { "lastName": "Saad", "fullName": "Saad, Eddy", "firstName": "Eddy" },
+        {
+          "lastName": "Tang",
+          "fullName": "Tang, Cerise",
+          "firstName": "Cerise"
+        },
+        {
+          "lastName": "Reznik",
+          "fullName": "Reznik, Eduard",
+          "firstName": "Eduard"
+        },
+        {
+          "lastName": "Khatun",
+          "fullName": "Khatun, Jesminara",
+          "firstName": "Jesminara"
+        },
+        {
+          "lastName": "Salem",
+          "fullName": "Salem, Carleigh",
+          "firstName": "Carleigh"
+        },
+        {
+          "lastName": "Dubasik",
+          "fullName": "Dubasik, Noah",
+          "firstName": "Noah"
+        },
+        {
+          "lastName": "Orlando",
+          "fullName": "Orlando, David A",
+          "firstName": "David A"
+        },
+        {
+          "lastName": "Guenther",
+          "fullName": "Guenther, Matthew G",
+          "firstName": "Matthew G"
+        },
+        {
+          "lastName": "Parajuli",
+          "fullName": "Parajuli, Gyanu",
+          "firstName": "Gyanu"
+        },
+        {
+          "lastName": "Srivastava",
+          "fullName": "Srivastava, Raghvendra M",
+          "firstName": "Raghvendra M"
+        },
+        {
+          "lastName": "Martinez",
+          "fullName": "Martinez, Steven R",
+          "firstName": "Steven R"
+        },
+        {
+          "lastName": "Coker",
+          "fullName": "Coker, Jesse A",
+          "firstName": "Jesse A"
+        },
+        {
+          "lastName": "Kotecha",
+          "fullName": "Kotecha, Ritesh R",
+          "firstName": "Ritesh R"
+        },
+        {
+          "lastName": "Hakimi",
+          "fullName": "Hakimi, A Ari",
+          "firstName": "A Ari"
+        },
+        {
+          "lastName": "Asara",
+          "fullName": "Asara, John M",
+          "firstName": "John M"
+        },
+        {
+          "lastName": "Chan",
+          "fullName": "Chan, Timothy A",
+          "firstName": "Timothy A"
+        },
+        {
+          "lastName": "Vanharanta",
+          "fullName": "Vanharanta, Sakari",
+          "firstName": "Sakari"
+        },
+        {
+          "lastName": "Stauffer",
+          "fullName": "Stauffer, Shaun R",
+          "firstName": "Shaun R"
+        },
+        {
+          "lastName": "Kaelin",
+          "fullName": "Kaelin, William G",
+          "firstName": "William G"
+        },
+        {
+          "lastName": "Signoretti",
+          "fullName": "Signoretti, Sabina",
+          "firstName": "Sabina"
+        },
+        {
+          "lastName": "Choueiri",
+          "fullName": "Choueiri, Toni K",
+          "firstName": "Toni K"
+        },
+        {
+          "lastName": "Chakraborty",
+          "fullName": "Chakraborty, Abhishek A",
+          "firstName": "Abhishek A"
+        }
+      ],
+      "doi": "10.1038/s41467-025-64983-x",
+      "human": 0.2,
+      "pmid": 41238532,
+      "title": "The SLC1A1/EAAT3 dicarboxylic amino acid transporter is an epigenetically dysregulated nutrient carrier that sustains oncogenic metabolic programs.",
+      "year": 2025,
+      "journal": "Nat Commun",
+      "is_research_article": true,
+      "molecular_cellular": 0.4,
+      "is_clinical": false
+    },
+    {
+      "_id": "41246237",
+      "animal": 0.3333333333333333,
+      "authors": [
+        { "lastName": "Li", "fullName": "Li, Lusheng", "firstName": "Lusheng" },
+        { "lastName": "Xiao", "fullName": "Xiao, Hanyu", "firstName": "Hanyu" },
+        { "lastName": "Wu", "fullName": "Wu, Xinchao", "firstName": "Xinchao" },
+        {
+          "lastName": "Tang",
+          "fullName": "Tang, Zhenya",
+          "firstName": "Zhenya"
+        },
+        {
+          "lastName": "Khoury",
+          "fullName": "Khoury, Joseph D",
+          "firstName": "Joseph D"
+        },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Jieqiong",
+          "firstName": "Jieqiong"
+        },
+        {
+          "lastName": "Wan",
+          "fullName": "Wan, Shibiao",
+          "firstName": "Shibiao"
+        }
+      ],
+      "doi": "10.1002/aisy.202500965",
+      "human": 0.3333333333333333,
+      "pmid": 41246237,
+      "title": "RanBALL: An Ensemble Machine Learning Framework for Accurate Subtype Identification of Pediatric B-Cell Acute Lymphoblastic Leukemia.",
+      "year": 2025,
+      "journal": "Adv Intell Syst",
+      "is_research_article": true,
+      "molecular_cellular": 0.3333333333333333,
+      "is_clinical": false
+    },
+    {
+      "_id": "41251144",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Chen", "fullName": "Chen, Min", "firstName": "Min" },
+        { "lastName": "Du", "fullName": "Du, Lin", "firstName": "Lin" },
+        {
+          "lastName": "Zhao",
+          "fullName": "Zhao, Siyuan",
+          "firstName": "Siyuan"
+        },
+        { "lastName": "Ye", "fullName": "Ye, Bowei", "firstName": "Bowei" },
+        {
+          "lastName": "Delafrouz",
+          "fullName": "Delafrouz, Pourya",
+          "firstName": "Pourya"
+        },
+        {
+          "lastName": "Farooq",
+          "fullName": "Farooq, Hammad",
+          "firstName": "Hammad"
+        },
+        {
+          "lastName": "Chattopadhyay",
+          "fullName": "Chattopadhyay, Debaleena",
+          "firstName": "Debaleena"
+        },
+        {
+          "lastName": "Marai",
+          "fullName": "Marai, G Elisabeta",
+          "firstName": "G Elisabeta"
+        },
+        {
+          "lastName": "Shao",
+          "fullName": "Shao, Zhifeng",
+          "firstName": "Zhifeng"
+        },
+        { "lastName": "Liang", "fullName": "Liang, Jie", "firstName": "Jie" },
+        {
+          "lastName": "Czajkowsky",
+          "fullName": "Czajkowsky, Daniel M",
+          "firstName": "Daniel M"
+        },
+        {
+          "lastName": "Chronis",
+          "fullName": "Chronis, Constantinos",
+          "firstName": "Constantinos"
+        }
+      ],
+      "doi": "10.1093/nar/gkaf1233",
+      "human": 0.4,
+      "pmid": 41251144,
+      "title": "ChromPolymerDB: a high-resolution database of single-cell 3D chromatin structures for functional genomics.",
+      "year": 2025,
+      "journal": "Nucleic Acids Res",
+      "is_research_article": true,
+      "molecular_cellular": 0.6,
+      "is_clinical": false
+    },
+    {
+      "_id": "41263098",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Yan", "fullName": "Yan, Yuchen", "firstName": "Yuchen" },
+        {
+          "lastName": "Patel",
+          "fullName": "Patel, Revanth Sai Kumar Reddy",
+          "firstName": "Revanth Sai Kumar Reddy"
+        },
+        {
+          "lastName": "Shanmugam",
+          "fullName": "Shanmugam, N R Siva",
+          "firstName": "N R Siva"
+        },
+        {
+          "lastName": "Akresi",
+          "fullName": "Akresi, Jerry",
+          "firstName": "Jerry"
+        },
+        { "lastName": "Yin", "fullName": "Yin, Yanbin", "firstName": "Yanbin" }
+      ],
+      "doi": "10.1093/nar/gkaf1185",
+      "human": 0.75,
+      "pmid": 41263098,
+      "title": "dbCAN-HGM: CAZyme gene clusters in gut microbiomes of diverse human populations.",
+      "year": 2025,
+      "journal": "Nucleic Acids Res",
+      "is_research_article": true,
+      "molecular_cellular": 0.25,
+      "is_clinical": false
     }
   ]
 }
