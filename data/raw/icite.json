@@ -41008,6 +41008,108 @@
       "provisional": false
     },
     {
+      "_id": "41068133",
+      "animal": 1,
+      "authors": [
+        {
+          "lastName": "Fragkou",
+          "fullName": "Fragkou, Panagiota",
+          "firstName": "Panagiota"
+        },
+        {
+          "lastName": "Martakos",
+          "fullName": "Martakos, Ioannis",
+          "firstName": "Ioannis"
+        },
+        {
+          "lastName": "Rouni",
+          "fullName": "Rouni, Georgia",
+          "firstName": "Georgia"
+        },
+        {
+          "lastName": "Vasilakos",
+          "fullName": "Vasilakos, Demetrios",
+          "firstName": "Demetrios"
+        },
+        {
+          "lastName": "Koutsoukos",
+          "fullName": "Koutsoukos, Evangelos",
+          "firstName": "Evangelos"
+        },
+        {
+          "lastName": "Saviane",
+          "fullName": "Saviane, Alesssio",
+          "firstName": "Alesssio"
+        },
+        {
+          "lastName": "Cappellozza",
+          "fullName": "Cappellozza, Silvia",
+          "firstName": "Silvia"
+        },
+        {
+          "lastName": "Thomaidis",
+          "fullName": "Thomaidis, Nikolaos S",
+          "firstName": "Nikolaos S"
+        },
+        {
+          "lastName": "Kostakis",
+          "fullName": "Kostakis, Marios G",
+          "firstName": "Marios G"
+        },
+        {
+          "lastName": "Samiotaki",
+          "fullName": "Samiotaki, Martina",
+          "firstName": "Martina"
+        },
+        {
+          "lastName": "Kotsiantis",
+          "fullName": "Kotsiantis, Sotiris",
+          "firstName": "Sotiris"
+        },
+        {
+          "lastName": "Barcenas",
+          "fullName": "Barcenas, Mariana",
+          "firstName": "Mariana"
+        },
+        {
+          "lastName": "Dedos",
+          "fullName": "Dedos, Skarlatos G",
+          "firstName": "Skarlatos G"
+        }
+      ],
+      "doi": "10.1038/s41597-025-06071-9",
+      "human": 0,
+      "pmid": 41068133,
+      "title": "Multiomics analysis of the Silkworm cocoon shell.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Sci Data",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        39494541, 31241926, 27576083, 32231221, 19541911, 33747696, 5483450,
+        31882993, 29967484, 36153338, 27032085, 18779155, 33199890, 13641241,
+        36718535, 35301348, 16576753, 25938372, 31158983, 28887014, 36252626,
+        30291158, 22743772, 40235734, 31479798, 22744178, 39438443, 17598559,
+        30464214, 25123546, 29414784, 25860555, 5020813, 40133305, 1172191,
+        26439355, 20534444, 32986708, 39726956, 31768060, 10233709, 11125149,
+        27348712, 26467476, 29472695, 39425066, 35710135, 11125150, 32269754,
+        33297937
+      ],
+      "provisional": false
+    },
+    {
       "_id": "41112940",
       "animal": 0,
       "authors": [
@@ -41065,6 +41167,122 @@
         24586061, 23426267, 29130882, 37596691, 35438146, 37404460, 30923181,
         33159064, 29310712
       ],
+      "provisional": false
+    },
+    {
+      "_id": "41231752",
+      "animal": 0.4,
+      "authors": [
+        {
+          "lastName": "Wilson",
+          "fullName": "Wilson, Robert",
+          "firstName": "Robert"
+        },
+        {
+          "lastName": "Bülbül Ataç",
+          "fullName": "Bülbül Ataç, Tuğba",
+          "firstName": "Tuğba"
+        },
+        {
+          "lastName": "Cheng",
+          "fullName": "Cheng, Tsz Kwan",
+          "firstName": "Tsz Kwan"
+        },
+        {
+          "lastName": "Frost",
+          "fullName": "Frost, Anthony",
+          "firstName": "Anthony"
+        },
+        {
+          "lastName": "Güneş",
+          "fullName": "Güneş, Osman",
+          "firstName": "Osman"
+        },
+        { "lastName": "Kan", "fullName": "Kan, Marina", "firstName": "Marina" },
+        {
+          "lastName": "Keskivali-Bond",
+          "fullName": "Keskivali-Bond, Piia",
+          "firstName": "Piia"
+        },
+        {
+          "lastName": "López Gómez",
+          "fullName": "López Gómez, Federico",
+          "firstName": "Federico"
+        },
+        {
+          "lastName": "McLaughlin",
+          "fullName": "McLaughlin, James",
+          "firstName": "James"
+        },
+        {
+          "lastName": "Mucha",
+          "fullName": "Mucha, Jakub",
+          "firstName": "Jakub"
+        },
+        {
+          "lastName": "Munava",
+          "fullName": "Munava, Tawanda",
+          "firstName": "Tawanda"
+        },
+        {
+          "lastName": "Oliveira",
+          "fullName": "Oliveira, Carla",
+          "firstName": "Carla"
+        },
+        { "lastName": "Pava", "fullName": "Pava, Diego", "firstName": "Diego" },
+        {
+          "lastName": "Peña Estrada",
+          "fullName": "Peña Estrada, Jose Francisco",
+          "firstName": "Jose Francisco"
+        },
+        {
+          "lastName": "Selkirk",
+          "fullName": "Selkirk, Ewan",
+          "firstName": "Ewan"
+        },
+        {
+          "lastName": "Vardal",
+          "fullName": "Vardal, Bora",
+          "firstName": "Bora"
+        },
+        { "lastName": "Wells", "fullName": "Wells, Sara", "firstName": "Sara" },
+        {
+          "lastName": "Cacheiro",
+          "fullName": "Cacheiro, Pilar",
+          "firstName": "Pilar"
+        },
+        {
+          "lastName": "Smedley",
+          "fullName": "Smedley, Damian",
+          "firstName": "Damian"
+        },
+        {
+          "lastName": "Parkinson",
+          "fullName": "Parkinson, Helen",
+          "firstName": "Helen"
+        }
+      ],
+      "doi": "10.1093/nar/gkaf1148",
+      "human": 0.6,
+      "pmid": 41231752,
+      "title": "International Mouse Phenotyping Consortium Portal: facilitating investigation of gene function and providing insights into human disease.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Nucleic Acids Res",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
       "provisional": false
     },
     {
@@ -41369,6 +41587,163 @@
       "provisional": false
     },
     {
+      "_id": "41251214",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Song", "fullName": "Song, Meiou", "firstName": "Meiou" },
+        {
+          "lastName": "Anderson",
+          "fullName": "Anderson, Colin C",
+          "firstName": "Colin C"
+        },
+        {
+          "lastName": "Sridhar",
+          "fullName": "Sridhar, Nakul",
+          "firstName": "Nakul"
+        },
+        {
+          "lastName": "Reisz",
+          "fullName": "Reisz, Julie A",
+          "firstName": "Julie A"
+        },
+        { "lastName": "Akh", "fullName": "Akh, Leyla", "firstName": "Leyla" },
+        { "lastName": "Gao", "fullName": "Gao, Yu", "firstName": "Yu" },
+        {
+          "lastName": "D'Alessandro",
+          "fullName": "D'Alessandro, Angelo",
+          "firstName": "Angelo"
+        },
+        {
+          "lastName": "Ding",
+          "fullName": "Ding, Xiaoyun",
+          "firstName": "Xiaoyun"
+        }
+      ],
+      "doi": "10.1039/d5lc00652j",
+      "human": 0.5,
+      "pmid": 41251214,
+      "title": "Surface acoustic wave hemolysis assay for evaluating stored red blood cells.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Lab Chip",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        33351786, 30865302, 32351500, 22936857, 38537079, 30037155, 25651844,
+        17254586, 35057467, 34793330, 33381865, 18298603, 21427737, 39478346,
+        11792145, 24480982, 37760001, 29034365, 26183122, 36413919, 32241843,
+        33146433, 36966466, 36812319, 38964323, 24194863, 19458714, 30342044,
+        19699017, 20299509, 38940215, 33283794, 32427268, 35736672, 30925182,
+        37478737, 25195188, 31796943, 20498365, 40067362, 889805, 17804128,
+        31788397, 39541586, 37574398, 39828898, 28472540, 36682143, 31119654,
+        36615726, 33737886, 21749648, 35190549, 35984231, 28537294, 21251007,
+        28387366, 34744776, 36377422, 30417938, 29868587, 34014839, 39541460,
+        26001274, 37494421, 39927941, 31601941, 28150311, 22930834, 31583109,
+        37512500, 37976448, 29090212, 24296983, 26904677, 38437568, 23823224,
+        38513237, 22949692, 15231850, 30046479, 27941245, 33657208, 27554084,
+        35574449, 32893496, 33570643, 20163690
+      ],
+      "provisional": false
+    },
+    {
+      "_id": "41256645",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Chen", "fullName": "Chen, Min", "firstName": "Min" },
+        { "lastName": "Du", "fullName": "Du, Lin", "firstName": "Lin" },
+        {
+          "lastName": "Zhao",
+          "fullName": "Zhao, Siyuan",
+          "firstName": "Siyuan"
+        },
+        { "lastName": "Ye", "fullName": "Ye, Bowei", "firstName": "Bowei" },
+        {
+          "lastName": "Delafrouz",
+          "fullName": "Delafrouz, Pourya",
+          "firstName": "Pourya"
+        },
+        {
+          "lastName": "Farooq",
+          "fullName": "Farooq, Hammad",
+          "firstName": "Hammad"
+        },
+        {
+          "lastName": "Chattopadhyay",
+          "fullName": "Chattopadhyay, Debaleena",
+          "firstName": "Debaleena"
+        },
+        {
+          "lastName": "Marai",
+          "fullName": "Marai, G Elisabeta",
+          "firstName": "G Elisabeta"
+        },
+        {
+          "lastName": "Shao",
+          "fullName": "Shao, Zhifeng",
+          "firstName": "Zhifeng"
+        },
+        { "lastName": "Liang", "fullName": "Liang, Jie", "firstName": "Jie" },
+        {
+          "lastName": "Czajkowsky",
+          "fullName": "Czajkowsky, Daniel M",
+          "firstName": "Daniel M"
+        },
+        {
+          "lastName": "Chronis",
+          "fullName": "Chronis, Constantinos",
+          "firstName": "Constantinos"
+        }
+      ],
+      "doi": "10.1101/2025.09.27.678816",
+      "human": 0.4,
+      "pmid": 41256645,
+      "title": "ChromPolymerDB: A High-Resolution Database of Single-Cell 3D Chromatin Structures for Functional Genomics.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.6,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        26069635, 36555471, 40027763, 37863956, 36289338, 26813731, 28983045,
+        19851505, 29887377, 28682332, 29859212, 34399301, 36215037, 37488215,
+        31751002, 25693564, 24409383, 27734896, 19918120, 25959774, 26734724,
+        28135255, 25768903, 20596824, 406262, 36265466, 38712242, 35352511,
+        34085045, 33420075, 36562559, 31311566, 24067610, 25650798, 25044756,
+        34446921, 38480925, 25497547, 34740370, 31235599, 28587062, 37335863,
+        27706140, 30078704, 38321563, 29335463, 9279664, 35864167, 30286773,
+        33631432, 30799036, 32758136, 34508258, 37408263, 31847870, 38746164,
+        30361340, 22955616, 26119342, 31197269, 19680443, 30367165, 26499245,
+        15537832, 30166492, 31948478, 19014481, 11283701, 24890832, 2560545,
+        23355469, 39891345, 31467267, 31591420, 38020905, 35173297, 28355183,
+        20627891, 28273065, 19815776, 19561607, 29053968, 34311744, 36477537,
+        24119843, 29106613, 35501320, 30470303, 18516046, 16849169, 16191168,
+        28388407
+      ],
+      "provisional": false
+    },
+    {
       "_id": "41263098",
       "animal": 0,
       "authors": [
@@ -41411,6 +41786,278 @@
       "cited_by_clin": null,
       "cited_by": null,
       "references": [],
+      "provisional": false
+    },
+    {
+      "_id": "41266305",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Fouladi", "fullName": "Fouladi, F", "firstName": "F" },
+        { "lastName": "Chen", "fullName": "Chen, Y", "firstName": "Y" },
+        { "lastName": "Bera", "fullName": "Bera, S", "firstName": "S" },
+        {
+          "lastName": "Jarmusch",
+          "fullName": "Jarmusch, A K",
+          "firstName": "A K"
+        },
+        { "lastName": "Van Tyne", "fullName": "Van Tyne, D", "firstName": "D" },
+        {
+          "lastName": "Palella",
+          "fullName": "Palella, F J",
+          "firstName": "F J"
+        },
+        {
+          "lastName": "Margolick",
+          "fullName": "Margolick, J B",
+          "firstName": "J B"
+        },
+        { "lastName": "Chew", "fullName": "Chew, K W", "firstName": "K W" },
+        { "lastName": "Sun", "fullName": "Sun, J", "firstName": "J" },
+        {
+          "lastName": "Martinson",
+          "fullName": "Martinson, J",
+          "firstName": "J"
+        },
+        {
+          "lastName": "Rinaldo",
+          "fullName": "Rinaldo, C R",
+          "firstName": "C R"
+        },
+        {
+          "lastName": "Peddada",
+          "fullName": "Peddada, S D",
+          "firstName": "S D"
+        }
+      ],
+      "doi": "10.1038/s41467-025-64822-z",
+      "human": 0.75,
+      "pmid": 41266305,
+      "title": "A taxon-specific measurement of disruption in a multi-modal study of microbiomes and metabolomes reveals system-wide dysbiosis preceding HIV-1 infection.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Nat Commun",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.25,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        31779668, 33012899, 36179550, 38326609, 31369840, 12724293, 27189771,
+        24695404, 34419928, 26618358, 34879869, 27077120, 32862781, 38303112,
+        12349391, 38804398, 17550978, 24451087, 22206985, 33675224, 33102244,
+        24399150, 29187837, 33575625, 22132954, 34986597, 34258318, 20368178,
+        39277660, 28002063, 31996020, 33264391, 24642063, 15365095, 24335481,
+        38534413, 22388286, 30777439, 31574898, 23053562, 32582143, 31263508,
+        36794912, 27012178, 2574255, 29498184, 38018975, 27693306, 36948655,
+        23677008, 17368322, 20508247, 1724477, 38052229, 26467476, 38035339,
+        32547507, 7649494, 11317002, 34262212, 26075636, 27102537, 38158428,
+        35851253, 26236243, 19273290, 34818131, 30657866, 35999204, 21330412,
+        24034618, 37697393, 36238574, 39215321
+      ],
+      "provisional": false
+    },
+    {
+      "_id": "41271695",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Corbett",
+          "fullName": "Corbett, Ryan J",
+          "firstName": "Ryan J"
+        },
+        {
+          "lastName": "Kaufman",
+          "fullName": "Kaufman, Rebecca S",
+          "firstName": "Rebecca S"
+        },
+        {
+          "lastName": "McQuaid",
+          "fullName": "McQuaid, Shelly W",
+          "firstName": "Shelly W"
+        },
+        {
+          "lastName": "Vaksman",
+          "fullName": "Vaksman, Zalman",
+          "firstName": "Zalman"
+        },
+        {
+          "lastName": "Phul",
+          "fullName": "Phul, Saksham",
+          "firstName": "Saksham"
+        },
+        {
+          "lastName": "Brown",
+          "fullName": "Brown, Miguel A",
+          "firstName": "Miguel A"
+        },
+        {
+          "lastName": "Mason",
+          "fullName": "Mason, Jennifer L",
+          "firstName": "Jennifer L"
+        },
+        {
+          "lastName": "Waszak",
+          "fullName": "Waszak, Sebastian M",
+          "firstName": "Sebastian M"
+        },
+        { "lastName": "Zhang", "fullName": "Zhang, Bo", "firstName": "Bo" },
+        {
+          "lastName": "Zhong",
+          "fullName": "Zhong, Chuwei",
+          "firstName": "Chuwei"
+        },
+        {
+          "lastName": "Blauel",
+          "fullName": "Blauel, Emily",
+          "firstName": "Emily"
+        },
+        {
+          "lastName": "Desai",
+          "fullName": "Desai, Heena",
+          "firstName": "Heena"
+        },
+        {
+          "lastName": "Hausler",
+          "fullName": "Hausler, Ryan",
+          "firstName": "Ryan"
+        },
+        {
+          "lastName": "Naqvi",
+          "fullName": "Naqvi, Ammar S",
+          "firstName": "Ammar S"
+        },
+        {
+          "lastName": "Daggett",
+          "fullName": "Daggett, Jessica M",
+          "firstName": "Jessica M"
+        },
+        {
+          "lastName": "Sickler",
+          "fullName": "Sickler, Alex",
+          "firstName": "Alex"
+        },
+        {
+          "lastName": "Cresswell-Clay",
+          "fullName": "Cresswell-Clay, Evan C",
+          "firstName": "Evan C"
+        },
+        {
+          "lastName": "Sullivan",
+          "fullName": "Sullivan, Patricia J",
+          "firstName": "Patricia J"
+        },
+        {
+          "lastName": "Chroni",
+          "fullName": "Chroni, Antonia",
+          "firstName": "Antonia"
+        },
+        {
+          "lastName": "Geng",
+          "fullName": "Geng, Zhuangzhuang",
+          "firstName": "Zhuangzhuang"
+        },
+        {
+          "lastName": "Gonzalez",
+          "fullName": "Gonzalez, Elizabeth M",
+          "firstName": "Elizabeth M"
+        },
+        {
+          "lastName": "Zhu",
+          "fullName": "Zhu, Yuankun",
+          "firstName": "Yuankun"
+        },
+        {
+          "lastName": "Heath",
+          "fullName": "Heath, Allison P",
+          "firstName": "Allison P"
+        },
+        { "lastName": "Li", "fullName": "Li, Marilyn", "firstName": "Marilyn" },
+        {
+          "lastName": "Storm",
+          "fullName": "Storm, Phillip B",
+          "firstName": "Phillip B"
+        },
+        {
+          "lastName": "Resnick",
+          "fullName": "Resnick, Adam C",
+          "firstName": "Adam C"
+        },
+        {
+          "lastName": "Maxwell",
+          "fullName": "Maxwell, Kara N",
+          "firstName": "Kara N"
+        },
+        {
+          "lastName": "Cole",
+          "fullName": "Cole, Kristina A",
+          "firstName": "Kristina A"
+        },
+        {
+          "lastName": "Waanders",
+          "fullName": "Waanders, Angela J",
+          "firstName": "Angela J"
+        },
+        {
+          "lastName": "Bornhorst",
+          "fullName": "Bornhorst, Miriam",
+          "firstName": "Miriam"
+        },
+        {
+          "lastName": "MacFarland",
+          "fullName": "MacFarland, Suzanne P",
+          "firstName": "Suzanne P"
+        },
+        {
+          "lastName": "Rokita",
+          "fullName": "Rokita, Jo Lynne",
+          "firstName": "Jo Lynne"
+        },
+        {
+          "lastName": "Diskin",
+          "fullName": "Diskin, Sharon J",
+          "firstName": "Sharon J"
+        }
+      ],
+      "doi": "10.1038/s41467-025-65190-4",
+      "human": 1,
+      "pmid": 41271695,
+      "title": "Germline pathogenic variation impacts somatic alterations and patient outcomes in pediatric central nervous system tumors.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Nat Commun",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        29753700, 33242424, 36175409, 40891528, 8950679, 26760213, 26325560,
+        39847453, 26580448, 34185076, 33230148, 32371905, 35585047, 36354292,
+        29300620, 32415133, 37186028, 24429628, 39197652, 32321997, 34308366,
+        32191290, 37683927, 28890946, 21478889, 27100738, 36541551, 29539639,
+        39036440, 34308104, 28371827, 22155870, 33020650, 32296180, 38139220,
+        28007021, 37492101, 21036787, 26822237, 29669011, 17488585, 39540428,
+        26647377, 24336570, 28596308, 29749061, 32066500, 26899170, 25697820,
+        34301788, 31247102, 20729918, 37688570, 34184824, 38426335, 29617664,
+        33203571, 21324876, 30531922, 38057664, 20230186, 24812344, 21031597,
+        36335802, 40345854, 37688579, 20644199
+      ],
       "provisional": false
     }
   ]
