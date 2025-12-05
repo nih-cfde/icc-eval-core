@@ -74,7 +74,7 @@ export const getCommits = memoize(async (owner: string, repo: string) =>
   (await octokit.paginate(octokit.rest.repos.listCommits, { owner, repo })).map(
     (commit) =>
       /** only keep potentially useful fields */
-      pick(commit, ["sha", "commit.committer.date"]),
+      pick(commit, ["sha", "commit.committer.date", "stats"]),
   ),
 );
 
