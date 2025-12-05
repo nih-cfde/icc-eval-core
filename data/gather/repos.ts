@@ -150,7 +150,6 @@ export const getRepos = async (coreProjects: string[]) => {
     pullRequestTimeOpen: getOpenTime(repo.pullRequests),
     commits: repo.commits.map((commit) => ({
       date: commit.commit?.committer?.date ?? "",
-      lines: commit.stats?.total ?? 0,
     })),
     contributors: repo.contributors.map((contributor) => ({
       name: contributor.login ?? contributor.name ?? "",

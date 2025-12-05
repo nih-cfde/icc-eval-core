@@ -81,7 +81,6 @@ export const getCommits = memoize(async (owner: string, repo: string) =>
             date: commit.commit.committer?.date,
           },
         },
-        stats: commit.stats,
       }),
   ),
 );
