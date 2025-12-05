@@ -1,4 +1,4 @@
-import { pick, uniq, uniqBy } from "lodash-es";
+import { uniq, uniqBy } from "lodash-es";
 import { Octokit, type RequestError } from "octokit";
 import { type Repository } from "@octokit/graphql-schema";
 import { throttling } from "@octokit/plugin-throttling";
@@ -74,7 +74,15 @@ export const getCommits = memoize(async (owner: string, repo: string) =>
   (await octokit.paginate(octokit.rest.repos.listCommits, { owner, repo })).map(
     (commit) =>
       /** only keep potentially useful fields */
-      pick(commit, ["sha", "commit.committer.date", "stats"]),
+      ({
+        sha: commit.sha,
+        commit: {
+          committer: {
+            date: commit.commit.committer?.date,
+          },
+        },
+        stats: commit.stats,
+      }),
   ),
 );
 
@@ -89,7 +97,12 @@ export const getStars = memoize(async (owner: string, repo: string) =>
     })
   )
     /** only keep potentially useful fields */
-    .map((star) => pick(star, ["id", "login", "name", "starred_at"])),
+    .map((star) => ({
+      id: "id" in star ? star.id : undefined,
+      login: "login" in star ? star.login : undefined,
+      name: "name" in star ? star.name : undefined,
+      starred_at: star.starred_at,
+    })),
 );
 
 /**
@@ -101,7 +114,12 @@ export const getStars = memoize(async (owner: string, repo: string) =>
 export const getForks = memoize(async (owner: string, repo: string) =>
   (await octokit.paginate(octokit.rest.repos.listForks, { owner, repo }))
     /** only keep potentially useful fields */
-    .map((fork) => pick(fork, ["id", "name", "full_name", "created_at"])),
+    .map((fork) => ({
+      id: fork.id,
+      name: fork.name,
+      full_name: fork.full_name,
+      created_at: fork.created_at,
+    })),
 );
 
 /** get issues for repo */
@@ -115,19 +133,17 @@ export const getIssues = memoize(async (owner: string, repo: string) =>
   )
     .filter((issue) => !issue.pull_request)
     /** only keep potentially useful fields */
-    .map((issue) =>
-      pick(issue, [
-        "id",
-        "number",
-        "title",
-        "state",
-        "state_reason",
-        "created_at",
-        "updated_at",
-        "closed_at",
-        "labels",
-      ]),
-    ),
+    .map((issue) => ({
+      id: issue.id,
+      number: issue.number,
+      title: issue.title,
+      state: issue.state,
+      state_reason: issue.state_reason,
+      created_at: issue.created_at,
+      updated_at: issue.updated_at,
+      closed_at: issue.closed_at,
+      labels: issue.labels,
+    })),
 );
 
 /** get pull requests for repo */
@@ -140,19 +156,18 @@ export const getPullRequests = memoize(async (owner: string, repo: string) =>
     })
   )
     /** only keep potentially useful fields */
-    .map((pullRequest) =>
-      pick(pullRequest, [
-        "id",
-        "number",
-        "title",
-        "state",
-        "state_reason",
-        "created_at",
-        "updated_at",
-        "closed_at",
-        "labels",
-      ]),
-    ),
+    .map((pullRequest) => ({
+      id: pullRequest.id,
+      number: pullRequest.number,
+      title: pullRequest.title,
+      state: pullRequest.state,
+      state_reason:
+        "state_reason" in pullRequest ? pullRequest.state_reason : undefined,
+      created_at: pullRequest.created_at,
+      updated_at: pullRequest.updated_at,
+      closed_at: pullRequest.closed_at,
+      labels: pullRequest.labels,
+    })),
 );
 
 /** check whether file exists in repo */
@@ -177,9 +192,12 @@ export const fileExists = memoize(
 export const getContributors = memoize(async (owner: string, repo: string) =>
   (await octokit.paginate(octokit.rest.repos.listContributors, { owner, repo }))
     /** only keep potentially useful fields */
-    .map((contributor) =>
-      pick(contributor, ["id", "login", "name", "contributions"]),
-    ),
+    .map((contributor) => ({
+      id: contributor.id,
+      login: contributor.login,
+      name: contributor.name,
+      contributions: contributor.contributions,
+    })),
 );
 
 /** get programming languages used in repo */

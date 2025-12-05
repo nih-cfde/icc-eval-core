@@ -132,9 +132,9 @@ export const getRepos = async (coreProjects: string[]) => {
     topics: (repo.topics ?? []).filter(
       (topic) => !topic.match(new RegExp(repo.coreProject, "i")),
     ),
-    stars: repo.stars.map((star) => star.starred_at ?? ""),
+    stars: repo.stars.map((star) => ({ date: star.starred_at ?? "" })),
     watchers: repo.watchers,
-    forks: repo.forks.map((fork) => fork.created_at ?? ""),
+    forks: repo.forks.map((fork) => ({ date: fork.created_at ?? "" })),
     issues: repo.issues.map(mapIssue),
     openIssues: repo.issues.filter((issue) => issue.state === "open").length,
     closedIssues: repo.issues.filter((issue) => issue.state === "closed")
@@ -148,7 +148,10 @@ export const getRepos = async (coreProjects: string[]) => {
       (pullRequest) => pullRequest.state === "closed",
     ).length,
     pullRequestTimeOpen: getOpenTime(repo.pullRequests),
-    commits: repo.commits.map((commit) => commit.commit?.committer?.date ?? ""),
+    commits: repo.commits.map((commit) => ({
+      date: commit.commit?.committer?.date ?? "",
+      lines: commit.stats?.total ?? 0,
+    })),
     contributors: repo.contributors.map((contributor) => ({
       name: contributor.login ?? contributor.name ?? "",
       contributions: contributor.contributions,

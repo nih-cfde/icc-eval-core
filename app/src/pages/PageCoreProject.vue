@@ -616,14 +616,14 @@ const repoColsB: Cols<typeof projectRepos.value> = [
 /** star chart data */
 const starsOverTime = computed(() =>
   projectRepos.value
-    .map(({ stars }) => stars.map((star) => [date(star), 1] as const))
+    .map(({ stars }) => stars.map((star) => [date(star.date), 1] as const))
     .flat(),
 );
 
 /** fork chart data */
 const forksOverTime = computed(() =>
   projectRepos.value
-    .map(({ forks }) => forks.map((fork) => [date(fork), 1] as const))
+    .map(({ forks }) => forks.map((fork) => [date(fork.date), 1] as const))
     .flat(),
 );
 
@@ -648,7 +648,9 @@ const pullRequestsOverTime = computed(() =>
 /** commit chart data */
 const commitsOverTime = computed(() =>
   projectRepos.value
-    .map(({ commits }) => commits.map((commit) => [date(commit), 1] as const))
+    .map(({ commits }) =>
+      commits.map((commit) => [date(commit.date), 1] as const),
+    )
     .flat(),
 );
 
