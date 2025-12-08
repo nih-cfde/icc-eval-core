@@ -40514,6 +40514,46 @@
       "provisional": false
     },
     {
+      "_id": "40841169",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Al-Abri",
+          "fullName": "Al-Abri, Rashid",
+          "firstName": "Rashid"
+        },
+        {
+          "lastName": "Gürsoy",
+          "fullName": "Gürsoy, Gamze",
+          "firstName": "Gamze"
+        }
+      ],
+      "doi": "10.1101/gr.280563.125",
+      "human": 0.3333333333333333,
+      "pmid": 40841169,
+      "title": "Estimating the size of long tandem repeat expansions from short reads with ScatTR.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Genome Res",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.6666666666666666,
+      "x_coord": -0.8660254037844386,
+      "y_coord": -0.5,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
+      "provisional": false
+    },
+    {
       "_id": "40863167",
       "animal": 0,
       "authors": [
@@ -41208,6 +41248,165 @@
       "provisional": false
     },
     {
+      "_id": "41005293",
+      "animal": 0.3333333333333333,
+      "authors": [
+        {
+          "lastName": "Alicea Pauneto",
+          "fullName": "Alicea Pauneto, Coral Del Mar",
+          "firstName": "Coral Del Mar"
+        },
+        {
+          "lastName": "Riesenberg",
+          "fullName": "Riesenberg, Brian P",
+          "firstName": "Brian P"
+        },
+        {
+          "lastName": "Gandy",
+          "fullName": "Gandy, Evelyn J",
+          "firstName": "Evelyn J"
+        },
+        {
+          "lastName": "Kennedy",
+          "fullName": "Kennedy, Andrew S",
+          "firstName": "Andrew S"
+        },
+        {
+          "lastName": "Clutton",
+          "fullName": "Clutton, Genevieve T",
+          "firstName": "Genevieve T"
+        },
+        {
+          "lastName": "Hem",
+          "fullName": "Hem, Jessica W",
+          "firstName": "Jessica W"
+        },
+        {
+          "lastName": "Hurst",
+          "fullName": "Hurst, Katie E",
+          "firstName": "Katie E"
+        },
+        {
+          "lastName": "Hunt",
+          "fullName": "Hunt, Elizabeth G",
+          "firstName": "Elizabeth G"
+        },
+        {
+          "lastName": "Green",
+          "fullName": "Green, Jarred M",
+          "firstName": "Jarred M"
+        },
+        {
+          "lastName": "Miller",
+          "fullName": "Miller, Brian C",
+          "firstName": "Brian C"
+        },
+        {
+          "lastName": "Angus",
+          "fullName": "Angus, Steven P",
+          "firstName": "Steven P"
+        },
+        {
+          "lastName": "Johnson",
+          "fullName": "Johnson, Gary L",
+          "firstName": "Gary L"
+        },
+        {
+          "lastName": "Esther",
+          "fullName": "Esther, Robert J",
+          "firstName": "Robert J"
+        },
+        {
+          "lastName": "Guerriero",
+          "fullName": "Guerriero, Jennifer L",
+          "firstName": "Jennifer L"
+        },
+        { "lastName": "Gao", "fullName": "Gao, Peng", "firstName": "Peng" },
+        {
+          "lastName": "Soto-Pantoja",
+          "fullName": "Soto-Pantoja, David R",
+          "firstName": "David R"
+        },
+        {
+          "lastName": "Ferris",
+          "fullName": "Ferris, Robert L",
+          "firstName": "Robert L"
+        },
+        {
+          "lastName": "Modliszewski",
+          "fullName": "Modliszewski, Jennifer L",
+          "firstName": "Jennifer L"
+        },
+        {
+          "lastName": "Coleman",
+          "fullName": "Coleman, Michael F",
+          "firstName": "Michael F"
+        },
+        {
+          "lastName": "Chung",
+          "fullName": "Chung, H Kay",
+          "firstName": "H Kay"
+        },
+        {
+          "lastName": "Milner",
+          "fullName": "Milner, J Justin",
+          "firstName": "J Justin"
+        },
+        {
+          "lastName": "Moschos",
+          "fullName": "Moschos, Stergios J",
+          "firstName": "Stergios J"
+        },
+        {
+          "lastName": "Wiseman",
+          "fullName": "Wiseman, R Luke",
+          "firstName": "R Luke"
+        },
+        {
+          "lastName": "Thaxton",
+          "fullName": "Thaxton, Jessica E",
+          "firstName": "Jessica E"
+        }
+      ],
+      "doi": "10.1016/j.immuni.2025.09.003",
+      "human": 0.1111111111111111,
+      "pmid": 41005293,
+      "title": "Intra-tumoral hypoxia promotes CD8<sup>+</sup> T cell dysfunction via chronic activation of integrated stress response transcription factor ATF4.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Immunity",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5555555555555556,
+      "x_coord": -0.19245008972987526,
+      "y_coord": -0.33333333333333337,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        18458112, 21739672, 30659052, 27496732, 22743774, 18800157, 6332167,
+        23624402, 23333938, 29063813, 27426915, 30778252, 27629041, 27812542,
+        37055532, 31810882, 33258451, 30721155, 22660795, 20066008, 25741597,
+        33177163, 28797581, 38230766, 33020660, 33755719, 26771021, 34017005,
+        34031618, 27293185, 16199517, 31263264, 33133157, 15314157, 29057869,
+        35326151, 23104886, 38490211, 25238096, 22500798, 31836669, 31870423,
+        22206904, 29942094, 38565142, 32294407, 33277577, 36126165, 30674674,
+        36807772, 27501248, 31740819, 36150390, 33104836, 36216928, 34528529,
+        18724371, 40086437, 20473272, 25867923, 28263959, 9565547, 25739764,
+        32327570, 23415911, 36825279, 25516281, 36063172, 35284940, 27452504,
+        32367803, 32075802, 11106749, 33220178, 19690063, 30643263, 24634103,
+        28696288, 33398183
+      ],
+      "provisional": false
+    },
+    {
       "_id": "41068133",
       "animal": 1,
       "authors": [
@@ -41374,6 +41573,148 @@
       "provisional": false
     },
     {
+      "_id": "41191057",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Pavelka",
+          "fullName": "Pavelka, Jay",
+          "firstName": "Jay"
+        },
+        {
+          "lastName": "Voong",
+          "fullName": "Voong, Calvin K",
+          "firstName": "Calvin K"
+        },
+        {
+          "lastName": "Schaal",
+          "fullName": "Schaal, Peyton",
+          "firstName": "Peyton"
+        },
+        {
+          "lastName": "Lam",
+          "fullName": "Lam, Maggie P Y",
+          "firstName": "Maggie P Y"
+        },
+        { "lastName": "Lau", "fullName": "Lau, Edward", "firstName": "Edward" }
+      ],
+      "doi": "10.1152/ajpheart.00637.2025",
+      "human": 0,
+      "pmid": 41191057,
+      "title": "SALVE: prediction of interorgan communication with transcriptome latent space representation.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Am J Physiol Heart Circ Physiol",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 1,
+      "x_coord": -0.8660254037844386,
+      "y_coord": -0.5,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
+      "provisional": false
+    },
+    {
+      "_id": "41193662",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Wojtyła",
+          "fullName": "Wojtyła, Cezary",
+          "firstName": "Cezary"
+        },
+        {
+          "lastName": "Kupcewicz",
+          "fullName": "Kupcewicz, Bogumiła",
+          "firstName": "Bogumiła"
+        },
+        {
+          "lastName": "Tołwiński",
+          "fullName": "Tołwiński, Ignacy",
+          "firstName": "Ignacy"
+        },
+        {
+          "lastName": "Samborowska",
+          "fullName": "Samborowska, Emilia",
+          "firstName": "Emilia"
+        },
+        {
+          "lastName": "Radkiewicz",
+          "fullName": "Radkiewicz, Mariusz",
+          "firstName": "Mariusz"
+        },
+        {
+          "lastName": "Jaźwiec",
+          "fullName": "Jaźwiec, Radosław",
+          "firstName": "Radosław"
+        },
+        {
+          "lastName": "Sakowicz",
+          "fullName": "Sakowicz, Agata",
+          "firstName": "Agata"
+        },
+        {
+          "lastName": "Rubel",
+          "fullName": "Rubel, Tymon",
+          "firstName": "Tymon"
+        },
+        {
+          "lastName": "Goszczynska",
+          "fullName": "Goszczynska, Agata",
+          "firstName": "Agata"
+        },
+        {
+          "lastName": "Winogradska",
+          "fullName": "Winogradska, Beata",
+          "firstName": "Beata"
+        },
+        {
+          "lastName": "Laudański",
+          "fullName": "Laudański, Piotr",
+          "firstName": "Piotr"
+        }
+      ],
+      "doi": "10.1038/s41598-025-22598-8",
+      "human": 1,
+      "pmid": 41193662,
+      "title": "Metabolome analysis as a potential source of endometriosis biomarkers with the use of multiomics approach in its diagnosis.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Sci Rep",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "x_coord": 0,
+      "y_coord": 1,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        22834969, 29712562, 35350465, 34693033, 20629054, 26497128, 33174185,
+        26921767, 22034100, 23984345, 9130884, 30196975, 34841082, 19836970,
+        38357538, 21742370, 23210853, 16230400, 28411170, 25256929, 35128453,
+        35361022, 22859507, 34986597, 34048704, 24960545, 23079773, 20056268,
+        19553674, 29410629, 36749097, 28566741
+      ],
+      "provisional": false
+    },
+    {
       "_id": "41231752",
       "animal": 0.4,
       "authors": [
@@ -41485,6 +41826,52 @@
       "molecular_cellular": 0,
       "x_coord": 0.34641016151377546,
       "y_coord": 0.39999999999999997,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
+      "provisional": false
+    },
+    {
+      "_id": "41233159",
+      "animal": 0.5,
+      "authors": [
+        {
+          "lastName": "Haber",
+          "fullName": "Haber, Ellie",
+          "firstName": "Ellie"
+        },
+        {
+          "lastName": "Deshpande",
+          "fullName": "Deshpande, Ajinkya",
+          "firstName": "Ajinkya"
+        },
+        { "lastName": "Ma", "fullName": "Ma, Jian", "firstName": "Jian" },
+        {
+          "lastName": "Krieger",
+          "fullName": "Krieger, Spencer",
+          "firstName": "Spencer"
+        }
+      ],
+      "doi": "10.1101/gr.280803.125",
+      "human": 0.25,
+      "pmid": 41233159,
+      "title": "Unified integration of spatial transcriptomics across platforms with LLOKI.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Genome Res",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.25,
+      "x_coord": -0.28867513459481287,
+      "y_coord": -0.5,
       "is_clinical": false,
       "cited_by_clin": null,
       "cited_by": null,
@@ -42279,6 +42666,149 @@
         34301788, 31247102, 20729918, 37688570, 34184824, 38426335, 29617664,
         33203571, 21324876, 30531922, 38057664, 20230186, 24812344, 21031597,
         36335802, 40345854, 37688579, 20644199
+      ],
+      "provisional": false
+    },
+    {
+      "_id": "41277691",
+      "animal": 0.5,
+      "authors": [
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Zhenhao",
+          "firstName": "Zhenhao"
+        },
+        { "lastName": "Bao", "fullName": "Bao, Xinyu", "firstName": "Xinyu" },
+        {
+          "lastName": "Jiang",
+          "fullName": "Jiang, Linghua",
+          "firstName": "Linghua"
+        },
+        { "lastName": "Luo", "fullName": "Luo, Xin", "firstName": "Xin" },
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Zheyu",
+          "firstName": "Zheyu"
+        },
+        { "lastName": "Yin", "fullName": "Yin, Jing", "firstName": "Jing" },
+        { "lastName": "Zhao", "fullName": "Zhao, Meiqi", "firstName": "Meiqi" },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Yichun",
+          "firstName": "Yichun"
+        },
+        {
+          "lastName": "Comai",
+          "fullName": "Comai, Annelise",
+          "firstName": "Annelise"
+        },
+        {
+          "lastName": "Waldhaus",
+          "fullName": "Waldhaus, Joerg",
+          "firstName": "Joerg"
+        },
+        {
+          "lastName": "Hansen",
+          "fullName": "Hansen, Anders S",
+          "firstName": "Anders S"
+        },
+        { "lastName": "Li", "fullName": "Li, Wenbo", "firstName": "Wenbo" },
+        { "lastName": "Liu", "fullName": "Liu, Jie", "firstName": "Jie" }
+      ],
+      "doi": "10.1093/nar/gkaf1269",
+      "human": 0.25,
+      "pmid": 41277691,
+      "title": "Developing a general AI model for integrating diverse genomic modalities and comprehensive genomic knowledge.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Nucleic Acids Res",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.25,
+      "x_coord": 0.21650635094610965,
+      "y_coord": -0.125,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        27783602, 32687525, 15499007, 30449622, 12466850, 24141950, 25409826,
+        27197224, 25413365, 33235186, 25639469, 27259153, 19056941, 38735044,
+        39779852, 31784727, 26119342, 27257258, 39232149, 35817977, 23382218,
+        23795297, 33983921, 34099641, 31399713, 33213499, 37714133, 35551305,
+        39609566, 28369554, 19339662, 37419111, 29229984, 32913098, 38662817,
+        37220626, 39814889, 34375583, 26301843, 31477927, 18798982, 26656874,
+        33633365, 34608324, 24670763, 37883436, 29379200, 23345452, 25383968,
+        28973462, 29116076, 28489815, 35925886, 37001506, 36672507, 37157000,
+        23973811, 40660356, 28410642, 29053968, 28479595, 34108665, 31444232,
+        33290552, 26948815, 33837132, 18516045, 34493866, 32213323, 28811569,
+        39779956, 35042722, 37224527
+      ],
+      "provisional": false
+    },
+    {
+      "_id": "41282750",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Jin",
+          "fullName": "Jin, Zicheng",
+          "firstName": "Zicheng"
+        },
+        { "lastName": "Guo", "fullName": "Guo, Xuhui", "firstName": "Xuhui" },
+        { "lastName": "Wang", "fullName": "Wang, Zehua", "firstName": "Zehua" },
+        { "lastName": "Yang", "fullName": "Yang, Qiang", "firstName": "Qiang" },
+        {
+          "lastName": "Yang",
+          "fullName": "Yang, Xiaotong",
+          "firstName": "Xiaotong"
+        },
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Xinyu",
+          "firstName": "Xinyu"
+        },
+        { "lastName": "Yin", "fullName": "Yin, Rui", "firstName": "Rui" },
+        {
+          "lastName": "Garmire",
+          "fullName": "Garmire, Lana X",
+          "firstName": "Lana X"
+        }
+      ],
+      "doi": "10.1101/2025.10.03.25337210",
+      "human": 1,
+      "pmid": 41282750,
+      "title": "PANCDetect: Early Detection of Pancreatic Cancer from Multimodal EHR data with LLM Embeddings.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "medRxiv",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "x_coord": 0,
+      "y_coord": 1,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        32346050, 38752654, 20049842, 36427286, 37286606, 15886696, 34493770,
+        33058868, 38007948, 37165697, 32616613, 34331845, 40367995, 34017034,
+        33278770, 40471475, 23456555, 35379605, 38937550, 39702578, 31683730,
+        36156661, 32135127, 40691317, 32335790, 40813607, 29282723, 33865174,
+        36819667, 29045273, 36916724, 37156936
       ],
       "provisional": false
     }
