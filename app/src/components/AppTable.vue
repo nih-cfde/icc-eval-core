@@ -1,5 +1,5 @@
 <template>
-  <div ref="scroll" class="scroll">
+  <div class="scroll">
     <table>
       <thead>
         <tr
@@ -123,7 +123,6 @@ import type { RowData, SortingFn, SortingState } from "@tanstack/vue-table";
 import SortDown from "@/assets/sort-down.svg";
 import SortUp from "@/assets/sort-up.svg";
 import Sort from "@/assets/sort.svg";
-import { useScrollable } from "@/util/composables";
 
 type Props = {
   cols: Cols<Rows>;
@@ -140,8 +139,6 @@ type Row = Rows[number];
 defineSlots<{
   [slot in SlotNames]: ({ row }: { row: Row }) => VNode;
 }>();
-
-const { ref: scroll } = useScrollable();
 
 const columnHelper = createColumnHelper<Row>();
 
@@ -251,7 +248,8 @@ const cellAttrs = (col?: Cols[number], row?: Row) => {
   width: var(--full);
   max-width: max-content;
   overflow-x: auto;
-  border-radius: var(--rounded) var(--rounded) 0 0;
+  border-radius: var(--rounded);
+  box-shadow: var(--shadow);
 }
 
 @media print {

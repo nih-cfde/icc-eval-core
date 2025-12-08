@@ -72,8 +72,8 @@ const overview = [
   display: inline-block;
   margin: 2px 2px;
   padding: 0 4px;
-  border: solid 2px var(--off-white);
   border-radius: var(--rounded);
+  background: var(--light-gray);
   white-space: nowrap;
 }
 </style>

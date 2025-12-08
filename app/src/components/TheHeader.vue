@@ -29,7 +29,7 @@ header {
   justify-content: space-between;
   padding: 20px;
   gap: 20px;
-  background: var(--off-white);
+  background: var(--theme-light);
 }
 
 .title {

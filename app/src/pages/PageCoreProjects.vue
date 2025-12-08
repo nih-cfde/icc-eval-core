@@ -4,8 +4,14 @@
   </section>
 
   <section>
-    <AppTable :cols="cols" :rows="rows" :sort="[{ id: 'status', desc: true }]">
-      <template #status="{ row }">
+    <p>Top-level, "core" projects in CFDE</p>
+
+    <AppTable
+      :cols="cols"
+      :rows="rows"
+      :sort="[{ id: 'reposAnalytics', desc: true }]"
+    >
+      <template #reposAnalytics="{ row }">
         <template v-if="row.repos || row.analytics">
           <AppLink
             :to="readmeLink"
@@ -60,15 +66,13 @@ const readmeLink =
   "https://github.com/nih-cfde/icc-eval-core?tab=readme-ov-file#submit-your-project";
 
 /** table row data */
-const rows = coreProjects.map((d) => ({ ...d, status: d.repos + d.analytics }));
+const rows = coreProjects.map((d) => ({
+  ...d,
+  reposAnalytics: d.repos + d.analytics,
+}));
 
 /** table column definitions */
 const cols: Cols<typeof rows> = [
-  {
-    slot: "status",
-    key: "status",
-    name: "Status",
-  },
   {
     slot: "id",
     key: "id",
@@ -107,6 +111,11 @@ const cols: Cols<typeof rows> = [
   {
     key: "analytics",
     name: "Analytics",
+  },
+  {
+    slot: "reposAnalytics",
+    key: "reposAnalytics",
+    name: "Rep./Anal.",
   },
 ];
 </script>

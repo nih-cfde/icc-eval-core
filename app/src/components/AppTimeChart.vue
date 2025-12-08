@@ -56,7 +56,8 @@ type Props = {
 
 const props = withDefaults(defineProps<Props>(), {
   cumulative: false,
-  yFormat: (value: number) => value.toLocaleString(),
+  yFormat: (value: number) =>
+    value.toLocaleString(undefined, { notation: "compact" }),
   group: undefined,
 });
 

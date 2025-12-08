@@ -6,6 +6,8 @@
   <section>
     <AppHeading level="2"><Calculator />Totals</AppHeading>
 
+    <p>CFDE-wide stats</p>
+
     <dl class="details">
       <div>
         <dt>Core Projects</dt>
@@ -49,7 +51,7 @@
   <section>
     <AppHeading level="2"><Chart />Over Time</AppHeading>
 
-    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+    <p>How CFDE stats have changed over time</p>
 
     <div class="charts">
       <AppTimeChart
@@ -84,14 +86,72 @@
         group="group"
       />
     </div>
+
+    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+  </section>
+
+  <section>
+    <AppHeading level="2"><Code />Repositories</AppHeading>
+
+    <p>CFDE-wide software repository stats</p>
+
+    <dl v-if="repoOverview.repos" class="details">
+      <div
+        v-for="(repoValue, repoProp, repoIndex) in repoOverview"
+        :key="repoIndex"
+        :style="{
+          gridColumn: typeof repoValue === 'number' ? 'span 1' : 'span 2',
+        }"
+      >
+        <dt>{{ startCase(repoProp) }}</dt>
+        <dd v-if="typeof repoValue === 'number'">
+          {{ repoValue.toLocaleString(undefined, { notation: "compact" }) }}
+        </dd>
+        <dd v-else class="mini-table">
+          <template
+            v-for="([entryName, entryCount], entryIndex) of Object.entries(
+              repoValue,
+            ).slice(0, 5)"
+            :key="entryIndex"
+          >
+            <span>{{ entryName || "none" }}</span>
+            <span>
+              {{
+                (repoProp === "languages"
+                  ? entryCount / 160
+                  : entryCount
+                ).toLocaleString(undefined, { notation: "compact" })
+              }}
+            </span>
+          </template>
+        </dd>
+      </div>
+    </dl>
+
+    <div class="col">
+      <AppHeading level="3">Notes</AppHeading>
+
+      <ul>
+        <li>
+          <code>contributors</code> are unique users that have committed, opened
+          an issue, or otherwise participated in the repo.
+        </li>
+        <li>
+          <code>language</code> lines of code estimated from
+          <code>bytes / 160</code> (UTF-8, ~2 bytes per char, ~80 chars per
+          line).
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { sum } from "lodash";
+import { startCase, sum } from "lodash";
 import Calculator from "@/assets/calculator.svg";
 import Chart from "@/assets/chart.svg";
+import Code from "@/assets/code.svg";
 import Home from "@/assets/home.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppHeading from "@/components/AppHeading.vue";
@@ -100,6 +160,7 @@ import { date } from "@/util/date";
 import coreProjects from "~/core-projects.json";
 import rawProjects from "~/projects.json";
 import publications from "~/publications.json";
+import repoOverview from "~/repo-overview.json";
 
 /** parse dates */
 const projects = rawProjects.map((raw) => ({

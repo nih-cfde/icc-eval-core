@@ -71,7 +71,7 @@ onUpdated(updateLink);
 }
 
 .anchor:hover {
-  color: var(--gray);
+  color: var(--light-gray);
 }
 
 .anchor:focus {

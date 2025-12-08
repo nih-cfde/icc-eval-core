@@ -62,9 +62,22 @@
       </template>
     </AppTable>
 
-    <div class="notes">
-      <p>Notes</p>
-      <dl class="definitions">
+    <template v-if="Object.keys(publicationsOverTime).length > 1">
+      <AppTimeChart
+        class="chart"
+        title="Publications"
+        :data="publicationsOverTime"
+        :cumulative="cumulative"
+        by="month"
+      />
+
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+    </template>
+
+    <div class="col">
+      <AppHeading level="3">Notes</AppHeading>
+
+      <dl class="mini-table">
         <dt>RCR</dt>
         <dd>
           <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
@@ -79,18 +92,6 @@
         </dd>
       </dl>
     </div>
-
-    <template v-if="Object.keys(publicationsOverTime).length > 1">
-      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
-
-      <AppTimeChart
-        class="chart"
-        title="Publications"
-        :data="publicationsOverTime"
-        :cumulative="cumulative"
-        by="month"
-      />
-    </template>
   </section>
 
   <!-- repositories -->
@@ -153,46 +154,14 @@
       <template #languages="{ row }">
         {{
           limit(
-            row.languages.map(({ language }) => language),
+            row.languages.map(({ name }) => name),
             5,
           ).join(" ")
         }}
       </template>
     </AppTable>
 
-    <div class="notes">
-      <p>Notes</p>
-      <dl class="definitions">
-        <dt>Repository</dt>
-        <dd>
-          For storing, tracking changes to, and collaborating on a piece of
-          software.
-        </dd>
-        <dt>PR</dt>
-        <dd>
-          "Pull request", a draft change (new feature, bug fix, etc.) to a repo.
-        </dd>
-        <dt>Closed/Open</dt>
-        <dd>Resolved/unresolved.</dd>
-        <dt>Avg Issue/PR</dt>
-        <dd>
-          Average time issues/pull requests stay open for before being closed.
-        </dd>
-      </dl>
-      <p>
-        Only the <code>main</code>/default branch is considered for metrics like
-        # of commits.
-      </p>
-      <p>
-        # of dependencies is totaled from all manifests in repo, direct and
-        transitive, e.g.
-        <code>package.json</code> + <code>package-lock.json</code>.
-      </p>
-    </div>
-
     <template v-if="projectRepos.length">
-      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
-
       <div class="charts">
         <AppTimeChart
           class="chart"
@@ -230,7 +199,42 @@
           by="month"
         />
       </div>
+
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
     </template>
+
+    <div class="col">
+      <AppHeading level="3">Notes</AppHeading>
+
+      <dl class="mini-table">
+        <dt>Repository</dt>
+        <dd>
+          For storing, tracking changes to, and collaborating on a piece of
+          software.
+        </dd>
+        <dt>PR</dt>
+        <dd>
+          "Pull request", a draft change (new feature, bug fix, etc.) to a repo.
+        </dd>
+        <dt>Closed/Open</dt>
+        <dd>Resolved/unresolved.</dd>
+        <dt>Avg Issue/PR</dt>
+        <dd>
+          Average time issues/pull requests stay open for before being closed.
+        </dd>
+      </dl>
+
+      <p>
+        Only the <code>main</code>/default branch is considered for metrics like
+        # of commits.
+      </p>
+
+      <p>
+        # of dependencies is totaled from all manifests in repo, direct and
+        transitive, e.g.
+        <code>package.json</code> + <code>package-lock.json</code>.
+      </p>
+    </div>
   </section>
 
   <!-- analytics -->
@@ -243,20 +247,19 @@
       <dl class="details">
         <div>
           <dt>Websites</dt>
-          <template
-            v-for="({ property, propertyName }, key) of analyticsProperties"
-            :key="key"
-          >
-            <dd>
-              {{ startCase(propertyName) }} (property #{{
-                property.replace("properties/", "")
-              }})
-            </dd>
-          </template>
+          <dd class="mini-table">
+            <template
+              v-for="({ property, propertyName }, key) of analyticsProperties"
+              :key="key"
+            >
+              <span>
+                {{ startCase(propertyName) }}
+              </span>
+              <span>#{{ property.replace("properties/", "") }}</span>
+            </template>
+          </dd>
         </div>
       </dl>
-
-      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
       <div class="charts">
         <template
@@ -273,6 +276,8 @@
         </template>
       </div>
 
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
       <dl class="details">
         <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
           <template
@@ -281,12 +286,19 @@
             "
           >
             <dt>Top {{ topKey.replace("top", "") }}</dt>
-            <dd>
+            <dd class="mini-table">
               <template
                 v-for="(byValue, byKey) in topValue.byEngagedSessions"
                 :key="byKey"
               >
-                {{ byKey }} ({{ byValue.toLocaleString() }})<br />
+                <span>
+                  {{ byKey }}
+                </span>
+                <span>
+                  {{
+                    byValue.toLocaleString(undefined, { notation: "compact" })
+                  }}
+                </span>
               </template>
             </dd>
           </template>
@@ -294,9 +306,10 @@
       </dl>
     </template>
 
-    <div class="notes">
-      <p>Notes</p>
-      <dl class="definitions">
+    <div class="col">
+      <AppHeading level="3">Notes</AppHeading>
+
+      <dl class="mini-table">
         <dt>Active Users</dt>
         <dd>
           <AppLink
@@ -319,6 +332,7 @@
           >.
         </dd>
       </dl>
+
       <p>"Top" metrics are measured by number of engaged sessions.</p>
     </div>
   </section>
@@ -587,7 +601,7 @@ const repoColsB: Cols<typeof projectRepos.value> = [
     name: "Languages",
     attrs: (row) => ({
       title: row?.languages
-        .map(({ language, count }) => `${language}: ${count}`)
+        .map(({ name, bytes }) => `${name}: ${bytes}`)
         .join("\n"),
     }),
   },
@@ -707,10 +721,12 @@ const topAnalytics = computed(() => {
           total[topKey][byKey][dimensionKey] += dimensionValue;
         }
 
-  /** sort counts */
-  for (const [, topValue] of getEntries(total))
-    for (let [, byValue] of getEntries(topValue))
-      byValue = fromPairs(orderBy(toPairs(byValue), [1], ["desc"]));
+  /** sort and limit counts */
+  for (const [topKey, topValue] of getEntries(total))
+    for (const [byKey, byValue] of getEntries(topValue))
+      total[topKey][byKey] = fromPairs(
+        orderBy(toPairs(byValue), [1], ["desc"]).slice(0, 5),
+      );
 
   return total;
 });

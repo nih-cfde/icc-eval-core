@@ -156,11 +156,8 @@ export const getRepos = async (coreProjects: string[]) => {
       contributions: contributor.contributions,
     })),
     languages: orderBy(
-      Object.entries(repo.languages).map(([language, count]) => ({
-        language,
-        count,
-      })),
-      ["count"],
+      Object.entries(repo.languages).map(([name, bytes]) => ({ name, bytes })),
+      ["bytes"],
       ["desc"],
     ),
     created: repo.created_at,

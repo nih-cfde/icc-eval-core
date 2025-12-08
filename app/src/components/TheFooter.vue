@@ -48,7 +48,7 @@ footer {
   align-items: center;
   padding: 20px;
   gap: 10px 20px;
-  background: var(--off-white);
+  background: var(--theme-light);
 }
 
 footer a {

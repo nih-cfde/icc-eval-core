@@ -1,5 +1,5 @@
 import { mkdirSync } from "fs";
-import { isEqual, uniqWith } from "lodash-es";
+import { isEqual, orderBy, sumBy, uniqWith } from "lodash-es";
 import { getAnalytics } from "@/gather/analytics";
 import { getDrc } from "@/gather/drc";
 import { getJournals } from "@/gather/journals";
@@ -25,6 +25,7 @@ const publicationsFile = "publications.json";
 const journalsFile = "journals.json";
 const analyticsFile = "analytics.json";
 const reposFile = "repos.json";
+const repoOverviewFile = "repo-overview.json";
 const drcDccFile = "drc-dcc.json";
 const drcFileFile = "drc-file.json";
 const drcCodeFile = "drc-code.json";
@@ -47,40 +48,54 @@ const loadPublic = async <Result>(file: string) => {
   }
 };
 
+/** ========================================================================= */
+
 divider("Opportunities");
 
+/** funding opportunities */
 let opportunities: Result<typeof getOpportunities> = [];
 
+/** get opportunities */
 try {
   opportunities = PRIVATE
-    ? await loadPublic(opportunitiesFile)
-    : await getOpportunities();
+    ? /** PRIVATE MODE */
+      await loadPublic(opportunitiesFile)
+    : /** PUBLIC MODE */
+      await getOpportunities();
 } catch (error) {
   log("Couldn't get opportunities", "warn");
 }
 
+/** get manual opportunities */
 const manualOpportunities = (
   await loadFile<Result<typeof getOpportunities>>(
     `${RAW_PATH}/manual-opportunities.json`,
   )
 ).data;
 
+/** merge fetched and manual data */
 opportunities = uniqWith(opportunities.concat(manualOpportunities), isEqual);
 
 log(`${opportunities.length} opportunities`);
 
+/** ========================================================================= */
+
 divider("Projects");
 
+/** get manual projects */
 const manualCoreProjects = (
   await loadFile<string[]>(`${RAW_PATH}/manual-core-projects.json`)
 ).data;
 
+/** get projects from opportunities */
 const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
-  ? {
+  ? /** PRIVATE MODE */
+    {
       coreProjects: await loadPublic(coreProjectsFile),
       projects: await loadPublic(projectsFile),
     }
-  : await getProjects(
+  : /** PUBLIC MODE */
+    await getProjects(
       opportunities.map((opportunity) => opportunity.id),
       manualCoreProjects,
     );
@@ -88,40 +103,63 @@ const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
 log(`${coreProjects.length} core projects`);
 log(`${projects.length} projects`);
 
+/** ========================================================================= */
+
 divider("Publications");
 
+/** get publications from projects */
 const publications: Result<typeof getPublications> = PRIVATE
-  ? await loadPublic(publicationsFile)
-  : await getPublications(projects.map((project) => project.coreProject));
+  ? /** PRIVATE MODE */
+    await loadPublic(publicationsFile)
+  : /** PUBLIC MODE */
+    await getPublications(projects.map((project) => project.coreProject));
 
 log(`${publications.length} publications`);
 
+/** ========================================================================= */
+
 divider("Journals");
 
+/** get journals from publications */
 const journals: Result<typeof getJournals> =
   /** scimago banning/limiting us when running on gh-actions */
   PRIVATE || CI
-    ? await loadPublic(journalsFile)
-    : await getJournals(publications.map((publication) => publication.journal));
+    ? /** PRIVATE MODE */
+      await loadPublic(journalsFile)
+    : /** PUBLIC MODE */
+      await getJournals(publications.map((publication) => publication.journal));
 
 log(`${journals.length} journals`);
 
+/** ========================================================================= */
+
 divider("Analytics");
 
-const analytics = PRIVATE ? await getAnalytics() : [];
+/** get website analytics data */
+const analytics = PRIVATE
+  ? /** PRIVATE MODE */ await getAnalytics()
+  : /** PUBLIC MODE */ [];
 
 log(`${analytics.length} analytics`);
 
+/** ========================================================================= */
+
 divider("Repos");
 
+/** get software repo data */
 const repos = PRIVATE
-  ? await getRepos(coreProjects.map((coreProject) => coreProject.id))
-  : [];
+  ? /** PRIVATE MODE */
+    await getRepos(coreProjects.map((coreProject) => coreProject.id))
+  : /** PUBLIC MODE */
+    [];
 
 log(`${repos.length} repos`);
 
-divider("Supplemental counts");
+/** ========================================================================= */
 
+divider("Core project counts");
+
+/** calculate various counts for each core project */
 for (const coreProject of coreProjects) {
   coreProject.publications = publications.filter((publication) =>
     match(publication.coreProject, coreProject.id),
@@ -134,15 +172,59 @@ for (const coreProject of coreProjects) {
   ).length;
 }
 
+/** ========================================================================= */
+
+divider("Repo overview");
+
+/** aggregate various stats for all repos in total */
+const repoOverview = {
+  repos: repos.length,
+  stars: sumBy(repos, (repo) => repo.stars.length),
+  forks: sumBy(repos, (repo) => repo.forks.length),
+  commits: sumBy(repos, (repo) => repo.commits.length),
+  openIssues: sumBy(repos, (repo) => repo.openIssues),
+  closedIssues: sumBy(repos, (repo) => repo.closedIssues),
+  openPullRequests: sumBy(repos, (repo) => repo.openPullRequests),
+  closedPullRequests: sumBy(repos, (repo) => repo.closedPullRequests),
+  watchers: sumBy(repos, (repo) => repo.watchers ?? 0),
+  contributors: new Set(
+    repos
+      .map(({ contributors }) => contributors.map(({ name }) => name))
+      .flat(),
+  ).size,
+  languages: (() => {
+    const counts: Record<string, number> = {};
+    for (const { languages } of repos)
+      for (const { name, bytes } of languages)
+        counts[name] = (counts[name] ?? 0) + bytes;
+    return Object.fromEntries(orderBy(Object.entries(counts), "[1]", "desc"));
+  })(),
+  readme: repos.filter((repo) => repo.readme).length,
+  contributing: repos.filter((repo) => repo.contributing).length,
+  licenses: (() => {
+    const counts: Record<string, number> = {};
+    for (const { license } of repos)
+      counts[license] = (counts[license] ?? 0) + 1;
+    return Object.fromEntries(orderBy(Object.entries(counts), "[1]", "desc"));
+  })(),
+};
+
+/** ========================================================================= */
+
 divider("DRC");
 
+/** get drc data */
 const { dcc, file, code }: Result<typeof getDrc> = PRIVATE
-  ? {
+  ? /** PRIVATE MODE */
+    {
       dcc: await loadPublic(drcDccFile),
       file: await loadPublic(drcFileFile),
       code: await loadPublic(drcCodeFile),
     }
-  : await getDrc();
+  : /** PUBLIC MODE */
+    await getDrc();
+
+/** ========================================================================= */
 
 divider("Saving");
 
@@ -158,6 +240,7 @@ saveFile(code, `${OUTPUT_PATH}/${drcCodeFile}`);
 if (PRIVATE) {
   saveFile(analytics, `${OUTPUT_PATH}/${analyticsFile}`);
   saveFile(repos, `${OUTPUT_PATH}/${reposFile}`);
+  saveFile(repoOverview, `${OUTPUT_PATH}/${repoOverviewFile}`);
 }
 
 await browser.close();
