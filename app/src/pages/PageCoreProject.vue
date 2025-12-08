@@ -724,7 +724,7 @@ const topAnalytics = computed(() => {
   /** sort and limit counts */
   for (const [topKey, topValue] of getEntries(total))
     for (const [byKey, byValue] of getEntries(topValue))
-      total[topKey][byKey] = fromPairs(
+      total[topKey]![byKey] = fromPairs(
         orderBy(toPairs(byValue), [1], ["desc"]).slice(0, 5),
       );
 

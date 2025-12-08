@@ -90,12 +90,12 @@
     <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
   </section>
 
-  <section>
+  <section v-if="repoOverview.repos">
     <AppHeading level="2"><Code />Repositories</AppHeading>
 
     <p>CFDE-wide software repository stats</p>
 
-    <dl v-if="repoOverview.repos" class="details">
+    <dl class="details">
       <div
         v-for="(repoValue, repoProp, repoIndex) in repoOverview"
         :key="repoIndex"
