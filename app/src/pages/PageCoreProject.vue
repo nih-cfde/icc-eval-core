@@ -220,7 +220,7 @@
         </dd>
         <dt>Closed/Open</dt>
         <dd>Resolved/unresolved.</dd>
-        <dt>Avg Issue/PR</dt>
+        <dt>Issue/PR Avg</dt>
         <dd>
           Average time issues/pull requests stay open for before being closed.
         </dd>
@@ -591,11 +591,11 @@ const repoColsB: Cols<typeof projectRepos.value> = [
   },
   {
     key: "issueTimeOpen",
-    name: "Avg Issue",
+    name: "Issue Avg",
   },
   {
     key: "pullRequestTimeOpen",
-    name: "Avg PR",
+    name: "PR Avg",
   },
   {
     slot: "languages",
