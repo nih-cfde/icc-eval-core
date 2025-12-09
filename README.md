@@ -7,13 +7,33 @@
 
 This repo supports the activities described in [this repo](https://github.com/nih-cfde/icc-eval-coordination?tab=readme-ov-file).
 
-# Development
-
 ## Requirements
 
 - Linux or MacOS system
 - [Node](https://nodejs.org/) v22+
 - [Bun](https://bun.sh/) (_for package management only_, as faster/smaller replacement for Yarn)
+
+## Commands
+
+Use `./run.sh` with a `--flag` to conveniently run scripts of the same name in `/data/package.json` and `/app/package.json` (if they exist) from the root of this repo.
+
+| Flag                      | Description                        |
+| ------------------------- | ---------------------------------- |
+| `--install`               | Install packages and dependencies  |
+| `--install-playwright`    | Install Playwright                 |
+| _no flag_                 | Run main pipeline steps in order   |
+| `--gather`                | Run "gather data" pipeline step    |
+| `--print`                 | Run "print PDFs" pipeline step     |
+| `--dev`                   | Run dashboard in dev mode          |
+| `--build`                 | Build dashboard for production     |
+| `--preview`               | Preview production dashboard build |
+| `--lint`                  | Auto-fix linting/formatting        |
+| `--test:lint`             | Check linting and formatting       |
+| `--test:types`            | Check types                        |
+| `--test:e2e`              | Run custom tests                   |
+| `--test`                  | Run all tests above                |
+| `--clean`                 | Hard uninstall packages            |
+| `--script ./some-file.ts` | Run arbitrary ts file              |
 
 ## Pipeline
 
@@ -52,20 +72,3 @@ The automated steps in this repo are roughly as follows:
 The pipeline is optimized wherever possible and appropriate.
 Things like network requests and rendering are parallelized (e.g. PDF reports are printed simultaneously in separate tabs of the same Playwright browser instance).
 External resources are cached in their _raw_ format to speed up subsequent runs, and to avoid being rate-limited or blocked by those providers.
-
-## Commands
-
-Use `./run.sh` with a `--flag` to conveniently run a `script` of the same name in `/data/package.json` and `/app/package.json` (if it exists) from the root of this repo.
-
-Most important scripts:
-
-| Flag                   | Description                                                    |
-| ---------------------- | -------------------------------------------------------------- |
-| `--install`            | Install packages and dependencies                              |
-| `--install-playwright` | Install Playwright                                             |
-| _no flag_              | Run main pipeline steps in order                               |
-| `--test`               | Run all tests (type-checking, linting/formatting checks, etc.) |
-| `--lint`               | Auto-fix linting/formatting                                    |
-| `--dev`                | Run dashboard webapp in dev mode                               |
-
-See readmes in sub folders for all commands.
