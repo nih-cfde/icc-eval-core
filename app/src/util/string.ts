@@ -9,10 +9,7 @@ export const ago = (date: Date) => timeAgo.format(date);
 
 /** get nice human-readable string for time span */
 export const span = (seconds: number) =>
-  timeAgo
-    .format(Date.now() - seconds * 1000)
-    .replace("ago", "")
-    .trim();
+  seconds === 0 ? "-" : timeAgo.format(Date.now() - seconds * 1000, "mini");
 
 /** print out keys/values of object */
 export const printObject = (object: object | undefined | null) =>
