@@ -203,7 +203,7 @@ button {
 
 table {
   border-collapse: collapse;
-  background: var(--white);
+  background: white;
   overflow-wrap: break-word;
 }
 
@@ -300,6 +300,7 @@ dd {
   padding: 10px;
   gap: 5px;
   border-radius: var(--rounded);
+  background: white;
   box-shadow: var(--shadow);
 }
 
@@ -331,6 +332,7 @@ dd {
 .echarts {
   overflow: hidden;
   border-radius: var(--rounded);
+  background: white;
   box-shadow: var(--shadow);
 }
 
