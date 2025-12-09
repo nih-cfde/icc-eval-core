@@ -4,9 +4,9 @@
   </section>
 
   <section>
-    <AppHeading level="2"><Calculator />Totals</AppHeading>
+    <AppHeading level="2"><Eye />Overview</AppHeading>
 
-    <p>CFDE-wide stats</p>
+    <p>High-level info about the CFDE program.</p>
 
     <dl class="details">
       <div>
@@ -51,7 +51,7 @@
   <section>
     <AppHeading level="2"><Chart />Over Time</AppHeading>
 
-    <p>How CFDE stats have changed over time</p>
+    <p>How CFDE stats have changed over time.</p>
 
     <div class="charts">
       <AppTimeChart
@@ -93,7 +93,7 @@
   <section v-if="repoOverview.repos">
     <AppHeading level="2"><Code />Repositories</AppHeading>
 
-    <p>CFDE-wide software repository stats</p>
+    <p>High-level info about CFDE software repositories.</p>
 
     <dl class="details">
       <div
@@ -149,9 +149,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { startCase, sum } from "lodash";
-import Calculator from "@/assets/calculator.svg";
 import Chart from "@/assets/chart.svg";
 import Code from "@/assets/code.svg";
+import Eye from "@/assets/eye.svg";
 import Home from "@/assets/home.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppHeading from "@/components/AppHeading.vue";

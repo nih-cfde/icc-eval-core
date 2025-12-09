@@ -5,7 +5,9 @@
 
   <!-- details -->
   <section>
-    <AppHeading level="2"><Eye />Details</AppHeading>
+    <AppHeading level="2"><Eye />Overview</AppHeading>
+
+    <p>High-level info about this project.</p>
 
     <dl class="details">
       <div
@@ -241,7 +243,7 @@
   <section>
     <AppHeading level="2"><Analytics />Analytics</AppHeading>
 
-    <p>Traffic metrics of websites associated with this project.</p>
+    <p>Website metrics associated with this project.</p>
 
     <template v-if="analyticsProperties.length">
       <dl class="details">
