@@ -7,7 +7,7 @@ export NODE_OPTIONS="--max_old_space_size=8192"
 data="npm run --prefix data"
 app="npm run --prefix app"
 
-regex="--([A-Za-z0-9:-]+)\s*(.*)?$"
+regex="--([A-Za-z0-9:-]+) *(.*)?$"
 
 # run script in /data and /app
 if [[ $* =~ $regex ]]; then
