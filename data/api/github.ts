@@ -48,8 +48,9 @@ octokit.request = octokit.request.defaults({ per_page: 100 });
 
 /** search for repos that have topic */
 export const searchRepos = memoize(async (topic: string) => {
-  const repos = (await octokit.rest.search.repos({ q: `topic:${topic}` })).data
-    .items;
+  const repos = await octokit.paginate(octokit.rest.search.repos, {
+    q: `topic:${topic}`,
+  });
 
   /** if flag set, get all other repos in org */
   const orgRepos = (
@@ -60,9 +61,7 @@ export const searchRepos = memoize(async (topic: string) => {
           .map((repo) => repo.owner?.login ?? ""),
       )
         .filter(Boolean)
-        .map((org) =>
-          octokit.rest.repos.listForOrg({ org }).then((result) => result.data),
-        ),
+        .map((org) => octokit.paginate(octokit.rest.repos.listForOrg, { org })),
     )
   ).flat();
 
@@ -202,7 +201,7 @@ export const getContributors = memoize(async (owner: string, repo: string) =>
 /** get programming languages used in repo */
 export const getLanguages = memoize(
   async (owner: string, repo: string) =>
-    (await octokit.rest.repos.listLanguages({ owner, repo })).data,
+    await octokit.paginate(octokit.rest.repos.listLanguages, { owner, repo }),
 );
 
 /**
