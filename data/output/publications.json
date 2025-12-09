@@ -14,38 +14,6 @@
     "citationsPerYear": 1
   },
   {
-    "id": 35977026,
-    "coreProject": "U54DA049110",
-    "application": 11328770,
-    "title": "Shell microelectrode arrays (MEAs) for brain organoids.",
-    "authors": [
-      "Huang, Qi",
-      "Tang, Bohao",
-      "Romero, July Carolina",
-      "Yang, Yuqian",
-      "Elsayed, Saifeldeen Khalil",
-      "Pahapale, Gayatri",
-      "Lee, Tien-Jung",
-      "Morales Pantoja, Itzy E",
-      "Han, Fang",
-      "Berlinicke, Cynthia",
-      "Xiang, Terry",
-      "Solazzo, Mallory",
-      "Hartung, Thomas",
-      "Qin, Zhao",
-      "Caffo, Brian S",
-      "Smirnova, Lena",
-      "Gracias, David H"
-    ],
-    "journal": "Sci Adv",
-    "year": 2022,
-    "modified": "",
-    "doi": "10.1126/sciadv.abq5031",
-    "relativeCitationRatio": 7.854339445895762,
-    "citations": 91,
-    "citationsPerYear": 30.333333333333332
-  },
-  {
     "id": 38718196,
     "coreProject": "U54DA049110",
     "application": 11328770,
@@ -96,6 +64,62 @@
     "citationsPerYear": 0
   },
   {
+    "id": 35977026,
+    "coreProject": "U54DA049110",
+    "application": 11328770,
+    "title": "Shell microelectrode arrays (MEAs) for brain organoids.",
+    "authors": [
+      "Huang, Qi",
+      "Tang, Bohao",
+      "Romero, July Carolina",
+      "Yang, Yuqian",
+      "Elsayed, Saifeldeen Khalil",
+      "Pahapale, Gayatri",
+      "Lee, Tien-Jung",
+      "Morales Pantoja, Itzy E",
+      "Han, Fang",
+      "Berlinicke, Cynthia",
+      "Xiang, Terry",
+      "Solazzo, Mallory",
+      "Hartung, Thomas",
+      "Qin, Zhao",
+      "Caffo, Brian S",
+      "Smirnova, Lena",
+      "Gracias, David H"
+    ],
+    "journal": "Sci Adv",
+    "year": 2022,
+    "modified": "",
+    "doi": "10.1126/sciadv.abq5031",
+    "relativeCitationRatio": 7.854339445895762,
+    "citations": 91,
+    "citationsPerYear": 30.333333333333332
+  },
+  {
+    "id": 36999674,
+    "coreProject": "U54DA049110",
+    "application": 11328770,
+    "title": "Rethinking recovery in adolescent concussions: Network-level functional connectivity alterations associated with motor deficits.",
+    "authors": [
+      "Crasta, Jewel E",
+      "Nebel, Mary Beth",
+      "Svingos, Adrian",
+      "Tucker, Robert N",
+      "Chen, Hsuan Wei",
+      "Busch, Tyler",
+      "Caffo, Brian S",
+      "Stephens, Jaclyn",
+      "Suskauer, Stacy J"
+    ],
+    "journal": "Hum Brain Mapp",
+    "year": 2023,
+    "modified": "",
+    "doi": "10.1002/hbm.26280",
+    "relativeCitationRatio": 1.9145080286779848,
+    "citations": 8,
+    "citationsPerYear": 4
+  },
+  {
     "id": 37414898,
     "coreProject": "U54DA049110",
     "application": 11328770,
@@ -127,30 +151,6 @@
     "relativeCitationRatio": 15.142724109890663,
     "citations": 78,
     "citationsPerYear": 39
-  },
-  {
-    "id": 36999674,
-    "coreProject": "U54DA049110",
-    "application": 11328770,
-    "title": "Rethinking recovery in adolescent concussions: Network-level functional connectivity alterations associated with motor deficits.",
-    "authors": [
-      "Crasta, Jewel E",
-      "Nebel, Mary Beth",
-      "Svingos, Adrian",
-      "Tucker, Robert N",
-      "Chen, Hsuan Wei",
-      "Busch, Tyler",
-      "Caffo, Brian S",
-      "Stephens, Jaclyn",
-      "Suskauer, Stacy J"
-    ],
-    "journal": "Hum Brain Mapp",
-    "year": 2023,
-    "modified": "",
-    "doi": "10.1002/hbm.26280",
-    "relativeCitationRatio": 1.9145080286779848,
-    "citations": 8,
-    "citationsPerYear": 4
   },
   {
     "id": 37326643,
@@ -1458,6 +1458,20 @@
     "citationsPerYear": 4
   },
   {
+    "id": 40060540,
+    "coreProject": "R03OD038391",
+    "application": 10990280,
+    "title": "Accurate identification of medulloblastoma subtypes from diverse data sources with severe batch effects by RaMBat.",
+    "authors": ["Sun, Mengtao", "Wang, Jieqiong", "Wan, Shibiao"],
+    "journal": "bioRxiv",
+    "year": 2025,
+    "modified": "",
+    "doi": "10.1101/2025.02.24.640010",
+    "relativeCitationRatio": 0,
+    "citations": 0,
+    "citationsPerYear": 0
+  },
+  {
     "id": 40313658,
     "coreProject": "R03OD038391",
     "application": 10990280,
@@ -1473,20 +1487,6 @@
     "year": 2025,
     "modified": "",
     "doi": "",
-    "relativeCitationRatio": 0,
-    "citations": 0,
-    "citationsPerYear": 0
-  },
-  {
-    "id": 40060540,
-    "coreProject": "R03OD038391",
-    "application": 10990280,
-    "title": "Accurate identification of medulloblastoma subtypes from diverse data sources with severe batch effects by RaMBat.",
-    "authors": ["Sun, Mengtao", "Wang, Jieqiong", "Wan, Shibiao"],
-    "journal": "bioRxiv",
-    "year": 2025,
-    "modified": "",
-    "doi": "10.1101/2025.02.24.640010",
     "relativeCitationRatio": 0,
     "citations": 0,
     "citationsPerYear": 0
@@ -3023,26 +3023,6 @@
     "citationsPerYear": 4
   },
   {
-    "id": 34876496,
-    "coreProject": "R03OD034496",
-    "application": 10564098,
-    "title": "De novo individualized disease modules reveal the synthetic penetrance of genes and inform personalized treatment regimens.",
-    "authors": [
-      "Weiskittel, Taylor M",
-      "Ung, Choong Y",
-      "Correia, Cristina",
-      "Zhang, Cheng",
-      "Li, Hu"
-    ],
-    "journal": "Genome Res",
-    "year": 2022,
-    "modified": "",
-    "doi": "10.1101/gr.275889.121",
-    "relativeCitationRatio": 0.4063859163664094,
-    "citations": 5,
-    "citationsPerYear": 1.6666666666666667
-  },
-  {
     "id": 37267954,
     "coreProject": "R03OD034496",
     "application": 10564098,
@@ -3065,6 +3045,26 @@
     "relativeCitationRatio": 12.265412612154014,
     "citations": 124,
     "citationsPerYear": 62
+  },
+  {
+    "id": 34876496,
+    "coreProject": "R03OD034496",
+    "application": 10564098,
+    "title": "De novo individualized disease modules reveal the synthetic penetrance of genes and inform personalized treatment regimens.",
+    "authors": [
+      "Weiskittel, Taylor M",
+      "Ung, Choong Y",
+      "Correia, Cristina",
+      "Zhang, Cheng",
+      "Li, Hu"
+    ],
+    "journal": "Genome Res",
+    "year": 2022,
+    "modified": "",
+    "doi": "10.1101/gr.275889.121",
+    "relativeCitationRatio": 0.4063859163664094,
+    "citations": 5,
+    "citationsPerYear": 1.6666666666666667
   },
   {
     "id": 34600126,
@@ -3342,28 +3342,6 @@
     "citationsPerYear": 3
   },
   {
-    "id": 36688502,
-    "coreProject": "R03OD034493",
-    "application": 10576731,
-    "title": "Unified and Standardized Mass Spectrometry Data Processing in Python Using spectrum_utils.",
-    "authors": [
-      "Bittremieux, Wout",
-      "Levitsky, Lev",
-      "Pilz, Matteo",
-      "Sachsenberg, Timo",
-      "Huber, Florian",
-      "Wang, Mingxun",
-      "Dorrestein, Pieter C"
-    ],
-    "journal": "J Proteome Res",
-    "year": 2023,
-    "modified": "",
-    "doi": "10.1021/acs.jproteome.2c00632",
-    "relativeCitationRatio": 1.917207011499779,
-    "citations": 13,
-    "citationsPerYear": 6.5
-  },
-  {
     "id": 38918178,
     "coreProject": "R03OD034493",
     "application": 10576731,
@@ -3407,6 +3385,28 @@
     "relativeCitationRatio": 5.686842911592838,
     "citations": 16,
     "citationsPerYear": 16
+  },
+  {
+    "id": 36688502,
+    "coreProject": "R03OD034493",
+    "application": 10576731,
+    "title": "Unified and Standardized Mass Spectrometry Data Processing in Python Using spectrum_utils.",
+    "authors": [
+      "Bittremieux, Wout",
+      "Levitsky, Lev",
+      "Pilz, Matteo",
+      "Sachsenberg, Timo",
+      "Huber, Florian",
+      "Wang, Mingxun",
+      "Dorrestein, Pieter C"
+    ],
+    "journal": "J Proteome Res",
+    "year": 2023,
+    "modified": "",
+    "doi": "10.1021/acs.jproteome.2c00632",
+    "relativeCitationRatio": 1.917207011499779,
+    "citations": 13,
+    "citationsPerYear": 6.5
   },
   {
     "id": 40020666,
@@ -6289,27 +6289,6 @@
     "citationsPerYear": 8
   },
   {
-    "id": 35183110,
-    "coreProject": "OT2OD030546",
-    "application": 11381138,
-    "title": "DrugShot: querying biomedical search terms to retrieve prioritized lists of small molecules.",
-    "authors": [
-      "Kropiwnicki, Eryk",
-      "Lachmann, Alexander",
-      "Clarke, Daniel J B",
-      "Xie, Zhuorui",
-      "Jagodnik, Kathleen M",
-      "Ma'ayan, Avi"
-    ],
-    "journal": "BMC Bioinformatics",
-    "year": 2022,
-    "modified": "",
-    "doi": "10.1186/s12859-022-04590-5",
-    "relativeCitationRatio": 0.8100897738104638,
-    "citations": 9,
-    "citationsPerYear": 3
-  },
-  {
     "id": 35085427,
     "coreProject": "OT2OD030546",
     "application": 11381138,
@@ -6335,6 +6314,27 @@
     "relativeCitationRatio": 0.6992921869159133,
     "citations": 8,
     "citationsPerYear": 2.6666666666666665
+  },
+  {
+    "id": 35183110,
+    "coreProject": "OT2OD030546",
+    "application": 11381138,
+    "title": "DrugShot: querying biomedical search terms to retrieve prioritized lists of small molecules.",
+    "authors": [
+      "Kropiwnicki, Eryk",
+      "Lachmann, Alexander",
+      "Clarke, Daniel J B",
+      "Xie, Zhuorui",
+      "Jagodnik, Kathleen M",
+      "Ma'ayan, Avi"
+    ],
+    "journal": "BMC Bioinformatics",
+    "year": 2022,
+    "modified": "",
+    "doi": "10.1186/s12859-022-04590-5",
+    "relativeCitationRatio": 0.8100897738104638,
+    "citations": 9,
+    "citationsPerYear": 3
   },
   {
     "id": 40166563,
@@ -6665,29 +6665,6 @@
     "citationsPerYear": 9
   },
   {
-    "id": 39824876,
-    "coreProject": "OT2OD030544",
-    "application": 11090253,
-    "title": "Unveiling cellular changes in leukaemia cell lines after cannabidiol treatment through lipidomics.",
-    "authors": [
-      "Chamoso-Sanchez, David",
-      "Panini, Martina",
-      "Caroli, Clarissa",
-      "Marani, Matilde",
-      "Corsi, Lorenzo",
-      "Rupérez, Francisco J",
-      "Garcia, Antonia",
-      "Pellati, Federica"
-    ],
-    "journal": "Sci Rep",
-    "year": 2025,
-    "modified": "",
-    "doi": "10.1038/s41598-025-86044-5",
-    "relativeCitationRatio": 0,
-    "citations": 1,
-    "citationsPerYear": 1
-  },
-  {
     "id": 39143213,
     "coreProject": "OT2OD030544",
     "application": 11090253,
@@ -6806,6 +6783,29 @@
     "relativeCitationRatio": 4.990752718329196,
     "citations": 10,
     "citationsPerYear": 10
+  },
+  {
+    "id": 39824876,
+    "coreProject": "OT2OD030544",
+    "application": 11090253,
+    "title": "Unveiling cellular changes in leukaemia cell lines after cannabidiol treatment through lipidomics.",
+    "authors": [
+      "Chamoso-Sanchez, David",
+      "Panini, Martina",
+      "Caroli, Clarissa",
+      "Marani, Matilde",
+      "Corsi, Lorenzo",
+      "Rupérez, Francisco J",
+      "Garcia, Antonia",
+      "Pellati, Federica"
+    ],
+    "journal": "Sci Rep",
+    "year": 2025,
+    "modified": "",
+    "doi": "10.1038/s41598-025-86044-5",
+    "relativeCitationRatio": 0,
+    "citations": 1,
+    "citationsPerYear": 1
   },
   {
     "id": 40308032,
@@ -8821,6 +8821,30 @@
     "citationsPerYear": 1.5
   },
   {
+    "id": 33787872,
+    "coreProject": "OT2OD030160",
+    "application": 11089689,
+    "title": "Drugmonizome and Drugmonizome-ML: integration and abstraction of small molecule attributes for drug enrichment analysis and machine learning.",
+    "authors": [
+      "Kropiwnicki, Eryk",
+      "Evangelista, John E",
+      "Stein, Daniel J",
+      "Clarke, Daniel J B",
+      "Lachmann, Alexander",
+      "Kuleshov, Maxim V",
+      "Jeon, Minji",
+      "Jagodnik, Kathleen M",
+      "Ma'ayan, Avi"
+    ],
+    "journal": "Database (Oxford)",
+    "year": 2021,
+    "modified": "",
+    "doi": "10.1093/database/baab017",
+    "relativeCitationRatio": 1.1036706138469476,
+    "citations": 18,
+    "citationsPerYear": 4.5
+  },
+  {
     "id": 36409836,
     "coreProject": "OT2OD030160",
     "application": 11089689,
@@ -8920,30 +8944,6 @@
     "relativeCitationRatio": 0.8961511130567734,
     "citations": 8,
     "citationsPerYear": 4
-  },
-  {
-    "id": 33787872,
-    "coreProject": "OT2OD030160",
-    "application": 11089689,
-    "title": "Drugmonizome and Drugmonizome-ML: integration and abstraction of small molecule attributes for drug enrichment analysis and machine learning.",
-    "authors": [
-      "Kropiwnicki, Eryk",
-      "Evangelista, John E",
-      "Stein, Daniel J",
-      "Clarke, Daniel J B",
-      "Lachmann, Alexander",
-      "Kuleshov, Maxim V",
-      "Jeon, Minji",
-      "Jagodnik, Kathleen M",
-      "Ma'ayan, Avi"
-    ],
-    "journal": "Database (Oxford)",
-    "year": 2021,
-    "modified": "",
-    "doi": "10.1093/database/baab017",
-    "relativeCitationRatio": 1.1036706138469476,
-    "citations": 18,
-    "citationsPerYear": 4.5
   },
   {
     "id": 37082798,
@@ -9206,33 +9206,30 @@
     "citationsPerYear": 7
   },
   {
-    "id": 35278717,
+    "id": 38766899,
     "coreProject": "OT2OD026675",
     "application": 10397277,
-    "title": "Clinical Implementation and Initial Experience With a 1.5 Tesla MR-Linac for MR-Guided Radiation Therapy for Gynecologic Cancer: An R-IDEAL Stage 1 and 2a First in Humans Feasibility Study of New Technology Implementation.",
+    "title": "Markov models for clinical decision-making in radiation oncology: A systematic review.",
     "authors": [
-      "Lakomy, David S",
-      "Yang, Jinzhong",
-      "Vedam, Sastry",
-      "Wang, Jihong",
-      "Lee, Belinda",
-      "Sobremonte, Angela",
-      "Castillo, Pamela",
-      "Hughes, Neil",
-      "Mohammedsaid, Mustefa",
-      "Jhingran, Anuja",
-      "Klopp, Ann H",
-      "Choi, Seungtaek",
-      "Fuller, C David",
-      "Lin, Lilie L"
+      "McCullum, Lucas B",
+      "Karagoz, Aysenur",
+      "Dede, Cem",
+      "Garcia, Raul",
+      "Nosrat, Fatemeh",
+      "Hemmati, Mehdi",
+      "Hosseinian, Seyedmohammadhossein",
+      "Schaefer, Andrew J",
+      "Fuller, Clifton D",
+      "Rice/MD Anderson Center for Operations Research in Cancer (CORC)",
+      "MD Anderson Head and Neck Cancer Symptom Working Group"
     ],
-    "journal": "Pract Radiat Oncol",
-    "year": 2022,
+    "journal": "J Med Imaging Radiat Oncol",
+    "year": 2024,
     "modified": "",
-    "doi": "10.1016/j.prro.2022.03.002",
-    "relativeCitationRatio": 1.035112772796688,
-    "citations": 8,
-    "citationsPerYear": 2.6666666666666665
+    "doi": "10.1111/1754-9485.13656",
+    "relativeCitationRatio": 1.0369701724612492,
+    "citations": 3,
+    "citationsPerYear": 3
   },
   {
     "id": 36442460,
@@ -9263,30 +9260,33 @@
     "citationsPerYear": 4.5
   },
   {
-    "id": 38766899,
+    "id": 35278717,
     "coreProject": "OT2OD026675",
     "application": 10397277,
-    "title": "Markov models for clinical decision-making in radiation oncology: A systematic review.",
+    "title": "Clinical Implementation and Initial Experience With a 1.5 Tesla MR-Linac for MR-Guided Radiation Therapy for Gynecologic Cancer: An R-IDEAL Stage 1 and 2a First in Humans Feasibility Study of New Technology Implementation.",
     "authors": [
-      "McCullum, Lucas B",
-      "Karagoz, Aysenur",
-      "Dede, Cem",
-      "Garcia, Raul",
-      "Nosrat, Fatemeh",
-      "Hemmati, Mehdi",
-      "Hosseinian, Seyedmohammadhossein",
-      "Schaefer, Andrew J",
-      "Fuller, Clifton D",
-      "Rice/MD Anderson Center for Operations Research in Cancer (CORC)",
-      "MD Anderson Head and Neck Cancer Symptom Working Group"
+      "Lakomy, David S",
+      "Yang, Jinzhong",
+      "Vedam, Sastry",
+      "Wang, Jihong",
+      "Lee, Belinda",
+      "Sobremonte, Angela",
+      "Castillo, Pamela",
+      "Hughes, Neil",
+      "Mohammedsaid, Mustefa",
+      "Jhingran, Anuja",
+      "Klopp, Ann H",
+      "Choi, Seungtaek",
+      "Fuller, C David",
+      "Lin, Lilie L"
     ],
-    "journal": "J Med Imaging Radiat Oncol",
-    "year": 2024,
+    "journal": "Pract Radiat Oncol",
+    "year": 2022,
     "modified": "",
-    "doi": "10.1111/1754-9485.13656",
-    "relativeCitationRatio": 1.0369701724612492,
-    "citations": 3,
-    "citationsPerYear": 3
+    "doi": "10.1016/j.prro.2022.03.002",
+    "relativeCitationRatio": 1.035112772796688,
+    "citations": 8,
+    "citationsPerYear": 2.6666666666666665
   },
   {
     "id": 35504500,
