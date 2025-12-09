@@ -201,7 +201,7 @@ export const getContributors = memoize(async (owner: string, repo: string) =>
 /** get programming languages used in repo */
 export const getLanguages = memoize(
   async (owner: string, repo: string) =>
-    await octokit.paginate(octokit.rest.repos.listLanguages, { owner, repo }),
+    (await octokit.rest.repos.listLanguages({ owner, repo })).data,
 );
 
 /**
