@@ -111,8 +111,9 @@ watchEffect(() => {
   /** total values for binned dates, assume sorted */
   let index = 0;
   for (const [date, value] of inputData) {
+    /** move to next bin */
     while (date >= bins[index + 1]! && index < bins.length - 1) index++;
-
+    /** accumulate value */
     data[index]![1] += value;
   }
 
