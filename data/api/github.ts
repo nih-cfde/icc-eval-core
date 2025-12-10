@@ -68,6 +68,15 @@ export const searchRepos = memoize(async (topic: string) => {
   return uniqBy([...repos, ...orgRepos], (repo) => repo.id);
 });
 
+/**
+ * get all top-level details for repo. returns everything that repo search
+ * returns, plus extra fields, including subscribers_count (watchers).
+ */
+export const getRepo = memoize(
+  async (owner: string, repo: string) =>
+    (await octokit.rest.repos.get({ owner, repo })).data,
+);
+
 /** get commits for repo */
 export const getCommits = memoize(async (owner: string, repo: string) =>
   (await octokit.paginate(octokit.rest.repos.listCommits, { owner, repo })).map(
@@ -168,6 +177,21 @@ export const getPullRequests = memoize(async (owner: string, repo: string) =>
     })),
 );
 
+/** check if repo has readme */
+export const hasReadme = memoize(async (owner: string, repo: string) => {
+  try {
+    await octokit.rest.repos.getReadme({ owner, repo });
+    return true;
+  } catch (error) {
+    /** https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#get-a-repository-readme--status-codes */
+    const status = (error as RequestError).status;
+    if (status === 404) return false;
+    throw Error(
+      `Unexpected problem getting readme for repo ${owner}/${repo}, status ${status}`,
+    );
+  }
+});
+
 /** check whether file exists in repo */
 export const fileExists = memoize(
   async (owner: string, repo: string, path: string) => {
@@ -180,7 +204,7 @@ export const fileExists = memoize(
       if (status === 302) return true;
       if (status === 404) return false;
       throw Error(
-        `Problem getting contents for repo ${owner}/${repo}, status ${status}`,
+        `Unexpected problem getting contents for repo ${owner}/${repo}, status ${status}`,
       );
     }
   },

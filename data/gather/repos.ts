@@ -8,7 +8,9 @@ import {
   getIssues,
   getLanguages,
   getPullRequests,
+  getRepo,
   getStars,
+  hasReadme,
   searchRepos,
 } from "@/api/github";
 import { log } from "@/util/log";
@@ -29,10 +31,7 @@ export const getRepos = async (coreProjects: string[]) => {
   const repoResults = await queryMulti(
     coreProjects.map(
       (coreProject) => async () =>
-        (await searchRepos(coreProject)).map((repo) => ({
-          ...repo,
-          coreProject,
-        })),
+        (await searchRepos(coreProject)).map((repo) => ({ repo, coreProject })),
     ),
     "github-repos.json",
   );
@@ -41,22 +40,19 @@ export const getRepos = async (coreProjects: string[]) => {
   let repos = filterErrors(repoResults).flat();
 
   /** de-dupe */
-  repos = uniqBy(repos, (repo) => repo.id);
+  repos = uniqBy(repos, ({ repo }) => repo.id);
 
   log(`Getting details for ${count(repos)} repos`);
 
   const repoDetails = await queryMulti(
-    repos.map((repo) => async (progress, label) => {
-      const owner = repo.owner?.login ?? "";
-      const name = repo.name;
+    repos.map(({ repo: _repo, coreProject }) => async (progress, label) => {
+      const owner = _repo.owner?.login ?? "";
+      const name = _repo.name;
 
       label(`${owner}/${name}`);
 
-      /**
-       * watchers over time not possible
-       * https://stackoverflow.com/questions/71090557/github-api-number-of-watch-over-time
-       */
-
+      const repo = await getRepo(owner, name);
+      progress(0.1);
       const stars = await getStars(owner, name);
       progress(0.2);
       const forks = await getForks(owner, name);
@@ -71,13 +67,14 @@ export const getRepos = async (coreProjects: string[]) => {
       progress(0.7);
       const languages = await getLanguages(owner, name);
       progress(0.8);
-      const readme = await fileExists(owner, name, "README.md");
+      const readme = await hasReadme(owner, name);
       const contributing = await fileExists(owner, name, "CONTRIBUTING.md");
       progress(0.9);
       const dependencies = await getDependencies(owner, name);
 
       return {
         ...repo,
+        coreProject,
         stars,
         forks,
         issues,
@@ -133,7 +130,7 @@ export const getRepos = async (coreProjects: string[]) => {
       (topic) => !topic.match(new RegExp(repo.coreProject, "i")),
     ),
     stars: repo.stars.map((star) => ({ date: star.starred_at ?? "" })),
-    watchers: repo.watchers,
+    watchers: repo.subscribers_count,
     forks: repo.forks.map((fork) => ({ date: fork.created_at ?? "" })),
     issues: repo.issues.map(mapIssue),
     openIssues: repo.issues.filter((issue) => issue.state === "open").length,
@@ -165,6 +162,7 @@ export const getRepos = async (coreProjects: string[]) => {
     license: repo.license?.name ?? "",
     readme: repo.readme,
     contributing: repo.contributing,
+    codeOfConduct: !!repo.code_of_conduct,
     dependencies: fromPairs(
       repo.dependencies.repository.dependencyGraphManifests?.nodes?.map(
         (node) => [
