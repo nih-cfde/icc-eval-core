@@ -181,17 +181,28 @@ const repoOverview = {
   repos: repos.length,
   stars: sumBy(repos, (repo) => repo.stars.length),
   forks: sumBy(repos, (repo) => repo.forks.length),
+  watchers: sumBy(repos, (repo) => repo.watchers ?? 0),
   commits: sumBy(repos, (repo) => repo.commits.length),
   openIssues: sumBy(repos, (repo) => repo.openIssues),
   closedIssues: sumBy(repos, (repo) => repo.closedIssues),
   openPullRequests: sumBy(repos, (repo) => repo.openPullRequests),
   closedPullRequests: sumBy(repos, (repo) => repo.closedPullRequests),
-  watchers: sumBy(repos, (repo) => repo.watchers ?? 0),
+  readme: repos.filter((repo) => repo.readme).length,
+  contributing: repos.filter((repo) => repo.contributing).length,
+  codeOfConduct: repos.filter((repo) => repo.codeOfConduct).length,
   contributors: new Set(
     repos
       .map(({ contributors }) => contributors.map(({ name }) => name))
       .flat(),
   ).size,
+  licenses: (() => {
+    const counts: Record<string, number> = {};
+    for (const { license } of repos)
+      counts[license] = (counts[license] ?? 0) + 1;
+    return Object.fromEntries(
+      orderBy(Object.entries(counts), (item) => item[1], "desc"),
+    );
+  })(),
   languages: (() => {
     const counts: Record<string, number> = {};
     for (const { languages } of repos)
@@ -199,16 +210,6 @@ const repoOverview = {
         counts[name] = (counts[name] ?? 0) + bytes;
     return Object.fromEntries(
       orderBy(Object.entries(counts), (count) => count[1], "desc"),
-    );
-  })(),
-  readme: repos.filter((repo) => repo.readme).length,
-  contributing: repos.filter((repo) => repo.contributing).length,
-  licenses: (() => {
-    const counts: Record<string, number> = {};
-    for (const { license } of repos)
-      counts[license] = (counts[license] ?? 0) + 1;
-    return Object.fromEntries(
-      orderBy(Object.entries(counts), (item) => item[1], "desc"),
     );
   })(),
 };

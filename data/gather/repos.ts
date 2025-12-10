@@ -57,18 +57,18 @@ export const getRepos = async (coreProjects: string[]) => {
       progress(0.2);
       const forks = await getForks(owner, name);
       progress(0.3);
-      const issues = await getIssues(owner, name);
-      progress(0.4);
-      const pullRequests = await getPullRequests(owner, name);
-      progress(0.5);
       const commits = await getCommits(owner, name);
+      progress(0.4);
+      const issues = await getIssues(owner, name);
+      progress(0.5);
+      const pullRequests = await getPullRequests(owner, name);
       progress(0.6);
-      const contributors = await getContributors(owner, name);
-      progress(0.7);
-      const languages = await getLanguages(owner, name);
-      progress(0.8);
       const readme = await hasReadme(owner, name);
       const contributing = await fileExists(owner, name, "CONTRIBUTING.md");
+      progress(0.7);
+      const contributors = await getContributors(owner, name);
+      progress(0.8);
+      const languages = await getLanguages(owner, name);
       progress(0.9);
       const dependencies = await getDependencies(owner, name);
 
@@ -77,13 +77,13 @@ export const getRepos = async (coreProjects: string[]) => {
         coreProject,
         stars,
         forks,
+        commits,
         issues,
         pullRequests,
-        commits,
-        contributors,
-        languages,
         readme,
         contributing,
+        contributors,
+        languages,
         dependencies,
       };
     }),
@@ -129,9 +129,14 @@ export const getRepos = async (coreProjects: string[]) => {
     topics: (repo.topics ?? []).filter(
       (topic) => !topic.match(new RegExp(repo.coreProject, "i")),
     ),
+    created: repo.created_at,
+    modified: repo.pushed_at,
     stars: repo.stars.map((star) => ({ date: star.starred_at ?? "" })),
-    watchers: repo.subscribers_count,
     forks: repo.forks.map((fork) => ({ date: fork.created_at ?? "" })),
+    watchers: repo.subscribers_count,
+    commits: repo.commits.map((commit) => ({
+      date: commit.commit?.committer?.date ?? "",
+    })),
     issues: repo.issues.map(mapIssue),
     openIssues: repo.issues.filter((issue) => issue.state === "open").length,
     closedIssues: repo.issues.filter((issue) => issue.state === "closed")
@@ -145,9 +150,10 @@ export const getRepos = async (coreProjects: string[]) => {
       (pullRequest) => pullRequest.state === "closed",
     ).length,
     pullRequestTimeOpen: getOpenTime(repo.pullRequests),
-    commits: repo.commits.map((commit) => ({
-      date: commit.commit?.committer?.date ?? "",
-    })),
+    readme: repo.readme,
+    contributing: repo.contributing,
+    codeOfConduct: !!repo.code_of_conduct,
+    license: repo.license?.name ?? "",
     contributors: repo.contributors.map((contributor) => ({
       name: contributor.login ?? contributor.name ?? "",
       contributions: contributor.contributions,
@@ -157,12 +163,6 @@ export const getRepos = async (coreProjects: string[]) => {
       (item) => item.bytes,
       "desc",
     ),
-    created: repo.created_at,
-    modified: repo.pushed_at,
-    license: repo.license?.name ?? "",
-    readme: repo.readme,
-    contributing: repo.contributing,
-    codeOfConduct: !!repo.code_of_conduct,
     dependencies: fromPairs(
       repo.dependencies.repository.dependencyGraphManifests?.nodes?.map(
         (node) => [

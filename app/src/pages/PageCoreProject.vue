@@ -113,6 +113,16 @@
         >
       </template>
 
+      <template #modified="{ row }">
+        {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
+        <br />
+        ({{ ago(row.modified) }})
+      </template>
+
+      <template #topics="{ row }">
+        {{ limit(row.topics, 5).join(" ") }}
+      </template>
+
       <template #issues="{ row }">
         Closed: {{ row.closedIssues.toLocaleString() }}
         <br />
@@ -123,12 +133,6 @@
         Closed: {{ row.closedPullRequests.toLocaleString() }}
         <br />
         Open: {{ row.openPullRequests.toLocaleString() }}
-      </template>
-
-      <template #modified="{ row }">
-        {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
-        <br />
-        ({{ ago(row.modified) }})
       </template>
     </AppTable>
 
@@ -143,14 +147,12 @@
         >
       </template>
 
-      <template #modified="{ row }">
-        {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
-        <br />
-        ({{ ago(row.modified) }})
+      <template #issue-time-open="{ row }">
+        {{ span(row.issueTimeOpen) }}
       </template>
 
-      <template #topics="{ row }">
-        {{ limit(row.topics, 5).join(" ") }}
+      <template #pull-request-time-open="{ row }">
+        {{ span(row.pullRequestTimeOpen) }}
       </template>
 
       <template #languages="{ row }">
@@ -530,8 +532,6 @@ const projectRepos = computed(() =>
     .filter((repo) => repo.coreProject === id.value)
     .map((repo) => ({
       ...repo,
-      issueTimeOpen: span(repo.issueTimeOpen),
-      pullRequestTimeOpen: span(repo.pullRequestTimeOpen),
       modified: date(repo.modified),
       dependencyTotal: sum(Object.values(repo.dependencies)),
       ...repo.dependencies,
@@ -552,16 +552,31 @@ const repoColsA: Cols<typeof projectRepos.value> = [
     align: "left",
   },
   {
+    slot: "topics",
+    key: "topics",
+    name: "Tags",
+    align: "left",
+  },
+  {
+    slot: "modified",
+    key: "modified",
+    name: "Last Commit",
+  },
+  {
     key: "stars",
     name: "Stars",
+  },
+  {
+    key: "forks",
+    name: "Forks",
   },
   {
     key: "watchers",
     name: "Watchers",
   },
   {
-    key: "forks",
-    name: "Forks",
+    key: "commits",
+    name: "Commits",
   },
   {
     key: "issues",
@@ -575,14 +590,6 @@ const repoColsA: Cols<typeof projectRepos.value> = [
     name: "PRs",
     style: { whiteSpace: "nowrap" },
   },
-  {
-    key: "commits",
-    name: "Commits",
-  },
-  {
-    key: "contributors",
-    name: "Contrib.",
-  },
 ];
 const repoColsB: Cols<typeof projectRepos.value> = [
   {
@@ -591,24 +598,36 @@ const repoColsB: Cols<typeof projectRepos.value> = [
     name: "Name",
     align: "left",
   },
+
   {
-    slot: "topics",
-    key: "topics",
-    name: "Tags",
-    align: "left",
-  },
-  {
-    slot: "modified",
-    key: "modified",
-    name: "Last Commit",
-  },
-  {
+    slot: "issue-time-open",
     key: "issueTimeOpen",
     name: "Issue Avg",
   },
   {
+    slot: "pull-request-time-open",
     key: "pullRequestTimeOpen",
     name: "PR Avg",
+  },
+  {
+    key: "readme",
+    name: "Readme",
+  },
+  {
+    key: "contributing",
+    name: "Contributing",
+  },
+  {
+    key: "codeOfConduct",
+    name: "Code of Con.",
+  },
+  {
+    key: "license",
+    name: "License",
+  },
+  {
+    key: "contributors",
+    name: "Contrib.",
   },
   {
     slot: "languages",
@@ -619,18 +638,6 @@ const repoColsB: Cols<typeof projectRepos.value> = [
         .map(({ name, bytes }) => `${name}: ${bytes}`)
         .join("\n"),
     }),
-  },
-  {
-    key: "license",
-    name: "License",
-  },
-  {
-    key: "readme",
-    name: "Readme",
-  },
-  {
-    key: "contributing",
-    name: "Contributing",
   },
   {
     slot: "dependencies",
