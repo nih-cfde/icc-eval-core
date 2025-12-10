@@ -6,9 +6,12 @@
     "name": "",
     "description": "",
     "topics": [""],
+    "created": "",
+    "modified": "",
     "stars": [{ "date": "" }],
-    "watchers": 0,
     "forks": [{ "date": "" }],
+    "watchers": 0,
+    "commits": [{ "date": "", "lines": 0 }],
     "issues": [
       {
         "state": "",
@@ -35,15 +38,12 @@
     "openPullRequests": 0,
     "closedPullRequests": 0,
     "pullRequestTimeOpen": 0,
-    "commits": [{ "date": "", "lines": 0 }],
-    "contributors": [{ "name": "", "contributions": 0 }],
-    "languages": [{ "name": "", "bytes": 0 }],
-    "created": "",
-    "modified": "",
-    "license": "",
     "readme": false,
     "contributing": false,
     "codeOfConduct": false,
+    "license": "",
+    "contributors": [{ "name": "", "contributions": 0 }],
+    "languages": [{ "name": "", "bytes": 0 }],
     "dependencies": { "": 0 }
   }
 ]
