@@ -10,11 +10,6 @@ import {
   eachMonthOfInterval,
   eachWeekOfInterval,
   eachYearOfInterval,
-  isAfter,
-  isBefore,
-  isEqual,
-  max,
-  min,
 } from "date-fns";
 import {
   connect,
@@ -93,32 +88,32 @@ watchEffect(() => {
   /** sum all values */
   const total = sum(props.data.map(([, value]) => value));
 
-  /** get range of passed dates */
+  /** sort dates from earliest to latest */
   const inputData = orderBy(props.data, ([date]) => date);
+
+  /** get range of passed dates */
   const inputDates = inputData.map(([date]) => date);
-  const start = min(inputDates);
-  const end = max(inputDates);
+  const start = inputDates.at(0);
+  const end = inputDates.at(-1);
 
   /** get date bins */
   let bins: Date[] = [];
-  if (props.by === "year") bins = eachYearOfInterval({ start, end }, {});
-  if (props.by === "month") bins = eachMonthOfInterval({ start, end });
-  if (props.by === "week") bins = eachWeekOfInterval({ start, end });
-  if (props.by === "day") bins = eachDayOfInterval({ start, end });
+  if (start && end) {
+    if (props.by === "year") bins = eachYearOfInterval({ start, end }, {});
+    if (props.by === "month") bins = eachMonthOfInterval({ start, end });
+    if (props.by === "week") bins = eachWeekOfInterval({ start, end });
+    if (props.by === "day") bins = eachDayOfInterval({ start, end });
+  }
 
   /** init bin values to 0 */
   const data: [Date, number][] = bins.map((date) => [date, 0]);
 
-  /** total values for binned dates */
+  /** total values for binned dates, assume sorted */
+  let index = 0;
   for (const [date, value] of inputData) {
-    const index = bins.findIndex(
-      (bin, index) =>
-        /** is value >= lower bound of bin */
-        (isEqual(bin, date) || isBefore(bin, date)) &&
-        /** is value < upper bound of bin, or at last bin */
-        (index === bins.length - 1 || isAfter(bins[index + 1]!, date)),
-    );
-    if (index !== -1) data[index]![1] += value;
+    while (date >= bins[index + 1]! && index < bins.length - 1) index++;
+
+    data[index]![1] += value;
   }
 
   /** accumulate values */
