@@ -197,7 +197,9 @@ const repoOverview = {
     for (const { languages } of repos)
       for (const { name, bytes } of languages)
         counts[name] = (counts[name] ?? 0) + bytes;
-    return Object.fromEntries(orderBy(Object.entries(counts), "[1]", "desc"));
+    return Object.fromEntries(
+      orderBy(Object.entries(counts), (count) => count[1], "desc"),
+    );
   })(),
   readme: repos.filter((repo) => repo.readme).length,
   contributing: repos.filter((repo) => repo.contributing).length,
@@ -205,7 +207,9 @@ const repoOverview = {
     const counts: Record<string, number> = {};
     for (const { license } of repos)
       counts[license] = (counts[license] ?? 0) + 1;
-    return Object.fromEntries(orderBy(Object.entries(counts), "[1]", "desc"));
+    return Object.fromEntries(
+      orderBy(Object.entries(counts), (item) => item[1], "desc"),
+    );
   })(),
 };
 

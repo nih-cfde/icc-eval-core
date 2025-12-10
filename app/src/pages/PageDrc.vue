@@ -54,9 +54,13 @@ const getTotals = (resources: (typeof dcc | typeof file | typeof code)[]) => {
     /** number of files */
     count: files.length,
     /** uncompressed size of files */
-    size: sumBy(files, "size"),
+    size: sumBy(files, (file) => file.size),
     /** extensions/types of files */
-    types: orderBy(Object.entries(countBy(files, "path.ext")), [1], ["desc"]),
+    types: orderBy(
+      Object.entries(countBy(files, (file) => file.path.ext)),
+      (count) => count[1],
+      "desc",
+    ),
   };
 };
 

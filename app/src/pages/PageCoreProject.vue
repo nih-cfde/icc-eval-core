@@ -343,15 +343,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import {
-  fromPairs,
-  orderBy,
-  startCase,
-  sum,
-  sumBy,
-  toPairs,
-  uniq,
-} from "lodash";
+import { orderBy, startCase, sum, sumBy, uniq } from "lodash";
 import { useTitle } from "@vueuse/core";
 import Analytics from "@/assets/analytics.svg";
 import Book from "@/assets/book.svg";
@@ -410,17 +402,38 @@ const details = computed(() => [
   [
     "Repositories",
     `${projectRepos.value.length.toLocaleString()} repositories`,
-    [sumBy(projectRepos.value, "stars.length").toLocaleString(), "stars"],
-    [sumBy(projectRepos.value, "watchers").toLocaleString(), "watchers"],
-    [sumBy(projectRepos.value, "forks.length").toLocaleString(), "forks"],
-    [sumBy(projectRepos.value, "issues.length").toLocaleString(), "issues"],
     [
-      sumBy(projectRepos.value, "pullRequests.length").toLocaleString(),
+      sumBy(projectRepos.value, (repo) => repo.stars.length).toLocaleString(),
+      "stars",
+    ],
+    [
+      sumBy(projectRepos.value, (repo) => repo.watchers).toLocaleString(),
+      "watchers",
+    ],
+    [
+      sumBy(projectRepos.value, (repo) => repo.forks.length).toLocaleString(),
+      "forks",
+    ],
+    [
+      sumBy(projectRepos.value, (repo) => repo.issues.length).toLocaleString(),
+      "issues",
+    ],
+    [
+      sumBy(
+        projectRepos.value,
+        (repo) => repo.pullRequests.length,
+      ).toLocaleString(),
       "pull requests",
     ],
-    [sumBy(projectRepos.value, "commits.length").toLocaleString(), "commits"],
     [
-      sumBy(projectRepos.value, "contributors.length").toLocaleString(),
+      sumBy(projectRepos.value, (repo) => repo.commits.length).toLocaleString(),
+      "commits",
+    ],
+    [
+      sumBy(
+        projectRepos.value,
+        (repo) => repo.contributors.length,
+      ).toLocaleString(),
       "contributors",
     ],
   ],
@@ -726,8 +739,8 @@ const topAnalytics = computed(() => {
   /** sort and limit counts */
   for (const [topKey, topValue] of getEntries(total))
     for (const [byKey, byValue] of getEntries(topValue))
-      total[topKey]![byKey] = fromPairs(
-        orderBy(toPairs(byValue), [1], ["desc"]).slice(0, 5),
+      total[topKey]![byKey] = Object.fromEntries(
+        orderBy(Object.entries(byValue), (item) => item[1], "desc").slice(0, 5),
       );
 
   return total;

@@ -113,8 +113,8 @@ export const getOpportunities = async () => {
 
   log(`Parsing ${count(documents)} HTML/PDF documents for opportunities`);
 
-  let opportunities = await queryMulti(
-    filterErrors(documents).map(
+  const opportunities = await queryMulti(
+    documents.map(
       (document) => async (progress) => getOpportunity(document, progress),
     ),
     "opportunities.json",
@@ -122,7 +122,5 @@ export const getOpportunities = async () => {
   );
 
   /** de-dupe */
-  opportunities = uniqBy(opportunities, "id");
-
-  return filterErrors(opportunities);
+  return uniqBy(filterErrors(opportunities), (opportunity) => opportunity.id);
 };

@@ -26,7 +26,7 @@ export const getAnalytics = async () => {
   );
 
   /** de-dupe */
-  properties = uniqBy(properties, "property");
+  properties = uniqBy(properties, (property) => property.property);
 
   log("Getting Google Analytics data");
 

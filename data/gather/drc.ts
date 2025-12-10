@@ -70,7 +70,7 @@ export const getDrc = async () => {
   };
 
   for (const [ext, number] of Object.entries(
-    countBy(Object.values(resources).flat(), "ext"),
+    countBy(Object.values(resources).flat(), (resource) => resource.ext),
   ))
     log(`(${count(number)}) .${ext} files`, "secondary");
 
@@ -120,10 +120,11 @@ export const getDrc = async () => {
     .flat()
     .flat();
 
-  for (const [ext, number] of Object.entries(countBy(allFiles, "path.ext")))
+  for (const [ext, number] of Object.entries(
+    countBy(allFiles, (file) => file.path.ext),
+  ))
     log(`(${count(number)}) .${ext} files`, "secondary");
   log(`> ${count(allFiles)} files uncompressed`);
-  log(`> ${bytes(sumBy(allFiles, "size"))} uncompressed`);
-
+  log(`> ${bytes(sumBy(allFiles, (file) => file.size))} uncompressed`);
   return resources;
 };

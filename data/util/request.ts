@@ -1,4 +1,4 @@
-import { countBy } from "lodash-es";
+import { countBy, keys } from "lodash-es";
 import stripAnsi from "strip-ansi";
 import { saveFile, type Filename } from "@/util/file";
 import { log, progress } from "@/util/log";
@@ -72,7 +72,7 @@ export const isEmpty = (data: unknown) =>
   data === undefined ||
   data === null ||
   (Array.isArray(data) && !data.length) ||
-  (typeof data === "object" && !Object.keys(data).length);
+  (typeof data === "object" && !keys(data).length);
 
 export type Progress = (progress: number) => void;
 

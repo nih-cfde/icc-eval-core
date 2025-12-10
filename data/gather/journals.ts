@@ -66,7 +66,7 @@ export const getJournals = async (journalIds: string[]) => {
   });
 
   /** de-dupe */
-  transformedJournals = uniqBy(transformedJournals, "id");
+  transformedJournals = uniqBy(transformedJournals, (journal) => journal.id);
 
   return transformedJournals;
 };

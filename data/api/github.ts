@@ -65,7 +65,7 @@ export const searchRepos = memoize(async (topic: string) => {
     )
   ).flat();
 
-  return uniqBy([...repos, ...orgRepos], "id");
+  return uniqBy([...repos, ...orgRepos], (repo) => repo.id);
 });
 
 /** get commits for repo */
