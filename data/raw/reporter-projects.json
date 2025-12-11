@@ -1,6 +1,6 @@
 {
   "meta": {
-    "search_id": "tmcOaUYmLEmY-adZgVfPeg",
+    "search_id": "2Pn0gQRP1ESafVjlmWLs4g",
     "total": 150,
     "offset": 0,
     "limit": 500,
@@ -8,7 +8,7 @@
     "sort_order": "ASC",
     "sorted_by_relevance": false,
     "properties": {
-      "URL": "https:/reporter.nih.gov/search/tmcOaUYmLEmY-adZgVfPeg/projects"
+      "URL": "https:/reporter.nih.gov/search/2Pn0gQRP1ESafVjlmWLs4g/projects"
     }
   },
   "results": [
@@ -14436,148 +14436,6 @@
       "date_added": "2025-09-27T18:08:34"
     },
     {
-      "appl_id": 10444365,
-      "subproject_id": null,
-      "fiscal_year": 2021,
-      "project_num": "3OT2OD030162-01S1",
-      "project_serial_num": "OD030162",
-      "organization": {
-        "org_name": "CHILDREN'S HOSP OF PHILADELPHIA",
-        "city": null,
-        "country": null,
-        "org_city": "PHILADELPHIA",
-        "org_country": "UNITED STATES",
-        "org_state": "PA",
-        "org_state_name": null,
-        "dept_type": null,
-        "fips_country_code": null,
-        "org_duns": ["073757627"],
-        "org_ueis": ["G7MQPLSUX1L4"],
-        "primary_duns": "073757627",
-        "primary_uei": "G7MQPLSUX1L4",
-        "org_fips": "US",
-        "org_ipf_code": "1499101",
-        "org_zipcode": "191462305",
-        "external_org_id": 1499101
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 357776,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030162",
-        "support_year": "01",
-        "full_support_year": "01S1",
-        "suffix_code": "S1"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 14376558,
-          "first_name": "Jack",
-          "middle_name": "",
-          "last_name": "DiGiovanna",
-          "is_contact_pi": false,
-          "full_name": "Jack  DiGiovanna",
-          "title": ""
-        },
-        {
-          "profile_id": 10817313,
-          "first_name": "Vincent",
-          "middle_name": "",
-          "last_name": "Ferretti",
-          "is_contact_pi": false,
-          "full_name": "Vincent  Ferretti",
-          "title": ""
-        },
-        {
-          "profile_id": 14887857,
-          "first_name": "Allison",
-          "middle_name": "",
-          "last_name": "Heath",
-          "is_contact_pi": false,
-          "full_name": "Allison  Heath",
-          "title": ""
-        },
-        {
-          "profile_id": 9238231,
-          "first_name": "Adam",
-          "middle_name": "Cain",
-          "last_name": "Resnick",
-          "is_contact_pi": true,
-          "full_name": "Adam Cain Resnick",
-          "title": "CENTER DIRECTOR"
-        }
-      ],
-      "contact_pi_name": "RESNICK, ADAM CAIN",
-      "program_officers": [
-        {
-          "first_name": "GEORGE",
-          "middle_name": "",
-          "last_name": "PAPANICOLAOU",
-          "full_name": "GEORGE  PAPANICOLAOU"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2021,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 357776,
-          "direct_cost_ic": 357776,
-          "indirect_cost_ic": null
-        }
-      ],
-      "cong_dist": "PA-03",
-      "spending_categories": null,
-      "project_start_date": "2020-09-25T00:00:00",
-      "project_end_date": "2023-09-24T00:00:00",
-      "organization_type": {
-        "name": "Independent Hospitals",
-        "code": "30",
-        "is_other": false
-      },
-      "geo_lat_lon": { "lon": -75.196604, "lat": 39.946632 },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2021-07-29T00:00:00",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030162",
-      "terms": null,
-      "pref_terms": null,
-      "abstract_text": "Rationale for Multiple PI Proposal\nThis proposal focuses on activities and collaborations with an initial set of Common Fund DCCs and the\nCFDE-CC in response to the Engagement Opportunity “Engaging Common Fund Data Coordinating\nCenters to Establish the Common Fund Data Ecosystem (CFDE)” OTA-20-2005. Our proposed\nengagements span the 3 key areas defined in the OT EOA and include GTEx, LINCS, HUBMAP, and\nSPARC as well as the activities the Kids First DRC is leading as part of the NIH Interoperability Working\nGroup to further the establishment of the Common Fund Data Ecosystem (CFDE).\nThe four investigators collaborating on this proposal have distinct professional backgrounds, areas of\nexpertise, and research tools at their disposal including leading the Kids First DCC/DRP and CAVATICA\nefforts.\nAt the Children’s Hospital of Philadelphia, Dr. Adam Resnick is a cancer and neuroscience research\nscientist with expertise in pediatric brain tumors and Dr. Allison Heath is a computer science expert in\nlarge-scale data bioinformatics and compute infrastructure. These experts will work together to lead the\nCHOP project team. At Centre Hospitalier Universitaire Sainte-Justine, Dr. Vincent Ferretti develops\nbioinformatics software for both large-scale software development and computational genomics. At Seven\nBridges, Dr. Jack DiGiovanna is an expert in cloud-based analysis platforms for bioinformatics that are\nscalable, collaborative, and reproducible.\nResponsibilities of Investigators\nAll PIs will share responsibility for ensuring the ethical conduct of the project, upholding the scientific\nintegrity of the project, administration, oversight and coordination of the project’s management.\nDr. Adam Resnick will serve as the contact PI. He will be responsible for the overall strategy, determining\nthe prioritization of scientific use cases, and ensuring that the project meets its goals of scientific impact.\nDr. Heath will oversee and facilitate the completion of the technical milestones and deliverables across all\nCDFE engagements. Dr. Heath will also be responsible for the execution of interoperability strategies with\nCFDE and the NIH IC Stacks. Dr. Ferretti will supervise the KFDRC portal development team and will be\nresponsible for all of their relevant deliverables, such as authentication with NIH RAS and visualization\nintegrations with LINCS. Dr. DiGiovanna will supervise the CAVATICA development team and will be\nresponsible for all of their relevant deliverables, such as GA4GH DRS integration and multi-cloud\ncapabilities.\nCommunication and Data Sharing\nThe PIs will communicate weekly and hold monthly teleconferences with PIs at the other organizations to\ndiscuss the CFDE and all administrative responsibilities. In addition, PIs will meet in person with all\npersonnel at least annually to assess progress and make major decisions about the direction of the\nprogram. If changes are warranted, PIs will work together to discuss those modifications and the\nredistribution of funds, if necessary. A publication policy will be established based on the relative scientific\ncontributions of the PIs and key personnel. Dr. Resnick will serve as contact PI and be responsible for\nsubmission of progress reports, annual reports to the NIH and all other communication.",
-      "project_title": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
-      "phr_text": "",
-      "spending_categories_desc": null,
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2021-07-07T00:00:00",
-      "budget_end": "2022-06-30T00:00:00",
-      "cfda_code": "93.310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 357776,
-      "indirect_cost_amt": null,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10444365",
-      "date_added": "2021-07-31T16:33:26"
-    },
-    {
       "appl_id": 10683508,
       "subproject_id": null,
       "fiscal_year": 2022,
@@ -14727,6 +14585,148 @@
       "indirect_cost_amt": 0,
       "project_detail_url": "https://reporter.nih.gov/project-details/10683508",
       "date_added": "2022-10-01T16:15:19"
+    },
+    {
+      "appl_id": 10444365,
+      "subproject_id": null,
+      "fiscal_year": 2021,
+      "project_num": "3OT2OD030162-01S1",
+      "project_serial_num": "OD030162",
+      "organization": {
+        "org_name": "CHILDREN'S HOSP OF PHILADELPHIA",
+        "city": null,
+        "country": null,
+        "org_city": "PHILADELPHIA",
+        "org_country": "UNITED STATES",
+        "org_state": "PA",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": ["073757627"],
+        "org_ueis": ["G7MQPLSUX1L4"],
+        "primary_duns": "073757627",
+        "primary_uei": "G7MQPLSUX1L4",
+        "org_fips": "US",
+        "org_ipf_code": "1499101",
+        "org_zipcode": "191462305",
+        "external_org_id": 1499101
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 357776,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030162",
+        "support_year": "01",
+        "full_support_year": "01S1",
+        "suffix_code": "S1"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 14376558,
+          "first_name": "Jack",
+          "middle_name": "",
+          "last_name": "DiGiovanna",
+          "is_contact_pi": false,
+          "full_name": "Jack  DiGiovanna",
+          "title": ""
+        },
+        {
+          "profile_id": 10817313,
+          "first_name": "Vincent",
+          "middle_name": "",
+          "last_name": "Ferretti",
+          "is_contact_pi": false,
+          "full_name": "Vincent  Ferretti",
+          "title": ""
+        },
+        {
+          "profile_id": 14887857,
+          "first_name": "Allison",
+          "middle_name": "",
+          "last_name": "Heath",
+          "is_contact_pi": false,
+          "full_name": "Allison  Heath",
+          "title": ""
+        },
+        {
+          "profile_id": 9238231,
+          "first_name": "Adam",
+          "middle_name": "Cain",
+          "last_name": "Resnick",
+          "is_contact_pi": true,
+          "full_name": "Adam Cain Resnick",
+          "title": "CENTER DIRECTOR"
+        }
+      ],
+      "contact_pi_name": "RESNICK, ADAM CAIN",
+      "program_officers": [
+        {
+          "first_name": "GEORGE",
+          "middle_name": "",
+          "last_name": "PAPANICOLAOU",
+          "full_name": "GEORGE  PAPANICOLAOU"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2021,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 357776,
+          "direct_cost_ic": 357776,
+          "indirect_cost_ic": null
+        }
+      ],
+      "cong_dist": "PA-03",
+      "spending_categories": null,
+      "project_start_date": "2020-09-25T00:00:00",
+      "project_end_date": "2023-09-24T00:00:00",
+      "organization_type": {
+        "name": "Independent Hospitals",
+        "code": "30",
+        "is_other": false
+      },
+      "geo_lat_lon": { "lon": -75.196604, "lat": 39.946632 },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2021-07-29T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030162",
+      "terms": null,
+      "pref_terms": null,
+      "abstract_text": "Rationale for Multiple PI Proposal\nThis proposal focuses on activities and collaborations with an initial set of Common Fund DCCs and the\nCFDE-CC in response to the Engagement Opportunity “Engaging Common Fund Data Coordinating\nCenters to Establish the Common Fund Data Ecosystem (CFDE)” OTA-20-2005. Our proposed\nengagements span the 3 key areas defined in the OT EOA and include GTEx, LINCS, HUBMAP, and\nSPARC as well as the activities the Kids First DRC is leading as part of the NIH Interoperability Working\nGroup to further the establishment of the Common Fund Data Ecosystem (CFDE).\nThe four investigators collaborating on this proposal have distinct professional backgrounds, areas of\nexpertise, and research tools at their disposal including leading the Kids First DCC/DRP and CAVATICA\nefforts.\nAt the Children’s Hospital of Philadelphia, Dr. Adam Resnick is a cancer and neuroscience research\nscientist with expertise in pediatric brain tumors and Dr. Allison Heath is a computer science expert in\nlarge-scale data bioinformatics and compute infrastructure. These experts will work together to lead the\nCHOP project team. At Centre Hospitalier Universitaire Sainte-Justine, Dr. Vincent Ferretti develops\nbioinformatics software for both large-scale software development and computational genomics. At Seven\nBridges, Dr. Jack DiGiovanna is an expert in cloud-based analysis platforms for bioinformatics that are\nscalable, collaborative, and reproducible.\nResponsibilities of Investigators\nAll PIs will share responsibility for ensuring the ethical conduct of the project, upholding the scientific\nintegrity of the project, administration, oversight and coordination of the project’s management.\nDr. Adam Resnick will serve as the contact PI. He will be responsible for the overall strategy, determining\nthe prioritization of scientific use cases, and ensuring that the project meets its goals of scientific impact.\nDr. Heath will oversee and facilitate the completion of the technical milestones and deliverables across all\nCDFE engagements. Dr. Heath will also be responsible for the execution of interoperability strategies with\nCFDE and the NIH IC Stacks. Dr. Ferretti will supervise the KFDRC portal development team and will be\nresponsible for all of their relevant deliverables, such as authentication with NIH RAS and visualization\nintegrations with LINCS. Dr. DiGiovanna will supervise the CAVATICA development team and will be\nresponsible for all of their relevant deliverables, such as GA4GH DRS integration and multi-cloud\ncapabilities.\nCommunication and Data Sharing\nThe PIs will communicate weekly and hold monthly teleconferences with PIs at the other organizations to\ndiscuss the CFDE and all administrative responsibilities. In addition, PIs will meet in person with all\npersonnel at least annually to assess progress and make major decisions about the direction of the\nprogram. If changes are warranted, PIs will work together to discuss those modifications and the\nredistribution of funds, if necessary. A publication policy will be established based on the relative scientific\ncontributions of the PIs and key personnel. Dr. Resnick will serve as contact PI and be responsible for\nsubmission of progress reports, annual reports to the NIH and all other communication.",
+      "project_title": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
+      "phr_text": "",
+      "spending_categories_desc": null,
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2021-07-07T00:00:00",
+      "budget_end": "2022-06-30T00:00:00",
+      "cfda_code": "93.310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 357776,
+      "indirect_cost_amt": null,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10444365",
+      "date_added": "2021-07-31T16:33:26"
     },
     {
       "appl_id": 11093820,
@@ -15901,121 +15901,6 @@
       "date_added": "2025-09-13T17:04:12"
     },
     {
-      "appl_id": 10683515,
-      "subproject_id": null,
-      "fiscal_year": 2022,
-      "project_num": "3OT2OD030544-01S2",
-      "project_serial_num": "OD030544",
-      "organization": {
-        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
-        "city": null,
-        "country": null,
-        "org_city": "LA JOLLA",
-        "org_country": "UNITED STATES",
-        "org_state": "CA",
-        "org_state_name": null,
-        "dept_type": "ENGINEERING (ALL TYPES)",
-        "fips_country_code": null,
-        "org_duns": ["804355790"],
-        "org_ueis": ["UYTTZT6G9DT1"],
-        "primary_duns": "804355790",
-        "primary_uei": "UYTTZT6G9DT1",
-        "org_fips": "US",
-        "org_ipf_code": "577507",
-        "org_zipcode": "920930621",
-        "external_org_id": 577507
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 807151,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030544",
-        "support_year": "01",
-        "full_support_year": "01S2",
-        "suffix_code": "S2"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 1936703,
-          "first_name": "Shankar",
-          "middle_name": "",
-          "last_name": "Subramaniam",
-          "is_contact_pi": true,
-          "full_name": "Shankar  Subramaniam",
-          "title": "PROFESSOR"
-        }
-      ],
-      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
-      "program_officers": [
-        {
-          "first_name": "GEORGE",
-          "middle_name": "",
-          "last_name": "PAPANICOLAOU",
-          "full_name": "GEORGE  PAPANICOLAOU"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2022,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 807151,
-          "direct_cost_ic": 807151,
-          "indirect_cost_ic": 0
-        }
-      ],
-      "cong_dist": "CA-50",
-      "spending_categories": [4531, 329],
-      "project_start_date": "2020-09-23T00:00:00",
-      "project_end_date": "2023-09-22T00:00:00",
-      "organization_type": {
-        "name": "SCHOOLS OF ARTS AND SCIENCES",
-        "code": "10",
-        "is_other": false
-      },
-      "geo_lat_lon": { "lon": -117.24087, "lat": 32.876991 },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2022-09-19T00:00:00",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030544",
-      "terms": "<Address><Biological><Biological Markers><Clinical><Computing Methodologies><Data><Data Commons><Data Sources><Data Systems><Development><Funding><Future><Genotype><IT Systems><Information Systems><Information Technology Systems><Infrastructure><Investigators><Knowledge><Modeling><Process><Research><Research Personnel><Researchers><Sight><System><Text><Vision><bio-markers><biologic><biologic marker><biological systems><biomarker><computational methodology><computational methods><computer based method><computer methods><computing method><data diversity><data integration><developmental><diverse data><multiple data types><phenotypic data><tool><visual function>",
-      "pref_terms": "Address;Biological;Biological Markers;Clinical;Computing Methodologies;Data;Data Commons;Data Sources;Development;Funding;Future;Genotype;Information Systems;Infrastructure;Knowledge;Modeling;Process;Research;Research Personnel;System;Text;Vision;biological systems;data integration;diverse data;multiple data types;phenotypic data;tool",
-      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
-      "project_title": "Biomedical Data Commons Workbench (BDCW)",
-      "phr_text": "No Text",
-      "spending_categories_desc": "Data Science; Networking and Information Technology R&D (NITRD)",
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2022-09-23T00:00:00",
-      "budget_end": "2023-09-22T00:00:00",
-      "cfda_code": "93.310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 807151,
-      "indirect_cost_amt": 0,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10683515",
-      "date_added": "2022-09-24T16:15:44"
-    },
-    {
       "appl_id": 11090253,
       "subproject_id": null,
       "fiscal_year": 2024,
@@ -16129,6 +16014,121 @@
       "indirect_cost_amt": 0,
       "project_detail_url": "https://reporter.nih.gov/project-details/11090253",
       "date_added": "2024-09-28T16:29:47"
+    },
+    {
+      "appl_id": 10683515,
+      "subproject_id": null,
+      "fiscal_year": 2022,
+      "project_num": "3OT2OD030544-01S2",
+      "project_serial_num": "OD030544",
+      "organization": {
+        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+        "city": null,
+        "country": null,
+        "org_city": "LA JOLLA",
+        "org_country": "UNITED STATES",
+        "org_state": "CA",
+        "org_state_name": null,
+        "dept_type": "ENGINEERING (ALL TYPES)",
+        "fips_country_code": null,
+        "org_duns": ["804355790"],
+        "org_ueis": ["UYTTZT6G9DT1"],
+        "primary_duns": "804355790",
+        "primary_uei": "UYTTZT6G9DT1",
+        "org_fips": "US",
+        "org_ipf_code": "577507",
+        "org_zipcode": "920930621",
+        "external_org_id": 577507
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 807151,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030544",
+        "support_year": "01",
+        "full_support_year": "01S2",
+        "suffix_code": "S2"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 1936703,
+          "first_name": "Shankar",
+          "middle_name": "",
+          "last_name": "Subramaniam",
+          "is_contact_pi": true,
+          "full_name": "Shankar  Subramaniam",
+          "title": "PROFESSOR"
+        }
+      ],
+      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
+      "program_officers": [
+        {
+          "first_name": "GEORGE",
+          "middle_name": "",
+          "last_name": "PAPANICOLAOU",
+          "full_name": "GEORGE  PAPANICOLAOU"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2022,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 807151,
+          "direct_cost_ic": 807151,
+          "indirect_cost_ic": 0
+        }
+      ],
+      "cong_dist": "CA-50",
+      "spending_categories": [4531, 329],
+      "project_start_date": "2020-09-23T00:00:00",
+      "project_end_date": "2023-09-22T00:00:00",
+      "organization_type": {
+        "name": "SCHOOLS OF ARTS AND SCIENCES",
+        "code": "10",
+        "is_other": false
+      },
+      "geo_lat_lon": { "lon": -117.24087, "lat": 32.876991 },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2022-09-19T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030544",
+      "terms": "<Address><Biological><Biological Markers><Clinical><Computing Methodologies><Data><Data Commons><Data Sources><Data Systems><Development><Funding><Future><Genotype><IT Systems><Information Systems><Information Technology Systems><Infrastructure><Investigators><Knowledge><Modeling><Process><Research><Research Personnel><Researchers><Sight><System><Text><Vision><bio-markers><biologic><biologic marker><biological systems><biomarker><computational methodology><computational methods><computer based method><computer methods><computing method><data diversity><data integration><developmental><diverse data><multiple data types><phenotypic data><tool><visual function>",
+      "pref_terms": "Address;Biological;Biological Markers;Clinical;Computing Methodologies;Data;Data Commons;Data Sources;Development;Funding;Future;Genotype;Information Systems;Infrastructure;Knowledge;Modeling;Process;Research;Research Personnel;System;Text;Vision;biological systems;data integration;diverse data;multiple data types;phenotypic data;tool",
+      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
+      "project_title": "Biomedical Data Commons Workbench (BDCW)",
+      "phr_text": "No Text",
+      "spending_categories_desc": "Data Science; Networking and Information Technology R&D (NITRD)",
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2022-09-23T00:00:00",
+      "budget_end": "2023-09-22T00:00:00",
+      "cfda_code": "93.310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 807151,
+      "indirect_cost_amt": 0,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10683515",
+      "date_added": "2022-09-24T16:15:44"
     },
     {
       "appl_id": 10994353,
@@ -16600,123 +16600,6 @@
       "date_added": "2021-09-25T16:33:53"
     },
     {
-      "appl_id": 10112014,
-      "subproject_id": null,
-      "fiscal_year": 2020,
-      "project_num": "1R03OD030600-01",
-      "project_serial_num": "OD030600",
-      "organization": {
-        "org_name": "CHILDREN'S HOSP OF PHILADELPHIA",
-        "city": null,
-        "country": null,
-        "org_city": "PHILADELPHIA",
-        "org_country": "UNITED STATES",
-        "org_state": "PA",
-        "org_state_name": null,
-        "dept_type": null,
-        "fips_country_code": null,
-        "org_duns": ["073757627"],
-        "org_ueis": ["G7MQPLSUX1L4"],
-        "primary_duns": "073757627",
-        "primary_uei": "G7MQPLSUX1L4",
-        "org_fips": "US",
-        "org_ipf_code": "1499101",
-        "org_zipcode": "191462305",
-        "external_org_id": 1499101
-      },
-      "award_type": "1",
-      "activity_code": "R03",
-      "award_amount": 363306,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "1",
-        "activity_code": "R03",
-        "ic_code": "OD",
-        "serial_num": "030600",
-        "support_year": "01",
-        "full_support_year": "01",
-        "suffix_code": ""
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 9254652,
-          "first_name": "Deanne",
-          "middle_name": "Marie",
-          "last_name": "Taylor",
-          "is_contact_pi": true,
-          "full_name": "Deanne Marie Taylor",
-          "title": "DIRECTOR OF BIOINFORMATICS"
-        }
-      ],
-      "contact_pi_name": "TAYLOR, DEANNE MARIE",
-      "program_officers": [
-        {
-          "first_name": "CHRISTOPHER",
-          "middle_name": "",
-          "last_name": "KINSINGER",
-          "full_name": "CHRISTOPHER  KINSINGER"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2020,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 363306,
-          "direct_cost_ic": 234073,
-          "indirect_cost_ic": 129233
-        }
-      ],
-      "cong_dist": "PA-03",
-      "spending_categories": [
-        108, 132, 1393, 2382, 276, 320, 4372, 329, 679, 2310, 729
-      ],
-      "project_start_date": "2020-09-18T00:00:00",
-      "project_end_date": "2023-08-31T00:00:00",
-      "organization_type": {
-        "name": "Independent Hospitals",
-        "code": "30",
-        "is_other": false
-      },
-      "geo_lat_lon": { "lon": -75.196604, "lat": 39.946632 },
-      "opportunity_number": "RFA-RM-19-012",
-      "full_study_section": {
-        "srg_code": "ZRG1",
-        "srg_flex": null,
-        "sra_designator_code": "ETTN",
-        "sra_flex_code": "B",
-        "group_code": "52",
-        "name": "Special Emphasis Panel[ZRG1 ETTN-B (52)]"
-      },
-      "award_notice_date": "2020-09-18T00:00:00",
-      "is_new": false,
-      "mechanism_code_dc": "RP",
-      "core_project_num": "R03OD030600",
-      "terms": "<0-11 years old><Agreement><Anatomic><Anatomic Sites><Anatomic structures><Anatomical Sciences><Anatomy><Biological><Biology><Body Tissues><Cancers><Cardiac Abnormalities><Cardiac Malformation><Cardiac defect><Causality><Child><Child Youth><Childhood><Childhood Cancers><Children (0-21)><Cohort Studies><Complex><Concurrent Studies><Congenital Cardiac Defects><Congenital Heart Defects><Congenital diaphragmatic hernia><Data><Data Bases><Data Set><Databases><Dataset><Development><Disease><Disorder><Drug Targeting><Epistasis><Epistatic Deviation><Etiology><Face><Family><Funding><GTEx><Gene variant><Genes><Genetic><Genetic Epistasis><Genetic analyses><Genotype><Genotype-Tissue Expression Project><Goals><Grant><Graph><Heart><Heart Abnormalities><Heart Malformation><Heterogeneity><Individual><Interaction Deviation><Investigators><KO mice><Knock-out><Knock-out Mice><Knockout><Knockout Mice><Knowledge><Lead><Link><Machine Learning><Malignant Childhood Neoplasm><Malignant Childhood Tumor><Malignant Neoplasms><Malignant Pediatric Neoplasm><Malignant Pediatric Tumor><Malignant Tumor><Malignant childhood cancer><Metadata><Methods><Mice><Mice Mammals><Modeling><Murine><Mus><NIH><National Institutes of Health><Null Mouse><Ontology><Oral><Outcome Study><Pathway interactions><Pattern><Pb element><Pediatric Research><Performance><Phenotype><Population><Process><QTL><Quantitative Trait Loci><R-Series Research Projects><R01 Mechanism><R01 Program><Randomized><Recovery><Research Grants><Research Personnel><Research Project Grants><Research Projects><Researchers><Risk><Risk Factors><Services><Source><Structural Birth Defect><Structural Congenital Anomalies><Subgroup><Testing><Time><Tissues><United States National Institutes of Health><Variant><Variation><Work><allele variant><allelic variant><analysis pipeline><analytical method><base><cancer in a child><cancer in children><candidate identification><causation><child with cancer><childhood malignancy><children><children with cancer><childrens'><cohort><complex data><congenital cardiac anomalies><congenital structural malformation><data base><data integration><data resource><database of Genotypes and Phenotypes><dbGaP><developmental><disease causation><entire genome><epistatic relationship><faces><facial><feature selection><full genome><gene interaction><gene locus><gene x gene interaction><genetic analysis><genetic epistases><genetic locus><genetic variant><genome scale><genome sequencing><genome-wide><genomewide><genomic data><genomic data-set><genomic dataset><genomic locus><genomic variant><heart defect><heavy metal Pb><heavy metal lead><insight><interest><knockout gene><large scale data><large scale data sets><large scale datasets><machine learned><malignancy><meta data><neoplasm/cancer><novel><pathway><pediatric><pediatric cancer><pediatric malignancy><performance tests><phenotypic data><programs><randomisation><randomization><randomly assigned><rare allele><rare variant><statistical and machine learning><whole genome><youngster>",
-      "pref_terms": "Agreement;Anatomy;Biological;Biology;Child;Childhood;Cohort Studies;Complex;Congenital Heart Defects;Congenital diaphragmatic hernia;Data;Data Set;Databases;Development;Disease;Drug Targeting;Etiology;Face;Family;Funding;Genes;Genetic;Genetic Epistasis;Genotype;Genotype-Tissue Expression Project;Goals;Grant;Graph;Heart;Heart Abnormalities;Heterogeneity;Individual;Knock-out;Knockout Mice;Knowledge;Lead;Link;Machine Learning;Malignant Childhood Neoplasm;Malignant Neoplasms;Metadata;Methods;Modeling;Mus;Ontology;Oral;Outcome Study;Pathway interactions;Pattern;Pediatric Research;Performance;Phenotype;Population;Process;Quantitative Trait Loci;Randomized;Recovery;Research Personnel;Research Project Grants;Risk;Risk Factors;Services;Source;Structural Congenital Anomalies;Subgroup;Testing;Time;Tissues;United States National Institutes of Health;Variant;Work;analysis pipeline;analytical method;base;candidate identification;cohort;complex data;data integration;data resource;database of Genotypes and Phenotypes;feature selection;gene interaction;genetic analysis;genetic variant;genome sequencing;genome-wide;genomic data;genomic locus;insight;interest;knockout gene;large scale data;novel;performance tests;phenotypic data;programs;rare variant;statistical and machine learning;whole genome",
-      "abstract_text": "Project Abstract\nThis project will pilot a process for identifying multi-variant interactions contributing structural birth defect\nand childhood cancer disorders. This study will focus on analysis of oral-facial clefts, congenital diaphragmatic\nhernia, and congenital heart defects from whole-genome sequencing (WGS) data from family cohorts taken\nfrom Gabriella Miller Kids First Pediatric Research Project (KF).\n Typically, tests to link disorders to genome-wide complex multivariate associations are computationally\nprohibitive. Thus, a first step to making such analyses more reasonable is to limit the number of variables\n(genes, variants) being tested together. We can reduce the number of possible tests by restricting what data\nshould be tested. This study will seek to reduce the data for testing by utilizing biological knowledge from other\ntwo Common Fund datasets: the Knockout Mouse Phenotyping Program (KOMP2), and the Genotype-Tissue\nExpression (GTEx) project. KOMP2 has generated extensive information on mouse knockout developmental\nphenotypes relevant for matching gene and phenotypes in KF WGS studies. GTEx can be merged with KF loci\nand relevant tissue-to-phenotype relationships. Thus, using features from other Common Fund data and\nannotations, we can generate selected subsets of KF variants and genes as feature-reduced KF data.\n A comprehensive machine learning (ML) analysis pipeline will then be utilized for the identification of\ncandidate risk factors and characterization of complex patterns of association between these feature-reduced\nKF data. In addition to performing the more traditional univariate association analyses of genotype vs.\nphenotype, this pipeline will also identify complex associations including (1) context-dependent genetic effects\nresulting from non-additive multi-variant interactions, i.e. epistasis, and (2) subgroup-specific associations, i.e.\nby phenotype and genotypic heterogeneity, where different etiological paths lead to the same/similar\nphenotypes in the selected KF subject group. This pipeline will include feature selection, modeling, and\ninterpretation of multi-variant interactions.\n The outcomes of this study will include (1) pipelines for integrating Common Fund data into Kids First\ndatasets, (2) integrated KF-KOMP2-GTEx datasets including cross-species integration, (3) ML pipelines for\nmulti-variant interaction analyses of phenotype vs genotype in selected, reduced-feature KF data, and (4) results\nfrom the aforementioned pipelines for multi-variant interactions for later hypothesis testing.",
-      "project_title": "Leveraging Common Fund data for feature selection in Kids First studies.",
-      "phr_text": "Project Abstract\nThis project will pilot a process for identifying interactions between genetic variants that contribute to\nstructural birth defect and childhood cancer disorders by combining data from the Gabriella Miller Kids First\nPediatric Research Project with biological knowledge from other two Common Fund datasets: the Knockout\nMouse Phenotyping Program (KOMP2), and the Genotype-Tissue Expression (GTEx) project. By selective use\nof this merged data within machine-learning pipelines, we will produce novel genetic analysis methods for\nstudying complex variant interactions that may contribute to these childhood disorders.",
-      "spending_categories_desc": "Biotechnology; Cancer; Cancer Genomics; Congenital Structural Anomalies; Genetics; Human Genome; Machine Learning and Artificial Intelligence; Networking and Information Technology R&D (NITRD); Pediatric; Pediatric Cancer; Rare Diseases",
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2020-09-18T00:00:00",
-      "budget_end": "2023-08-31T00:00:00",
-      "cfda_code": "93.310",
-      "funding_mechanism": "Non-SBIR/STTR",
-      "direct_cost_amt": 234073,
-      "indirect_cost_amt": 129233,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10112014",
-      "date_added": "2020-09-19T19:46:38"
-    },
-    {
       "appl_id": 11195033,
       "subproject_id": null,
       "fiscal_year": 2025,
@@ -16866,6 +16749,123 @@
       "indirect_cost_amt": 1022089,
       "project_detail_url": "https://reporter.nih.gov/project-details/11195033",
       "date_added": "2025-09-07T22:56:09"
+    },
+    {
+      "appl_id": 10112014,
+      "subproject_id": null,
+      "fiscal_year": 2020,
+      "project_num": "1R03OD030600-01",
+      "project_serial_num": "OD030600",
+      "organization": {
+        "org_name": "CHILDREN'S HOSP OF PHILADELPHIA",
+        "city": null,
+        "country": null,
+        "org_city": "PHILADELPHIA",
+        "org_country": "UNITED STATES",
+        "org_state": "PA",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": ["073757627"],
+        "org_ueis": ["G7MQPLSUX1L4"],
+        "primary_duns": "073757627",
+        "primary_uei": "G7MQPLSUX1L4",
+        "org_fips": "US",
+        "org_ipf_code": "1499101",
+        "org_zipcode": "191462305",
+        "external_org_id": 1499101
+      },
+      "award_type": "1",
+      "activity_code": "R03",
+      "award_amount": 363306,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "1",
+        "activity_code": "R03",
+        "ic_code": "OD",
+        "serial_num": "030600",
+        "support_year": "01",
+        "full_support_year": "01",
+        "suffix_code": ""
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 9254652,
+          "first_name": "Deanne",
+          "middle_name": "Marie",
+          "last_name": "Taylor",
+          "is_contact_pi": true,
+          "full_name": "Deanne Marie Taylor",
+          "title": "DIRECTOR OF BIOINFORMATICS"
+        }
+      ],
+      "contact_pi_name": "TAYLOR, DEANNE MARIE",
+      "program_officers": [
+        {
+          "first_name": "CHRISTOPHER",
+          "middle_name": "",
+          "last_name": "KINSINGER",
+          "full_name": "CHRISTOPHER  KINSINGER"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2020,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 363306,
+          "direct_cost_ic": 234073,
+          "indirect_cost_ic": 129233
+        }
+      ],
+      "cong_dist": "PA-03",
+      "spending_categories": [
+        108, 132, 1393, 2382, 276, 320, 4372, 329, 679, 2310, 729
+      ],
+      "project_start_date": "2020-09-18T00:00:00",
+      "project_end_date": "2023-08-31T00:00:00",
+      "organization_type": {
+        "name": "Independent Hospitals",
+        "code": "30",
+        "is_other": false
+      },
+      "geo_lat_lon": { "lon": -75.196604, "lat": 39.946632 },
+      "opportunity_number": "RFA-RM-19-012",
+      "full_study_section": {
+        "srg_code": "ZRG1",
+        "srg_flex": null,
+        "sra_designator_code": "ETTN",
+        "sra_flex_code": "B",
+        "group_code": "52",
+        "name": "Special Emphasis Panel[ZRG1 ETTN-B (52)]"
+      },
+      "award_notice_date": "2020-09-18T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "RP",
+      "core_project_num": "R03OD030600",
+      "terms": "<0-11 years old><Agreement><Anatomic><Anatomic Sites><Anatomic structures><Anatomical Sciences><Anatomy><Biological><Biology><Body Tissues><Cancers><Cardiac Abnormalities><Cardiac Malformation><Cardiac defect><Causality><Child><Child Youth><Childhood><Childhood Cancers><Children (0-21)><Cohort Studies><Complex><Concurrent Studies><Congenital Cardiac Defects><Congenital Heart Defects><Congenital diaphragmatic hernia><Data><Data Bases><Data Set><Databases><Dataset><Development><Disease><Disorder><Drug Targeting><Epistasis><Epistatic Deviation><Etiology><Face><Family><Funding><GTEx><Gene variant><Genes><Genetic><Genetic Epistasis><Genetic analyses><Genotype><Genotype-Tissue Expression Project><Goals><Grant><Graph><Heart><Heart Abnormalities><Heart Malformation><Heterogeneity><Individual><Interaction Deviation><Investigators><KO mice><Knock-out><Knock-out Mice><Knockout><Knockout Mice><Knowledge><Lead><Link><Machine Learning><Malignant Childhood Neoplasm><Malignant Childhood Tumor><Malignant Neoplasms><Malignant Pediatric Neoplasm><Malignant Pediatric Tumor><Malignant Tumor><Malignant childhood cancer><Metadata><Methods><Mice><Mice Mammals><Modeling><Murine><Mus><NIH><National Institutes of Health><Null Mouse><Ontology><Oral><Outcome Study><Pathway interactions><Pattern><Pb element><Pediatric Research><Performance><Phenotype><Population><Process><QTL><Quantitative Trait Loci><R-Series Research Projects><R01 Mechanism><R01 Program><Randomized><Recovery><Research Grants><Research Personnel><Research Project Grants><Research Projects><Researchers><Risk><Risk Factors><Services><Source><Structural Birth Defect><Structural Congenital Anomalies><Subgroup><Testing><Time><Tissues><United States National Institutes of Health><Variant><Variation><Work><allele variant><allelic variant><analysis pipeline><analytical method><base><cancer in a child><cancer in children><candidate identification><causation><child with cancer><childhood malignancy><children><children with cancer><childrens'><cohort><complex data><congenital cardiac anomalies><congenital structural malformation><data base><data integration><data resource><database of Genotypes and Phenotypes><dbGaP><developmental><disease causation><entire genome><epistatic relationship><faces><facial><feature selection><full genome><gene interaction><gene locus><gene x gene interaction><genetic analysis><genetic epistases><genetic locus><genetic variant><genome scale><genome sequencing><genome-wide><genomewide><genomic data><genomic data-set><genomic dataset><genomic locus><genomic variant><heart defect><heavy metal Pb><heavy metal lead><insight><interest><knockout gene><large scale data><large scale data sets><large scale datasets><machine learned><malignancy><meta data><neoplasm/cancer><novel><pathway><pediatric><pediatric cancer><pediatric malignancy><performance tests><phenotypic data><programs><randomisation><randomization><randomly assigned><rare allele><rare variant><statistical and machine learning><whole genome><youngster>",
+      "pref_terms": "Agreement;Anatomy;Biological;Biology;Child;Childhood;Cohort Studies;Complex;Congenital Heart Defects;Congenital diaphragmatic hernia;Data;Data Set;Databases;Development;Disease;Drug Targeting;Etiology;Face;Family;Funding;Genes;Genetic;Genetic Epistasis;Genotype;Genotype-Tissue Expression Project;Goals;Grant;Graph;Heart;Heart Abnormalities;Heterogeneity;Individual;Knock-out;Knockout Mice;Knowledge;Lead;Link;Machine Learning;Malignant Childhood Neoplasm;Malignant Neoplasms;Metadata;Methods;Modeling;Mus;Ontology;Oral;Outcome Study;Pathway interactions;Pattern;Pediatric Research;Performance;Phenotype;Population;Process;Quantitative Trait Loci;Randomized;Recovery;Research Personnel;Research Project Grants;Risk;Risk Factors;Services;Source;Structural Congenital Anomalies;Subgroup;Testing;Time;Tissues;United States National Institutes of Health;Variant;Work;analysis pipeline;analytical method;base;candidate identification;cohort;complex data;data integration;data resource;database of Genotypes and Phenotypes;feature selection;gene interaction;genetic analysis;genetic variant;genome sequencing;genome-wide;genomic data;genomic locus;insight;interest;knockout gene;large scale data;novel;performance tests;phenotypic data;programs;rare variant;statistical and machine learning;whole genome",
+      "abstract_text": "Project Abstract\nThis project will pilot a process for identifying multi-variant interactions contributing structural birth defect\nand childhood cancer disorders. This study will focus on analysis of oral-facial clefts, congenital diaphragmatic\nhernia, and congenital heart defects from whole-genome sequencing (WGS) data from family cohorts taken\nfrom Gabriella Miller Kids First Pediatric Research Project (KF).\n Typically, tests to link disorders to genome-wide complex multivariate associations are computationally\nprohibitive. Thus, a first step to making such analyses more reasonable is to limit the number of variables\n(genes, variants) being tested together. We can reduce the number of possible tests by restricting what data\nshould be tested. This study will seek to reduce the data for testing by utilizing biological knowledge from other\ntwo Common Fund datasets: the Knockout Mouse Phenotyping Program (KOMP2), and the Genotype-Tissue\nExpression (GTEx) project. KOMP2 has generated extensive information on mouse knockout developmental\nphenotypes relevant for matching gene and phenotypes in KF WGS studies. GTEx can be merged with KF loci\nand relevant tissue-to-phenotype relationships. Thus, using features from other Common Fund data and\nannotations, we can generate selected subsets of KF variants and genes as feature-reduced KF data.\n A comprehensive machine learning (ML) analysis pipeline will then be utilized for the identification of\ncandidate risk factors and characterization of complex patterns of association between these feature-reduced\nKF data. In addition to performing the more traditional univariate association analyses of genotype vs.\nphenotype, this pipeline will also identify complex associations including (1) context-dependent genetic effects\nresulting from non-additive multi-variant interactions, i.e. epistasis, and (2) subgroup-specific associations, i.e.\nby phenotype and genotypic heterogeneity, where different etiological paths lead to the same/similar\nphenotypes in the selected KF subject group. This pipeline will include feature selection, modeling, and\ninterpretation of multi-variant interactions.\n The outcomes of this study will include (1) pipelines for integrating Common Fund data into Kids First\ndatasets, (2) integrated KF-KOMP2-GTEx datasets including cross-species integration, (3) ML pipelines for\nmulti-variant interaction analyses of phenotype vs genotype in selected, reduced-feature KF data, and (4) results\nfrom the aforementioned pipelines for multi-variant interactions for later hypothesis testing.",
+      "project_title": "Leveraging Common Fund data for feature selection in Kids First studies.",
+      "phr_text": "Project Abstract\nThis project will pilot a process for identifying interactions between genetic variants that contribute to\nstructural birth defect and childhood cancer disorders by combining data from the Gabriella Miller Kids First\nPediatric Research Project with biological knowledge from other two Common Fund datasets: the Knockout\nMouse Phenotyping Program (KOMP2), and the Genotype-Tissue Expression (GTEx) project. By selective use\nof this merged data within machine-learning pipelines, we will produce novel genetic analysis methods for\nstudying complex variant interactions that may contribute to these childhood disorders.",
+      "spending_categories_desc": "Biotechnology; Cancer; Cancer Genomics; Congenital Structural Anomalies; Genetics; Human Genome; Machine Learning and Artificial Intelligence; Networking and Information Technology R&D (NITRD); Pediatric; Pediatric Cancer; Rare Diseases",
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2020-09-18T00:00:00",
+      "budget_end": "2023-08-31T00:00:00",
+      "cfda_code": "93.310",
+      "funding_mechanism": "Non-SBIR/STTR",
+      "direct_cost_amt": 234073,
+      "indirect_cost_amt": 129233,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10112014",
+      "date_added": "2020-09-19T19:46:38"
     },
     {
       "appl_id": 10994331,
