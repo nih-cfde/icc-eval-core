@@ -97,18 +97,30 @@
     <p>Software repositories associated with this project.</p>
 
     <AppTable
-      :cols="repoColsA"
+      :cols="repoCols"
       :rows="projectRepos"
       :sort="[{ id: 'id', desc: true }]"
     >
+      <template #owner="{ row }">
+        <AppLink :to="`https://github.com/${row.owner}`">
+          {{ row.owner }}
+        </AppLink>
+      </template>
+
       <template #name="{ row }">
         <AppLink :to="`https://github.com/${row.owner}/${row.name}`">
-          {{ row.owner }}/{{ row.name }}
+          {{ row.name }}
         </AppLink>
       </template>
 
       <template #topics="{ row }">
-        {{ limit(row.topics, 5).join(" ") }}
+        {{ limit(row.topics, 5).join(", ") }}
+      </template>
+
+      <template #modified="{ row }">
+        {{ format(row.modified) }}
+        <br />
+        {{ ago(row.modified) }} ago
       </template>
 
       <template #issues="{ row }">
@@ -121,18 +133,6 @@
         Closed: {{ format(row.closedPullRequests, true) }}
         <br />
         Open: {{ format(row.openPullRequests, true) }}
-      </template>
-    </AppTable>
-
-    <AppTable
-      :cols="repoColsB"
-      :rows="projectRepos"
-      :sort="[{ id: 'id', desc: true }]"
-    >
-      <template #name="{ row }">
-        <AppLink :to="`https://github.com/${row.owner}/${row.name}`">
-          {{ row.owner }}/{{ row.name }}
-        </AppLink>
       </template>
 
       <template #issue-time-open="{ row }">
@@ -147,8 +147,8 @@
         {{
           limit(
             row.languages.map(({ name }) => name),
-            5,
-          ).join(" ")
+            3,
+          ).join(", ")
         }}
       </template>
     </AppTable>
@@ -344,7 +344,7 @@ import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve, limit } from "@/util/array";
-import { format, match, printObject, span } from "@/util/string";
+import { ago, format, match, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
 import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
@@ -532,10 +532,16 @@ const projectRepos = computed(() =>
 );
 
 /** repo table column definitions */
-const repoColsA: Cols<typeof projectRepos.value> = [
+const repoCols: Cols<typeof projectRepos.value> = [
+  {
+    slot: "owner",
+    key: "owner",
+    name: "Owner",
+    align: "left",
+  },
   {
     slot: "name",
-    key: "id",
+    key: "name",
     name: "Name",
     align: "left",
   },
@@ -543,6 +549,7 @@ const repoColsA: Cols<typeof projectRepos.value> = [
     key: "description",
     name: "Description",
     align: "left",
+    style: { width: "400px" },
   },
   {
     slot: "topics",
@@ -551,8 +558,10 @@ const repoColsA: Cols<typeof projectRepos.value> = [
     align: "left",
   },
   {
+    slot: "modified",
     key: "modified",
     name: "Last Commit",
+    style: { whiteSpace: "nowrap" },
   },
   {
     key: "stars",
@@ -582,15 +591,6 @@ const repoColsA: Cols<typeof projectRepos.value> = [
     name: "PRs",
     style: { whiteSpace: "nowrap" },
   },
-];
-const repoColsB: Cols<typeof projectRepos.value> = [
-  {
-    slot: "name",
-    key: "id",
-    name: "Name",
-    align: "left",
-  },
-
   {
     slot: "issue-time-open",
     key: "issueTimeOpen",

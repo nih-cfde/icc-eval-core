@@ -36,7 +36,7 @@ export const format = <Type>(
     return `${cell.toLocaleString(undefined, {
       dateStyle: compact ? "short" : "medium",
       ...options,
-    })} (${ago(cell)} ago)`;
+    })}`;
   }
   /** if object */
   if (typeof cell === "object")

@@ -149,7 +149,6 @@ a {
   border-radius: calc(var(--rounded) / 2);
   background: transparent;
   color: var(--theme);
-  overflow-wrap: anywhere;
   transition: var(--fast);
   transition-property: color, background;
 }
@@ -190,17 +189,6 @@ button {
 }
 
 /* table */
-
-@media print {
-  table {
-    width: 100% !important;
-  }
-
-  th,
-  td {
-    overflow-wrap: anywhere;
-  }
-}
 
 table {
   border-collapse: collapse;
