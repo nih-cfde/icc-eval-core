@@ -17,7 +17,7 @@ import { log } from "@/util/log";
 import { filterErrors, queryMulti } from "@/util/request";
 import { count } from "@/util/string";
 
-/** get github repos */
+/** get github repos associated with core projects */
 export const getRepos = async (coreProjects: string[]) => {
   /** de-dupe */
   coreProjects = uniq(coreProjects);
@@ -120,7 +120,7 @@ export const getRepos = async (coreProjects: string[]) => {
     ) || 0;
 
   /** transform data into desired format, with fallbacks */
-  const transformedRepos = filterErrors(repoDetails).map((repo) => ({
+  const transformed = filterErrors(repoDetails).map((repo) => ({
     coreProject: repo.coreProject,
     id: repo.id,
     owner: repo.owner?.login ?? "",
@@ -175,5 +175,5 @@ export const getRepos = async (coreProjects: string[]) => {
     ),
   }));
 
-  return transformedRepos;
+  return transformed;
 };

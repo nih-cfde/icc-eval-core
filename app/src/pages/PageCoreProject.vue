@@ -345,12 +345,12 @@ import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
+import { findJournal } from "@/pages/PageHome.vue";
 import { carve, limit } from "@/util/array";
 import { ago, format, match, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
 import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
-import journals from "~/journals.json";
 import publications from "~/publications.json";
 import repos from "~/repos.json";
 
@@ -447,10 +447,7 @@ const projectPublications = computed(() =>
   publications
     .filter((publication) => publication.coreProject === id.value)
     .map((publication) => {
-      /** look up journal matching this publication */
-      const journal = journals.find(
-        (journal) => journal.id === publication.journal,
-      );
+      const journal = findJournal(publication);
       /** include journal info */
       return {
         ...publication,

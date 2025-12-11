@@ -10,11 +10,11 @@ import { count } from "@/util/string";
 const ranksUrl = "https://www.scimagojr.com/journalrank.php?out=xls";
 
 /** get journal info */
-export const getJournals = async (journalIds: string[]) => {
+export const getJournals = async (abbrevs: string[]) => {
   /** de-dupe */
-  journalIds = uniq(journalIds);
+  abbrevs = uniq(abbrevs);
 
-  log(`Getting ${count(journalIds)} journals`);
+  log(`Getting ${count(abbrevs)} journals`);
 
   log(`Downloading from ${ranksUrl}`);
 
@@ -41,32 +41,30 @@ export const getJournals = async (journalIds: string[]) => {
   log("Getting journal names");
 
   const journals = await queryMulti(
-    journalIds.map((id) => () => getFullJournalName(id)),
+    abbrevs.map((id) => () => getFullJournalName(id)),
     "entrez-journals.json",
     /** one at a time ends up being faster due to rate-limiting */
     1,
   );
 
   /** transform data into desired format, with fallbacks */
-  let transformedJournals = journals.map((journal, index) => {
+  let transformed = journals.map((journal, index) => {
     if (journal instanceof Error) {
-      const id = journalIds[index]!;
-      return { id, name: id, rank: 0, issns: [] };
+      const abbrev = abbrevs[index]!;
+      return { abbrev, name: abbrev, title: abbrev, rank: 0 };
     } else {
-      const { name, issn } = journal;
       /** find matching rank by issn */
-      const rank = ranks.find((rank) => rank.Issn?.includes(issn));
+      const rank = ranks.find((rank) => rank.Issn?.includes(journal.issn));
       return {
-        id: name,
-        name: rank?.Title ?? name,
+        ...journal,
+        title: rank?.Title ?? journal.name,
         rank: Number(rank?.SJR?.replace(",", ".") ?? 0),
-        issn,
       };
     }
   });
 
   /** de-dupe */
-  transformedJournals = uniqBy(transformedJournals, (journal) => journal.id);
+  transformed = uniqBy(transformed, (journal) => journal.abbrev);
 
-  return transformedJournals;
+  return transformed;
 };

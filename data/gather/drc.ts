@@ -126,5 +126,6 @@ export const getDrc = async () => {
     log(`(${count(number)}) .${ext} files`, "secondary");
   log(`> ${count(allFiles)} files uncompressed`);
   log(`> ${bytes(sumBy(allFiles, (file) => file.size))} uncompressed`);
+
   return resources;
 };

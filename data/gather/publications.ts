@@ -79,7 +79,7 @@ export const getPublications = async (coreProjects: string[]) => {
   }
 
   /** transform data into desired format, with fallbacks */
-  const transformedPublications = reporterPublications.map((result) => {
+  const transformed = reporterPublications.map((result) => {
     const extras = extrasLookup[result.pmid ?? 0];
     return {
       id: result.pmid ?? 0,
@@ -99,5 +99,5 @@ export const getPublications = async (coreProjects: string[]) => {
     };
   });
 
-  return transformedPublications;
+  return transformed;
 };

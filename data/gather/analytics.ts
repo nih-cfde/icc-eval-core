@@ -119,7 +119,7 @@ export const getAnalytics = async () => {
   };
 
   /** transform data into desired format, with fallbacks */
-  const transformedData = filterErrors(data).map(
+  const transformed = filterErrors(data).map(
     ({
       property,
       propertyName,
@@ -147,5 +147,5 @@ export const getAnalytics = async () => {
     }),
   );
 
-  return transformedData;
+  return transformed;
 };

@@ -218,6 +218,20 @@
   </section>
 </template>
 
+<script lang="ts">
+import journals from "~/journals.json";
+
+type Publication = (typeof publications)[number];
+
+/** look up journal matching this publication */
+export const findJournal = (publication: Publication) =>
+  journals.find((journal) =>
+    [journal.abbrev, journal.name, journal.title]
+      .map((prop) => prop.toLowerCase())
+      .includes(publication.journal.toLowerCase()),
+  );
+</script>
+
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { startCase, sum } from "lodash";
@@ -235,7 +249,6 @@ import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve } from "@/util/array";
 import { format } from "@/util/string";
 import coreProjects from "~/core-projects.json";
-import journals from "~/journals.json";
 import rawProjects from "~/projects.json";
 import publications from "~/publications.json";
 import repoOverview from "~/repo-overview.json";
@@ -268,10 +281,7 @@ const publicationsOverTime = publications
 /** publication table row data */
 const programPublications = computed(() =>
   publications.map((publication) => {
-    /** look up journal matching this publication */
-    const journal = journals.find(
-      (journal) => journal.id === publication.journal,
-    );
+    const journal = findJournal(publication);
     /** include journal info */
     return {
       ...publication,

@@ -1,651 +1,1108 @@
 [
   {
-    "id": "Bioengineering (Basel, Switzerland)",
-    "name": "Bioengineering",
-    "rank": 0.735,
-    "issn": "23065354"
-  },
-  {
-    "id": "bioRxiv : the preprint server for biology",
+    "abbrev": "bioRxiv",
     "name": "bioRxiv : the preprint server for biology",
-    "rank": 0,
-    "issn": "26928205"
+    "issn": "26928205",
+    "title": "bioRxiv : the preprint server for biology",
+    "rank": 0
   },
   {
-    "id": "medRxiv : the preprint server for health sciences",
-    "name": "Ca-A Cancer Journal for Clinicians",
-    "rank": 145.004,
-    "issn": ""
+    "abbrev": "Sci Adv",
+    "name": "Science advances",
+    "issn": "23752548",
+    "title": "Science Advances",
+    "rank": 4.324
   },
   {
-    "id": "Nature communications",
-    "name": "Nature Communications",
-    "rank": 4.761,
-    "issn": "20411723"
+    "abbrev": "Pain",
+    "name": "Pain",
+    "issn": "18726623",
+    "title": "Pain",
+    "rank": 2.017
   },
   {
-    "id": "Briefings in functional genomics",
-    "name": "Briefings in Functional Genomics",
-    "rank": 0.86,
-    "issn": "20412657"
+    "abbrev": "Front Neuroimaging",
+    "name": "Frontiers in neuroimaging",
+    "issn": "28131193",
+    "title": "Frontiers in neuroimaging",
+    "rank": 0
   },
-  { "id": "ArXiv", "name": "ArXiv", "rank": 0, "issn": "23318422" },
   {
-    "id": "Nature reviews. Molecular cell biology",
-    "name": "Nature Reviews Molecular Cell Biology",
-    "rank": 37.353,
-    "issn": "14710080"
+    "abbrev": "Nat Med",
+    "name": "Nature medicine",
+    "issn": "1546170X",
+    "title": "Nature Medicine",
+    "rank": 18.333
   },
   {
-    "id": "Hepatology (Baltimore, Md.)",
-    "name": "Hepatology",
-    "rank": 5.557,
-    "issn": "15273350"
+    "abbrev": "Hum Brain Mapp",
+    "name": "Human brain mapping",
+    "issn": "10970193",
+    "title": "Human Brain Mapping",
+    "rank": 1.584
   },
   {
-    "id": "Circulation. Genomic and precision medicine",
-    "name": "Circulation: Genomic and Precision Medicine",
-    "rank": 1.924,
-    "issn": "25748300"
+    "abbrev": "Neuroimage",
+    "name": "Neuroimage. Reports",
+    "issn": "26669560",
+    "title": "NeuroImage: Reports",
+    "rank": 0.752
   },
   {
-    "id": "Nature methods",
-    "name": "Nature Methods",
-    "rank": 17.251,
-    "issn": "15487105"
+    "abbrev": "Stat Med",
+    "name": "Statistics in medicine",
+    "issn": "10970258",
+    "title": "Statistics in Medicine",
+    "rank": 1.268
   },
   {
-    "id": "Journal of immunology (Baltimore, Md. : 1950)",
-    "name": "Journal of Immunology",
-    "rank": 1.425,
-    "issn": "15506606"
+    "abbrev": "Pain Med",
+    "name": "Pain medicine (Malden, Mass.)",
+    "issn": "15264637",
+    "title": "Pain Medicine",
+    "rank": 0.982
   },
   {
-    "id": "Cancer research communications",
-    "name": "Cancer Research Communications",
-    "rank": 1.569,
-    "issn": "27679764"
+    "abbrev": "Biometrics",
+    "name": "Biometrics",
+    "issn": "15410420",
+    "title": "Biometrics",
+    "rank": 1.257
   },
   {
-    "id": "Patterns (New York, N.Y.)",
-    "name": "Patterns",
-    "rank": 1.527,
-    "issn": "26663899"
+    "abbrev": "Electron J Stat",
+    "name": "Electronic journal of statistics",
+    "issn": "19357524",
+    "title": "Electronic Journal of Statistics",
+    "rank": 1.321
   },
   {
-    "id": "Analytical chemistry",
-    "name": "Analytical Chemistry",
-    "rank": 1.533,
-    "issn": "15206882"
+    "abbrev": "J Comput Graph Stat",
+    "name": "Journal of computational and graphical statistics : a joint publication of American Statistical Association, Institute of Mathematical Statistics, Interface Foundation of North America",
+    "issn": "15372715",
+    "title": "Journal of Computational and Graphical Statistics",
+    "rank": 1.241
   },
   {
-    "id": "Bioinformatics (Oxford, England)",
-    "name": "Bioinformatics",
-    "rank": 2.451,
-    "issn": "13674811"
+    "abbrev": "J Clin Invest",
+    "name": "The Journal of clinical investigation",
+    "issn": "15588238",
+    "title": "Journal of Clinical Investigation",
+    "rank": 4.721
   },
   {
-    "id": "Communications biology",
-    "name": "Communications Biology",
-    "rank": 2.071,
-    "issn": "23993642"
+    "abbrev": "Nat Hum Behav",
+    "name": "Nature human behaviour",
+    "issn": "23973374",
+    "title": "Nature Human Behaviour",
+    "rank": 5.537
   },
   {
-    "id": "Alzheimer's & dementia : the journal of the Alzheimer's Association",
-    "name": "Alzheimer's and Dementia",
-    "rank": 3.6,
-    "issn": "15525279"
+    "abbrev": "",
+    "name": "",
+    "issn": "",
+    "title": "Ca-A Cancer Journal for Clinicians",
+    "rank": 145.004
   },
   {
-    "id": "Nature biotechnology",
-    "name": "Nature Biotechnology",
-    "rank": 19.006,
-    "issn": "15461696"
+    "abbrev": "Nucleic Acids Res",
+    "name": "Nucleic acids research",
+    "issn": "13624962",
+    "title": "Nucleic Acids Research",
+    "rank": 7.776
   },
   {
-    "id": "Research square",
-    "name": "Research square",
-    "rank": 0,
-    "issn": "26935015"
+    "abbrev": "medRxiv",
+    "name": "medRxiv : the preprint server for health sciences",
+    "issn": "",
+    "title": "Ca-A Cancer Journal for Clinicians",
+    "rank": 145.004
   },
   {
-    "id": "Non-coding RNA",
-    "name": "Non-coding RNA",
-    "rank": 1.019,
-    "issn": "2311553X"
-  },
-  {
-    "id": "Metabolites",
-    "name": "Metabolites",
-    "rank": 0.996,
-    "issn": "22181989"
-  },
-  {
-    "id": "F1000Research",
-    "name": "F1000Research",
-    "rank": 0.537,
-    "issn": "20461402"
-  },
-  {
-    "id": "Environmental science & technology",
-    "name": "Environmental Science and Technology",
-    "rank": 3.69,
-    "issn": "15205851"
-  },
-  {
-    "id": "Pharmaceuticals (Basel, Switzerland)",
-    "name": "Ca-A Cancer Journal for Clinicians",
-    "rank": 145.004,
-    "issn": ""
-  },
-  {
-    "id": "Drug discovery today",
-    "name": "Drug Discovery Today",
-    "rank": 1.742,
-    "issn": "18785832"
-  },
-  {
-    "id": "Molecular cell",
-    "name": "Molecular Cell",
-    "rank": 9.051,
-    "issn": "10974164"
-  },
-  {
-    "id": "JHEP reports : innovation in hepatology",
-    "name": "JHEP Reports",
-    "rank": 3.525,
-    "issn": "25895559"
-  },
-  {
-    "id": "Genome research",
-    "name": "Genome Research",
-    "rank": 3.909,
-    "issn": "15495469"
-  },
-  {
-    "id": "Frontiers in cell and developmental biology",
-    "name": "Frontiers in Cell and Developmental Biology",
-    "rank": 1.608,
-    "issn": "2296634X"
-  },
-  {
-    "id": "Biomolecules",
-    "name": "Biomolecules",
-    "rank": 1.333,
-    "issn": "2218273X"
-  },
-  {
-    "id": "Cancer cell",
-    "name": "Cancer Cell",
-    "rank": 19.027,
-    "issn": "18783686"
-  },
-  { "id": "Cancers", "name": "Cancers", "rank": 1.462, "issn": "20726694" },
-  {
-    "id": "Genome biology",
-    "name": "Genome Biology",
-    "rank": 5.71,
-    "issn": "1474760X"
-  },
-  {
-    "id": "Journal of the American Chemical Society",
-    "name": "Journal of the American Chemical Society",
-    "rank": 5.554,
-    "issn": "15205126"
-  },
-  {
-    "id": "Nature protocols",
-    "name": "Nature Protocols",
-    "rank": 5.854,
-    "issn": "17502799"
-  },
-  {
-    "id": "Journal of proteome research",
-    "name": "Journal of Proteome Research",
-    "rank": 1.139,
-    "issn": "15353907"
-  },
-  {
-    "id": "Journal of the American Society for Mass Spectrometry",
-    "name": "Journal of the American Society for Mass Spectrometry",
-    "rank": 0.704,
-    "issn": "18791123"
-  },
-  { "id": "Cell", "name": "Cell", "rank": 22.612, "issn": "10974172" },
-  {
-    "id": "American journal of physiology. Heart and circulatory physiology",
-    "name": "American Journal of Physiology - Heart and Circulatory Physiology",
-    "rank": 1.464,
-    "issn": "15221539"
-  },
-  {
-    "id": "Molecular & cellular proteomics : MCP",
-    "name": "Molecular and Cellular Proteomics",
-    "rank": 1.948,
-    "issn": "15359484"
-  },
-  {
-    "id": "PLoS computational biology",
-    "name": "PLoS Computational Biology",
-    "rank": 1.503,
-    "issn": "15537358"
-  },
-  {
-    "id": "Frontiers in aging",
-    "name": "Frontiers in Aging",
-    "rank": 1.455,
-    "issn": "26736217"
-  },
-  {
-    "id": "Nature genetics",
-    "name": "Nature Genetics",
-    "rank": 16.586,
-    "issn": "15461718"
-  },
-  {
-    "id": "Statistics in medicine",
-    "name": "Statistics in Medicine",
-    "rank": 1.268,
-    "issn": "10970258"
-  },
-  {
-    "id": "Nature human behaviour",
-    "name": "Nature Human Behaviour",
-    "rank": 5.537,
-    "issn": "23973374"
-  },
-  { "id": "Nature", "name": "Nature", "rank": 18.288, "issn": "14764687" },
-  {
-    "id": "Frontiers in immunology",
-    "name": "Frontiers in Immunology",
-    "rank": 1.941,
-    "issn": "16643224"
-  },
-  {
-    "id": "Biology open",
-    "name": "Biology Open",
-    "rank": 0.723,
-    "issn": "20466390"
-  },
-  {
-    "id": "Developmental dynamics : an official publication of the American Association of Anatomists",
-    "name": "Developmental Dynamics",
-    "rank": 0.857,
-    "issn": "10970177"
-  },
-  {
-    "id": "Cancer discovery",
-    "name": "Cancer Discovery",
-    "rank": 7.283,
-    "issn": "21598290"
-  },
-  {
-    "id": "Chemical communications (Cambridge, England)",
-    "name": "Chemical Communications",
-    "rank": 1.037,
-    "issn": "1364548X"
-  },
-  {
-    "id": "Journal of controlled release : official journal of the Controlled Release Society",
-    "name": "Journal of Controlled Release",
-    "rank": 2.47,
-    "issn": "18734995"
-  },
-  {
-    "id": "ACS applied bio materials",
-    "name": "ACS Applied Bio Materials",
-    "rank": 0.894,
-    "issn": "25766422"
-  },
-  {
-    "id": "Drug delivery and translational research",
-    "name": "Drug Delivery and Translational Research",
-    "rank": 1.175,
-    "issn": "21903948"
-  },
-  {
-    "id": "Advanced drug delivery reviews",
-    "name": "Advanced Drug Delivery Reviews",
-    "rank": 3.721,
-    "issn": "18728294"
-  },
-  {
-    "id": "ACS applied materials & interfaces",
-    "name": "ACS Applied Materials and Interfaces",
-    "rank": 1.921,
-    "issn": "19448252"
-  },
-  {
-    "id": "Cancer metastasis reviews",
-    "name": "Cancer and Metastasis Reviews",
-    "rank": 2.596,
-    "issn": "15737233"
-  },
-  {
-    "id": "Nucleic acids research",
-    "name": "Nucleic Acids Research",
-    "rank": 7.776,
-    "issn": "13624962"
-  },
-  {
-    "id": "Disease models & mechanisms",
-    "name": "DMM Disease Models and Mechanisms",
-    "rank": 1.318,
-    "issn": "17548411"
-  },
-  {
-    "id": "BMC biology",
-    "name": "BMC Biology",
-    "rank": 1.727,
-    "issn": "17417007"
-  },
-  {
-    "id": "Scientific reports",
-    "name": "Scientific Reports",
-    "rank": 0.874,
-    "issn": "20452322"
-  },
-  {
-    "id": "Investigative ophthalmology & visual science",
-    "name": "Investigative Ophthalmology and Visual Science",
-    "rank": 1.376,
-    "issn": "15525783"
-  },
-  {
-    "id": "BMC genomics",
-    "name": "BMC Genomics",
-    "rank": 1.003,
-    "issn": "14712164"
-  },
-  {
-    "id": "Biology of sex differences",
-    "name": "Biology of Sex Differences",
-    "rank": 1.799,
-    "issn": "20426410"
-  },
-  {
-    "id": "FEBS open bio",
-    "name": "FEBS Open Bio",
-    "rank": 0.857,
-    "issn": "22115463"
-  },
-  {
-    "id": "BMC pharmacology & toxicology",
-    "name": "BMC Pharmacology and Toxicology",
-    "rank": 0.814,
-    "issn": "20506511"
-  },
-  {
-    "id": "Molecular medicine (Cambridge, Mass.)",
-    "name": "Molecular Medicine",
-    "rank": 1.752,
-    "issn": "15283658"
-  },
-  {
-    "id": "Cancer reports (Hoboken, N.J.)",
-    "name": "Cancer Reports",
-    "rank": 0.729,
-    "issn": "25738348"
-  },
-  {
-    "id": "JCO precision oncology",
-    "name": "JCO Precision Oncology",
-    "rank": 2.409,
-    "issn": "24734284"
-  },
-  {
-    "id": "BMC bioinformatics",
-    "name": "BMC Bioinformatics",
-    "rank": 1.19,
-    "issn": "14712105"
-  },
-  {
-    "id": "Scientific data",
-    "name": "Scientific Data",
-    "rank": 1.867,
-    "issn": "20524463"
-  },
-  {
-    "id": "American journal of human genetics",
-    "name": "American Journal of Human Genetics",
-    "rank": 4.531,
-    "issn": "15376605"
-  },
-  {
-    "id": "American journal of medical genetics. Part A",
-    "name": "American Journal of Medical Genetics, Part A",
-    "rank": 0.733,
-    "issn": "15524833"
-  },
-  {
-    "id": "Nature computational science",
-    "name": "Nature Computational Science",
-    "rank": 3.472,
-    "issn": "26628457"
-  },
-  {
-    "id": "Communications medicine",
-    "name": "Communications Medicine",
-    "rank": 2.098,
-    "issn": "2730664X"
-  },
-  {
-    "id": "STAR protocols",
-    "name": "STAR Protocols",
-    "rank": 0.925,
-    "issn": "26661667"
-  },
-  {
-    "id": "PeerJ. Computer science",
-    "name": "PeerJ Computer Science",
-    "rank": 0.719,
-    "issn": "23765992"
-  },
-  {
-    "id": "Journal of molecular biology",
-    "name": "Journal of Molecular Biology",
-    "rank": 2.215,
-    "issn": "10898638"
-  },
-  {
-    "id": "Glycobiology",
-    "name": "Glycobiology",
-    "rank": 0.872,
-    "issn": "14602423"
-  },
-  {
-    "id": "Cell genomics",
-    "name": "Cell Genomics",
-    "rank": 6.238,
-    "issn": "2666979X"
-  },
-  {
-    "id": "Bioinformatics advances",
-    "name": "Bioinformatics Advances",
-    "rank": 1.41,
-    "issn": "26350041"
-  },
-  {
-    "id": "Current protocols",
-    "name": "Current Protocols",
-    "rank": 1.598,
-    "issn": "26911299"
-  },
-  { "id": "PloS one", "name": "PLoS ONE", "rank": 0.803, "issn": "19326203" },
-  {
-    "id": "Journal of Alzheimer's disease reports",
-    "name": "Journal of Alzheimer's Disease Reports",
-    "rank": 0.781,
-    "issn": "25424823"
-  },
-  {
-    "id": "Infection and immunity",
-    "name": "Infection and Immunity",
-    "rank": 1.054,
-    "issn": "10985522"
-  },
-  {
-    "id": "The Journal of biological chemistry",
-    "name": "Journal of Biological Chemistry",
-    "rank": 1.705,
-    "issn": "1083351X"
-  },
-  {
-    "id": "Cell reports",
-    "name": "Cell Reports",
-    "rank": 3.796,
-    "issn": "22111247"
-  },
-  {
-    "id": "Nature metabolism",
-    "name": "Nature Metabolism",
-    "rank": 7.529,
-    "issn": "25225812"
-  },
-  {
-    "id": "The journals of gerontology. Series A, Biological sciences and medical sciences",
-    "name": "The journals of gerontology. Series A, Biological sciences and medical sciences",
-    "rank": 0,
-    "issn": "1758535X"
-  },
-  {
-    "id": "Nature cancer",
-    "name": "Nature Cancer",
-    "rank": 11.941,
-    "issn": "26621347"
-  },
-  { "id": "iScience", "name": "iScience", "rank": 1.363, "issn": "25890042" },
-  {
-    "id": "Journal of lipid research",
-    "name": "Journal of Lipid Research",
-    "rank": 1.66,
-    "issn": "15397262"
-  },
-  {
-    "id": "Journal of cachexia, sarcopenia and muscle",
-    "name": "Journal of Cachexia, Sarcopenia and Muscle",
-    "rank": 3.416,
-    "issn": "21906009"
-  },
-  {
-    "id": "International journal of cancer",
-    "name": "International Journal of Cancer",
-    "rank": 2.252,
-    "issn": "10970215"
-  },
-  {
-    "id": "Toxicological sciences : an official journal of the Society of Toxicology",
-    "name": "Toxicological Sciences",
-    "rank": 1.086,
-    "issn": "10960929"
-  },
-  {
-    "id": "Alzheimer's research & therapy",
-    "name": "Alzheimer's Research and Therapy",
-    "rank": 2.709,
-    "issn": "17589193"
-  },
-  {
-    "id": "American journal of physiology. Lung cellular and molecular physiology",
-    "name": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
-    "rank": 1.24,
-    "issn": "15221504"
-  },
-  {
-    "id": "Frontiers in fungal biology",
-    "name": "Frontiers in Fungal Biology",
-    "rank": 0.76,
-    "issn": "26736128"
-  },
-  {
-    "id": "GigaScience",
+    "abbrev": "Gigascience",
     "name": "GigaScience",
-    "rank": 5.314,
-    "issn": "2047217X"
+    "issn": "2047217X",
+    "title": "GigaScience",
+    "rank": 5.314
   },
   {
-    "id": "FASEB journal : official publication of the Federation of American Societies for Experimental Biology",
-    "name": "FASEB Journal",
-    "rank": 1.319,
-    "issn": "15306860"
+    "abbrev": "Mach Learn Appl",
+    "name": "Machine learning with applications",
+    "issn": "26668270",
+    "title": "Machine learning with applications",
+    "rank": 0
   },
   {
-    "id": "Allergy",
-    "name": "Allergy: European Journal of Allergy and Clinical Immunology",
-    "rank": 3.622,
-    "issn": "13989995"
+    "abbrev": "Nat Commun",
+    "name": "Nature communications",
+    "issn": "20411723",
+    "title": "Nature Communications",
+    "rank": 4.761
   },
   {
-    "id": "International journal of tryptophan research : IJTR",
-    "name": "International Journal of Tryptophan Research",
-    "rank": 1.108,
-    "issn": "11786469"
+    "abbrev": "BMC Med Ethics",
+    "name": "BMC medical ethics",
+    "issn": "14726939",
+    "title": "BMC Medical Ethics",
+    "rank": 1.082
   },
   {
-    "id": "Frontiers in endocrinology",
-    "name": "Frontiers in Endocrinology",
-    "rank": 1.472,
-    "issn": "16642392"
+    "abbrev": "JACC Basic Transl Sci",
+    "name": "JACC. Basic to translational science",
+    "issn": "2452302X",
+    "title": "JACC: Basic to Translational Science",
+    "rank": 2.496
   },
   {
-    "id": "International journal of obesity (2005)",
-    "name": "International Journal of Obesity",
-    "rank": 1.589,
-    "issn": "14765497"
+    "abbrev": "Circ Genom Precis Med",
+    "name": "Circulation. Genomic and precision medicine",
+    "issn": "25748300",
+    "title": "Circulation: Genomic and Precision Medicine",
+    "rank": 1.924
   },
   {
-    "id": "BMC cancer",
-    "name": "BMC Cancer",
-    "rank": 1.178,
-    "issn": "14712407"
+    "abbrev": "Physiol Genomics",
+    "name": "Physiological genomics",
+    "issn": "15312267",
+    "title": "Physiological Genomics",
+    "rank": 0.911
   },
   {
-    "id": "The Journal of physiology",
-    "name": "Journal of Physiology",
-    "rank": 1.715,
-    "issn": "14697793"
-  },
-  { "id": "eLife", "name": "eLife", "rank": 3.379, "issn": "2050084X" },
-  {
-    "id": "Developmental cell",
-    "name": "Developmental Cell",
-    "rank": 5.18,
-    "issn": "18781551"
+    "abbrev": "Circulation",
+    "name": "Circulation",
+    "issn": "15244539",
+    "title": "Circulation",
+    "rank": 8.668
   },
   {
-    "id": "Frontiers in microbiology",
-    "name": "Frontiers in Microbiology",
-    "rank": 1.172,
-    "issn": "1664302X"
+    "abbrev": "Cell Genom",
+    "name": "Cell genomics",
+    "issn": "2666979X",
+    "title": "Cell Genomics",
+    "rank": 6.238
   },
   {
-    "id": "Biophysical journal",
-    "name": "Biophysical Journal",
-    "rank": 1.112,
-    "issn": "15420086"
+    "abbrev": "J Appl Physiol (1985)",
+    "name": "Journal of applied physiology (Bethesda, Md. : 1985)",
+    "issn": "15221601",
+    "title": "Journal of Applied Physiology",
+    "rank": 1.078
   },
   {
-    "id": "Database : the journal of biological databases and curation",
+    "abbrev": "Nat Metab",
+    "name": "Nature metabolism",
+    "issn": "25225812",
+    "title": "Nature Metabolism",
+    "rank": 7.529
+  },
+  {
+    "abbrev": "Cell Metab",
+    "name": "Cell metabolism",
+    "issn": "19327420",
+    "title": "Cell Metabolism",
+    "rank": 11.989
+  },
+  {
+    "abbrev": "PLoS Med",
+    "name": "PLoS medicine",
+    "issn": "15491676",
+    "title": "PLoS Medicine",
+    "rank": 4.279
+  },
+  {
+    "abbrev": "Cell",
+    "name": "Cell",
+    "issn": "10974172",
+    "title": "Cell",
+    "rank": 22.612
+  },
+  {
+    "abbrev": "Function (Oxf)",
+    "name": "Function (Oxford, England)",
+    "issn": "26338823",
+    "title": "Function",
+    "rank": 0.877
+  },
+  {
+    "abbrev": "Nature",
+    "name": "Nature",
+    "issn": "14764687",
+    "title": "Nature",
+    "rank": 18.288
+  },
+  {
+    "abbrev": "Genome Res",
+    "name": "Genome research",
+    "issn": "15495469",
+    "title": "Genome Research",
+    "rank": 3.909
+  },
+  {
+    "abbrev": "J Mol Biol",
+    "name": "Journal of molecular biology",
+    "issn": "10898638",
+    "title": "Journal of Molecular Biology",
+    "rank": 2.215
+  },
+  {
+    "abbrev": "Protein Sci",
+    "name": "Protein science : a publication of the Protein Society",
+    "issn": "1469896X",
+    "title": "Protein Science",
+    "rank": 4.657
+  },
+  {
+    "abbrev": "ArXiv",
+    "name": "ArXiv",
+    "issn": "23318422",
+    "title": "ArXiv",
+    "rank": 0
+  },
+  {
+    "abbrev": "Adv Intell Syst",
+    "name": "Advanced intelligent systems (Weinheim an der Bergstrasse, Germany)",
+    "issn": "26404567",
+    "title": "Advanced Intelligent Systems",
+    "rank": 1.14
+  },
+  {
+    "abbrev": "Brief Funct Genomics",
+    "name": "Briefings in functional genomics",
+    "issn": "20412657",
+    "title": "Briefings in Functional Genomics",
+    "rank": 0.86
+  },
+  {
+    "abbrev": "Mol Cell",
+    "name": "Molecular cell",
+    "issn": "10974164",
+    "title": "Molecular Cell",
+    "rank": 9.051
+  },
+  {
+    "abbrev": "Nat Rev Mol Cell Biol",
+    "name": "Nature reviews. Molecular cell biology",
+    "issn": "14710080",
+    "title": "Nature Reviews Molecular Cell Biology",
+    "rank": 37.353
+  },
+  {
+    "abbrev": "Curr Opin Genet Dev",
+    "name": "Current opinion in genetics & development",
+    "issn": "18790380",
+    "title": "Current Opinion in Genetics and Development",
+    "rank": 2.094
+  },
+  {
+    "abbrev": "Hepatology",
+    "name": "Hepatology (Baltimore, Md.)",
+    "issn": "15273350",
+    "title": "Hepatology",
+    "rank": 5.557
+  },
+  {
+    "abbrev": "Nat Methods",
+    "name": "Nature methods",
+    "issn": "15487105",
+    "title": "Nature Methods",
+    "rank": 17.251
+  },
+  {
+    "abbrev": "BMC Methods",
+    "name": "BMC methods",
+    "issn": "30048729",
+    "title": "BMC methods",
+    "rank": 0
+  },
+  {
+    "abbrev": "Cell Rep",
+    "name": "Cell reports",
+    "issn": "22111247",
+    "title": "Cell Reports",
+    "rank": 3.796
+  },
+  {
+    "abbrev": "J Immunol",
+    "name": "Journal of immunology (Baltimore, Md. : 1950)",
+    "issn": "15506606",
+    "title": "Journal of Immunology",
+    "rank": 1.425
+  },
+  {
+    "abbrev": "Nat Aging",
+    "name": "Nature aging",
+    "issn": "26628465",
+    "title": "Nature Aging",
+    "rank": 7.081
+  },
+  {
+    "abbrev": "Anal Chem",
+    "name": "Analytical chemistry",
+    "issn": "15206882",
+    "title": "Analytical Chemistry",
+    "rank": 1.533
+  },
+  {
+    "abbrev": "Comput Struct Biotechnol J",
+    "name": "Computational and structural biotechnology journal",
+    "issn": "20010370",
+    "title": "Computational and Structural Biotechnology Journal",
+    "rank": 1.561
+  },
+  {
+    "abbrev": "Cancer Res Commun",
+    "name": "Cancer research communications",
+    "issn": "27679764",
+    "title": "Cancer Research Communications",
+    "rank": 1.569
+  },
+  {
+    "abbrev": "Patterns (N Y)",
+    "name": "Patterns (New York, N.Y.)",
+    "issn": "26663899",
+    "title": "Patterns",
+    "rank": 1.527
+  },
+  {
+    "abbrev": "Bioinformatics",
+    "name": "Briefings in bioinformatics",
+    "issn": "14774054",
+    "title": "Briefings in Bioinformatics",
+    "rank": 2.39
+  },
+  {
+    "abbrev": "Alzheimers Dement",
+    "name": "Alzheimer's & dementia : the journal of the Alzheimer's Association",
+    "issn": "15525279",
+    "title": "Alzheimer's and Dementia",
+    "rank": 3.6
+  },
+  {
+    "abbrev": "Commun Biol",
+    "name": "Communications biology",
+    "issn": "23993642",
+    "title": "Communications Biology",
+    "rank": 2.071
+  },
+  {
+    "abbrev": "J Data Sci",
+    "name": "Journal of data science : JDS",
+    "issn": "16838602",
+    "title": "Journal of Data Science",
+    "rank": 0.387
+  },
+  {
+    "abbrev": "Res Sq",
+    "name": "Research square",
+    "issn": "26935015",
+    "title": "Research square",
+    "rank": 0
+  },
+  {
+    "abbrev": "Nat Biotechnol",
+    "name": "Nature biotechnology",
+    "issn": "15461696",
+    "title": "Nature Biotechnology",
+    "rank": 19.006
+  },
+  {
+    "abbrev": "Noncoding RNA",
+    "name": "Non-coding RNA",
+    "issn": "2311553X",
+    "title": "Non-coding RNA",
+    "rank": 1.019
+  },
+  {
+    "abbrev": "Environ Sci Technol",
+    "name": "Environmental science & technology",
+    "issn": "15205851",
+    "title": "Environmental Science and Technology",
+    "rank": 3.69
+  },
+  {
+    "abbrev": "Metabolites",
+    "name": "Metabolites",
+    "issn": "22181989",
+    "title": "Metabolites",
+    "rank": 0.996
+  },
+  {
+    "abbrev": "F1000Res",
+    "name": "F1000Research",
+    "issn": "20461402",
+    "title": "F1000Research",
+    "rank": 0.537
+  },
+  {
+    "abbrev": "Cancer Cell",
+    "name": "Cancer cell",
+    "issn": "18783686",
+    "title": "Cancer Cell",
+    "rank": 19.027
+  },
+  {
+    "abbrev": "Drug Discov Today",
+    "name": "Drug discovery today",
+    "issn": "18785832",
+    "title": "Drug Discovery Today",
+    "rank": 1.742
+  },
+  {
+    "abbrev": "Cancers (Basel)",
+    "name": "Cancers",
+    "issn": "",
+    "title": "Ca-A Cancer Journal for Clinicians",
+    "rank": 145.004
+  },
+  {
+    "abbrev": "Front Cell Dev Biol",
+    "name": "Frontiers in cell and developmental biology",
+    "issn": "2296634X",
+    "title": "Frontiers in Cell and Developmental Biology",
+    "rank": 1.608
+  },
+  {
+    "abbrev": "Biomolecules",
+    "name": "Biomolecules",
+    "issn": "2218273X",
+    "title": "Biomolecules",
+    "rank": 1.333
+  },
+  {
+    "abbrev": "Pharmaceuticals (Basel)",
+    "name": "Pharmaceuticals (Basel, Switzerland)",
+    "issn": "14248247",
+    "title": "Pharmaceuticals",
+    "rank": 1.019
+  },
+  {
+    "abbrev": "JHEP Rep",
+    "name": "JHEP reports : innovation in hepatology",
+    "issn": "25895559",
+    "title": "JHEP Reports",
+    "rank": 3.525
+  },
+  {
+    "abbrev": "Genome Biol",
+    "name": "Genome biology",
+    "issn": "1474760X",
+    "title": "Genome Biology",
+    "rank": 5.71
+  },
+  {
+    "abbrev": "J Proteome Res",
+    "name": "Journal of proteome research",
+    "issn": "15353907",
+    "title": "Journal of Proteome Research",
+    "rank": 1.139
+  },
+  {
+    "abbrev": "J Am Chem Soc",
+    "name": "Journal of the American Chemical Society",
+    "issn": "15205126",
+    "title": "Journal of the American Chemical Society",
+    "rank": 5.554
+  },
+  {
+    "abbrev": "Nat Protoc",
+    "name": "Nature protocols",
+    "issn": "17502799",
+    "title": "Nature Protocols",
+    "rank": 5.854
+  },
+  {
+    "abbrev": "J Am Soc Mass Spectrom",
+    "name": "Journal of the American Society for Mass Spectrometry",
+    "issn": "18791123",
+    "title": "Journal of the American Society for Mass Spectrometry",
+    "rank": 0.704
+  },
+  {
+    "abbrev": "Mol Cell Proteomics",
+    "name": "Molecular & cellular proteomics : MCP",
+    "issn": "15359484",
+    "title": "Molecular and Cellular Proteomics",
+    "rank": 1.948
+  },
+  {
+    "abbrev": "Am J Physiol Heart Circ Physiol",
+    "name": "American journal of physiology. Heart and circulatory physiology",
+    "issn": "15221539",
+    "title": "American Journal of Physiology - Heart and Circulatory Physiology",
+    "rank": 1.464
+  },
+  {
+    "abbrev": "Front Aging",
+    "name": "Frontiers in aging",
+    "issn": "26736217",
+    "title": "Frontiers in Aging",
+    "rank": 1.455
+  },
+  {
+    "abbrev": "PLoS Comput Biol",
+    "name": "PLoS computational biology",
+    "issn": "15537358",
+    "title": "PLoS Computational Biology",
+    "rank": 1.503
+  },
+  {
+    "abbrev": "Nat Genet",
+    "name": "Nature genetics",
+    "issn": "15461718",
+    "title": "Nature Genetics",
+    "rank": 16.586
+  },
+  {
+    "abbrev": "Front Immunol",
+    "name": "Frontiers in immunology",
+    "issn": "16643224",
+    "title": "Frontiers in Immunology",
+    "rank": 1.941
+  },
+  {
+    "abbrev": "Biol Open",
+    "name": "Biology open",
+    "issn": "20466390",
+    "title": "Biology Open",
+    "rank": 0.723
+  },
+  {
+    "abbrev": "Dev Dyn",
+    "name": "Developmental dynamics : an official publication of the American Association of Anatomists",
+    "issn": "10970177",
+    "title": "Developmental Dynamics",
+    "rank": 0.857
+  },
+  {
+    "abbrev": "Cancer Discov",
+    "name": "Cancer discovery",
+    "issn": "21598290",
+    "title": "Cancer Discovery",
+    "rank": 7.283
+  },
+  {
+    "abbrev": "Cell Rep Med",
+    "name": "Cell reports. Medicine",
+    "issn": "26663791",
+    "title": "Cell Reports Medicine",
+    "rank": 4.028
+  },
+  {
+    "abbrev": "J Control Release",
+    "name": "Journal of controlled release : official journal of the Controlled Release Society",
+    "issn": "18734995",
+    "title": "Journal of Controlled Release",
+    "rank": 2.47
+  },
+  {
+    "abbrev": "ACS Appl Bio Mater",
+    "name": "ACS applied bio materials",
+    "issn": "25766422",
+    "title": "ACS Applied Bio Materials",
+    "rank": 0.894
+  },
+  {
+    "abbrev": "Chem Commun (Camb)",
+    "name": "Chemical communications (Cambridge, England)",
+    "issn": "1364548X",
+    "title": "Chemical Communications",
+    "rank": 1.037
+  },
+  {
+    "abbrev": "Adv Drug Deliv Rev",
+    "name": "Advanced drug delivery reviews",
+    "issn": "18728294",
+    "title": "Advanced Drug Delivery Reviews",
+    "rank": 3.721
+  },
+  {
+    "abbrev": "Drug Deliv Transl Res",
+    "name": "Drug delivery and translational research",
+    "issn": "21903948",
+    "title": "Drug Delivery and Translational Research",
+    "rank": 1.175
+  },
+  {
+    "abbrev": "Cancer Metastasis Rev",
+    "name": "Cancer metastasis reviews",
+    "issn": "15737233",
+    "title": "Cancer and Metastasis Reviews",
+    "rank": 2.596
+  },
+  {
+    "abbrev": "ACS Appl Mater Interfaces",
+    "name": "ACS applied materials & interfaces",
+    "issn": "19448252",
+    "title": "ACS Applied Materials and Interfaces",
+    "rank": 1.921
+  },
+  {
+    "abbrev": "Dis Model Mech",
+    "name": "Disease models & mechanisms",
+    "issn": "17548411",
+    "title": "DMM Disease Models and Mechanisms",
+    "rank": 1.318
+  },
+  {
+    "abbrev": "Invest Ophthalmol Vis Sci",
+    "name": "Investigative ophthalmology & visual science",
+    "issn": "15525783",
+    "title": "Investigative Ophthalmology and Visual Science",
+    "rank": 1.376
+  },
+  {
+    "abbrev": "Sci Rep",
+    "name": "Scientific reports",
+    "issn": "20452322",
+    "title": "Scientific Reports",
+    "rank": 0.874
+  },
+  {
+    "abbrev": "BMC Genomics",
+    "name": "BMC genomics",
+    "issn": "14712164",
+    "title": "BMC Genomics",
+    "rank": 1.003
+  },
+  {
+    "abbrev": "BMC Biol",
+    "name": "BMC biology",
+    "issn": "17417007",
+    "title": "BMC Biology",
+    "rank": 1.727
+  },
+  {
+    "abbrev": "Mol Med",
+    "name": "Molecular medicine (Cambridge, Mass.)",
+    "issn": "15283658",
+    "title": "Molecular Medicine",
+    "rank": 1.752
+  },
+  {
+    "abbrev": "FEBS Open Bio",
+    "name": "FEBS open bio",
+    "issn": "22115463",
+    "title": "FEBS Open Bio",
+    "rank": 0.857
+  },
+  {
+    "abbrev": "BMC Pharmacol Toxicol",
+    "name": "BMC pharmacology & toxicology",
+    "issn": "20506511",
+    "title": "BMC Pharmacology and Toxicology",
+    "rank": 0.814
+  },
+  {
+    "abbrev": "Biol Sex Differ",
+    "name": "Biology of sex differences",
+    "issn": "20426410",
+    "title": "Biology of Sex Differences",
+    "rank": 1.799
+  },
+  {
+    "abbrev": "Cancer Rep (Hoboken)",
+    "name": "Cancer reports (Hoboken, N.J.)",
+    "issn": "25738348",
+    "title": "Cancer Reports",
+    "rank": 0.729
+  },
+  {
+    "abbrev": "JCO Precis Oncol",
+    "name": "JCO precision oncology",
+    "issn": "24734284",
+    "title": "JCO Precision Oncology",
+    "rank": 2.409
+  },
+  {
+    "abbrev": "BMC Bioinformatics",
+    "name": "BMC bioinformatics",
+    "issn": "14712105",
+    "title": "BMC Bioinformatics",
+    "rank": 1.19
+  },
+  {
+    "abbrev": "Sci Data",
+    "name": "Scientific data",
+    "issn": "20524463",
+    "title": "Scientific Data",
+    "rank": 1.867
+  },
+  {
+    "abbrev": "Am J Hum Genet",
+    "name": "American journal of human genetics",
+    "issn": "15376605",
+    "title": "American Journal of Human Genetics",
+    "rank": 4.531
+  },
+  {
+    "abbrev": "Am J Med Genet A",
+    "name": "American journal of medical genetics. Part A",
+    "issn": "15524833",
+    "title": "American Journal of Medical Genetics, Part A",
+    "rank": 0.733
+  },
+  {
+    "abbrev": "Nat Comput Sci",
+    "name": "Nature computational science",
+    "issn": "26628457",
+    "title": "Nature Computational Science",
+    "rank": 3.472
+  },
+  {
+    "abbrev": "Curr Protoc",
+    "name": "Current protocols",
+    "issn": "26911299",
+    "title": "Current Protocols",
+    "rank": 1.598
+  },
+  {
+    "abbrev": "Commun Med (Lond)",
+    "name": "Communications medicine",
+    "issn": "2730664X",
+    "title": "Communications Medicine",
+    "rank": 2.098
+  },
+  {
+    "abbrev": "PeerJ",
+    "name": "PeerJ",
+    "issn": "21678359",
+    "title": "PeerJ",
+    "rank": 0.625
+  },
+  {
+    "abbrev": "STAR Protoc",
+    "name": "STAR protocols",
+    "issn": "26661667",
+    "title": "STAR Protocols",
+    "rank": 0.925
+  },
+  {
+    "abbrev": "Glycobiology",
+    "name": "Glycobiology",
+    "issn": "14602423",
+    "title": "Glycobiology",
+    "rank": 0.872
+  },
+  {
+    "abbrev": "Bioinform Adv",
+    "name": "Bioinformatics advances",
+    "issn": "26350041",
+    "title": "Bioinformatics Advances",
+    "rank": 1.41
+  },
+  {
+    "abbrev": "PLoS One",
+    "name": "PloS one",
+    "issn": "19326203",
+    "title": "PLoS ONE",
+    "rank": 0.803
+  },
+  {
+    "abbrev": "Dev Cell",
+    "name": "Developmental cell",
+    "issn": "18781551",
+    "title": "Developmental Cell",
+    "rank": 5.18
+  },
+  {
+    "abbrev": "Int J Tryptophan Res",
+    "name": "International journal of tryptophan research : IJTR",
+    "issn": "11786469",
+    "title": "International Journal of Tryptophan Research",
+    "rank": 1.108
+  },
+  {
+    "abbrev": "J Biol Chem",
+    "name": "The Journal of biological chemistry",
+    "issn": "1083351X",
+    "title": "Journal of Biological Chemistry",
+    "rank": 1.705
+  },
+  {
+    "abbrev": "J Cachexia Sarcopenia Muscle",
+    "name": "Journal of cachexia, sarcopenia and muscle",
+    "issn": "21906009",
+    "title": "Journal of Cachexia, Sarcopenia and Muscle",
+    "rank": 3.416
+  },
+  {
+    "abbrev": "Proc Natl Acad Sci U S A",
+    "name": "Proceedings of the National Academy of Sciences of the United States of America",
+    "issn": "10916490",
+    "title": "Proceedings of the National Academy of Sciences of the United States of America",
+    "rank": 3.414
+  },
+  {
+    "abbrev": "BMC Cancer",
+    "name": "BMC cancer",
+    "issn": "14712407",
+    "title": "BMC Cancer",
+    "rank": 1.178
+  },
+  {
+    "abbrev": "FASEB J",
+    "name": "FASEB journal : official publication of the Federation of American Societies for Experimental Biology",
+    "issn": "15306860",
+    "title": "FASEB Journal",
+    "rank": 1.319
+  },
+  {
+    "abbrev": "FEBS J",
+    "name": "The FEBS journal",
+    "issn": "17424658",
+    "title": "FEBS Journal",
+    "rank": 2.212
+  },
+  {
+    "abbrev": "J Gerontol A Biol Sci Med Sci",
+    "name": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+    "issn": "1758535X",
+    "title": "The journals of gerontology. Series A, Biological sciences and medical sciences",
+    "rank": 0
+  },
+  {
+    "abbrev": "Int J Obes (Lond)",
+    "name": "International journal of obesity (2005)",
+    "issn": "14765497",
+    "title": "International Journal of Obesity",
+    "rank": 1.589
+  },
+  {
+    "abbrev": "iScience",
+    "name": "iScience",
+    "issn": "25890042",
+    "title": "iScience",
+    "rank": 1.363
+  },
+  {
+    "abbrev": "J Proteomics",
+    "name": "Journal of proteomics",
+    "issn": "18767737",
+    "title": "Journal of Proteomics",
+    "rank": 0.698
+  },
+  {
+    "abbrev": "Biophys J",
+    "name": "Biophysical journal",
+    "issn": "15420086",
+    "title": "Biophysical Journal",
+    "rank": 1.112
+  },
+  {
+    "abbrev": "Toxicol Sci",
+    "name": "Toxicological sciences : an official journal of the Society of Toxicology",
+    "issn": "10960929",
+    "title": "Toxicological Sciences",
+    "rank": 1.086
+  },
+  {
+    "abbrev": "Front Endocrinol (Lausanne)",
+    "name": "Frontiers in endocrinology",
+    "issn": "16642392",
+    "title": "Frontiers in Endocrinology",
+    "rank": 1.472
+  },
+  {
+    "abbrev": "Front Microbiol",
+    "name": "Frontiers in microbiology",
+    "issn": "1664302X",
+    "title": "Frontiers in Microbiology",
+    "rank": 1.172
+  },
+  {
+    "abbrev": "Immunity",
+    "name": "Immunity",
+    "issn": "10974180",
+    "title": "Immunity",
+    "rank": 12.163
+  },
+  {
+    "abbrev": "Cardiovasc Diabetol",
+    "name": "Cardiovascular diabetology",
+    "issn": "14752840",
+    "title": "Cardiovascular Diabetology",
+    "rank": 3.353
+  },
+  {
+    "abbrev": "Lab Chip",
+    "name": "Lab on a chip",
+    "issn": "14730189",
+    "title": "Lab on a Chip",
+    "rank": 1.201
+  },
+  {
+    "abbrev": "Am J Physiol Lung Cell Mol Physiol",
+    "name": "American journal of physiology. Lung cellular and molecular physiology",
+    "issn": "15221504",
+    "title": "American Journal of Physiology - Lung Cellular and Molecular Physiology",
+    "rank": 1.24
+  },
+  {
+    "abbrev": "Nat Cancer",
+    "name": "Nature cancer",
+    "issn": "26621347",
+    "title": "Nature Cancer",
+    "rank": 11.941
+  },
+  {
+    "abbrev": "Infect Immun",
+    "name": "Infection and immunity",
+    "issn": "10985522",
+    "title": "Infection and Immunity",
+    "rank": 1.054
+  },
+  {
+    "abbrev": "J Alzheimers Dis Rep",
+    "name": "Journal of Alzheimer's disease reports",
+    "issn": "25424823",
+    "title": "Journal of Alzheimer's Disease Reports",
+    "rank": 0.781
+  },
+  {
+    "abbrev": "Int J Cancer",
+    "name": "International journal of cancer",
+    "issn": "10970215",
+    "title": "International Journal of Cancer",
+    "rank": 2.252
+  },
+  {
+    "abbrev": "Allergy",
+    "name": "Allergy",
+    "issn": "13989995",
+    "title": "Allergy: European Journal of Allergy and Clinical Immunology",
+    "rank": 3.622
+  },
+  {
+    "abbrev": "Alzheimers Res Ther",
+    "name": "Alzheimer's research & therapy",
+    "issn": "17589193",
+    "title": "Alzheimer's Research and Therapy",
+    "rank": 2.709
+  },
+  {
+    "abbrev": "J Lipid Res",
+    "name": "Journal of lipid research",
+    "issn": "15397262",
+    "title": "Journal of Lipid Research",
+    "rank": 1.66
+  },
+  {
+    "abbrev": "Front Fungal Biol",
+    "name": "Frontiers in fungal biology",
+    "issn": "26736128",
+    "title": "Frontiers in Fungal Biology",
+    "rank": 0.76
+  },
+  {
+    "abbrev": "J Physiol",
+    "name": "The Journal of physiology",
+    "issn": "14697793",
+    "title": "Journal of Physiology",
+    "rank": 1.715
+  },
+  {
+    "abbrev": "Elife",
+    "name": "eLife",
+    "issn": "2050084X",
+    "title": "eLife",
+    "rank": 3.379
+  },
+  {
+    "abbrev": "J Exp Med",
+    "name": "The Journal of experimental medicine",
+    "issn": "15409538",
+    "title": "Journal of Experimental Medicine",
+    "rank": 5.834
+  },
+  {
+    "abbrev": "EMBO Mol Med",
+    "name": "EMBO molecular medicine",
+    "issn": "17574684",
+    "title": "EMBO Molecular Medicine",
+    "rank": 3.571
+  },
+  {
+    "abbrev": "Database (Oxford)",
     "name": "Database : the journal of biological databases and curation",
-    "rank": 1.238,
-    "issn": "17580463"
+    "issn": "17580463",
+    "title": "Database : the journal of biological databases and curation",
+    "rank": 1.238
   },
   {
-    "id": "Cell reports methods",
-    "name": "Cell Reports Methods",
-    "rank": 2.257,
-    "issn": "26672375"
+    "abbrev": "Aging Cell",
+    "name": "Aging cell",
+    "issn": "14749726",
+    "title": "Aging Cell",
+    "rank": 2.905
   },
   {
-    "id": "Nature cardiovascular research",
-    "name": "Nature Cardiovascular Research",
-    "rank": 4.096,
-    "issn": "27310590"
+    "abbrev": "Nat Cardiovasc Res",
+    "name": "Nature cardiovascular research",
+    "issn": "27310590",
+    "title": "Nature Cardiovascular Research",
+    "rank": 4.096
   },
   {
-    "id": "Aging cell",
-    "name": "Aging Cell",
-    "rank": 2.905,
-    "issn": "14749726"
+    "abbrev": "Cell Rep Methods",
+    "name": "Cell reports methods",
+    "issn": "26672375",
+    "title": "Cell Reports Methods",
+    "rank": 2.257
+  },
+  {
+    "abbrev": "Pract Radiat Oncol",
+    "name": "Practical radiation oncology",
+    "issn": "18798519",
+    "title": "Practical Radiation Oncology",
+    "rank": 1.011
+  },
+  {
+    "abbrev": "Eur J Cancer",
+    "name": "European journal of cancer (Oxford, England : 1990)",
+    "issn": "18790852",
+    "title": "European Journal of Cancer",
+    "rank": 2.691
+  },
+  {
+    "abbrev": "J Med Imaging Radiat Oncol",
+    "name": "Journal of medical imaging and radiation oncology",
+    "issn": "17549485",
+    "title": "Journal of Medical Imaging and Radiation Oncology",
+    "rank": 0.535
+  },
+  {
+    "abbrev": "Int J Radiat Oncol Biol Phys",
+    "name": "International journal of radiation oncology, biology, physics",
+    "issn": "1879355X",
+    "title": "International Journal of Radiation Oncology Biology Physics",
+    "rank": 2.058
+  },
+  {
+    "abbrev": "CA Cancer J Clin",
+    "name": "CA: a cancer journal for clinicians",
+    "issn": "15424863",
+    "title": "Ca-A Cancer Journal for Clinicians",
+    "rank": 145.004
+  },
+  {
+    "abbrev": "Front Physiol",
+    "name": "Frontiers in physiology",
+    "issn": "1664042X",
+    "title": "Frontiers in Physiology",
+    "rank": 1.023
+  },
+  {
+    "abbrev": "Front Oncol",
+    "name": "Frontiers in oncology",
+    "issn": "2234943X",
+    "title": "Frontiers in Oncology",
+    "rank": 1.075
+  },
+  {
+    "abbrev": "Radiother Oncol",
+    "name": "Radiotherapy and oncology : journal of the European Society for Therapeutic Radiology and Oncology",
+    "issn": "18790887",
+    "title": "Radiotherapy and Oncology",
+    "rank": 1.738
   }
 ]
