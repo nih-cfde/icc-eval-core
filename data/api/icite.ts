@@ -23,7 +23,7 @@ export const queryIcite = memoize(async (pmids: number[]) => {
   /** go through all chunks */
   for (const chunk of chunks) {
     const { meta, data } = await request<Results>(api, {
-      params: { pmids: chunk.join(",") },
+      params: { pmids: chunk.join(","), fl: "all" },
     });
     /** set meta from first chunk */
     if (isEmpty(meta)) results.meta = meta;

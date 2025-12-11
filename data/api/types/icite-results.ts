@@ -5,35 +5,38 @@ export type Results = {
 };
 
 export type Datum = {
-  pmid?: number;
-  year?: number;
-  title?: string;
+  _id?: string;
   authors?: {
     lastName?: string;
     fullName?: string;
     firstName?: string;
   }[];
+  doi?: string;
+  pmid?: number;
+  title?: string;
+  animal?: number;
+  apt?: number;
+  human?: number;
+  citedByPmidsByYear?: Record<string, number>[];
+  citedByClinicalArticle?: boolean;
+  year?: number;
   journal?: string;
-  is_research_article?: string;
+  is_research_article?: boolean;
+  citation_count?: number;
+  field_citation_rate?: number;
+  expected_citations_per_year?: number;
+  citations_per_year?: number;
   relative_citation_ratio?: number;
   nih_percentile?: null;
-  human?: number;
-  animal?: number;
   molecular_cellular?: number;
-  apt?: number;
-  is_clinical?: string;
-  citation_count?: number;
-  citations_per_year?: number;
-  expected_citations_per_year?: number | null;
-  field_citation_rate?: number | null;
-  provisional?: string;
   x_coord?: number;
   y_coord?: number;
-  cited_by_clin?: number[] | null;
+  is_clinical?: boolean;
+  cited_by_clin?: null;
   cited_by?: number[];
   references?: number[];
-  doi?: string;
-  last_modified?: string;
+  provisional?: boolean;
+  last_modified?: Date;
 };
 
 export type Links = {

@@ -33,7 +33,7 @@ fetch("https://api.reporter.nih.gov/v2/projects/search", {
 1. Convert to TypeScript schema same way as above
 
 ```js
-fetch("https://icite.od.nih.gov/api/pubs")
+fetch("https://icite.od.nih.gov/api/pubs?fl=all")
   .then((r) => r.json())
   .then(console.log);
 ```
