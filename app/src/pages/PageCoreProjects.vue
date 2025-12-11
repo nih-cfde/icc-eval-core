@@ -42,7 +42,7 @@
 
       <template #award-amount="{ row }">
         {{
-          row.awardAmount.toLocaleString(undefined, {
+          format(row.awardAmount, true, {
             style: "currency",
             currency: "USD",
             notation: "compact",
@@ -60,6 +60,7 @@ import Xmark from "@/assets/xmark.svg";
 import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
+import { format } from "@/util/string";
 import coreProjects from "~/core-projects.json";
 
 const readmeLink =

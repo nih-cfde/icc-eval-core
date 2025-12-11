@@ -33,6 +33,7 @@ import { SVGRenderer } from "echarts/renderers";
 import { orderBy, sum } from "lodash";
 import { useElementSize } from "@vueuse/core";
 import { getCssVar } from "@/util/misc";
+import { format } from "@/util/string";
 
 type Props = {
   /** chart title */
@@ -51,8 +52,7 @@ type Props = {
 
 const props = withDefaults(defineProps<Props>(), {
   cumulative: false,
-  yFormat: (value: number) =>
-    value.toLocaleString(undefined, { notation: "compact" }),
+  yFormat: (value: number) => format(value, true),
   group: undefined,
 });
 

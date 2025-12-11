@@ -13,7 +13,7 @@
       <dl class="details">
         <div>
           <dt>Files</dt>
-          <dd>{{ count.toLocaleString() }}</dd>
+          <dd>{{ format(count, true) }}</dd>
         </div>
         <div>
           <dt>Size</dt>
@@ -23,7 +23,7 @@
           <dt>Types</dt>
           <dd>
             <span v-for="[type, number] in types" :key="type" class="file-type">
-              {{ number.toLocaleString() }}
+              {{ format(number, true) }}
               <template v-if="type">.{{ type }}</template>
               <i v-else>no ext</i>
             </span>
@@ -38,7 +38,7 @@
 import { countBy, orderBy, sumBy } from "lodash";
 import Data from "@/assets/data.svg";
 import AppHeading from "@/components/AppHeading.vue";
-import { bytes } from "@/util/string";
+import { bytes, format } from "@/util/string";
 import code from "~/drc-code.json";
 import dcc from "~/drc-dcc.json";
 import file from "~/drc-file.json";

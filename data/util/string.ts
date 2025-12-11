@@ -1,6 +1,6 @@
 import { parse } from "path";
+import { isValid } from "date-fns";
 import { size } from "lodash-es";
-import { date } from "./../../app/src/util/date";
 
 /** (lodash's capitalize forces later characters to lower case) */
 export const capitalize = (string: string) =>
@@ -40,8 +40,12 @@ export const midTrunc = (string: string, limit: number) => {
 };
 
 /** format date as iso string */
-export const formatDate = (d?: ConstructorParameters<typeof Date>[0]) =>
-  d ? date(d).toISOString() : "";
+export const formatDate = (date?: ConstructorParameters<typeof Date>[0]) => {
+  if (!date) return "";
+  const _date = new Date(date);
+  if (isValid(_date)) return _date.toISOString();
+  return "";
+};
 
 /** split full url or path into parts */
 export const splitPath = (path: string) => {

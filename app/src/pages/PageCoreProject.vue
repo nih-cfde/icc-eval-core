@@ -3,7 +3,7 @@
     <AppHeading level="1"><Microscope />Core Project {{ id }}</AppHeading>
   </section>
 
-  <!-- details -->
+  <!-- overview -->
   <section>
     <AppHeading level="2"><Eye />Overview</AppHeading>
 
@@ -56,12 +56,6 @@
       </template>
 
       <template #year="{ row }">{{ row.year }}</template>
-
-      <template #modified="{ row }">
-        {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
-        <br />
-        ({{ ago(row.modified) }})
-      </template>
     </AppTable>
 
     <template v-if="Object.keys(publicationsOverTime).length > 1">
@@ -108,15 +102,9 @@
       :sort="[{ id: 'id', desc: true }]"
     >
       <template #name="{ row }">
-        <AppLink :to="`https://github.com/${row.owner}/${row.name}`"
-          >{{ row.owner }}/{{ row.name }}</AppLink
-        >
-      </template>
-
-      <template #modified="{ row }">
-        {{ row.modified.toLocaleString(undefined, { dateStyle: "medium" }) }}
-        <br />
-        ({{ ago(row.modified) }})
+        <AppLink :to="`https://github.com/${row.owner}/${row.name}`">
+          {{ row.owner }}/{{ row.name }}
+        </AppLink>
       </template>
 
       <template #topics="{ row }">
@@ -124,15 +112,15 @@
       </template>
 
       <template #issues="{ row }">
-        Closed: {{ row.closedIssues.toLocaleString() }}
+        Closed: {{ format(row.closedIssues, true) }}
         <br />
-        Open: {{ row.openIssues.toLocaleString() }}
+        Open: {{ format(row.openIssues, true) }}
       </template>
 
       <template #pull-requests="{ row }">
-        Closed: {{ row.closedPullRequests.toLocaleString() }}
+        Closed: {{ format(row.closedPullRequests, true) }}
         <br />
-        Open: {{ row.openPullRequests.toLocaleString() }}
+        Open: {{ format(row.openPullRequests, true) }}
       </template>
     </AppTable>
 
@@ -142,9 +130,9 @@
       :sort="[{ id: 'id', desc: true }]"
     >
       <template #name="{ row }">
-        <AppLink :to="`https://github.com/${row.owner}/${row.name}`"
-          >{{ row.owner }}/{{ row.name }}</AppLink
-        >
+        <AppLink :to="`https://github.com/${row.owner}/${row.name}`">
+          {{ row.owner }}/{{ row.name }}
+        </AppLink>
       </template>
 
       <template #issue-time-open="{ row }">
@@ -299,9 +287,7 @@
                   {{ byKey }}
                 </span>
                 <span>
-                  {{
-                    byValue.toLocaleString(undefined, { notation: "compact" })
-                  }}
+                  {{ format(byValue, true) }}
                 </span>
               </template>
             </dd>
@@ -358,8 +344,7 @@ import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve, limit } from "@/util/array";
-import { date } from "@/util/date";
-import { ago, match, printObject, span } from "@/util/string";
+import { format, match, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
 import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
@@ -392,57 +377,66 @@ const details = computed(() => [
   ["Name", coreProject.value.name],
   [
     "Award",
-    coreProject.value.awardAmount.toLocaleString(undefined, {
+    format(coreProject.value.awardAmount, true, {
       style: "currency",
       currency: "USD",
     }),
   ],
-  [
-    "Publications",
-    `${projectPublications.value.length.toLocaleString()} publications`,
-  ],
+  ["Publications", `${format(projectPublications.value, true)} publications`],
   [
     "Repositories",
-    `${projectRepos.value.length.toLocaleString()} repositories`,
+    `${format(projectRepos.value, true)} repositories`,
     [
-      sumBy(projectRepos.value, (repo) => repo.stars.length).toLocaleString(),
+      format(
+        sumBy(projectRepos.value, (repo) => repo.stars.length),
+        true,
+      ),
       "stars",
     ],
     [
-      sumBy(projectRepos.value, (repo) => repo.watchers).toLocaleString(),
+      format(
+        sumBy(projectRepos.value, (repo) => repo.watchers),
+        true,
+      ),
       "watchers",
     ],
     [
-      sumBy(projectRepos.value, (repo) => repo.forks.length).toLocaleString(),
+      format(
+        sumBy(projectRepos.value, (repo) => repo.forks.length),
+        true,
+      ),
       "forks",
     ],
     [
-      sumBy(projectRepos.value, (repo) => repo.issues.length).toLocaleString(),
+      format(
+        sumBy(projectRepos.value, (repo) => repo.issues.length),
+        true,
+      ),
       "issues",
     ],
     [
-      sumBy(
-        projectRepos.value,
-        (repo) => repo.pullRequests.length,
-      ).toLocaleString(),
+      format(
+        sumBy(projectRepos.value, (repo) => repo.pullRequests.length),
+        true,
+      ),
       "pull requests",
     ],
     [
-      sumBy(projectRepos.value, (repo) => repo.commits.length).toLocaleString(),
+      format(
+        sumBy(projectRepos.value, (repo) => repo.commits.length),
+        true,
+      ),
       "commits",
     ],
     [
-      sumBy(
-        projectRepos.value,
-        (repo) => repo.contributors.length,
-      ).toLocaleString(),
+      format(
+        sumBy(projectRepos.value, (repo) => repo.contributors.length),
+        true,
+      ),
       "contributors",
     ],
   ],
-  [
-    "Analytics",
-    `${analyticsProperties.value.length.toLocaleString()} properties`,
-  ],
+  ["Analytics", `${format(analyticsProperties.value, true)} properties`],
 ]);
 
 /** publication table row data */
@@ -459,7 +453,7 @@ const projectPublications = computed(() =>
       return {
         ...publication,
         year: publication.year,
-        modified: date(publication.modified),
+        modified: new Date(publication.modified),
         rank: journal?.rank ?? 0,
         journal: journal?.name ?? publication.journal,
       };
@@ -513,7 +507,6 @@ const publicationCols: Cols<typeof projectPublications.value> = [
     name: "Published",
   },
   {
-    slot: "modified",
     key: "modified",
     name: "Updated",
   },
@@ -532,7 +525,7 @@ const projectRepos = computed(() =>
     .filter((repo) => repo.coreProject === id.value)
     .map((repo) => ({
       ...repo,
-      modified: date(repo.modified),
+      modified: new Date(repo.modified),
       dependencyTotal: sum(Object.values(repo.dependencies)),
       ...repo.dependencies,
     })),
@@ -558,7 +551,6 @@ const repoColsA: Cols<typeof projectRepos.value> = [
     align: "left",
   },
   {
-    slot: "modified",
     key: "modified",
     name: "Last Commit",
   },
@@ -652,14 +644,14 @@ const repoColsB: Cols<typeof projectRepos.value> = [
 /** star chart data */
 const starsOverTime = computed(() =>
   projectRepos.value
-    .map(({ stars }) => stars.map((star) => [date(star.date), 1] as const))
+    .map(({ stars }) => stars.map((star) => [new Date(star.date), 1] as const))
     .flat(),
 );
 
 /** fork chart data */
 const forksOverTime = computed(() =>
   projectRepos.value
-    .map(({ forks }) => forks.map((fork) => [date(fork.date), 1] as const))
+    .map(({ forks }) => forks.map((fork) => [new Date(fork.date), 1] as const))
     .flat(),
 );
 
@@ -667,7 +659,7 @@ const forksOverTime = computed(() =>
 const issuesOverTime = computed(() =>
   projectRepos.value
     .map(({ issues }) =>
-      issues.map(({ created }) => [date(created), 1] as const),
+      issues.map(({ created }) => [new Date(created), 1] as const),
     )
     .flat(),
 );
@@ -676,7 +668,7 @@ const issuesOverTime = computed(() =>
 const pullRequestsOverTime = computed(() =>
   projectRepos.value
     .map(({ pullRequests }) =>
-      pullRequests.map(({ created }) => [date(created), 1] as const),
+      pullRequests.map(({ created }) => [new Date(created), 1] as const),
     )
     .flat(),
 );
@@ -685,7 +677,7 @@ const pullRequestsOverTime = computed(() =>
 const commitsOverTime = computed(() =>
   projectRepos.value
     .map(({ commits }) =>
-      commits.map((commit) => [date(commit.date), 1] as const),
+      commits.map((commit) => [new Date(commit.date), 1] as const),
     )
     .flat(),
 );
@@ -715,7 +707,7 @@ const overTimeAnalytics = computed(() => {
     return {
       metric,
       data: Object.entries(totals).map(
-        ([d, value]) => [date(d), value] as const,
+        ([d, value]) => [new Date(d), value] as const,
       ),
     };
   });

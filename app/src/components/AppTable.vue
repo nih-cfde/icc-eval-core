@@ -58,7 +58,7 @@
                 :row="row.original"
               />
               <template v-else>
-                {{ defaultFormat(cell.getValue()) }}
+                {{ format(cell.getValue()) }}
               </template>
             </div>
           </td>
@@ -105,7 +105,6 @@ import {
   type HTMLAttributes,
   type VNode,
 } from "vue";
-import { truncate } from "lodash";
 import {
   createColumnHelper,
   FlexRender,
@@ -123,6 +122,7 @@ import type { RowData, SortingFn, SortingState } from "@tanstack/vue-table";
 import SortDown from "@/assets/sort-down.svg";
 import SortUp from "@/assets/sort-up.svg";
 import Sort from "@/assets/sort.svg";
+import { format } from "@/util/string";
 
 type Props = {
   cols: Cols<Rows>;
@@ -208,21 +208,6 @@ const table = useVueTable({
     },
   },
 });
-
-/** default cell formatter based on detected type */
-const defaultFormat = (cell: unknown) => {
-  if (typeof cell === "number") return cell.toLocaleString();
-  if (typeof cell === "boolean") return cell ? "✓ Yes" : "✗ No";
-  /** if falsey (except 0 and false) */
-  if (!cell) return "-";
-  if (Array.isArray(cell)) return cell.length.toLocaleString();
-  if (cell instanceof Date)
-    return cell.toLocaleString(undefined, { dateStyle: "medium" });
-  if (typeof cell === "object")
-    return Object.keys(cell).length.toLocaleString();
-  if (typeof cell === "string") return truncate(cell, { length: 100 });
-  return cell;
-};
 
 /** get cell style from col definition */
 const cellStyle = (col?: Cols[number]) => ({
