@@ -128,13 +128,15 @@
     </AppTable>
 
     <template v-if="Object.keys(publicationsOverTime).length > 1">
-      <AppTimeChart
-        class="chart"
-        title="Publications"
-        :data="publicationsOverTime"
-        :cumulative="cumulative"
-        by="month"
-      />
+      <div class="charts">
+        <AppTimeChart
+          class="chart"
+          title="Publications"
+          :data="publicationsOverTime"
+          :cumulative="cumulative"
+          by="month"
+        />
+      </div>
 
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
     </template>
@@ -218,7 +220,7 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { orderBy, startCase, sum } from "lodash";
+import { startCase, sum } from "lodash";
 import Book from "@/assets/book.svg";
 import Chart from "@/assets/chart.svg";
 import Code from "@/assets/code.svg";
@@ -265,24 +267,20 @@ const publicationsOverTime = publications
 
 /** publication table row data */
 const programPublications = computed(() =>
-  orderBy(
-    publications.map((publication) => {
-      /** look up journal matching this publication */
-      const journal = journals.find(
-        (journal) => journal.id === publication.journal,
-      );
-      /** include journal info */
-      return {
-        ...publication,
-        year: publication.year,
-        modified: new Date(publication.modified),
-        rank: journal?.rank ?? 0,
-        journal: journal?.name ?? publication.journal,
-      };
-    }),
-    (publication) => publication.year,
-    "desc",
-  ).slice(0, 10),
+  publications.map((publication) => {
+    /** look up journal matching this publication */
+    const journal = journals.find(
+      (journal) => journal.id === publication.journal,
+    );
+    /** include journal info */
+    return {
+      ...publication,
+      year: publication.year,
+      modified: new Date(publication.modified),
+      rank: journal?.rank ?? 0,
+      journal: journal?.name ?? publication.journal,
+    };
+  }),
 );
 
 /** publication table column definitions */

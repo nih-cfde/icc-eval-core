@@ -179,8 +179,17 @@ svg {
 
 /* interactive */
 
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
 button {
+  display: inline-flex;
   appearance: none;
+  align-items: center;
+  justify-content: center;
   border: none;
   background: none;
   color: inherit;
@@ -188,7 +197,24 @@ button {
   cursor: pointer;
 }
 
+select {
+  font: inherit;
+  cursor: pointer;
+}
+
+[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 /* table */
+
+@media print {
+  table {
+    width: 100% !important;
+    overflow-wrap: anywhere !important;
+  }
+}
 
 table {
   border-collapse: collapse;
@@ -301,11 +327,10 @@ dd {
 /* chart layout */
 
 .charts {
-  display: grid;
-  --cols: 3;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-  place-content: center;
-  place-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   gap: 20px;
 }
@@ -313,7 +338,7 @@ dd {
 .chart,
 .charts > * {
   aspect-ratio: 4 / 3;
-  max-width: calc(var(--content) / 2);
+  max-width: calc(var(--content) / 3 - 20px * 2);
 }
 
 /** vue e-charts */

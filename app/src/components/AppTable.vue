@@ -1,74 +1,131 @@
 <template>
-  <div class="scroll">
-    <table>
-      <thead>
-        <tr
-          v-for="headerGroup in table.getHeaderGroups()"
-          :key="headerGroup.id"
-        >
-          <th
-            v-for="header in headerGroup.headers"
-            :key="header.id"
-            :colSpan="header.colSpan"
+  <div class="container">
+    <div v-if="!printing" class="controls">
+      <AppButton
+        :disabled="!table.getCanPreviousPage()"
+        aria-label="First page"
+        @click="table.setPageIndex(0)"
+      >
+        <AnglesLeft />
+      </AppButton>
+      <AppButton
+        :disabled="!table.getCanPreviousPage()"
+        aria-label="Previous page"
+        @click="table.previousPage()"
+      >
+        <AngleLeft />
+      </AppButton>
+
+      {{ table.getState().pagination.pageIndex + 1 }} of
+      {{ table.getPageCount() }}
+
+      <AppButton
+        :disabled="!table.getCanNextPage()"
+        aria-label="Next page"
+        @click="table.nextPage()"
+      >
+        <AngleRight />
+      </AppButton>
+      <AppButton
+        :disabled="!table.getCanNextPage()"
+        aria-label="Last page"
+        @click="table.setPageIndex(table.getPageCount() - 1)"
+      >
+        <AnglesRight />
+      </AppButton>
+
+      <label>
+        Per page
+        <AppSelect
+          :modelValue="table.getState().pagination.pageSize as 10"
+          @update:modelValue="
+            (value) =>
+              table.setPagination({ pageIndex: 0, pageSize: value ?? 5 })
+          "
+          :options="
+            [
+              { value: 5 },
+              { value: 10 },
+              { value: 25 },
+              { value: 50 },
+              { value: 100 },
+              { value: 9999, label: 'All' },
+            ] as const
+          "
+        />
+      </label>
+    </div>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr
+            v-for="headerGroup in table.getHeaderGroups()"
+            :key="headerGroup.id"
           >
-            <button
-              class="th"
-              :style="{
-                ...cellStyle(header.column.columnDef.meta?.colProp),
-              }"
-              v-bind="cellAttrs(header.column.columnDef.meta?.colProp)"
-              @click="header.column.getToggleSortingHandler()?.($event)"
+            <th
+              v-for="header in headerGroup.headers"
+              :key="header.id"
+              :colSpan="header.colSpan"
             >
-              <FlexRender
-                :render="header.column.columnDef.header"
-                :props="header.getContext()"
-              />
-              <SortDown
-                v-if="header.column.getIsSorted() === 'desc'"
-                class="icon-active"
-              />
-              <SortUp
-                v-else-if="header.column.getIsSorted() === 'asc'"
-                class="icon-active"
-              />
-              <Sort v-else class="icon-inactive" />
-            </button>
-          </th>
-        </tr>
-      </thead>
+              <button
+                class="th"
+                :style="{
+                  ...cellStyle(header.column.columnDef.meta?.colProp),
+                }"
+                v-bind="cellAttrs(header.column.columnDef.meta?.colProp)"
+                @click="header.column.getToggleSortingHandler()?.($event)"
+              >
+                <FlexRender
+                  :render="header.column.columnDef.header"
+                  :props="header.getContext()"
+                />
+                <SortDown
+                  v-if="header.column.getIsSorted() === 'desc'"
+                  class="icon-active"
+                />
+                <SortUp
+                  v-else-if="header.column.getIsSorted() === 'asc'"
+                  class="icon-active"
+                />
+                <Sort v-else class="icon-inactive" />
+              </button>
+            </th>
+          </tr>
+        </thead>
 
-      <tbody>
-        <tr v-for="row in table.getRowModel().rows" :key="row.id">
-          <td v-for="cell in row.getVisibleCells()" :key="cell.id">
-            <div
-              class="td"
-              :style="{
-                ...cellStyle(cell.column.columnDef.meta?.colProp),
-              }"
-              v-bind="
-                cellAttrs(cell.column.columnDef.meta?.colProp, row.original)
-              "
-            >
-              <slot
-                v-if="
-                  cell.column.columnDef.meta?.colProp.slot &&
-                  $slots[cell.column.columnDef.meta?.colProp.slot]
+        <tbody>
+          <tr v-for="row in table.getRowModel().rows" :key="row.id">
+            <td v-for="cell in row.getVisibleCells()" :key="cell.id">
+              <div
+                class="td"
+                :style="{
+                  ...cellStyle(cell.column.columnDef.meta?.colProp),
+                }"
+                v-bind="
+                  cellAttrs(cell.column.columnDef.meta?.colProp, row.original)
                 "
-                :name="cell.column.columnDef.meta?.colProp.slot"
-                :row="row.original"
-              />
-              <template v-else>
-                {{ format(cell.getValue()) }}
-              </template>
-            </div>
-          </td>
-        </tr>
+              >
+                <slot
+                  v-if="
+                    cell.column.columnDef.meta?.colProp.slot &&
+                    $slots[cell.column.columnDef.meta?.colProp.slot]
+                  "
+                  :name="cell.column.columnDef.meta?.colProp.slot"
+                  :row="row.original"
+                />
+                <template v-else>
+                  {{ format(cell.getValue()) }}
+                </template>
+              </div>
+            </td>
+          </tr>
 
-        <tr v-if="!table.getRowModel().rows.length">
-          <td class="empty" :colspan="cols.length">No data</td>
-        </tr>
-      </tbody>
-    </table>
+          <tr v-if="!table.getRowModel().rows.length">
+            <td class="empty" :colspan="cols.length">No data</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -119,9 +176,16 @@ import {
   type Row as TanstackRow,
 } from "@tanstack/vue-table";
 import type { RowData, SortingFn, SortingState } from "@tanstack/vue-table";
+import { useMediaQuery } from "@vueuse/core";
+import AngleLeft from "@/assets/angle-left.svg";
+import AngleRight from "@/assets/angle-right.svg";
+import AnglesLeft from "@/assets/angles-left.svg";
+import AnglesRight from "@/assets/angles-right.svg";
 import SortDown from "@/assets/sort-down.svg";
 import SortUp from "@/assets/sort-up.svg";
 import Sort from "@/assets/sort.svg";
+import AppButton from "@/components/AppButton.vue";
+import AppSelect from "@/components/AppSelect.vue";
 import { format } from "@/util/string";
 
 type Props = {
@@ -182,6 +246,8 @@ const columns = computed(() =>
   ),
 );
 
+const printing = useMediaQuery("print");
+
 /** note: https://github.com/TanStack/table/issues/5653 */
 
 /** tanstack table api */
@@ -204,7 +270,7 @@ const table = useVueTable({
     sorting: props.sort,
     pagination: {
       pageIndex: 0,
-      pageSize: 999999,
+      pageSize: printing.value ? 9999 : 10,
     },
   },
 });
@@ -229,6 +295,20 @@ const cellAttrs = (col?: Cols[number], row?: Row) => {
 </script>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
 .scroll {
   width: var(--full);
   max-width: max-content;
@@ -241,11 +321,6 @@ const cellAttrs = (col?: Cols[number], row?: Row) => {
   .scroll {
     display: contents;
   }
-}
-
-table {
-  min-width: var(--full);
-  /* min-width: var(--content); */
 }
 
 .th,
