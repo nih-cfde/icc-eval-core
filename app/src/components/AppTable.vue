@@ -35,13 +35,10 @@
       </AppButton>
 
       <label>
-        Per page
+        Show
         <AppSelect
           :modelValue="table.getState().pagination.pageSize as 10"
-          @update:modelValue="
-            (value) =>
-              table.setPagination({ pageIndex: 0, pageSize: value ?? 5 })
-          "
+          @update:modelValue="(value) => table.setPageSize(value ?? 10)"
           :options="
             [
               { value: 5 },
