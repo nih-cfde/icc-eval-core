@@ -8,7 +8,7 @@ import { getProjects } from "@/gather/projects";
 import { getPublications } from "@/gather/publications";
 import { getRepos } from "@/gather/repos";
 import { browser } from "@/util/browser";
-import { loadFile, saveFile } from "@/util/file";
+import { loadFile, loadOutput, saveFile, type Result } from "@/util/file";
 import { divider, log } from "@/util/log";
 import { match } from "@/util/string";
 
@@ -34,20 +34,6 @@ const drcCodeFile = "drc-code.json";
 mkdirSync(RAW_PATH, { recursive: true });
 mkdirSync(OUTPUT_PATH, { recursive: true });
 
-// eslint-disable-next-line
-type AsyncFunc = (...args: any) => Promise<unknown>;
-type Result<Func extends AsyncFunc> = Awaited<ReturnType<Func>>;
-
-/** load existing data from public repo when running in private mode */
-const loadPublic = async <Result>(file: string) => {
-  const path = `${OUTPUT_PATH}/${file}`;
-  try {
-    return (await loadFile<Result>(path)).data;
-  } catch (error) {
-    throw Error(`Couldn't load ${file}`);
-  }
-};
-
 /** ========================================================================= */
 
 divider("Opportunities");
@@ -59,7 +45,7 @@ let opportunities: Result<typeof getOpportunities> = [];
 try {
   opportunities = PRIVATE
     ? /** PRIVATE MODE */
-      await loadPublic(opportunitiesFile)
+      await loadOutput(opportunitiesFile)
     : /** PUBLIC MODE */
       await getOpportunities();
 } catch (error) {
@@ -91,8 +77,8 @@ const manualCoreProjects = (
 const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
   ? /** PRIVATE MODE */
     {
-      coreProjects: await loadPublic(coreProjectsFile),
-      projects: await loadPublic(projectsFile),
+      coreProjects: await loadOutput(coreProjectsFile),
+      projects: await loadOutput(projectsFile),
     }
   : /** PUBLIC MODE */
     await getProjects(
@@ -110,7 +96,7 @@ divider("Publications");
 /** get publications from projects */
 const publications: Result<typeof getPublications> = PRIVATE
   ? /** PRIVATE MODE */
-    await loadPublic(publicationsFile)
+    await loadOutput(publicationsFile)
   : /** PUBLIC MODE */
     await getPublications(projects.map((project) => project.coreProject));
 
@@ -125,7 +111,7 @@ const journals: Result<typeof getJournals> =
   /** scimago banning/limiting us when running on gh-actions */
   PRIVATE || CI
     ? /** PRIVATE MODE */
-      await loadPublic(journalsFile)
+      await loadOutput(journalsFile)
     : /** PUBLIC MODE */
       await getJournals(publications.map((publication) => publication.journal));
 
@@ -222,9 +208,9 @@ divider("DRC");
 const { dcc, file, code }: Result<typeof getDrc> = PRIVATE
   ? /** PRIVATE MODE */
     {
-      dcc: await loadPublic(drcDccFile),
-      file: await loadPublic(drcFileFile),
-      code: await loadPublic(drcCodeFile),
+      dcc: await loadOutput(drcDccFile),
+      file: await loadOutput(drcFileFile),
+      code: await loadOutput(drcCodeFile),
     }
   : /** PUBLIC MODE */
     await getDrc();

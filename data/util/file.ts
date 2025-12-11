@@ -20,7 +20,7 @@ import { memoize } from "@/util/memoize";
 import { request } from "@/util/request";
 import { formatDate, midTrunc } from "@/util/string";
 
-const { RAW_PATH, CACHE } = process.env;
+const { RAW_PATH, OUTPUT_PATH, CACHE } = process.env;
 
 type Extensions = "json" | "csv" | "tsv" | "txt";
 
@@ -115,6 +115,20 @@ export const liteUnzip = memoize(
       date: formatDate(entry.lastModDate),
     })),
 );
+
+// eslint-disable-next-line
+type AsyncFunc = (...args: any) => Promise<unknown>;
+export type Result<Func extends AsyncFunc> = Awaited<ReturnType<Func>>;
+
+/** load existing data from output folder */
+export const loadOutput = async <Data>(file: string) => {
+  const path = `${OUTPUT_PATH}/${file}`;
+  try {
+    return (await loadFile<Data>(path)).data;
+  } catch (error) {
+    throw Error(`Couldn't load ${file}`);
+  }
+};
 
 type Spawn = Parameters<typeof nodeSpawn>;
 
