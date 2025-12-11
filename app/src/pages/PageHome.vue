@@ -224,12 +224,17 @@ import journals from "~/journals.json";
 type Publication = (typeof publications)[number];
 
 /** look up journal matching this publication */
-export const findJournal = (publication: Publication) =>
-  journals.find((journal) =>
+export const findJournal = (publication: Publication) => {
+  /** find (possibly multiple) matches */
+  const matches = journals.filter((journal) =>
     [journal.abbrev, journal.name, journal.title]
       .map((prop) => prop.toLowerCase())
       .includes(publication.journal.toLowerCase()),
   );
+
+  /** if multiple matches, return nothing to avoid false association/data */
+  if (matches.length === 1) return matches[0];
+};
 </script>
 
 <script setup lang="ts">
