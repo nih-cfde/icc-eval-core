@@ -126,21 +126,7 @@
 
       <template #year="{ row }">{{ row.year }}</template>
     </AppTable>
-
-    <template v-if="Object.keys(publicationsOverTime).length > 1">
-      <div class="charts">
-        <AppTimeChart
-          class="chart"
-          title="Publications"
-          :data="publicationsOverTime"
-          :cumulative="cumulative"
-          by="month"
-        />
-      </div>
-
-      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
-    </template>
-
+    
     <div class="col">
       <AppHeading level="3">Notes</AppHeading>
 
