@@ -190,7 +190,7 @@
             <span>
               {{
                 format(
-                  repoProp === "languages" ? entryCount / 160 : entryCount,
+                  repoProp === "languages" ? bytes(entryCount) : entryCount,
                   true,
                 )
               }}
@@ -199,22 +199,6 @@
         </dd>
       </div>
     </dl>
-
-    <div class="col">
-      <AppHeading level="3">Notes</AppHeading>
-
-      <ul>
-        <li>
-          <code>contributors</code> are unique users that have committed, opened
-          an issue, or otherwise participated in the repo.
-        </li>
-        <li>
-          <code>language</code> lines of code estimated from
-          <code>bytes / 160</code> (UTF-8, ~2 bytes per char, ~80 chars per
-          line).
-        </li>
-      </ul>
-    </div>
   </section>
 </template>
 
@@ -252,7 +236,7 @@ import type { Cols } from "@/components/AppTable.vue";
 import AppTable from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve } from "@/util/array";
-import { format } from "@/util/string";
+import { bytes, format } from "@/util/string";
 import coreProjects from "~/core-projects.json";
 import rawProjects from "~/projects.json";
 import publications from "~/publications.json";

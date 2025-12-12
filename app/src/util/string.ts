@@ -72,10 +72,15 @@ export const match = (a: string, b: string) =>
 
 /** format bytes */
 export const bytes = (bytes: number) => {
-  const units = ["B", "KB", "MB", "GB"];
-  while (bytes > 1024 && units.length) {
+  const units = ["byte", "kilobyte", "megabyte", "gigabyte"];
+  while (bytes >= 100 && units.length) {
     bytes /= 1024;
     units.shift();
   }
-  return bytes.toFixed(1) + " " + units[0]!;
+  return bytes.toLocaleString(undefined, {
+    style: "unit",
+    unit: units[0],
+    unitDisplay: "narrow",
+    maximumFractionDigits: 1,
+  });
 };

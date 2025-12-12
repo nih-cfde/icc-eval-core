@@ -347,7 +347,7 @@ import AppTable, { type Cols } from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { findJournal } from "@/pages/PageHome.vue";
 import { carve, limit } from "@/util/array";
-import { ago, format, match, printObject, span } from "@/util/string";
+import { ago, bytes, format, match, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
 import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
@@ -626,7 +626,7 @@ const repoCols: Cols<typeof projectRepos.value> = [
     name: "Languages",
     attrs: (row) => ({
       title: row?.languages
-        .map(({ name, bytes }) => `${name}: ${bytes}`)
+        .map((row) => `${row.name}: ${bytes(row.bytes)}`)
         .join("\n"),
     }),
   },
