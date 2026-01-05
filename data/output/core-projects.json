@@ -17,8 +17,8 @@
       "3OT2OD030161-01S2",
       "3OT2OD030161-01S5",
       "3OT2OD030161-01S1",
-      "3OT2OD030161-01S3",
       "1OT2OD030161-01",
+      "3OT2OD030161-01S3",
       "3OT2OD030161-01S4"
     ],
     "awardAmount": 3153200,
@@ -89,7 +89,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD039970-01"],
     "awardAmount": 317000,
-    "publications": 1,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
@@ -247,7 +247,7 @@
     "id": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
     "activityCode": "OT2",
-    "projects": ["3OT2OD036440-01S2", "3OT2OD036440-01S1", "1OT2OD036440-01"],
+    "projects": ["3OT2OD036440-01S2", "1OT2OD036440-01", "3OT2OD036440-01S1"],
     "awardAmount": 7956517,
     "publications": 2,
     "repos": 0,
@@ -269,7 +269,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD039978-01"],
     "awardAmount": 303258,
-    "publications": 1,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
@@ -279,7 +279,7 @@
     "activityCode": "U24",
     "projects": ["5U24OD038421-02", "1U24OD038421-01"],
     "awardAmount": 1854560,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -299,7 +299,7 @@
     "activityCode": "R25",
     "projects": ["1R25OD039834-01"],
     "awardAmount": 370177,
-    "publications": 1,
+    "publications": 3,
     "repos": 0,
     "analytics": 0
   },
@@ -319,7 +319,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036491-01"],
     "awardAmount": 323817,
-    "publications": 2,
+    "publications": 3,
     "repos": 0,
     "analytics": 0
   },
@@ -456,7 +456,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD034496-01"],
     "awardAmount": 318000,
-    "publications": 11,
+    "publications": 12,
     "repos": 0,
     "analytics": 0
   },
@@ -506,7 +506,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD038390-01"],
     "awardAmount": 308658,
-    "publications": 11,
+    "publications": 12,
     "repos": 0,
     "analytics": 0
   },
@@ -553,7 +553,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD039980-01"],
     "awardAmount": 286327,
-    "publications": 1,
+    "publications": 4,
     "repos": 0,
     "analytics": 0
   },
@@ -711,8 +711,8 @@
     "activityCode": "OT2",
     "projects": [
       "4OT2OD030162-02",
-      "3OT2OD030162-01S1",
       "3OT2OD030162-01S3",
+      "3OT2OD030162-01S1",
       "3OT2OD030162-01S5",
       "3OT2OD030162-01S2",
       "1OT2OD030162-01",
@@ -729,7 +729,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD038387-01"],
     "awardAmount": 345800,
-    "publications": 0,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -778,14 +778,24 @@
     "name": "Biomedical Data Commons Workbench (BDCW)",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030544-01S2",
       "3OT2OD030544-01S4",
+      "3OT2OD030544-01S2",
       "1OT2OD030544-01",
       "3OT2OD030544-01S3",
       "3OT2OD030544-01S1"
     ],
     "awardAmount": 3229346,
-    "publications": 75,
+    "publications": 80,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "U24OD038422",
+    "name": "U24-Uncovering the Shared Genetic Origins of Childhood Cancer and Structural Birth Defects Through Enhanced Data Integration and Analysis with the CFDE Data Distillery Knowledge Graph.",
+    "activityCode": "U24",
+    "projects": ["4U24OD038422-02", "1U24OD038422-01"],
+    "awardAmount": 4408884,
+    "publications": 5,
     "repos": 0,
     "analytics": 0
   },
@@ -800,22 +810,12 @@
     "analytics": 0
   },
   {
-    "id": "U24OD038422",
-    "name": "U24-Uncovering the Shared Genetic Origins of Childhood Cancer and Structural Birth Defects Through Enhanced Data Integration and Analysis with the CFDE Data Distillery Knowledge Graph.",
-    "activityCode": "U24",
-    "projects": ["4U24OD038422-02", "1U24OD038422-01"],
-    "awardAmount": 4408884,
-    "publications": 4,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
     "id": "R03OD038391",
     "name": "Leveraging Heterogenous Common Fund Data Sets and Beyond for Identifying Lung Cancer Subtypes",
     "activityCode": "R03",
     "projects": ["1R03OD038391-01"],
     "awardAmount": 307000,
-    "publications": 9,
+    "publications": 11,
     "repos": 0,
     "analytics": 0
   },
@@ -875,7 +875,7 @@
     "activityCode": "U24",
     "projects": ["4U24OD038424-02", "1U24OD038424-01"],
     "awardAmount": 1991822,
-    "publications": 2,
+    "publications": 5,
     "repos": 0,
     "analytics": 0
   },
@@ -905,7 +905,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD039979-01"],
     "awardAmount": 294432,
-    "publications": 3,
+    "publications": 4,
     "repos": 0,
     "analytics": 0
   },
@@ -972,7 +972,7 @@
       "1U54DA049110-01"
     ],
     "awardAmount": 12197452,
-    "publications": 16,
+    "publications": 17,
     "repos": 0,
     "analytics": 0
   },
