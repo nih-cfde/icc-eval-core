@@ -73,7 +73,7 @@ export const match = (a: string, b: string) =>
 /** format bytes */
 export const bytes = (bytes: number) => {
   const units = ["byte", "kilobyte", "megabyte", "gigabyte"];
-  while (bytes >= 100 && units.length) {
+  while (bytes >= 100 && units.length > 1) {
     bytes /= 1024;
     units.shift();
   }
