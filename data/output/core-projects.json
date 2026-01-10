@@ -408,8 +408,8 @@
     "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030546-01S4",
       "3OT2OD030546-01S2",
+      "3OT2OD030546-01S4",
       "4OT2OD030546-02",
       "3OT2OD030546-01S3",
       "1OT2OD030546-01",
@@ -711,8 +711,8 @@
     "activityCode": "OT2",
     "projects": [
       "4OT2OD030162-02",
-      "3OT2OD030162-01S1",
       "3OT2OD030162-01S3",
+      "3OT2OD030162-01S1",
       "3OT2OD030162-01S5",
       "3OT2OD030162-01S2",
       "1OT2OD030162-01",
@@ -764,22 +764,6 @@
     "analytics": 0
   },
   {
-    "id": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "activityCode": "OT2",
-    "projects": [
-      "3OT2OD030544-01S2",
-      "3OT2OD030544-01S4",
-      "1OT2OD030544-01",
-      "3OT2OD030544-01S3",
-      "3OT2OD030544-01S1"
-    ],
-    "awardAmount": 3229346,
-    "publications": 80,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
     "id": "U24OD038425",
     "name": "\"Defining the Human Metabotype\" [Human metabolic status defined through genetic, diet,environmental exposure and exercise perturbations]",
     "activityCode": "U24",
@@ -790,12 +774,18 @@
     "analytics": 0
   },
   {
-    "id": "R03OD030600",
-    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
-    "activityCode": "R03",
-    "projects": ["1R03OD030600-01"],
-    "awardAmount": 363306,
-    "publications": 1,
+    "id": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "activityCode": "OT2",
+    "projects": [
+      "3OT2OD030544-01S4",
+      "3OT2OD030544-01S2",
+      "1OT2OD030544-01",
+      "3OT2OD030544-01S3",
+      "3OT2OD030544-01S1"
+    ],
+    "awardAmount": 3229346,
+    "publications": 80,
     "repos": 0,
     "analytics": 0
   },
@@ -806,6 +796,16 @@
     "projects": ["4U24OD038422-02", "1U24OD038422-01"],
     "awardAmount": 4408884,
     "publications": 5,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD030600",
+    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
+    "activityCode": "R03",
+    "projects": ["1R03OD030600-01"],
+    "awardAmount": 363306,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
