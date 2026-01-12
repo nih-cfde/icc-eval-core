@@ -33307,7 +33307,7 @@
         36693887, 32232057, 40417545, 36973309, 36318249, 36280720
       ],
       "provisional": false,
-      "last_modified": "2025-12-28T03:55:09.627Z"
+      "last_modified": "2026-01-12T05:43:00.693Z"
     },
     {
       "_id": "39764061",
@@ -43508,6 +43508,97 @@
       "last_modified": "2025-12-28T05:14:59.620Z"
     },
     {
+      "_id": "41188034",
+      "animal": 0.3333333333333333,
+      "authors": [
+        {
+          "lastName": "Thomas",
+          "fullName": "Thomas, William R",
+          "firstName": "William R"
+        },
+        {
+          "lastName": "Baldoni",
+          "fullName": "Baldoni, Cecilia",
+          "firstName": "Cecilia"
+        },
+        {
+          "lastName": "Zeng",
+          "fullName": "Zeng, Yuanyuan",
+          "firstName": "Yuanyuan"
+        },
+        {
+          "lastName": "Carlson",
+          "fullName": "Carlson, David",
+          "firstName": "David"
+        },
+        {
+          "lastName": "Holm-Jacobsen",
+          "fullName": "Holm-Jacobsen, Julie",
+          "firstName": "Julie"
+        },
+        {
+          "lastName": "Muturi",
+          "fullName": "Muturi, Marion",
+          "firstName": "Marion"
+        },
+        {
+          "lastName": "von Elverfeldt",
+          "fullName": "von Elverfeldt, Dominik",
+          "firstName": "Dominik"
+        },
+        {
+          "lastName": "Bennike",
+          "fullName": "Bennike, Tue B",
+          "firstName": "Tue B"
+        },
+        {
+          "lastName": "Dechmann",
+          "fullName": "Dechmann, Dina K N",
+          "firstName": "Dina K N"
+        },
+        {
+          "lastName": "Nieland",
+          "fullName": "Nieland, John",
+          "firstName": "John"
+        },
+        {
+          "lastName": "Corthals",
+          "fullName": "Corthals, Angelique P",
+          "firstName": "Angelique P"
+        },
+        {
+          "lastName": "Dávalos",
+          "fullName": "Dávalos, Liliana M",
+          "firstName": "Liliana M"
+        }
+      ],
+      "doi": "10.1101/gr.280639.125",
+      "human": 0,
+      "pmid": 41188034,
+      "title": "Dynamic metabolic and molecular changes during seasonal shrinking in <i>Sorex araneus</i>.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2026,
+      "journal": "Genome Res",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.6666666666666666,
+      "x_coord": -0.28867513459481287,
+      "y_coord": -0.5,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
+      "provisional": false,
+      "last_modified": "2026-01-07T05:38:11.211Z"
+    },
+    {
       "_id": "41191057",
       "animal": 0.16666666666666666,
       "authors": [
@@ -45934,6 +46025,104 @@
       ],
       "provisional": false,
       "last_modified": "2025-12-28T05:34:52.648Z"
+    },
+    {
+      "_id": "41446223",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Li", "fullName": "Li, Lusheng", "firstName": "Lusheng" },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Jieqiong",
+          "firstName": "Jieqiong"
+        },
+        {
+          "lastName": "Wan",
+          "fullName": "Wan, Shibiao",
+          "firstName": "Shibiao"
+        }
+      ],
+      "doi": "10.64898/2025.12.15.694538",
+      "human": 0.8571428571428571,
+      "pmid": 41446223,
+      "title": "A Multi-Modal Transfer Learning Framework to Reduce Health Disparities in Prostate Adenocarcinoma.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.14285714285714285,
+      "x_coord": -0.12371791482634836,
+      "y_coord": 0.7857142857142857,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [],
+      "provisional": false,
+      "last_modified": "2026-01-06T05:47:04.569Z"
+    },
+    {
+      "_id": "41488780",
+      "animal": 0.125,
+      "authors": [
+        {
+          "lastName": "Ishino",
+          "fullName": "Ishino, Yuki",
+          "firstName": "Yuki"
+        },
+        {
+          "lastName": "Kishi",
+          "fullName": "Kishi, Yusuke",
+          "firstName": "Yusuke"
+        },
+        {
+          "lastName": "Iwama",
+          "fullName": "Iwama, Taiga",
+          "firstName": "Taiga"
+        },
+        {
+          "lastName": "Kuwayama",
+          "fullName": "Kuwayama, Naohiro",
+          "firstName": "Naohiro"
+        },
+        {
+          "lastName": "Arai",
+          "fullName": "Arai, Hiroyuki",
+          "firstName": "Hiroyuki"
+        },
+        {
+          "lastName": "Gotoh",
+          "fullName": "Gotoh, Yukiko",
+          "firstName": "Yukiko"
+        },
+        {
+          "lastName": "Aoki",
+          "fullName": "Aoki, Junken",
+          "firstName": "Junken"
+        },
+        {
+          "lastName": "Kono",
+          "fullName": "Kono, Nozomu",
+          "firstName": "Nozomu"
+        }
+      ],
+      "doi": "10.1016/j.isci.2025.114248",
+      "human": 0.125,
+      "pmid": 41488780,
+      "title": "LPLAT11/MBOAT7-driven phosphatidylinositol remodeling ensures radial glial cell integrity in developing neocortex.",
+      "year": 2025,
+      "journal": "iScience",
+      "is_research_article": true,
+      "molecular_cellular": 0.75,
+      "is_clinical": false,
+      "last_modified": "2026-01-09T05:56:45.460Z"
     }
   ]
 }

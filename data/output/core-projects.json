@@ -17,9 +17,9 @@
       "3OT2OD030161-01S2",
       "3OT2OD030161-01S5",
       "3OT2OD030161-01S1",
-      "1OT2OD030161-01",
       "3OT2OD030161-01S3",
-      "3OT2OD030161-01S4"
+      "3OT2OD030161-01S4",
+      "1OT2OD030161-01"
     ],
     "awardAmount": 3153200,
     "publications": 1,
@@ -412,8 +412,8 @@
       "3OT2OD030546-01S4",
       "4OT2OD030546-02",
       "3OT2OD030546-01S3",
-      "1OT2OD030546-01",
-      "3OT2OD030546-01S1"
+      "3OT2OD030546-01S1",
+      "1OT2OD030546-01"
     ],
     "awardAmount": 2810622,
     "publications": 4,
@@ -599,9 +599,9 @@
     "activityCode": "OT2",
     "projects": [
       "3OT2OD032092-01S4",
-      "3OT2OD032092-01S3",
       "1OT2OD032092-01",
       "3OT2OD032092-01S2",
+      "3OT2OD032092-01S3",
       "3OT2OD032092-01S1"
     ],
     "awardAmount": 3051311,
@@ -711,8 +711,8 @@
     "activityCode": "OT2",
     "projects": [
       "4OT2OD030162-02",
-      "3OT2OD030162-01S3",
       "3OT2OD030162-01S1",
+      "3OT2OD030162-01S3",
       "3OT2OD030162-01S5",
       "3OT2OD030162-01S2",
       "1OT2OD030162-01",
@@ -778,14 +778,14 @@
     "name": "Biomedical Data Commons Workbench (BDCW)",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030544-01S4",
       "3OT2OD030544-01S2",
+      "3OT2OD030544-01S4",
       "1OT2OD030544-01",
       "3OT2OD030544-01S3",
       "3OT2OD030544-01S1"
     ],
     "awardAmount": 3229346,
-    "publications": 80,
+    "publications": 82,
     "repos": 0,
     "analytics": 0
   },
@@ -815,7 +815,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD038391-01"],
     "awardAmount": 307000,
-    "publications": 11,
+    "publications": 12,
     "repos": 0,
     "analytics": 0
   },
