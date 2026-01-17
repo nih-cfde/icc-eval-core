@@ -59205,6 +59205,362 @@
   ],
   [
     {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "C2M2_datapackage.json",
+      "size": 152180,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "file.tsv",
+      "size": 1074,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biosample.tsv",
+      "size": 1029842,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "subject.tsv",
+      "size": 167746,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "dcc.tsv",
+      "size": 637,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "project.tsv",
+      "size": 488,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "project_in_project.tsv",
+      "size": 101,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection.tsv",
+      "size": 100,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_in_collection.tsv",
+      "size": 119,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "file_describes_collection.tsv",
+      "size": 75,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_defined_by_project.tsv",
+      "size": 81,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "file_in_collection.tsv",
+      "size": 75,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biosample_in_collection.tsv",
+      "size": 85,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "subject_in_collection.tsv",
+      "size": 81,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "file_describes_biosample.tsv",
+      "size": 1043472,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "file_describes_subject.tsv",
+      "size": 927188,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biosample_from_subject.tsv",
+      "size": 1081411,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biosample_disease.tsv",
+      "size": 66,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "subject_disease.tsv",
+      "size": 97156,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_disease.tsv",
+      "size": 51,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_phenotype.tsv",
+      "size": 53,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_gene.tsv",
+      "size": 48,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_compound.tsv",
+      "size": 52,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_substance.tsv",
+      "size": 53,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_taxonomy.tsv",
+      "size": 49,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_anatomy.tsv",
+      "size": 51,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_biofluid.tsv",
+      "size": 52,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_protein.tsv",
+      "size": 51,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "subject_phenotype.tsv",
+      "size": 64,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biosample_substance.tsv",
+      "size": 51,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "subject_substance.tsv",
+      "size": 47,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biosample_gene.tsv",
+      "size": 46,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biosample_protein.tsv",
+      "size": 49,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "phenotype_gene.tsv",
+      "size": 14,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "phenotype_disease.tsv",
+      "size": 17,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "subject_race.tsv",
+      "size": 42,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "subject_role_taxonomy.tsv",
+      "size": 57,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "assay_type.tsv",
+      "size": 382,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "analysis_type.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "ncbi_taxonomy.tsv",
+      "size": 34,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "anatomy.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biofluid.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "file_format.tsv",
+      "size": 30,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "data_type.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "disease.tsv",
+      "size": 302,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "phenotype.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "compound.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "substance.tsv",
+      "size": 39,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "gene.tsv",
+      "size": 37,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "protein.tsv",
+      "size": 37,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "protein_gene.tsv",
+      "size": 12,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "sample_prep_method.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "id_namespace.tsv",
+      "size": 151,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "collection_ptm.tsv",
+      "size": 47,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "biosample_ptm.tsv",
+      "size": 45,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "ptm.tsv",
+      "size": 111,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "ptm_type.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "ptm_subtype.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    },
+    {
+      "url": "https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip",
+      "path": "domain_location.tsv",
+      "size": 28,
+      "date": "1980-01-01T00:00:00.000Z"
+    }
+  ],
+  [
+    {
       "url": "https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2025-03-06/SenNet_C2M2_Spring_2025.zip",
       "path": "SenNet_C2M2_Spring_2025/",
       "size": 0,
