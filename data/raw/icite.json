@@ -29613,7 +29613,7 @@
         23041285, 9192866, 31127120, 28520978, 32213323
       ],
       "provisional": true,
-      "last_modified": "2026-01-18T05:47:49.342Z"
+      "last_modified": "2026-01-19T05:39:51.170Z"
     },
     {
       "_id": "39257804",
@@ -43868,7 +43868,7 @@
         39657122
       ],
       "provisional": false,
-      "last_modified": "2026-01-18T05:50:14.662Z"
+      "last_modified": "2026-01-19T05:42:04.993Z"
     },
     {
       "_id": "41233159",
@@ -44245,7 +44245,7 @@
         16849169, 16191168, 28388407
       ],
       "provisional": false,
-      "last_modified": "2026-01-18T05:50:19.993Z"
+      "last_modified": "2026-01-19T05:42:07.482Z"
     },
     {
       "_id": "41251214",
@@ -44463,7 +44463,7 @@
         36229545, 36318251, 39673707, 36050292, 39961523
       ],
       "provisional": false,
-      "last_modified": "2026-01-18T05:50:27.226Z"
+      "last_modified": "2026-01-19T05:42:11.413Z"
     },
     {
       "_id": "41264887",
@@ -45699,6 +45699,147 @@
       "last_modified": "2025-12-28T05:25:55.983Z"
     },
     {
+      "_id": "41345108",
+      "animal": 0.8,
+      "authors": [
+        {
+          "lastName": "Kaluski-Kopatch",
+          "fullName": "Kaluski-Kopatch, Shai",
+          "firstName": "Shai"
+        },
+        {
+          "lastName": "Stein",
+          "fullName": "Stein, Daniel",
+          "firstName": "Daniel"
+        },
+        {
+          "lastName": "Venzor",
+          "fullName": "Venzor, Alfredo Garcia",
+          "firstName": "Alfredo Garcia"
+        },
+        {
+          "lastName": "Ferreira Campos",
+          "fullName": "Ferreira Campos, Ana Margarida",
+          "firstName": "Ana Margarida"
+        },
+        {
+          "lastName": "Planque",
+          "fullName": "Planque, Melanie",
+          "firstName": "Melanie"
+        },
+        {
+          "lastName": "Goldstein",
+          "fullName": "Goldstein, Bareket",
+          "firstName": "Bareket"
+        },
+        {
+          "lastName": "De Allende-Becerra",
+          "fullName": "De Allende-Becerra, Estefanía",
+          "firstName": "Estefanía"
+        },
+        {
+          "lastName": "Smirnov",
+          "fullName": "Smirnov, Dmitrii",
+          "firstName": "Dmitrii"
+        },
+        {
+          "lastName": "Zaretsky",
+          "fullName": "Zaretsky, Adam",
+          "firstName": "Adam"
+        },
+        {
+          "lastName": "Eremenko",
+          "fullName": "Eremenko, Ekaterina",
+          "firstName": "Ekaterina"
+        },
+        {
+          "lastName": "Portillo",
+          "fullName": "Portillo, Miguel",
+          "firstName": "Miguel"
+        },
+        {
+          "lastName": "Einav",
+          "fullName": "Einav, Monica",
+          "firstName": "Monica"
+        },
+        {
+          "lastName": "Krejci",
+          "fullName": "Krejci, Alena Bruce",
+          "firstName": "Alena Bruce"
+        },
+        { "lastName": "Abdu", "fullName": "Abdu, Uri", "firstName": "Uri" },
+        {
+          "lastName": "Khrameeva",
+          "fullName": "Khrameeva, Ekaterina",
+          "firstName": "Ekaterina"
+        },
+        {
+          "lastName": "Gitler",
+          "fullName": "Gitler, Daniel",
+          "firstName": "Daniel"
+        },
+        {
+          "lastName": "Fendt",
+          "fullName": "Fendt, Sarah-Maria",
+          "firstName": "Sarah-Maria"
+        },
+        {
+          "lastName": "Toiber",
+          "fullName": "Toiber, Debra",
+          "firstName": "Debra"
+        }
+      ],
+      "doi": "10.1038/s41467-025-67021-y",
+      "human": 0.2,
+      "pmid": 41345108,
+      "title": "Histone deacetylase SIRT6 regulates tryptophan catabolism and prevents metabolite imbalance associated with neurodegeneration.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Nat Commun",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "x_coord": 0.5773502691896257,
+      "y_coord": 0,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        31616242, 9838107, 35091469, 36768703, 16887831, 29294246, 27114543,
+        28899755, 31055163, 33642374, 25773161, 23904410, 25733915, 34339012,
+        17681036, 33957167, 29126954, 30613102, 19896342, 23911928, 30943316,
+        25611296, 21451205, 19457126, 20729465, 26005404, 33143333, 35883554,
+        9680295, 23636512, 19135889, 28380384, 18073775, 37274187, 35233942,
+        34735466, 9422375, 8316831, 872047, 33414510, 35413276, 22678511,
+        35837046, 23438471, 31718830, 28602601, 28806103, 22927396, 27882448,
+        20141841, 28117398, 36640301, 16510875, 32183254, 19428689, 31967391,
+        35096208, 22724080, 23030601, 35914650, 8901620, 34382016, 34685709,
+        36872990, 11072753, 31995034, 14657369, 21145355, 21847107, 33381558,
+        39172838, 39408347, 8575336, 32998479, 21752996, 26597721, 27245499,
+        38436218, 385809, 34720996, 23217706, 28878259, 37264981, 24438746,
+        26568120, 28145903, 24657204, 33016468, 21362626, 37031728, 24726643,
+        19409957, 28355558, 21075023, 20630948, 34145969, 22498707, 9571651,
+        19182545, 26621827, 16956419, 27221635, 12736634, 31325578, 23630570,
+        36090249, 16644097, 27836583, 15228598, 17413001, 19075009, 32784556,
+        15586779, 28093830, 22248144, 33442387, 28721271, 12589574, 33910019,
+        22241550, 20638447, 38652967, 26970623, 26349946, 33690173, 16439206,
+        34923482, 18624755, 34183440, 30225360, 16179266, 20106948, 30304824,
+        31822559, 15582288, 30782483, 21358972, 31715192, 19233335, 23447663,
+        31726088, 31704347, 20420770, 31825083, 27042691, 36653345, 9230308,
+        9184225, 28644902, 35286967, 34203531, 32009975, 11281814, 25083875,
+        17594069, 30760888
+      ],
+      "provisional": false,
+      "last_modified": "2026-01-14T05:45:01.925Z"
+    },
+    {
       "_id": "41347120",
       "animal": 0,
       "authors": [
@@ -46123,6 +46264,37 @@
       "molecular_cellular": 0.75,
       "is_clinical": false,
       "last_modified": "2026-01-09T05:56:45.460Z"
+    },
+    {
+      "_id": "41503456",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Wu",
+          "fullName": "Wu, Zongqian",
+          "firstName": "Zongqian"
+        },
+        {
+          "lastName": "Chen",
+          "fullName": "Chen, Huiping",
+          "firstName": "Huiping"
+        },
+        {
+          "lastName": "Chen",
+          "fullName": "Chen, Jake Y",
+          "firstName": "Jake Y"
+        }
+      ],
+      "doi": "10.64898/2025.12.28.25342851",
+      "human": 0.5,
+      "pmid": 41503456,
+      "title": "TabGraphSyn: Graph-Guided Latent Diffusion for High-Fidelity and Privacy-Conscious Clinical Data Generation.",
+      "year": 2025,
+      "journal": "medRxiv",
+      "is_research_article": true,
+      "molecular_cellular": 0.5,
+      "is_clinical": false,
+      "last_modified": "2026-01-14T05:47:58.094Z"
     }
   ]
 }
