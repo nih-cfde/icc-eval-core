@@ -23635,7 +23635,7 @@
         6695127, 28367255, 23363434, 30276685, 18784550, 30981117
       ],
       "provisional": true,
-      "last_modified": "2026-01-25T05:45:36.817Z"
+      "last_modified": "2026-01-26T05:41:32.825Z"
     },
     {
       "_id": "38605048",
@@ -33992,6 +33992,69 @@
       "last_modified": "2025-12-28T04:01:53.512Z"
     },
     {
+      "_id": "39836750",
+      "animal": 0.2857142857142857,
+      "authors": [
+        { "lastName": "Lai", "fullName": "Lai, Yunjia", "firstName": "Yunjia" },
+        {
+          "lastName": "Reina-Gonzalez",
+          "fullName": "Reina-Gonzalez, Pablo",
+          "firstName": "Pablo"
+        },
+        { "lastName": "Maor", "fullName": "Maor, Gali", "firstName": "Gali" },
+        {
+          "lastName": "Miller",
+          "fullName": "Miller, Gary W",
+          "firstName": "Gary W"
+        },
+        {
+          "lastName": "Sarkar",
+          "fullName": "Sarkar, Souvarish",
+          "firstName": "Souvarish"
+        }
+      ],
+      "doi": "10.1126/scisignal.adn9868",
+      "human": 0.14285714285714285,
+      "pmid": 39836750,
+      "title": "Biotin mitigates the development of manganese-induced, Parkinson's disease-related neurotoxicity in Drosophila and human neurons.",
+      "apt": 0.25,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [
+        { "41213367": 2026 },
+        { "40320765": 2025 },
+        { "40451947": 2025 },
+        { "40233648": 2025 },
+        { "40854404": 2025 }
+      ],
+      "year": 2025,
+      "journal": "Sci Signal",
+      "is_research_article": true,
+      "citation_count": 5,
+      "field_citation_rate": 4.6240018960991645,
+      "expected_citations_per_year": 1.9996711458840728,
+      "citations_per_year": 5,
+      "relative_citation_ratio": 2.5004111352466682,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5714285714285714,
+      "x_coord": -0.24743582965269673,
+      "y_coord": -0.2857142857142857,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [41213367, 40320765, 40451947, 40233648, 40854404],
+      "references": [
+        31293375, 24476540, 29249285, 31282427, 32665974, 35527571, 27570189,
+        29330419, 32597830, 25938372, 32082315, 26154659, 32044947, 36376318,
+        32830221, 25416158, 28539244, 22965675, 35715522, 35688132, 33311497,
+        28375739, 30645642, 30862700, 27419259, 34030727, 27280685, 23032990,
+        26828517, 38773112, 29057315, 26317866, 33318181, 31255487, 30622196,
+        27751556, 30653258, 28466394, 35901964, 12721813, 33556113, 30277602,
+        30234124, 34410835, 36732606, 26417337, 34654818, 33136137, 34667167,
+        37269951, 35017197
+      ],
+      "provisional": true,
+      "last_modified": "2026-01-26T05:44:21.970Z"
+    },
+    {
       "_id": "39868324",
       "animal": 0,
       "authors": [
@@ -40285,6 +40348,65 @@
       "last_modified": "2025-12-28T04:46:51.245Z"
     },
     {
+      "_id": "40700427",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Rostami",
+          "fullName": "Rostami, Zahra",
+          "firstName": "Zahra"
+        },
+        {
+          "lastName": "Mukund",
+          "fullName": "Mukund, Kavitha",
+          "firstName": "Kavitha"
+        },
+        {
+          "lastName": "Masnadi-Shirazi",
+          "fullName": "Masnadi-Shirazi, Maryam",
+          "firstName": "Maryam"
+        },
+        {
+          "lastName": "Subramaniam",
+          "fullName": "Subramaniam, Shankar",
+          "firstName": "Shankar"
+        }
+      ],
+      "doi": "10.1371/journal.pone.0327773",
+      "human": 0.5,
+      "pmid": 40700427,
+      "title": "An autoencoder learning method for predicting breast cancer subtypes.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "PLoS One",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.5,
+      "x_coord": -0.4330127018922193,
+      "y_coord": 0.25,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        35260632, 28405507, 31027259, 36829667, 25405524, 31405383, 37216350,
+        34557778, 30476243, 36426578, 19223769, 26704973, 27173435, 18779814,
+        24987519, 36376977, 34455388, 27775688, 26018563, 31931856, 29793947,
+        33237278, 30069007, 11752295, 38218745, 31681307, 31286861, 30842344,
+        16873662, 36612044, 22363791, 38813284, 36768147, 31737202, 35681643,
+        30787315, 30576740, 24662818, 32913985, 24769368, 34779410, 25722745,
+        28611083, 34502091, 32952934, 32759821, 34208071
+      ],
+      "provisional": false,
+      "last_modified": "2026-01-20T05:41:28.008Z"
+    },
+    {
       "_id": "40718094",
       "animal": 0,
       "authors": [
@@ -40354,6 +40476,72 @@
       ],
       "provisional": false,
       "last_modified": "2025-12-28T04:49:13.021Z"
+    },
+    {
+      "_id": "40726995",
+      "animal": 0,
+      "authors": [
+        { "lastName": "Ma", "fullName": "Ma, Rongyue", "firstName": "Rongyue" },
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Huangruici",
+          "firstName": "Huangruici"
+        },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Weijie",
+          "firstName": "Weijie"
+        },
+        {
+          "lastName": "Yu",
+          "fullName": "Yu, Changping",
+          "firstName": "Changping"
+        },
+        {
+          "lastName": "Xiong",
+          "fullName": "Xiong, Guohang",
+          "firstName": "Guohang"
+        },
+        { "lastName": "Li", "fullName": "Li, Qing", "firstName": "Qing" },
+        { "lastName": "Wang", "fullName": "Wang, Yan", "firstName": "Yan" },
+        { "lastName": "Zhou", "fullName": "Zhou, Li", "firstName": "Li" },
+        { "lastName": "Zhang", "fullName": "Zhang, Yu", "firstName": "Yu" },
+        { "lastName": "Li", "fullName": "Li, Min", "firstName": "Min" },
+        { "lastName": "Guo", "fullName": "Guo, Min", "firstName": "Min" }
+      ],
+      "doi": "10.3389/fmolb.2025.1567064",
+      "human": 0,
+      "pmid": 40726995,
+      "title": "Untargeted plasma metabolite detection in sudden sensorineural hearing loss: identifying key metabolic signatures.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "Front Mol Biosci",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 1,
+      "x_coord": -0.8660254037844386,
+      "y_coord": -0.5,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        28537102, 35323657, 24371466, 19027117, 36148011, 27496857, 37367878,
+        18401280, 31889854, 37512997, 16277757, 30036036, 31443449, 12792313,
+        31683919, 19374152, 17678738, 21698697, 31176868, 26695792, 32142679,
+        39170783, 27817938, 29766830, 20422698, 32329201, 20362815, 11867954,
+        18594118, 12717742, 37947440, 16525573, 27540379, 9498549, 7879616,
+        19477487, 26467476, 34275074, 24089628, 37299516, 30134790, 29043479,
+        33342002, 33196836, 37894867, 29871827
+      ],
+      "provisional": false,
+      "last_modified": "2026-01-20T05:41:31.461Z"
     },
     {
       "_id": "40735431",
@@ -42560,6 +42748,151 @@
       ],
       "provisional": false,
       "last_modified": "2025-12-28T05:05:26.140Z"
+    },
+    {
+      "_id": "41014560",
+      "animal": 0.75,
+      "authors": [
+        {
+          "lastName": "González-Pérez",
+          "fullName": "González-Pérez, Maria",
+          "firstName": "Maria"
+        },
+        {
+          "lastName": "Baranda",
+          "fullName": "Baranda, Jana",
+          "firstName": "Jana"
+        },
+        {
+          "lastName": "Pérez-Rodríguez",
+          "fullName": "Pérez-Rodríguez, Leticia",
+          "firstName": "Leticia"
+        },
+        {
+          "lastName": "Conde",
+          "fullName": "Conde, Patricia",
+          "firstName": "Patricia"
+        },
+        {
+          "lastName": "Calle-Fabregat",
+          "fullName": "Calle-Fabregat, Carlos de la",
+          "firstName": "Carlos de la"
+        },
+        {
+          "lastName": "Berges-Buxeda",
+          "fullName": "Berges-Buxeda, Marcos J",
+          "firstName": "Marcos J"
+        },
+        {
+          "lastName": "Dimitrov",
+          "fullName": "Dimitrov, Alexander",
+          "firstName": "Alexander"
+        },
+        {
+          "lastName": "Arranz",
+          "fullName": "Arranz, Javier",
+          "firstName": "Javier"
+        },
+        {
+          "lastName": "Rius-Rocabert",
+          "fullName": "Rius-Rocabert, Sergio",
+          "firstName": "Sergio"
+        },
+        {
+          "lastName": "Zotta",
+          "fullName": "Zotta, Alessia",
+          "firstName": "Alessia"
+        },
+        { "lastName": "Dopazo", "fullName": "Dopazo, Ana", "firstName": "Ana" },
+        {
+          "lastName": "Poddar",
+          "fullName": "Poddar, Nikita",
+          "firstName": "Nikita"
+        },
+        { "lastName": "Wang", "fullName": "Wang, Xuedi", "firstName": "Xuedi" },
+        {
+          "lastName": "Nistal-Villán",
+          "fullName": "Nistal-Villán, Estanislao",
+          "firstName": "Estanislao"
+        },
+        {
+          "lastName": "Duivenvoorden",
+          "fullName": "Duivenvoorden, Raphaël",
+          "firstName": "Raphaël"
+        },
+        {
+          "lastName": "Madsen",
+          "fullName": "Madsen, Joren C",
+          "firstName": "Joren C"
+        },
+        {
+          "lastName": "Williams",
+          "fullName": "Williams, David L",
+          "firstName": "David L"
+        },
+        { "lastName": "Hasson", "fullName": "Hasson, Dan", "firstName": "Dan" },
+        {
+          "lastName": "Lozano-Ojalvo",
+          "fullName": "Lozano-Ojalvo, Daniel",
+          "firstName": "Daniel"
+        },
+        {
+          "lastName": "Ginhoux",
+          "fullName": "Ginhoux, Florent",
+          "firstName": "Florent"
+        },
+        {
+          "lastName": "O'Neill",
+          "fullName": "O'Neill, Luke A J",
+          "firstName": "Luke A J"
+        },
+        {
+          "lastName": "Ochando",
+          "fullName": "Ochando, Jordi",
+          "firstName": "Jordi"
+        }
+      ],
+      "doi": "10.1016/j.celrep.2025.116202",
+      "human": 0,
+      "pmid": 41014560,
+      "title": "In vitro protocol demonstrating five functional steps of trained immunity in mice: Implications on biomarker discovery and translational research.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "41432375": 2025 }],
+      "year": 2025,
+      "journal": "Cell Rep",
+      "is_research_article": true,
+      "citation_count": 1,
+      "field_citation_rate": 10.971989446299194,
+      "expected_citations_per_year": null,
+      "citations_per_year": 1,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.25,
+      "x_coord": 0.43301270189221935,
+      "y_coord": -0.5,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [41432375],
+      "references": [
+        37597510, 3943907, 38603633, 33458708, 36465717, 32587356, 26045163,
+        32201093, 24456627, 36358284, 12588892, 23700560, 27686054, 30590049,
+        30967658, 29328910, 31573680, 10950787, 38382468, 38551324, 15183091,
+        38198850, 24704164, 34695164, 34927092, 24799436, 29253495, 23104886,
+        14749357, 33125893, 30555483, 33853969, 1547488, 16750861, 1518819,
+        15667565, 25258083, 29328912, 38361630, 33293712, 33718890, 26231116,
+        15894279, 37330914, 28228641, 17159984, 27866838, 24172224, 39515317,
+        38036767, 12719478, 26352275, 38670064, 27733422, 37164984, 5639157,
+        39060761, 31827093, 35751589, 22901542, 27863248, 23858030, 28161189,
+        18820689, 10638709, 20307542, 10899169, 33220235, 16423268, 34255973,
+        22988082, 34107270, 35982796, 29461976, 30433869, 31853991, 33957478,
+        20303872, 22388286, 28483987, 36253509, 18798982, 36769276, 2853217,
+        28263959, 32433977, 25562692, 23863158, 26467476, 31851532, 25516281,
+        38225437, 21952803, 2510940, 28043821, 24192057, 32037011, 12826024,
+        34740960, 1755958, 26360589, 25863033, 36282571
+      ],
+      "provisional": false,
+      "last_modified": "2026-01-19T05:41:43.869Z"
     },
     {
       "_id": "41015030",
@@ -46165,7 +46498,7 @@
         32102747
       ],
       "provisional": false,
-      "last_modified": "2026-01-25T05:50:02.756Z"
+      "last_modified": "2026-01-26T05:47:50.681Z"
     },
     {
       "_id": "41446223",
@@ -46295,6 +46628,107 @@
       "molecular_cellular": 0.5,
       "is_clinical": false,
       "last_modified": "2026-01-14T05:47:58.094Z"
+    },
+    {
+      "_id": "41509387",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Baek",
+          "fullName": "Baek, Min-Jeong",
+          "firstName": "Min-Jeong"
+        },
+        { "lastName": "Li", "fullName": "Li, Lusheng", "firstName": "Lusheng" },
+        { "lastName": "Band", "fullName": "Band, Vimla", "firstName": "Vimla" },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Jieqiong",
+          "firstName": "Jieqiong"
+        },
+        {
+          "lastName": "Wan",
+          "fullName": "Wan, Shibiao",
+          "firstName": "Shibiao"
+        }
+      ],
+      "doi": "10.64898/2025.12.22.696111",
+      "human": 0.8333333333333334,
+      "pmid": 41509387,
+      "title": "MOTLAB: A Weighted Multi-Omics Transfer Learning Approach to Mitigate Breast Cancer Racial Disparities.",
+      "year": 2025,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "molecular_cellular": 0.16666666666666666,
+      "is_clinical": false,
+      "last_modified": "2026-01-23T05:52:58.634Z"
+    },
+    {
+      "_id": "41509399",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Peterson",
+          "fullName": "Peterson, Nicholas B",
+          "firstName": "Nicholas B"
+        },
+        {
+          "lastName": "Sun",
+          "fullName": "Sun, Mengtao",
+          "firstName": "Mengtao"
+        },
+        { "lastName": "Wu", "fullName": "Wu, Xinchao", "firstName": "Xinchao" },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Jieqiong",
+          "firstName": "Jieqiong"
+        },
+        {
+          "lastName": "Wan",
+          "fullName": "Wan, Shibiao",
+          "firstName": "Shibiao"
+        }
+      ],
+      "doi": "10.64898/2025.12.29.696875",
+      "human": 0.5,
+      "pmid": 41509399,
+      "title": "MetaPaCS: A Novel Meta-Learning Framework for Pancreatic Cancer Subtype Identification.",
+      "year": 2026,
+      "journal": "bioRxiv",
+      "is_research_article": true,
+      "molecular_cellular": 0.5,
+      "is_clinical": false,
+      "last_modified": "2026-01-22T05:53:12.509Z"
+    },
+    {
+      "_id": "41571436",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Sun",
+          "fullName": "Sun, Mengtao",
+          "firstName": "Mengtao"
+        },
+        {
+          "lastName": "Wang",
+          "fullName": "Wang, Jieqiong",
+          "firstName": "Jieqiong"
+        },
+        {
+          "lastName": "Wan",
+          "fullName": "Wan, Shibiao",
+          "firstName": "Shibiao"
+        }
+      ],
+      "doi": "10.1002/1878-0261.70211",
+      "human": 0,
+      "pmid": 41571436,
+      "title": "RaMBat: Accurate identification of medulloblastoma subtypes from diverse data sources with severe batch effects.",
+      "year": 2026,
+      "journal": "Mol Oncol",
+      "is_research_article": true,
+      "molecular_cellular": 0,
+      "is_clinical": false,
+      "last_modified": "2026-01-24T05:51:00.686Z"
     }
   ]
 }
