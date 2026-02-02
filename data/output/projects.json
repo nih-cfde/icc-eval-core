@@ -143,12 +143,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030545-01S4",
+    "id": "3OT2OD030545-01S3",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10707603,
-    "awardAmount": 700000,
+    "application": 10683509,
+    "awardAmount": 554624,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -156,12 +156,12 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030545-01S3",
+    "id": "3OT2OD030545-01S4",
     "coreProject": "OT2OD030545",
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "opportunity": "OTA-20-005",
-    "application": 10683509,
-    "awardAmount": 554624,
+    "application": 10707603,
+    "awardAmount": 700000,
     "activityCode": "OT2",
     "agencyCode": "NIH",
     "dateStart": "2020-09-25T00:00:00",
@@ -1482,19 +1482,6 @@
     "isActive": 0
   },
   {
-    "id": "1OT2OD030162-01",
-    "coreProject": "OT2OD030162",
-    "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
-    "opportunity": "OTA-20-005",
-    "application": 10128800,
-    "awardAmount": 1999082,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-25T00:00:00",
-    "dateEnd": "2027-03-24T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030162-01S4",
     "coreProject": "OT2OD030162",
     "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
@@ -1506,6 +1493,19 @@
     "dateStart": "2020-09-25T00:00:00",
     "dateEnd": "2024-09-24T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "1OT2OD030162-01",
+    "coreProject": "OT2OD030162",
+    "name": "Kids First Data Resource Center (KFDRC): Harnessing Data-Driven Opportunities in the Present on behalf of the Future of Common Fund Data Ecosystem (CFDE)",
+    "opportunity": "OTA-20-005",
+    "application": 10128800,
+    "awardAmount": 1999082,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-25T00:00:00",
+    "dateEnd": "2027-03-24T00:00:00",
+    "isActive": 1
   },
   {
     "id": "1R03OD038387-01",
@@ -1573,19 +1573,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030544-01S4",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 11090253,
-    "awardAmount": 298514,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2026-09-22T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030544-01S2",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1597,6 +1584,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2023-09-22T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "3OT2OD030544-01S4",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 11090253,
+    "awardAmount": 298514,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2026-09-22T00:00:00",
+    "isActive": 1
   },
   {
     "id": "1U24OD038425-01",

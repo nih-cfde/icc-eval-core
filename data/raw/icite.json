@@ -44620,6 +44620,84 @@
       "last_modified": "2026-02-01T06:09:05.531Z"
     },
     {
+      "_id": "41225001",
+      "animal": 0.25,
+      "authors": [
+        {
+          "lastName": "Zhang",
+          "fullName": "Zhang, Yifan",
+          "firstName": "Yifan"
+        },
+        { "lastName": "Shen", "fullName": "Shen, Xiao", "firstName": "Xiao" },
+        { "lastName": "Shen", "fullName": "Shen, Yuan", "firstName": "Yuan" },
+        { "lastName": "Wang", "fullName": "Wang, Chao", "firstName": "Chao" },
+        {
+          "lastName": "Yu",
+          "fullName": "Yu, Chengping",
+          "firstName": "Chengping"
+        },
+        {
+          "lastName": "Han",
+          "fullName": "Han, Jiangxue",
+          "firstName": "Jiangxue"
+        },
+        { "lastName": "Cao", "fullName": "Cao, Siyi", "firstName": "Siyi" },
+        { "lastName": "Qian", "fullName": "Qian, Lin", "firstName": "Lin" },
+        {
+          "lastName": "Ma",
+          "fullName": "Ma, Miaolian",
+          "firstName": "Miaolian"
+        },
+        {
+          "lastName": "Huang",
+          "fullName": "Huang, Shijing",
+          "firstName": "Shijing"
+        },
+        { "lastName": "Wen", "fullName": "Wen, Wenyu", "firstName": "Wenyu" },
+        { "lastName": "Yin", "fullName": "Yin, Miao", "firstName": "Miao" },
+        {
+          "lastName": "Lei",
+          "fullName": "Lei, Qun-Ying",
+          "firstName": "Qun-Ying"
+        }
+      ],
+      "doi": "10.1038/s41586-025-09745-x",
+      "human": 0.125,
+      "pmid": 41225001,
+      "title": "Cytosolic acetyl-coenzyme A is a signalling metabolite to control mitophagy.",
+      "apt": 0.25,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "41463395": 2025 }, { "41463524": 2025 }],
+      "year": 2026,
+      "journal": "Nature",
+      "is_research_article": true,
+      "citation_count": 2,
+      "field_citation_rate": 9.42139818673632,
+      "expected_citations_per_year": 1.0000000985043829,
+      "citations_per_year": 2,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0.625,
+      "x_coord": -0.32475952641916445,
+      "y_coord": -0.3125,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [41463395, 41463524],
+      "references": [
+        25703630, 29337137, 26040720, 30804553, 34856123, 27934708, 34847359,
+        29374684, 37079666, 30944313, 28723898, 10956018, 19997129, 36216931,
+        37286597, 30710114, 24560926, 32856431, 37821702, 31881139, 34759319,
+        23535601, 22386589, 14699058, 31618756, 30197302, 28851864, 33174596,
+        34758308, 38297121, 38593348, 26449471, 36658431, 32926082, 26549682,
+        30245009, 35752171, 36302887, 30487600, 29462587, 35264789, 27760311,
+        18219313, 34545493, 27769290, 24998913, 25601754, 36256706, 21258367,
+        33623032, 19692591, 24679527, 21205641, 37582956, 28333914, 28520815,
+        35197629, 17406588
+      ],
+      "provisional": false,
+      "last_modified": "2026-02-01T04:30:51.339Z"
+    },
+    {
       "_id": "41231752",
       "animal": 0.75,
       "authors": [
