@@ -45754,6 +45754,94 @@
       "last_modified": "2026-02-01T06:13:56.750Z"
     },
     {
+      "_id": "41276375",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Huth",
+          "fullName": "Huth, Hannah",
+          "firstName": "Hannah"
+        },
+        {
+          "lastName": "Saccenti",
+          "fullName": "Saccenti, Laetitia",
+          "firstName": "Laetitia"
+        },
+        {
+          "lastName": "Anibal",
+          "fullName": "Anibal, James",
+          "firstName": "James"
+        },
+        {
+          "lastName": "Ukeh",
+          "fullName": "Ukeh, Ifechi",
+          "firstName": "Ifechi"
+        },
+        {
+          "lastName": "Kassin",
+          "fullName": "Kassin, Michael",
+          "firstName": "Michael"
+        },
+        {
+          "lastName": "Gichoya",
+          "fullName": "Gichoya, Judy",
+          "firstName": "Judy"
+        },
+        {
+          "lastName": "Varble",
+          "fullName": "Varble, Nicole",
+          "firstName": "Nicole"
+        },
+        { "lastName": "Li", "fullName": "Li, Ming", "firstName": "Ming" },
+        {
+          "lastName": "Karanian",
+          "fullName": "Karanian, John",
+          "firstName": "John"
+        },
+        {
+          "lastName": "Turkbey",
+          "fullName": "Turkbey, Baris",
+          "firstName": "Baris"
+        },
+        {
+          "lastName": "Wood",
+          "fullName": "Wood, Bradford J",
+          "firstName": "Bradford J"
+        }
+      ],
+      "doi": "10.1016/j.jvir.2025.09.017",
+      "human": 1,
+      "pmid": 41276375,
+      "title": "Artificial Intelligence and Intelligent Interventional Radiology: Fusion of Human and Machine.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2025,
+      "journal": "J Vasc Interv Radiol",
+      "is_research_article": false,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "x_coord": 0,
+      "y_coord": 1,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        39210368, 38132649, 38775950, 25980481, 24235279, 40140092, 39086502,
+        38445497, 32953538, 39242496, 38972574, 35847882, 37398894, 39828383,
+        31009725, 35303879, 34338948, 36738261, 38445517, 31781215, 37976870,
+        11190808, 38200244, 31858078, 38275462, 34787482, 36673038, 35153470,
+        38693468, 38482684, 34526699, 37545845, 36651956
+      ],
+      "provisional": false,
+      "last_modified": "2026-02-06T05:43:06.017Z"
+    },
+    {
       "_id": "41277691",
       "animal": 0.5,
       "authors": [
@@ -47474,6 +47562,77 @@
       ],
       "provisional": false,
       "last_modified": "2026-02-01T04:41:22.447Z"
+    },
+    {
+      "_id": "41584517",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Kumar",
+          "fullName": "Kumar, Praveen",
+          "firstName": "Praveen"
+        },
+        {
+          "lastName": "Metzger",
+          "fullName": "Metzger, Vincent T",
+          "firstName": "Vincent T"
+        },
+        {
+          "lastName": "Purushotham",
+          "fullName": "Purushotham, Swastika T",
+          "firstName": "Swastika T"
+        },
+        {
+          "lastName": "Kedia",
+          "fullName": "Kedia, Priyansh",
+          "firstName": "Priyansh"
+        },
+        {
+          "lastName": "Bologa",
+          "fullName": "Bologa, Cristian G",
+          "firstName": "Cristian G"
+        },
+        {
+          "lastName": "Lambert",
+          "fullName": "Lambert, Christophe G",
+          "firstName": "Christophe G"
+        },
+        {
+          "lastName": "Yang",
+          "fullName": "Yang, Jeremy J",
+          "firstName": "Jeremy J"
+        }
+      ],
+      "doi": "10.3389/fbinf.2025.1727953",
+      "human": 0,
+      "pmid": 41584517,
+      "title": "KG2ML: integrating knowledge graphs and positive unlabeled learning for identifying disease-associated genes.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": null,
+      "year": 2026,
+      "journal": "Front Bioinform",
+      "is_research_article": true,
+      "citation_count": 0,
+      "field_citation_rate": null,
+      "expected_citations_per_year": null,
+      "citations_per_year": 0,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "x_coord": 0,
+      "y_coord": -0.75,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": null,
+      "references": [
+        38948230, 21977986, 20185403, 31001321, 35149761, 14681409, 38745993,
+        37644440, 26158728, 36987781, 40030473, 40082611, 36402891, 35213534,
+        36301791, 31118945, 39650456, 38310804, 37128437, 32477638, 28529714,
+        36236265, 34729589
+      ],
+      "provisional": false,
+      "last_modified": "2026-02-05T05:41:20.477Z"
     }
   ]
 }
