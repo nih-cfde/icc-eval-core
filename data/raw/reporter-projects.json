@@ -1,6 +1,6 @@
 {
   "meta": {
-    "search_id": "yD9AS3-kWkycESEZaOZKDg",
+    "search_id": "YyFPT1D7HkW7LdLZNXnhzw",
     "total": 150,
     "offset": 0,
     "limit": 500,
@@ -8,7 +8,7 @@
     "sort_order": "ASC",
     "sorted_by_relevance": false,
     "properties": {
-      "URL": "https:/reporter.nih.gov/search/yD9AS3-kWkycESEZaOZKDg/projects"
+      "URL": "https:/reporter.nih.gov/search/YyFPT1D7HkW7LdLZNXnhzw/projects"
     }
   },
   "results": [
@@ -15901,121 +15901,6 @@
       "date_added": "2025-09-13T17:04:12"
     },
     {
-      "appl_id": 10683515,
-      "subproject_id": null,
-      "fiscal_year": 2022,
-      "project_num": "3OT2OD030544-01S2",
-      "project_serial_num": "OD030544",
-      "organization": {
-        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
-        "city": null,
-        "country": null,
-        "org_city": "LA JOLLA",
-        "org_country": "UNITED STATES",
-        "org_state": "CA",
-        "org_state_name": null,
-        "dept_type": "ENGINEERING (ALL TYPES)",
-        "fips_country_code": null,
-        "org_duns": ["804355790"],
-        "org_ueis": ["UYTTZT6G9DT1"],
-        "primary_duns": "804355790",
-        "primary_uei": "UYTTZT6G9DT1",
-        "org_fips": "US",
-        "org_ipf_code": "577507",
-        "org_zipcode": "920930621",
-        "external_org_id": 577507
-      },
-      "award_type": "3",
-      "activity_code": "OT2",
-      "award_amount": 807151,
-      "is_active": false,
-      "project_num_split": {
-        "appl_type_code": "3",
-        "activity_code": "OT2",
-        "ic_code": "OD",
-        "serial_num": "030544",
-        "support_year": "01",
-        "full_support_year": "01S2",
-        "suffix_code": "S2"
-      },
-      "principal_investigators": [
-        {
-          "profile_id": 1936703,
-          "first_name": "Shankar",
-          "middle_name": "",
-          "last_name": "Subramaniam",
-          "is_contact_pi": true,
-          "full_name": "Shankar  Subramaniam",
-          "title": "PROFESSOR"
-        }
-      ],
-      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
-      "program_officers": [
-        {
-          "first_name": "GEORGE",
-          "middle_name": "",
-          "last_name": "PAPANICOLAOU",
-          "full_name": "GEORGE  PAPANICOLAOU"
-        }
-      ],
-      "agency_ic_admin": {
-        "code": "OD",
-        "abbreviation": "OD",
-        "name": "NIH Office of the Director"
-      },
-      "agency_ic_fundings": [
-        {
-          "fy": 2022,
-          "code": "OD",
-          "name": "NIH Office of the Director",
-          "abbreviation": "OD",
-          "total_cost": 807151,
-          "direct_cost_ic": 807151,
-          "indirect_cost_ic": 0
-        }
-      ],
-      "cong_dist": "CA-50",
-      "spending_categories": [4531, 329],
-      "project_start_date": "2020-09-23T00:00:00",
-      "project_end_date": "2023-09-22T00:00:00",
-      "organization_type": {
-        "name": "SCHOOLS OF ARTS AND SCIENCES",
-        "code": "10",
-        "is_other": false
-      },
-      "geo_lat_lon": { "lon": -117.24087, "lat": 32.876991 },
-      "opportunity_number": "OTA-20-005",
-      "full_study_section": {
-        "srg_code": "ZOD1",
-        "srg_flex": null,
-        "sra_designator_code": "SRC",
-        "sra_flex_code": null,
-        "group_code": "99",
-        "name": "ZOD1-SRC(99)"
-      },
-      "award_notice_date": "2022-09-19T00:00:00",
-      "is_new": false,
-      "mechanism_code_dc": "OT",
-      "core_project_num": "OT2OD030544",
-      "terms": "<Address><Biological><Biological Markers><Clinical><Computing Methodologies><Data><Data Commons><Data Sources><Data Systems><Development><Funding><Future><Genotype><IT Systems><Information Systems><Information Technology Systems><Infrastructure><Investigators><Knowledge><Modeling><Process><Research><Research Personnel><Researchers><Sight><System><Text><Vision><bio-markers><biologic><biologic marker><biological systems><biomarker><computational methodology><computational methods><computer based method><computer methods><computing method><data diversity><data integration><developmental><diverse data><multiple data types><phenotypic data><tool><visual function>",
-      "pref_terms": "Address;Biological;Biological Markers;Clinical;Computing Methodologies;Data;Data Commons;Data Sources;Development;Funding;Future;Genotype;Information Systems;Infrastructure;Knowledge;Modeling;Process;Research;Research Personnel;System;Text;Vision;biological systems;data integration;diverse data;multiple data types;phenotypic data;tool",
-      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
-      "project_title": "Biomedical Data Commons Workbench (BDCW)",
-      "phr_text": "No Text",
-      "spending_categories_desc": "Data Science; Networking and Information Technology R&D (NITRD)",
-      "agency_code": "NIH",
-      "covid_response": null,
-      "arra_funded": "N",
-      "budget_start": "2022-09-23T00:00:00",
-      "budget_end": "2023-09-22T00:00:00",
-      "cfda_code": "93.310",
-      "funding_mechanism": "Other",
-      "direct_cost_amt": 807151,
-      "indirect_cost_amt": 0,
-      "project_detail_url": "https://reporter.nih.gov/project-details/10683515",
-      "date_added": "2022-09-24T16:15:44"
-    },
-    {
       "appl_id": 11090253,
       "subproject_id": null,
       "fiscal_year": 2024,
@@ -16129,6 +16014,121 @@
       "indirect_cost_amt": 0,
       "project_detail_url": "https://reporter.nih.gov/project-details/11090253",
       "date_added": "2024-09-28T16:29:47"
+    },
+    {
+      "appl_id": 10683515,
+      "subproject_id": null,
+      "fiscal_year": 2022,
+      "project_num": "3OT2OD030544-01S2",
+      "project_serial_num": "OD030544",
+      "organization": {
+        "org_name": "UNIVERSITY OF CALIFORNIA, SAN DIEGO",
+        "city": null,
+        "country": null,
+        "org_city": "LA JOLLA",
+        "org_country": "UNITED STATES",
+        "org_state": "CA",
+        "org_state_name": null,
+        "dept_type": "ENGINEERING (ALL TYPES)",
+        "fips_country_code": null,
+        "org_duns": ["804355790"],
+        "org_ueis": ["UYTTZT6G9DT1"],
+        "primary_duns": "804355790",
+        "primary_uei": "UYTTZT6G9DT1",
+        "org_fips": "US",
+        "org_ipf_code": "577507",
+        "org_zipcode": "920930621",
+        "external_org_id": 577507
+      },
+      "award_type": "3",
+      "activity_code": "OT2",
+      "award_amount": 807151,
+      "is_active": false,
+      "project_num_split": {
+        "appl_type_code": "3",
+        "activity_code": "OT2",
+        "ic_code": "OD",
+        "serial_num": "030544",
+        "support_year": "01",
+        "full_support_year": "01S2",
+        "suffix_code": "S2"
+      },
+      "principal_investigators": [
+        {
+          "profile_id": 1936703,
+          "first_name": "Shankar",
+          "middle_name": "",
+          "last_name": "Subramaniam",
+          "is_contact_pi": true,
+          "full_name": "Shankar  Subramaniam",
+          "title": "PROFESSOR"
+        }
+      ],
+      "contact_pi_name": "SUBRAMANIAM, SHANKAR ",
+      "program_officers": [
+        {
+          "first_name": "GEORGE",
+          "middle_name": "",
+          "last_name": "PAPANICOLAOU",
+          "full_name": "GEORGE  PAPANICOLAOU"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "OD",
+        "abbreviation": "OD",
+        "name": "NIH Office of the Director"
+      },
+      "agency_ic_fundings": [
+        {
+          "fy": 2022,
+          "code": "OD",
+          "name": "NIH Office of the Director",
+          "abbreviation": "OD",
+          "total_cost": 807151,
+          "direct_cost_ic": 807151,
+          "indirect_cost_ic": 0
+        }
+      ],
+      "cong_dist": "CA-50",
+      "spending_categories": [4531, 329],
+      "project_start_date": "2020-09-23T00:00:00",
+      "project_end_date": "2023-09-22T00:00:00",
+      "organization_type": {
+        "name": "SCHOOLS OF ARTS AND SCIENCES",
+        "code": "10",
+        "is_other": false
+      },
+      "geo_lat_lon": { "lon": -117.24087, "lat": 32.876991 },
+      "opportunity_number": "OTA-20-005",
+      "full_study_section": {
+        "srg_code": "ZOD1",
+        "srg_flex": null,
+        "sra_designator_code": "SRC",
+        "sra_flex_code": null,
+        "group_code": "99",
+        "name": "ZOD1-SRC(99)"
+      },
+      "award_notice_date": "2022-09-19T00:00:00",
+      "is_new": false,
+      "mechanism_code_dc": "OT",
+      "core_project_num": "OT2OD030544",
+      "terms": "<Address><Biological><Biological Markers><Clinical><Computing Methodologies><Data><Data Commons><Data Sources><Data Systems><Development><Funding><Future><Genotype><IT Systems><Information Systems><Information Technology Systems><Infrastructure><Investigators><Knowledge><Modeling><Process><Research><Research Personnel><Researchers><Sight><System><Text><Vision><bio-markers><biologic><biologic marker><biological systems><biomarker><computational methodology><computational methods><computer based method><computer methods><computing method><data diversity><data integration><developmental><diverse data><multiple data types><phenotypic data><tool><visual function>",
+      "pref_terms": "Address;Biological;Biological Markers;Clinical;Computing Methodologies;Data;Data Commons;Data Sources;Development;Funding;Future;Genotype;Information Systems;Infrastructure;Knowledge;Modeling;Process;Research;Research Personnel;System;Text;Vision;biological systems;data integration;diverse data;multiple data types;phenotypic data;tool",
+      "abstract_text": "The future of biomedicine will rely on the ability to integrate genotype and phenotype data contextually to\nidentify biomarkers, decipher mechanisms, reconstruct networks, and develop quantitative models by\nbiomedical and clinical researchers in a seamless manner. What would be extremely valuable is a webaccessible\none-stop shop providing these capabilities. Creating such seamless infrastructure is the\nvision of our initiative. We propose the development of the Biomedical Data Commons Workbench\n(BDCW), which will help overcome the fundamental barriers to biomedical data integration.\nBDCW will address two fundamental barriers faced by biomedical researchers – the first deals with\nthe question, are there data available that can answer a biomedical question or questions (also\nreferred to from the research point of view as a Use Case) and second, how can such data be\nintegratively analyzed without having to go through the tedious process of either developing or\nusing a variety of tools (which in turn requires working knowledge of computational methods).\nSeveral Common Fund data sources attempt to help the end-user vis-à-vis the data they provide, but not\nthe ability to seamlessly interoperate with another Common Fund data source. Even if one were to identify\nthe appropriate data sources to address a given research question, the challenge of integration of these\ndiverse data is non-trivial. Data integration refers to the task of combining information about the same\nentities managed in different information systems to present a unified data view across different systems.\nIt also refers to integrative analyses of multiple types of data, including data collected at different biological\nscales, to discover new knowledge as to how biological systems function (“mechanisms”).",
+      "project_title": "Biomedical Data Commons Workbench (BDCW)",
+      "phr_text": "No Text",
+      "spending_categories_desc": "Data Science; Networking and Information Technology R&D (NITRD)",
+      "agency_code": "NIH",
+      "covid_response": null,
+      "arra_funded": "N",
+      "budget_start": "2022-09-23T00:00:00",
+      "budget_end": "2023-09-22T00:00:00",
+      "cfda_code": "93.310",
+      "funding_mechanism": "Other",
+      "direct_cost_amt": 807151,
+      "indirect_cost_amt": 0,
+      "project_detail_url": "https://reporter.nih.gov/project-details/10683515",
+      "date_added": "2022-09-24T16:15:44"
     },
     {
       "appl_id": 10217619,
