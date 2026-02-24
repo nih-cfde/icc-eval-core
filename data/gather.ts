@@ -1,5 +1,6 @@
 import { mkdirSync } from "fs";
-import { isEqual, orderBy, sumBy, uniqWith } from "lodash-es";
+import { eachDayOfInterval, format, max, min } from "date-fns";
+import { isEqual, orderBy, sumBy, uniq, uniqWith } from "lodash-es";
 import { getAnalytics } from "@/gather/analytics";
 import { getDrc } from "@/gather/drc";
 import { getJournals } from "@/gather/journals";
@@ -24,6 +25,7 @@ const projectsFile = "projects.json";
 const publicationsFile = "publications.json";
 const journalsFile = "journals.json";
 const analyticsFile = "analytics.json";
+const analyticsOverviewFile = "analytics-overview.json";
 const reposFile = "repos.json";
 const repoOverviewFile = "repo-overview.json";
 const drcDccFile = "drc-dcc.json";
@@ -160,9 +162,87 @@ for (const coreProject of coreProjects) {
 
 /** ========================================================================= */
 
+divider("Analytics overview");
+
+/** aggregate various stats for all analytics */
+
+const allDates = analytics
+  .map(({ overTime }) =>
+    Object.values(overTime)
+      .map((dates) => Object.keys(dates))
+      .flat(),
+  )
+  .flat();
+const dates = eachDayOfInterval({
+  start: min(allDates),
+  end: max(allDates),
+}).map((date) => format(date, "yyyy-MM-dd"));
+
+const metrics = ["activeUsers", "newUsers", "engagedSessions"] as const;
+const overTime = Object.fromEntries(
+  metrics.map((metric) => {
+    const datesTotaled = Object.fromEntries(
+      dates.map((date) => {
+        const total = sumBy(
+          analytics,
+          (analytic) => analytic.overTime[metric][date] ?? 0,
+        );
+        return [date, total];
+      }),
+    );
+    return [metric, datesTotaled];
+  }),
+);
+
+const topFields = [
+  "topContinents",
+  "topCountries",
+  "topRegions",
+  "topCities",
+  "topLanguages",
+  "topDevices",
+  "topOSes",
+] as const;
+const topMetrics = [
+  "byActiveUsers",
+  "byNewUsers",
+  "byEngagedSessions",
+] as const;
+const tops = Object.fromEntries(
+  topFields.map((field) => {
+    const fieldTotaled = Object.fromEntries(
+      topMetrics.map((metric) => {
+        const keys = uniq(
+          analytics
+            .map((analytic) => Object.keys(analytic[field][metric] ?? {}))
+            .flat(),
+        );
+        const metricTotaled = Object.fromEntries(
+          keys.map((key) => {
+            const total = sumBy(
+              analytics,
+              (analytic) => analytic[field][metric]?.[key] ?? 0,
+            );
+            return [key, total];
+          }),
+        );
+        return [metric, metricTotaled];
+      }),
+    );
+    return [field, fieldTotaled];
+  }),
+);
+
+const analyticsOverview = {
+  overTime,
+  ...tops,
+};
+
+/** ========================================================================= */
+
 divider("Repo overview");
 
-/** aggregate various stats for all repos in total */
+/** aggregate various stats for all repos */
 const repoOverview = {
   repos: repos.length,
   stars: sumBy(repos, (repo) => repo.stars.length),
@@ -230,6 +310,7 @@ saveFile(file, `${OUTPUT_PATH}/${drcFileFile}`);
 saveFile(code, `${OUTPUT_PATH}/${drcCodeFile}`);
 if (PRIVATE) {
   saveFile(analytics, `${OUTPUT_PATH}/${analyticsFile}`);
+  saveFile(analyticsOverview, `${OUTPUT_PATH}/${analyticsOverviewFile}`);
   saveFile(repos, `${OUTPUT_PATH}/${reposFile}`);
   saveFile(repoOverview, `${OUTPUT_PATH}/${repoOverviewFile}`);
 }

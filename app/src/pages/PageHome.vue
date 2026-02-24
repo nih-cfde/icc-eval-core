@@ -126,7 +126,7 @@
 
       <template #year="{ row }">{{ row.year }}</template>
     </AppTable>
-    
+
     <div class="col">
       <AppHeading level="3">Notes</AppHeading>
 
@@ -145,6 +145,60 @@
         </dd>
       </dl>
     </div>
+  </section>
+
+  <!-- analytics -->
+
+  <section v-if="!isEmpty(analyticsOverview.overTime.activeUsers)">
+    <AppHeading level="2"><Chart />Analytics</AppHeading>
+
+    <p>High-level info about CFDE website usage.</p>
+
+    <div class="charts">
+      <template
+        v-for="(data, metric, key) in analyticsOverview.overTime"
+        :key="key"
+      >
+        <AppTimeChart
+          :title="startCase(metric)"
+          :data="
+            Object.entries(data).map(([date, value]) => [new Date(date), value])
+          "
+          :cumulative="cumulative"
+          by="week"
+          group="group"
+        />
+      </template>
+    </div>
+    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+    <dl class="details">
+      <div
+        v-for="(topValue, topKey) in omit(analyticsOverview, 'overTime')"
+        :key="topKey"
+      >
+        <template
+          v-if="typeof topValue === 'object' && 'byEngagedSessions' in topValue"
+        >
+          <dt>Top {{ topKey.replace("top", "") }}</dt>
+          <dd class="mini-table">
+            <template
+              v-for="[byKey, byValue] in Object.entries(
+                topValue.byEngagedSessions,
+              ).slice(0, 5)"
+              :key="byKey"
+            >
+              <span>
+                {{ byKey }}
+              </span>
+              <span>
+                {{ format(byValue, true) }}
+              </span>
+            </template>
+          </dd>
+        </template>
+      </div>
+    </dl>
   </section>
 
   <!-- repositories -->
@@ -209,7 +263,7 @@ export const findJournal = (publication: Publication) => {
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { startCase, sum } from "lodash";
+import { isEmpty, omit, startCase, sum } from "lodash";
 import Book from "@/assets/book.svg";
 import Chart from "@/assets/chart.svg";
 import Code from "@/assets/code.svg";
@@ -223,6 +277,7 @@ import AppTable from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve } from "@/util/array";
 import { bytes, format } from "@/util/string";
+import analyticsOverview from "~/analytics-overview.json";
 import coreProjects from "~/core-projects.json";
 import rawProjects from "~/projects.json";
 import publications from "~/publications.json";
