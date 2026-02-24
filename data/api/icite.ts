@@ -15,7 +15,8 @@ const api = "https://icite.od.nih.gov/api/pubs";
 /** run icite query */
 export const queryIcite = memoize(async (pmids: number[]) => {
   /** break ids into chunks of max allowed size */
-  const chunks = chunk(pmids, 1000);
+  /** https://support.icite.nih.gov/hc/en-us/articles/9513563045787-Bulk-Data-and-API */
+  const chunks = chunk(pmids, 200);
 
   /** complete collection of all chunks */
   const results = { meta: {}, data: [] } as unknown as Results;
