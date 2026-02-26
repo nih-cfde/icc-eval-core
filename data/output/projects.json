@@ -1014,19 +1014,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030160-01S5",
-    "coreProject": "OT2OD030160",
-    "name": "The LINCS DCIC Engagement Plan with the CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 11089689,
-    "awardAmount": 300000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2025-09-22T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "3OT2OD036435-01S1",
     "coreProject": "OT2OD036435",
     "name": "The CFDE Workbench",
@@ -1037,6 +1024,19 @@
     "agencyCode": "NIH",
     "dateStart": "2023-09-18T00:00:00",
     "dateEnd": "2028-09-17T00:00:00",
+    "isActive": 0
+  },
+  {
+    "id": "3OT2OD030160-01S5",
+    "coreProject": "OT2OD030160",
+    "name": "The LINCS DCIC Engagement Plan with the CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 11089689,
+    "awardAmount": 300000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2025-09-22T00:00:00",
     "isActive": 0
   },
   {
@@ -1612,19 +1612,6 @@
     "isActive": 0
   },
   {
-    "id": "1OT2OD030544-01",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10217619,
-    "awardAmount": 500000,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2026-09-22T00:00:00",
-    "isActive": 1
-  },
-  {
     "id": "3OT2OD030544-01S3",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1649,6 +1636,19 @@
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2023-09-22T00:00:00",
     "isActive": 0
+  },
+  {
+    "id": "1OT2OD030544-01",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10217619,
+    "awardAmount": 500000,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2026-09-22T00:00:00",
+    "isActive": 1
   },
   {
     "id": "1R03OD030600-01",
