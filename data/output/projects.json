@@ -923,6 +923,19 @@
     "isActive": 0
   },
   {
+    "id": "3OT2OD030160-01S3",
+    "coreProject": "OT2OD030160",
+    "name": "The LINCS DCIC Engagement Plan with the CFDE",
+    "opportunity": "OTA-20-005",
+    "application": 10682935,
+    "awardAmount": 696280,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2023-09-22T00:00:00",
+    "isActive": 0
+  },
+  {
     "id": "3OT2OD030160-01S4",
     "coreProject": "OT2OD030160",
     "name": "The LINCS DCIC Engagement Plan with the CFDE",
@@ -959,19 +972,6 @@
     "agencyCode": "NIH",
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2022-09-22T00:00:00",
-    "isActive": 0
-  },
-  {
-    "id": "3OT2OD030160-01S3",
-    "coreProject": "OT2OD030160",
-    "name": "The LINCS DCIC Engagement Plan with the CFDE",
-    "opportunity": "OTA-20-005",
-    "application": 10682935,
-    "awardAmount": 696280,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2023-09-22T00:00:00",
     "isActive": 0
   },
   {
@@ -1560,17 +1560,17 @@
     "isActive": 0
   },
   {
-    "id": "4U24OD038425-02",
-    "coreProject": "U24OD038425",
-    "name": "\"Defining the Human Metabotype\" [Human metabolic status defined through genetic, diet,environmental exposure and exercise perturbations]",
-    "opportunity": "RFA-RM-23-013",
-    "application": 11193986,
-    "awardAmount": 1746329,
-    "activityCode": "U24",
+    "id": "3OT2OD030544-01S2",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10683515,
+    "awardAmount": 807151,
+    "activityCode": "OT2",
     "agencyCode": "NIH",
-    "dateStart": "2024-09-17T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
-    "isActive": 1
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2023-09-22T00:00:00",
+    "isActive": 0
   },
   {
     "id": "3OT2OD030544-01S4",
@@ -1586,17 +1586,17 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD030544-01S2",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10683515,
-    "awardAmount": 807151,
-    "activityCode": "OT2",
+    "id": "4U24OD038425-02",
+    "coreProject": "U24OD038425",
+    "name": "\"Defining the Human Metabotype\" [Human metabolic status defined through genetic, diet,environmental exposure and exercise perturbations]",
+    "opportunity": "RFA-RM-23-013",
+    "application": 11193986,
+    "awardAmount": 1746329,
+    "activityCode": "U24",
     "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2023-09-22T00:00:00",
-    "isActive": 0
+    "dateStart": "2024-09-17T00:00:00",
+    "dateEnd": "2027-08-31T00:00:00",
+    "isActive": 1
   },
   {
     "id": "1U24OD038425-01",
@@ -1651,19 +1651,6 @@
     "isActive": 1
   },
   {
-    "id": "1R03OD030600-01",
-    "coreProject": "R03OD030600",
-    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
-    "opportunity": "RFA-RM-19-012",
-    "application": 10112014,
-    "awardAmount": 363306,
-    "activityCode": "R03",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-18T00:00:00",
-    "dateEnd": "2023-08-31T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "4U24OD038422-02",
     "coreProject": "U24OD038422",
     "name": "U24-Uncovering the Shared Genetic Origins of Childhood Cancer and Structural Birth Defects Through Enhanced Data Integration and Analysis with the CFDE Data Distillery Knowledge Graph.",
@@ -1675,6 +1662,19 @@
     "dateStart": "2024-09-19T00:00:00",
     "dateEnd": "2027-08-31T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "1R03OD030600-01",
+    "coreProject": "R03OD030600",
+    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
+    "opportunity": "RFA-RM-19-012",
+    "application": 10112014,
+    "awardAmount": 363306,
+    "activityCode": "R03",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-18T00:00:00",
+    "dateEnd": "2023-08-31T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1U24OD038422-01",
