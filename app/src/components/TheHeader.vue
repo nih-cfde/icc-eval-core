@@ -11,9 +11,9 @@
       <template v-if="userStatus === 'success'">
         <AppLink v-if="!user" :to="loginLink">Login</AppLink>
         <template v-else>
-          <span class="user"
-            >{{ user.firstName }} {{ user.lastName }} {{ user.orcid }}</span
-          >
+          <span class="user">
+            {{ user.firstName }} {{ user.lastName }} {{ user.orcid }}
+          </span>
           <AppLink :to="logoutLink">Logout</AppLink>
         </template>
       </template>

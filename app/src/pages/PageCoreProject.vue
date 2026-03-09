@@ -98,7 +98,10 @@
 
     <p>Software repositories associated with this project.</p>
 
+    <p v-if="projectReposStatus === 'pending'">Loading</p>
+
     <AppTable
+      v-if="projectRepos?.length"
       :cols="repoCols"
       :rows="projectRepos"
       :sort="[{ id: 'id', desc: true }]"
@@ -155,7 +158,7 @@
       </template>
     </AppTable>
 
-    <template v-if="projectRepos.length">
+    <template v-if="projectRepos?.length">
       <div class="charts">
         <AppTimeChart
           class="chart"
@@ -237,13 +240,15 @@
 
     <p>Website metrics associated with this project.</p>
 
-    <template v-if="analyticsProperties.length">
+    <p v-if="projectAnalyticsStatus === 'pending'">Loading</p>
+
+    <template v-if="projectAnalytics?.length">
       <dl class="details">
         <div>
           <dt>Websites</dt>
           <dd class="mini-table">
             <template
-              v-for="({ property, propertyName }, key) of analyticsProperties"
+              v-for="({ property, propertyName }, key) of projectAnalytics"
               :key="key"
             >
               <span>
@@ -334,7 +339,9 @@
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { orderBy, startCase, sum, sumBy, uniq } from "lodash";
+import { useQuery } from "@tanstack/vue-query";
 import { useTitle } from "@vueuse/core";
+import { getAnalytics, getRepos } from "@/api";
 import Analytics from "@/assets/analytics.svg";
 import Book from "@/assets/book.svg";
 import Code from "@/assets/code.svg";
@@ -347,12 +354,10 @@ import AppTable, { type Cols } from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { findJournal } from "@/pages/PageHome.vue";
 import { carve, limit } from "@/util/array";
-import { ago, bytes, format, match, printObject, span } from "@/util/string";
+import { ago, bytes, format, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
-import analytics from "~/analytics.json";
 import coreProjects from "~/core-projects.json";
 import publications from "~/publications.json";
-import repos from "~/repos.json";
 
 const route = useRoute();
 
@@ -438,7 +443,7 @@ const details = computed(() => [
       "contributors",
     ],
   ],
-  ["Analytics", `${format(analyticsProperties.value, true)} properties`],
+  ["Analytics", `${format(projectAnalytics.value, true)} properties`],
 ]);
 
 /** publication table row data */
@@ -519,19 +524,25 @@ const publicationsOverTime = computed(() =>
 );
 
 /** repo table row data */
-const projectRepos = computed(() =>
-  repos
-    .filter((repo) => repo.coreProject === id.value)
-    .map((repo) => ({
-      ...repo,
-      modified: new Date(repo.modified),
-      dependencyTotal: sum(Object.values(repo.dependencies)),
-      ...repo.dependencies,
-    })),
-);
+const { data: projectRepos, status: projectReposStatus } = useQuery({
+  queryKey: ["getRepos", id.value],
+  queryFn: async () => {
+    if (!id.value) throw new Error("No core project id");
+    const repos = await getRepos(id.value);
+    if (!repos) throw new Error("No repos found");
+    return repos
+      .filter((repo) => repo.coreProject === id.value)
+      .map((repo) => ({
+        ...repo,
+        modified: new Date(repo.modified),
+        dependencyTotal: sum(Object.values(repo.dependencies)),
+        ...repo.dependencies,
+      }));
+  },
+});
 
 /** repo table column definitions */
-const repoCols: Cols<typeof projectRepos.value> = [
+const repoCols: Cols<NonNullable<typeof projectRepos.value>> = [
   {
     slot: "owner",
     key: "owner",
@@ -641,58 +652,71 @@ const repoCols: Cols<typeof projectRepos.value> = [
 ];
 
 /** star chart data */
-const starsOverTime = computed(() =>
-  projectRepos.value
-    .map(({ stars }) => stars.map((star) => [new Date(star.date), 1] as const))
-    .flat(),
+const starsOverTime = computed(
+  () =>
+    projectRepos.value
+      ?.map(({ stars }) =>
+        stars.map((star) => [new Date(star.date), 1] as const),
+      )
+      .flat() ?? [],
 );
 
 /** fork chart data */
-const forksOverTime = computed(() =>
-  projectRepos.value
-    .map(({ forks }) => forks.map((fork) => [new Date(fork.date), 1] as const))
-    .flat(),
+const forksOverTime = computed(
+  () =>
+    projectRepos.value
+      ?.map(({ forks }) =>
+        forks.map((fork) => [new Date(fork.date), 1] as const),
+      )
+      .flat() ?? [],
 );
 
 /** issue chart data */
-const issuesOverTime = computed(() =>
-  projectRepos.value
-    .map(({ issues }) =>
-      issues.map(({ created }) => [new Date(created), 1] as const),
-    )
-    .flat(),
+const issuesOverTime = computed(
+  () =>
+    projectRepos.value
+      ?.map(({ issues }) =>
+        issues.map(({ created }) => [new Date(created), 1] as const),
+      )
+      .flat() ?? [],
 );
 
 /** issue chart data */
-const pullRequestsOverTime = computed(() =>
-  projectRepos.value
-    .map(({ pullRequests }) =>
-      pullRequests.map(({ created }) => [new Date(created), 1] as const),
-    )
-    .flat(),
+const pullRequestsOverTime = computed(
+  () =>
+    projectRepos.value
+      ?.map(({ pullRequests }) =>
+        pullRequests.map(({ created }) => [new Date(created), 1] as const),
+      )
+      .flat() ?? [],
 );
 
 /** commit chart data */
-const commitsOverTime = computed(() =>
-  projectRepos.value
-    .map(({ commits }) =>
-      commits.map((commit) => [new Date(commit.date), 1] as const),
-    )
-    .flat(),
+const commitsOverTime = computed(
+  () =>
+    projectRepos.value
+      ?.map(({ commits }) =>
+        commits.map((commit) => [new Date(commit.date), 1] as const),
+      )
+      .flat() ?? [],
 );
 
 /** analytics properties that match this project */
-const analyticsProperties = computed(() =>
-  analytics.filter((item) => match(item.coreProject, id.value ?? "")),
-);
+const { data: projectAnalytics, status: projectAnalyticsStatus } = useQuery({
+  queryKey: ["getAnalytics", id.value],
+  queryFn: () => {
+    if (!id.value) throw new Error("No core project id");
+    return getAnalytics(id.value);
+  },
+});
 
 /** "over time" analytics data */
 const overTimeAnalytics = computed(() => {
   /** all properties data */
-  const properties = analyticsProperties.value.map((item) => item.overTime);
+  const properties = projectAnalytics.value?.map((item) => item.overTime) ?? [];
   /** list of metric keys */
   const metrics = uniq(
-    analyticsProperties.value.map((item) => Object.keys(item.overTime)).flat(),
+    projectAnalytics.value?.map((item) => Object.keys(item.overTime)).flat(),
   ) as (keyof (typeof properties)[number])[];
   /** for each metric */
   return metrics.map((metric) => {
@@ -714,9 +738,10 @@ const overTimeAnalytics = computed(() => {
 
 /** "top dimensions" analytics data */
 const topAnalytics = computed(() => {
-  const properties = analyticsProperties.value.map(
-    ({ property, propertyName, coreProject, overTime, ...rest }) => rest,
-  );
+  const properties =
+    projectAnalytics.value?.map(
+      ({ property, propertyName, coreProject, overTime, ...rest }) => rest,
+    ) ?? [];
 
   type Property = Record<string, Record<string, Record<string, number>>>;
 

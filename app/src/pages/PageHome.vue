@@ -148,7 +148,9 @@
   </section>
 
   <!-- repositories -->
-  <section v-if="repoStatus === 'pending'">Loading</section>
+  <section v-if="repoStatus === 'pending'">
+    <p>Loading</p>
+  </section>
   <section v-if="repoOverview?.repos">
     <AppHeading level="2"><Code />Repositories</AppHeading>
 
@@ -189,7 +191,9 @@
   </section>
 
   <!-- analytics -->
-  <section v-if="analyticsStatus === 'pending'">Loading</section>
+  <section v-if="analyticsStatus === 'pending'">
+    <p>Loading</p>
+  </section>
   <section v-if="!isEmpty(analyticsOverview?.overTime.activeUsers)">
     <AppHeading level="2"><Chart />Analytics</AppHeading>
 
