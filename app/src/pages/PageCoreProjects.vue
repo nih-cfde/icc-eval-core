@@ -6,7 +6,10 @@
   <section>
     <p>Top-level, "core" projects in CFDE</p>
 
+    <template v-if="coreProjectStatus === 'pending'">Loading</template>
+
     <AppTable
+      v-if="rows"
       :cols="cols"
       :rows="rows"
       :sort="[{ id: 'reposAnalytics', desc: true }]"
@@ -54,6 +57,9 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+import { useQuery } from "@tanstack/vue-query";
+import { getCoreProjects } from "@/api";
 import Check from "@/assets/check.svg";
 import Microscope from "@/assets/microscope.svg";
 import Xmark from "@/assets/xmark.svg";
@@ -61,19 +67,25 @@ import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { format } from "@/util/string";
-import coreProjects from "~/core-projects.json";
 
 const readmeLink =
   "https://github.com/nih-cfde/icc-eval-core?tab=readme-ov-file#submit-your-project";
 
+const { data: coreProjects, status: coreProjectStatus } = useQuery({
+  queryKey: ["getCoreProjects"],
+  queryFn: getCoreProjects,
+});
+
 /** table row data */
-const rows = coreProjects.map((d) => ({
-  ...d,
-  reposAnalytics: d.repos + d.analytics,
-}));
+const rows = computed(() =>
+  coreProjects.value?.map((d) => ({
+    ...d,
+    reposAnalytics: d.repos + d.analytics,
+  })),
+);
 
 /** table column definitions */
-const cols: Cols<typeof rows> = [
+const cols: Cols<NonNullable<typeof rows.value>> = [
   {
     slot: "id",
     key: "id",

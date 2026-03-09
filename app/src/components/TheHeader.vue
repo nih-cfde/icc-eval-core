@@ -8,6 +8,16 @@
     </div>
 
     <nav>
+      <template v-if="userStatus === 'success'">
+        <AppLink v-if="!user" :to="loginLink">Login</AppLink>
+        <template v-else>
+          <span class="user"
+            >{{ user.firstName }} {{ user.lastName }} {{ user.orcid }}</span
+          >
+          <AppLink :to="logoutLink">Logout</AppLink>
+        </template>
+      </template>
+
       <AppLink to="/">Home</AppLink>
       <AppLink to="/core-projects">Core Projects</AppLink>
       <AppLink to="/drc">DRC</AppLink>
@@ -16,9 +26,16 @@
 </template>
 
 <script setup lang="ts">
+import { useQuery } from "@tanstack/vue-query";
+import { getMe, loginLink, logoutLink } from "@/api";
 import AppLink from "@/components/AppLink.vue";
 
 const { VITE_TITLE: title } = import.meta.env;
+
+const { data: user, status: userStatus } = useQuery({
+  queryKey: ["getMe"],
+  queryFn: getMe,
+});
 </script>
 
 <style scoped>
@@ -71,5 +88,10 @@ nav {
   nav {
     display: none;
   }
+}
+
+.user {
+  color: var(--theme-dark);
+  font-size: 0.9rem;
 }
 </style>
