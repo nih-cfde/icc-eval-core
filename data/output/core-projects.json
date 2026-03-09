@@ -37,16 +37,6 @@
     "analytics": 0
   },
   {
-    "id": "R25OD039836",
-    "name": "FREEMIND: Focused Research Education and Experience using Multimodal and Interdisciplinary NIH Datasets",
-    "activityCode": "R25",
-    "projects": ["1R25OD039836-01"],
-    "awardAmount": 284459,
-    "publications": 0,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
     "id": "R03OD039982",
     "name": "Discovery of Chronotherapeutic Candidate Targets in Pancreatic Cancer",
     "activityCode": "R03",
@@ -61,9 +51,9 @@
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "activityCode": "OT2",
     "projects": [
+      "3OT2OD030545-01S4",
       "1OT2OD030545-01",
       "3OT2OD030545-01S3",
-      "3OT2OD030545-01S4",
       "3OT2OD030545-01S5",
       "3OT2OD030545-01S2",
       "3OT2OD030545-01S1"
@@ -150,6 +140,16 @@
     "projects": ["1R03OD036494-01"],
     "awardAmount": 318000,
     "publications": 5,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R25OD039836",
+    "name": "FREEMIND: Focused Research Education and Experience using Multimodal and Interdisciplinary NIH Datasets",
+    "activityCode": "R25",
+    "projects": ["1R25OD039836-01"],
+    "awardAmount": 284459,
+    "publications": 0,
     "repos": 0,
     "analytics": 0
   },
@@ -299,7 +299,7 @@
     "activityCode": "R25",
     "projects": ["1R25OD039834-01"],
     "awardAmount": 370177,
-    "publications": 4,
+    "publications": 5,
     "repos": 0,
     "analytics": 0
   },
@@ -599,9 +599,9 @@
     "activityCode": "OT2",
     "projects": [
       "3OT2OD032092-01S4",
-      "3OT2OD032092-01S3",
       "1OT2OD032092-01",
       "3OT2OD032092-01S2",
+      "3OT2OD032092-01S3",
       "3OT2OD032092-01S1"
     ],
     "awardAmount": 3051311,
@@ -624,8 +624,8 @@
     "name": "GENOMIC INDEXING OF COMMON FUND DATASETS",
     "activityCode": "OT2",
     "projects": [
-      "1OT2OD030547-01",
       "3OT2OD030547-01S3",
+      "1OT2OD030547-01",
       "3OT2OD030547-01S1",
       "3OT2OD030547-01S2",
       "3OT2OD030547-01S4"
@@ -711,8 +711,8 @@
     "activityCode": "OT2",
     "projects": [
       "4OT2OD030162-02",
-      "3OT2OD030162-01S3",
       "3OT2OD030162-01S1",
+      "3OT2OD030162-01S3",
       "3OT2OD030162-01S5",
       "3OT2OD030162-01S2",
       "1OT2OD030162-01",

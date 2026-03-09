@@ -4357,110 +4357,6 @@
       "last_modified": "2026-03-01T07:02:32.048Z"
     },
     {
-      "_id": "35758026",
-      "animal": 0.6,
-      "authors": [
-        { "lastName": "Shao", "fullName": "Shao, Andy", "firstName": "Andy" },
-        {
-          "lastName": "Lopez",
-          "fullName": "Lopez, Antonio Jacobo",
-          "firstName": "Antonio Jacobo"
-        },
-        {
-          "lastName": "Chen",
-          "fullName": "Chen, JiaJia",
-          "firstName": "JiaJia"
-        },
-        { "lastName": "Tham", "fullName": "Tham, Addy", "firstName": "Addy" },
-        {
-          "lastName": "Javier",
-          "fullName": "Javier, Seanne",
-          "firstName": "Seanne"
-        },
-        {
-          "lastName": "Quiroz",
-          "fullName": "Quiroz, Alejandra",
-          "firstName": "Alejandra"
-        },
-        {
-          "lastName": "Frick",
-          "fullName": "Frick, Sonia",
-          "firstName": "Sonia"
-        },
-        {
-          "lastName": "Levine",
-          "fullName": "Levine, Edward M",
-          "firstName": "Edward M"
-        },
-        {
-          "lastName": "Lloyd",
-          "fullName": "Lloyd, K C Kent",
-          "firstName": "K C Kent"
-        },
-        {
-          "lastName": "Leonard",
-          "fullName": "Leonard, Brian C",
-          "firstName": "Brian C"
-        },
-        {
-          "lastName": "Murphy",
-          "fullName": "Murphy, Christopher J",
-          "firstName": "Christopher J"
-        },
-        {
-          "lastName": "Glaser",
-          "fullName": "Glaser, Thomas M",
-          "firstName": "Thomas M"
-        },
-        {
-          "lastName": "Moshiri",
-          "fullName": "Moshiri, Ala",
-          "firstName": "Ala"
-        }
-      ],
-      "doi": "10.1242/dmm.049343",
-      "human": 0.2,
-      "pmid": 35758026,
-      "title": "Arap1 loss causes retinal pigment epithelium phagocytic dysfunction and subsequent photoreceptor death.",
-      "apt": 0.05,
-      "citedByClinicalArticle": false,
-      "citedByPmidsByYear": [
-        { "41265626": 2026 },
-        { "40369608": 2025 },
-        { "40035725": 2025 },
-        { "40733161": 2025 },
-        { "39433211": 2025 }
-      ],
-      "year": 2022,
-      "journal": "Dis Model Mech",
-      "is_research_article": true,
-      "citation_count": 5,
-      "field_citation_rate": 5.834978010741711,
-      "expected_citations_per_year": 2.3605772139240813,
-      "citations_per_year": 1.25,
-      "relative_citation_ratio": 0.5295315029844228,
-      "nih_percentile": 28.9,
-      "molecular_cellular": 0.2,
-      "x_coord": 0.3464101615137754,
-      "y_coord": -0.19999999999999998,
-      "is_clinical": false,
-      "cited_by_clin": null,
-      "cited_by": [41265626, 40369608, 40035725, 40733161, 39433211],
-      "references": [
-        17652763, 24854863, 30669557, 23669303, 30240610, 14596919, 17032466,
-        25072053, 30228185, 19525957, 19587120, 31336621, 16320245, 23637330,
-        28324111, 24634209, 17823970, 11517213, 11967127, 20543839, 29597005,
-        20685736, 18272790, 29439719, 19324864, 34440696, 12893809, 22131869,
-        24485945, 11062461, 30518789, 31486768, 20182540, 17854762, 20134024,
-        20463783, 11804590, 19117932, 11708890, 32842471, 24664686, 21275903,
-        15829569, 29467281, 16001398, 19234351, 18836173, 21212186, 25991907,
-        18626943, 30567931, 17981136, 25793273, 17085443, 18939958, 23440929,
-        22262456, 17620600, 19531213, 20485680
-      ],
-      "provisional": false,
-      "last_modified": "2026-03-01T07:08:29.392Z"
-    },
-    {
       "_id": "35821831",
       "animal": 0,
       "authors": [
@@ -8615,6 +8511,210 @@
       ],
       "provisional": false,
       "last_modified": "2026-03-01T06:24:19.567Z"
+    },
+    {
+      "_id": "36737727",
+      "animal": 0.8,
+      "authors": [
+        {
+          "lastName": "Chee",
+          "fullName": "Chee, Justine M",
+          "firstName": "Justine M"
+        },
+        {
+          "lastName": "Lanoue",
+          "fullName": "Lanoue, Louise",
+          "firstName": "Louise"
+        },
+        { "lastName": "Clary", "fullName": "Clary, Dave", "firstName": "Dave" },
+        {
+          "lastName": "Higgins",
+          "fullName": "Higgins, Kendall",
+          "firstName": "Kendall"
+        },
+        {
+          "lastName": "Bower",
+          "fullName": "Bower, Lynette",
+          "firstName": "Lynette"
+        },
+        {
+          "lastName": "Flenniken",
+          "fullName": "Flenniken, Ann",
+          "firstName": "Ann"
+        },
+        { "lastName": "Guo", "fullName": "Guo, Ruolin", "firstName": "Ruolin" },
+        {
+          "lastName": "Adams",
+          "fullName": "Adams, David J",
+          "firstName": "David J"
+        },
+        {
+          "lastName": "Bosch",
+          "fullName": "Bosch, Fatima",
+          "firstName": "Fatima"
+        },
+        {
+          "lastName": "Braun",
+          "fullName": "Braun, Robert E",
+          "firstName": "Robert E"
+        },
+        {
+          "lastName": "Brown",
+          "fullName": "Brown, Steve D M",
+          "firstName": "Steve D M"
+        },
+        {
+          "lastName": "Chin",
+          "fullName": "Chin, H-J Genie",
+          "firstName": "H-J Genie"
+        },
+        {
+          "lastName": "Dickinson",
+          "fullName": "Dickinson, Mary E",
+          "firstName": "Mary E"
+        },
+        {
+          "lastName": "Hsu",
+          "fullName": "Hsu, Chih-Wei",
+          "firstName": "Chih-Wei"
+        },
+        {
+          "lastName": "Dobbie",
+          "fullName": "Dobbie, Michael",
+          "firstName": "Michael"
+        },
+        { "lastName": "Gao", "fullName": "Gao, Xiang", "firstName": "Xiang" },
+        {
+          "lastName": "Galande",
+          "fullName": "Galande, Sanjeev",
+          "firstName": "Sanjeev"
+        },
+        {
+          "lastName": "Grobler",
+          "fullName": "Grobler, Anne",
+          "firstName": "Anne"
+        },
+        {
+          "lastName": "Heaney",
+          "fullName": "Heaney, Jason D",
+          "firstName": "Jason D"
+        },
+        {
+          "lastName": "Herault",
+          "fullName": "Herault, Yann",
+          "firstName": "Yann"
+        },
+        {
+          "lastName": "de Angelis",
+          "fullName": "de Angelis, Martin Hrabe",
+          "firstName": "Martin Hrabe"
+        },
+        {
+          "lastName": "Mammano",
+          "fullName": "Mammano, Fabio",
+          "firstName": "Fabio"
+        },
+        {
+          "lastName": "Nutter",
+          "fullName": "Nutter, Lauryl M J",
+          "firstName": "Lauryl M J"
+        },
+        {
+          "lastName": "Parkinson",
+          "fullName": "Parkinson, Helen",
+          "firstName": "Helen"
+        },
+        { "lastName": "Qin", "fullName": "Qin, Chuan", "firstName": "Chuan" },
+        {
+          "lastName": "Shiroishi",
+          "fullName": "Shiroishi, Toshi",
+          "firstName": "Toshi"
+        },
+        {
+          "lastName": "Sedlacek",
+          "fullName": "Sedlacek, Radislav",
+          "firstName": "Radislav"
+        },
+        { "lastName": "Seong", "fullName": "Seong, J-K", "firstName": "J-K" },
+        { "lastName": "Xu", "fullName": "Xu, Ying", "firstName": "Ying" },
+        { "fullName": "International Mouse Phenotyping Consortium" },
+        {
+          "lastName": "Brooks",
+          "fullName": "Brooks, Brian",
+          "firstName": "Brian"
+        },
+        {
+          "lastName": "McKerlie",
+          "fullName": "McKerlie, Colin",
+          "firstName": "Colin"
+        },
+        {
+          "lastName": "Lloyd",
+          "fullName": "Lloyd, K C Kent",
+          "firstName": "K C Kent"
+        },
+        {
+          "lastName": "Westerberg",
+          "fullName": "Westerberg, Henrik",
+          "firstName": "Henrik"
+        },
+        {
+          "lastName": "Moshiri",
+          "fullName": "Moshiri, Ala",
+          "firstName": "Ala"
+        }
+      ],
+      "doi": "10.1186/s12915-022-01475-0",
+      "human": 0.2,
+      "pmid": 36737727,
+      "title": "Genome-wide screening reveals the genetic basis of mammalian embryonic eye development.",
+      "apt": 0.25,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [
+        { "41021661": 2025 },
+        { "38185673": 2024 },
+        { "39956648": 2025 },
+        { "38881316": 2024 },
+        { "39694408": 2025 },
+        { "40386355": 2025 },
+        { "41042024": 2025 },
+        { "39820486": 2025 },
+        { "41644829": 2026 },
+        { "39254744": 2024 },
+        { "40751508": 2025 }
+      ],
+      "year": 2023,
+      "journal": "BMC Biol",
+      "is_research_article": true,
+      "citation_count": 11,
+      "field_citation_rate": 7.261055258518425,
+      "expected_citations_per_year": 2.4680618641256173,
+      "citations_per_year": 3.6666666666666665,
+      "relative_citation_ratio": 1.4856461744186018,
+      "nih_percentile": 64.7,
+      "molecular_cellular": 0,
+      "x_coord": 0.6928203230275509,
+      "y_coord": -0.2,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [
+        41021661, 38185673, 39956648, 38881316, 39694408, 40386355, 41042024,
+        39820486, 41644829, 39254744, 40751508
+      ],
+      "references": [
+        17576678, 24162842, 10802651, 1684639, 33378393, 22940749, 10592173,
+        23669550, 24177921, 30476243, 31781166, 26787175, 20104601, 15977175,
+        6876117, 8837770, 28698599, 27701636, 20691855, 27965955, 28778798,
+        27814572, 35740972, 31552081, 17655833, 25436979, 31095607, 21540023,
+        23071378, 22340503, 34524473, 30403890, 11826019, 23009755, 20066439,
+        7502239, 29487109, 29141214, 17914432, 32164325, 22447858, 24078476,
+        7916661, 30919078, 27899595, 29847629, 25992600, 9375918, 31161981,
+        18039390, 27998989, 20104595, 33290552, 22566555, 27895970, 7241531,
+        22450536, 24836451, 27626380, 30588515, 27996060, 31058441, 32676032,
+        27652319, 24859618, 25428369
+      ],
+      "provisional": false,
+      "last_modified": "2026-03-01T06:25:57.593Z"
     },
     {
       "_id": "36750564",
@@ -19413,357 +19513,6 @@
       "last_modified": "2026-03-01T06:10:33.482Z"
     },
     {
-      "_id": "39833678",
-      "animal": 0.75,
-      "authors": [
-        { "lastName": "Vo", "fullName": "Vo, Peter", "firstName": "Peter" },
-        {
-          "lastName": "Imai-Leonard",
-          "fullName": "Imai-Leonard, Denise M",
-          "firstName": "Denise M"
-        },
-        {
-          "lastName": "Yang",
-          "fullName": "Yang, Benjamin",
-          "firstName": "Benjamin"
-        },
-        {
-          "lastName": "Briere",
-          "fullName": "Briere, Andrew",
-          "firstName": "Andrew"
-        },
-        { "lastName": "Shao", "fullName": "Shao, Andy", "firstName": "Andy" },
-        {
-          "lastName": "Casanova",
-          "fullName": "Casanova, M Isabel",
-          "firstName": "M Isabel"
-        },
-        {
-          "lastName": "Adams",
-          "fullName": "Adams, David",
-          "firstName": "David"
-        },
-        {
-          "lastName": "Amano",
-          "fullName": "Amano, Takanori",
-          "firstName": "Takanori"
-        },
-        {
-          "lastName": "Amarie",
-          "fullName": "Amarie, Oana",
-          "firstName": "Oana"
-        },
-        {
-          "lastName": "Berberovic",
-          "fullName": "Berberovic, Zorana",
-          "firstName": "Zorana"
-        },
-        {
-          "lastName": "Bower",
-          "fullName": "Bower, Lynette",
-          "firstName": "Lynette"
-        },
-        {
-          "lastName": "Braun",
-          "fullName": "Braun, Robert",
-          "firstName": "Robert"
-        },
-        {
-          "lastName": "Brown",
-          "fullName": "Brown, Steve",
-          "firstName": "Steve"
-        },
-        {
-          "lastName": "Burrill",
-          "fullName": "Burrill, Samantha",
-          "firstName": "Samantha"
-        },
-        {
-          "lastName": "Cho",
-          "fullName": "Cho, Soo Young",
-          "firstName": "Soo Young"
-        },
-        {
-          "lastName": "Clementson-Mobbs",
-          "fullName": "Clementson-Mobbs, Sharon",
-          "firstName": "Sharon"
-        },
-        {
-          "lastName": "D'Souza",
-          "fullName": "D'Souza, Abigail",
-          "firstName": "Abigail"
-        },
-        {
-          "lastName": "Dickinson",
-          "fullName": "Dickinson, Mary",
-          "firstName": "Mary"
-        },
-        {
-          "lastName": "Eskandarian",
-          "fullName": "Eskandarian, Mohammad",
-          "firstName": "Mohammad"
-        },
-        {
-          "lastName": "Flenniken",
-          "fullName": "Flenniken, Ann M",
-          "firstName": "Ann M"
-        },
-        {
-          "lastName": "Fuchs",
-          "fullName": "Fuchs, Helmut",
-          "firstName": "Helmut"
-        },
-        {
-          "lastName": "Gailus-Durner",
-          "fullName": "Gailus-Durner, Valerie",
-          "firstName": "Valerie"
-        },
-        {
-          "lastName": "Heaney",
-          "fullName": "Heaney, Jason",
-          "firstName": "Jason"
-        },
-        {
-          "lastName": "Hérault",
-          "fullName": "Hérault, Yann",
-          "firstName": "Yann"
-        },
-        {
-          "lastName": "Angelis",
-          "fullName": "Angelis, Martin Hrabe de",
-          "firstName": "Martin Hrabe de"
-        },
-        {
-          "lastName": "Hsu",
-          "fullName": "Hsu, Chih-Wei",
-          "firstName": "Chih-Wei"
-        },
-        {
-          "lastName": "Jin",
-          "fullName": "Jin, Shundan",
-          "firstName": "Shundan"
-        },
-        {
-          "lastName": "Joynson",
-          "fullName": "Joynson, Russell",
-          "firstName": "Russell"
-        },
-        {
-          "lastName": "Kang",
-          "fullName": "Kang, Yeon Kyung",
-          "firstName": "Yeon Kyung"
-        },
-        { "lastName": "Kim", "fullName": "Kim, Haerim", "firstName": "Haerim" },
-        {
-          "lastName": "Masuya",
-          "fullName": "Masuya, Hiroshi",
-          "firstName": "Hiroshi"
-        },
-        {
-          "lastName": "Meziane",
-          "fullName": "Meziane, Hamid",
-          "firstName": "Hamid"
-        },
-        {
-          "lastName": "Murray",
-          "fullName": "Murray, Steve",
-          "firstName": "Steve"
-        },
-        {
-          "lastName": "Nam",
-          "fullName": "Nam, Ki-Hoan",
-          "firstName": "Ki-Hoan"
-        },
-        { "lastName": "Noh", "fullName": "Noh, Hyuna", "firstName": "Hyuna" },
-        {
-          "lastName": "Nutter",
-          "fullName": "Nutter, Lauryl M J",
-          "firstName": "Lauryl M J"
-        },
-        {
-          "lastName": "Palkova",
-          "fullName": "Palkova, Marcela",
-          "firstName": "Marcela"
-        },
-        {
-          "lastName": "Prochazka",
-          "fullName": "Prochazka, Jan",
-          "firstName": "Jan"
-        },
-        {
-          "lastName": "Raishbrook",
-          "fullName": "Raishbrook, Miles Joseph",
-          "firstName": "Miles Joseph"
-        },
-        {
-          "lastName": "Riet",
-          "fullName": "Riet, Fabrice",
-          "firstName": "Fabrice"
-        },
-        {
-          "lastName": "Ryan",
-          "fullName": "Ryan, Jennifer",
-          "firstName": "Jennifer"
-        },
-        {
-          "lastName": "Salazar",
-          "fullName": "Salazar, Jason",
-          "firstName": "Jason"
-        },
-        {
-          "lastName": "Seavey",
-          "fullName": "Seavey, Zachery",
-          "firstName": "Zachery"
-        },
-        {
-          "lastName": "Seavitt",
-          "fullName": "Seavitt, John Richard",
-          "firstName": "John Richard"
-        },
-        {
-          "lastName": "Sedlacek",
-          "fullName": "Sedlacek, Radislav",
-          "firstName": "Radislav"
-        },
-        {
-          "lastName": "Selloum",
-          "fullName": "Selloum, Mohammed",
-          "firstName": "Mohammed"
-        },
-        {
-          "lastName": "Seo",
-          "fullName": "Seo, Kyoung Yul",
-          "firstName": "Kyoung Yul"
-        },
-        {
-          "lastName": "Seong",
-          "fullName": "Seong, Je Kyung",
-          "firstName": "Je Kyung"
-        },
-        {
-          "lastName": "Shin",
-          "fullName": "Shin, Hae-Sol",
-          "firstName": "Hae-Sol"
-        },
-        {
-          "lastName": "Shiroishi",
-          "fullName": "Shiroishi, Toshihiko",
-          "firstName": "Toshihiko"
-        },
-        {
-          "lastName": "Stewart",
-          "fullName": "Stewart, Michelle",
-          "firstName": "Michelle"
-        },
-        {
-          "lastName": "Svenson",
-          "fullName": "Svenson, Karen",
-          "firstName": "Karen"
-        },
-        {
-          "lastName": "Tamura",
-          "fullName": "Tamura, Masaru",
-          "firstName": "Masaru"
-        },
-        {
-          "lastName": "Tolentino",
-          "fullName": "Tolentino, Heather",
-          "firstName": "Heather"
-        },
-        {
-          "lastName": "Udensi",
-          "fullName": "Udensi, Uchechukwu",
-          "firstName": "Uchechukwu"
-        },
-        { "lastName": "Wells", "fullName": "Wells, Sara", "firstName": "Sara" },
-        {
-          "lastName": "White",
-          "fullName": "White, Jacqueline",
-          "firstName": "Jacqueline"
-        },
-        {
-          "lastName": "Willett",
-          "fullName": "Willett, Amelia",
-          "firstName": "Amelia"
-        },
-        {
-          "lastName": "Wotton",
-          "fullName": "Wotton, Janine",
-          "firstName": "Janine"
-        },
-        {
-          "lastName": "Wurst",
-          "fullName": "Wurst, Wolfgang",
-          "firstName": "Wolfgang"
-        },
-        {
-          "lastName": "Yoshiki",
-          "fullName": "Yoshiki, Atsushi",
-          "firstName": "Atsushi"
-        },
-        { "fullName": "International Mouse Phenotyping Consortium" },
-        {
-          "lastName": "Lanoue",
-          "fullName": "Lanoue, Louise",
-          "firstName": "Louise"
-        },
-        {
-          "lastName": "Lloyd",
-          "fullName": "Lloyd, K C Kent",
-          "firstName": "K C Kent"
-        },
-        {
-          "lastName": "Leonard",
-          "fullName": "Leonard, Brian C",
-          "firstName": "Brian C"
-        },
-        {
-          "lastName": "Roux",
-          "fullName": "Roux, Michel J",
-          "firstName": "Michel J"
-        },
-        {
-          "lastName": "McKerlie",
-          "fullName": "McKerlie, Colin",
-          "firstName": "Colin"
-        },
-        {
-          "lastName": "Moshiri",
-          "fullName": "Moshiri, Ala",
-          "firstName": "Ala"
-        }
-      ],
-      "doi": "10.1186/s12864-025-11222-8",
-      "human": 0.25,
-      "pmid": 39833678,
-      "title": "Systematic ocular phenotyping of 8,707 knockout mouse lines identifies genes associated with abnormal corneal phenotypes.",
-      "apt": 0.05,
-      "citedByClinicalArticle": false,
-      "citedByPmidsByYear": [{ "41021661": 2025 }, { "40323269": 2025 }],
-      "year": 2025,
-      "journal": "BMC Genomics",
-      "is_research_article": true,
-      "citation_count": 2,
-      "field_citation_rate": 6.879024879080947,
-      "expected_citations_per_year": null,
-      "citations_per_year": 2,
-      "relative_citation_ratio": null,
-      "nih_percentile": null,
-      "molecular_cellular": 0,
-      "x_coord": 0.649519052838329,
-      "y_coord": -0.125,
-      "is_clinical": false,
-      "cited_by_clin": null,
-      "cited_by": [41021661, 40323269],
-      "references": [
-        33833456, 19236704, 33125081, 37301944, 10592173, 31441146, 26314589,
-        20015972, 38359414, 19337156, 31591642, 15448476, 27625877, 30588515,
-        36305825, 12952881, 34651173, 20642439
-      ],
-      "provisional": false,
-      "last_modified": "2026-03-08T06:02:47.360Z"
-    },
-    {
       "_id": "39836639",
       "animal": 0,
       "authors": [
@@ -27286,6 +27035,78 @@
       "last_modified": "2026-03-01T08:02:34.737Z"
     },
     {
+      "_id": "41441444",
+      "animal": 0,
+      "authors": [
+        {
+          "lastName": "Chavoshi",
+          "fullName": "Chavoshi, Mohammadreza",
+          "firstName": "Mohammadreza"
+        },
+        {
+          "lastName": "Trivedi",
+          "fullName": "Trivedi, Hari",
+          "firstName": "Hari"
+        },
+        {
+          "lastName": "Mansuri",
+          "fullName": "Mansuri, Aawez",
+          "firstName": "Aawez"
+        },
+        {
+          "lastName": "Newsome",
+          "fullName": "Newsome, Janice",
+          "firstName": "Janice"
+        },
+        {
+          "lastName": "Sanyika",
+          "fullName": "Sanyika, Chiratidzo Rudado",
+          "firstName": "Chiratidzo Rudado"
+        },
+        {
+          "lastName": "Isaac",
+          "fullName": "Isaac, Rohan Satya",
+          "firstName": "Rohan Satya"
+        },
+        { "lastName": "Li", "fullName": "Li, Frank", "firstName": "Frank" },
+        {
+          "lastName": "Dapamede",
+          "fullName": "Dapamede, Theo",
+          "firstName": "Theo"
+        },
+        {
+          "lastName": "Gichoya",
+          "fullName": "Gichoya, Judy Wawira",
+          "firstName": "Judy Wawira"
+        }
+      ],
+      "doi": "10.1148/ryai.250477",
+      "human": 1,
+      "pmid": 41441444,
+      "title": "Impact of Label Noise from Large Language Model-generated Annotations on Evaluation of Diagnostic Model Performance.",
+      "apt": 0.5,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "41444826": 2025 }],
+      "year": 2026,
+      "journal": "Radiol Artif Intell",
+      "is_research_article": true,
+      "citation_count": 1,
+      "field_citation_rate": 3.280375177907372,
+      "expected_citations_per_year": 0.999999999180087,
+      "citations_per_year": 1,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "x_coord": 0,
+      "y_coord": 1,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [41444826],
+      "references": [],
+      "provisional": false,
+      "last_modified": "2026-03-04T05:40:55.414Z"
+    },
+    {
       "_id": "41444826",
       "animal": 0,
       "authors": [
@@ -30633,6 +30454,110 @@
       "last_modified": "2026-03-01T06:53:13.976Z"
     },
     {
+      "_id": "35758026",
+      "animal": 0.6,
+      "authors": [
+        { "lastName": "Shao", "fullName": "Shao, Andy", "firstName": "Andy" },
+        {
+          "lastName": "Lopez",
+          "fullName": "Lopez, Antonio Jacobo",
+          "firstName": "Antonio Jacobo"
+        },
+        {
+          "lastName": "Chen",
+          "fullName": "Chen, JiaJia",
+          "firstName": "JiaJia"
+        },
+        { "lastName": "Tham", "fullName": "Tham, Addy", "firstName": "Addy" },
+        {
+          "lastName": "Javier",
+          "fullName": "Javier, Seanne",
+          "firstName": "Seanne"
+        },
+        {
+          "lastName": "Quiroz",
+          "fullName": "Quiroz, Alejandra",
+          "firstName": "Alejandra"
+        },
+        {
+          "lastName": "Frick",
+          "fullName": "Frick, Sonia",
+          "firstName": "Sonia"
+        },
+        {
+          "lastName": "Levine",
+          "fullName": "Levine, Edward M",
+          "firstName": "Edward M"
+        },
+        {
+          "lastName": "Lloyd",
+          "fullName": "Lloyd, K C Kent",
+          "firstName": "K C Kent"
+        },
+        {
+          "lastName": "Leonard",
+          "fullName": "Leonard, Brian C",
+          "firstName": "Brian C"
+        },
+        {
+          "lastName": "Murphy",
+          "fullName": "Murphy, Christopher J",
+          "firstName": "Christopher J"
+        },
+        {
+          "lastName": "Glaser",
+          "fullName": "Glaser, Thomas M",
+          "firstName": "Thomas M"
+        },
+        {
+          "lastName": "Moshiri",
+          "fullName": "Moshiri, Ala",
+          "firstName": "Ala"
+        }
+      ],
+      "doi": "10.1242/dmm.049343",
+      "human": 0.2,
+      "pmid": 35758026,
+      "title": "Arap1 loss causes retinal pigment epithelium phagocytic dysfunction and subsequent photoreceptor death.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [
+        { "41265626": 2026 },
+        { "40369608": 2025 },
+        { "40035725": 2025 },
+        { "40733161": 2025 },
+        { "39433211": 2025 }
+      ],
+      "year": 2022,
+      "journal": "Dis Model Mech",
+      "is_research_article": true,
+      "citation_count": 5,
+      "field_citation_rate": 5.834978010741711,
+      "expected_citations_per_year": 2.3605772139240813,
+      "citations_per_year": 1.25,
+      "relative_citation_ratio": 0.5295315029844228,
+      "nih_percentile": 28.9,
+      "molecular_cellular": 0.2,
+      "x_coord": 0.3464101615137754,
+      "y_coord": -0.19999999999999998,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [41265626, 40369608, 40035725, 40733161, 39433211],
+      "references": [
+        17652763, 24854863, 30669557, 23669303, 30240610, 14596919, 17032466,
+        25072053, 30228185, 19525957, 19587120, 31336621, 16320245, 23637330,
+        28324111, 24634209, 17823970, 11517213, 11967127, 20543839, 29597005,
+        20685736, 18272790, 29439719, 19324864, 34440696, 12893809, 22131869,
+        24485945, 11062461, 30518789, 31486768, 20182540, 17854762, 20134024,
+        20463783, 11804590, 19117932, 11708890, 32842471, 24664686, 21275903,
+        15829569, 29467281, 16001398, 19234351, 18836173, 21212186, 25991907,
+        18626943, 30567931, 17981136, 25793273, 17085443, 18939958, 23440929,
+        22262456, 17620600, 19531213, 20485680
+      ],
+      "provisional": false,
+      "last_modified": "2026-03-01T07:08:29.392Z"
+    },
+    {
       "_id": "35876555",
       "animal": 0,
       "authors": [
@@ -33206,210 +33131,6 @@
       ],
       "provisional": false,
       "last_modified": "2026-03-01T06:23:38.934Z"
-    },
-    {
-      "_id": "36737727",
-      "animal": 0.8,
-      "authors": [
-        {
-          "lastName": "Chee",
-          "fullName": "Chee, Justine M",
-          "firstName": "Justine M"
-        },
-        {
-          "lastName": "Lanoue",
-          "fullName": "Lanoue, Louise",
-          "firstName": "Louise"
-        },
-        { "lastName": "Clary", "fullName": "Clary, Dave", "firstName": "Dave" },
-        {
-          "lastName": "Higgins",
-          "fullName": "Higgins, Kendall",
-          "firstName": "Kendall"
-        },
-        {
-          "lastName": "Bower",
-          "fullName": "Bower, Lynette",
-          "firstName": "Lynette"
-        },
-        {
-          "lastName": "Flenniken",
-          "fullName": "Flenniken, Ann",
-          "firstName": "Ann"
-        },
-        { "lastName": "Guo", "fullName": "Guo, Ruolin", "firstName": "Ruolin" },
-        {
-          "lastName": "Adams",
-          "fullName": "Adams, David J",
-          "firstName": "David J"
-        },
-        {
-          "lastName": "Bosch",
-          "fullName": "Bosch, Fatima",
-          "firstName": "Fatima"
-        },
-        {
-          "lastName": "Braun",
-          "fullName": "Braun, Robert E",
-          "firstName": "Robert E"
-        },
-        {
-          "lastName": "Brown",
-          "fullName": "Brown, Steve D M",
-          "firstName": "Steve D M"
-        },
-        {
-          "lastName": "Chin",
-          "fullName": "Chin, H-J Genie",
-          "firstName": "H-J Genie"
-        },
-        {
-          "lastName": "Dickinson",
-          "fullName": "Dickinson, Mary E",
-          "firstName": "Mary E"
-        },
-        {
-          "lastName": "Hsu",
-          "fullName": "Hsu, Chih-Wei",
-          "firstName": "Chih-Wei"
-        },
-        {
-          "lastName": "Dobbie",
-          "fullName": "Dobbie, Michael",
-          "firstName": "Michael"
-        },
-        { "lastName": "Gao", "fullName": "Gao, Xiang", "firstName": "Xiang" },
-        {
-          "lastName": "Galande",
-          "fullName": "Galande, Sanjeev",
-          "firstName": "Sanjeev"
-        },
-        {
-          "lastName": "Grobler",
-          "fullName": "Grobler, Anne",
-          "firstName": "Anne"
-        },
-        {
-          "lastName": "Heaney",
-          "fullName": "Heaney, Jason D",
-          "firstName": "Jason D"
-        },
-        {
-          "lastName": "Herault",
-          "fullName": "Herault, Yann",
-          "firstName": "Yann"
-        },
-        {
-          "lastName": "de Angelis",
-          "fullName": "de Angelis, Martin Hrabe",
-          "firstName": "Martin Hrabe"
-        },
-        {
-          "lastName": "Mammano",
-          "fullName": "Mammano, Fabio",
-          "firstName": "Fabio"
-        },
-        {
-          "lastName": "Nutter",
-          "fullName": "Nutter, Lauryl M J",
-          "firstName": "Lauryl M J"
-        },
-        {
-          "lastName": "Parkinson",
-          "fullName": "Parkinson, Helen",
-          "firstName": "Helen"
-        },
-        { "lastName": "Qin", "fullName": "Qin, Chuan", "firstName": "Chuan" },
-        {
-          "lastName": "Shiroishi",
-          "fullName": "Shiroishi, Toshi",
-          "firstName": "Toshi"
-        },
-        {
-          "lastName": "Sedlacek",
-          "fullName": "Sedlacek, Radislav",
-          "firstName": "Radislav"
-        },
-        { "lastName": "Seong", "fullName": "Seong, J-K", "firstName": "J-K" },
-        { "lastName": "Xu", "fullName": "Xu, Ying", "firstName": "Ying" },
-        { "fullName": "International Mouse Phenotyping Consortium" },
-        {
-          "lastName": "Brooks",
-          "fullName": "Brooks, Brian",
-          "firstName": "Brian"
-        },
-        {
-          "lastName": "McKerlie",
-          "fullName": "McKerlie, Colin",
-          "firstName": "Colin"
-        },
-        {
-          "lastName": "Lloyd",
-          "fullName": "Lloyd, K C Kent",
-          "firstName": "K C Kent"
-        },
-        {
-          "lastName": "Westerberg",
-          "fullName": "Westerberg, Henrik",
-          "firstName": "Henrik"
-        },
-        {
-          "lastName": "Moshiri",
-          "fullName": "Moshiri, Ala",
-          "firstName": "Ala"
-        }
-      ],
-      "doi": "10.1186/s12915-022-01475-0",
-      "human": 0.2,
-      "pmid": 36737727,
-      "title": "Genome-wide screening reveals the genetic basis of mammalian embryonic eye development.",
-      "apt": 0.25,
-      "citedByClinicalArticle": false,
-      "citedByPmidsByYear": [
-        { "41021661": 2025 },
-        { "38185673": 2024 },
-        { "39956648": 2025 },
-        { "38881316": 2024 },
-        { "39694408": 2025 },
-        { "40386355": 2025 },
-        { "41042024": 2025 },
-        { "39820486": 2025 },
-        { "41644829": 2026 },
-        { "39254744": 2024 },
-        { "40751508": 2025 }
-      ],
-      "year": 2023,
-      "journal": "BMC Biol",
-      "is_research_article": true,
-      "citation_count": 11,
-      "field_citation_rate": 7.261055258518425,
-      "expected_citations_per_year": 2.4680618641256173,
-      "citations_per_year": 3.6666666666666665,
-      "relative_citation_ratio": 1.4856461744186018,
-      "nih_percentile": 64.7,
-      "molecular_cellular": 0,
-      "x_coord": 0.6928203230275509,
-      "y_coord": -0.2,
-      "is_clinical": false,
-      "cited_by_clin": null,
-      "cited_by": [
-        41021661, 38185673, 39956648, 38881316, 39694408, 40386355, 41042024,
-        39820486, 41644829, 39254744, 40751508
-      ],
-      "references": [
-        17576678, 24162842, 10802651, 1684639, 33378393, 22940749, 10592173,
-        23669550, 24177921, 30476243, 31781166, 26787175, 20104601, 15977175,
-        6876117, 8837770, 28698599, 27701636, 20691855, 27965955, 28778798,
-        27814572, 35740972, 31552081, 17655833, 25436979, 31095607, 21540023,
-        23071378, 22340503, 34524473, 30403890, 11826019, 23009755, 20066439,
-        7502239, 29487109, 29141214, 17914432, 32164325, 22447858, 24078476,
-        7916661, 30919078, 27899595, 29847629, 25992600, 9375918, 31161981,
-        18039390, 27998989, 20104595, 33290552, 22566555, 27895970, 7241531,
-        22450536, 24836451, 27626380, 30588515, 27996060, 31058441, 32676032,
-        27652319, 24859618, 25428369
-      ],
-      "provisional": false,
-      "last_modified": "2026-03-01T06:25:57.593Z"
     },
     {
       "_id": "36824790",
@@ -43200,6 +42921,357 @@
       ],
       "provisional": false,
       "last_modified": "2026-03-01T06:14:12.420Z"
+    },
+    {
+      "_id": "39833678",
+      "animal": 0.75,
+      "authors": [
+        { "lastName": "Vo", "fullName": "Vo, Peter", "firstName": "Peter" },
+        {
+          "lastName": "Imai-Leonard",
+          "fullName": "Imai-Leonard, Denise M",
+          "firstName": "Denise M"
+        },
+        {
+          "lastName": "Yang",
+          "fullName": "Yang, Benjamin",
+          "firstName": "Benjamin"
+        },
+        {
+          "lastName": "Briere",
+          "fullName": "Briere, Andrew",
+          "firstName": "Andrew"
+        },
+        { "lastName": "Shao", "fullName": "Shao, Andy", "firstName": "Andy" },
+        {
+          "lastName": "Casanova",
+          "fullName": "Casanova, M Isabel",
+          "firstName": "M Isabel"
+        },
+        {
+          "lastName": "Adams",
+          "fullName": "Adams, David",
+          "firstName": "David"
+        },
+        {
+          "lastName": "Amano",
+          "fullName": "Amano, Takanori",
+          "firstName": "Takanori"
+        },
+        {
+          "lastName": "Amarie",
+          "fullName": "Amarie, Oana",
+          "firstName": "Oana"
+        },
+        {
+          "lastName": "Berberovic",
+          "fullName": "Berberovic, Zorana",
+          "firstName": "Zorana"
+        },
+        {
+          "lastName": "Bower",
+          "fullName": "Bower, Lynette",
+          "firstName": "Lynette"
+        },
+        {
+          "lastName": "Braun",
+          "fullName": "Braun, Robert",
+          "firstName": "Robert"
+        },
+        {
+          "lastName": "Brown",
+          "fullName": "Brown, Steve",
+          "firstName": "Steve"
+        },
+        {
+          "lastName": "Burrill",
+          "fullName": "Burrill, Samantha",
+          "firstName": "Samantha"
+        },
+        {
+          "lastName": "Cho",
+          "fullName": "Cho, Soo Young",
+          "firstName": "Soo Young"
+        },
+        {
+          "lastName": "Clementson-Mobbs",
+          "fullName": "Clementson-Mobbs, Sharon",
+          "firstName": "Sharon"
+        },
+        {
+          "lastName": "D'Souza",
+          "fullName": "D'Souza, Abigail",
+          "firstName": "Abigail"
+        },
+        {
+          "lastName": "Dickinson",
+          "fullName": "Dickinson, Mary",
+          "firstName": "Mary"
+        },
+        {
+          "lastName": "Eskandarian",
+          "fullName": "Eskandarian, Mohammad",
+          "firstName": "Mohammad"
+        },
+        {
+          "lastName": "Flenniken",
+          "fullName": "Flenniken, Ann M",
+          "firstName": "Ann M"
+        },
+        {
+          "lastName": "Fuchs",
+          "fullName": "Fuchs, Helmut",
+          "firstName": "Helmut"
+        },
+        {
+          "lastName": "Gailus-Durner",
+          "fullName": "Gailus-Durner, Valerie",
+          "firstName": "Valerie"
+        },
+        {
+          "lastName": "Heaney",
+          "fullName": "Heaney, Jason",
+          "firstName": "Jason"
+        },
+        {
+          "lastName": "Hérault",
+          "fullName": "Hérault, Yann",
+          "firstName": "Yann"
+        },
+        {
+          "lastName": "Angelis",
+          "fullName": "Angelis, Martin Hrabe de",
+          "firstName": "Martin Hrabe de"
+        },
+        {
+          "lastName": "Hsu",
+          "fullName": "Hsu, Chih-Wei",
+          "firstName": "Chih-Wei"
+        },
+        {
+          "lastName": "Jin",
+          "fullName": "Jin, Shundan",
+          "firstName": "Shundan"
+        },
+        {
+          "lastName": "Joynson",
+          "fullName": "Joynson, Russell",
+          "firstName": "Russell"
+        },
+        {
+          "lastName": "Kang",
+          "fullName": "Kang, Yeon Kyung",
+          "firstName": "Yeon Kyung"
+        },
+        { "lastName": "Kim", "fullName": "Kim, Haerim", "firstName": "Haerim" },
+        {
+          "lastName": "Masuya",
+          "fullName": "Masuya, Hiroshi",
+          "firstName": "Hiroshi"
+        },
+        {
+          "lastName": "Meziane",
+          "fullName": "Meziane, Hamid",
+          "firstName": "Hamid"
+        },
+        {
+          "lastName": "Murray",
+          "fullName": "Murray, Steve",
+          "firstName": "Steve"
+        },
+        {
+          "lastName": "Nam",
+          "fullName": "Nam, Ki-Hoan",
+          "firstName": "Ki-Hoan"
+        },
+        { "lastName": "Noh", "fullName": "Noh, Hyuna", "firstName": "Hyuna" },
+        {
+          "lastName": "Nutter",
+          "fullName": "Nutter, Lauryl M J",
+          "firstName": "Lauryl M J"
+        },
+        {
+          "lastName": "Palkova",
+          "fullName": "Palkova, Marcela",
+          "firstName": "Marcela"
+        },
+        {
+          "lastName": "Prochazka",
+          "fullName": "Prochazka, Jan",
+          "firstName": "Jan"
+        },
+        {
+          "lastName": "Raishbrook",
+          "fullName": "Raishbrook, Miles Joseph",
+          "firstName": "Miles Joseph"
+        },
+        {
+          "lastName": "Riet",
+          "fullName": "Riet, Fabrice",
+          "firstName": "Fabrice"
+        },
+        {
+          "lastName": "Ryan",
+          "fullName": "Ryan, Jennifer",
+          "firstName": "Jennifer"
+        },
+        {
+          "lastName": "Salazar",
+          "fullName": "Salazar, Jason",
+          "firstName": "Jason"
+        },
+        {
+          "lastName": "Seavey",
+          "fullName": "Seavey, Zachery",
+          "firstName": "Zachery"
+        },
+        {
+          "lastName": "Seavitt",
+          "fullName": "Seavitt, John Richard",
+          "firstName": "John Richard"
+        },
+        {
+          "lastName": "Sedlacek",
+          "fullName": "Sedlacek, Radislav",
+          "firstName": "Radislav"
+        },
+        {
+          "lastName": "Selloum",
+          "fullName": "Selloum, Mohammed",
+          "firstName": "Mohammed"
+        },
+        {
+          "lastName": "Seo",
+          "fullName": "Seo, Kyoung Yul",
+          "firstName": "Kyoung Yul"
+        },
+        {
+          "lastName": "Seong",
+          "fullName": "Seong, Je Kyung",
+          "firstName": "Je Kyung"
+        },
+        {
+          "lastName": "Shin",
+          "fullName": "Shin, Hae-Sol",
+          "firstName": "Hae-Sol"
+        },
+        {
+          "lastName": "Shiroishi",
+          "fullName": "Shiroishi, Toshihiko",
+          "firstName": "Toshihiko"
+        },
+        {
+          "lastName": "Stewart",
+          "fullName": "Stewart, Michelle",
+          "firstName": "Michelle"
+        },
+        {
+          "lastName": "Svenson",
+          "fullName": "Svenson, Karen",
+          "firstName": "Karen"
+        },
+        {
+          "lastName": "Tamura",
+          "fullName": "Tamura, Masaru",
+          "firstName": "Masaru"
+        },
+        {
+          "lastName": "Tolentino",
+          "fullName": "Tolentino, Heather",
+          "firstName": "Heather"
+        },
+        {
+          "lastName": "Udensi",
+          "fullName": "Udensi, Uchechukwu",
+          "firstName": "Uchechukwu"
+        },
+        { "lastName": "Wells", "fullName": "Wells, Sara", "firstName": "Sara" },
+        {
+          "lastName": "White",
+          "fullName": "White, Jacqueline",
+          "firstName": "Jacqueline"
+        },
+        {
+          "lastName": "Willett",
+          "fullName": "Willett, Amelia",
+          "firstName": "Amelia"
+        },
+        {
+          "lastName": "Wotton",
+          "fullName": "Wotton, Janine",
+          "firstName": "Janine"
+        },
+        {
+          "lastName": "Wurst",
+          "fullName": "Wurst, Wolfgang",
+          "firstName": "Wolfgang"
+        },
+        {
+          "lastName": "Yoshiki",
+          "fullName": "Yoshiki, Atsushi",
+          "firstName": "Atsushi"
+        },
+        { "fullName": "International Mouse Phenotyping Consortium" },
+        {
+          "lastName": "Lanoue",
+          "fullName": "Lanoue, Louise",
+          "firstName": "Louise"
+        },
+        {
+          "lastName": "Lloyd",
+          "fullName": "Lloyd, K C Kent",
+          "firstName": "K C Kent"
+        },
+        {
+          "lastName": "Leonard",
+          "fullName": "Leonard, Brian C",
+          "firstName": "Brian C"
+        },
+        {
+          "lastName": "Roux",
+          "fullName": "Roux, Michel J",
+          "firstName": "Michel J"
+        },
+        {
+          "lastName": "McKerlie",
+          "fullName": "McKerlie, Colin",
+          "firstName": "Colin"
+        },
+        {
+          "lastName": "Moshiri",
+          "fullName": "Moshiri, Ala",
+          "firstName": "Ala"
+        }
+      ],
+      "doi": "10.1186/s12864-025-11222-8",
+      "human": 0.25,
+      "pmid": 39833678,
+      "title": "Systematic ocular phenotyping of 8,707 knockout mouse lines identifies genes associated with abnormal corneal phenotypes.",
+      "apt": 0.05,
+      "citedByClinicalArticle": false,
+      "citedByPmidsByYear": [{ "41021661": 2025 }, { "40323269": 2025 }],
+      "year": 2025,
+      "journal": "BMC Genomics",
+      "is_research_article": true,
+      "citation_count": 2,
+      "field_citation_rate": 6.879024879080947,
+      "expected_citations_per_year": null,
+      "citations_per_year": 2,
+      "relative_citation_ratio": null,
+      "nih_percentile": null,
+      "molecular_cellular": 0,
+      "x_coord": 0.649519052838329,
+      "y_coord": -0.125,
+      "is_clinical": false,
+      "cited_by_clin": null,
+      "cited_by": [41021661, 40323269],
+      "references": [
+        33833456, 19236704, 33125081, 37301944, 10592173, 31441146, 26314589,
+        20015972, 38359414, 19337156, 31591642, 15448476, 27625877, 30588515,
+        36305825, 12952881, 34651173, 20642439
+      ],
+      "provisional": false,
+      "last_modified": "2026-03-08T06:02:47.360Z"
     },
     {
       "_id": "39836750",
