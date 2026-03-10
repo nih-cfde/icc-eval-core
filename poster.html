@@ -30,6 +30,26 @@
       polyline {
         @apply fill-none stroke-4;
       }
+
+      .group {
+        @apply flex flex-col pl-4;
+
+        & > .group {
+          @apply border-l;
+        }
+
+        p {
+          @apply text-left my-0.5;
+        }
+      }
+
+      .subtle {
+        @apply opacity-50 text-sm;
+      }
+
+      .repo {
+        @apply text-center font-bold -ml-4 p-2 font-mono bg-current/5;
+      }
     </style>
   </head>
 
@@ -37,19 +57,11 @@
     class="flex flex-col gap-8 p-8 w-[36in] h-[24in] font-[Plus_Jakarta_Sans] border"
   >
     <header class="flex justify-center items-center gap-15 p-8 bg-sky-100">
-      <img src="./app/public/icon.png" class="size-20" />
-
-      <svg class="w-0 grow h-1/2 overflow-visible" preserveAspectRatio="none">
-        <polyline
-          class="stroke-violet-300"
-          vector-effect="non-scaling-stroke"
-        />
-        <polyline
-          class="stroke-purple-400"
-          vector-effect="non-scaling-stroke"
-        />
+      <svg class="w-0 grow h-1/4 overflow-visible" preserveAspectRatio="none">
         <polyline class="stroke-sky-500" vector-effect="non-scaling-stroke" />
       </svg>
+
+      <img src="./app/public/icon.png" class="size-20" />
 
       <hgroup class="flex flex-col items-center gap-2">
         <h1 class="font-medium tracking-wider text-4xl uppercase text-center">
@@ -58,19 +70,11 @@
         <div class="text-xl">Integration and Coordination Center (ICC)</div>
       </hgroup>
 
-      <svg class="w-0 grow h-1/2 overflow-visible" preserveAspectRatio="none">
-        <polyline
-          class="stroke-violet-300"
-          vector-effect="non-scaling-stroke"
-        />
-        <polyline
-          class="stroke-purple-400"
-          vector-effect="non-scaling-stroke"
-        />
+      <img src="./app/public/icon.png" class="size-20 -scale-x-100" />
+
+      <svg class="w-0 grow h-1/4 overflow-visible" preserveAspectRatio="none">
         <polyline class="stroke-sky-500" vector-effect="non-scaling-stroke" />
       </svg>
-
-      <img src="./app/public/icon.png" class="size-20 -scale-x-100" />
     </header>
 
     <main class="columns-3 gap-8">
@@ -79,10 +83,10 @@
           <h2>Motivation</h2>
 
           <p>
-            The ICC is tasked with (among other things) gathering and presenting
-            information about CFDE projects. We want to allow project groups and
-            the NIH to easily see the activity and impact of their work in a
-            simple and centralized way.
+            The <b>ICC</b> is tasked with (among other things) gathering and
+            presenting information about CFDE projects. We want to allow project
+            <b>groups</b> and the <b>NIH</b> to easily see the activity and
+            impact of their work in a simple and centralized way.
           </p>
 
           <p>
@@ -93,10 +97,7 @@
             software architecture to handle them.
           </p>
 
-          <p>
-            All of the code discussed here is viewable in the public GitHub
-            repo:
-          </p>
+          <p>Code discussed here is viewable in the public GitHub repo:</p>
           <img src="./qr-code.svg" class="size-20 absolute bottom-4 right-4" />
         </section>
 
@@ -110,16 +111,18 @@
             <div>
               APIs available for some info, but some need webpage scraping
             </div>
+            <b>Automation</b>
+            <div>
+              Some (very valuable) info is not available programmatically at all
+            </div>
             <b>Scale</b>
             <div>Large # of projects, queries can take a long time</div>
             <b>Complexity</b>
             <div>
               Info is complex, dense, and different structures and formats
             </div>
-            <b>Simplicity</b>
-            <div>
-              Project groups don't have time to set up complex integration
-            </div>
+            <b>Time Burden</b>
+            <div>Groups don't have time to set up complex integration</div>
             <b>Transparency</b>
             <div>
               Everyone should be able to see <i>how</i> all info is gathered
@@ -135,38 +138,148 @@
           <div class="grid grid-cols-[--spacing(32)_1fr] gap-x-2 leading-loose">
             <b>TypeScript</b>
             <div>
-              to maintain full end-to-end type safety, from gathering to
+              To maintain full end-to-end type safety, from gathering to
               displaying
             </div>
             <b>Node</b>
-            <div>to run gathering process and other parts of pipeline</div>
+            <div>To run gathering process and other parts of pipeline</div>
             <b>Vue</b>
             <div>
-              to create live web dashboard (better than re-emailing PDFs)
+              To create live web dashboard (better than re-emailing PDFs)
             </div>
             <b>GitHub Actions</b>
-            <div>
-              to automatically run pipeline, and test and deploy dashboard
-            </div>
+            <div>To automatically run pipeline, tests, deployment, etc.</div>
             <b>Various tools</b>
-            <div>to parse CSV, PDF, etc.</div>
+            <div>To parse CSV, PDF, etc.</div>
             <b>Playwright</b>
             <div>
-              to scrape HTML pages (and print dashboard as PDFs as needed)
+              To scrape HTML pages (and print dashboard as PDFs as needed)
             </div>
             <b>Custom tools</b>
             <div>
-              to auto-parallelize and cache (w/ TTL) all network requests
+              To auto-parallelize and cache (w/ TTL) all network requests
             </div>
             <b>API Clients</b>
-            <div>to ease gathering from e.g. GitHub and Google Analytics</div>
+            <div>To ease gathering from e.g. GitHub and Google Analytics</div>
           </div>
         </section>
       </div>
 
       <div class="column">
         <section>
-          <h2>Approach</h2>
+          <h2>Strategy</h2>
+
+          <p>
+            To address <i>transparency</i>, we devised a <b>public</b> &
+            <b>private</b> repo split. <b>Public</b> has (virtually) all of our
+            code and the non-sensitive info. <b>Private</b> is barebones: it has
+            one basic GitHub Actions workflow (to copy and run the exact code in
+            <b>public</b>) and the sensitive info.
+          </p>
+
+          <p>
+            To address <i>time burden</i>, we've devised ways to keep the manual
+            steps groups need to perform <i>as minimal as possible</i>:
+          </p>
+
+          <div class="grid grid-cols-[--spacing(40)_1fr] gap-x-2 leading-loose">
+            <b>Google Analytics</b>
+            <div>Groups "invite" our account to their properties</div>
+            <b></b>
+            <div>
+              Groups add custom "tag" their properties w/ their core project #s
+            </div>
+            <b>GitHub</b>
+            <div>Groups tag their repos w/ their core project #s</div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Pipeline</h2>
+
+          <div class="grid grid-cols-2 -mx-8 -mb-8">
+            <div class="group bg-lime-100">
+              <h3 class="repo">nih-cfde/icc-eval-core</h3>
+              <p><b>Start</b> on daily schedule</p>
+              <p>Run <b>gather process</b>, <i>public</i> mode</p>
+              <div class="group">
+                <p>
+                  <b>Projects</b><br />
+                  <span>Number, activity. code, etc.</span><br />
+                  <span class="subtle">commonfund.nih.gov</span>
+                </p>
+              </div>
+              <div class="group">
+                <p>
+                  <b>Project Details</b><br />
+                  <span>Name, award $, dates, etc.</span><br />
+                  <span class="subtle">reporter.nih.gov</span>
+                </p>
+              </div>
+              <div class="group">
+                <p>
+                  <b>Publications</b><br />
+                  <span>Title, dates, citations, etc.</span><br />
+                  <span class="subtle">iCite, reporter</span>
+                </p>
+              </div>
+              <div class="group">
+                <p>
+                  <b>Journals</b><br />
+                  <span class="subtle">eutils, scimago</span>
+                </p>
+              </div>
+              <div class="group">
+                <p>
+                  <b>Store</b> (public) results in repo<br />
+                  <span class="subtle"
+                    >Raw responses & normalized pruned JSON</span
+                  >
+                </p>
+              </div>
+              <p><b>Trigger private</b> repo</p>
+            </div>
+
+            <div class="group bg-rose-100">
+              <h3 class="repo">nih-cfde/icc-eval-core-private</h3>
+
+              <p><b>Check out</b> public repo code</p>
+              <p>Get GH Actions <b>secrets</b> (API keys)</p>
+              <p>Run <b>gather process</b>, <i>private</i> mode</p>
+              <div class="group">
+                <p>
+                  <b>Google Analytics</b>
+                </p>
+                <div class="group">
+                  <p>Get all sites we have access to</p>
+                  <p>Match sites to projects by tag</p>
+                  <p>Gather # of users/sessions, top countries, etc.</p>
+                </div>
+              </div>
+              <div class="group">
+                <p>
+                  <b>GitHub</b>
+                </p>
+                <div class="group">
+                  <p>Search GitHub for any repo tagged with CFDE project #</p>
+                  <p>Match repos to projects by tag</p>
+                  <p>Gather stars, PRs, commits over time, languages, etc.</p>
+                </div>
+              </div>
+              <div class="group">
+                <p>
+                  <b>Store</b> (private) results in repo<br />
+                  <span class="subtle"
+                    >Raw responses & normalized pruned JSON</span
+                  >
+                </p>
+              </div>
+              <p>
+                <b>Build dashboard</b> and <b>deploy</b> to live site<br />
+                <span class="subtle">(just functionality, no info)</span><br />
+              </p>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -179,7 +292,7 @@
             Array(1000)
               .fill(0)
               .map((_, x) => {
-                const y = Math.sin(x / 30) + Math.cos(x / 15);
+                const y = Math.sin(x / 6) + Math.cos(x / 10);
                 return [x, y - index / 4].join(" ");
               })
               .join(" "),
