@@ -32,14 +32,10 @@
       }
 
       .group {
-        @apply flex flex-col pl-4;
-
-        & > .group {
-          @apply border-l;
-        }
+        @apply flex flex-col pl-4 border-l;
 
         p {
-          @apply text-left my-0.5;
+          @apply text-left my-0.5 pl-4 -indent-4;
         }
       }
 
@@ -48,7 +44,11 @@
       }
 
       .repo {
-        @apply text-center font-bold -ml-4 p-2 font-mono bg-current/5;
+        @apply relative text-center font-bold p-2 font-mono;
+
+        &::before {
+          @apply content-[''] absolute inset-0 bg-current/5;
+        }
       }
     </style>
   </head>
@@ -149,18 +149,20 @@
             </div>
             <b>GitHub Actions</b>
             <div>To automatically run pipeline, tests, deployment, etc.</div>
-            <b>Various tools</b>
-            <div>To parse CSV, PDF, etc.</div>
             <b>Playwright</b>
             <div>
               To scrape HTML pages (and print dashboard as PDFs as needed)
             </div>
+            <b>Various libraries</b>
+            <div>To parse CSV, PDF, etc.</div>
             <b>Custom tools</b>
             <div>
               To auto-parallelize and cache (w/ TTL) all network requests
             </div>
-            <b>API Clients</b>
+            <b>API clients</b>
             <div>To ease gathering from e.g. GitHub and Google Analytics</div>
+            <b>Django</b>
+            <div>To create backend database and API to serve the dashboard</div>
           </div>
         </section>
       </div>
@@ -197,36 +199,42 @@
         <section>
           <h2>Pipeline</h2>
 
-          <div class="grid grid-cols-2 -mx-8 -mb-8">
-            <div class="group bg-lime-100">
-              <h3 class="repo">nih-cfde/icc-eval-core</h3>
+          <div
+            class="grid grid-cols-2 -mx-8 -mb-8 *:odd:bg-emerald-100 *:even:bg-purple-100"
+          >
+            <h3 class="repo">nih-cfde/icc-eval-core</h3>
+
+            <h3 class="repo">nih-cfde/icc-eval-core-private</h3>
+
+            <div class="flex flex-col p-4">
               <p><b>Start</b> on daily schedule</p>
-              <p>Run <b>gather process</b>, <i>public</i> mode</p>
+              <p>Run <b>gather process</b> in <i>public</i> mode</p>
               <div class="group">
                 <p>
-                  <b>Projects</b><br />
-                  <span>Number, activity. code, etc.</span><br />
+                  <b>Funding Opportunities</b><br />
+                  <span>ID, activity code, etc.</span><br />
                   <span class="subtle">commonfund.nih.gov</span>
                 </p>
               </div>
               <div class="group">
                 <p>
-                  <b>Project Details</b><br />
-                  <span>Name, award $, dates, etc.</span><br />
+                  <b>Projects</b><br />
+                  <span>#, name, award $, dates, etc.</span><br />
                   <span class="subtle">reporter.nih.gov</span>
                 </p>
               </div>
               <div class="group">
                 <p>
                   <b>Publications</b><br />
-                  <span>Title, dates, citations, etc.</span><br />
-                  <span class="subtle">iCite, reporter</span>
+                  <span>Title, date, citations, etc.</span><br />
+                  <span class="subtle">iCite, RePORTER</span>
                 </p>
               </div>
               <div class="group">
                 <p>
                   <b>Journals</b><br />
-                  <span class="subtle">eutils, scimago</span>
+                  <span>Name, rank, ISSN, etc.</span><br />
+                  <span class="subtle">E-utilities, Scimago</span>
                 </p>
               </div>
               <div class="group">
@@ -240,12 +248,10 @@
               <p><b>Trigger private</b> repo</p>
             </div>
 
-            <div class="group bg-rose-100">
-              <h3 class="repo">nih-cfde/icc-eval-core-private</h3>
-
+            <div class="flex flex-col p-4">
               <p><b>Check out</b> public repo code</p>
               <p>Get GH Actions <b>secrets</b> (API keys)</p>
-              <p>Run <b>gather process</b>, <i>private</i> mode</p>
+              <p>Run <b>gather process</b> in <i>private</i> mode</p>
               <div class="group">
                 <p>
                   <b>Google Analytics</b>
@@ -253,7 +259,9 @@
                 <div class="group">
                   <p>Get all sites we have access to</p>
                   <p>Match sites to projects by tag</p>
-                  <p>Gather # of users/sessions, top countries, etc.</p>
+                  <p>
+                    Gather # of users/sessions over time, top countries, etc.
+                  </p>
                 </div>
               </div>
               <div class="group">
@@ -282,6 +290,16 @@
           </div>
         </section>
       </div>
+
+      <div class="column">
+        <section>
+          <h2>Access</h2>
+        </section>
+
+        <section>
+          <h2>Results</h2>
+        </section>
+      </div>
     </main>
 
     <script>
@@ -298,7 +316,6 @@
               .join(" "),
           ),
         );
-
         const { x, y, width, height } = svg.getBBox();
         svg.setAttribute("viewBox", [x, y, width, height].join(" "));
       });
