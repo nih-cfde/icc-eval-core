@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="[font-size:0.25in]">
+<html class="[font-size:0.35in]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,10 @@
       rel="stylesheet"
     />
     <style type="text/tailwindcss">
+      * {
+        text-box: trim-both text;
+      }
+
       .column {
         @apply h-full grow flex flex-col gap-8 break-inside-avoid-column;
       }
@@ -31,30 +35,22 @@
         @apply fill-none stroke-4;
       }
 
-      .group {
-        @apply flex flex-col pl-4 border-l;
-
-        p {
-          @apply text-left my-0.5 pl-4 -indent-4;
-        }
-      }
-
       .subtle {
-        @apply opacity-50 text-sm;
+        @apply opacity-65 text-sm;
       }
 
-      .repo {
-        @apply relative text-center font-bold p-2 font-mono;
+      .fe {
+        @apply p-0.5 text-emerald-600 font-bold;
+      }
 
-        &::before {
-          @apply content-[''] absolute inset-0 bg-current/5;
-        }
+      .be {
+        @apply p-0.5 text-violet-600 font-bold;
       }
     </style>
   </head>
 
   <body
-    class="flex flex-col gap-8 p-8 w-[36in] h-[24in] font-[Plus_Jakarta_Sans] border"
+    class="flex flex-col gap-8 p-8 w-[48in] h-[36in] font-[Plus_Jakarta_Sans] border"
   >
     <header class="flex justify-center items-center gap-15 p-8 bg-sky-100">
       <svg class="w-0 grow h-1/4 overflow-visible" preserveAspectRatio="none">
@@ -104,7 +100,7 @@
         <section>
           <h2>Challenges</h2>
 
-          <div class="grid grid-cols-[--spacing(32)_1fr] gap-x-2 leading-loose">
+          <div class="grid grid-cols-[--spacing(32)_1fr] gap-4 leading-loose">
             <b>Frequency</b>
             <div>Need to gather info ideally daily</div>
             <b>Availability</b>
@@ -135,12 +131,9 @@
         <section>
           <h2>Technologies</h2>
 
-          <div class="grid grid-cols-[--spacing(32)_1fr] gap-x-2 leading-loose">
+          <div class="grid grid-cols-[--spacing(32)_1fr] gap-4 leading-loose">
             <b>TypeScript</b>
-            <div>
-              To maintain full end-to-end type safety, from gathering to
-              displaying
-            </div>
+            <div>To maintain full type safety from gathering to displaying</div>
             <b>Node</b>
             <div>To run gathering process and other parts of pipeline</div>
             <b>Vue</b>
@@ -184,15 +177,13 @@
             steps groups need to perform <i>as minimal as possible</i>:
           </p>
 
-          <div class="grid grid-cols-[--spacing(40)_1fr] gap-x-2 leading-loose">
+          <div class="grid grid-cols-[--spacing(40)_1fr] gap-4 leading-loose">
             <b>Google Analytics</b>
-            <div>Groups "invite" our account to their properties</div>
+            <div>"Invite" our account to property</div>
             <b></b>
-            <div>
-              Groups add custom "tag" their properties w/ their core project #s
-            </div>
+            <div>Add custom "tag" to property w/ core project #</div>
             <b>GitHub</b>
-            <div>Groups tag their repos w/ their core project #s</div>
+            <div>Tag repo w/ core project #</div>
           </div>
         </section>
 
@@ -200,91 +191,81 @@
           <h2>Pipeline</h2>
 
           <div
-            class="grid grid-cols-2 -mx-8 -mb-8 *:odd:bg-emerald-100 *:even:bg-purple-100"
+            class="grid grid-cols-2 -mx-8 -mb-8 [&_p]:pl-4 [&_p]:-indent-4 [&_p]:text-left!"
           >
-            <h3 class="repo">nih-cfde/icc-eval-core</h3>
+            <h3 class="text-center font-bold p-2 font-mono bg-emerald-200">
+              nih-cfde/icc-eval-core
+            </h3>
 
-            <h3 class="repo">nih-cfde/icc-eval-core-private</h3>
+            <h3 class="text-center font-bold p-2 font-mono bg-violet-200">
+              nih-cfde/icc-eval-core-private
+            </h3>
 
-            <div class="flex flex-col p-4">
+            <div class="flex flex-col gap-4 p-4 bg-emerald-50">
               <p><b>Start</b> on daily schedule</p>
               <p>Run <b>gather process</b> in <i>public</i> mode</p>
-              <div class="group">
+              <div class="flex flex-col gap-4 pl-4 border-l">
                 <p>
                   <b>Funding Opportunities</b><br />
                   <span>ID, activity code, etc.</span><br />
                   <span class="subtle">commonfund.nih.gov</span>
                 </p>
-              </div>
-              <div class="group">
                 <p>
                   <b>Projects</b><br />
                   <span>#, name, award $, dates, etc.</span><br />
                   <span class="subtle">reporter.nih.gov</span>
                 </p>
-              </div>
-              <div class="group">
                 <p>
                   <b>Publications</b><br />
                   <span>Title, date, citations, etc.</span><br />
                   <span class="subtle">iCite, RePORTER</span>
                 </p>
-              </div>
-              <div class="group">
                 <p>
                   <b>Journals</b><br />
                   <span>Name, rank, ISSN, etc.</span><br />
                   <span class="subtle">E-utilities, Scimago</span>
                 </p>
-              </div>
-              <div class="group">
                 <p>
                   <b>Store</b> (public) results in repo<br />
-                  <span class="subtle"
-                    >Raw responses & normalized pruned JSON</span
-                  >
+                  <span class="subtle">Raw & normalized/pruned JSON</span>
                 </p>
               </div>
               <p><b>Trigger private</b> repo</p>
             </div>
 
-            <div class="flex flex-col p-4">
+            <div class="flex flex-col gap-4 p-4 bg-violet-50">
               <p><b>Check out</b> public repo code</p>
               <p>Get GH Actions <b>secrets</b> (API keys)</p>
               <p>Run <b>gather process</b> in <i>private</i> mode</p>
-              <div class="group">
+              <div class="flex flex-col gap-4 pl-4 border-l">
                 <p>
                   <b>Google Analytics</b>
                 </p>
-                <div class="group">
+                <div class="flex flex-col gap-4 pl-4 border-l">
                   <p>Get all sites we have access to</p>
                   <p>Match sites to projects by tag</p>
                   <p>
                     Gather # of users/sessions over time, top countries, etc.
                   </p>
                 </div>
-              </div>
-              <div class="group">
                 <p>
                   <b>GitHub</b>
                 </p>
-                <div class="group">
+                <div class="flex flex-col gap-4 pl-4 border-l">
                   <p>Search GitHub for any repo tagged with CFDE project #</p>
                   <p>Match repos to projects by tag</p>
                   <p>Gather stars, PRs, commits over time, languages, etc.</p>
                 </div>
-              </div>
-              <div class="group">
                 <p>
                   <b>Store</b> (private) results in repo<br />
-                  <span class="subtle"
-                    >Raw responses & normalized pruned JSON</span
-                  >
+                  <span class="subtle">Raw & normalized/pruned JSON</span>
                 </p>
               </div>
               <p>
                 <b>Build dashboard</b> and <b>deploy</b> to live site<br />
-                <span class="subtle">(just functionality, no info)</span><br />
+                <span class="subtle"
+                  >(just functionality & public info, no private)</span
+                ><br />
               </p>
             </div>
           </div>
@@ -294,6 +275,74 @@
       <div class="column">
         <section>
           <h2>Access</h2>
+
+          <p>
+            To ensure appropriate <i>access</i> to private info, we have
+            implemented a standard architecture with social sign-on
+            authentication:
+          </p>
+
+          <div class="grid grid-cols-[auto_auto] gap-8 items-start">
+            <b>Architecture</b>
+            <b>User's POV</b>
+            <div class="grid grid-cols-[repeat(3,auto)] *:p-2">
+              <p class="bg-violet-200">
+                <b>Backend</b><br />
+                <span>Database</span><br />
+                <span class="subtle">w/ private info</span>
+              </p>
+              <span></span>
+              <span></span>
+              <span class="justify-self-center">↕</span>
+              <span></span>
+              <span></span>
+              <p class="bg-indigo-200">
+                <b>Backend</b><br />
+                <span class="subtle">REST API</span>
+              </p>
+              <span class="self-center justify-self-center">↔</span>
+              <p class="bg-emerald-200">
+                <b>Frontend</b><br />
+                <span>Dashboard</span><br />
+                <span class="subtle">w/ public info</span>
+              </p>
+              <span class="justify-self-center">↕</span>
+              <span></span>
+              <span></span>
+              <p class="bg-sky-200">
+                <b>ORCID</b><br />
+                <span class="subtle">Auth provider</span>
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col *:py-2 *:not-last:border-b *:not-last:border-slate-400"
+            >
+              <p>Go to live, public dashboard</p>
+              <p>Browse public info</p>
+              <p>Try to look at your project</p>
+              <p>
+                <span class="fe">FE</span> makes request to
+                <span class="be">BE</span> for private info
+              </p>
+              <p>Access denied, request fails</p>
+              <p>Click "log in"</p>
+              <p>
+                <span class="fe">FE</span> makes request to
+                <span class="be">BE</span>
+              </p>
+              <p>Redirected to ORCID, log in</p>
+              <p><span class="be">BE</span> returns auth cookie</p>
+              <p>
+                Browser saves cookie, <span class="fe">FE</span> can't see it
+              </p>
+              <p>Try to access your project again</p>
+              <p>Browser auto-attaches auth cookie</p>
+              <p><span class="be">BE</span> checks if your ORCID has access</p>
+              <p><span class="be">BE</span> returns (private) project info</p>
+              <p><span class="fe">FE</span> displays it in dashboard</p>
+            </div>
+          </div>
         </section>
 
         <section>
