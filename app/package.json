@@ -11,6 +11,7 @@
     "clean": "rm -rf node_modules bun.lockb && bun pm cache rm"
   },
   "dependencies": {
+    "@tanstack/vue-query": "^5.92.9",
     "@tanstack/vue-table": "^8.21.2",
     "@vueuse/core": "^13.0.0",
     "date-fns": "^4.1.0",

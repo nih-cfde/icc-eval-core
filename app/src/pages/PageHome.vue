@@ -147,9 +147,54 @@
     </div>
   </section>
 
-  <!-- analytics -->
+  <!-- repositories -->
+  <section v-if="repoStatus === 'pending'">
+    <p>Loading</p>
+  </section>
+  <section v-if="repoOverview?.repos">
+    <AppHeading level="2"><Code />Repositories</AppHeading>
 
-  <section v-if="!isEmpty(analyticsOverview.overTime.activeUsers)">
+    <p>High-level info about CFDE software repositories.</p>
+
+    <dl class="details">
+      <div
+        v-for="(repoValue, repoProp, repoIndex) in repoOverview"
+        :key="repoIndex"
+        :style="{
+          gridColumn: typeof repoValue === 'number' ? 'span 1' : 'span 2',
+        }"
+      >
+        <dt>{{ startCase(repoProp) }}</dt>
+        <dd v-if="typeof repoValue === 'number'">
+          {{ format(repoValue, true) }}
+        </dd>
+        <dd v-else class="mini-table">
+          <template
+            v-for="([entryName, entryCount], entryIndex) of Object.entries(
+              repoValue,
+            ).slice(0, 5)"
+            :key="entryIndex"
+          >
+            <span>{{ entryName || "none" }}</span>
+            <span>
+              {{
+                format(
+                  repoProp === "languages" ? bytes(entryCount) : entryCount,
+                  true,
+                )
+              }}
+            </span>
+          </template>
+        </dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- analytics -->
+  <section v-if="analyticsStatus === 'pending'">
+    <p>Loading</p>
+  </section>
+  <section v-if="!isEmpty(analyticsOverview?.overTime.activeUsers)">
     <AppHeading level="2"><Chart />Analytics</AppHeading>
 
     <p>High-level info about CFDE website usage.</p>
@@ -200,49 +245,11 @@
       </div>
     </dl>
   </section>
-
-  <!-- repositories -->
-  <section v-if="repoOverview.repos">
-    <AppHeading level="2"><Code />Repositories</AppHeading>
-
-    <p>High-level info about CFDE software repositories.</p>
-
-    <dl class="details">
-      <div
-        v-for="(repoValue, repoProp, repoIndex) in repoOverview"
-        :key="repoIndex"
-        :style="{
-          gridColumn: typeof repoValue === 'number' ? 'span 1' : 'span 2',
-        }"
-      >
-        <dt>{{ startCase(repoProp) }}</dt>
-        <dd v-if="typeof repoValue === 'number'">
-          {{ format(repoValue, true) }}
-        </dd>
-        <dd v-else class="mini-table">
-          <template
-            v-for="([entryName, entryCount], entryIndex) of Object.entries(
-              repoValue,
-            ).slice(0, 5)"
-            :key="entryIndex"
-          >
-            <span>{{ entryName || "none" }}</span>
-            <span>
-              {{
-                format(
-                  repoProp === "languages" ? bytes(entryCount) : entryCount,
-                  true,
-                )
-              }}
-            </span>
-          </template>
-        </dd>
-      </div>
-    </dl>
-  </section>
 </template>
 
 <script lang="ts">
+import { useQuery } from "@tanstack/vue-query";
+import { getAnalyticsOverview, getRepoOverview } from "@/api";
 import journals from "~/journals.json";
 
 type Publication = (typeof publications)[number];
@@ -277,11 +284,9 @@ import AppTable from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve } from "@/util/array";
 import { bytes, format } from "@/util/string";
-import analyticsOverview from "~/analytics-overview.json";
 import coreProjects from "~/core-projects.json";
 import rawProjects from "~/projects.json";
 import publications from "~/publications.json";
-import repoOverview from "~/repo-overview.json";
 
 /** parse dates */
 const projects = rawProjects.map((raw) => ({
@@ -381,4 +386,16 @@ const publicationCols: Cols<typeof programPublications.value> = [
     name: "Updated",
   },
 ];
+
+/** fetch repo overview */
+const { data: repoOverview, status: repoStatus } = useQuery({
+  queryKey: ["getRepoOverview"],
+  queryFn: getRepoOverview,
+});
+
+/** fetch analytics overview */
+const { data: analyticsOverview, status: analyticsStatus } = useQuery({
+  queryKey: ["getAnalyticsOverview"],
+  queryFn: getAnalyticsOverview,
+});
 </script>
