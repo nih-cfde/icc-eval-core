@@ -11,11 +11,11 @@
       <AppLink v-if="!user && userStatus !== 'pending'" :to="loginLink"
         >Login</AppLink
       >
-      <template v-if="userStatus === 'success'">
+      <template v-if="user && userStatus === 'success'">
         <div
           class="user"
           tabindex="0"
-          :title="`${user.firstName} ${user.lastName}\n${user.orcid}`"
+          :title="`Logged in as: ${user.firstName} ${user.lastName}\nORCID: ${user.orcid}`"
         >
           <div>
             {{
