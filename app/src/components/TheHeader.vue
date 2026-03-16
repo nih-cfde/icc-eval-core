@@ -8,14 +8,24 @@
     </div>
 
     <nav>
+      <AppLink v-if="!user && userStatus !== 'pending'" :to="loginLink"
+        >Login</AppLink
+      >
       <template v-if="userStatus === 'success'">
-        <AppLink v-if="!user" :to="loginLink">Login</AppLink>
-        <template v-else>
-          <span class="user">
-            {{ user.firstName }} {{ user.lastName }} {{ user.orcid }}
-          </span>
-          <AppLink :to="logoutLink">Logout</AppLink>
-        </template>
+        <div
+          class="user"
+          tabindex="0"
+          :title="`${user.firstName} ${user.lastName}\n${user.orcid}`"
+        >
+          <div>
+            {{
+              [user.firstName, user.lastName]
+                .map((part) => part.charAt(0).toUpperCase())
+                .join("")
+            }}
+          </div>
+        </div>
+        <AppLink :to="logoutLink">Logout</AppLink>
       </template>
 
       <AppLink to="/">Home</AppLink>
@@ -91,7 +101,12 @@ nav {
 }
 
 .user {
-  color: var(--theme-dark);
-  font-size: 0.9rem;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--light-gray);
+  color: var(--dark-gray);
 }
 </style>

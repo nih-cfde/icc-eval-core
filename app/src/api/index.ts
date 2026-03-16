@@ -23,8 +23,11 @@ const request = async <Results>(
   /** if simply not logged in, fail gracefully */
   if (response.status === 401) return null;
   if (!response.ok) throw new Error(`Response not OK`);
-  const { results } = (await response.json()) as Paginated<Results>;
-  return results;
+  /** paginated */
+  if ("limit" in params)
+    return ((await response.json()) as Paginated<Results>).results;
+  /** un-paginated */
+  return (await response.json()) as Results;
 };
 
 export const getMe = () =>
@@ -33,6 +36,8 @@ export const getMe = () =>
     firstName: string;
     lastName: string;
     orcid: string;
+    isStaff: boolean;
+    isSuperuser: boolean;
   }>("me");
 
 type Paginated<Results> = {
