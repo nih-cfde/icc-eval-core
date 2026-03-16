@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="[font-size:0.35in]">
+<html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,26 @@
       rel="stylesheet"
     />
     <style type="text/tailwindcss">
+      :root {
+        --width: 48in;
+        --height: 36in;
+      }
+
+      @page {
+        size: var(--width) var(--height);
+      }
+
+      @media print {
+        html {
+          width: var(--width);
+          height: var(--height);
+        }
+      }
+
+      html {
+        font-size: 0.35in;
+      }
+
       * {
         text-box: trim-both text;
       }
@@ -57,7 +77,7 @@
         <polyline class="stroke-sky-500" vector-effect="non-scaling-stroke" />
       </svg>
 
-      <img src="./app/public/icon.png" class="size-20" />
+      <img src="./images/icon.png" class="size-20" />
 
       <hgroup class="flex flex-col items-center gap-2">
         <h1 class="font-medium tracking-wider text-4xl uppercase text-center">
@@ -66,7 +86,7 @@
         <div class="text-xl">Integration and Coordination Center (ICC)</div>
       </hgroup>
 
-      <img src="./app/public/icon.png" class="size-20 -scale-x-100" />
+      <img src="./images/icon.png" class="size-20 -scale-x-100" />
 
       <svg class="w-0 grow h-1/4 overflow-visible" preserveAspectRatio="none">
         <polyline class="stroke-sky-500" vector-effect="non-scaling-stroke" />
@@ -132,10 +152,10 @@
           <h2>Technologies</h2>
 
           <div class="flex gap-8 justify-center items-center *:h-10">
-            <img src="./app/src/assets/typescript-logo.svg" />
-            <img src="./app/src/assets/node-logo.svg" />
-            <img src="./app/src/assets/vue-logo.svg" />
-            <img src="./app/src/assets/github-logo.svg" />
+            <img src="./images/typescript-logo.svg" />
+            <img src="./images/node-logo.svg" />
+            <img src="./images/vue-logo.svg" />
+            <img src="./images/github-logo.svg" />
           </div>
 
           <div class="grid grid-cols-[--spacing(32)_1fr] gap-4 leading-loose">
@@ -210,11 +230,11 @@
 
           <div class="grid grid-cols-[--spacing(40)_1fr] gap-4 leading-loose">
             <b>Google Analytics</b>
-            <div>"Invite" our account to properties</div>
+            <div>"Invite" our account to your properties</div>
             <b></b>
-            <div>Add custom "tags" to properties w/ core project #s</div>
+            <div>Add custom "tags" to properties w/ your core project #s</div>
             <b>GitHub</b>
-            <div>Tag repos w/ core project #s</div>
+            <div>Tag your repos w/ core project #s</div>
           </div>
         </section>
 
@@ -261,7 +281,7 @@
                   <span class="subtle">E-utilities, Scimago</span>
                 </p>
                 <p>
-                  <b>Store</b> (public) results in repo<br />
+                  <b>Store</b> [public] results in repo<br />
                   <span class="subtle">Raw & normalized/pruned JSON</span>
                 </p>
               </div>
@@ -269,7 +289,7 @@
             </div>
 
             <div class="flex flex-col gap-4 p-4 bg-violet-50">
-              <p><b>Check out</b> public repo code</p>
+              <p><b>Check out</b> (copy) public repo locally</p>
               <p>Get GH Actions <b>secrets</b> (API keys)</p>
               <p>Run <b>gather process</b> in <i>private</i> mode</p>
               <div class="flex flex-col gap-4 pl-4 border-l">
@@ -292,7 +312,7 @@
                   <p>Gather stars, PRs, commits over time, languages, etc.</p>
                 </div>
                 <p>
-                  <b>Store</b> (private) results in repo<br />
+                  <b>Store</b> [private] results in repo<br />
                   <span class="subtle">Raw & normalized/pruned JSON</span>
                 </p>
               </div>
@@ -328,7 +348,7 @@
               <span></span>
               <span></span>
               <img
-                src="./app/src/assets/arrow-down.svg"
+                src="./images/arrow-down.svg"
                 class="size-8 place-self-center"
               />
               <span></span>
@@ -340,7 +360,7 @@
               <span></span>
               <span></span>
               <img
-                src="./app/src/assets/arrows-vertical.svg"
+                src="./images/arrows-vertical.svg"
                 class="size-8 place-self-center"
               />
               <span></span>
@@ -350,7 +370,7 @@
                 <span>REST API</span>
               </p>
               <img
-                src="./app/src/assets/arrows-horizontal.svg"
+                src="./images/arrows-horizontal.svg"
                 class="size-8 place-self-center"
               />
               <p class="bg-emerald-200">
@@ -358,7 +378,7 @@
                 <span>Dashboard</span>
               </p>
               <img
-                src="./app/src/assets/arrows-vertical.svg"
+                src="./images/arrows-vertical.svg"
                 class="size-8 place-self-center"
               />
               <span></span>
@@ -415,7 +435,7 @@
           <h2>Results</h2>
 
           <p>
-            Our system is fully automatic, runs quickly and reliably, and is
+            Our method is fully automatic, runs quickly and reliably, and is
             flexible enough to gather many other types of info in the future.
             The dashboard has received positive feedback from project groups and
             NIH staff, successful in providing a convenient and effective way to
@@ -424,15 +444,15 @@
 
           <div class="grid grid-cols-5 grid-rows-2 gap-2 p-2 -mx-8 -mb-8">
             <img
-              src="./app/src/assets/screenshot-1.png"
+              src="./images/screenshot-1.png"
               class="col-span-2 row-span-2"
             />
             <img
-              src="./app/src/assets/screenshot-3.png"
+              src="./images/screenshot-3.png"
               class="col-span-2 row-span-2"
             />
-            <img src="./app/src/assets/screenshot-2.png" />
-            <img src="./app/src/assets/screenshot-4.png" />
+            <img src="./images/screenshot-2.png" />
+            <img src="./images/screenshot-4.png" />
           </div>
         </section>
       </div>
