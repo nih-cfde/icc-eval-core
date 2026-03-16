@@ -106,7 +106,7 @@ nav {
   width: 40px;
   height: 40px;
   border-radius: 999px;
-  background: var(--light-gray);
+  background: #00000010;
   color: var(--dark-gray);
 }
 </style>

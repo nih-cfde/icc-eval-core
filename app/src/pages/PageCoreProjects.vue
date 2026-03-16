@@ -67,6 +67,7 @@ import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { format } from "@/util/string";
+import publicCoreProjects from "~/core-projects.json";
 
 const readmeLink =
   "https://github.com/nih-cfde/icc-eval-core?tab=readme-ov-file#submit-your-project";
@@ -78,14 +79,16 @@ const { data: coreProjects, status: coreProjectStatus } = useQuery({
 
 /** table row data */
 const rows = computed(() =>
-  coreProjects.value?.map((d) => ({
+  (coreProjects.value ?? publicCoreProjects).map((d) => ({
     ...d,
     reposAnalytics: d.repos + d.analytics,
   })),
 );
 
+type Rows = NonNullable<typeof rows.value>;
+
 /** table column definitions */
-const cols: Cols<NonNullable<typeof rows.value>> = [
+const baseCols: Cols<Rows> = [
   {
     slot: "id",
     key: "id",
@@ -117,6 +120,10 @@ const cols: Cols<NonNullable<typeof rows.value>> = [
     key: "publications",
     name: "Publications",
   },
+];
+
+/** extra cols if authorized */
+const extraCols: Cols<Rows> = [
   {
     key: "repos",
     name: "Repositories",
@@ -131,6 +138,11 @@ const cols: Cols<NonNullable<typeof rows.value>> = [
     name: "Rep./Anal.",
   },
 ];
+
+/** combined cols */
+const cols = computed(() =>
+  coreProjects.value ? [...baseCols, ...extraCols] : baseCols,
+);
 </script>
 
 <style scoped>

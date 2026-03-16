@@ -260,6 +260,15 @@ ol {
   white-space: nowrap;
 }
 
+.error {
+  color: var(--error);
+}
+
+.loading {
+  color: var(--dark-gray);
+  font-style: italic;
+}
+
 /** definitions */
 
 dl {

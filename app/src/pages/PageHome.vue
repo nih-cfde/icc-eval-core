@@ -148,13 +148,16 @@
   </section>
 
   <!-- repositories -->
-  <section v-if="repoStatus === 'pending'">
-    <p>Loading</p>
-  </section>
-  <section v-if="repoOverview?.repos">
+  <section>
     <AppHeading level="2"><Code />Repositories</AppHeading>
 
     <p>High-level info about CFDE software repositories.</p>
+
+    <p v-if="repoStatus === 'pending'" class="loading">Loading</p>
+
+    <p v-if="repoOverview === null" class="error">
+      Sorry, you're not authorized to view this data
+    </p>
 
     <dl class="details">
       <div
@@ -191,17 +194,20 @@
   </section>
 
   <!-- analytics -->
-  <section v-if="analyticsStatus === 'pending'">
-    <p>Loading</p>
-  </section>
-  <section v-if="!isEmpty(analyticsOverview?.overTime.activeUsers)">
+  <section>
     <AppHeading level="2"><Chart />Analytics</AppHeading>
 
     <p>High-level info about CFDE website usage.</p>
 
+    <p v-if="analyticsStatus === 'pending'" class="loading">Loading</p>
+
+    <p v-if="analyticsOverview === null" class="error">
+      Sorry, you're not authorized to view this data
+    </p>
+
     <div class="charts">
       <template
-        v-for="(data, metric, key) in analyticsOverview.overTime"
+        v-for="(data, metric, key) in analyticsOverview?.overTime"
         :key="key"
       >
         <AppTimeChart
@@ -270,7 +276,7 @@ export const findJournal = (publication: Publication) => {
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { isEmpty, omit, startCase, sum } from "lodash";
+import { omit, startCase, sum } from "lodash";
 import Book from "@/assets/book.svg";
 import Chart from "@/assets/chart.svg";
 import Code from "@/assets/code.svg";

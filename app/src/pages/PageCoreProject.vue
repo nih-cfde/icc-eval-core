@@ -98,7 +98,11 @@
 
     <p>Software repositories associated with this project.</p>
 
-    <p v-if="projectReposStatus === 'pending'">Loading</p>
+    <p v-if="projectReposStatus === 'pending'" class="loading">Loading</p>
+
+    <p v-if="projectRepos === null" class="error">
+      Sorry, you're not authorized to view this data
+    </p>
 
     <AppTable
       v-if="projectRepos?.length"
@@ -240,7 +244,11 @@
 
     <p>Website metrics associated with this project.</p>
 
-    <p v-if="projectAnalyticsStatus === 'pending'">Loading</p>
+    <p v-if="projectAnalyticsStatus === 'pending'" class="loading">Loading</p>
+
+    <p v-if="projectAnalytics === null" class="error">
+      Sorry, you're not authorized to view this data
+    </p>
 
     <template v-if="projectAnalytics?.length">
       <dl class="details">
@@ -529,7 +537,7 @@ const { data: projectRepos, status: projectReposStatus } = useQuery({
   queryFn: async () => {
     if (!id.value) throw new Error("No core project id");
     const repos = await getRepos(id.value);
-    if (!repos) throw new Error("No repos found");
+    if (repos === null) return null;
     return repos
       .filter((repo) => repo.coreProject === id.value)
       .map((repo) => ({
