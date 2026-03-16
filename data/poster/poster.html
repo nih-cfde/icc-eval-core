@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      :root {
+        --width: 48in;
+        --height: 36in;
+      }
+
+      @page {
+        size: var(--width) var(--height);
+      }
+
+      @media print {
+        html {
+          width: var(--width);
+          height: var(--height);
+        }
+      }
+
+      html {
+        font-size: 0.35in;
+      }
+
+      * {
+        text-box: trim-both text;
+      }
+
+      .column {
+        @apply flex flex-col gap-8 break-inside-avoid-column *:last:grow;
+      }
+
+      section {
+        @apply relative h-full flex flex-col gap-8 bg-sky-100 p-8;
+      }
+
+      h2 {
+        @apply text-center text-2xl uppercase font-medium tracking-wider;
+      }
+
+      p {
+        @apply text-justify leading-loose;
+      }
+
+      polyline {
+        @apply fill-none stroke-4;
+      }
+
+      .subtle {
+        @apply opacity-65 text-sm;
+      }
+
+      .fe {
+        @apply p-0.5 text-emerald-600 font-bold;
+      }
+
+      .be {
+        @apply p-0.5 text-violet-600 font-bold;
+      }
+    </style>
+  </head>
+
+  <body
+    class="flex flex-col gap-8 p-8 w-[48in] h-[36in] font-[Plus_Jakarta_Sans] border"
+  >
+    <header class="flex justify-center items-center gap-15 p-8 bg-sky-100">
+      <svg class="w-0 grow h-1/4 overflow-visible" preserveAspectRatio="none">
+        <polyline class="stroke-sky-500" vector-effect="non-scaling-stroke" />
+      </svg>
+
+      <img src="./images/icon.png" class="size-20" />
+
+      <hgroup class="flex flex-col items-center gap-2">
+        <h1 class="font-medium tracking-wider text-4xl uppercase text-center">
+          Gathering Insights Into CFDE Projects
+        </h1>
+        <div class="text-xl">Integration and Coordination Center (ICC)</div>
+      </hgroup>
+
+      <img src="./images/icon.png" class="size-20 -scale-x-100" />
+
+      <svg class="w-0 grow h-1/4 overflow-visible" preserveAspectRatio="none">
+        <polyline class="stroke-sky-500" vector-effect="non-scaling-stroke" />
+      </svg>
+    </header>
+
+    <main class="columns-3 gap-8">
+      <div class="column">
+        <section>
+          <h2>Motivation</h2>
+
+          <p>
+            The <b>ICC</b> is tasked with (among other things) gathering and
+            presenting information about CFDE projects. We want to allow project
+            <b>groups</b> and the <b>NIH</b> to easily see the activity and
+            impact of their work in a simple and centralized way.
+          </p>
+
+          <p>
+            The info we gather currently includes publications, software stats,
+            and website metrics. These come from a variety of sources, take many
+            forms and sizes, and can be sensitive or private, which presents
+            several challenges that led us to develop a unique and flexible
+            software architecture to handle them.
+          </p>
+
+          <p>Code discussed here is viewable in the public GitHub repo:</p>
+          <img src="./qr-code.svg" class="size-20 absolute bottom-4 right-4" />
+        </section>
+
+        <section>
+          <h2>Challenges</h2>
+
+          <div class="grid grid-cols-[--spacing(32)_1fr] gap-4 leading-loose">
+            <b>Frequency</b>
+            <div>Need to gather info ideally daily</div>
+            <b>Availability</b>
+            <div>
+              APIs available for some info, but some need webpage scraping
+            </div>
+            <b>Automation</b>
+            <div>
+              Some (very valuable) info is not available programmatically at all
+            </div>
+            <b>Scale</b>
+            <div>Large # of projects, queries can take a long time</div>
+            <b>Complexity</b>
+            <div>
+              Info is complex, dense, and different structures and formats
+            </div>
+            <b>Time Burden</b>
+            <div>Groups don't have time to set up complex integration</div>
+            <b>Transparency</b>
+            <div>
+              Everyone should be able to see <i>how</i> all info is gathered
+            </div>
+            <b>Access</b>
+            <div>Some info should be restricted to certain people/groups</div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Technologies</h2>
+
+          <div class="flex gap-8 justify-center items-center *:h-10">
+            <img src="./images/typescript-logo.svg" />
+            <img src="./images/node-logo.svg" />
+            <img src="./images/vue-logo.svg" />
+            <img src="./images/github-logo.svg" />
+          </div>
+
+          <div class="grid grid-cols-[--spacing(32)_1fr] gap-4 leading-loose">
+            <b>TypeScript</b>
+            <div>To maintain full type safety from gathering to displaying</div>
+            <b>Node</b>
+            <div>To run gathering process and other parts of pipeline</div>
+            <b>Vue</b>
+            <div>
+              To create live web dashboard (better than re-emailing PDFs)
+            </div>
+            <b>GitHub Actions</b>
+            <div>To automatically run pipeline, tests, deployment, etc.</div>
+            <b>Playwright</b>
+            <div>
+              To scrape HTML pages (and print dashboard as PDFs as needed)
+            </div>
+            <b>Various libraries</b>
+            <div>To parse CSV, PDF, etc.</div>
+            <b>Custom tools</b>
+            <div>
+              To auto-parallelize and cache (w/ TTL) all network requests
+            </div>
+            <b>API clients</b>
+            <div>To ease gathering from e.g. GitHub and Google Analytics</div>
+            <b>Django</b>
+            <div>To create backend database and API to serve the dashboard</div>
+          </div>
+        </section>
+      </div>
+
+      <div class="column">
+        <section>
+          <h2>Strategy</h2>
+
+          <p>
+            To address <i>transparency</i>, we devised a <b>public</b> &
+            <b>private</b> repo split. <b>Public</b> has (virtually) all of our
+            code and the non-sensitive info. <b>Private</b> is barebones: it has
+            one basic GitHub Actions workflow (to copy and run the exact code in
+            <b>public</b>) and the sensitive info.
+          </p>
+
+          <div
+            class="flex justify-center items-center gap-8 *:size-16 *:rounded-full *:fill-none *:stroke-2 *:p-4 *:overflow-visible"
+          >
+            <svg
+              class="stroke-emerald-500 bg-emerald-200"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"
+              />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+
+            <svg
+              class="stroke-violet-500 bg-violet-200"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+            </svg>
+          </div>
+
+          <p>
+            To address <i>time burden</i>, we've devised ways to keep the manual
+            steps groups need to perform <i>as minimal as possible</i>:
+          </p>
+
+          <div class="grid grid-cols-[--spacing(40)_1fr] gap-4 leading-loose">
+            <b>Google Analytics</b>
+            <div>"Invite" our account to your properties</div>
+            <b></b>
+            <div>Add custom "tags" to properties w/ your core project #s</div>
+            <b>GitHub</b>
+            <div>Tag your repos w/ core project #s</div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Pipeline</h2>
+
+          <div
+            class="grid grid-cols-2 -mx-8 -mb-8 [&_p]:pl-4 [&_p]:-indent-4 [&_p]:text-left!"
+          >
+            <div class="flex flex-col gap-2 p-2 bg-emerald-200 text-center">
+              <code class="font-bold">nih-cfde/icc-eval-core<br /></code>
+              <div>public repo</div>
+            </div>
+
+            <div class="flex flex-col gap-2 p-2 bg-violet-200 text-center">
+              <code class="font-bold">
+                nih-cfde/icc-eval-core-private<br />
+              </code>
+              <div>private repo, requires invite</div>
+            </div>
+
+            <div class="flex flex-col gap-4 p-4 bg-emerald-50">
+              <p><b>Start</b> on daily schedule</p>
+              <p>Run <b>gather process</b> in <i>public</i> mode</p>
+              <div class="flex flex-col gap-4 pl-4 border-l">
+                <p>
+                  <b>Funding Opportunities</b><br />
+                  <span>ID, activity code, etc.</span><br />
+                  <span class="subtle">commonfund.nih.gov</span>
+                </p>
+                <p>
+                  <b>Projects</b><br />
+                  <span>#, name, award $, dates, etc.</span><br />
+                  <span class="subtle">reporter.nih.gov</span>
+                </p>
+                <p>
+                  <b>Publications</b><br />
+                  <span>Title, date, citations, etc.</span><br />
+                  <span class="subtle">iCite, RePORTER</span>
+                </p>
+                <p>
+                  <b>Journals</b><br />
+                  <span>Name, rank, ISSN, etc.</span><br />
+                  <span class="subtle">E-utilities, Scimago</span>
+                </p>
+                <p>
+                  <b>Store</b> [public] results in repo<br />
+                  <span class="subtle">Raw & normalized/pruned JSON</span>
+                </p>
+              </div>
+              <p><b>Trigger private</b> repo</p>
+            </div>
+
+            <div class="flex flex-col gap-4 p-4 bg-violet-50">
+              <p><b>Check out</b> (copy) public repo locally</p>
+              <p>Get GH Actions <b>secrets</b> (API keys)</p>
+              <p>Run <b>gather process</b> in <i>private</i> mode</p>
+              <div class="flex flex-col gap-4 pl-4 border-l">
+                <p>
+                  <b>Google Analytics</b>
+                </p>
+                <div class="flex flex-col gap-4 pl-4 border-l">
+                  <p>Get all sites we have access to</p>
+                  <p>Match sites to projects by tag</p>
+                  <p>
+                    Gather # of users/sessions over time, top countries, etc.
+                  </p>
+                </div>
+                <p>
+                  <b>GitHub</b>
+                </p>
+                <div class="flex flex-col gap-4 pl-4 border-l">
+                  <p>Search GitHub for any repo tagged with CFDE project #</p>
+                  <p>Match repos to projects by tag</p>
+                  <p>Gather stars, PRs, commits over time, languages, etc.</p>
+                </div>
+                <p>
+                  <b>Store</b> [private] results in repo<br />
+                  <span class="subtle">Raw & normalized/pruned JSON</span>
+                </p>
+              </div>
+              <p>
+                <b>Build dashboard</b> and <b>deploy</b> to live site<br />
+                <span class="subtle"
+                  >(just functionality & public info, no private)</span
+                ><br />
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="column">
+        <section>
+          <h2>Access</h2>
+
+          <p>
+            To ensure appropriate <i>access</i> to private info, we have
+            implemented a standard architecture with social sign-on
+            authentication:
+          </p>
+
+          <div class="grid grid-cols-[auto_auto] gap-8 items-start">
+            <b>Architecture</b>
+            <b>User's POV</b>
+            <div class="grid grid-cols-[repeat(3,auto)] *:p-2">
+              <p class="bg-slate-300">
+                <b>Private Repo</b><br />
+                <span>JSON</span>
+              </p>
+              <span></span>
+              <span></span>
+              <img
+                src="./images/arrow-down.svg"
+                class="size-8 place-self-center"
+              />
+              <span></span>
+              <span></span>
+              <p class="bg-violet-200">
+                <b>Backend</b><br />
+                <span>Database</span>
+              </p>
+              <span></span>
+              <span></span>
+              <img
+                src="./images/arrows-vertical.svg"
+                class="size-8 place-self-center"
+              />
+              <span></span>
+              <span></span>
+              <p class="bg-indigo-200">
+                <b>Backend</b><br />
+                <span>REST API</span>
+              </p>
+              <img
+                src="./images/arrows-horizontal.svg"
+                class="size-8 place-self-center"
+              />
+              <p class="bg-emerald-200">
+                <b>Frontend</b><br />
+                <span>Dashboard</span>
+              </p>
+              <img
+                src="./images/arrows-vertical.svg"
+                class="size-8 place-self-center"
+              />
+              <span></span>
+              <span></span>
+              <p class="bg-sky-200">
+                <b>ORCID</b><br />
+                <span>Auth</span>
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+              <p>Go to live, public dashboard</p>
+              <hr />
+              <p>Browse public info</p>
+              <hr />
+              <p>Try to look at your project</p>
+              <hr />
+              <p>
+                <span class="fe">FE</span> makes request to
+                <span class="be">BE</span> for private info
+              </p>
+              <hr />
+              <p>Access denied, request fails</p>
+              <hr />
+              <p>Click "log in"</p>
+              <hr />
+              <p>
+                <span class="fe">FE</span> makes request to
+                <span class="be">BE</span>
+              </p>
+              <hr />
+              <p>Redirected to ORCID, log in</p>
+              <hr />
+              <p><span class="be">BE</span> returns auth cookie</p>
+              <hr />
+              <p>
+                Browser saves cookie, <span class="fe">FE</span> can't see it
+              </p>
+              <hr />
+              <p>Try to access your project again</p>
+              <hr />
+              <p>Browser auto-attaches auth cookie</p>
+              <hr />
+              <p><span class="be">BE</span> checks if your ORCID has access</p>
+              <hr />
+              <p><span class="be">BE</span> returns (private) project info</p>
+              <hr />
+              <p><span class="fe">FE</span> displays it in dashboard</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Results</h2>
+
+          <p>
+            Our method is fully automatic, runs quickly and reliably, and is
+            flexible enough to gather many other types of info in the future.
+            The dashboard has received positive feedback from project groups and
+            NIH staff, successful in providing a convenient and effective way to
+            see project impact across the CFDE.
+          </p>
+
+          <div class="grid grid-cols-5 grid-rows-2 gap-2 p-2 -mx-8 -mb-8">
+            <img
+              src="./images/screenshot-1.png"
+              class="col-span-2 row-span-2"
+            />
+            <img
+              src="./images/screenshot-3.png"
+              class="col-span-2 row-span-2"
+            />
+            <img src="./images/screenshot-2.png" />
+            <img src="./images/screenshot-4.png" />
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script>
+      document.querySelectorAll("svg").forEach((svg) => {
+        document.querySelectorAll("polyline").forEach((polyline, index) =>
+          polyline.setAttribute(
+            "points",
+            Array(1000)
+              .fill(0)
+              .map((_, x) => {
+                const y = Math.sin(x / 6) + Math.cos(x / 10);
+                return [x, y - index / 4].join(" ");
+              })
+              .join(" "),
+          ),
+        );
+        const { x, y, width, height } = svg.getBBox();
+        svg.setAttribute("viewBox", [x, y, width, height].join(" "));
+      });
+    </script>
+  </body>
+</html>
