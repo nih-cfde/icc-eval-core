@@ -112,15 +112,20 @@ watchEffect(() => {
   let index = 0;
   for (const [date, value] of inputData) {
     /** move to next bin */
-    while (date >= bins[index + 1]! && index < bins.length - 1) index++;
+    while (date >= (bins[index + 1] ?? Infinity) && index < bins.length - 1)
+      index++;
     /** accumulate value */
-    data[index]![1] += value;
+    const bin = data[index];
+    if (bin) bin[1] += value;
   }
 
   /** accumulate values */
   if (props.cumulative)
-    for (let index = 1; index < data.length; index++)
-      data[index]![1] += data[index - 1]![1];
+    for (let index = 1; index < data.length; index++) {
+      const bin = data[index];
+      const prev = data[index - 1];
+      if (bin && prev) bin[1] += prev[1];
+    }
 
   /** whether to enable zoom controls */
   const zoom = props.data.length > 20;

@@ -8,6 +8,26 @@
     </div>
 
     <nav>
+      <AppLink v-if="!user && userStatus !== 'pending'" :to="loginLink"
+        >Login</AppLink
+      >
+      <template v-if="user && userStatus === 'success'">
+        <div
+          class="user"
+          tabindex="0"
+          :title="`Logged in as: ${user.firstName} ${user.lastName}\nORCID: ${user.orcid}`"
+        >
+          <div>
+            {{
+              [user.firstName, user.lastName]
+                .map((part) => part.charAt(0).toUpperCase())
+                .join("")
+            }}
+          </div>
+        </div>
+        <AppLink :to="logoutLink">Logout</AppLink>
+      </template>
+
       <AppLink to="/">Home</AppLink>
       <AppLink to="/core-projects">Core Projects</AppLink>
       <AppLink to="/drc">DRC</AppLink>
@@ -16,9 +36,16 @@
 </template>
 
 <script setup lang="ts">
+import { useQuery } from "@tanstack/vue-query";
+import { getMe, loginLink, logoutLink } from "@/api";
 import AppLink from "@/components/AppLink.vue";
 
 const { VITE_TITLE: title } = import.meta.env;
+
+const { data: user, status: userStatus } = useQuery({
+  queryKey: ["getMe"],
+  queryFn: getMe,
+});
 </script>
 
 <style scoped>
@@ -71,5 +98,15 @@ nav {
   nav {
     display: none;
   }
+}
+
+.user {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: #00000010;
+  color: var(--dark-gray);
 }
 </style>
