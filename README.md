@@ -5,7 +5,14 @@
 
 ## Overview
 
-This repo supports the activities described in [this repo](https://github.com/nih-cfde/icc-eval-coordination?tab=readme-ov-file).
+The ICC is tasked with (among other things) gathering and presenting information about CFDE projects.
+We want to allow project groups and the NIH to easily see the activity and impact of their work in a simple and centralized way.
+This repo contains the core code for gathering and presenting this info on a dashboard.
+
+For more about what we're doing, why we're doing it, and how it works, see these resources:
+
+https://nih-cfde.github.io/icc-eval-coordination
+https://github.com/nih-cfde/icc-eval-core/blob/main/data/poster/poster.pdf
 
 ## Requirements
 
