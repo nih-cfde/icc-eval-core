@@ -21,7 +21,9 @@
             {{
               [user.firstName, user.lastName]
                 .map((part) => part.charAt(0).toUpperCase())
-                .join("")
+                .join("") ||
+              user.username.substring(0, 2).toUpperCase() ||
+              "You"
             }}
           </div>
         </div>
