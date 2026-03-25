@@ -204,6 +204,12 @@
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
     </template>
 
+    <strong v-if="projectRepos?.length === 0">
+      <a href="https://nih-cfde.github.io/icc-eval-coordination/">
+        See this readme for how to add your repos </a
+      >.
+    </strong>
+    a
     <div class="col">
       <AppHeading level="3">Notes</AppHeading>
 
@@ -310,6 +316,12 @@
         </div>
       </dl>
     </template>
+
+    <strong v-if="projectAnalytics?.length === 0">
+      <a href="https://nih-cfde.github.io/icc-eval-coordination/">
+        See this readme for how to add your analytics </a
+      >.
+    </strong>
 
     <div class="col">
       <AppHeading level="3">Notes</AppHeading>
