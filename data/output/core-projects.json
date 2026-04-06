@@ -17,9 +17,9 @@
       "3OT2OD030161-01S2",
       "3OT2OD030161-01S5",
       "3OT2OD030161-01S1",
+      "3OT2OD030161-01S4",
       "1OT2OD030161-01",
-      "3OT2OD030161-01S3",
-      "3OT2OD030161-01S4"
+      "3OT2OD030161-01S3"
     ],
     "awardAmount": 3153200,
     "publications": 1,
@@ -51,9 +51,9 @@
     "name": "Amplifying the Value of HuBMAP Data Through Data Interoperability and Collaboration",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030545-01S4",
       "1OT2OD030545-01",
       "3OT2OD030545-01S3",
+      "3OT2OD030545-01S4",
       "3OT2OD030545-01S5",
       "3OT2OD030545-01S2",
       "3OT2OD030545-01S1"
@@ -189,7 +189,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD034499-01"],
     "awardAmount": 391151,
-    "publications": 7,
+    "publications": 8,
     "repos": 0,
     "analytics": 0
   },
@@ -408,12 +408,12 @@
     "name": "Illuminating the Druggable Genome Data Coordinating Center - Engagement Plan with the CFDE",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030546-01S4",
       "3OT2OD030546-01S2",
+      "3OT2OD030546-01S4",
       "4OT2OD030546-02",
       "3OT2OD030546-01S3",
-      "1OT2OD030546-01",
-      "3OT2OD030546-01S1"
+      "3OT2OD030546-01S1",
+      "1OT2OD030546-01"
     ],
     "awardAmount": 2810622,
     "publications": 5,
@@ -739,7 +739,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD036498-01"],
     "awardAmount": 356000,
-    "publications": 3,
+    "publications": 4,
     "repos": 0,
     "analytics": 0
   },
@@ -778,8 +778,8 @@
     "name": "Biomedical Data Commons Workbench (BDCW)",
     "activityCode": "OT2",
     "projects": [
-      "3OT2OD030544-01S4",
       "3OT2OD030544-01S2",
+      "3OT2OD030544-01S4",
       "1OT2OD030544-01",
       "3OT2OD030544-01S3",
       "3OT2OD030544-01S1"
@@ -790,22 +790,22 @@
     "analytics": 0
   },
   {
-    "id": "R03OD030600",
-    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
-    "activityCode": "R03",
-    "projects": ["1R03OD030600-01"],
-    "awardAmount": 363306,
-    "publications": 1,
-    "repos": 0,
-    "analytics": 0
-  },
-  {
     "id": "U24OD038422",
     "name": "U24-Uncovering the Shared Genetic Origins of Childhood Cancer and Structural Birth Defects Through Enhanced Data Integration and Analysis with the CFDE Data Distillery Knowledge Graph.",
     "activityCode": "U24",
     "projects": ["4U24OD038422-02", "1U24OD038422-01"],
     "awardAmount": 4408884,
     "publications": 6,
+    "repos": 0,
+    "analytics": 0
+  },
+  {
+    "id": "R03OD030600",
+    "name": "Leveraging Common Fund data for feature selection in Kids First studies.",
+    "activityCode": "R03",
+    "projects": ["1R03OD030600-01"],
+    "awardAmount": 363306,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
