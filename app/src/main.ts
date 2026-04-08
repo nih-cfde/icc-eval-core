@@ -10,18 +10,30 @@ import PageHome from "./pages/PageHome.vue";
 import PageReports from "./pages/PageReports.vue";
 import "./styles.css";
 
+const domain = "metrics-cfdeconnect.org";
+
 /** app pages */
 const routes = [
   {
     path: "/",
     component: PageHome,
     beforeEnter: () => {
-      const url = window.sessionStorage.redirect as string;
-      if (url) {
-        console.debug("Redirecting to:", url);
-        window.sessionStorage.removeItem("redirect");
-        return url;
+      let url = new URL(window.location.href);
+
+      /** force new domain */
+      url.hostname = domain;
+
+      /** handle SPA redirect (see 404.html) */
+      const redirect = window.sessionStorage.redirect as string;
+      window.sessionStorage.removeItem("redirect");
+      if (redirect) {
+        console.debug("Redirecting to:", redirect);
+        /** merge */
+        url = new URL(redirect, url);
       }
+
+      /** redirect if anything changed */
+      if (window.location.href !== url.href) window.location.href = url.href;
     },
   },
   { path: "/reports", component: PageReports },
