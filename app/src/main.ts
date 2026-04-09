@@ -10,7 +10,7 @@ import PageHome from "./pages/PageHome.vue";
 import PageReports from "./pages/PageReports.vue";
 import "./styles.css";
 
-const domain = "metrics-cfdeconnect.org";
+const domain = "metrics.cfdeconnect.org";
 
 /** app pages */
 const routes = [
