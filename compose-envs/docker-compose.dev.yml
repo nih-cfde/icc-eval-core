@@ -1,0 +1,21 @@
+services:
+  backend:
+    ports:
+     - 8015:8000
+    volumes:
+      - ./backend/icc_eval_core_api/:/app/icc_eval_core_api/
+    environment:
+      - DJANGO_DEBUG=1
+      - ORCID_USE_SANDBOX=1
+      - FRONTEND_APP_URL=http://127.0.0.1:3000/
+
+  frontend:
+    build: ./dummy-frontend/
+    ports:
+      - 3000:3000
+    volumes:
+      - ./dummy-frontend/src/:/app/src/
+    environment:
+      - BUN_PUBLIC_ORCID_AUTH_URL=http://127.0.0.1:8015/accounts/orcid/login/
+    depends_on:
+      - backend

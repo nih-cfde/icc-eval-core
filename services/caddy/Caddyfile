@@ -1,0 +1,21 @@
+# Local (HTTP)
+:80 {
+	handle_path /static/* {
+		root * /opt/static
+		file_server
+	}
+	handle {
+		reverse_proxy backend:8000
+	}
+}
+
+# Production (HTTPS + automatic certs)
+{$DOMAIN} {
+	handle_path /static/* {
+		root * /opt/static
+		file_server
+	}
+	handle {
+		reverse_proxy backend:8000
+	}
+}
