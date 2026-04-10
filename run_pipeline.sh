@@ -5,11 +5,11 @@ set -e
 export NODE_OPTIONS="--max_old_space_size=8192"
 
 data="npm run --prefix data"
-app="npm run --prefix app"
+frontend="npm run --prefix frontend"
 
 regex="--([A-Za-z0-9:-]+) *(.*)?$"
 
-# run script in /data and /app
+# run script in /data and /frontend
 if [[ $* =~ $regex ]]; then
   script=${BASH_REMATCH[1]}
   params=${BASH_REMATCH[2]}
@@ -21,16 +21,16 @@ if [[ $* =~ $regex ]]; then
   if [[ $script == "install" ]]; then
     echo "Installing packages"
     bun install --cwd data
-    bun install --cwd app
+    bun install --cwd frontend
   else
     # run script with node
     if grep -q "\"$script\":" "data/package.json"; then
       echo "Running in /data"
       $data $script -- $params
     fi
-    if grep -q "\"$script\":" "app/package.json"; then
-      echo "Running in /app"
-      $app $script -- $params
+    if grep -q "\"$script\":" "frontend/package.json"; then
+      echo "Running in /frontend"
+      $frontend $script -- $params
     fi
   fi
 
@@ -40,6 +40,6 @@ else
   $data gather
   $data print
   if [[ -z "$CI" ]]; then
-    $app dev
+    $frontend dev
   fi
 fi
