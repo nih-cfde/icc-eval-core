@@ -18,22 +18,21 @@ const routes = [
     path: "/",
     component: PageHome,
     beforeEnter: () => {
-      let url = new URL(window.location.href);
-
-      /** force new domain */
-      url.hostname = domain;
-
-      /** handle SPA redirect (see 404.html) */
+      /** get redirect path from 404.html */
       const redirect = window.sessionStorage.redirect as string;
       window.sessionStorage.removeItem("redirect");
-      if (redirect) {
-        console.debug("Redirecting to:", redirect);
-        /** merge */
-        url = new URL(redirect, url);
+
+      /** redirect to new domain */
+      if (window.location.hostname !== domain) {
+        window.location.href = new URL(redirect, `https://${domain}`).href;
+        return;
       }
 
-      /** redirect if anything changed */
-      if (window.location.href !== url.href) window.location.href = url.href;
+      /** redirect to path */
+      if (redirect) {
+        console.debug("Redirecting to:", redirect);
+        return redirect;
+      }
     },
   },
   { path: "/reports", component: PageReports },
