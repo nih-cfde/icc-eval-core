@@ -20,7 +20,7 @@ import { memoize } from "@/util/memoize";
 import { request } from "@/util/request";
 import { formatDate, midTrunc } from "@/util/string";
 
-const { RAW_PATH, OUTPUT_PATH, CACHE } = process.env;
+const { RAW_PATH, OUTPUT_PATH } = process.env;
 
 type Extensions = "json" | "csv" | "tsv" | "txt";
 
@@ -47,7 +47,7 @@ export const downloadFile = async (
   await mkdir(parse(path).dir, { recursive: true });
 
   /** will we be using existing/cached file */
-  const cached = CACHE && existsSync(path);
+  const cached = existsSync(path);
 
   if (cached) log(`Using cache ${midTrunc(path, 40)}`, "secondary");
   else {

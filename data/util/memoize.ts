@@ -3,7 +3,7 @@ import { existsSync, readFileSync, writeFileSync } from "fs";
 import { throttle } from "lodash-es";
 import { log } from "@/util/log";
 
-const { CACHE, RAW_PATH } = process.env;
+const { RAW_PATH } = process.env;
 
 /**
  * make simple cache mechanism with: persistent/disk cache, func memoization,
@@ -35,7 +35,7 @@ export const memoize =
     let result: Return;
 
     /** if cached value valid */
-    if (CACHE && cached && !expired) {
+    if (cached && !expired) {
       log("Using cache", "secondary");
       /** use cached value */
       result = cached.data as Return;

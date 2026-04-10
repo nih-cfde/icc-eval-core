@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# run "pipeline", i.e. steps to run periodically to update data, reports, etc.
+# steps that should be run periodically to update data, reports, etc.
 
 set -e
 
@@ -41,7 +41,4 @@ else
   echo "Running main pipeline steps"
   $data gather
   $data print
-  if [[ -z "$CI" ]]; then
-    $frontend dev
-  fi
 fi

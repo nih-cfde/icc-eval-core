@@ -9,14 +9,11 @@ import { getProjects } from "@/gather/projects";
 import { getPublications } from "@/gather/publications";
 import { getRepos } from "@/gather/repos";
 import { browser } from "@/util/browser";
-import { loadFile, loadOutput, saveFile, type Result } from "@/util/file";
+import { loadFile, saveFile, type Result } from "@/util/file";
 import { divider, log } from "@/util/log";
 import { match } from "@/util/string";
 
-const { PRIVATE, CACHE, RAW_PATH, OUTPUT_PATH, CI } = process.env;
-
-log(`Running in ${PRIVATE ? "PRIVATE" : "PUBLIC"} mode`);
-log(`Cache ${CACHE ? "ON" : "OFF"}`);
+const { RAW_PATH, OUTPUT_PATH, CI } = process.env;
 
 /** output file names */
 const opportunitiesFile = "opportunities.json";
@@ -41,18 +38,7 @@ mkdirSync(OUTPUT_PATH, { recursive: true });
 divider("Opportunities");
 
 /** funding opportunities */
-let opportunities: Result<typeof getOpportunities> = [];
-
-/** get opportunities */
-try {
-  opportunities = PRIVATE
-    ? /** PRIVATE MODE */
-      await loadOutput(opportunitiesFile)
-    : /** PUBLIC MODE */
-      await getOpportunities();
-} catch (error) {
-  log("Couldn't get opportunities", "warn");
-}
+let opportunities = await getOpportunities();
 
 /** get manual opportunities */
 const manualOpportunities = (
@@ -76,17 +62,11 @@ const manualCoreProjects = (
 ).data;
 
 /** get projects from opportunities */
-const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
-  ? /** PRIVATE MODE */
-    {
-      coreProjects: await loadOutput(coreProjectsFile),
-      projects: await loadOutput(projectsFile),
-    }
-  : /** PUBLIC MODE */
-    await getProjects(
-      opportunities.map((opportunity) => opportunity.id),
-      manualCoreProjects,
-    );
+const { coreProjects, projects }: Result<typeof getProjects> =
+  await getProjects(
+    opportunities.map((opportunity) => opportunity.id),
+    manualCoreProjects,
+  );
 
 log(`${coreProjects.length} core projects`);
 log(`${projects.length} projects`);
@@ -96,11 +76,9 @@ log(`${projects.length} projects`);
 divider("Publications");
 
 /** get publications from projects */
-const publications: Result<typeof getPublications> = PRIVATE
-  ? /** PRIVATE MODE */
-    await loadOutput(publicationsFile)
-  : /** PUBLIC MODE */
-    await getPublications(projects.map((project) => project.coreProject));
+const publications: Result<typeof getPublications> = await getPublications(
+  projects.map((project) => project.coreProject),
+);
 
 log(`${publications.length} publications`);
 
@@ -109,13 +87,13 @@ log(`${publications.length} publications`);
 divider("Journals");
 
 /** get journals from publications */
-const journals: Result<typeof getJournals> =
+const journals: Result<typeof getJournals> = await getJournals(
+  publications.map((publication) => publication.journal),
+).catch((error) => {
   /** scimago banning/limiting us when running on gh-actions */
-  PRIVATE || CI
-    ? /** PRIVATE MODE */
-      await loadOutput(journalsFile)
-    : /** PUBLIC MODE */
-      await getJournals(publications.map((publication) => publication.journal));
+  if (CI) return [];
+  throw error;
+});
 
 log(`${journals.length} journals`);
 
@@ -124,9 +102,7 @@ log(`${journals.length} journals`);
 divider("Analytics");
 
 /** get website analytics data */
-const analytics = PRIVATE
-  ? /** PRIVATE MODE */ await getAnalytics()
-  : /** PUBLIC MODE */ [];
+const analytics = await getAnalytics();
 
 log(`${analytics.length} analytics`);
 
@@ -135,11 +111,7 @@ log(`${analytics.length} analytics`);
 divider("Repos");
 
 /** get software repo data */
-const repos = PRIVATE
-  ? /** PRIVATE MODE */
-    await getRepos(coreProjects.map((coreProject) => coreProject.id))
-  : /** PUBLIC MODE */
-    [];
+const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
 
 log(`${repos.length} repos`);
 
@@ -285,15 +257,7 @@ const repoOverview = {
 divider("DRC");
 
 /** get drc data */
-const { dcc, file, code }: Result<typeof getDrc> = PRIVATE
-  ? /** PRIVATE MODE */
-    {
-      dcc: await loadOutput(drcDccFile),
-      file: await loadOutput(drcFileFile),
-      code: await loadOutput(drcCodeFile),
-    }
-  : /** PUBLIC MODE */
-    await getDrc();
+const { dcc, file, code }: Result<typeof getDrc> = await getDrc();
 
 /** ========================================================================= */
 
@@ -308,11 +272,9 @@ saveFile(journals, `${OUTPUT_PATH}/${journalsFile}`);
 saveFile(dcc, `${OUTPUT_PATH}/${drcDccFile}`);
 saveFile(file, `${OUTPUT_PATH}/${drcFileFile}`);
 saveFile(code, `${OUTPUT_PATH}/${drcCodeFile}`);
-if (PRIVATE) {
-  saveFile(analytics, `${OUTPUT_PATH}/${analyticsFile}`);
-  saveFile(analyticsOverview, `${OUTPUT_PATH}/${analyticsOverviewFile}`);
-  saveFile(repos, `${OUTPUT_PATH}/${reposFile}`);
-  saveFile(repoOverview, `${OUTPUT_PATH}/${repoOverviewFile}`);
-}
+saveFile(analytics, `${OUTPUT_PATH}/${analyticsFile}`);
+saveFile(analyticsOverview, `${OUTPUT_PATH}/${analyticsOverviewFile}`);
+saveFile(repos, `${OUTPUT_PATH}/${reposFile}`);
+saveFile(repoOverview, `${OUTPUT_PATH}/${repoOverviewFile}`);
 
 await browser.close();
