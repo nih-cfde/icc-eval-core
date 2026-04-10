@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# run "pipeline", i.e. steps to run periodically to update data, reports, etc.
+
 set -e
 
 export NODE_OPTIONS="--max_old_space_size=8192"

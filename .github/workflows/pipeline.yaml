@@ -41,17 +41,6 @@ jobs:
         run: xvfb-run ./run.sh
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
+          AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
+          AUTH_GOOGLE: ${{ secrets.AUTH_GOOGLE }}
           CACHE: ${{ inputs.cache && 'true' || '' }}
-
-      - name: Commit files
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Update files
-          commit_author: "Bot <>"
-
-      - name: Trigger private repo
-        uses: peter-evans/repository-dispatch@v3
-        with:
-          token: ${{ secrets.AUTH_PRIVATE }}
-          repository: nih-cfde/icc-eval-core-private
-          event-type: pipeline

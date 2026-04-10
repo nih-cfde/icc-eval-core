@@ -1,10 +1,9 @@
 node_modules
+.env.local
 /test-results/
 /playwright-report/
 /blob-report/
-/playwright/.cache/
-debug.html
-.DS_Store
-logs
-.env.local
-temp
+*creds*.json
+*credentials*.json
+gha-creds*.json
+cache.json

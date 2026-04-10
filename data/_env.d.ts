@@ -14,8 +14,6 @@ namespace NodeJS {
     readonly APP_PATH: string;
     /** path to print pdfs to */
     readonly PDF_PATH: string;
-    /** path to google authentication (not a key itself) */
-    readonly GOOGLE_APPLICATION_CREDENTIALS: string;
 
     /** .env.local */
 
