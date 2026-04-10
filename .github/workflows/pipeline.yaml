@@ -32,13 +32,13 @@ jobs:
         uses: mxschmitt/action-tmate@v3
 
       - name: Install packages
-        run: ./run.sh --install
+        run: ./run_pipeline.sh --install
 
       - name: Install Playwright
-        run: ./run.sh --install-playwright
+        run: ./run_pipeline.sh --install-playwright
 
       - name: Run pipeline
-        run: xvfb-run ./run.sh
+        run: xvfb-run ./run_pipeline.sh
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
