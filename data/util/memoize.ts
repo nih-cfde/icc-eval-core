@@ -33,13 +33,15 @@ export const memoize =
     /** return value */
     let result: Return;
 
-    /** cached value */
-    const cached = cache[hash];
+    /** cached entry */
+    const { data, error } = cache[hash] ?? {};
 
-    /** if cache hit */
-    if (cached !== undefined && "data" in cached) {
+    if (data !== undefined) {
       /** use cached data value */
-      result = cached.data as Return;
+      result = data as Return;
+    } else if (error !== undefined) {
+      /** use cached error value */
+      throw Error(error);
     } else {
       try {
         /** run function */

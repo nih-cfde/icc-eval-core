@@ -11,6 +11,8 @@ import { log } from "@/util/log";
 import { settled } from "@/util/misc";
 import { bytes, count, formatDate, splitPath } from "@/util/string";
 
+const { RAW_PATH } = process.env;
+
 /** DRC top-level lists */
 const drcLists = [
   {
@@ -32,7 +34,7 @@ export const getDrc = async () => {
   /** download meta lists */
   const [lists, errors] = await settled(drcLists, async ({ url, filename }) => {
     log(`Downloading DRC resource list from ${url}`);
-    const { path } = await downloadFile(url, filename);
+    const { path } = await downloadFile(url, `${RAW_PATH}/${filename}`);
     const { data } = await loadFile<DCC | File | Code>(path, "tsv");
     return data;
   });

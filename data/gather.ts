@@ -6,6 +6,7 @@ import { getOpportunities } from "@/gather/opportunities";
 import { getProjects } from "@/gather/projects";
 import { getPublications } from "@/gather/publications";
 import { getRepos, getReposOverview } from "@/gather/repos";
+import { getUsers } from "@/gather/users";
 import { browser } from "@/util/browser";
 import { saveFile } from "@/util/file";
 import { divider } from "@/util/log";
@@ -89,6 +90,12 @@ const { dcc, file, code } = await getDrc();
 saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
 saveFile(file, `${OUTPUT_PATH}/drc-file.json`);
 saveFile(code, `${OUTPUT_PATH}/drc-code.json`);
+
+/** ========================================================================= */
+
+divider("Users");
+const users = await getUsers();
+saveFile(users, `${OUTPUT_PATH}/users.json`);
 
 /** ========================================================================= */
 

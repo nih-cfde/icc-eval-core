@@ -23,7 +23,7 @@ export const getJournals = async (abbrevs: string[]) => {
   log(`Downloading from ${ranksUrl}`);
 
   /** get journal rank data */
-  const ranksFile = await downloadFile(ranksUrl, "scimago-ranks.csv")
+  const ranksFile = await downloadFile(ranksUrl, manualRanksPath)
     .then(({ path }) => path)
     .catch(() => manualRanksPath);
   const { data: ranks } = await loadFile<Rank[]>(ranksFile, "csv", {

@@ -18,8 +18,6 @@ import { memoize } from "@/util/memoize";
 import { request } from "@/util/request";
 import { formatDate } from "@/util/string";
 
-const { RAW_PATH } = process.env;
-
 type Extensions = "json" | "csv" | "tsv" | "txt";
 
 /** get file stats in standard format */
@@ -32,9 +30,6 @@ export type Stats = Awaited<ReturnType<typeof getStats>>;
 
 /** download file from url (if filename not already present) */
 export const downloadFile = async (url: string, path: string) => {
-  /** always download to raw */
-  path = `${RAW_PATH}/${path}`;
-
   /** create folders if needed */
   await mkdir(parse(path).dir, { recursive: true });
 
