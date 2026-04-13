@@ -35,7 +35,7 @@
 
     <AppTable
       :cols="publicationCols"
-      :rows="projectPublications"
+      :rows="publications ?? []"
       :sort="[{ id: 'relativeCitationRatio', desc: true }]"
     >
       <template #id="{ row }">
@@ -58,7 +58,7 @@
       <template #year="{ row }">{{ row.year }}</template>
     </AppTable>
 
-    <template v-if="publicationsOverTime.length > 1">
+    <template>
       <div class="charts">
         <AppTimeChart
           class="chart"
@@ -98,16 +98,13 @@
 
     <p>Software repositories associated with this project.</p>
 
-    <p v-if="projectReposStatus === 'pending'" class="loading">Loading</p>
-
-    <p v-if="projectRepos === null" class="error">
+    <p v-if="repos === notAuthed" class="error">
       Sorry, you're not authorized to view this data
     </p>
 
     <AppTable
-      v-if="projectRepos?.length"
       :cols="repoCols"
-      :rows="projectRepos"
+      :rows="repos ?? []"
       :sort="[{ id: 'id', desc: true }]"
     >
       <template #owner="{ row }">
@@ -162,49 +159,47 @@
       </template>
     </AppTable>
 
-    <template v-if="projectRepos?.length">
-      <div class="charts">
-        <AppTimeChart
-          class="chart"
-          title="Stars"
-          :data="starsOverTime"
-          :cumulative="cumulative"
-          by="month"
-        />
-        <AppTimeChart
-          class="chart"
-          title="Forks"
-          :data="forksOverTime"
-          :cumulative="cumulative"
-          by="month"
-        />
-        <AppTimeChart
-          class="chart"
-          title="Issues"
-          :data="issuesOverTime"
-          :cumulative="cumulative"
-          by="month"
-        />
-        <AppTimeChart
-          class="chart"
-          title="Pull Requests"
-          :data="pullRequestsOverTime"
-          :cumulative="cumulative"
-          by="month"
-        />
-        <AppTimeChart
-          class="chart"
-          title="Commits"
-          :data="commitsOverTime"
-          :cumulative="cumulative"
-          by="month"
-        />
-      </div>
+    <div class="charts">
+      <AppTimeChart
+        class="chart"
+        title="Stars"
+        :data="starsOverTime"
+        :cumulative="cumulative"
+        by="month"
+      />
+      <AppTimeChart
+        class="chart"
+        title="Forks"
+        :data="forksOverTime"
+        :cumulative="cumulative"
+        by="month"
+      />
+      <AppTimeChart
+        class="chart"
+        title="Issues"
+        :data="issuesOverTime"
+        :cumulative="cumulative"
+        by="month"
+      />
+      <AppTimeChart
+        class="chart"
+        title="Pull Requests"
+        :data="pullRequestsOverTime"
+        :cumulative="cumulative"
+        by="month"
+      />
+      <AppTimeChart
+        class="chart"
+        title="Commits"
+        :data="commitsOverTime"
+        :cumulative="cumulative"
+        by="month"
+      />
+    </div>
 
-      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
-    </template>
+    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
-    <strong v-if="projectRepos?.length === 0">
+    <strong v-if="repos?.length === 0">
       <a href="https://nih-cfde.github.io/icc-eval-coordination/">
         See this readme for how to add your repos </a
       >.
@@ -250,76 +245,67 @@
 
     <p>Website metrics associated with this project.</p>
 
-    <p v-if="projectAnalyticsStatus === 'pending'" class="loading">Loading</p>
-
-    <p v-if="projectAnalytics === null" class="error">
+    <p v-if="analytics === notAuthed" class="error">
       Sorry, you're not authorized to view this data
     </p>
 
-    <template v-if="projectAnalytics?.length">
-      <dl class="details">
-        <div>
-          <dt>Websites</dt>
+    <dl class="details">
+      <div>
+        <dt>Websites</dt>
+        <dd class="mini-table">
+          <template
+            v-for="({ property, propertyName }, key) of analytics"
+            :key="key"
+          >
+            <span>
+              {{ startCase(propertyName) }}
+            </span>
+            <span>#{{ property.replace("properties/", "") }}</span>
+          </template>
+        </dd>
+      </div>
+    </dl>
+
+    <div class="charts">
+      <template v-for="({ metric, data }, key) in overTimeAnalytics" :key="key">
+        <AppTimeChart
+          :title="startCase(metric)"
+          :data="data"
+          :cumulative="cumulative"
+          by="week"
+          group="group"
+        />
+      </template>
+    </div>
+
+    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+    <dl class="details">
+      <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
+        <template
+          v-if="typeof topValue === 'object' && 'byEngagedSessions' in topValue"
+        >
+          <dt>Top {{ topKey.replace("top", "") }}</dt>
           <dd class="mini-table">
             <template
-              v-for="({ property, propertyName }, key) of projectAnalytics"
-              :key="key"
+              v-for="(byValue, byKey) in topValue.byEngagedSessions"
+              :key="byKey"
             >
               <span>
-                {{ startCase(propertyName) }}
+                {{ byKey }}
               </span>
-              <span>#{{ property.replace("properties/", "") }}</span>
+              <span>
+                {{ format(byValue, true) }}
+              </span>
             </template>
           </dd>
-        </div>
-      </dl>
-
-      <div class="charts">
-        <template
-          v-for="({ metric, data }, key) in overTimeAnalytics"
-          :key="key"
-        >
-          <AppTimeChart
-            :title="startCase(metric)"
-            :data="data"
-            :cumulative="cumulative"
-            by="week"
-            group="group"
-          />
         </template>
       </div>
+    </dl>
 
-      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
-
-      <dl class="details">
-        <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
-          <template
-            v-if="
-              typeof topValue === 'object' && 'byEngagedSessions' in topValue
-            "
-          >
-            <dt>Top {{ topKey.replace("top", "") }}</dt>
-            <dd class="mini-table">
-              <template
-                v-for="(byValue, byKey) in topValue.byEngagedSessions"
-                :key="byKey"
-              >
-                <span>
-                  {{ byKey }}
-                </span>
-                <span>
-                  {{ format(byValue, true) }}
-                </span>
-              </template>
-            </dd>
-          </template>
-        </div>
-      </dl>
-    </template>
-
-    <strong v-if="projectAnalytics?.length === 0">
+    <strong v-if="analytics?.length === 0">
       <a href="https://nih-cfde.github.io/icc-eval-coordination/">
-        See this readme for how to add your analytics </a
+        See this readme for how to add your analytics</a
       >.
     </strong>
 
@@ -358,10 +344,15 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { orderBy, startCase, sum, sumBy, uniq } from "lodash";
-import { useQuery } from "@tanstack/vue-query";
+import { orderBy, startCase, sumBy, uniq } from "lodash";
 import { useTitle } from "@vueuse/core";
-import { getAnalytics, getRepos } from "@/api";
+import {
+  notAuthed,
+  useAnalytics,
+  useCoreProjects,
+  usePublications,
+  useRepos,
+} from "@/api";
 import Analytics from "@/assets/analytics.svg";
 import Book from "@/assets/book.svg";
 import Code from "@/assets/code.svg";
@@ -372,17 +363,11 @@ import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
-import { findJournal } from "@/pages/PageHome.vue";
 import { carve, limit } from "@/util/array";
 import { ago, bytes, format, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
-import coreProjects from "~/core-projects.json";
-import publications from "~/publications.json";
 
 const route = useRoute();
-
-/** whether charts should be shown in cumulative mode */
-const cumulative = ref(true);
 
 /** currently viewed core project id */
 const id = computed(() =>
@@ -393,99 +378,86 @@ const id = computed(() =>
 const { VITE_TITLE } = import.meta.env;
 useTitle(computed(() => `${id.value} | ${VITE_TITLE}`));
 
-/** currently viewed core project (details) */
-const coreProject = computed(
-  () => coreProjects.find((coreProject) => coreProject.id === id.value)!,
-);
+/** fetch data for currently viewed core project */
+const { data: coreProjects } = useCoreProjects(id);
+const coreProject = computed(() => coreProjects.value?.[0]);
+const { data: publications } = usePublications(id);
+const { data: analytics } = useAnalytics(id);
+const { data: repos } = useRepos(id);
+
+/** whether charts should be shown in cumulative mode */
+const cumulative = ref(true);
 
 /** top-level details */
 const details = computed(() => [
-  ["Projects", ...coreProject.value.projects],
-  ["Name", coreProject.value.name],
+  ["Projects", ...(coreProject.value?.projects ?? [])],
+  ["Name", coreProject.value?.name],
   [
     "Award",
-    format(coreProject.value.awardAmount, true, {
+    format(coreProject.value?.awardAmount, true, {
       style: "currency",
       currency: "USD",
     }),
   ],
-  ["Publications", `${format(projectPublications.value, true)} publications`],
+  ["Publications", `${format(publications.value, true)} publications`],
   [
     "Repositories",
-    `${format(projectRepos.value, true)} repositories`,
+    `${format(repos.value, true)} repositories`,
     [
       format(
-        sumBy(projectRepos.value, (repo) => repo.stars.length),
+        sumBy(repos.value, (repo) => repo.stars.length),
         true,
       ),
       "stars",
     ],
     [
       format(
-        sumBy(projectRepos.value, (repo) => repo.watchers),
+        sumBy(repos.value, (repo) => repo.watchers),
         true,
       ),
       "watchers",
     ],
     [
       format(
-        sumBy(projectRepos.value, (repo) => repo.forks.length),
+        sumBy(repos.value, (repo) => repo.forks.length),
         true,
       ),
       "forks",
     ],
     [
       format(
-        sumBy(projectRepos.value, (repo) => repo.issues.length),
+        sumBy(repos.value, (repo) => repo.issues.length),
         true,
       ),
       "issues",
     ],
     [
       format(
-        sumBy(projectRepos.value, (repo) => repo.pullRequests.length),
+        sumBy(repos.value, (repo) => repo.pullRequests.length),
         true,
       ),
       "pull requests",
     ],
     [
       format(
-        sumBy(projectRepos.value, (repo) => repo.commits.length),
+        sumBy(repos.value, (repo) => repo.commits.length),
         true,
       ),
       "commits",
     ],
     [
       format(
-        sumBy(projectRepos.value, (repo) => repo.contributors.length),
+        sumBy(repos.value, (repo) => repo.contributors.length),
         true,
       ),
       "contributors",
     ],
   ],
-  ["Analytics", `${format(projectAnalytics.value, true)} properties`],
+  ["Analytics", `${format(analytics.value, true)} properties`],
 ]);
 
-/** publication table row data */
-const projectPublications = computed(() =>
-  /** get publication matching this core project */
-  publications
-    .filter((publication) => publication.coreProject === id.value)
-    .map((publication) => {
-      const journal = findJournal(publication);
-      /** include journal info */
-      return {
-        ...publication,
-        year: publication.year,
-        modified: new Date(publication.modified),
-        rank: journal?.rank ?? 0,
-        journal: journal?.name ?? publication.journal,
-      };
-    }),
-);
-
 /** publication table column definitions */
-const publicationCols: Cols<typeof projectPublications.value> = [
+const publicationCols: Cols<NonNullable<typeof publications.value>> = [
   {
     slot: "id",
     key: "id",
@@ -537,32 +509,74 @@ const publicationCols: Cols<typeof projectPublications.value> = [
 ];
 
 /** publication chart data */
-const publicationsOverTime = computed(() =>
-  projectPublications.value.map(
-    ({ year }) => [new Date(year || 2000, 0, 1), 1] as const,
-  ),
+const publicationsOverTime = computed(
+  () =>
+    publications.value?.map(
+      ({ year }) => [new Date(year || 2000, 0, 1), 1] as const,
+    ) ?? [],
 );
 
-/** repo table row data */
-const { data: projectRepos, status: projectReposStatus } = useQuery({
-  queryKey: ["getRepos", id.value],
-  queryFn: async () => {
-    if (!id.value) throw new Error("No core project id");
-    const repos = await getRepos(id.value);
-    if (repos === null) return null;
-    return repos
-      .filter((repo) => repo.coreProject === id.value)
-      .map((repo) => ({
-        ...repo,
-        modified: new Date(repo.modified),
-        dependencyTotal: sum(Object.values(repo.dependencies)),
-        ...repo.dependencies,
-      }));
-  },
+/** "over time" analytics data */
+const overTimeAnalytics = computed(() => {
+  /** all properties data */
+  const properties = analytics.value?.map((item) => item.overTime) ?? [];
+  /** list of metric keys */
+  const metrics = uniq(
+    analytics.value?.map((item) => Object.keys(item.overTime)).flat(),
+  ) as (keyof (typeof properties)[number])[];
+  /** for each metric */
+  return metrics.map((metric) => {
+    const totals: Record<string, number> = {};
+    /** sum properties together */
+    for (const property of properties)
+      for (const [date, value] of Object.entries(property[metric])) {
+        totals[date] ??= 0;
+        totals[date] += value;
+      }
+    return {
+      metric,
+      data: Object.entries(totals).map(
+        ([d, value]) => [new Date(d), value] as const,
+      ),
+    };
+  });
+});
+
+/** "top dimensions" analytics data */
+const topAnalytics = computed(() => {
+  const properties =
+    analytics.value?.map(
+      ({ property, propertyName, coreProject, overTime, ...rest }) => rest,
+    ) ?? [];
+
+  type Property = Record<string, Record<string, Record<string, number>>>;
+
+  /** total values from all properties */
+  const total: Property = {};
+
+  /** go through each property and total values */
+  for (const property of properties as unknown as Property[])
+    for (const [topKey, topValue] of getEntries(property))
+      for (const [byKey, byValue] of getEntries(topValue))
+        for (const [dimensionKey, dimensionValue] of getEntries(byValue)) {
+          total[topKey] ??= {};
+          total[topKey][byKey] ??= {};
+          total[topKey][byKey][dimensionKey] ??= 0;
+          total[topKey][byKey][dimensionKey] += dimensionValue;
+        }
+
+  /** sort and limit counts */
+  for (const [topKey, topValue] of getEntries(total))
+    for (const [byKey, byValue] of getEntries(topValue))
+      total[topKey]![byKey] = Object.fromEntries(
+        orderBy(Object.entries(byValue), (item) => item[1], "desc").slice(0, 5),
+      );
+
+  return total;
 });
 
 /** repo table column definitions */
-const repoCols: Cols<NonNullable<typeof projectRepos.value>> = [
+const repoCols: Cols<NonNullable<typeof repos.value>> = [
   {
     slot: "owner",
     key: "owner",
@@ -674,7 +688,7 @@ const repoCols: Cols<NonNullable<typeof projectRepos.value>> = [
 /** star chart data */
 const starsOverTime = computed(
   () =>
-    projectRepos.value
+    repos.value
       ?.map(({ stars }) =>
         stars.map((star) => [new Date(star.date), 1] as const),
       )
@@ -684,7 +698,7 @@ const starsOverTime = computed(
 /** fork chart data */
 const forksOverTime = computed(
   () =>
-    projectRepos.value
+    repos.value
       ?.map(({ forks }) =>
         forks.map((fork) => [new Date(fork.date), 1] as const),
       )
@@ -694,7 +708,7 @@ const forksOverTime = computed(
 /** issue chart data */
 const issuesOverTime = computed(
   () =>
-    projectRepos.value
+    repos.value
       ?.map(({ issues }) =>
         issues.map(({ created }) => [new Date(created), 1] as const),
       )
@@ -704,7 +718,7 @@ const issuesOverTime = computed(
 /** issue chart data */
 const pullRequestsOverTime = computed(
   () =>
-    projectRepos.value
+    repos.value
       ?.map(({ pullRequests }) =>
         pullRequests.map(({ created }) => [new Date(created), 1] as const),
       )
@@ -714,78 +728,10 @@ const pullRequestsOverTime = computed(
 /** commit chart data */
 const commitsOverTime = computed(
   () =>
-    projectRepos.value
+    repos.value
       ?.map(({ commits }) =>
         commits.map((commit) => [new Date(commit.date), 1] as const),
       )
       .flat() ?? [],
 );
-
-/** analytics properties that match this project */
-const { data: projectAnalytics, status: projectAnalyticsStatus } = useQuery({
-  queryKey: ["getAnalytics", id.value],
-  queryFn: () => {
-    if (!id.value) throw new Error("No core project id");
-    return getAnalytics(id.value);
-  },
-});
-
-/** "over time" analytics data */
-const overTimeAnalytics = computed(() => {
-  /** all properties data */
-  const properties = projectAnalytics.value?.map((item) => item.overTime) ?? [];
-  /** list of metric keys */
-  const metrics = uniq(
-    projectAnalytics.value?.map((item) => Object.keys(item.overTime)).flat(),
-  ) as (keyof (typeof properties)[number])[];
-  /** for each metric */
-  return metrics.map((metric) => {
-    const totals: Record<string, number> = {};
-    /** sum properties together */
-    for (const property of properties)
-      for (const [date, value] of Object.entries(property[metric])) {
-        totals[date] ??= 0;
-        totals[date] += value;
-      }
-    return {
-      metric,
-      data: Object.entries(totals).map(
-        ([d, value]) => [new Date(d), value] as const,
-      ),
-    };
-  });
-});
-
-/** "top dimensions" analytics data */
-const topAnalytics = computed(() => {
-  const properties =
-    projectAnalytics.value?.map(
-      ({ property, propertyName, coreProject, overTime, ...rest }) => rest,
-    ) ?? [];
-
-  type Property = Record<string, Record<string, Record<string, number>>>;
-
-  /** total values from all properties */
-  const total: Property = {};
-
-  /** go through each property and total values */
-  for (const property of properties as unknown as Property[])
-    for (const [topKey, topValue] of getEntries(property))
-      for (const [byKey, byValue] of getEntries(topValue))
-        for (const [dimensionKey, dimensionValue] of getEntries(byValue)) {
-          total[topKey] ??= {};
-          total[topKey][byKey] ??= {};
-          total[topKey][byKey][dimensionKey] ??= 0;
-          total[topKey][byKey][dimensionKey] += dimensionValue;
-        }
-
-  /** sort and limit counts */
-  for (const [topKey, topValue] of getEntries(total))
-    for (const [byKey, byValue] of getEntries(topValue))
-      total[topKey]![byKey] = Object.fromEntries(
-        orderBy(Object.entries(byValue), (item) => item[1], "desc").slice(0, 5),
-      );
-
-  return total;
-});
 </script>

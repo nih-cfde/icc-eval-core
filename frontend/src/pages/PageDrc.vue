@@ -35,17 +35,20 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
 import { countBy, orderBy, sumBy } from "lodash";
+import { useDrcData, type DRC } from "@/api";
 import Data from "@/assets/data.svg";
 import AppHeading from "@/components/AppHeading.vue";
 import { bytes, format } from "@/util/string";
-import code from "~/drc-code.json";
-import dcc from "~/drc-dcc.json";
-import file from "~/drc-file.json";
+
+/** fetch drc data */
+const { data: drc } = useDrcData();
 
 /** get total values for resources */
-const getTotals = (resources: (typeof dcc | typeof file | typeof code)[]) => {
+const getTotals = (resources: (DRC | undefined)[]) => {
   const files = resources
+    .filter((drc) => drc !== undefined)
     .map((resource) => resource.map((entry) => entry.files))
     .flat()
     .flat();
@@ -64,11 +67,14 @@ const getTotals = (resources: (typeof dcc | typeof file | typeof code)[]) => {
   };
 };
 
-const overview = [
-  ["Total", getTotals([dcc, file, code])] as const,
-  ["DCC", getTotals([dcc])] as const,
-  ["File", getTotals([file])] as const,
-];
+const overview = computed(() => [
+  [
+    "Total",
+    getTotals([drc.value?.code, drc.value?.dcc, drc.value?.file]),
+  ] as const,
+  ["DCC", getTotals([drc.value?.dcc])] as const,
+  ["File", getTotals([drc.value?.file])] as const,
+]);
 </script>
 
 <style scoped>

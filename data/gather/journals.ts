@@ -76,3 +76,5 @@ export const getJournals = async (abbrevs: string[]) => {
 
   return transformedJournals;
 };
+
+export type Journals = Awaited<ReturnType<typeof getJournals>>;

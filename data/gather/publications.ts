@@ -93,3 +93,5 @@ export const getPublications = async (coreProjects: string[]) => {
 
   return transformedPublications;
 };
+
+export type Publications = Awaited<ReturnType<typeof getPublications>>;

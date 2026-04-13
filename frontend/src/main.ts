@@ -17,6 +17,9 @@ const routes = [
     path: "/",
     component: PageHome,
     beforeEnter: () => {
+      /** ignore dev */
+      if (import.meta.env.DEV) return;
+
       /** get redirect path from 404.html */
       const redirect = window.sessionStorage.redirect as string;
       window.sessionStorage.removeItem("redirect");
@@ -41,10 +44,9 @@ const routes = [
 
 const router = createRouter({ history: createWebHistory(), routes });
 
-createApp(App)
-  .use(router)
-  .use(VueGtagPlugin, {
-    config: { id: "G-ES3DWJYSXR", enabled: import.meta.env.PROD },
-  })
-  .use(VueQueryPlugin)
-  .mount("#app");
+const app = createApp(App);
+app.use(router);
+if (import.meta.env.PROD)
+  app.use(VueGtagPlugin, { config: { id: "G-ES3DWJYSXR" } });
+app.use(VueQueryPlugin);
+app.mount("#app");

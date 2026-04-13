@@ -21,7 +21,7 @@
         <dt>Projects</dt>
         <dd>
           {{
-            format(sum(coreProjects.map((row) => row.projects.length)), true)
+            format(sum(coreProjects?.map((row) => row.projects.length)), true)
           }}
         </dd>
       </div>
@@ -30,7 +30,7 @@
         <dt>Awards</dt>
         <dd>
           {{
-            format(sum(coreProjects.map((row) => row.awardAmount)), true, {
+            format(sum(coreProjects?.map((row) => row.awardAmount)), true, {
               style: "currency",
               currency: "USD",
             })
@@ -41,7 +41,7 @@
       <div>
         <dt>Publications</dt>
         <dd>
-          {{ format(sum(coreProjects.map((row) => row.publications)), true) }}
+          {{ format(sum(coreProjects?.map((row) => row.publications)), true) }}
         </dd>
       </div>
     </dl>
@@ -98,7 +98,7 @@
 
     <AppTable
       :cols="publicationCols"
-      :rows="programPublications"
+      :rows="publications ?? []"
       :sort="[{ id: 'year', desc: true }]"
     >
       <template #id="{ row }">
@@ -153,9 +153,7 @@
 
     <p>High-level info about CFDE software repositories.</p>
 
-    <p v-if="repoStatus === 'pending'" class="loading">Loading</p>
-
-    <p v-if="repoOverview === null" class="error">
+    <p v-if="repoOverview === notAuthed" class="error">
       Sorry, you're not authorized to view this data
     </p>
 
@@ -199,9 +197,7 @@
 
     <p>High-level info about CFDE website usage.</p>
 
-    <p v-if="analyticsStatus === 'pending'" class="loading">Loading</p>
-
-    <p v-if="analyticsOverview === null" class="error">
+    <p v-if="analyticsOverview === notAuthed" class="error">
       Sorry, you're not authorized to view this data
     </p>
 
@@ -253,30 +249,17 @@
   </section>
 </template>
 
-<script lang="ts">
-import { useQuery } from "@tanstack/vue-query";
-import { getAnalyticsOverview, getRepoOverview } from "@/api";
-import journals from "~/journals.json";
-
-type Publication = (typeof publications)[number];
-
-/** look up journal matching this publication */
-export const findJournal = (publication: Publication) => {
-  /** find (possibly multiple) matches */
-  const matches = journals.filter((journal) =>
-    [journal.abbrev, journal.name, journal.title]
-      .map((prop) => prop.toLowerCase())
-      .includes(publication.journal.toLowerCase()),
-  );
-
-  /** if multiple matches, return nothing to avoid false association/data */
-  if (matches.length === 1) return matches[0];
-};
-</script>
-
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { omit, startCase, sum } from "lodash";
+import {
+  notAuthed,
+  useAnalyticsOverview,
+  useCoreProjects,
+  useProjects,
+  usePublications,
+  useRepoOverview,
+} from "@/api";
 import Book from "@/assets/book.svg";
 import Chart from "@/assets/chart.svg";
 import Code from "@/assets/code.svg";
@@ -290,52 +273,41 @@ import AppTable from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve } from "@/util/array";
 import { bytes, format } from "@/util/string";
-import coreProjects from "~/core-projects.json";
-import rawProjects from "~/projects.json";
-import publications from "~/publications.json";
 
-/** parse dates */
-const projects = rawProjects.map((raw) => ({
-  ...raw,
-  dateStart: new Date(raw.dateStart),
-}));
+/** fetch data */
+const { data: coreProjects } = useCoreProjects();
+const { data: projects } = useProjects();
+const { data: publications } = usePublications();
+const { data: analyticsOverview } = useAnalyticsOverview();
+const { data: repoOverview } = useRepoOverview();
 
 /** whether charts should be shown in cumulative mode */
 const cumulative = ref(true);
 
 /** chart number of projects over time */
-const projectsOverTime = projects.map(
-  ({ dateStart }) => [dateStart, 1] as const,
+const projectsOverTime = computed(
+  () => projects.value?.map(({ dateStart }) => [dateStart, 1] as const) || [],
 );
 
 /** chart award amount over time */
-const awardsOverTime = projects.map(
-  ({ dateStart, awardAmount }) => [dateStart, awardAmount] as const,
+const awardsOverTime = computed(
+  () =>
+    projects.value?.map(
+      ({ dateStart, awardAmount }) => [dateStart, awardAmount] as const,
+    ) || [],
 );
 
 /** chart number of publications over time */
-const publicationsOverTime = publications
-  .map(({ year }) => year)
-  .filter(Boolean)
-  .map((year) => [new Date(year, 0, 1), 1] as const);
-
-/** publication table row data */
-const programPublications = computed(() =>
-  publications.map((publication) => {
-    const journal = findJournal(publication);
-    /** include journal info */
-    return {
-      ...publication,
-      year: publication.year,
-      modified: new Date(publication.modified),
-      rank: journal?.rank ?? 0,
-      journal: journal?.name ?? publication.journal,
-    };
-  }),
+const publicationsOverTime = computed(
+  () =>
+    publications.value
+      ?.map(({ year }) => year)
+      .filter(Boolean)
+      .map((year) => [new Date(year, 0, 1), 1] as const) || [],
 );
 
 /** publication table column definitions */
-const publicationCols: Cols<typeof programPublications.value> = [
+const publicationCols: Cols<NonNullable<typeof publications.value>> = [
   {
     slot: "id",
     key: "id",
@@ -392,16 +364,4 @@ const publicationCols: Cols<typeof programPublications.value> = [
     name: "Updated",
   },
 ];
-
-/** fetch repo overview */
-const { data: repoOverview, status: repoStatus } = useQuery({
-  queryKey: ["getRepoOverview"],
-  queryFn: getRepoOverview,
-});
-
-/** fetch analytics overview */
-const { data: analyticsOverview, status: analyticsStatus } = useQuery({
-  queryKey: ["getAnalyticsOverview"],
-  queryFn: getAnalyticsOverview,
-});
 </script>
