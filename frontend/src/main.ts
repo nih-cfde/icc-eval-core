@@ -7,7 +7,6 @@ import PageCoreProject from "./pages/PageCoreProject.vue";
 import PageCoreProjects from "./pages/PageCoreProjects.vue";
 import PageDrc from "./pages/PageDrc.vue";
 import PageHome from "./pages/PageHome.vue";
-import PageReports from "./pages/PageReports.vue";
 import "./styles.css";
 
 const domain = "metrics.cfdeconnect.org";
@@ -35,7 +34,6 @@ const routes = [
       }
     },
   },
-  { path: "/reports", component: PageReports },
   { path: "/core-projects", component: PageCoreProjects },
   { path: "/core-project/:id", component: PageCoreProject },
   { path: "/drc", component: PageDrc },

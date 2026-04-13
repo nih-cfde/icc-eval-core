@@ -1,16 +1,5 @@
 <template>
   <footer>
-    <AppLink
-      v-if="pdf"
-      :to="`/pdfs/${pdf}.pdf`"
-      :new-tab="true"
-      :external="true"
-      class="print-hide"
-    >
-      PDF of this page
-      <Download />
-    </AppLink>
-
     <AppLink to="https://github.com/nih-cfde/icc-eval-core" class="print-hide">
       Learn more
     </AppLink>
@@ -27,16 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-import Download from "@/assets/download.svg";
 import AppLink from "@/components/AppLink.vue";
-import { pdfs } from "@/pages/reports";
-
-const route = useRoute();
-
-/** download link for pre-generated pdf file associated with this route */
-const pdf = computed(() => pdfs.value[route.fullPath]);
 
 const builtOn = BUILT_ON;
 </script>

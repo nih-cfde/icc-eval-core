@@ -9,8 +9,7 @@
     "noErrorTruncation": true,
     "noUncheckedIndexedAccess": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "~/*": ["../data/output/*"]
+      "@/*": ["./src/*"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,

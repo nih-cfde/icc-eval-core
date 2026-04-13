@@ -2,7 +2,9 @@ namespace NodeJS {
   type ProcessEnv = {
     /** .env */
 
-    /** path to save raw data to */
+    /** path to manual input data */
+    readonly MANUAL_PATH: string;
+    /** path to download raw data to */
     readonly RAW_PATH: string;
     /** path to output formatted data to */
     readonly OUTPUT_PATH: string;
@@ -13,10 +15,5 @@ namespace NodeJS {
     readonly AUTH_GITHUB: string;
     /** authentication for entrez */
     readonly AUTH_ENTREZ: string;
-
-    /** misc */
-
-    /** whether script is being run on github actions */
-    readonly CI: string;
   };
 }

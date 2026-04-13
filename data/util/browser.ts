@@ -1,5 +1,5 @@
 import playwright from "playwright";
-import { deindent, indent, log } from "@/util/log";
+import { log } from "@/util/log";
 
 /** set up browser instance, page, etc */
 export const browser = await playwright.chromium.launch({ headless: false });
@@ -16,9 +16,7 @@ export const newPage = async (
   const page = await context.newPage();
   if (debug)
     page.on("console", (message) => {
-      indent();
       log(message, "secondary");
-      deindent();
     });
   return page;
 };

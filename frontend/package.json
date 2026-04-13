@@ -7,7 +7,7 @@
     "lint": "eslint . --fix",
     "test:lint": "eslint .",
     "test:types": "vue-tsc",
-    "test": "npm run test:lint && npm run test:types",
+    "test": "bun run test:lint && bun run test:types",
     "clean": "rm -rf node_modules bun.lockb && bun pm cache rm"
   },
   "dependencies": {

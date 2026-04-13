@@ -1,8 +1,9 @@
-import type analyticsOverview from "~/analytics-overview.json";
-import type analytics from "~/analytics.json";
-import type coreProjects from "~/core-projects.json";
-import type repoOverview from "~/repo-overview.json";
-import type repos from "~/repos.json";
+import type {
+  Analytics,
+  AnalyticsOverview,
+} from "../../../data/gather/analytics";
+import type { CoreProjects } from "../../../data/gather/projects";
+import type { Repos, ReposOverview } from "../../../data/gather/repos";
 
 const { VITE_API: api } = import.meta.env;
 
@@ -47,24 +48,25 @@ type Paginated<Results> = {
   results: Results;
 };
 
-export const getRepoOverview = () =>
-  request<typeof repoOverview>("repo-overview");
+export const getRepoOverview = () => request<ReposOverview>("repo-overview");
 
 export const getAnalyticsOverview = () =>
-  request<typeof analyticsOverview>("analytics-overview");
+  request<AnalyticsOverview>("analytics-overview");
 
 export const getCoreProjects = () =>
-  request<typeof coreProjects>("core-projects", { limit: 999 });
+  request<CoreProjects>("core-projects", {
+    limit: 999,
+  });
 
 export const getRepos = (coreProject: string) =>
-  request<typeof repos>("repositories", {
+  request<Repos>("repositories", {
     limit: 999,
     all: true,
     coreProject,
   });
 
 export const getAnalytics = (coreProject: string) =>
-  request<typeof analytics>("analytics", {
+  request<Analytics>("analytics", {
     limit: 999,
     all: true,
     coreProject,

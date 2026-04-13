@@ -5,7 +5,6 @@ import type { Datum } from "@/api/types/icite-results";
 import type { PublicationsQuery } from "@/api/types/reporter-publications-query";
 import type { PublicationsResults } from "@/api/types/reporter-publications-results";
 import { log } from "@/util/log";
-import { query } from "@/util/request";
 import { count, formatDate } from "@/util/string";
 
 /** get publications associated with core projects */
@@ -16,12 +15,9 @@ export const getPublications = async (coreProjects: string[]) => {
   log(`Getting publications for ${count(coreProjects)} core projects`);
 
   /** get publications associated with core projects */
-  const reporter = await query(
-    () =>
-      queryReporter<PublicationsQuery, PublicationsResults>("publications", {
-        criteria: { core_project_nums: coreProjects },
-      }),
-    "reporter-publications.json",
+  const reporter = await queryReporter<PublicationsQuery, PublicationsResults>(
+    "publications",
+    { criteria: { core_project_nums: coreProjects } },
   );
 
   /** extract results */
@@ -33,14 +29,10 @@ export const getPublications = async (coreProjects: string[]) => {
   log(`Getting metadata for ${count(reporterPublications)} core publications`);
 
   /** get extra info about publications */
-  const icite = await query(
-    () =>
-      queryIcite(
-        reporterPublications
-          .map((result) => result.pmid)
-          .filter((id): id is number => !!id),
-      ),
-    "icite.json",
+  const icite = await queryIcite(
+    reporterPublications
+      .map((result) => result.pmid)
+      .filter((id): id is number => !!id),
   );
 
   /** extract results */
@@ -62,7 +54,6 @@ export const getPublications = async (coreProjects: string[]) => {
     reporterPublications.map((result) => result.pmid),
   );
   const iciteSet = new Set(icitePublications.map((result) => result.pmid));
-
   const notInIcite = reporterSet.difference(iciteSet);
   const notInReporter = iciteSet.difference(reporterSet);
   if (
@@ -70,16 +61,17 @@ export const getPublications = async (coreProjects: string[]) => {
     notInIcite.size ||
     notInReporter.size
   ) {
-    log(`Not in iCite: ${Array.from(notInIcite).join(", ")}`, "secondary");
+    log("Number of RePORTER and iCite pubs don't match", "warn", 1);
+    log(`Not in iCite: ${Array.from(notInIcite).join(", ")}`, "secondary", 2);
     log(
       `Not in RePORTER: ${Array.from(notInReporter).join(", ")}`,
       "secondary",
+      2,
     );
-    log("Number of RePORTER and iCite pubs don't match", "warn");
   }
 
   /** transform data into desired format, with fallbacks */
-  const transformed = reporterPublications.map((result) => {
+  const transformedPublications = reporterPublications.map((result) => {
     const extras = extrasLookup[result.pmid ?? 0];
     return {
       id: result.pmid ?? 0,
@@ -99,5 +91,5 @@ export const getPublications = async (coreProjects: string[]) => {
     };
   });
 
-  return transformed;
+  return transformedPublications;
 };

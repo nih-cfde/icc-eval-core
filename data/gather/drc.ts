@@ -8,7 +8,7 @@ import {
 } from "@/util/file";
 import type { Stats } from "@/util/file";
 import { log } from "@/util/log";
-import { queryMulti } from "@/util/request";
+import { settled } from "@/util/misc";
 import { bytes, count, formatDate, splitPath } from "@/util/string";
 
 /** DRC top-level lists */
@@ -25,21 +25,19 @@ const drcLists = [
     url: "https://cfde-drc.s3.amazonaws.com/database/files/current_code_assets.tsv",
     filename: "drc-code.tsv",
   },
-] as const;
+];
 
 /** get info from DRC assets */
 export const getDrc = async () => {
-  log("Downloading DRC resource lists from...");
-  for (const { url } of drcLists) log(url);
-
   /** download meta lists */
-  const lists = await queryMulti(
-    drcLists.map(({ url, filename }) => async (progress) => {
-      const { path } = await downloadFile(url, filename, progress);
-      const { data } = await loadFile<DCC | File | Code>(path, "tsv");
-      return data;
-    }),
-  );
+  const [lists, errors] = await settled(drcLists, async ({ url, filename }) => {
+    log(`Downloading DRC resource list from ${url}`);
+    const { path } = await downloadFile(url, filename);
+    const { data } = await loadFile<DCC | File | Code>(path, "tsv");
+    return data;
+  });
+
+  if (errors.length) log(`${count(errors)} errors`, "error");
 
   const [dcc, file, code] = lists as [DCC, File, Code];
 
@@ -72,7 +70,7 @@ export const getDrc = async () => {
   for (const [ext, number] of Object.entries(
     countBy(Object.values(resources).flat(), (resource) => resource.ext),
   ))
-    log(`(${count(number)}) .${ext} files`, "secondary");
+    log(`(${count(number)}) .${ext} files`, "secondary", 1);
 
   /** transform file info */
   const mapFile = ({
@@ -95,18 +93,21 @@ export const getDrc = async () => {
 
     log(`Downloading DRC "${key}" resources`);
 
-    const fileResults = await queryMulti(
-      resource.map(({ url, ext }) => async (progress) => {
+    const [fileResults, errors] = await settled(
+      resource,
+      async ({ url, ext }) => {
         if (!ext) throw Error(`Skipping file with no extension`);
+        log(url, "secondary", 1);
 
         /** get files inside zip */
-        if (ext === "zip") return await liteUnzip(url, progress);
+        if (ext === "zip") return await liteUnzip(url);
 
         /** download file and get file info */
         return [await liteDownloadFile(url)];
-      }),
-      `drc-${key}.json`,
+      },
     );
+
+    errors.forEach((error) => log(error, "warn", 1));
 
     /** add file info to resource data */
     for (const [index, files] of Object.entries(fileResults))
@@ -126,6 +127,8 @@ export const getDrc = async () => {
     log(`(${count(number)}) .${ext} files`, "secondary");
   log(`> ${count(allFiles)} files uncompressed`);
   log(`> ${bytes(sumBy(allFiles, (file) => file.size))} uncompressed`);
+
+  log(`${count(resources)} resources`, "success");
 
   return resources;
 };

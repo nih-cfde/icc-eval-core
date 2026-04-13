@@ -1,14 +1,14 @@
 import { createHash } from "crypto";
 import { existsSync, readFileSync, writeFileSync } from "fs";
 import { throttle } from "lodash-es";
-import { log } from "@/util/log";
 
 const { RAW_PATH } = process.env;
 
 /**
  * make simple cache mechanism with: persistent/disk cache, func memoization,
  * per-func ttl, single cache file. explored third party libraries: cacache,
- * memoize, memoize-fs, and much more. none met all requirements.
+ * memoize, memoize-fs, memoizee, file-system-cache, and more. none met all
+ * requirements.
  */
 export const memoize =
   <Args extends unknown[], Return>(
@@ -17,36 +17,47 @@ export const memoize =
   ) =>
   async (...args: Args) => {
     /** set options defaults */
-    options.maxAge ??= 24 * 60 * 60;
+    options.maxAge ??= 7 * 24 * 60 * 60;
 
     /** get cache key unique to function and arguments */
     const key = func.name + func.toString() + JSON.stringify(args);
     /** make shorter unique cache key */
     const hash = createHash("md5").update(key).digest("hex");
-    /** possible cache hit */
-    const cached = cache[hash];
 
     /** current timestamp */
     const now = Date.now();
-    /** is cached entry expired */
-    const expired = now - (cached?.timestamp ?? 0) > options.maxAge * 1000;
+    /** remove expired entry */
+    if (now - (cache[hash]?.timestamp ?? 0) > options.maxAge * 1000)
+      delete cache[hash];
 
     /** return value */
     let result: Return;
 
-    /** if cached value valid */
-    if (cached && !expired) {
-      log("Using cache", "secondary");
-      /** use cached value */
+    /** cached value */
+    const cached = cache[hash];
+
+    /** if cache hit */
+    if (cached !== undefined && "data" in cached) {
+      /** use cached data value */
       result = cached.data as Return;
     } else {
-      /** run function */
-      result = await func(...args);
-      /** set cache */
-      cache[hash] = { timestamp: now, data: result };
-      /** update cache */
-      saveCache();
+      try {
+        /** run function */
+        result = await func(...args);
+        /** set cache data value */
+        cache[hash] = { timestamp: now, data: result };
+      } catch (error) {
+        /** set cache error value */
+        cache[hash] = {
+          timestamp: now,
+          error: error instanceof Error ? error.message : String(error),
+        };
+        throw error;
+      }
     }
+
+    /** update cache */
+    saveCache();
 
     return result;
   };
@@ -57,7 +68,7 @@ type Options = {
 };
 
 /** on-disk cache */
-const cachePath = RAW_PATH + "/cache.json";
+const cachePath = `${RAW_PATH}/cache.json`;
 
 /** global in-memory cache */
 let cache: Cache = {};
@@ -67,7 +78,8 @@ type Cache = Record<
   string,
   {
     timestamp: number;
-    data: unknown;
+    data?: unknown;
+    error?: string;
   }
 >;
 
@@ -78,5 +90,5 @@ if (existsSync(cachePath))
 /** save memory cache to disk cache */
 const saveCache = throttle(
   () => writeFileSync(cachePath, JSON.stringify(cache)),
-  1000,
+  10000,
 );

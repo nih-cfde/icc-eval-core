@@ -1,4 +1,12 @@
-import { fromPairs, meanBy, orderBy, toPairs, uniq, uniqBy } from "lodash-es";
+import {
+  fromPairs,
+  meanBy,
+  orderBy,
+  sumBy,
+  toPairs,
+  uniq,
+  uniqBy,
+} from "lodash-es";
 import {
   fileExists,
   getCommits,
@@ -14,7 +22,7 @@ import {
   searchRepos,
 } from "@/api/github";
 import { log } from "@/util/log";
-import { filterErrors, queryMulti } from "@/util/request";
+import { settled } from "@/util/misc";
 import { count } from "@/util/string";
 
 /** get github repos associated with core projects */
@@ -28,48 +36,50 @@ export const getRepos = async (coreProjects: string[]) => {
    * search for all repos tagged with core project number. gets base, top-level
    * details.
    */
-  const repoResults = await queryMulti(
-    coreProjects.map(
-      (coreProject) => async () =>
-        (await searchRepos(coreProject)).map((repo) => ({ repo, coreProject })),
-    ),
-    "github-repos.json",
-  );
+  const [repoResults] = await settled(coreProjects, async (coreProject) => {
+    log(`Searching for repos tagged with "${coreProject}"`, "secondary", 1);
+    return (await searchRepos(coreProject)).map((repo) => ({
+      owner: repo.owner?.login ?? "",
+      name: repo.name,
+      id: repo.id,
+      coreProject,
+    }));
+  });
 
-  /** filter out errors and flatten */
-  let repos = filterErrors(repoResults).flat();
+  /** flatten */
+  let repos = repoResults.flat();
 
   /** de-dupe */
-  repos = uniqBy(repos, ({ repo }) => repo.id);
+  repos = uniqBy(repos, (repo) => repo.id);
+
+  repos.forEach(({ owner, name }) => log(`${owner}/${name}`, "secondary", 1));
 
   log(`Getting details for ${count(repos)} repos`);
 
-  const repoDetails = await queryMulti(
-    repos.map(({ repo: _repo, coreProject }) => async (progress, label) => {
-      const owner = _repo.owner?.login ?? "";
-      const name = _repo.name;
-
-      label(`${owner}/${name}`);
-
+  const [repoDetails, errors] = await settled(
+    repos,
+    async ({ owner, name, coreProject }) => {
+      const label = `${owner}/${name}`;
       const repo = await getRepo(owner, name);
-      progress(0.1);
+      log(`${label} - Stars`, "secondary", 1);
       const stars = await getStars(owner, name);
-      progress(0.2);
+      log(`${label} - Forks`, "secondary", 1);
       const forks = await getForks(owner, name);
-      progress(0.3);
+      log(`${label} - Commits`, "secondary", 1);
       const commits = await getCommits(owner, name);
-      progress(0.4);
+      log(`${label} - Issues`, "secondary", 1);
       const issues = await getIssues(owner, name);
-      progress(0.5);
+      log(`${label} - Pull Requests`, "secondary", 1);
       const pullRequests = await getPullRequests(owner, name);
-      progress(0.6);
+      log(`${label} - Readme`, "secondary", 1);
       const readme = await hasReadme(owner, name);
+      log(`${label} - Contributing`, "secondary", 1);
       const contributing = await fileExists(owner, name, "CONTRIBUTING.md");
-      progress(0.7);
+      log(`${label} - Contributors`, "secondary", 1);
       const contributors = await getContributors(owner, name);
-      progress(0.8);
+      log(`${label} - Languages`, "secondary", 1);
       const languages = await getLanguages(owner, name);
-      progress(0.9);
+      log(`${label} - Dependencies`, "secondary", 1);
       const dependencies = await getDependencies(owner, name);
 
       return {
@@ -86,9 +96,14 @@ export const getRepos = async (coreProjects: string[]) => {
         languages,
         dependencies,
       };
-    }),
-    "github-repo-details.json",
+    },
   );
+
+  errors.forEach((error, index) => {
+    const { owner = "", name = "" } = repos[index] ?? {};
+    log(`${owner}/${name}`, "secondary", 1);
+    log(error, "warn", 2);
+  });
 
   type Repo = Exclude<(typeof repoDetails)[number], Error>;
   type Issue = Repo["issues"][number];
@@ -120,7 +135,7 @@ export const getRepos = async (coreProjects: string[]) => {
     ) || 0;
 
   /** transform data into desired format, with fallbacks */
-  const transformed = filterErrors(repoDetails).map((repo) => ({
+  const transformed = repoDetails.map((repo) => ({
     coreProject: repo.coreProject,
     id: repo.id,
     owner: repo.owner?.login ?? "",
@@ -175,5 +190,51 @@ export const getRepos = async (coreProjects: string[]) => {
     ),
   }));
 
+  log(`${count(transformed)} repos`, "success");
+
   return transformed;
 };
+
+/** aggregate various stats for all repos */
+export const getReposOverview = (
+  repos: Awaited<ReturnType<typeof getRepos>>,
+) => ({
+  repos: repos.length,
+  stars: sumBy(repos, (repo) => repo.stars.length),
+  forks: sumBy(repos, (repo) => repo.forks.length),
+  watchers: sumBy(repos, (repo) => repo.watchers ?? 0),
+  commits: sumBy(repos, (repo) => repo.commits.length),
+  openIssues: sumBy(repos, (repo) => repo.openIssues),
+  closedIssues: sumBy(repos, (repo) => repo.closedIssues),
+  openPullRequests: sumBy(repos, (repo) => repo.openPullRequests),
+  closedPullRequests: sumBy(repos, (repo) => repo.closedPullRequests),
+  readme: repos.filter((repo) => repo.readme).length,
+  contributing: repos.filter((repo) => repo.contributing).length,
+  codeOfConduct: repos.filter((repo) => repo.codeOfConduct).length,
+  contributors: new Set(
+    repos
+      .map(({ contributors }) => contributors.map(({ name }) => name))
+      .flat(),
+  ).size,
+  licenses: (() => {
+    const counts: Record<string, number> = {};
+    for (const { license } of repos)
+      counts[license] = (counts[license] ?? 0) + 1;
+    return Object.fromEntries(
+      orderBy(Object.entries(counts), (item) => item[1], "desc"),
+    );
+  })(),
+  languages: (() => {
+    const counts: Record<string, number> = {};
+    for (const { languages } of repos)
+      for (const { name, bytes } of languages)
+        counts[name] = (counts[name] ?? 0) + bytes;
+    return Object.fromEntries(
+      orderBy(Object.entries(counts), (count) => count[1], "desc"),
+    );
+  })(),
+});
+
+export type Repos = Awaited<ReturnType<typeof getRepos>>[number];
+
+export type ReposOverview = ReturnType<typeof getReposOverview>;
