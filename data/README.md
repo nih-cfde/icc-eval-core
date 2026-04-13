@@ -1,6 +1,6 @@
 # Setup
 
-## Entrez Authentication
+## Entrez authentication
 
 Not 100% necessary, but requests may intermittently fail without it.
 
@@ -9,7 +9,7 @@ Not 100% necessary, but requests may intermittently fail without it.
 1. _(For running the pipeline locally)_ In `/.env`, add an `AUTH_ENTREZ` key with the value of the created key.
 1. _(For running the pipeline on GitHub Actions)_ Create an actions repository secret in this repo with the name `AUTH_ENTREZ` and value of the created key.
 
-## GitHub Authentication
+## GitHub authentication
 
 Not 100% necessary, but recommended for better API rate limits.
 
