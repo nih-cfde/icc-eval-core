@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div v-if="!printing" class="controls">
+    <div class="controls">
       <AppButton
         :disabled="!table.getCanPreviousPage()"
         aria-label="First page"
@@ -173,7 +173,6 @@ import {
   type Row as TanstackRow,
 } from "@tanstack/vue-table";
 import type { RowData, SortingFn, SortingState } from "@tanstack/vue-table";
-import { useMediaQuery } from "@vueuse/core";
 import AngleLeft from "@/assets/angle-left.svg";
 import AngleRight from "@/assets/angle-right.svg";
 import AnglesLeft from "@/assets/angles-left.svg";
@@ -243,8 +242,6 @@ const columns = computed(() =>
   ),
 );
 
-const printing = useMediaQuery("print");
-
 /** note: https://github.com/TanStack/table/issues/5653 */
 
 /** tanstack table api */
@@ -267,7 +264,7 @@ const table = useVueTable({
     sorting: props.sort,
     pagination: {
       pageIndex: 0,
-      pageSize: printing.value ? 9999 : 10,
+      pageSize: 10,
     },
   },
 });
