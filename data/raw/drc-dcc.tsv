@@ -2,7 +2,6 @@ link	lastmodified	current	creator	dcc_id	drcapproved	dccapproved	deleted	created
 https://zinc15.docking.org/substances/search/?q={drug.label}	2024-03-08 00:15:43.332	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2024-03-08 00:15:43.332
 https://www.gtexportal.org/home/gene/{gene.ensembl}	2024-03-08 00:18:20.759	True		b3028db2-209c-5862-8f4d-33c5b312332e	True	False	False	2024-03-08 00:18:20.759
 https://drugcentral.org/?q={drug.label}	2024-03-08 00:15:16.867	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2024-03-08 00:15:16.867
-https://idg.reactome.org/search/{gene.symbol}	2024-03-08 00:14:30.105	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	False	False	2024-03-08 00:14:30.105
 https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={"search":["{drug.label}"]}	2024-03-08 00:06:57.680	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2024-03-08 00:06:57.680
 https://cfde-drc.s3.amazonaws.com/GlyGen/KG Assertions/2024-05-08/GlyGen.zip	2024-05-08 15:38:40.801	True		e31052b0-ac50-5ede-9828-698ff3610427	True	True	False	2024-05-08 15:38:40.801
 https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={"skip":0,"limit":10,"search":["{gene.symbol}"]}	2024-03-08 00:06:32.451	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2024-03-08 00:06:32.451
@@ -39,6 +38,7 @@ https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Signatures?query={"search"
 https://maayanlab.cloud/sigcom-lincs/#/MetadataSearch/Genes?query={"skip":0,"limit":10,"search":["<GENE_NAME>"]}	2024-02-21 20:54:33.202	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	False	True	2024-02-21 20:54:33.202
 https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/dictionary_NAR_databases_deduplicate.csv	2024-03-01 05:26:07.582	False		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	False	True	2024-03-01 05:26:07.582
 https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2024-03-29/LINCS_L1000_CRISPR_KO_Perturbation_Consensus_CD_Sigs.h5	2024-03-29 18:02:52.044	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2024-03-29 18:02:52.044
+https://idg.reactome.org/search/{gene.symbol}	2024-03-08 00:14:30.105	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2024-03-08 00:14:30.105
 https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/Papers.csv	2024-03-01 05:36:02.019	False		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	True	True	2024-03-01 05:36:02.019
 https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2022-01-07/4DN_C2M2_2022-01-07_datapackage.zip	2022-01-07 00:00:00.000	False		d6bb00c3-7224-5001-b9c5-9838622fba40	True	True	False	2022-01-07 00:00:00.000
 https://playbook-workflow-builder.cloud/components/LINCSL1000ReverseSearchDashboard	2024-02-26 23:06:30.407	False		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2024-02-26 23:06:30.407
@@ -79,6 +79,7 @@ https://playbook-workflow-builder.cloud/components/RegulatoryElementInfo	2023-10
 https://playbook-workflow-builder.cloud/components/VariantInfo	2023-10-19 00:00:00.000	True		f65babf7-2875-5725-9635-210d654533f1	True	False	False	2023-10-19 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-06-11/ERCC_C2M2_2021-06-11_datapackage.zip	2021-06-11 00:00:00.000	False		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2021-06-11 00:00:00.000
 https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/process_mcf10a_c2m2.py	2022-05-22 00:00:00.000	False		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2022-05-22 00:00:00.000
+https://www.cbioportal.org/api/swagger-ui/index.html	2026-03-24 17:54:58.722	False		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	True	2026-03-24 17:54:58.722
 https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2021-08-19/ERCC_C2M2_2021-08-19_datapackage.zip	2021-08-19 00:00:00.000	False		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2021-08-19 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-01-21/ERCC_C2M2_2022-01-21_datapackage.zip	2022-01-21 00:00:00.000	False		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2022-01-21 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/ERCC/C2M2/2022-04-16/ERCC_C2M2_2022-04-16_datapackage.zip	2022-04-16 00:00:00.000	False		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2022-04-16 00:00:00.000
@@ -119,7 +120,7 @@ https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2023-01-06/GlyGen_C2M2_2023-01-06_
 https://portal.hubmapconsortium.org/	2024-06-10 18:54:19.353	True		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2024-06-10 18:54:19.353
 https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2024-06-14/fy2024q3-cfde-c2m2-kids-first.zip	2024-06-14 21:59:29.287	False		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	True	False	2024-06-14 21:59:29.287
 https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-06-06/MW_submission_packet_20240605.zip	2024-06-06 01:34:33.870	False		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2024-06-06 01:34:33.870
-https://sparc.science/tools-and-resources/tools	2024-06-15 22:53:26.888	False		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2024-06-15 22:53:26.888
+https://sparc.science/tools-and-resources/tools	2026-02-17 19:19:44.547	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2024-06-15 22:53:26.888
 https://cfde-drc.s3.amazonaws.com/Metabolomics/KG Assertions/2024-05-08/MW.zip	2024-05-08 15:46:00.637	True		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2024-05-08 15:46:00.637
 https://search.api.hubmapconsortium.org/v3/	2024-06-10 18:39:05.532	True		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2024-06-10 18:39:05.532
 https://cfde-drc.s3.amazonaws.com/ExRNA/C2M2/2025-06-17/CFDE_20250612.zip	2025-06-17 19:19:40.559	False		f65babf7-2875-5725-9635-210d654533f1	False	False	True	2025-06-17 19:19:40.559
@@ -226,7 +227,6 @@ https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-06-10/MW_C2M2_2022-06-10_datapack
 https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-09-09/MW_C2M2_2022-09-09_datapackage.zip	2022-09-09 00:00:00.000	False		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2022-09-09 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/MW/C2M2/2022-12-21/MW_C2M2_2022-12-21_datapackage.zip	2022-12-21 00:00:00.000	False		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2022-12-21 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/MW/C2M2/2023-03-09/MW_C2M2_2023-03-09_datapackage.zip	2023-03-09 00:00:00.000	False		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2023-03-09 00:00:00.000
-https://cfde-drc.s3.amazonaws.com/IDG/KG/2023-10-26/IDG_KG_2023-10-26_IDG.edges.csv	2023-10-26 00:00:00.000	False		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	False	False	2023-10-26 00:00:00.000
 https://ga4gh-rnaseq.github.io/schema/docs/index.html	2023-04-20 00:00:00.000	True		b3028db2-209c-5862-8f4d-33c5b312332e	True	False	False	2023-04-20 00:00:00.000
 https://gtexportal.org/api/v2/redoc#tag/GTEx-Portal-API-Info	2023-10-01 00:00:00.000	True		b3028db2-209c-5862-8f4d-33c5b312332e	True	False	False	2023-10-01 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/MW/KG/2023-10-26/MW_KG_2023-10-26_MW.edges.csv	2023-10-26 00:00:00.000	False		089d8d63-3364-526f-9706-80d62d0ec88c	True	False	False	2023-10-26 00:00:00.000
@@ -238,9 +238,10 @@ https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09/GTEx_XMT_2019-09-09_GTEx_T
 https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2019-09-09/GTEx_XMT_2019-09-09_GTEx_Tissue_Expression_Up.gmt	2019-09-09 00:00:00.000	False		b3028db2-209c-5862-8f4d-33c5b312332e	True	False	False	2019-09-09 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/GTEx/XMT/2022-06-06/GTEx_XMT_2022-06-06_GTEx_Aging_Signatures_2021.gmt	2022-06-06 00:00:00.000	True		b3028db2-209c-5862-8f4d-33c5b312332e	True	False	False	2022-06-06 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/GlyGen/XMT/2022-12-13/GlyGen_XMT_2022-12-13_GlyGen_Glycosylated_Proteins_2022.gmt	2022-12-13 00:00:00.000	True		e31052b0-ac50-5ede-9828-698ff3610427	True	False	False	2022-12-13 00:00:00.000
-https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-06-06/IDG_XMT_2022-06-06_ARCHS4_IDG_Coexp.gmt	2022-06-06 00:00:00.000	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	False	False	2022-06-06 00:00:00.000
-https://cfde-drc.s3.amazonaws.com/IDG/XMT/2020-03-10/IDG_XMT_2020-03-10_DrugCentral_Target.dmt	2020-03-10 00:00:00.000	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	False	False	2020-03-10 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/MW/XMT/2022-12-13/MW_XMT_2022-12-13_Metabolomics_Workbench_Metabolites_2022.gmt	2022-12-13 00:00:00.000	True		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2022-12-13 00:00:00.000
+https://cfde-drc.s3.amazonaws.com/IDG/XMT/2020-03-10/IDG_XMT_2020-03-10_DrugCentral_Target.dmt	2020-03-10 00:00:00.000	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2020-03-10 00:00:00.000
+https://cfde-drc.s3.amazonaws.com/IDG/XMT/2022-06-06/IDG_XMT_2022-06-06_ARCHS4_IDG_Coexp.gmt	2022-06-06 00:00:00.000	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2022-06-06 00:00:00.000
+https://cfde-drc.s3.amazonaws.com/IDG/KG/2023-10-26/IDG_KG_2023-10-26_IDG.edges.csv	2023-10-26 00:00:00.000	False		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2023-10-26 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/KOMP2/XMT/2022-12-13/KOMP2_XMT_2022-12-13_KOMP2_Mouse_Phenotypes_2022.gmt	2022-12-13 00:00:00.000	True		830ddbac-bf21-5612-af1a-75c713045299	True	False	False	2022-12-13 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/LINCS/KG/2023-10-26/LINCS_KG_2023-10-26_LINCS.edges.csv	2023-10-26 00:00:00.000	False		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2023-10-26 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/ERCC/KG/2023-10-26/ERCC_KG_2023-10-26_ERCC.edges.csv	2023-10-26 00:00:00.000	False		f65babf7-2875-5725-9635-210d654533f1	True	False	False	2023-10-26 00:00:00.000
@@ -304,6 +305,11 @@ https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-10-16/scge_c2m2_submission_2025
 https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2025-09-16/SenNet_C2M2_Fall_2025.zip	2025-09-16 21:17:11.848	False		dd66e8a5-0e05-5a43-a0ca-18cc3698bb36	True	True	False	2025-09-16 21:17:11.848
 https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-06-15/c2m2_2024JUN15_submit.zip	2024-06-15 22:50:35.958	False		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	True	2024-06-15 22:50:35.958
 https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2025-09-15/HuBMAP_C2M2_Fall_2025.zip	2025-09-15 17:48:21.199	False		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2025-09-15 17:48:21.199
+https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-02-12/C2M2_datapackage.zip	2026-02-12 21:30:19.236	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	True	True	False	2026-02-12 21:30:19.236
+https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2026-03-17/C2M2_datapackage_20260317.zip	2026-03-17 20:57:22.562	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2026-03-17 20:57:22.562
+https://cbiit.github.io/ccdi-federation-api-aggregation/	2026-03-24 19:21:35.576	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-03-24 19:21:35.576
+https://portal.kidsfirstdrc.org/variants/{germline_variant_id}	2026-04-13 14:26:02.397	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:26:02.397
+https://github.com/kids-first/c2m2-submission-process/tree/master	2026-04-13 14:57:55.095	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:57:55.095
 https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2.pdf	2024-08-03 09:29:32.620	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	False	True	2024-08-03 09:29:32.620
 https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-03-01/tkg 2.0.zip	2024-03-01 05:45:05.879	False		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	False	False	2024-03-01 05:45:05.879
 https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402.zip	2024-08-03 09:43:53.326	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	False	False	2024-08-03 09:43:53.326
@@ -326,7 +332,6 @@ https://github.com/MaayanLab/LINCS-metadata	2024-11-25 23:00:10.211	True		f3f490
 https://ldh.genome.network/cfde/ldh/Gene/id/	2024-10-03 18:43:55.752	True		f65babf7-2875-5725-9635-210d654533f1	False	False	True	2024-10-03 18:43:55.752
 https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-10-07/HMS_LINCS_KinomeScan.gmt	2024-10-07 16:05:30.208	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	False	False	True	2024-10-07 16:05:30.208
 https://ldh.genome.network/cfde/ldh/Gene/id/{GENE_NAME}	2024-10-03 20:10:23.832	True		f65babf7-2875-5725-9635-210d654533f1	True	False	False	2024-10-03 20:10:23.832
-https://github.com/idekerlab/cellmaps_utils/tree/c2m2/cellmaps_utils	2024-12-09 16:59:07.035	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	False	False	2024-12-09 16:59:07.035
 https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-07-03/submission_validated.zip	2024-07-03 18:51:12.437	False		803ad44d-e7a2-550a-95c6-57855bf06be8	True	False	False	2024-07-03 18:51:12.437
 https://github.com/nih-cfde/LINCS-metadata/blob/main/scripts/build_file_lincs2021.py	2021-06-23 00:00:00.000	False		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2021-06-23 00:00:00.000
 https://cfde-drc.s3.amazonaws.com/Bridge2AI/KG Assertions/2024-08-03/Asset_Description-Bridge2AI_CM4AI_Talent_Knowledge_Graph_TKG_v2_202402.pdf	2024-08-03 09:44:39.385	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	False	False	2024-08-03 09:44:39.385
@@ -338,6 +343,7 @@ https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2024-12-11/l1000_cp.gmt	2024-12-11 1
 https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2024-12-11/MW_submission_packet_20241211.zip	2024-12-11 23:54:36.860	False		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2024-12-11 23:54:36.860
 https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-12-06/data.zip	2024-12-06 15:20:19.574	False		e31052b0-ac50-5ede-9828-698ff3610427	True	False	False	2024-12-06 15:20:19.574
 https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-09-17/c2m2_2024SEP16_submit.zip	2024-09-17 06:18:42.117	False		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	True	2024-09-17 06:18:42.117
+https://github.com/idekerlab/cellmaps_utils/tree/c2m2/cellmaps_utils	2024-12-09 16:59:07.035	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	True	False	False	2024-12-09 16:59:07.035
 https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2024-09-17/data.zip	2024-09-17 14:21:33.561	False		e31052b0-ac50-5ede-9828-698ff3610427	True	True	False	2024-09-17 14:21:33.561
 https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2024-12-16/HuBMAP_Dec_2024-fixed.zip	2024-12-16 23:49:04.967	False		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2024-12-16 23:49:04.967
 https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2024-12-16/Visium_(no_probes)-aggregate.zip	2024-12-16 15:09:53.185	False		dd66e8a5-0e05-5a43-a0ca-18cc3698bb36	False	False	True	2024-12-16 15:09:53.185
@@ -359,10 +365,16 @@ https://models.physiomeproject.org/e/d17/BG_PLB.cellml/view	2025-06-06 17:40:56.
 https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-09/glygen_data_june_2025_submission.zip	2025-07-09 14:17:43.500	False		e31052b0-ac50-5ede-9828-698ff3610427	False	True	False	2025-07-09 14:17:43.500
 https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-17/C2M2-3.zip	2025-07-17 18:51:03.977	True		38468653-8c59-5fdb-b6ca-afa16d9c5c1e	False	False	True	2025-07-17 18:51:03.977
 https://genboree.org/ldh/dss/exRNA/ns/exGL	2025-09-15 19:34:57.797	True		f65babf7-2875-5725-9635-210d654533f1	False	False	True	2025-09-15 19:34:57.797
+https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2026-03-18/C2M2_datapackage.zip	2026-03-18 04:05:29.199	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-03-18 04:05:29.199
+https://sparc.science/apps	2026-02-17 19:21:03.388	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2026-02-17 19:21:03.388
 https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2025-09-16/MW_submission_packet_20250916.zip	2025-09-16 22:21:59.654	True		089d8d63-3364-526f-9706-80d62d0ec88c	False	True	True	2025-09-16 22:21:59.654
 https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-09-19/C2M2-10.zip	2025-09-19 19:03:15.199	True		38468653-8c59-5fdb-b6ca-afa16d9c5c1e	True	False	True	2025-09-19 19:03:15.199
 https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-10-16/scge_c2m2_submission_20251016_111537.zip	2025-10-16 16:17:23.255	True		38468653-8c59-5fdb-b6ca-afa16d9c5c1e	False	False	True	2025-10-16 16:17:23.255
 https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2025-12-16/20251215_frictionless.zip	2025-12-16 05:00:32.667	False		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	False	True	2025-12-16 05:00:32.667
+https://pedcbioportal.org/api/swagger-ui/index.html	2026-03-25 14:53:10.755	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-03-25 14:53:04.044
+https://viewer.apinatomy.org/	2026-04-10 18:08:48.828	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2026-04-10 18:08:48.828
+https://portal.kidsfirstdrc.org/files/{file_id}	2026-04-13 14:26:13.861	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:26:13.861
+https://portal.kidsfirstdrc.org/analytics	2026-04-13 14:55:23.219	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:55:23.219
 https://cfde-drc.s3.amazonaws.com/MoTrPAC/Attribute Table/2025-04-10/motrpacratendurance_croissant.json	2025-04-10 21:41:58.261	True		a9aeab22-4fbc-5329-aef6-21110f463c23	True	True	False	2025-04-10 21:41:58.261
 https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-12-17/c2m2_2024DEC16_submit.zip	2024-12-17 06:27:45.220	True		2399794e-74c6-5735-a039-0782cdeeb1e2	False	False	True	2024-12-17 06:27:45.220
 https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2024-12-17/c2m2_2024DEC16_upload.zip	2024-12-17 06:37:10.473	True		2399794e-74c6-5735-a039-0782cdeeb1e2	False	False	True	2024-12-17 06:37:10.473
@@ -382,7 +394,7 @@ https://models.physiomeproject.org/e/d1a/BG_cAMP.cellml/view	2025-06-06 17:37:23
 https://cavatica.sbgenomics.com/public/apps/yukeyang/pointwise-mutual-information-pmi-model-based-pathogenic-noncoding-variant-discovery/pmi-model-analysis-2	2025-03-20 19:40:49.311	True		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2025-03-20 18:57:40.251
 https://cfde-drc.s3.amazonaws.com/ExRNA/C2M2/2024-12-18/CFDE_20241216_2.zip	2024-12-18 19:49:08.605	False		f65babf7-2875-5725-9635-210d654533f1	True	False	False	2024-12-18 19:49:08.605
 https://genboree.org/docs/ldh-dss/	2025-09-15 19:46:12.014	True		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2025-09-15 19:46:12.014
-https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-12-12/glygen_cfde_2025_dec_data_submission.zip	2025-12-12 21:48:08.499	True		e31052b0-ac50-5ede-9828-698ff3610427	False	True	False	2025-12-12 21:48:08.499
+https://portal.kidsfirstdrc.org/participants/patient_id	2026-04-13 14:20:06.254	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	False	True	2026-04-13 14:20:06.254
 https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2025-06-25/rummageogene.json	2025-06-25 15:51:34.737	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2025-06-25 15:51:34.737
 https://cfde-drc.s3.amazonaws.com/LINCS/XMT/2025-06-25/RummaGEO_GenePerturbationSignatures.gmt.txt	2025-06-25 15:51:15.841	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2025-06-25 15:51:15.841
 https://cfde-drc.s3.amazonaws.com/ExRNA/C2M2/2025-03-17/CFDE_20250317.zip	2025-03-17 19:55:47.594	False		f65babf7-2875-5725-9635-210d654533f1	False	True	False	2025-03-17 19:55:47.594
@@ -394,16 +406,21 @@ https://cfde-drc.s3.amazonaws.com/SCGE/XMT/2025-05-13/study.smt	2025-05-13 20:42
 https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2025-09-22/MW_submission_packet_20250916.zip	2025-09-22 21:40:17.661	False		089d8d63-3364-526f-9706-80d62d0ec88c	False	True	True	2025-09-22 21:40:17.661
 https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2025-09-17/250917_c2m2_4dn_sub.zip	2025-09-17 15:43:49.576	False		d6bb00c3-7224-5001-b9c5-9838622fba40	False	True	False	2025-09-17 15:43:49.576
 https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-10-16/scge_c2m2_submission_20251016_123533.zip	2025-10-16 18:11:34.585	True		38468653-8c59-5fdb-b6ca-afa16d9c5c1e	False	False	True	2025-10-16 18:11:34.585
-https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2025-12-16/20251215_frictionless3.zip	2025-12-16 05:23:46.827	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2025-12-16 05:23:46.827
+https://newdrugtargets.org/	2026-03-19 20:25:41.058	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2026-03-19 20:25:41.058
+https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-12-12/glygen_cfde_2025_dec_data_submission.zip	2025-12-12 21:48:08.499	False		e31052b0-ac50-5ede-9828-698ff3610427	False	True	False	2025-12-12 21:48:08.499
+https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2025-12-16/20251215_frictionless3.zip	2025-12-16 05:23:46.827	False		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2025-12-16 05:23:46.827
+https://github.com/Pennsieve/pennsieve-api	2026-02-18 17:42:59.107	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2026-02-17 20:42:23.132
+https://playbook-workflow-builder.cloud/components/KFTumorExpressionFromGene	2026-04-13 14:35:49.273	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	True	True	2026-04-13 14:35:49.273
+https://playbook-workflow-builder.cloud/components/KFTumorExpression	2026-04-13 14:35:33.988	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	True	True	2026-04-13 14:35:33.988
 https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2025-09-22/MW_submission_packet_20250922.zip	2025-09-22 22:22:56.083	False		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2025-09-22 22:22:56.083
 https://exrna-atlas.org/	2025-03-20 18:58:09.230	True		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2025-03-20 18:58:09.230
 https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2025-06-12/SenNet_C2M2_Summer_2025.zip	2025-06-12 13:50:28.375	False		dd66e8a5-0e05-5a43-a0ca-18cc3698bb36	True	True	False	2025-06-12 13:50:28.375
 https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2025-09-18/C2M2_datapackage.zip	2025-09-18 02:18:10.378	False		2399794e-74c6-5735-a039-0782cdeeb1e2	False	True	True	2025-09-18 02:18:10.378
 https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-03-18/data.zip	2025-03-18 03:24:07.915	False		e31052b0-ac50-5ede-9828-698ff3610427	False	True	False	2025-03-18 03:24:07.915
-https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2025-12-15/MW_submission_packet_20251214.zip	2025-12-15 17:32:24.414	True		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2025-12-15 17:32:24.414
+https://playbook-workflow-builder.cloud/components/%5BTumorGeneExpression%5D	2026-04-13 14:40:52.211	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	True	True	2026-04-13 14:40:52.211
+https://portal.kidsfirstdrc.org/participants/{patient_id}	2026-04-13 14:24:46.119	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:24:46.119
 https://cfde-drc.s3.amazonaws.com/GTEx/Attribute Table/2025-04-10/gtexsample_croissant.json	2025-04-10 21:43:43.167	True		b3028db2-209c-5862-8f4d-33c5b312332e	False	True	False	2025-04-10 21:43:43.167
 https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2025-03-06/HuBMAP_C2M2_Spring_2025.zip	2025-03-06 17:46:03.425	False		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2025-03-06 17:46:03.425
-https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2025-12-16/C2M2_datapackage.zip	2025-12-16 10:11:24.556	True		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2025-12-16 10:11:24.556
 https://cfde-drc.s3.amazonaws.com/SPARC/KG Assertions/2025-05-22/SPARC-SCKAN-2025MAY.zip	2025-05-22 16:07:50.814	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-05-22 16:07:50.814
 https://models.physiomeproject.org/e/ce5/BG_TRPN.cellml/view	2025-06-06 17:35:48.275	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:35:48.275
 https://models.physiomeproject.org/e/cf8/BG_Inhib1.cellml/view	2025-06-06 17:36:28.874	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:36:28.874
@@ -412,7 +429,13 @@ https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-17/C2M2-5.zip	2025-07-17 19:
 https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-07-11/glygen_cfde_june_2025_data_submission.zip	2025-07-11 15:25:27.429	False		e31052b0-ac50-5ede-9828-698ff3610427	True	True	False	2025-07-11 15:25:27.429
 https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2025-06-27/20250626_frictionless.zip	2025-06-27 00:53:08.574	False		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2025-06-27 00:53:08.574
 https://genboree.org/ldh/dss/exRNA/ns/exGL/set/annotation_json/	2025-09-15 19:53:00.065	True		f65babf7-2875-5725-9635-210d654533f1	False	False	True	2025-09-15 19:53:00.065
+https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2026-03-03/glygen_cfde_2026_march_data_submission.zip	2026-03-03 02:29:23.116	False		e31052b0-ac50-5ede-9828-698ff3610427	False	True	False	2026-03-03 02:29:23.116
+https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2025-12-15/MW_submission_packet_20251214.zip	2025-12-15 17:32:24.414	False		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2025-12-15 17:32:24.414
 https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-10-16/scge_cfde_submission_20251016_142600.zip	2025-10-16 19:29:04.999	True		38468653-8c59-5fdb-b6ca-afa16d9c5c1e	False	False	True	2025-10-16 19:29:04.999
+https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2025-12-16/C2M2_datapackage.zip	2025-12-16 10:11:24.556	False		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2025-12-16 10:11:24.556
+https://unmtid-shinyapps.net/shiny/tiga/	2026-03-19 20:27:57.545	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2026-03-19 20:27:57.545
+https://portal.kidsfirstdrc.org/files/file_id	2026-04-13 14:21:45.665	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	False	True	2026-04-13 14:21:45.665
+https://playbook-workflow-builder.cloud/components/BarplotFrom%5B%5BTumorGeneExpression%5D%5D	2026-04-13 14:41:08.248	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	True	True	2026-04-13 14:41:08.248
 https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2025-03-18/20250318_frictionless.zip	2025-03-18 19:49:59.670	False		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2025-03-18 19:49:59.670
 https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2025-09-23/C2M2_datapackage_202509.zip	2025-09-23 01:28:36.267	False		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-09-23 01:28:36.267
 https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2025-06-12/HuBMAP_C2M2_Summer_2025.zip	2025-06-12 13:51:44.131	False		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2025-06-12 13:51:44.131
@@ -429,15 +452,18 @@ https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2026-01-08/C2M2_datapackage.zip
 https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-07-17/C2M2-6.zip	2025-07-17 19:30:31.306	True		38468653-8c59-5fdb-b6ca-afa16d9c5c1e	False	False	True	2025-07-17 19:30:31.306
 https://genboree.org/ldh/dss/exRNA/ns/exGL/set/annotation_json/id/{exGLid}/data	2025-09-16 20:50:58.924	True		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2025-09-15 19:57:48.168
 https://api.glygen.org/	2021-04-02 00:00:00.000	True		e31052b0-ac50-5ede-9828-698ff3610427	True	False	False	2021-04-02 00:00:00.000
+https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2026-03-03/glygen_cfde_2026_march_data_submission_v2.zip	2026-03-03 04:05:25.322	True		e31052b0-ac50-5ede-9828-698ff3610427	False	True	False	2026-03-03 04:05:25.322
 https://cfde-drc.s3.amazonaws.com/ExRNA/C2M2/2025-09-18/exRNA_CFDE_091825.zip	2025-09-18 20:17:04.038	False		f65babf7-2875-5725-9635-210d654533f1	False	True	False	2025-09-18 20:17:04.038
+https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2026-03-20/c2m2-sennet-mar26.zip	2026-03-20 16:10:29.308	True		dd66e8a5-0e05-5a43-a0ca-18cc3698bb36	True	True	False	2026-03-20 16:10:29.308
+https://portal.kidsfirstdrc.org/variants/germline_variant_id	2026-04-13 14:22:56.075	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	False	True	2026-04-13 14:22:56.075
 https://models.physiomeproject.org/e/cca/BG_Kr.cellml/view	2025-06-06 17:42:16.186	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:42:16.186
 https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2025-03-10/l1000crispr_croissant.json	2025-03-10 20:08:29.743	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2025-03-10 20:08:29.743
 https://models.physiomeproject.org/e/d1f/BG_GPCR_M2_reduced.cellml/view	2025-06-06 17:44:41.549	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:44:41.549
-https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-09-04/glygen_cfde_2025_sept_data_submission.zip	2025-09-04 03:08:59.757	False		e31052b0-ac50-5ede-9828-698ff3610427	True	True	False	2025-09-04 03:08:59.757
 https://cfde-drc.s3.amazonaws.com/4DN/C2M2/2025-09-24/250924_c2m2_4dn_sub.zip	2025-09-24 15:34:00.544	False		d6bb00c3-7224-5001-b9c5-9838622fba40	True	True	False	2025-09-24 15:34:00.544
-https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2025-10-24/cm4ai-datapackage.zip	2025-10-24 22:35:37.350	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	True	False	2025-10-24 22:35:37.350
-https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2025-12-16/C2M2_datapackage.zip	2025-12-16 00:05:46.894	True		dd66e8a5-0e05-5a43-a0ca-18cc3698bb36	True	True	False	2025-12-16 00:05:46.894
+https://portal.kidsfirstdrc.org/variants-somatic/somatic_variant_id	2026-04-13 14:23:56.823	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	False	False	True	2026-04-13 14:23:56.823
 https://cfde-drc.s3.amazonaws.com/GTEx/Attribute Table/2025-04-10/gtexagingsignatures_croissant.json	2025-04-10 21:44:27.969	True		b3028db2-209c-5862-8f4d-33c5b312332e	False	True	False	2025-04-10 21:44:27.969
+https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2026-02-06/test_broken_datapackage.zip	2026-02-06 16:27:36.756	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	False	False	True	2026-02-06 16:27:36.756
+https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-09-04/glygen_cfde_2025_sept_data_submission.zip	2025-09-04 03:08:59.757	False		e31052b0-ac50-5ede-9828-698ff3610427	True	False	False	2025-09-04 03:08:59.757
 https://cfde-drc.s3.amazonaws.com/HuBMAP/XMT/2025-03-21/HuBMAP_ASCT-B.gmt	2025-03-21 13:56:21.963	True		803ad44d-e7a2-550a-95c6-57855bf06be8	True	True	False	2025-03-21 13:56:21.963
 https://models.physiomeproject.org/e/ca4/BG_AE3.cellml/view	2025-06-06 17:30:29.258	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:30:29.258
 https://models.physiomeproject.org/e/cbd/BG_CaB.cellml/view	2025-06-06 17:32:40.734	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:32:40.734
@@ -450,7 +476,13 @@ https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2025-06-12/MW_submission_pac
 https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2025-03-19/c2m2_2025MAR18_submit.zip	2025-03-19 06:42:18.594	False		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-03-19 06:42:18.594
 https://cfde-drc.s3.amazonaws.com/SCGE/C2M2/2025-09-19/C2M2.zip	2025-09-19 15:43:41.522	True		38468653-8c59-5fdb-b6ca-afa16d9c5c1e	False	False	True	2025-09-19 15:43:41.522
 https://exrna-atlas.org/exrna/exgl-query/	2025-09-15 20:01:35.775	True		f65babf7-2875-5725-9635-210d654533f1	True	True	False	2025-09-15 20:01:35.775
+https://github.com/MaayanLab/Playbook-Workflow-Builder/blob/main/components/viz/kf_barplot/index.tsx	2026-04-13 14:49:32.143	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:49:32.143
 https://github.com/unmtransinfo/IDG-CFDE-ETL	2025-07-14 11:16:39.059	True		a1289ebb-0306-59a1-b0fc-e4d03a4790d7	True	True	False	2025-07-14 11:16:39.059
+https://cfde-drc.s3.amazonaws.com/SenNet/C2M2/2025-12-16/C2M2_datapackage.zip	2025-12-16 00:05:46.894	False		dd66e8a5-0e05-5a43-a0ca-18cc3698bb36	True	True	False	2025-12-16 00:05:46.894
+https://github.com/MaayanLab/Playbook-Workflow-Builder/blob/eece1eb07365d6255b44708b64606aa42eef5563/components/service/kf/index.tsx	2026-04-13 14:50:20.343	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:50:20.343
+https://cfde-drc.s3.amazonaws.com/MoTrPAC/C2M2/2026-03-10/C2M2_datapackage.zip	2026-03-10 19:47:33.988	True		a9aeab22-4fbc-5329-aef6-21110f463c23	True	True	False	2026-03-10 19:47:33.988
+https://cfde-drc.s3.amazonaws.com/HuBMAP/C2M2/2026-03-21/hubmap-c2m2-mar26.zip	2026-03-21 00:29:44.371	True		803ad44d-e7a2-550a-95c6-57855bf06be8	False	False	False	2026-03-21 00:29:44.371
+https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2025-10-24/cm4ai-datapackage.zip	2025-10-24 22:35:37.350	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	True	True	False	2025-10-24 22:35:37.350
 https://github.com/nih-cfde/playbook-partnership/blob/main/components/service/regulatoryElementInfo/index.tsx	2023-10-19 00:00:00.000	True		f65babf7-2875-5725-9635-210d654533f1	True	False	False	2023-10-19 00:00:00.000
 https://smart-api.info/ui/c8e4c6c6633ead7ddc2ecf3dc6ac97b2	2018-08-07 00:00:00.000	False		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	False	True	False	2018-08-07 00:00:00.000
 https://smart-api.info/ui/8113167e81987d36b707ae4aa795b17e	2022-04-05 00:00:00.000	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2022-04-05 00:00:00.000
@@ -461,15 +493,21 @@ https://smart-api.info/ui/c6fdcbd1d6be2a51c065e18eabed4bb1	2023-01-31 00:00:00.0
 https://smart-api.info/ui/d2cd419fdeace3e941984bc542e9383f	2023-01-31 00:00:00.000	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2023-01-31 00:00:00.000
 https://models.physiomeproject.org/e/cc7/BG_NaB.cellml/view	2025-06-06 17:45:25.837	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:45:25.837
 https://cfde-drc.s3.amazonaws.com/LINCS/Attribute Table/2025-03-10/l1000chempert_croissant.json	2025-03-10 20:08:57.448	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	True	True	False	2025-03-10 20:08:57.448
+https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2025-12-16/C2M2_datapackage_20251215.zip	2025-12-16 04:48:05.077	False		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-12-16 04:48:05.077
 https://models.physiomeproject.org/e/cc5/BG_K_ATP.cellml/view	2025-06-06 17:38:41.963	True		2399794e-74c6-5735-a039-0782cdeeb1e2	False	True	False	2025-06-06 17:38:41.963
 https://cfde-drc.s3.amazonaws.com/ExRNA/C2M2/2025-06-13/CFDE_20250612.zip	2025-06-13 20:36:59.473	False		f65babf7-2875-5725-9635-210d654533f1	False	True	False	2025-06-13 20:36:59.473
 https://cfde-drc.s3.amazonaws.com/GlyGen/C2M2/2025-04-14/GlyGen-March2025-C2M2sub-fixed.zip	2025-04-14 09:58:45.437	False		e31052b0-ac50-5ede-9828-698ff3610427	True	True	False	2025-04-14 09:58:45.437
+https://cavatica.sbgenomics.com/u/sevenbridges/kids-first-variant-workbench	2026-04-13 14:55:03.675	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:55:03.675
 https://models.physiomeproject.org/e/cc1/BG_Na.cellml/view	2025-06-06 17:30:38.633	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:30:38.633
 https://models.physiomeproject.org/e/d24/BG_SERCA.cellml/view	2025-06-06 17:38:05.836	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:38:05.836
 https://models.physiomeproject.org/e/d19/BG_cGMP.cellml/view	2025-06-06 17:38:27.988	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-06-06 17:38:27.988
 https://cfde-drc.s3.amazonaws.com/Bridge2AI/C2M2/2024-12-09/draft_C2M2_submission_TSVs.zip	2024-12-09 16:56:54.178	True		75b3be39-a021-5d80-b7e2-2a7938a1e11a	False	False	True	2024-12-09 16:56:54.178
 https://bdcw.org/MetGENE/metGene.php?GeneInfoStr={gene.symbol}&GeneIDType=SYMBOL&species=hsa&anatomy=NA&disease_slim=&disease=NA	2024-03-08 00:17:57.482	True		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2024-03-08 00:17:57.482
 https://github.com/nih-cfde/playbook-partnership/blob/main/components/MW/metgene_metabolites/index.tsx	2023-09-15 00:00:00.000	True		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2023-09-15 00:00:00.000
+https://cavatica.sbgenomics.com/public/apps/q?search=KFDRC	2026-04-13 14:54:46.728	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:54:46.728
 https://github.com/nickerso/simvuer	2025-10-09 17:42:45.534	True		2399794e-74c6-5735-a039-0782cdeeb1e2	False	True	False	2025-10-09 17:42:45.534
+https://cfde-drc.s3.amazonaws.com/Metabolomics/C2M2/2026-03-12/MW_submission_packet_20260310.zip	2026-03-12 20:05:48.640	True		089d8d63-3364-526f-9706-80d62d0ec88c	True	True	False	2026-03-12 20:05:48.640
+https://fhir.kidsfirstdrc.org/swagger-ui/index.html	2026-03-24 17:55:31.727	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-03-24 17:54:26.487
 https://cfde-drc.s3.amazonaws.com/KidsFirst/C2M2/2025-09-15/20250915_frictionless.zip	2025-09-15 19:23:03.402	False		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2025-09-15 19:23:03.402
-https://cfde-drc.s3.amazonaws.com/SPARC/C2M2/2025-12-16/C2M2_datapackage_20251215.zip	2025-12-16 04:48:05.077	True		2399794e-74c6-5735-a039-0782cdeeb1e2	True	True	False	2025-12-16 04:48:05.077
+https://cfde-drc.s3.amazonaws.com/LINCS/C2M2/2026-02-06/test_broken_datapackage2.zip	2026-02-06 16:45:49.135	True		f3f490cf-fd69-579c-8ea3-472c7cf3fb59	False	False	True	2026-02-06 16:45:49.135
+https://portal.kidsfirstdrc.org/variants-somatic/{somatic_variant_id}	2026-04-13 14:25:10.116	True		65af85ae-82d5-5b81-bc66-6bddaa6420ce	True	True	False	2026-04-13 14:25:10.116

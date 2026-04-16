@@ -504,15 +504,6 @@
     "files": []
   },
   {
-    "url": "https://sparc.science/tools-and-resources/tools",
-    "dir": "https://sparc.science/tools-and-resourcestools",
-    "name": "SPARC Tools and Resources",
-    "ext": "",
-    "type": "Apps URL",
-    "date": "",
-    "files": []
-  },
-  {
     "url": "https://smart-api.info/01",
     "dir": "https://smart-api.info/01",
     "name": "SmartAPI URL",
@@ -1310,6 +1301,258 @@
     "name": "SimVuer ",
     "ext": "",
     "type": "Models",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://sparc.science/tools-and-resources/tools",
+    "dir": "https://sparc.science/tools-and-resourcestools",
+    "name": "Tools useful for the SPARC community",
+    "ext": "",
+    "type": "Apps URL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://sparc.science/apps",
+    "dir": "https://sparc.science/apps",
+    "name": "SPARC Apps",
+    "ext": "",
+    "type": "Apps URL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/Pennsieve/pennsieve-api",
+    "dir": "https://github.com/Pennsievepennsieve-api",
+    "name": "Pennsieve API",
+    "ext": "",
+    "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://newdrugtargets.org/",
+    "dir": "https://newdrugtargets.org",
+    "name": "TIN-X: Target Importance & Novelty Explorer",
+    "ext": "",
+    "type": "Apps URL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://unmtid-shinyapps.net/shiny/tiga/",
+    "dir": "https://unmtid-shinyapps.net/shinytiga",
+    "name": " TIGA: Target Illumination GWAS Analytics",
+    "ext": "",
+    "type": "Apps URL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://www.cbioportal.org/api/swagger-ui/index.html",
+    "dir": "https://www.cbioportal.org/api/swagger-ui",
+    "name": "PedcBioPortal API",
+    "ext": "html",
+    "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://fhir.kidsfirstdrc.org/swagger-ui/index.html",
+    "dir": "https://fhir.kidsfirstdrc.org/swagger-ui",
+    "name": "Kids First FHIR",
+    "ext": "html",
+    "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://cbiit.github.io/ccdi-federation-api-aggregation/",
+    "dir": "https://cbiit.github.io/ccdi-federation-api-aggregation",
+    "name": "Kids First CCDI Federation API",
+    "ext": "",
+    "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://pedcbioportal.org/api/swagger-ui/index.html",
+    "dir": "https://pedcbioportal.org/api/swagger-ui",
+    "name": "PedcBioPortal API",
+    "ext": "html",
+    "type": "API",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://viewer.apinatomy.org/",
+    "dir": "https://viewer.apinatomy.org",
+    "name": "𝐀𝐩𝐢𝐍𝐀𝐓𝐎𝐌𝐘 𝐑𝐞𝐧𝐚𝐥 𝐂𝐨𝐧𝐧𝐞𝐜𝐭𝐢𝐯𝐢𝐭𝐲 𝐌𝐨𝐝𝐞𝐥",
+    "ext": "",
+    "type": "Models",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/participants/patient_id",
+    "dir": "https://portal.kidsfirstdrc.org/participantspatient_id",
+    "name": "Kids First Patient Pages",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/files/file_id",
+    "dir": "https://portal.kidsfirstdrc.org/filesfile_id",
+    "name": "Kids First Data File Pages",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/variants/germline_variant_id",
+    "dir": "https://portal.kidsfirstdrc.org/variantsgermline_variant_id",
+    "name": "Kids First Germline Variant Pages",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/variants-somatic/somatic_variant_id",
+    "dir": "https://portal.kidsfirstdrc.org/variants-somaticsomatic_variant_id",
+    "name": "Kids First Somatic Variant Pages",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/participants/{patient_id}",
+    "dir": "https://portal.kidsfirstdrc.org/participants{patient_id}",
+    "name": "Kids First Patient Pages",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/variants-somatic/{somatic_variant_id}",
+    "dir": "https://portal.kidsfirstdrc.org/variants-somatic{somatic_variant_id}",
+    "name": "Kids First Somatic Variant Pages",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/variants/{germline_variant_id}",
+    "dir": "https://portal.kidsfirstdrc.org/variants{germline_variant_id}",
+    "name": "Kids First Germline Variant Pages",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/files/{file_id}",
+    "dir": "https://portal.kidsfirstdrc.org/files{file_id}",
+    "name": "Kids First Data File Pages",
+    "ext": "",
+    "type": "Entity Page Template",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/KFTumorExpression",
+    "dir": "https://playbook-workflow-builder.cloud/componentsKFTumorExpression",
+    "name": "Query Kids First Gene Expression with myGeneInfo",
+    "ext": "",
+    "type": "PWB Metanodes",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/KFTumorExpressionFromGene",
+    "dir": "https://playbook-workflow-builder.cloud/componentsKFTumorExpressionFromGene",
+    "name": "Query Kids First Gene Expression with Gene Term",
+    "ext": "",
+    "type": "PWB Metanodes",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/%5BTumorGeneExpression%5D",
+    "dir": "https://playbook-workflow-builder.cloud/components[TumorGeneExpression]",
+    "name": "Kids First Tumor Gene Expression Data",
+    "ext": "",
+    "type": "PWB Metanodes",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://playbook-workflow-builder.cloud/components/BarplotFrom%5B%5BTumorGeneExpression%5D%5D",
+    "dir": "https://playbook-workflow-builder.cloud/componentsBarplotFrom[[TumorGeneExpression]]",
+    "name": "Kids First Tumor Gene Expression Bar Plot",
+    "ext": "",
+    "type": "PWB Metanodes",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/MaayanLab/Playbook-Workflow-Builder/blob/main/components/viz/kf_barplot/index.tsx",
+    "dir": "https://github.com/MaayanLab/Playbook-Workflow-Builder/blob/main/components/viz/kf_barplot",
+    "name": "Kids First Tumor Gene Expression Bar Plot",
+    "ext": "tsx",
+    "type": "PWB Metanodes",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/MaayanLab/Playbook-Workflow-Builder/blob/eece1eb07365d6255b44708b64606aa42eef5563/components/service/kf/index.tsx",
+    "dir": "https://github.com/MaayanLab/Playbook-Workflow-Builder/blob/eece1eb07365d6255b44708b64606aa42eef5563/components/service/kf",
+    "name": "Kids First Tumor Gene Expression Data",
+    "ext": "tsx",
+    "type": "PWB Metanodes",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://cavatica.sbgenomics.com/public/apps/q?search=KFDRC",
+    "dir": "https://cavatica.sbgenomics.com/public/apps?search=KFDRCq",
+    "name": "Kids First Apps on CAVATICA",
+    "ext": "",
+    "type": "Apps URL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://cavatica.sbgenomics.com/u/sevenbridges/kids-first-variant-workbench",
+    "dir": "https://cavatica.sbgenomics.com/u/sevenbridgeskids-first-variant-workbench",
+    "name": "Kids First Variant Workbench on CAVATICA",
+    "ext": "",
+    "type": "Apps URL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://portal.kidsfirstdrc.org/analytics",
+    "dir": "https://portal.kidsfirstdrc.org/analytics",
+    "name": "Kids First Analytics Tools",
+    "ext": "",
+    "type": "Apps URL",
+    "date": "",
+    "files": []
+  },
+  {
+    "url": "https://github.com/kids-first/c2m2-submission-process/tree/master",
+    "dir": "https://github.com/kids-first/c2m2-submission-process/treemaster",
+    "name": "Kids First C2M2 ETL",
+    "ext": "",
+    "type": "ETL",
     "date": "",
     "files": []
   }
