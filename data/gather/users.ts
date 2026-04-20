@@ -26,31 +26,30 @@ export const getUsers = async () => {
   /** drop header row */
   data.shift();
 
+  /** map of users to projects */
   const map: Record<string, string[]> = {};
 
   log(`Reading ${count(data)} rows`);
 
-  /** transform into map of orcid ids to project numbers */
   for (let [coreProjectName, coreProjectId = "", ...users] of data) {
     log(`${coreProjectId} (${coreProjectName})`, "secondary", 1);
     if (coreProjectId === "All") coreProjectId = "*";
-    /** add project to map */
-    map[coreProjectId] ??= [];
     for (const user of users) {
       /** extract orcid digits from field w/ possibly other contents */
-      let [, userName, userOrcid] =
+      let [, userName, userId] =
         user.match(
           /(.*?)([0-9a-zA-Z]{4}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{4}-[0-9a-zA-Z]{4})/s,
         ) ?? [];
-      if (!userName || !userOrcid) continue;
+      if (!userName || !userId) continue;
       userName = userName.trim().replace(/\s+/g, " ");
 
-      /** add user to project */
-      const list = map[coreProjectId];
+      /** add to map */
+      map[userId] ??= [];
+      const list = map[userId];
       if (!list) continue;
-      if (list?.includes(userOrcid)) continue;
-      list.push(userOrcid);
-      log(`${userOrcid} (${userName})`, "secondary", 2);
+      if (list?.includes(coreProjectId)) continue;
+      list.push(coreProjectId);
+      log(`${userId} (${userName})`, "secondary", 2);
     }
   }
 
