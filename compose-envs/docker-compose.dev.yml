@@ -7,15 +7,16 @@ services:
     environment:
       - DJANGO_DEBUG=1
       - ORCID_USE_SANDBOX=1
-      - FRONTEND_APP_URL=http://127.0.0.1:3000/
+      - FRONTEND_APP_URL=http://127.0.0.1:5173
 
   frontend:
-    build: ./dummy-frontend/
+    build: ./frontend/
     ports:
-      - 3000:3000
+      - 5173:5173
     volumes:
-      - ./dummy-frontend/src/:/app/src/
+      - ./frontend/src/:/app/src/
+      - ./frontend/public/:/app/public/
     environment:
-      - BUN_PUBLIC_ORCID_AUTH_URL=http://127.0.0.1:8015/accounts/orcid/login/
+      - VITE_API=http://127.0.0.1:8015
     depends_on:
       - backend
