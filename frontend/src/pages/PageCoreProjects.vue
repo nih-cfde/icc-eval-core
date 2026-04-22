@@ -33,7 +33,9 @@
       </template>
 
       <template #id="{ row }">
-        <AppLink :to="`/core-project/${row.id}`">{{ row.id }}</AppLink>
+        <AppLink v-if="row.id" :to="`/core-project/${row.id}`">
+          {{ row.id }}
+        </AppLink>
       </template>
 
       <template #name="{ row }">

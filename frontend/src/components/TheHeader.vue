@@ -8,9 +8,9 @@
     </div>
 
     <nav>
-      <AppLink v-if="!user && userStatus !== 'pending'" :to="loginLink"
-        >Login</AppLink
-      >
+      <AppLink v-if="!user && userStatus !== 'pending'" :to="loginLink">
+        Login
+      </AppLink>
       <template v-if="user && userStatus === 'success'">
         <div
           class="user"

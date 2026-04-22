@@ -78,15 +78,15 @@
       <dl class="mini-table">
         <dt>RCR</dt>
         <dd>
-          <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/"
-            >Relative Citation Ratio</AppLink
-          >
+          <AppLink to="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/">
+            Relative Citation Ratio
+          </AppLink>
         </dd>
         <dt>SJR</dt>
         <dd>
-          <AppLink to="https://www.scimagojr.com/journalrank.php"
-            >Scimago Journal Rank</AppLink
-          >
+          <AppLink to="https://www.scimagojr.com/journalrank.php">
+            Scimago Journal Rank
+          </AppLink>
         </dd>
       </dl>
     </div>
