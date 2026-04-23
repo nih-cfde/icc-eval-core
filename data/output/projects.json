@@ -468,19 +468,6 @@
     "isActive": 1
   },
   {
-    "id": "3OT2OD036440-01S1",
-    "coreProject": "OT2OD036440",
-    "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
-    "opportunity": "OTA-23-004",
-    "application": 11083282,
-    "awardAmount": 1749042,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2023-09-18T00:00:00",
-    "dateEnd": "2028-09-17T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "1OT2OD036440-01",
     "coreProject": "OT2OD036440",
     "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
@@ -492,6 +479,19 @@
     "dateStart": "2023-09-18T00:00:00",
     "dateEnd": "2028-09-17T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "3OT2OD036440-01S1",
+    "coreProject": "OT2OD036440",
+    "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
+    "opportunity": "OTA-23-004",
+    "application": 11083282,
+    "awardAmount": 1749042,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2023-09-18T00:00:00",
+    "dateEnd": "2028-09-17T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1R03OD036497-01",
@@ -520,19 +520,6 @@
     "isActive": 1
   },
   {
-    "id": "1U24OD038421-01",
-    "coreProject": "U24OD038421",
-    "name": "Community Data Hub for Integrative Visualization",
-    "opportunity": "RFA-RM-23-013",
-    "application": 10993963,
-    "awardAmount": 969346,
-    "activityCode": "U24",
-    "agencyCode": "NIH",
-    "dateStart": "2024-09-19T00:00:00",
-    "dateEnd": "2027-08-31T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "5U24OD038421-02",
     "coreProject": "U24OD038421",
     "name": "Community Data Hub for Integrative Visualization",
@@ -544,6 +531,19 @@
     "dateStart": "2024-09-19T00:00:00",
     "dateEnd": "2027-08-31T00:00:00",
     "isActive": 1
+  },
+  {
+    "id": "1U24OD038421-01",
+    "coreProject": "U24OD038421",
+    "name": "Community Data Hub for Integrative Visualization",
+    "opportunity": "RFA-RM-23-013",
+    "application": 10993963,
+    "awardAmount": 969346,
+    "activityCode": "U24",
+    "agencyCode": "NIH",
+    "dateStart": "2024-09-19T00:00:00",
+    "dateEnd": "2027-08-31T00:00:00",
+    "isActive": 0
   },
   {
     "id": "1OT2OD037922-01",
@@ -1274,19 +1274,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030547-01S4",
-    "coreProject": "OT2OD030547",
-    "name": "GENOMIC INDEXING OF COMMON FUND DATASETS",
-    "opportunity": "OTA-20-005",
-    "application": 11087940,
-    "awardAmount": 299945,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-24T00:00:00",
-    "dateEnd": "2025-09-23T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "3OT2OD030547-01S2",
     "coreProject": "OT2OD030547",
     "name": "GENOMIC INDEXING OF COMMON FUND DATASETS",
@@ -1297,6 +1284,19 @@
     "agencyCode": "NIH",
     "dateStart": "2020-09-24T00:00:00",
     "dateEnd": "2023-09-23T00:00:00",
+    "isActive": 0
+  },
+  {
+    "id": "3OT2OD030547-01S4",
+    "coreProject": "OT2OD030547",
+    "name": "GENOMIC INDEXING OF COMMON FUND DATASETS",
+    "opportunity": "OTA-20-005",
+    "application": 11087940,
+    "awardAmount": 299945,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-24T00:00:00",
+    "dateEnd": "2025-09-23T00:00:00",
     "isActive": 0
   },
   {
@@ -1612,19 +1612,6 @@
     "isActive": 0
   },
   {
-    "id": "3OT2OD030544-01S1",
-    "coreProject": "OT2OD030544",
-    "name": "Biomedical Data Commons Workbench (BDCW)",
-    "opportunity": "OTA-20-005",
-    "application": 10468524,
-    "awardAmount": 798176,
-    "activityCode": "OT2",
-    "agencyCode": "NIH",
-    "dateStart": "2020-09-23T00:00:00",
-    "dateEnd": "2023-09-22T00:00:00",
-    "isActive": 0
-  },
-  {
     "id": "1OT2OD030544-01",
     "coreProject": "OT2OD030544",
     "name": "Biomedical Data Commons Workbench (BDCW)",
@@ -1648,6 +1635,19 @@
     "agencyCode": "NIH",
     "dateStart": "2020-09-23T00:00:00",
     "dateEnd": "2024-09-22T00:00:00",
+    "isActive": 0
+  },
+  {
+    "id": "3OT2OD030544-01S1",
+    "coreProject": "OT2OD030544",
+    "name": "Biomedical Data Commons Workbench (BDCW)",
+    "opportunity": "OTA-20-005",
+    "application": 10468524,
+    "awardAmount": 798176,
+    "activityCode": "OT2",
+    "agencyCode": "NIH",
+    "dateStart": "2020-09-23T00:00:00",
+    "dateEnd": "2023-09-22T00:00:00",
     "isActive": 0
   },
   {
