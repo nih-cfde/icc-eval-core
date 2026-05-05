@@ -1,4 +1,5 @@
 import type { Ref } from "vue";
+import { event } from "vue-gtag";
 import { sum } from "lodash";
 import { useQuery } from "@tanstack/vue-query";
 import analyticsOverview from "./types/analytics-overview.json";
@@ -41,6 +42,7 @@ const request = async <Results>(
   /** if not authorized, fail gracefully */
   if (response.status === 401) return notAuthed;
   if (!response.ok) throw new Error(`Response not OK`);
+  event(`api_${endpoint}`, { params });
   /** paginated */
   if ("limit" in params)
     return ((await response.json()) as Paginated<Results>).results;
