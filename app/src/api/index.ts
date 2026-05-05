@@ -1,3 +1,4 @@
+import { event } from "vue-gtag";
 import type analyticsOverview from "~/analytics-overview.json";
 import type analytics from "~/analytics.json";
 import type coreProjects from "~/core-projects.json";
@@ -23,6 +24,9 @@ const request = async <Results>(
   /** if simply not logged in, fail gracefully */
   if (response.status === 401) return null;
   if (!response.ok) throw new Error(`Response not OK`);
+  try {
+    event(endpoint, params);
+  } catch {}
   /** paginated */
   if ("limit" in params)
     return ((await response.json()) as Paginated<Results>).results;
