@@ -15,12 +15,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
+        uses: actions/checkout@v6
 
       - name: Set up Bun
         uses: oven-sh/setup-bun@v2
@@ -32,26 +27,14 @@ jobs:
         uses: mxschmitt/action-tmate@v3
 
       - name: Install packages
-        run: ./run.sh --install
+        run: ./run_pipeline.sh --install
 
       - name: Install Playwright
-        run: ./run.sh --install-playwright
+        run: ./run_pipeline.sh --install-playwright
 
       - name: Run pipeline
-        run: xvfb-run ./run.sh
+        run: xvfb-run ./run_pipeline.sh
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
-          CACHE: ${{ inputs.cache && 'true' || '' }}
-
-      - name: Commit files
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Update files
-          commit_author: "Bot <>"
-
-      - name: Trigger private repo
-        uses: peter-evans/repository-dispatch@v3
-        with:
-          token: ${{ secrets.AUTH_PRIVATE }}
-          repository: nih-cfde/icc-eval-core-private
-          event-type: pipeline
+          AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
+          AUTH_GOOGLE: ${{ secrets.AUTH_GOOGLE }}

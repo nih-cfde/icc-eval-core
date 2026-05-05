@@ -2,30 +2,24 @@ import { sum, uniq, uniqBy } from "lodash-es";
 import { queryReporter } from "@/api/reporter";
 import type { ProjectsQuery } from "@/api/types/reporter-projects-query";
 import type { ProjectsResults } from "@/api/types/reporter-projects-results";
+import manualCoreProjects from "@/manual/core-projects.json";
 import { log } from "@/util/log";
-import { query } from "@/util/request";
 import { count } from "@/util/string";
 
 /** get grant projects associated with funding opportunities */
-export const getProjects = async (
-  opportunities: string[],
-  manualCoreProjects?: string[],
-) => {
+export const getProjects = async (opportunities: string[]) => {
   log(`Getting projects for ${count(opportunities)} opportunities`);
 
   /** get projects associated with opportunities */
-  let reporter = await query(
-    () =>
-      queryReporter<ProjectsQuery, ProjectsResults>("projects", {
-        criteria: { opportunity_numbers: opportunities },
-      }),
-    "reporter-projects.json",
+  let reporter = await queryReporter<ProjectsQuery, ProjectsResults>(
+    "projects",
+    { criteria: { opportunity_numbers: opportunities } },
   );
 
   /** extract results */
   let projects = reporter.results ?? [];
 
-  log(`Adding ${count(manualCoreProjects)} manual core projects`);
+  log(`Including ${count(manualCoreProjects)} manual core projects`);
 
   /** get projects associated with manual core projects */
   reporter = await queryReporter<ProjectsQuery, ProjectsResults>("projects", {
@@ -74,8 +68,17 @@ export const getProjects = async (
     };
   });
 
+  log(`${count(transformedCoreProjects)} core projects`, "success");
+  log(`${count(transformedProjects)} projects`, "success");
+
   return {
     coreProjects: transformedCoreProjects,
     projects: transformedProjects,
   };
 };
+
+export type CoreProjects = Awaited<
+  ReturnType<typeof getProjects>
+>["coreProjects"];
+
+export type Projects = Awaited<ReturnType<typeof getProjects>>["projects"];

@@ -14,6 +14,8 @@ export default typescriptEslint.config({
   rules: {
     "prettier/prettier": "warn",
     "prefer-const": ["error", { destructuring: "all" }],
+    "no-useless-assignment": "warn",
+    "preserve-caught-error": "warn",
     "@typescript-eslint/no-unused-vars": [
       "warn",
       { ignoreRestSiblings: true, caughtErrors: "none" },

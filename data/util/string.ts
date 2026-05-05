@@ -2,10 +2,6 @@ import { parse } from "path";
 import { isValid } from "date-fns";
 import { size } from "lodash-es";
 
-/** (lodash's capitalize forces later characters to lower case) */
-export const capitalize = (string: string) =>
-  string.substring(0, 1).toUpperCase() + string.substring(1);
-
 /** get "size" of value and format as string */
 export const count = (value: unknown) => {
   if (typeof value === "number") return value.toLocaleString();
@@ -54,9 +50,9 @@ export const formatDate = (date?: ConstructorParameters<typeof Date>[0]) => {
 
 /** split full url or path into parts */
 export const splitPath = (path: string) => {
-  let dir = "";
-  let name = "";
-  let ext = "";
+  let dir: string;
+  let name: string;
+  let ext: string;
 
   try {
     /** parse as url */
