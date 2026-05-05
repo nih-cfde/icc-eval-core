@@ -50,9 +50,9 @@ export const formatDate = (date?: ConstructorParameters<typeof Date>[0]) => {
 
 /** split full url or path into parts */
 export const splitPath = (path: string) => {
-  let dir = "";
-  let name = "";
-  let ext = "";
+  let dir: string;
+  let name: string;
+  let ext: string;
 
   try {
     /** parse as url */

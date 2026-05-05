@@ -35,7 +35,9 @@ const handleError =
     try {
       return await func(...params);
     } catch (error) {
-      throw Error((error as { details: string }).details ?? error);
+      throw Error((error as { details: string }).details ?? error, {
+        cause: error,
+      });
     }
   };
 

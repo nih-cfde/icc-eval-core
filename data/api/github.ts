@@ -134,6 +134,7 @@ export const hasReadme = memoize(async (owner: string, repo: string) => {
     if (status === 404) return false;
     throw Error(
       `Unexpected problem getting readme for repo ${owner}/${repo}, status ${status}`,
+      { cause: error },
     );
   }
 });
@@ -151,6 +152,7 @@ export const fileExists = memoize(
       if (status === 404) return false;
       throw Error(
         `Unexpected problem getting contents for repo ${owner}/${repo}, status ${status}`,
+        { cause: error },
       );
     }
   },

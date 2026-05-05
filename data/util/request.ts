@@ -59,6 +59,6 @@ export const request: Request = async <Parsed>(
     if (options.parse === "text") return (await response.text()) as Parsed;
     throw Error();
   } catch (error) {
-    throw Error(`Problem parsing ${url} as ${options.parse}`);
+    throw Error(`Problem parsing ${url} as ${options.parse}`, { cause: error });
   }
 };

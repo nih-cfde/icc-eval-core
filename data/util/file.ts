@@ -62,10 +62,9 @@ export const loadFile = async <Data>(
   format?: Extensions,
   options?: ParseOptions,
 ) => {
-  let contents = "";
-  let data: Data | null = null;
+  const contents = await readFile(path, "utf-8");
 
-  contents = await readFile(path, "utf-8");
+  let data: Data;
 
   if (format === "json" || path.endsWith(".json"))
     data = parseJson<Data>(contents);
