@@ -2,16 +2,12 @@
 
 ## Entrez authentication
 
-Not 100% necessary, but requests may intermittently fail without it.
-
 1. Go to your NCBI settings page (https://account.ncbi.nlm.nih.gov/settings/).
 1. "Create API Key".
 1. _(For running the pipeline locally)_ In `/.env`, add an `AUTH_ENTREZ` key with the value of the created key.
 1. _(For running the pipeline on GitHub Actions)_ Create an actions repository secret in this repo with the name `AUTH_ENTREZ` and value of the created key.
 
 ## GitHub authentication
-
-Not 100% necessary, but recommended for better API rate limits.
 
 1. Generate a fine-grained personal access token with the name `cdfe-icc-eval-core` and read-only access to public repos only.
 1. _(For running the pipeline locally)_ In `/.env`, add a `AUTH_GITHUB` key with the value of the generated token.

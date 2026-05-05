@@ -16,7 +16,7 @@ import repos from "./types/repos.json";
 
 const { VITE_API: api } = import.meta.env;
 
-/** whether to use fake data */
+/** whether to use placeholder data */
 const mock = true;
 
 /** link to SSO login */
