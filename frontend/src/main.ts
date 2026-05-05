@@ -1,5 +1,5 @@
 import { createApp } from "vue";
-import VueGtagPlugin from "vue-gtag";
+import { configure } from "vue-gtag";
 import { createRouter, createWebHistory } from "vue-router";
 import { VueQueryPlugin } from "@tanstack/vue-query";
 import App from "./App.vue";
@@ -47,6 +47,6 @@ const router = createRouter({ history: createWebHistory(), routes });
 const app = createApp(App);
 app.use(router);
 if (import.meta.env.PROD)
-  app.use(VueGtagPlugin, { config: { id: "G-ES3DWJYSXR" } });
+  configure({ tagId: "G-ES3DWJYSXR", pageTracker: { router } });
 app.use(VueQueryPlugin);
 app.mount("#app");
