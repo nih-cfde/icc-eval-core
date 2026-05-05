@@ -37,7 +37,6 @@ saveFile(projects, `${OUTPUT_PATH}/projects.json`);
 /** ========================================================================= */
 
 divider("Publications");
-
 const publications = await getPublications(
   projects.map((project) => project.coreProject),
 );

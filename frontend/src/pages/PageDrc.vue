@@ -61,7 +61,7 @@ const getTotals = (resources: (DRC | undefined)[]) => {
     /** extensions/types of files */
     types: orderBy(
       Object.entries(countBy(files, (file) => file.path.ext)),
-      (count) => count[1],
+      ([, count]) => count,
       "desc",
     ),
   };

@@ -569,7 +569,10 @@ const topAnalytics = computed(() => {
   for (const [topKey, topValue] of getEntries(total))
     for (const [byKey, byValue] of getEntries(topValue))
       total[topKey]![byKey] = Object.fromEntries(
-        orderBy(Object.entries(byValue), (item) => item[1], "desc").slice(0, 5),
+        orderBy(Object.entries(byValue), ([, count]) => count, "desc").slice(
+          0,
+          5,
+        ),
       );
 
   return total;

@@ -105,8 +105,8 @@ const metrics = [
 ];
 
 /** get metric value over time */
-export const getOverTime = async (property: PropertyId) => {
-  const [result] = await batchReports(property, [
+export const getOverTime = async (property: PropertyId) =>
+  batchReports(property, [
     {
       dateRanges: [defaultDateRange],
       dimensions: [{ name: "date" }],
@@ -114,9 +114,6 @@ export const getOverTime = async (property: PropertyId) => {
       orderBys: [{ desc: false, dimension: { dimensionName: "date" } }],
     },
   ]);
-
-  return { dateRange: defaultDateRange, result };
-};
 
 /** get "top" (by different metrics) dimensions (regions/languages/etc.) */
 export const getTopDimension = async (
@@ -130,7 +127,7 @@ export const getTopDimension = async (
       dimensions: [{ name: dimension }],
       metrics: [{ name: metric }],
       orderBys: [{ desc: true, metric: { metricName: metric } }],
-      limit: 5,
+      limit: 10,
     })),
   );
 
@@ -150,3 +147,29 @@ export const getTopDevices = (property: PropertyId) =>
   getTopDimension(property, "deviceCategory");
 export const getTopOSes = (property: PropertyId) =>
   getTopDimension(property, "operatingSystem");
+
+/** get event counts by page path */
+export const getEvents = async (
+  property: PropertyId,
+  eventName = "page_view",
+) =>
+  batchReports(property, [
+    {
+      dateRanges: [defaultDateRange],
+      dimensions: [{ name: "pagePath" }],
+      metrics: [{ name: "eventCount" }],
+      dimensionFilter: {
+        andGroup: {
+          expressions: [
+            {
+              filter: {
+                fieldName: "eventName",
+                stringFilter: { matchType: "EXACT", value: eventName },
+              },
+            },
+          ],
+        },
+      },
+      orderBys: [{ desc: true, metric: { metricName: "eventCount" } }],
+    },
+  ]);

@@ -1,12 +1,4 @@
-import {
-  fromPairs,
-  meanBy,
-  orderBy,
-  sumBy,
-  toPairs,
-  uniq,
-  uniqBy,
-} from "lodash-es";
+import { meanBy, orderBy, sumBy, toPairs, uniq, uniqBy } from "lodash-es";
 import {
   fileExists,
   getCommits,
@@ -175,10 +167,10 @@ export const getRepos = async (coreProjects: string[]) => {
     })),
     languages: orderBy(
       toPairs(repo.languages).map(([name, bytes]) => ({ name, bytes })),
-      (item) => item.bytes,
+      ({ bytes }) => bytes,
       "desc",
     ),
-    dependencies: fromPairs(
+    dependencies: Object.fromEntries(
       repo.dependencies.repository.dependencyGraphManifests?.nodes?.map(
         (node) => [
           /** get manifest file path: /OWNER/REPO/blob/BRANCH/PATH-TO-FILE */
@@ -221,7 +213,7 @@ export const getReposOverview = (
     for (const { license } of repos)
       counts[license] = (counts[license] ?? 0) + 1;
     return Object.fromEntries(
-      orderBy(Object.entries(counts), (item) => item[1], "desc"),
+      orderBy(Object.entries(counts), ([, count]) => count, "desc"),
     );
   })(),
   languages: (() => {
@@ -230,7 +222,7 @@ export const getReposOverview = (
       for (const { name, bytes } of languages)
         counts[name] = (counts[name] ?? 0) + bytes;
     return Object.fromEntries(
-      orderBy(Object.entries(counts), (count) => count[1], "desc"),
+      orderBy(Object.entries(counts), ([, count]) => count, "desc"),
     );
   })(),
 });

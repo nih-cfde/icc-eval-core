@@ -1,7 +1,8 @@
 import { eachDayOfInterval, format, max, min } from "date-fns";
-import { sumBy, uniq, uniqBy, upperFirst } from "lodash-es";
+import { orderBy, sumBy, uniq, uniqBy, upperFirst } from "lodash-es";
 import {
   getCoreProject,
+  getEvents,
   getOverTime,
   getProperties,
   getTopCities,
@@ -53,6 +54,10 @@ export const getAnalytics = async () => {
       const topDevices = await getTopDevices(property);
       log(`${displayName} - Top OSes`, "secondary", 1);
       const topOSes = await getTopOSes(property);
+      log(`${displayName} - Page views`, "secondary", 1);
+      const pageViews = await getEvents(property);
+      log(`${displayName} - Scroll events`, "secondary", 1);
+      const scrollEvents = await getEvents(property, "scroll");
 
       return {
         property,
@@ -66,6 +71,8 @@ export const getAnalytics = async () => {
         topLanguages,
         topDevices,
         topOSes,
+        pageViews,
+        scrollEvents,
       };
     },
   );
@@ -92,12 +99,12 @@ export const getAnalytics = async () => {
     );
 
   /** map "over time" data */
-  const mapOverTime = (report: Awaited<ReturnType<typeof getOverTime>>) => {
+  const mapOverTime = (reports: Awaited<ReturnType<typeof getOverTime>>) => {
     /** extract salient props */
-    const { result } = report;
-    const { metricHeaders, rows } = result ?? {};
+    const report = reports[0];
+    const { metricHeaders, rows } = report ?? {};
 
-    if (!result || !metricHeaders || !rows)
+    if (!report || !metricHeaders || !rows)
       throw Error("No analytics report response");
 
     /** get uniq list of metric keys */
@@ -125,6 +132,31 @@ export const getAnalytics = async () => {
     );
   };
 
+  /** map event data */
+  const mapEvents = (reports: Awaited<ReturnType<typeof getEvents>>) => {
+    const report = reports[0];
+    if (!report) throw Error("No analytics report response");
+
+    /** breakdown of event counts by page */
+    const events: { total: number } & Record<string, number> = { total: 0 };
+
+    /** for each page */
+    for (const row of report?.rows ?? []) {
+      const page = row.dimensionValues?.[0]?.value ?? "";
+      /** count events */
+      const count = parseInt(row.metricValues?.[0]?.value ?? "0");
+      events[page] = count;
+      events.total += count;
+    }
+
+    /** sort highest counts first */
+    const sorted = Object.fromEntries(
+      orderBy(Object.entries(events), ([, count]) => count, "desc"),
+    );
+
+    return sorted;
+  };
+
   /** transform data into desired format, with fallbacks */
   const transformedAnalytics = analytics.map(
     ({
@@ -139,6 +171,8 @@ export const getAnalytics = async () => {
       topLanguages,
       topDevices,
       topOSes,
+      pageViews,
+      scrollEvents,
     }) => ({
       property,
       propertyName: propertyName ?? "",
@@ -151,6 +185,8 @@ export const getAnalytics = async () => {
       topLanguages: mapTop(topLanguages),
       topDevices: mapTop(topDevices),
       topOSes: mapTop(topOSes),
+      pageViews: mapEvents(pageViews),
+      scrollEvents: mapEvents(scrollEvents),
     }),
   );
 
