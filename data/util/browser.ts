@@ -2,7 +2,11 @@ import playwright from "playwright";
 import { log } from "@/util/log";
 
 /** set up browser instance, page, etc */
-export const browser = await playwright.chromium.launch({ headless: false });
+const { HEADLESS_BROWSER } = process.env;
+
+export const browser = await playwright.chromium.launch({
+  headless: HEADLESS_BROWSER == "true"
+});
 export const context = await browser.newContext();
 
 /** options */
