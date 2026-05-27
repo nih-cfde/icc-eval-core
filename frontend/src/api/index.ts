@@ -14,10 +14,11 @@ import publications from "./types/publications.json";
 import repoOverview from "./types/repo-overview.json";
 import repos from "./types/repos.json";
 
-const { VITE_API: api } = import.meta.env;
+const { VITE_API: api, VITE_USE_MOCK: useMock } = import.meta.env;
 
-/** whether to use placeholder data */
-const mock = true;
+/** whether to use fake data */
+// if useMock is not set, default to true
+const mock = useMock === undefined ? true : useMock === "true";
 
 /** link to SSO login */
 export const loginLink = `${api}/accounts/orcid/login/`;
