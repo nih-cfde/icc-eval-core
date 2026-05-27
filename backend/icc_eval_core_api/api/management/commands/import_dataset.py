@@ -1,8 +1,25 @@
 import json
 import os
+from datetime import datetime, time
 from django.core.management.base import BaseCommand
 from django.db import transaction
-from api.models import CoreProject, ORCIDProjectMap, Repository, Analytics
+from django.utils import timezone
+from django.utils.dateparse import parse_date, parse_datetime
+from api.models import (
+    Analytics,
+    AnalyticsOverview,
+    CoreProject,
+    DRCDCC,
+    DRCCode,
+    DRCFile,
+    Journal,
+    Opportunity,
+    ORCIDProjectMap,
+    Project,
+    Publication,
+    Repository,
+    RepositoryOverview,
+)
 
 
 class Command(BaseCommand):
@@ -30,15 +47,34 @@ class Command(BaseCommand):
         if options['clear']:
             self.stdout.write(self.style.WARNING('Clearing existing data...'))
             with transaction.atomic():
+                AnalyticsOverview.objects.all().delete()
                 Analytics.objects.all().delete()
+                RepositoryOverview.objects.all().delete()
                 Repository.objects.all().delete()
+                Publication.objects.all().delete()
+                Project.objects.all().delete()
+                Journal.objects.all().delete()
+                Opportunity.objects.all().delete()
+                DRCCode.objects.all().delete()
+                DRCDCC.objects.all().delete()
+                DRCFile.objects.all().delete()
+                ORCIDProjectMap.objects.all().delete()
                 CoreProject.objects.all().delete()
             self.stdout.write(self.style.SUCCESS('Existing data cleared'))
         
         # Import in order of dependencies
         self.import_core_projects(folder_path)
+        self.import_opportunities(folder_path)
+        self.import_projects(folder_path)
+        self.import_journals(folder_path)
+        self.import_publications(folder_path)
         self.import_repositories(folder_path)
         self.import_analytics(folder_path)
+        self.import_repository_overview(folder_path)
+        self.import_analytics_overview(folder_path)
+        self.import_drc_code(folder_path)
+        self.import_drc_dcc(folder_path)
+        self.import_drc_file(folder_path)
         self.import_orcid_project_map(folder_path)
         
         self.stdout.write(self.style.SUCCESS('All data imported successfully'))
@@ -47,6 +83,30 @@ class Command(BaseCommand):
     # =====================================================================================
     # === methods for loading JSON files into database models
     # =====================================================================================
+
+    def _to_datetime_or_none(self, value):
+        """
+        Convert imported values into timezone-aware datetimes.
+        Date-only inputs are interpreted as midnight in Django's default timezone.
+        """
+        if not value:
+            return None
+
+        if isinstance(value, datetime):
+            dt = value
+        elif isinstance(value, str):
+            dt = parse_datetime(value)
+            if dt is None:
+                parsed_date = parse_date(value)
+                if parsed_date is None:
+                    return value
+                dt = datetime.combine(parsed_date, time.min)
+        else:
+            return value
+
+        if timezone.is_naive(dt):
+            return timezone.make_aware(dt, timezone.get_default_timezone())
+        return dt
 
     def import_core_projects(self, folder_path):
         file_path = os.path.join(folder_path, 'core-projects.json')
@@ -113,8 +173,8 @@ class Command(BaseCommand):
                         'name': item['name'],
                         'description': item.get('description', ''),
                         'topics': item.get('topics', []),
-                        'created': item['created'],
-                        'modified': item['modified'],
+                        'created': self._to_datetime_or_none(item.get('created')),
+                        'modified': self._to_datetime_or_none(item.get('modified')),
                         'stars': item.get('stars', []),
                         'forks': item.get('forks', []),
                         'watchers': item.get('watchers', []),
@@ -139,6 +199,162 @@ class Command(BaseCommand):
                 count += 1
         
         self.stdout.write(self.style.SUCCESS(f'Imported {count} repositories'))
+
+    def import_opportunities(self, folder_path):
+        file_path = os.path.join(folder_path, 'opportunities.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing opportunities from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        with transaction.atomic():
+            for item in data:
+                Opportunity.objects.update_or_create(
+                    id=item['id'],
+                    defaults={
+                        'prefix': item.get('prefix', ''),
+                        'activity_code': item.get('activityCode') or None,
+                    }
+                )
+
+        self.stdout.write(self.style.SUCCESS(f'Imported {len(data)} opportunities'))
+
+    def import_projects(self, folder_path):
+        file_path = os.path.join(folder_path, 'projects.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing projects from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        count = 0
+
+        with transaction.atomic():
+            for item in data:
+                try:
+                    core_project = CoreProject.objects.get(id=item['coreProject'])
+                except CoreProject.DoesNotExist:
+                    self.stdout.write(
+                        self.style.WARNING(
+                            f'Project {item["id"]}: Core project {item["coreProject"]} not found, skipping'
+                        )
+                    )
+                    continue
+
+                opportunity = None
+                if item.get('opportunity'):
+                    try:
+                        opportunity = Opportunity.objects.get(id=item['opportunity'])
+                    except Opportunity.DoesNotExist:
+                        self.stdout.write(
+                            self.style.WARNING(
+                                f'Project {item["id"]}: Opportunity {item["opportunity"]} not found, setting to null'
+                            )
+                        )
+
+                Project.objects.update_or_create(
+                    id=item['id'],
+                    defaults={
+                        'core_project': core_project,
+                        'name': item['name'],
+                        'opportunity': opportunity,
+                        'application': item['application'],
+                        'award_amount': item.get('awardAmount', 0),
+                        'activity_code': item.get('activityCode', ''),
+                        'agency_code': item.get('agencyCode', ''),
+                        'date_start': self._to_datetime_or_none(item.get('dateStart')),
+                        'date_end': self._to_datetime_or_none(item.get('dateEnd')),
+                        'is_active': bool(item.get('isActive', False)),
+                    }
+                )
+                count += 1
+
+        self.stdout.write(self.style.SUCCESS(f'Imported {count} projects'))
+
+    def import_journals(self, folder_path):
+        file_path = os.path.join(folder_path, 'journals.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing journals from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        with transaction.atomic():
+            for item in data:
+                Journal.objects.update_or_create(
+                    abbrev=item['abbrev'],
+                    defaults={
+                        'name': item.get('name', ''),
+                        'issn': item.get('issn') or None,
+                        'title': item.get('title', ''),
+                        'rank': item.get('rank', 0),
+                    }
+                )
+
+        self.stdout.write(self.style.SUCCESS(f'Imported {len(data)} journals'))
+
+    def import_publications(self, folder_path):
+        file_path = os.path.join(folder_path, 'publications.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing publications from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        count = 0
+
+        with transaction.atomic():
+            for item in data:
+                try:
+                    core_project = CoreProject.objects.get(id=item['coreProject'])
+                except CoreProject.DoesNotExist:
+                    self.stdout.write(
+                        self.style.WARNING(
+                            f'Publication {item["id"]}: Core project {item["coreProject"]} not found, skipping'
+                        )
+                    )
+                    continue
+
+                journal = None
+                if item.get('journal'):
+                    journal = Journal.objects.filter(abbrev=item['journal']).first()
+
+                Publication.objects.update_or_create(
+                    id=item['id'],
+                    defaults={
+                        'core_project': core_project,
+                        'application': item['application'],
+                        'title': item['title'],
+                        'authors': item.get('authors', []),
+                        'journal': journal,
+                        'year': item.get('year', 0),
+                        'modified': self._to_datetime_or_none(item.get('modified')),
+                        'doi': item.get('doi') or None,
+                        'relative_citation_ratio': item.get('relativeCitationRatio', 0),
+                        'citations': item.get('citations', 0),
+                        'citations_per_year': item.get('citationsPerYear', 0),
+                    }
+                )
+                count += 1
+
+        self.stdout.write(self.style.SUCCESS(f'Imported {count} publications'))
 
     def import_analytics(self, folder_path):
         file_path = os.path.join(folder_path, 'analytics.json')
@@ -168,18 +384,21 @@ class Command(BaseCommand):
                     )
                     core_project = None
                 
-                Analytics.objects.create(
+                Analytics.objects.update_or_create(
                     property=item['property'],
-                    property_name=item['propertyName'],
-                    core_project=core_project,
-                    over_time=item.get('overTime', {}),
-                    top_continents=item.get('topContinents', {}),
-                    top_countries=item.get('topCountries', {}),
-                    top_regions=item.get('topRegions', {}),
-                    top_cities=item.get('topCities', {}),
-                    top_languages=item.get('topLanguages', {}),
-                    top_devices=item.get('topDevices', {}),
-                    top_oses=item.get('topOSes', {}),
+                    defaults={
+                        'property': item['property'],
+                        'property_name': item['propertyName'],
+                        'core_project': core_project,
+                        'over_time': item.get('overTime', {}),
+                        'top_continents': item.get('topContinents', {}),
+                        'top_countries': item.get('topCountries', {}),
+                        'top_regions': item.get('topRegions', {}),
+                        'top_cities': item.get('topCities', {}),
+                        'top_languages': item.get('topLanguages', {}),
+                        'top_devices': item.get('topDevices', {}),
+                        'top_oses': item.get('topOSes', {}),
+                    }
                 )
                 count += 1
         
@@ -187,9 +406,12 @@ class Command(BaseCommand):
 
     def import_orcid_project_map(self, folder_path):
         file_path = os.path.join(folder_path, 'orcid-project-map.json')
-        
         if not os.path.exists(file_path):
-            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            # data/output uses users.json for this mapping
+            file_path = os.path.join(folder_path, 'users.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING('Skipping ORCID map: neither orcid-project-map.json nor users.json found'))
             return
         
         self.stdout.write(f'Importing ORCID project map from {file_path}...')
@@ -205,3 +427,149 @@ class Command(BaseCommand):
                 )
         
         self.stdout.write(self.style.SUCCESS(f'Imported ORCID project map for {len(data)} ORCID identifiers'))
+
+    def import_repository_overview(self, folder_path):
+        file_path = os.path.join(folder_path, 'repos-overview.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing repository overview from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            item = json.load(file)
+
+        RepositoryOverview.objects.update_or_create(
+            id=1,
+            defaults={
+                'repos': item.get('repos', 0),
+                'stars': item.get('stars', 0),
+                'forks': item.get('forks', 0),
+                'watchers': item.get('watchers', 0),
+                'commits': item.get('commits', 0),
+                'open_issues': item.get('openIssues', 0),
+                'closed_issues': item.get('closedIssues', 0),
+                'open_pull_requests': item.get('openPullRequests', 0),
+                'closed_pull_requests': item.get('closedPullRequests', 0),
+                'readme': item.get('readme', 0),
+                'contributing': item.get('contributing', 0),
+                'code_of_conduct': item.get('codeOfConduct', 0),
+                'contributors': item.get('contributors', 0),
+                'licenses': item.get('licenses', {}),
+                'languages': item.get('languages', {}),
+            }
+        )
+
+        self.stdout.write(self.style.SUCCESS('Imported repository overview'))
+
+    def import_analytics_overview(self, folder_path):
+        file_path = os.path.join(folder_path, 'analytics-overview.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing analytics overview from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            item = json.load(file)
+
+        AnalyticsOverview.objects.update_or_create(
+            id=1,
+            defaults={
+                'over_time': item.get('overTime', {}),
+                'top_continents': item.get('topContinents', {}),
+                'top_countries': item.get('topCountries', {}),
+                'top_regions': item.get('topRegions', {}),
+                'top_cities': item.get('topCities', {}),
+                'top_languages': item.get('topLanguages', {}),
+                'top_devices': item.get('topDevices', {}),
+                'top_oses': item.get('topOSes', {}),
+            }
+        )
+
+        self.stdout.write(self.style.SUCCESS('Imported analytics overview'))
+
+    def import_drc_code(self, folder_path):
+        file_path = os.path.join(folder_path, 'drc-code.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing DRC code from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        with transaction.atomic():
+            for item in data:
+                DRCCode.objects.update_or_create(
+                    url=item['url'],
+                    defaults={
+                        'dir': item.get('dir', ''),
+                        'name': item.get('name', ''),
+                        'ext': item.get('ext', ''),
+                        'type': item.get('type', ''),
+                        'date': self._to_datetime_or_none(item.get('date')),
+                        'files': item.get('files', []),
+                    }
+                )
+
+        self.stdout.write(self.style.SUCCESS(f'Imported {len(data)} DRC code entries'))
+
+    def import_drc_dcc(self, folder_path):
+        file_path = os.path.join(folder_path, 'drc-dcc.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing DRC DCC from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        with transaction.atomic():
+            for item in data:
+                DRCDCC.objects.update_or_create(
+                    url=item['url'],
+                    defaults={
+                        'dir': item.get('dir', ''),
+                        'name': item.get('name', ''),
+                        'ext': item.get('ext', ''),
+                        'date': self._to_datetime_or_none(item.get('date')),
+                        'files': item.get('files', []),
+                    }
+                )
+
+        self.stdout.write(self.style.SUCCESS(f'Imported {len(data)} DRC DCC entries'))
+
+    def import_drc_file(self, folder_path):
+        file_path = os.path.join(folder_path, 'drc-file.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing DRC file entries from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        with transaction.atomic():
+            for item in data:
+                DRCFile.objects.update_or_create(
+                    url=item['url'],
+                    defaults={
+                        'dir': item.get('dir', ''),
+                        'name': item.get('name', ''),
+                        'ext': item.get('ext', ''),
+                        'size': item.get('size', 0),
+                        'date': self._to_datetime_or_none(item.get('date')),
+                        'files': item.get('files', []),
+                    }
+                )
+
+        self.stdout.write(self.style.SUCCESS(f'Imported {len(data)} DRC file entries'))
