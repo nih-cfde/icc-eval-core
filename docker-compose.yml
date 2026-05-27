@@ -21,3 +21,15 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/18/docker
       - ./db-exports/:/db-exports/
+
+  pipeline:
+    profiles:
+      - pipeline
+    build: ./data/
+    command: bun run gather
+    volumes:
+      - ./data/:/data/
+    environment:
+      - HEADLESS_BROWSER=true
+    env_file:
+      - .env
