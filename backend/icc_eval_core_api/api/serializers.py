@@ -1,5 +1,20 @@
 from rest_framework import serializers
-from .models import User, CoreProject, Repository, Analytics
+from datetime import datetime
+from .models import (
+    Analytics,
+    AnalyticsOverview,
+    CoreProject,
+    DRCDCC,
+    DRCCode,
+    DRCFile,
+    Journal,
+    Opportunity,
+    Project,
+    Publication,
+    Repository,
+    RepositoryOverview,
+    User,
+)
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -125,6 +140,153 @@ class AnalyticsSerializer(serializers.ModelSerializer):
             'property',
             'property_name',
             'core_project',
+            'over_time',
+            'top_continents',
+            'top_countries',
+            'top_regions',
+            'top_cities',
+            'top_languages',
+            'top_devices',
+            'top_oses',
+        ]
+
+
+class OpportunitySerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Opportunity model.
+    """
+
+    class Meta:
+        model = Opportunity
+        fields = ['id', 'prefix', 'activity_code']
+
+
+class ProjectSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Project model.
+    """
+    core_project = serializers.CharField(source='core_project.id', read_only=True)
+    opportunity = serializers.CharField(source='opportunity.id', read_only=True)
+    award_amount = serializers.DecimalField(max_digits=15, decimal_places=2, coerce_to_string=False)
+
+    class Meta:
+        model = Project
+        fields = [
+            'id',
+            'core_project',
+            'name',
+            'opportunity',
+            'application',
+            'award_amount',
+            'activity_code',
+            'agency_code',
+            'date_start',
+            'date_end',
+            'is_active',
+        ]
+
+
+class JournalSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Journal model.
+    """
+
+    class Meta:
+        model = Journal
+        fields = ['abbrev', 'name', 'issn', 'title', 'rank']
+
+
+class PublicationSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Publication model.
+    """
+    core_project = serializers.CharField(source='core_project.id', read_only=True)
+    journal = serializers.CharField(source='journal.abbrev', read_only=True)
+
+    class Meta:
+        model = Publication
+        fields = [
+            'id',
+            'core_project',
+            'application',
+            'title',
+            'authors',
+            'journal',
+            'year',
+            'modified',
+            'doi',
+            'relative_citation_ratio',
+            'citations',
+            'citations_per_year',
+        ]
+
+
+class DRCCodeSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the DRCCode model.
+    """
+
+    class Meta:
+        model = DRCCode
+        fields = ['id', 'url', 'dir', 'name', 'ext', 'type', 'date', 'files']
+
+
+class DRCDCCSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the DRCDCC model.
+    """
+
+    class Meta:
+        model = DRCDCC
+        fields = ['id', 'url', 'dir', 'name', 'ext', 'date', 'files']
+
+
+class DRCFileSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the DRCFile model.
+    """
+
+    class Meta:
+        model = DRCFile
+        fields = ['id', 'url', 'dir', 'name', 'ext', 'size', 'date', 'files']
+
+
+class RepositoryOverviewSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the RepositoryOverview model.
+    """
+
+    class Meta:
+        model = RepositoryOverview
+        fields = [
+            # 'id',
+            'repos',
+            'stars',
+            'forks',
+            'watchers',
+            'commits',
+            'open_issues',
+            'closed_issues',
+            'open_pull_requests',
+            'closed_pull_requests',
+            'readme',
+            'contributing',
+            'code_of_conduct',
+            'contributors',
+            'licenses',
+            'languages',
+        ]
+
+
+class AnalyticsOverviewSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the AnalyticsOverview model.
+    """
+
+    class Meta:
+        model = AnalyticsOverview
+        fields = [
+            # 'id',
             'over_time',
             'top_continents',
             'top_countries',

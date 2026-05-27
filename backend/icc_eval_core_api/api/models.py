@@ -59,6 +59,218 @@ class CoreProject(models.Model):
         return f"{self.id} - {self.name}"
 
 
+class Opportunity(models.Model):
+    """
+    Represents an opportunity from opportunities.json.
+    """
+    id = models.CharField(max_length=20, primary_key=True)
+    prefix = models.CharField(max_length=20)
+    activity_code = models.CharField(max_length=100, blank=True, null=True)
+
+    class Meta:
+        db_table = 'opportunities'
+
+    def __str__(self):
+        return self.id
+
+
+class Project(models.Model):
+    """
+    Represents an individual grant project from projects.json.
+    """
+    id = models.CharField(max_length=32, primary_key=True)
+    core_project = models.ForeignKey(
+        CoreProject,
+        on_delete=models.CASCADE,
+        related_name='project_records',
+        db_column='core_project_id',
+    )
+    name = models.TextField()
+    opportunity = models.ForeignKey(
+        Opportunity,
+        on_delete=models.SET_NULL,
+        related_name='projects',
+        db_column='opportunity_id',
+        blank=True,
+        null=True,
+    )
+    application = models.BigIntegerField(unique=True)
+    award_amount = models.DecimalField(max_digits=15, decimal_places=2)
+    activity_code = models.CharField(max_length=20)
+    agency_code = models.CharField(max_length=20)
+    date_start = models.DateTimeField()
+    date_end = models.DateTimeField()
+    is_active = models.BooleanField(default=False)
+
+    class Meta:
+        db_table = 'projects'
+
+    def __str__(self):
+        return f"{self.id} - {self.name}"
+
+
+class Journal(models.Model):
+    """
+    Represents a journal from journals.json.
+    """
+    abbrev = models.CharField(max_length=64, primary_key=True)
+    name = models.TextField()
+    issn = models.CharField(max_length=32, blank=True, null=True)
+    title = models.CharField(max_length=255)
+    rank = models.FloatField(default=0)
+
+    class Meta:
+        db_table = 'journals'
+
+    def __str__(self):
+        return self.abbrev
+
+
+class Publication(models.Model):
+    """
+    Represents a publication from publications.json.
+    """
+    id = models.BigIntegerField(primary_key=True)
+    core_project = models.ForeignKey(
+        CoreProject,
+        on_delete=models.CASCADE,
+        related_name='publication_records',
+        db_column='core_project_id',
+    )
+    application = models.BigIntegerField()
+    title = models.TextField()
+    authors = models.JSONField(default=list)
+    journal = models.ForeignKey(
+        Journal,
+        on_delete=models.SET_NULL,
+        related_name='publications',
+        db_column='journal_abbrev',
+        to_field='abbrev',
+        blank=True,
+        null=True,
+    )
+    year = models.PositiveIntegerField()
+    modified = models.DateTimeField()
+    doi = models.CharField(max_length=255, blank=True, null=True)
+    relative_citation_ratio = models.FloatField(default=0)
+    citations = models.IntegerField(default=0)
+    citations_per_year = models.FloatField(default=0)
+
+    class Meta:
+        db_table = 'publications'
+
+    def __str__(self):
+        return f"{self.id} - {self.title}"
+
+
+class DRCCode(models.Model):
+    """
+    Represents DRC code entries from drc-code.json.
+    """
+    url = models.TextField()
+    dir = models.TextField()
+    name = models.CharField(max_length=255)
+    ext = models.CharField(max_length=32, blank=True)
+    type = models.CharField(max_length=100)
+    date = models.DateTimeField(blank=True, null=True)
+    files = models.JSONField(default=list)
+
+    class Meta:
+        db_table = 'drc_code'
+        verbose_name_plural = 'DRC Code'
+
+    def __str__(self):
+        return self.name
+
+
+class DRCDCC(models.Model):
+    """
+    Represents DRC DCC entries from drc-dcc.json.
+    """
+    url = models.TextField()
+    dir = models.TextField()
+    name = models.CharField(max_length=255, blank=True)
+    ext = models.CharField(max_length=32, blank=True)
+    date = models.DateTimeField(blank=True, null=True)
+    files = models.JSONField(default=list)
+
+    class Meta:
+        db_table = 'drc_dcc'
+        verbose_name_plural = 'DRC DCC'
+
+    def __str__(self):
+        return self.name or self.url
+
+
+class DRCFile(models.Model):
+    """
+    Represents DRC file entries from drc-file.json.
+    """
+    url = models.TextField()
+    dir = models.TextField()
+    name = models.CharField(max_length=255)
+    ext = models.CharField(max_length=32, blank=True)
+    size = models.BigIntegerField(default=0)
+    date = models.DateTimeField(blank=True, null=True)
+    files = models.JSONField(default=list)
+
+    class Meta:
+        db_table = 'drc_file'
+        verbose_name_plural = 'DRC Files'
+
+    def __str__(self):
+        return self.name
+
+
+class AnalyticsOverview(models.Model):
+    """
+    Represents aggregate analytics metrics from analytics-overview.json.
+    """
+    over_time = models.JSONField(default=dict)
+    top_continents = models.JSONField(default=dict)
+    top_countries = models.JSONField(default=dict)
+    top_regions = models.JSONField(default=dict)
+    top_cities = models.JSONField(default=dict)
+    top_languages = models.JSONField(default=dict)
+    top_devices = models.JSONField(default=dict)
+    top_oses = models.JSONField(default=dict)
+
+    class Meta:
+        db_table = 'analytics_overview'
+        verbose_name_plural = 'Analytics Overview'
+
+    def __str__(self):
+        return f"AnalyticsOverview {self.pk}"
+
+
+class RepositoryOverview(models.Model):
+    """
+    Represents aggregate repository metrics from repos-overview.json.
+    """
+    repos = models.IntegerField(default=0)
+    stars = models.IntegerField(default=0)
+    forks = models.IntegerField(default=0)
+    watchers = models.IntegerField(default=0)
+    commits = models.IntegerField(default=0)
+    open_issues = models.IntegerField(default=0)
+    closed_issues = models.IntegerField(default=0)
+    open_pull_requests = models.IntegerField(default=0)
+    closed_pull_requests = models.IntegerField(default=0)
+    readme = models.IntegerField(default=0)
+    contributing = models.IntegerField(default=0)
+    code_of_conduct = models.IntegerField(default=0)
+    contributors = models.IntegerField(default=0)
+    licenses = models.JSONField(default=dict)
+    languages = models.JSONField(default=dict)
+
+    class Meta:
+        db_table = 'repository_overview'
+        verbose_name_plural = 'Repository Overview'
+
+    def __str__(self):
+        return f"RepositoryOverview {self.pk}"
+
+
 class Repository(models.Model):
     """
     Represents a repository from repos.json.

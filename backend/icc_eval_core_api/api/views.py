@@ -1,14 +1,34 @@
-import json
-import os
-
 from rest_framework import viewsets, filters
 from rest_framework.response import Response
-from django.conf import settings
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.permissions import IsAuthenticated
-from .models import ORCIDProjectMap, User, CoreProject, Repository, Analytics
+from .models import (
+    Analytics,
+    AnalyticsOverview,
+    CoreProject,
+    DRCDCC,
+    DRCCode,
+    DRCFile,
+    Journal,
+    Opportunity,
+    ORCIDProjectMap,
+    Project,
+    Publication,
+    Repository,
+    RepositoryOverview,
+    User,
+)
 from .serializers import (
+    AnalyticsOverviewSerializer,
     RepositoryListSerializer,
+    DRCCodeSerializer,
+    DRCDCCSerializer,
+    DRCFileSerializer,
+    JournalSerializer,
+    OpportunitySerializer,
+    ProjectSerializer,
+    PublicationSerializer,
+    RepositoryOverviewSerializer,
     UserSerializer,
     CoreProjectSerializer,
     RepositorySerializer,
@@ -106,34 +126,146 @@ class AnalyticsViewSet(viewsets.ReadOnlyModelViewSet):
     ordering_fields = ['property_name']
     ordering = ['property_name']
 
-class RepoOverviewViewSet(viewsets.ViewSet):
+class OpportunityViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    ReadOnly API endpoint for opportunities.
+    """
+    queryset = Opportunity.objects.all()
+    serializer_class = OpportunitySerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['prefix', 'activity_code']
+    search_fields = ['id', 'prefix', 'activity_code']
+    ordering_fields = ['id', 'prefix', 'activity_code']
+    ordering = ['id']
+
+
+class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    ReadOnly API endpoint for projects.
+    """
+    queryset = Project.objects.select_related('core_project', 'opportunity').all()
+    serializer_class = ProjectSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['core_project', 'opportunity', 'activity_code', 'agency_code', 'is_active']
+    search_fields = ['id', 'name']
+    ordering_fields = ['id', 'name', 'award_amount', 'date_start', 'date_end']
+    ordering = ['id']
+
+
+class JournalViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    ReadOnly API endpoint for journals.
+    """
+    queryset = Journal.objects.all()
+    serializer_class = JournalSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['issn']
+    search_fields = ['abbrev', 'name', 'title']
+    ordering_fields = ['abbrev', 'title', 'rank']
+    ordering = ['abbrev']
+
+
+class PublicationViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    ReadOnly API endpoint for publications.
+    """
+    queryset = Publication.objects.select_related('core_project', 'journal').all()
+    serializer_class = PublicationSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['core_project', 'journal', 'year']
+    search_fields = ['title', 'doi']
+    ordering_fields = ['id', 'year', 'modified', 'citations', 'relative_citation_ratio']
+    ordering = ['-year', '-modified']
+
+
+class DRCCodeViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    ReadOnly API endpoint for DRC code entries.
+    """
+    queryset = DRCCode.objects.all()
+    serializer_class = DRCCodeSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['type', 'ext']
+    search_fields = ['name', 'url', 'dir']
+    ordering_fields = ['id', 'name', 'date']
+    ordering = ['name']
+
+
+class DRCDCCViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    ReadOnly API endpoint for DRC DCC entries.
+    """
+    queryset = DRCDCC.objects.all()
+    serializer_class = DRCDCCSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['ext']
+    search_fields = ['name', 'url', 'dir']
+    ordering_fields = ['id', 'name', 'date']
+    ordering = ['name']
+
+
+class DRCFileViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    ReadOnly API endpoint for DRC file entries.
+    """
+    queryset = DRCFile.objects.all()
+    serializer_class = DRCFileSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['ext']
+    search_fields = ['name', 'url', 'dir']
+    ordering_fields = ['id', 'name', 'date', 'size']
+    ordering = ['name']
+
+
+class RepoOverviewViewSet(viewsets.ReadOnlyModelViewSet):
     """
     ReadOnly API endpoint for repository overview.
-    Unlike other db-backed endpoints, this endpoint serves data from a static
-    JSON file generated from the repo-overview.json in the data directory.
+
+    Note that this model only ever contains one record, so we skip pagination
+    and return just that model object rather than putting it in a list.
     """
+    queryset = RepositoryOverview.objects.all()
+    serializer_class = RepositoryOverviewSerializer
     permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    ordering_fields = ['repos', 'stars', 'forks', 'watchers', 'commits']
+    ordering = ['id']
 
-    def list(self, request):
-        # load the data from {DATA_DIR}/repo-overview.json and return it as a response
-        # (DATA_DIR will usually be /data in production)
-        file_path = os.path.join(settings.DATA_DIR, 'repo-overview.json')
-        with open(file_path, 'r') as f:
-            data = json.load(f)
-        return Response(data)
+    # disable pagination for this endpoint since it only returns one object
+    pagination_class = None
 
-class AnalyticsOverviewViewSet(viewsets.ViewSet):
+    # rather than returning the queryset, we override the list method to return the single AnalyticsOverview object, or a default one if it doesn't exist
+    def list(self, request, *args, **kwargs):
+        overview = RepositoryOverview.objects.first()
+        serializer = self.get_serializer(overview)
+        return Response(serializer.data)
+
+class AnalyticsOverviewViewSet(viewsets.ReadOnlyModelViewSet):
     """
     ReadOnly API endpoint for analytics overview.
-    Unlike other db-backed endpoints, this endpoint serves data from a static
-    JSON file generated from the analytics-overview.json in the data directory.
-    """
-    permission_classes = [IsAuthenticated]
 
-    def list(self, request):
-        # load the data from {DATA_DIR}/repo-overview.json and return it as a response
-        # (DATA_DIR will usually be /data in production)
-        file_path = os.path.join(settings.DATA_DIR, 'analytics-overview.json')
-        with open(file_path, 'r') as f:
-            data = json.load(f)
-        return Response(data)
+    Note that this model only ever contains one record, so we skip pagination
+    and return just that model object rather than putting it in a list.
+    """
+    queryset = AnalyticsOverview.objects.all()
+    serializer_class = AnalyticsOverviewSerializer
+    permission_classes = [IsAuthenticated]
+    filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
+    ordering_fields = ['id']
+    ordering = ['id']
+
+    # disable pagination for this endpoint since it only returns one object
+    pagination_class = None
+
+    # rather than returning the queryset, we override the list method to return the single AnalyticsOverview object, or a default one if it doesn't exist
+    def list(self, request, *args, **kwargs):
+        overview = AnalyticsOverview.objects.first()
+        serializer = self.get_serializer(overview)
+        return Response(serializer.data)

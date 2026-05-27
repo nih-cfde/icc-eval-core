@@ -3,6 +3,13 @@ from collections import OrderedDict
 from django.urls import path, re_path
 from rest_framework.routers import DefaultRouter, reverse
 from .views import (
+    OpportunityViewSet,
+    ProjectViewSet,
+    JournalViewSet,
+    PublicationViewSet,
+    DRCCodeViewSet,
+    DRCDCCViewSet,
+    DRCFileViewSet,
     CoreProjectViewSet,
     RepositoryViewSet,
     AnalyticsViewSet,
@@ -56,6 +63,13 @@ single_views = [
 router = APIRouter(single_views=single_views)
 
 router.register(r'core-projects', CoreProjectViewSet, basename='coreproject')
+router.register(r'opportunities', OpportunityViewSet, basename='opportunity')
+router.register(r'projects', ProjectViewSet, basename='project')
+router.register(r'journals', JournalViewSet, basename='journal')
+router.register(r'publications', PublicationViewSet, basename='publication')
+router.register(r'drc-code', DRCCodeViewSet, basename='drc-code')
+router.register(r'drc-dcc', DRCDCCViewSet, basename='drc-dcc')
+router.register(r'drc-file', DRCFileViewSet, basename='drc-file')
 router.register(r'repositories', RepositoryViewSet, basename='repository')
 router.register(r'analytics', AnalyticsViewSet, basename='analytics')
 router.register(r'repo-overview', RepoOverviewViewSet, basename='repo-overview')
