@@ -36,6 +36,8 @@ class ORCIDProjectMap(models.Model):
         verbose_name_plural = "ORCID-Project Maps"
 
     def __str__(self):
+        if self.core_projects and '*' in self.core_projects:
+            return f"{self.orcid} -> all projects"
         return f"{self.orcid} -> {len(self.core_projects)} projects"
 
 
