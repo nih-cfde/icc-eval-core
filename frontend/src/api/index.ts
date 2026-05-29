@@ -35,7 +35,7 @@ const request = async <Results>(
 ) => {
   const url = new URL(`${api}/api/${endpoint}/`);
   Object.entries(params).forEach(([key, value]) =>
-    url.searchParams.set(key, String(value)),
+    value !== undefined && url.searchParams.set(key, String(value)),
   );
   const headers = { "Content-Type": "application/json" };
   const options: RequestInit = { credentials: "include", headers };
