@@ -8,6 +8,8 @@ namespace NodeJS {
     readonly RAW_PATH: string;
     /** path to output formatted data to */
     readonly OUTPUT_PATH: string;
+    /** run playwright in headless mode */
+    readonly HEADLESS_BROWSER: string;
 
     /** .env.local */
 
