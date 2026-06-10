@@ -47,32 +47,35 @@ try {
 octokit.request = octokit.request.defaults({ per_page: 100 });
 
 /** search for repos that have topic */
-export const searchRepos = memoize(async (topic: string) => {
-  const repos = await octokit.paginate(octokit.rest.search.repos, {
+export const searchRepositories = memoize(async (topic: string) => {
+  const repositories = await octokit.paginate(octokit.rest.search.repos, {
     q: `topic:${topic}`,
   });
 
   /** if flag set, get all other repos in org */
-  const orgRepos = (
+  const orgRepositories = (
     await Promise.all(
       uniq(
-        repos
-          .filter((repo) => repo.topics?.includes("tag-all"))
-          .map((repo) => repo.owner?.login ?? ""),
+        repositories
+          .filter((repository) => repository.topics?.includes("tag-all"))
+          .map((repository) => repository.owner?.login ?? ""),
       )
         .filter(Boolean)
         .map((org) => octokit.paginate(octokit.rest.repos.listForOrg, { org })),
     )
   ).flat();
 
-  return uniqBy([...repos, ...orgRepos], (repo) => repo.id);
+  return uniqBy(
+    [...repositories, ...orgRepositories],
+    (repository) => repository.id,
+  );
 });
 
 /**
  * get all top-level details for repo. returns everything that repo search
  * returns, plus extra fields, including subscribers_count (watchers).
  */
-export const getRepo = memoize(
+export const getRepository = memoize(
   async (owner: string, repo: string) =>
     (await octokit.rest.repos.get({ owner, repo })).data,
 );
@@ -133,7 +136,7 @@ export const hasReadme = memoize(async (owner: string, repo: string) => {
     const status = (error as RequestError).status;
     if (status === 404) return false;
     throw Error(
-      `Unexpected problem getting readme for repo ${owner}/${repo}, status ${status}`,
+      `Unexpected problem getting readme for repository ${owner}/${repo}, status ${status}`,
       { cause: error },
     );
   }
@@ -151,7 +154,7 @@ export const fileExists = memoize(
       if (status === 302) return true;
       if (status === 404) return false;
       throw Error(
-        `Unexpected problem getting contents for repo ${owner}/${repo}, status ${status}`,
+        `Unexpected problem getting contents for repository ${owner}/${repo}, status ${status}`,
         { cause: error },
       );
     }

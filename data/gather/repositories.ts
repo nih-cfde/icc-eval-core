@@ -8,17 +8,17 @@ import {
   getIssues,
   getLanguages,
   getPullRequests,
-  getRepo,
+  getRepository,
   getStars,
   hasReadme,
-  searchRepos,
+  searchRepositories,
 } from "@/api/github";
 import { log } from "@/util/log";
 import { settled } from "@/util/misc";
 import { count } from "@/util/string";
 
 /** get github repos associated with core projects */
-export const getRepos = async (coreProjects: string[]) => {
+export const getRepositories = async (coreProjects: string[]) => {
   /** de-dupe */
   coreProjects = uniq(coreProjects);
 
@@ -30,7 +30,7 @@ export const getRepos = async (coreProjects: string[]) => {
    */
   const [repoResults] = await settled(coreProjects, async (coreProject) => {
     log(`Searching for repos tagged with "${coreProject}"`, "secondary", 1);
-    return (await searchRepos(coreProject)).map((repo) => ({
+    return (await searchRepositories(coreProject)).map((repo) => ({
       owner: repo.owner?.login ?? "",
       name: repo.name,
       id: repo.id,
@@ -52,7 +52,7 @@ export const getRepos = async (coreProjects: string[]) => {
     repos,
     async ({ owner, name, coreProject }) => {
       const label = `${owner}/${name}`;
-      const repo = await getRepo(owner, name);
+      const repo = await getRepository(owner, name);
       log(`${label} - Stars`, "secondary", 1);
       const stars = await getStars(owner, name);
       log(`${label} - Forks`, "secondary", 1);
@@ -188,8 +188,8 @@ export const getRepos = async (coreProjects: string[]) => {
 };
 
 /** aggregate various stats for all repos */
-export const getReposOverview = (
-  repos: Awaited<ReturnType<typeof getRepos>>,
+export const getRepositoriesOverview = (
+  repos: Awaited<ReturnType<typeof getRepositories>>,
 ) => ({
   repos: repos.length,
   stars: sumBy(repos, (repo) => repo.stars.length),
@@ -227,6 +227,6 @@ export const getReposOverview = (
   })(),
 });
 
-export type Repos = Awaited<ReturnType<typeof getRepos>>[number];
+export type Repos = Awaited<ReturnType<typeof getRepositories>>[number];
 
-export type ReposOverview = ReturnType<typeof getReposOverview>;
+export type ReposOverview = ReturnType<typeof getRepositoriesOverview>;

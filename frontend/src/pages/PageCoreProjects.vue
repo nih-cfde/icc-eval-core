@@ -9,10 +9,10 @@
     <AppTable
       :cols="cols"
       :rows="coreProjects ?? []"
-      :sort="[{ id: 'reposAnalytics', desc: true }]"
+      :sort="[{ id: 'repositoriesAnalytics', desc: true }]"
     >
-      <template #reposAnalytics="{ row }">
-        <template v-if="row.repos || row.analytics">
+      <template #repositoriesAnalytics="{ row }">
+        <template v-if="row.repositories || row.analytics">
           <AppLink
             :to="readmeLink"
             class="score good"
@@ -112,7 +112,7 @@ const baseCols: Cols<Rows> = [
 /** extra cols if authorized */
 const extraCols: Cols<Rows> = [
   {
-    key: "repos",
+    key: "repositories",
     name: "Repositories",
   },
   {
@@ -120,8 +120,8 @@ const extraCols: Cols<Rows> = [
     name: "Analytics",
   },
   {
-    slot: "reposAnalytics",
-    key: "reposAnalytics",
+    slot: "repositoriesAnalytics",
+    key: "repositoriesAnalytics",
     name: "Rep./Anal.",
   },
 ];

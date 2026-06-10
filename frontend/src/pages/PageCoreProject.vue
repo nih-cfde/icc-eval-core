@@ -98,13 +98,13 @@
 
     <p>Software repositories associated with this project.</p>
 
-    <p v-if="repos === notAuthed" class="error">
+    <p v-if="repositories === notAuthed" class="error">
       Sorry, you're not authorized to view this data
     </p>
 
     <AppTable
-      :cols="repoCols"
-      :rows="repos ?? []"
+      :cols="repositoryColumns"
+      :rows="repositories ?? []"
       :sort="[{ id: 'id', desc: true }]"
     >
       <template #owner="{ row }">
@@ -199,9 +199,9 @@
 
     <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
-    <strong v-if="repos?.length === 0">
+    <strong v-if="repositories?.length === 0">
       <a href="https://nih-cfde.github.io/icc-eval-coordination/">
-        See this readme for how to add your repos </a
+        See this readme for how to add your repositories </a
       >.
     </strong>
     a
@@ -232,8 +232,8 @@
       </p>
 
       <p>
-        # of dependencies is totaled from all manifests in repo, direct and
-        transitive, e.g.
+        # of dependencies is totaled from all manifests in repository, direct
+        and transitive, e.g.
         <code>package.json</code> + <code>package-lock.json</code>.
       </p>
     </div>
@@ -351,7 +351,7 @@ import {
   useAnalytics,
   useCoreProjects,
   usePublications,
-  useRepos,
+  useRepositories,
 } from "@/api";
 import Analytics from "@/assets/analytics.svg";
 import Book from "@/assets/book.svg";
@@ -383,7 +383,7 @@ const { data: coreProjects } = useCoreProjects(id);
 const coreProject = computed(() => coreProjects.value?.[0]);
 const { data: publications } = usePublications(id);
 const { data: analytics } = useAnalytics(id);
-const { data: repos } = useRepos(id);
+const { data: repositories } = useRepositories(id);
 
 /** whether charts should be shown in cumulative mode */
 const cumulative = ref(true);
@@ -402,52 +402,58 @@ const details = computed(() => [
   ["Publications", `${format(publications.value, true)} publications`],
   [
     "Repositories",
-    `${format(repos.value, true)} repositories`,
+    `${format(repositories.value, true)} repositories`,
     [
       format(
-        sumBy(repos.value, (repo) => repo.stars.length),
+        sumBy(repositories.value, (repository) => repository.stars.length),
         true,
       ),
       "stars",
     ],
     [
       format(
-        sumBy(repos.value, (repo) => repo.watchers),
+        sumBy(repositories.value, (repository) => repository.watchers),
         true,
       ),
       "watchers",
     ],
     [
       format(
-        sumBy(repos.value, (repo) => repo.forks.length),
+        sumBy(repositories.value, (repository) => repository.forks.length),
         true,
       ),
       "forks",
     ],
     [
       format(
-        sumBy(repos.value, (repo) => repo.issues.length),
+        sumBy(repositories.value, (repository) => repository.issues.length),
         true,
       ),
       "issues",
     ],
     [
       format(
-        sumBy(repos.value, (repo) => repo.pullRequests.length),
+        sumBy(
+          repositories.value,
+          (repository) => repository.pullRequests.length,
+        ),
         true,
       ),
       "pull requests",
     ],
     [
       format(
-        sumBy(repos.value, (repo) => repo.commits.length),
+        sumBy(repositories.value, (repository) => repository.commits.length),
         true,
       ),
       "commits",
     ],
     [
       format(
-        sumBy(repos.value, (repo) => repo.contributors.length),
+        sumBy(
+          repositories.value,
+          (repository) => repository.contributors.length,
+        ),
         true,
       ),
       "contributors",
@@ -579,7 +585,7 @@ const topAnalytics = computed(() => {
 });
 
 /** repo table column definitions */
-const repoCols: Cols<NonNullable<typeof repos.value>> = [
+const repositoryColumns: Cols<NonNullable<typeof repositories.value>> = [
   {
     slot: "owner",
     key: "owner",
@@ -691,7 +697,7 @@ const repoCols: Cols<NonNullable<typeof repos.value>> = [
 /** star chart data */
 const starsOverTime = computed(
   () =>
-    repos.value
+    repositories.value
       ?.map(({ stars }) =>
         stars.map((star) => [new Date(star.date), 1] as const),
       )
@@ -701,7 +707,7 @@ const starsOverTime = computed(
 /** fork chart data */
 const forksOverTime = computed(
   () =>
-    repos.value
+    repositories.value
       ?.map(({ forks }) =>
         forks.map((fork) => [new Date(fork.date), 1] as const),
       )
@@ -711,7 +717,7 @@ const forksOverTime = computed(
 /** issue chart data */
 const issuesOverTime = computed(
   () =>
-    repos.value
+    repositories.value
       ?.map(({ issues }) =>
         issues.map(({ created }) => [new Date(created), 1] as const),
       )
@@ -721,7 +727,7 @@ const issuesOverTime = computed(
 /** issue chart data */
 const pullRequestsOverTime = computed(
   () =>
-    repos.value
+    repositories.value
       ?.map(({ pullRequests }) =>
         pullRequests.map(({ created }) => [new Date(created), 1] as const),
       )
@@ -731,7 +737,7 @@ const pullRequestsOverTime = computed(
 /** commit chart data */
 const commitsOverTime = computed(
   () =>
-    repos.value
+    repositories.value
       ?.map(({ commits }) =>
         commits.map((commit) => [new Date(commit.date), 1] as const),
       )

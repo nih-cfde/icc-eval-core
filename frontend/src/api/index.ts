@@ -11,8 +11,8 @@ import drcFile from "./types/drc-file.json";
 import journals from "./types/journals.json";
 import projects from "./types/projects.json";
 import publications from "./types/publications.json";
-import repoOverview from "./types/repo-overview.json";
-import repos from "./types/repos.json";
+import repositoriesOverview from "./types/repositories-overview.json";
+import repositories from "./types/repositories.json";
 
 const { VITE_API: api, VITE_MOCK } = import.meta.env;
 
@@ -81,7 +81,7 @@ export const getCoreProjects = async (coreProject?: string) => {
   return data.map((coreProject) => ({
     ...coreProject,
     /** derive extra props */
-    reposAnalytics: coreProject.repos + coreProject.analytics,
+    repositoriesAnalytics: coreProject.repositories + coreProject.analytics,
   }));
 };
 
@@ -158,10 +158,10 @@ export const getAnalyticsOverview = () =>
     : request<typeof analyticsOverview>("analytics-overview");
 
 /** get repo data from api */
-export const getRepos = async (coreProject?: string) => {
+export const getRepositories = async (coreProject?: string) => {
   const data = mock
-    ? repos
-    : await request<typeof repos>("repositories", {
+    ? repositories
+    : await request<typeof repositories>("repositories", {
         limit: 999,
         all: true,
         coreProject,
@@ -177,8 +177,10 @@ export const getRepos = async (coreProject?: string) => {
 };
 
 /** get repo overview data from api */
-export const getRepoOverview = () =>
-  mock ? repoOverview : request<typeof repoOverview>("repo-overview");
+export const getRepositoriesOverview = () =>
+  mock
+    ? repositoriesOverview
+    : request<typeof repositoriesOverview>("repositories-overview");
 
 /** get drc data from api */
 export const getDrcData = async () => {
@@ -240,17 +242,17 @@ export const useAnalyticsOverview = () =>
   });
 
 /** load and use repo data */
-export const useRepos = (coreProject?: Ref<string | undefined>) =>
+export const useRepositories = (coreProject?: Ref<string | undefined>) =>
   useQuery({
-    queryKey: ["getRepos", coreProject],
-    queryFn: () => getRepos(coreProject?.value),
+    queryKey: ["getRepositories", coreProject],
+    queryFn: () => getRepositories(coreProject?.value),
   });
 
 /** load and use repo overview data */
-export const useRepoOverview = () =>
+export const useRepositoriesOverview = () =>
   useQuery({
-    queryKey: ["getRepoOverview"],
-    queryFn: getRepoOverview,
+    queryKey: ["getRepositoriesOverview"],
+    queryFn: getRepositoriesOverview,
   });
 
 /** load and use drc data */

@@ -5,7 +5,10 @@ import { getJournals } from "@/gather/journals";
 import { getOpportunities } from "@/gather/opportunities";
 import { getProjects } from "@/gather/projects";
 import { getPublications } from "@/gather/publications";
-import { getRepos, getReposOverview } from "@/gather/repos";
+import {
+  getRepositories,
+  getRepositoriesOverview,
+} from "@/gather/repositories";
 import { getUsers } from "@/gather/users";
 import { browser } from "@/util/browser";
 import { saveFile } from "@/util/file";
@@ -60,11 +63,13 @@ saveFile(analyticsOverview, `${OUTPUT_PATH}/analytics-overview.json`);
 
 /** ========================================================================= */
 
-divider("Repos");
-const repos = await getRepos(coreProjects.map((coreProject) => coreProject.id));
-saveFile(repos, `${OUTPUT_PATH}/repos.json`);
-const reposOverview = await getReposOverview(repos);
-saveFile(reposOverview, `${OUTPUT_PATH}/repos-overview.json`);
+divider("Repositories");
+const repositories = await getRepositories(
+  coreProjects.map((coreProject) => coreProject.id),
+);
+saveFile(repositories, `${OUTPUT_PATH}/repositories.json`);
+const repositoriesOverview = await getRepositoriesOverview(repositories);
+saveFile(repositoriesOverview, `${OUTPUT_PATH}/repositories-overview.json`);
 
 /** ========================================================================= */
 
@@ -76,8 +81,8 @@ for (const coreProject of coreProjects) {
   coreProject.analytics = analytics.filter((analytic) =>
     match(analytic.coreProject, coreProject.id),
   ).length;
-  coreProject.repos = repos.filter((repo) =>
-    match(repo.coreProject, coreProject.id),
+  coreProject.repositories = repositories.filter((repository) =>
+    match(repository.coreProject, coreProject.id),
   ).length;
 }
 saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);

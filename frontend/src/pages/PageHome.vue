@@ -156,26 +156,28 @@
 
     <p>High-level info about CFDE software repositories.</p>
 
-    <p v-if="repoOverview === notAuthed" class="error">
+    <p v-if="repositoriesOverview === notAuthed" class="error">
       Sorry, you're not authorized to view this data
     </p>
 
     <dl class="details">
       <div
-        v-for="(repoValue, repoProp, repoIndex) in repoOverview"
-        :key="repoIndex"
+        v-for="(
+          repositoryValue, repositoryProp, repositoryIndex
+        ) in repositoriesOverview"
+        :key="repositoryIndex"
         :style="{
-          gridColumn: typeof repoValue === 'number' ? 'span 1' : 'span 2',
+          gridColumn: typeof repositoryValue === 'number' ? 'span 1' : 'span 2',
         }"
       >
-        <dt>{{ startCase(repoProp) }}</dt>
-        <dd v-if="typeof repoValue === 'number'">
-          {{ format(repoValue, true) }}
+        <dt>{{ startCase(repositoryProp) }}</dt>
+        <dd v-if="typeof repositoryValue === 'number'">
+          {{ format(repositoryValue, true) }}
         </dd>
         <dd v-else class="mini-table">
           <template
             v-for="([entryName, entryCount], entryIndex) of Object.entries(
-              repoValue,
+              repositoryValue,
             ).slice(0, 5)"
             :key="entryIndex"
           >
@@ -183,7 +185,9 @@
             <span>
               {{
                 format(
-                  repoProp === "languages" ? bytes(entryCount) : entryCount,
+                  repositoryProp === "languages"
+                    ? bytes(entryCount)
+                    : entryCount,
                   true,
                 )
               }}
@@ -261,7 +265,7 @@ import {
   useCoreProjects,
   useProjects,
   usePublications,
-  useRepoOverview,
+  useRepositoriesOverview,
 } from "@/api";
 import Book from "@/assets/book.svg";
 import Chart from "@/assets/chart.svg";
@@ -282,7 +286,7 @@ const { data: coreProjects } = useCoreProjects();
 const { data: projects } = useProjects();
 const { data: publications } = usePublications();
 const { data: analyticsOverview } = useAnalyticsOverview();
-const { data: repoOverview } = useRepoOverview();
+const { data: repositoriesOverview } = useRepositoriesOverview();
 
 /** whether charts should be shown in cumulative mode */
 const cumulative = ref(true);
