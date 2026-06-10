@@ -35,6 +35,7 @@ jobs:
         run: ./run.sh --install
 
       - name: Install Playwright
+        timeout-minutes: 5
         run: ./run.sh --install-playwright
 
       - name: Run pipeline
