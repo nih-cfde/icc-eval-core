@@ -57,6 +57,31 @@ jobs:
           name: pipeline-log
           path: /srv/projects/icc-eval-core-api/pipeline.log
 
+      - name: Import results into backend database
+        working-directory: /srv/projects/icc-eval-core-api
+        run: |
+          set -euo pipefail
+
+          LOCK_FILE=/tmp/icc-eval-core-api-pipeline.lock
+
+          (
+            if ! flock -n 200; then
+              echo "Another pipeline run is already active on this VM. Exiting without starting a new run."
+              exit 78
+            fi
+
+            echo "::group::Pipeline logs"
+            ./run_stack.sh run --rm -w '/app/icc_eval_core_api' backend 'uv run python manage.py import_dataset /data/output/' 2>&1 | tee import.log
+            echo "::endgroup::"
+          ) 200>"$LOCK_FILE"
+
+      - name: Upload import log
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: import-log
+          path: /srv/projects/icc-eval-core-api/import.log
+
       - name: Write job summary
         if: always()
         run: |
