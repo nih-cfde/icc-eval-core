@@ -1,0 +1,74 @@
+name: Pipeline on GCP VM
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: icc-eval-core-api-pipeline
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    runs-on: [self-hosted, Linux, X64, cfde]
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Show runner context
+        run: |
+          set -euo pipefail
+          hostname
+          whoami
+          docker --version
+          docker compose version
+
+      - name: Update repo on VM
+        working-directory: /srv/projects/icc-eval-core-api
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+
+      - name: Run pipeline in Compose stack
+        working-directory: /srv/projects/icc-eval-core-api
+        run: |
+          set -euo pipefail
+
+          LOCK_FILE=/tmp/icc-eval-core-api-pipeline.lock
+
+          (
+            if ! flock -n 200; then
+              echo "Another pipeline run is already active on this VM. Exiting without starting a new run."
+              exit 78
+            fi
+
+            echo "::group::Pipeline logs"
+            ./run_stack.sh --profile pipeline run --rm pipeline 2>&1 | tee pipeline.log
+            echo "::endgroup::"
+          ) 200>"$LOCK_FILE"
+
+      - name: Upload pipeline log
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pipeline-log
+          path: /srv/projects/icc-eval-core-api/pipeline.log
+
+      - name: Write job summary
+        if: always()
+        run: |
+          {
+            echo "## Pipeline run"
+            echo ""
+            echo "- VM: $(hostname)"
+            echo "- Repo path: /srv/projects/icc-eval-core-api"
+            echo "- Commit: $GITHUB_SHA"
+            echo ""
+            echo "### Last 80 log lines"
+            echo '```'
+            tail -n 80 /srv/projects/icc-eval-core-api/pipeline.log || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
