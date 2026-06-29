@@ -248,6 +248,291 @@ class APIEndpointSmokeTests(TestCase):
 		self.assert_endpoint_ok('/api/me')
 
 
+class CoreProjectAccessPermissionTests(TestCase):
+	"""
+	Ensures only repository and analytics endpoints are scoped by ORCID mapping
+	for non-superusers.
+	"""
+
+	@classmethod
+	def setUpTestData(cls):
+		cls.user_mapped = User.objects.create_user(
+			username='mapped-user',
+			email='mapped@example.com',
+			password='not-used-in-force-auth',
+			orcid='0000-0000-0000-0001',
+		)
+		cls.user_wildcard = User.objects.create_user(
+			username='wildcard-user',
+			email='wildcard@example.com',
+			password='not-used-in-force-auth',
+			orcid='0000-0000-0000-0002',
+		)
+		cls.user_unmapped = User.objects.create_user(
+			username='unmapped-user',
+			email='unmapped@example.com',
+			password='not-used-in-force-auth',
+			orcid='0000-0000-0000-0003',
+		)
+
+		ORCIDProjectMap.objects.create(
+			orcid=cls.user_mapped.orcid,
+			core_projects=['CP1'],
+		)
+		ORCIDProjectMap.objects.create(
+			orcid=cls.user_wildcard.orcid,
+			core_projects=['*'],
+		)
+
+		cls.cp1 = CoreProject.objects.create(
+			id='CP1',
+			name='Core Project 1',
+			activity_code='U54',
+			projects=['P1'],
+			award_amount='100.00',
+			publications=1,
+			repos=1,
+			analytics=1,
+		)
+		cls.cp2 = CoreProject.objects.create(
+			id='CP2',
+			name='Core Project 2',
+			activity_code='U54',
+			projects=['P2'],
+			award_amount='200.00',
+			publications=1,
+			repos=1,
+			analytics=1,
+		)
+
+		opportunity = Opportunity.objects.create(
+			id='RFA-RM-00-001',
+			prefix='RFA',
+			activity_code='R01 Research Project Grant',
+		)
+
+		Project.objects.create(
+			id='P1',
+			core_project=cls.cp1,
+			name='Project 1',
+			opportunity=opportunity,
+			application=20000001,
+			award_amount='100.00',
+			activity_code='U54',
+			agency_code='NIH',
+			date_start=date(2025, 1, 1),
+			date_end=date(2026, 1, 1),
+			is_active=True,
+		)
+		Project.objects.create(
+			id='P2',
+			core_project=cls.cp2,
+			name='Project 2',
+			opportunity=opportunity,
+			application=20000002,
+			award_amount='200.00',
+			activity_code='U54',
+			agency_code='NIH',
+			date_start=date(2025, 1, 1),
+			date_end=date(2026, 1, 1),
+			is_active=True,
+		)
+
+		journal = Journal.objects.create(
+			abbrev='J1',
+			name='Journal 1',
+			issn='12345678',
+			title='Journal 1',
+			rank=1.0,
+		)
+
+		Publication.objects.create(
+			id=9100001,
+			core_project=cls.cp1,
+			application=20000001,
+			title='Publication 1',
+			authors=['Author 1'],
+			journal=journal,
+			year=2026,
+			modified=timezone.now(),
+			doi='10.9999/test.1',
+			relative_citation_ratio=0.5,
+			citations=10,
+			citations_per_year=5,
+		)
+		Publication.objects.create(
+			id=9100002,
+			core_project=cls.cp2,
+			application=20000002,
+			title='Publication 2',
+			authors=['Author 2'],
+			journal=journal,
+			year=2026,
+			modified=timezone.now(),
+			doi='10.9999/test.2',
+			relative_citation_ratio=0.5,
+			citations=10,
+			citations_per_year=5,
+		)
+
+		cls.repo_cp1 = Repository.objects.create(
+			id=8100001,
+			core_project=cls.cp1,
+			owner='owner',
+			name='repo-1',
+			description='Repo 1',
+			topics=['one'],
+			created=timezone.now(),
+			modified=timezone.now(),
+			stars=[],
+			forks=[],
+			watchers=[],
+			commits=[],
+			issues=[],
+			pull_requests=[],
+			contributors=[],
+			open_issues=0,
+			closed_issues=0,
+			issue_time_open={},
+			open_pull_requests=0,
+			closed_pull_requests=0,
+			pull_request_time_open={},
+			readme=True,
+			contributing=False,
+			code_of_conduct=False,
+			license='MIT',
+			languages={'Python': 1},
+			dependencies={},
+		)
+		cls.repo_cp2 = Repository.objects.create(
+			id=8100002,
+			core_project=cls.cp2,
+			owner='owner',
+			name='repo-2',
+			description='Repo 2',
+			topics=['two'],
+			created=timezone.now(),
+			modified=timezone.now(),
+			stars=[],
+			forks=[],
+			watchers=[],
+			commits=[],
+			issues=[],
+			pull_requests=[],
+			contributors=[],
+			open_issues=0,
+			closed_issues=0,
+			issue_time_open={},
+			open_pull_requests=0,
+			closed_pull_requests=0,
+			pull_request_time_open={},
+			readme=True,
+			contributing=False,
+			code_of_conduct=False,
+			license='MIT',
+			languages={'Python': 1},
+			dependencies={},
+		)
+
+		cls.analytics_cp1 = Analytics.objects.create(
+			property='properties/1',
+			property_name='Analytics 1',
+			core_project=cls.cp1,
+			over_time={},
+			top_continents={},
+			top_countries={},
+			top_regions={},
+			top_cities={},
+			top_languages={},
+			top_devices={},
+			top_oses={},
+		)
+		cls.analytics_cp2 = Analytics.objects.create(
+			property='properties/2',
+			property_name='Analytics 2',
+			core_project=cls.cp2,
+			over_time={},
+			top_continents={},
+			top_countries={},
+			top_regions={},
+			top_cities={},
+			top_languages={},
+			top_devices={},
+			top_oses={},
+		)
+
+	def setUp(self):
+		self.client = APIClient()
+
+	def _extract_ids(self, endpoint, payload):
+		items = payload.get('results', payload)
+
+		if endpoint == '/api/core-projects/':
+			return {item['id'] for item in items}
+
+		return {item.get('coreProject') or item.get('core_project') for item in items}
+
+	def _assert_endpoint_ids(self, endpoint, expected_ids):
+		response = self.client.get(endpoint)
+		self.assertEqual(response.status_code, 200)
+		self.assertSetEqual(self._extract_ids(endpoint, response.json()), expected_ids)
+
+	def test_mapped_user_only_sees_mapped_core_project_data(self):
+		self.client.force_authenticate(user=self.user_mapped)
+
+		for endpoint in [
+			'/api/core-projects/',
+			'/api/projects/',
+			'/api/publications/',
+		]:
+			self._assert_endpoint_ids(endpoint, {'CP1', 'CP2'})
+
+		for endpoint in [
+			'/api/repositories/',
+			'/api/analytics/',
+		]:
+			self._assert_endpoint_ids(endpoint, {'CP1'})
+
+		# Detail routes for inaccessible records should not resolve on restricted endpoints.
+		self.assertEqual(self.client.get(f'/api/repositories/{self.repo_cp2.id}/').status_code, 404)
+		self.assertEqual(self.client.get(f'/api/analytics/{self.analytics_cp2.id}/').status_code, 404)
+
+		# Unrestricted detail routes should remain accessible.
+		self.assertEqual(self.client.get('/api/core-projects/CP2/').status_code, 200)
+		self.assertEqual(self.client.get('/api/projects/P2/').status_code, 200)
+
+	def test_wildcard_mapping_user_sees_all_core_project_data(self):
+		self.client.force_authenticate(user=self.user_wildcard)
+
+		for endpoint in [
+			'/api/core-projects/',
+			'/api/projects/',
+			'/api/publications/',
+			'/api/repositories/',
+			'/api/analytics/',
+		]:
+			self._assert_endpoint_ids(endpoint, {'CP1', 'CP2'})
+
+	def test_unmapped_user_sees_no_core_project_data(self):
+		self.client.force_authenticate(user=self.user_unmapped)
+
+		for endpoint in [
+			'/api/core-projects/',
+			'/api/projects/',
+			'/api/publications/',
+		]:
+			self._assert_endpoint_ids(endpoint, {'CP1', 'CP2'})
+
+		for endpoint in [
+			'/api/repositories/',
+			'/api/analytics/',
+		]:
+			self._assert_endpoint_ids(endpoint, set())
+
+		self.assertEqual(self.client.get(f'/api/repositories/{self.repo_cp1.id}/').status_code, 404)
+		self.assertEqual(self.client.get(f'/api/analytics/{self.analytics_cp1.id}/').status_code, 404)
+
+
 class ImportDatasetIdempotencyTests(TestCase):
 	"""
 	Ensures that multiple imports of the same dataset do not create duplicate
