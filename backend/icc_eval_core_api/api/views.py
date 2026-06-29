@@ -1,7 +1,7 @@
 from rest_framework import viewsets, filters
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework.permissions import IsAuthenticated
+from .permissions import CoreProjectAccessPermission, CoreProjectAccessQuerysetMixin
 from .models import (
     Analytics,
     AnalyticsOverview,
@@ -11,7 +11,6 @@ from .models import (
     DRCFile,
     Journal,
     Opportunity,
-    ORCIDProjectMap,
     Project,
     Publication,
     Repository,
@@ -42,7 +41,6 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['username', 'email', 'first_name', 'last_name']
     ordering_fields = ['username', 'date_joined']
@@ -55,38 +53,14 @@ class CoreProjectViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = CoreProject.objects.all()
     serializer_class = CoreProjectSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['activity_code']
     search_fields = ['id', 'name', 'activity_code']
     ordering_fields = ['id', 'name', 'award_amount', 'publications', 'repos', 'analytics']
     ordering = ['id']
 
-    def get_queryset(self):
-        user = self.request.user
 
-        if user.is_superuser:
-            return CoreProject.objects.all()
-        elif user.is_authenticated:
-            # For regular users, filter core projects based on their ORCID
-            orcid = user.orcid
-            if orcid:
-                try:
-                    mapping = ORCIDProjectMap.objects.get(orcid=orcid)
-                    core_project_ids = mapping.core_projects
-                    
-                    # the special value '*' means the user has access to all core projects
-                    if '*' in core_project_ids:
-                        return CoreProject.objects.all()
-                    
-                    return CoreProject.objects.filter(id__in=core_project_ids)
-                except ORCIDProjectMap.DoesNotExist:
-                    return CoreProject.objects.none()
-
-        return CoreProject.objects.none()
-
-
-class RepositoryViewSet(viewsets.ReadOnlyModelViewSet):
+class RepositoryViewSet(CoreProjectAccessQuerysetMixin, viewsets.ReadOnlyModelViewSet):
     """
     ReadOnly API endpoint for repositories.
 
@@ -96,7 +70,7 @@ class RepositoryViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Repository.objects.select_related('core_project').all()
     serializer_class = RepositorySerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [CoreProjectAccessPermission]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['core_project', 'owner', 'license', 'readme', 'contributing', 'code_of_conduct']
     search_fields = ['name', 'owner', 'description']
@@ -113,13 +87,13 @@ class RepositoryViewSet(viewsets.ReadOnlyModelViewSet):
         return RepositorySerializer
 
 
-class AnalyticsViewSet(viewsets.ReadOnlyModelViewSet):
+class AnalyticsViewSet(CoreProjectAccessQuerysetMixin, viewsets.ReadOnlyModelViewSet):
     """
     ReadOnly API endpoint for analytics.
     """
     queryset = Analytics.objects.select_related('core_project').all()
     serializer_class = AnalyticsSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [CoreProjectAccessPermission]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['core_project', 'property']
     search_fields = ['property', 'property_name']
@@ -132,7 +106,6 @@ class OpportunityViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Opportunity.objects.all()
     serializer_class = OpportunitySerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['prefix', 'activity_code']
     search_fields = ['id', 'prefix', 'activity_code']
@@ -146,7 +119,6 @@ class ProjectViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Project.objects.select_related('core_project', 'opportunity').all()
     serializer_class = ProjectSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['core_project', 'opportunity', 'activity_code', 'agency_code', 'is_active']
     search_fields = ['id', 'name']
@@ -160,7 +132,6 @@ class JournalViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Journal.objects.all()
     serializer_class = JournalSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['issn']
     search_fields = ['abbrev', 'name', 'title']
@@ -174,7 +145,6 @@ class PublicationViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Publication.objects.select_related('core_project', 'journal').all()
     serializer_class = PublicationSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['core_project', 'journal', 'year']
     search_fields = ['title', 'doi']
@@ -188,7 +158,6 @@ class DRCCodeViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = DRCCode.objects.all()
     serializer_class = DRCCodeSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['type', 'ext']
     search_fields = ['name', 'url', 'dir']
@@ -202,7 +171,6 @@ class DRCDCCViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = DRCDCC.objects.all()
     serializer_class = DRCDCCSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['ext']
     search_fields = ['name', 'url', 'dir']
@@ -216,7 +184,6 @@ class DRCFileViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = DRCFile.objects.all()
     serializer_class = DRCFileSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['ext']
     search_fields = ['name', 'url', 'dir']
@@ -233,7 +200,6 @@ class RepoOverviewViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = RepositoryOverview.objects.all()
     serializer_class = RepositoryOverviewSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     ordering_fields = ['repos', 'stars', 'forks', 'watchers', 'commits']
     ordering = ['id']
@@ -256,7 +222,6 @@ class AnalyticsOverviewViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = AnalyticsOverview.objects.all()
     serializer_class = AnalyticsOverviewSerializer
-    permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
     ordering_fields = ['id']
     ordering = ['id']
