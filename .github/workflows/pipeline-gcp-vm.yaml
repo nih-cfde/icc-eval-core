@@ -26,14 +26,13 @@ jobs:
           docker compose version
 
       - name: Update repo on VM
-        working-directory: /srv/projects/icc-eval-core-api
+        working-directory: /srv/projects/icc-eval-core
         run: |
           set -euo pipefail
-          git fetch origin main
-          git reset --hard origin/main
+          git pull
 
       - name: Run pipeline in Compose stack
-        working-directory: /srv/projects/icc-eval-core-api
+        working-directory: /srv/projects/icc-eval-core
         run: |
           set -euo pipefail
 
@@ -55,10 +54,10 @@ jobs:
         if: always()
         with:
           name: pipeline-log
-          path: /srv/projects/icc-eval-core-api/pipeline.log
+          path: /srv/projects/icc-eval-core/pipeline.log
 
       - name: Import results into backend database
-        working-directory: /srv/projects/icc-eval-core-api
+        working-directory: /srv/projects/icc-eval-core
         run: |
           set -euo pipefail
 
@@ -80,7 +79,7 @@ jobs:
         if: always()
         with:
           name: import-log
-          path: /srv/projects/icc-eval-core-api/import.log
+          path: /srv/projects/icc-eval-core/import.log
 
       - name: Write job summary
         if: always()
@@ -89,11 +88,11 @@ jobs:
             echo "## Pipeline run"
             echo ""
             echo "- VM: $(hostname)"
-            echo "- Repo path: /srv/projects/icc-eval-core-api"
+            echo "- Repo path: /srv/projects/icc-eval-core"
             echo "- Commit: $GITHUB_SHA"
             echo ""
             echo "### Last 80 log lines"
             echo '```'
-            tail -n 80 /srv/projects/icc-eval-core-api/pipeline.log || true
+            tail -n 80 /srv/projects/icc-eval-core/pipeline.log || true
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
