@@ -138,9 +138,17 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(f'Imported {len(data)} core projects'))
 
     def import_repositories(self, folder_path):
-        file_path = os.path.join(folder_path, 'repos.json')
-        
-        if not os.path.exists(file_path):
+        try:
+            file_path = os.path.join(folder_path, 'repositories.json')
+
+            if not os.path.exists(file_path):
+                # try the old repos.json
+                file_path = os.path.join(folder_path, 'repos.json')
+
+                if not os.path.exists(file_path):
+                    raise FileNotFoundError('repos.json')
+
+        except FileNotFoundError as ex:
             self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
             return
         
