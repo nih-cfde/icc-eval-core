@@ -239,7 +239,7 @@ class APIEndpointSmokeTests(TestCase):
 		self.assert_endpoint_ok('/api/analytics/')
 
 	def test_repo_overview_endpoint(self):
-		self.assert_endpoint_ok('/api/repo-overview/')
+		self.assert_endpoint_ok('/api/repositories-overview/')
 
 	def test_analytics_overview_endpoint(self):
 		self.assert_endpoint_ok('/api/analytics-overview/')

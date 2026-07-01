@@ -72,7 +72,7 @@ router.register(r'drc-dcc', DRCDCCViewSet, basename='drc-dcc')
 router.register(r'drc-file', DRCFileViewSet, basename='drc-file')
 router.register(r'repositories', RepositoryViewSet, basename='repository')
 router.register(r'analytics', AnalyticsViewSet, basename='analytics')
-router.register(r'repo-overview', RepoOverviewViewSet, basename='repo-overview')
+router.register(r'repositories-overview', RepoOverviewViewSet, basename='repositories-overview')
 router.register(r'analytics-overview', AnalyticsOverviewViewSet, basename='analytics-overview')
 
 urlpatterns = router.urls +[
