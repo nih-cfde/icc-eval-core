@@ -49,7 +49,7 @@
       </template>
 
       <template #authors="{ row }">
-        <template v-for="(author, key) of carve(row.authors, 2)" :key="key">
+        <template v-for="(author, index) of carve(row.authors, 2)" :key="index">
           {{ author }}
           <br />
         </template>
@@ -255,8 +255,8 @@
         <dt>Websites</dt>
         <dd class="mini-table">
           <template
-            v-for="({ property, propertyName }, key) of analytics"
-            :key="key"
+            v-for="({ property, propertyName }, index) of analytics"
+            :key="index"
           >
             <span>
               {{ startCase(propertyName) }}
@@ -282,21 +282,23 @@
     <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
     <dl class="details">
-      <div v-for="(topValue, topKey) in topAnalytics" :key="topKey">
+      <div v-for="(metrics, dimension) in dimensionsAnalytics" :key="dimension">
         <template
-          v-if="typeof topValue === 'object' && 'byEngagedSessions' in topValue"
+          v-if="typeof metrics === 'object' && 'engagedSessions' in metrics"
         >
-          <dt>Top {{ topKey.replace("top", "") }}</dt>
+          <dt>{{ dimension }}</dt>
           <dd class="mini-table">
             <template
-              v-for="(byValue, byKey) in topValue.byEngagedSessions"
-              :key="byKey"
+              v-for="[key, value] in Object.entries(
+                metrics.engagedSessions,
+              ).slice(0, 5)"
+              :key="key"
             >
               <span>
-                {{ byKey }}
+                {{ key }}
               </span>
               <span>
-                {{ format(byValue, true) }}
+                {{ format(value, true) }}
               </span>
             </template>
           </dd>
@@ -328,6 +330,13 @@
             >Users who visited the website for the first time</AppLink
           >.
         </dd>
+        <dt>Returning Users</dt>
+        <dd>
+          <AppLink
+            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=returningUsers"
+            >Users who have visited the website before</AppLink
+          >.
+        </dd>
         <dt>Engaged Sessions</dt>
         <dd>
           <AppLink
@@ -337,7 +346,7 @@
         </dd>
       </dl>
 
-      <p>"Top" metrics are measured by number of engaged sessions.</p>
+      <p>Dimensions are measured by number of engaged sessions.</p>
     </div>
   </section>
 </template>
@@ -549,34 +558,32 @@ const overTimeAnalytics = computed(() => {
   });
 });
 
-/** "top dimensions" analytics data */
-const topAnalytics = computed(() => {
+/** dimensions analytics data */
+const dimensionsAnalytics = computed(() => {
   const properties =
     analytics.value?.map(
       ({ property, propertyName, coreProject, overTime, ...rest }) => rest,
     ) ?? [];
 
-  type Property = Record<string, Record<string, Record<string, number>>>;
-
   /** total values from all properties */
-  const total: Property = {};
+  const total: Record<string, Record<string, Record<string, number>>> = {};
 
   /** go through each property and total values */
-  for (const property of properties as unknown as Property[])
-    for (const [topKey, topValue] of getEntries(property))
-      for (const [byKey, byValue] of getEntries(topValue))
-        for (const [dimensionKey, dimensionValue] of getEntries(byValue)) {
-          total[topKey] ??= {};
-          total[topKey][byKey] ??= {};
-          total[topKey][byKey][dimensionKey] ??= 0;
-          total[topKey][byKey][dimensionKey] += dimensionValue;
+  for (const property of properties)
+    for (const [dimension, metrics] of getEntries(property))
+      for (const [metric, entries] of getEntries(metrics))
+        for (const [key, value] of getEntries(entries)) {
+          total[dimension] ??= {};
+          total[dimension][metric] ??= {};
+          total[dimension][metric][key] ??= 0;
+          total[dimension][metric][key] += value;
         }
 
   /** sort and limit counts */
-  for (const [topKey, topValue] of getEntries(total))
-    for (const [byKey, byValue] of getEntries(topValue))
-      total[topKey]![byKey] = Object.fromEntries(
-        orderBy(Object.entries(byValue), ([, count]) => count, "desc").slice(
+  for (const [dimension, metrics] of getEntries(total))
+    for (const [metric, entries] of getEntries(metrics))
+      total[dimension]![metric] = Object.fromEntries(
+        orderBy(Object.entries(entries), ([, value]) => value, "desc").slice(
           0,
           5,
         ),

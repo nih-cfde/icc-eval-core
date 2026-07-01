@@ -92,67 +92,13 @@ const exactFilter = (fieldName: string, value: string) => ({
 
 /** get metric values over time */
 export const getOverTime = async (property: PropertyId) => {
-  /** common report options */
-  const options = {
-    dateRanges,
-    dimensions: [{ name: "date" }],
-    orderBys: [{ desc: false, dimension: { dimensionName: "date" } }],
-  };
-
-  /** base metrics */
-  const [report = {}] = await runReports(property, [
-    {
-      ...options,
-      metrics: [
-        { name: "activeUsers" },
-        { name: "newUsers" },
-        { name: "engagedSessions" },
-      ],
-    },
-  ]);
-
-  /** returning users */
-  const [returning = {}] = await runReports(property, [
-    {
-      ...options,
-      metrics: ["activeUsers"].map((metric) => ({ name: metric })),
-      dimensionFilter: exactFilter("newVsReturning", "returning"),
-    },
-  ]);
-
-  /** pretend "returningUsers" is real metric */
-  report.metricHeaders?.push({ name: "returningUsers", type: "TYPE_INTEGER" });
-  const returningMap = returning.rows?.reduce(
-    (map, row) => {
-      const key = row.dimensionValues?.[0]?.value;
-      const value = row.metricValues?.[0]?.value;
-      if (key && value) map[key] = value;
-      return map;
-    },
-    {} as Record<string, string>,
-  );
-  report.rows?.forEach((row) => {
-    const key = row.dimensionValues?.[0]?.value;
-    const value = returningMap?.[key ?? ""];
-    if (value) row.metricValues?.push({ value });
-  });
-
-  return [report];
-};
-
-/** get "top" (by different metrics) dimensions (regions/languages/etc.) */
-export const getTopDimension = async (
-  property: PropertyId,
-  dimension: string,
-) => {
   /** make options for one report */
   const report = (metric: string, filter?: FilterExpression) => ({
     dateRanges,
-    dimensions: [{ name: dimension }],
-    ...(filter ? { dimensionFilter: filter } : {}),
     metrics: [{ name: metric }],
-    orderBys: [{ desc: true, metric: { metricName: metric } }],
-    limit: 10,
+    dimensions: [{ name: "date" }],
+    ...(filter ? { dimensionFilter: filter } : {}),
+    orderBys: [{ desc: false, dimension: { dimensionName: "date" } }],
   });
 
   /** run reports */
@@ -176,33 +122,46 @@ export const getTopDimension = async (
   return [activeUsers, newUsers, returningUsers, engagedSessions];
 };
 
-/** get top various dimensions */
-export const getTopContinents = (property: PropertyId) =>
-  getTopDimension(property, "continent");
-export const getTopCountries = (property: PropertyId) =>
-  getTopDimension(property, "country");
-export const getTopRegions = (property: PropertyId) =>
-  getTopDimension(property, "region");
-export const getTopCities = (property: PropertyId) =>
-  getTopDimension(property, "city");
-export const getTopLanguages = (property: PropertyId) =>
-  getTopDimension(property, "language");
-export const getTopDevices = (property: PropertyId) =>
-  getTopDimension(property, "deviceCategory");
-export const getTopOSes = (property: PropertyId) =>
-  getTopDimension(property, "operatingSystem");
+/** get dimensions (regions/languages/etc.) by different metrics */
+export const getDimension = async (property: PropertyId, dimension: string) => {
+  /** make options for one report */
+  const report = (metric: string, filter?: FilterExpression) => ({
+    dateRanges,
+    metrics: [{ name: metric }],
+    dimensions: [{ name: dimension }],
+    ...(filter ? { dimensionFilter: filter } : {}),
+    orderBys: [{ desc: true, metric: { metricName: metric } }],
+    limit: 100,
+  });
+
+  /** run reports */
+  const [
+    activeUsers = {},
+    newUsers = {},
+    returningUsers = {},
+    engagedSessions = {},
+  ] = await runReports(property, [
+    report("activeUsers"),
+    report("newUsers"),
+    report("activeUsers", exactFilter("newVsReturning", "returning")),
+    report("engagedSessions"),
+  ]);
+
+  /** pretend "returningUsers" is real metric */
+  returningUsers.metricHeaders = [
+    { name: "returningUsers", type: "TYPE_INTEGER" },
+  ];
+
+  return [activeUsers, newUsers, returningUsers, engagedSessions];
+};
 
 /** get event counts by page path */
-export const getEvents = async (
-  property: PropertyId,
-  eventName = "page_view",
-) => {
+export const getEvents = async (property: PropertyId, eventName: string) => {
   /** make options for one report */
   const report = (filter?: FilterExpression) => ({
     dateRanges,
-    dimensions: [{ name: "pagePath" }],
     metrics: [{ name: "eventCount" }],
-    orderBys: [{ desc: true, metric: { metricName: "eventCount" } }],
+    dimensions: [{ name: "pagePath" }],
     dimensionFilter: {
       andGroup: {
         expressions: [
@@ -211,6 +170,8 @@ export const getEvents = async (
         ],
       },
     },
+    orderBys: [{ desc: true, metric: { metricName: "eventCount" } }],
+    limit: 100,
   });
 
   return runReports(property, [

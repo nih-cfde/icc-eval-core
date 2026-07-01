@@ -121,7 +121,7 @@
       </template>
 
       <template #authors="{ row }">
-        <template v-for="(author, key) of carve(row.authors, 2)" :key="key">
+        <template v-for="(author, index) of carve(row.authors, 2)" :key="index">
           {{ author }}
           <br />
         </template>
@@ -162,35 +162,24 @@
 
     <dl class="details">
       <div
-        v-for="(
-          repositoryValue, repositoryProp, repositoryIndex
-        ) in repositoriesOverview"
-        :key="repositoryIndex"
+        v-for="(value, key, index) in repositoriesOverview"
+        :key="index"
         :style="{
-          gridColumn: typeof repositoryValue === 'number' ? 'span 1' : 'span 2',
+          gridColumn: typeof value === 'number' ? 'span 1' : 'span 2',
         }"
       >
-        <dt>{{ startCase(repositoryProp) }}</dt>
-        <dd v-if="typeof repositoryValue === 'number'">
-          {{ format(repositoryValue, true) }}
+        <dt>{{ startCase(key) }}</dt>
+        <dd v-if="typeof value === 'number'">
+          {{ format(value, true) }}
         </dd>
         <dd v-else class="mini-table">
           <template
-            v-for="([entryName, entryCount], entryIndex) of Object.entries(
-              repositoryValue,
-            ).slice(0, 5)"
-            :key="entryIndex"
+            v-for="([key, _value], index) of Object.entries(value).slice(0, 5)"
+            :key="index"
           >
-            <span>{{ entryName || "none" }}</span>
+            <span>{{ key || "none" }}</span>
             <span>
-              {{
-                format(
-                  repositoryProp === "languages"
-                    ? bytes(entryCount)
-                    : entryCount,
-                  true,
-                )
-              }}
+              {{ format(key === "languages" ? bytes(_value) : _value, true) }}
             </span>
           </template>
         </dd>
@@ -210,8 +199,8 @@
 
     <div class="charts">
       <template
-        v-for="(data, metric, key) in analyticsOverview?.overTime"
-        :key="key"
+        v-for="(data, metric, index) in analyticsOverview?.overTime"
+        :key="index"
       >
         <AppTimeChart
           :title="startCase(metric)"
@@ -227,31 +216,29 @@
     <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
     <dl class="details">
-      <div
-        v-for="(topValue, topKey) in omit(analyticsOverview, 'overTime')"
-        :key="topKey"
+      <template
+        v-for="(metrics, dimension) in omit(analyticsOverview, 'overTime')"
+        :key="dimension"
       >
-        <template
-          v-if="typeof topValue === 'object' && 'byEngagedSessions' in topValue"
-        >
-          <dt>Top {{ topKey.replace("top", "") }}</dt>
+        <div v-if="typeof metrics === 'object' && 'engagedSessions' in metrics">
+          <dt>{{ startCase(dimension) }}</dt>
           <dd class="mini-table">
             <template
-              v-for="[byKey, byValue] in Object.entries(
-                topValue.byEngagedSessions,
+              v-for="[key, value] in Object.entries(
+                metrics.engagedSessions,
               ).slice(0, 5)"
-              :key="byKey"
+              :key="key"
             >
               <span>
-                {{ byKey }}
+                {{ key || "none" }}
               </span>
               <span>
-                {{ format(byValue, true) }}
+                {{ format(value, true) }}
               </span>
             </template>
           </dd>
-        </template>
-      </div>
+        </div>
+      </template>
     </dl>
   </section>
 </template>

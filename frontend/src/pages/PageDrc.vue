@@ -4,8 +4,8 @@
   </section>
 
   <template
-    v-for="([label, { count, size, types }], key) in overview"
-    :key="key"
+    v-for="([label, { count, size, types }], index) in overview"
+    :key="index"
   >
     <section class="narrow">
       <AppHeading level="2">{{ label }}</AppHeading>

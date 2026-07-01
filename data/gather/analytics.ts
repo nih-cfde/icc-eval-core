@@ -1,17 +1,11 @@
 import { eachDayOfInterval, format, max, min } from "date-fns";
-import { orderBy, sumBy, uniq, uniqBy, upperFirst } from "lodash-es";
+import { orderBy, sumBy, uniq, uniqBy } from "lodash-es";
 import {
   getCoreProject,
+  getDimension,
   getEvents,
   getOverTime,
   getProperties,
-  getTopCities,
-  getTopContinents,
-  getTopCountries,
-  getTopDevices,
-  getTopLanguages,
-  getTopOSes,
-  getTopRegions,
 } from "@/api/google-analytics";
 import { log } from "@/util/log";
 import { settled } from "@/util/misc";
@@ -40,35 +34,35 @@ export const getAnalytics = async () => {
       const coreProject = await getCoreProject(property);
       log(`${displayName} - Over time`, "secondary", 1);
       const overTime = await getOverTime(property);
-      log(`${displayName} - Top continents`, "secondary", 1);
-      const topContinents = await getTopContinents(property);
-      log(`${displayName} - Top countries`, "secondary", 1);
-      const topCountries = await getTopCountries(property);
-      log(`${displayName} - Top regions`, "secondary", 1);
-      const topRegions = await getTopRegions(property);
-      log(`${displayName} - Top cities`, "secondary", 1);
-      const topCities = await getTopCities(property);
-      log(`${displayName} - Top languages`, "secondary", 1);
-      const topLanguages = await getTopLanguages(property);
-      log(`${displayName} - Top devices`, "secondary", 1);
-      const topDevices = await getTopDevices(property);
-      log(`${displayName} - Top OSes`, "secondary", 1);
-      const topOSes = await getTopOSes(property);
+      log(`${displayName} - Continents`, "secondary", 1);
+      const continents = await getDimension(property, "continent");
+      log(`${displayName} - Countries`, "secondary", 1);
+      const countries = await getDimension(property, "country");
+      log(`${displayName} - Regions`, "secondary", 1);
+      const regions = await getDimension(property, "region");
+      log(`${displayName} - Cities`, "secondary", 1);
+      const cities = await getDimension(property, "city");
+      log(`${displayName} - Languages`, "secondary", 1);
+      const languages = await getDimension(property, "language");
+      log(`${displayName} - Devices`, "secondary", 1);
+      const devices = await getDimension(property, "deviceCategory");
+      log(`${displayName} - Operating systems`, "secondary", 1);
+      const operatingSystems = await getDimension(property, "operatingSystem");
       log(`${displayName} - Page views`, "secondary", 1);
-      const pageViews = await getEvents(property);
+      const pageViews = await getEvents(property, "page_view");
 
       return {
         property,
         propertyName: displayName,
         coreProject,
         overTime,
-        topContinents,
-        topCountries,
-        topRegions,
-        topCities,
-        topLanguages,
-        topDevices,
-        topOSes,
+        continents,
+        countries,
+        regions,
+        cities,
+        languages,
+        devices,
+        operatingSystems,
         pageViews,
       };
     },
@@ -81,53 +75,62 @@ export const getAnalytics = async () => {
 
   if (errors.length) log(`${count(errors)} errors`, "error");
 
-  /** map "over time" data */
+  /** map time data */
   const mapOverTime = (reports: Awaited<ReturnType<typeof getOverTime>>) => {
-    /** extract salient props */
-    const report = reports[0];
-    const { metricHeaders, rows } = report ?? {};
+    /** separate reports */
+    const [activeUsers, newUsers, returningUsers, engagedSessions] = reports;
 
-    if (!report || !metricHeaders || !rows)
+    if (!activeUsers || !newUsers || !returningUsers || !engagedSessions)
       throw Error("No analytics report response");
 
-    /** get uniq list of metric keys */
-    const metricKeys = uniq(
-      metricHeaders.map((header) => header.name ?? "").flat(),
-    );
+    /** transform one report */
+    const mapReport = (report: Awaited<ReturnType<typeof getOverTime>>[0]) =>
+      Object.fromEntries(
+        report.rows
+          ?.map((row) => [
+            /** date */
+            (row.dimensionValues?.[0]?.value ?? "").replace(
+              /(\d\d\d\d)(\d\d)(\d\d)/,
+              "$1-$2-$3",
+            ),
+            /** value */
+            Number(row.metricValues?.[0]?.value ?? ""),
+          ])
+          .filter(([, value]) => value) ?? [],
+      );
 
-    return Object.fromEntries(
-      metricKeys.map((metric, index) => [
-        metric,
-        Object.fromEntries(
-          rows
-            .map((row) => [
-              /** date */
-              (row.dimensionValues?.[0]?.value ?? "").replace(
-                /(\d\d\d\d)(\d\d)(\d\d)/,
-                "$1-$2-$3",
-              ),
-              /** value */
-              Number(row.metricValues?.[index]?.value ?? ""),
-            ])
-            .filter(([, value]) => value),
-        ),
-      ]),
-    );
+    return {
+      activeUsers: mapReport(activeUsers),
+      newUsers: mapReport(newUsers),
+      returningUsers: mapReport(returningUsers),
+      engagedSessions: mapReport(engagedSessions),
+    };
   };
 
-  /** map "top dimension" data */
-  const mapTop = (reports: Awaited<ReturnType<typeof getTopRegions>>) =>
-    Object.fromEntries(
-      reports.map((report) => [
-        `by${upperFirst(report.metricHeaders?.[0]?.name ?? "")}`,
-        Object.fromEntries(
-          report.rows?.map((row) => [
-            row.dimensionValues?.[0]?.value ?? "",
-            Number(row.metricValues?.[0]?.value) || 0,
-          ]) ?? [],
-        ),
-      ]) ?? [],
-    );
+  /** map dimension data */
+  const mapDimension = (reports: Awaited<ReturnType<typeof getDimension>>) => {
+    /** separate reports */
+    const [activeUsers, newUsers, returningUsers, engagedSessions] = reports;
+
+    if (!activeUsers || !newUsers || !returningUsers || !engagedSessions)
+      throw Error("No analytics report response");
+
+    /** transform one report */
+    const mapReport = (report: Awaited<ReturnType<typeof getDimension>>[0]) =>
+      Object.fromEntries(
+        report.rows?.map((row) => [
+          row.dimensionValues?.[0]?.value ?? "",
+          Number(row.metricValues?.[0]?.value) || 0,
+        ]) ?? [],
+      );
+
+    return {
+      activeUsers: mapReport(activeUsers),
+      newUsers: mapReport(newUsers),
+      returningUsers: mapReport(returningUsers),
+      engagedSessions: mapReport(engagedSessions),
+    };
+  };
 
   /** map event data */
   const mapEvents = (reports: Awaited<ReturnType<typeof getEvents>>) => {
@@ -137,6 +140,7 @@ export const getAnalytics = async () => {
     if (!activeUsers || !newUsers || !returningUsers)
       throw Error("No analytics report response");
 
+    /** transform one report */
     const mapReport = (report: Awaited<ReturnType<typeof getEvents>>[0]) => {
       /** breakdown of event counts by page */
       const events: { total: number } & Record<string, number> = { total: 0 };
@@ -159,9 +163,9 @@ export const getAnalytics = async () => {
     };
 
     return {
-      byActiveUsers: mapReport(activeUsers),
-      byNewUsers: mapReport(newUsers),
-      byReturningUsers: mapReport(returningUsers),
+      activeUsers: mapReport(activeUsers),
+      newUsers: mapReport(newUsers),
+      returningUsers: mapReport(returningUsers),
     };
   };
 
@@ -172,26 +176,26 @@ export const getAnalytics = async () => {
       propertyName,
       coreProject,
       overTime,
-      topContinents,
-      topCountries,
-      topRegions,
-      topCities,
-      topLanguages,
-      topDevices,
-      topOSes,
+      continents,
+      countries,
+      regions,
+      cities,
+      languages,
+      devices,
+      operatingSystems,
       pageViews,
     }) => ({
       property,
       propertyName: propertyName ?? "",
       coreProject: coreProject ?? "",
       overTime: mapOverTime(overTime),
-      topContinents: mapTop(topContinents),
-      topCountries: mapTop(topCountries),
-      topRegions: mapTop(topRegions),
-      topCities: mapTop(topCities),
-      topLanguages: mapTop(topLanguages),
-      topDevices: mapTop(topDevices),
-      topOSes: mapTop(topOSes),
+      continents: mapDimension(continents),
+      countries: mapDimension(countries),
+      regions: mapDimension(regions),
+      cities: mapDimension(cities),
+      languages: mapDimension(languages),
+      devices: mapDimension(devices),
+      operatingSystems: mapDimension(operatingSystems),
       pageViews: mapEvents(pageViews),
     }),
   );
@@ -217,14 +221,10 @@ export const getAnalyticsOverview = async (
     end: max(allDates),
   }).map((date) => format(date, "yyyy-MM-dd"));
 
-  const metrics = [
-    "activeUsers",
-    "newUsers",
-    "returningUsers",
-    "engagedSessions",
-  ] as const;
   const overTime = Object.fromEntries(
-    metrics.map((metric) => {
+    (
+      ["activeUsers", "newUsers", "returningUsers", "engagedSessions"] as const
+    ).map((metric) => {
       const datesTotaled = Object.fromEntries(
         dates.map((date) => {
           const total = sumBy(
@@ -238,25 +238,27 @@ export const getAnalyticsOverview = async (
     }),
   );
 
-  const topFields = [
-    "topContinents",
-    "topCountries",
-    "topRegions",
-    "topCities",
-    "topLanguages",
-    "topDevices",
-    "topOSes",
-  ] as const;
-  const topMetrics = [
-    "byActiveUsers",
-    "byNewUsers",
-    "byReturningUsers",
-    "byEngagedSessions",
-  ] as const;
   const tops = Object.fromEntries(
-    topFields.map((field) => {
+    (
+      [
+        "continents",
+        "countries",
+        "regions",
+        "cities",
+        "languages",
+        "devices",
+        "operatingSystems",
+      ] as const
+    ).map((field) => {
       const fieldTotaled = Object.fromEntries(
-        topMetrics.map((metric) => {
+        (
+          [
+            "activeUsers",
+            "newUsers",
+            "returningUsers",
+            "engagedSessions",
+          ] as const
+        ).map((metric) => {
           const keys = uniq(
             analytics
               .map((analytic) => Object.keys(analytic[field][metric] ?? {}))
