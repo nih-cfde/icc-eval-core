@@ -4,10 +4,12 @@
     "install-playwright": "bunx playwright install chromium --with-deps",
     "gather": "bun ./gather.ts",
     "lint": "eslint . --fix",
+    "format": "prettier --write .",
     "test:lint": "eslint .",
+    "test:format": "prettier --check .",
     "test:types": "tsc --noEmit",
     "test:e2e": "playwright test",
-    "test": "bun run test:lint && bun run test:types && bun run test:e2e",
+    "test": "bun run test:lint && bun run test:format && bun run test:types && bun run test:e2e",
     "clean": "rm -rf node_modules bun.lock && bun pm cache rm"
   },
   "dependencies": {
@@ -22,8 +24,7 @@
     "nodejs-file-downloader": "^4.13.0",
     "octokit": "^5.0.5",
     "p-settle": "^5.2.1",
-    "pdfjs-dist": "5.7.284",
-    "prettier": "3.8.3"
+    "pdfjs-dist": "5.7.284"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -34,6 +35,7 @@
     "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "3.8.3",
     "prettier-plugin-jsdoc": "^1.8.0",
     "type-fest": "^5.6.0",
     "typescript": "^6.0.3",

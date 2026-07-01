@@ -216,7 +216,8 @@
         </dd>
         <dt>PR</dt>
         <dd>
-          "Pull request", a draft change (new feature, bug fix, etc.) to a repo.
+          "Pull request", a draft change (new feature, bug fix, etc.) to a
+          repository.
         </dd>
         <dt>Closed/Open</dt>
         <dd>Resolved/unresolved.</dd>
@@ -584,7 +585,7 @@ const topAnalytics = computed(() => {
   return total;
 });
 
-/** repo table column definitions */
+/** repository table column definitions */
 const repositoryColumns: Cols<NonNullable<typeof repositories.value>> = [
   {
     slot: "owner",

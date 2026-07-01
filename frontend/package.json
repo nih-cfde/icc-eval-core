@@ -5,9 +5,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
+    "format": "prettier --write .",
     "test:lint": "eslint .",
+    "test:format": "prettier --check .",
     "test:types": "vue-tsc",
-    "test": "bun run test:lint && bun run test:types",
+    "test": "bun run test:lint && bun run test:format && bun run test:types",
     "clean": "rm -rf node_modules bun.lock && bun pm cache rm"
   },
   "dependencies": {
@@ -38,6 +40,7 @@
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-vue": "^10.9.1",
     "postcss": "^8.5.14",
+    "prettier": "3.8.3",
     "prettier-plugin-css-order": "^2.2.0",
     "prettier-plugin-jsdoc": "^1.8.0",
     "type-fest": "^5.6.0",

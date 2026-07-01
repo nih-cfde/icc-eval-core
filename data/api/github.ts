@@ -46,14 +46,14 @@ try {
 /** increase page size */
 octokit.request = octokit.request.defaults({ per_page: 100 });
 
-/** search for repos that have topic */
+/** search for repositories that have topic */
 export const searchRepositories = memoize(async (topic: string) => {
   const repositories = await octokit.paginate(octokit.rest.search.repos, {
     q: `topic:${topic}`,
   });
 
-  /** if flag set, get all other repos in org */
-  const orgRepositories = (
+  /** if flag set, get all other repositories in organization */
+  const organizationRepositories = (
     await Promise.all(
       uniq(
         repositories
@@ -66,26 +66,26 @@ export const searchRepositories = memoize(async (topic: string) => {
   ).flat();
 
   return uniqBy(
-    [...repositories, ...orgRepositories],
+    [...repositories, ...organizationRepositories],
     (repository) => repository.id,
   );
 });
 
 /**
- * get all top-level details for repo. returns everything that repo search
- * returns, plus extra fields, including subscribers_count (watchers).
+ * get all top-level details for repository. returns everything that repository
+ * search returns, plus extra fields, including subscribers_count (watchers).
  */
 export const getRepository = memoize(
   async (owner: string, repo: string) =>
     (await octokit.rest.repos.get({ owner, repo })).data,
 );
 
-/** get commits for repo */
+/** get commits for repository */
 export const getCommits = memoize((owner: string, repo: string) =>
   octokit.paginate(octokit.rest.repos.listCommits, { owner, repo }),
 );
 
-/** get stars for repo */
+/** get stars for repository */
 export const getStars = memoize((owner: string, repo: string) =>
   octokit.paginate(octokit.rest.activity.listStargazersForRepo, {
     owner,
@@ -100,12 +100,12 @@ export const getStars = memoize((owner: string, repo: string) =>
  * https://stackoverflow.com/questions/71090557/github-api-number-of-watch-over-time
  */
 
-/** get forks for repo */
+/** get forks for repository */
 export const getForks = memoize((owner: string, repo: string) =>
   octokit.paginate(octokit.rest.repos.listForks, { owner, repo }),
 );
 
-/** get issues for repo */
+/** get issues for repository */
 export const getIssues = memoize(async (owner: string, repo: string) =>
   (
     await octokit.paginate(octokit.rest.issues.listForRepo, {
@@ -116,7 +116,7 @@ export const getIssues = memoize(async (owner: string, repo: string) =>
   ).filter((issue) => !issue.pull_request),
 );
 
-/** get pull requests for repo */
+/** get pull requests for repository */
 export const getPullRequests = memoize(
   async (owner: string, repo: string) =>
     await octokit.paginate(octokit.rest.pulls.list, {
@@ -126,7 +126,7 @@ export const getPullRequests = memoize(
     }),
 );
 
-/** check if repo has readme */
+/** check if repository has readme */
 export const hasReadme = memoize(async (owner: string, repo: string) => {
   try {
     await octokit.rest.repos.getReadme({ owner, repo });
@@ -142,7 +142,7 @@ export const hasReadme = memoize(async (owner: string, repo: string) => {
   }
 });
 
-/** check whether file exists in repo */
+/** check whether file exists in repository */
 export const fileExists = memoize(
   async (owner: string, repo: string, path: string) => {
     try {
@@ -161,7 +161,7 @@ export const fileExists = memoize(
   },
 );
 
-/** get contributors to repo */
+/** get contributors to repository */
 export const getContributors = memoize((owner: string, repo: string) =>
   octokit.paginate(octokit.rest.repos.listContributors, {
     owner,
@@ -169,7 +169,7 @@ export const getContributors = memoize((owner: string, repo: string) =>
   }),
 );
 
-/** get programming languages used in repo */
+/** get programming languages used in repository */
 export const getLanguages = memoize(
   async (owner: string, repo: string) =>
     (await octokit.rest.repos.listLanguages({ owner, repo })).data,

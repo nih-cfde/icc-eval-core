@@ -157,7 +157,7 @@ export const getAnalyticsOverview = () =>
     ? analyticsOverview
     : request<typeof analyticsOverview>("analytics-overview");
 
-/** get repo data from api */
+/** get repository data from api */
 export const getRepositories = async (coreProject?: string) => {
   const data = mock
     ? repositories
@@ -167,16 +167,16 @@ export const getRepositories = async (coreProject?: string) => {
         coreProject,
       });
   if (data === notAuthed) return notAuthed;
-  return data.map((repo) => ({
-    ...repo,
+  return data.map((repository) => ({
+    ...repository,
     /** derive extra props */
-    modified: new Date(repo.modified),
-    dependencyTotal: sum(Object.values(repo.dependencies)),
-    ...repo.dependencies,
+    modified: new Date(repository.modified),
+    dependencyTotal: sum(Object.values(repository.dependencies)),
+    ...repository.dependencies,
   }));
 };
 
-/** get repo overview data from api */
+/** get repository overview data from api */
 export const getRepositoriesOverview = () =>
   mock
     ? repositoriesOverview
@@ -241,14 +241,14 @@ export const useAnalyticsOverview = () =>
     queryFn: getAnalyticsOverview,
   });
 
-/** load and use repo data */
+/** load and use repository data */
 export const useRepositories = (coreProject?: Ref<string | undefined>) =>
   useQuery({
     queryKey: ["getRepositories", coreProject],
     queryFn: () => getRepositories(coreProject?.value),
   });
 
-/** load and use repo overview data */
+/** load and use repository overview data */
 export const useRepositoriesOverview = () =>
   useQuery({
     queryKey: ["getRepositoriesOverview"],

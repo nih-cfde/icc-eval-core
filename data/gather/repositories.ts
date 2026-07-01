@@ -17,42 +17,48 @@ import { log } from "@/util/log";
 import { settled } from "@/util/misc";
 import { count } from "@/util/string";
 
-/** get github repos associated with core projects */
+/** get github repositories associated with core projects */
 export const getRepositories = async (coreProjects: string[]) => {
   /** de-dupe */
   coreProjects = uniq(coreProjects);
 
-  log(`Getting repos for ${count(coreProjects)} core projects`);
+  log(`Getting repositories for ${count(coreProjects)} core projects`);
 
   /**
-   * search for all repos tagged with core project number. gets base, top-level
-   * details.
+   * search for all repositories tagged with core project number. gets base,
+   * top-level details.
    */
   const [repoResults] = await settled(coreProjects, async (coreProject) => {
-    log(`Searching for repos tagged with "${coreProject}"`, "secondary", 1);
-    return (await searchRepositories(coreProject)).map((repo) => ({
-      owner: repo.owner?.login ?? "",
-      name: repo.name,
-      id: repo.id,
+    log(
+      `Searching for repositories tagged with "${coreProject}"`,
+      "secondary",
+      1,
+    );
+    return (await searchRepositories(coreProject)).map((repository) => ({
+      owner: repository.owner?.login ?? "",
+      name: repository.name,
+      id: repository.id,
       coreProject,
     }));
   });
 
   /** flatten */
-  let repos = repoResults.flat();
+  let repositories = repoResults.flat();
 
   /** de-dupe */
-  repos = uniqBy(repos, (repo) => repo.id);
+  repositories = uniqBy(repositories, (repository) => repository.id);
 
-  repos.forEach(({ owner, name }) => log(`${owner}/${name}`, "secondary", 1));
+  repositories.forEach(({ owner, name }) =>
+    log(`${owner}/${name}`, "secondary", 1),
+  );
 
-  log(`Getting details for ${count(repos)} repos`);
+  log(`Getting details for ${count(repositories)} repositories`);
 
   const [repoDetails, errors] = await settled(
-    repos,
+    repositories,
     async ({ owner, name, coreProject }) => {
       const label = `${owner}/${name}`;
-      const repo = await getRepository(owner, name);
+      const repository = await getRepository(owner, name);
       log(`${label} - Stars`, "secondary", 1);
       const stars = await getStars(owner, name);
       log(`${label} - Forks`, "secondary", 1);
@@ -75,7 +81,7 @@ export const getRepositories = async (coreProjects: string[]) => {
       const dependencies = await getDependencies(owner, name);
 
       return {
-        ...repo,
+        ...repository,
         coreProject,
         stars,
         forks,
@@ -92,7 +98,7 @@ export const getRepositories = async (coreProjects: string[]) => {
   );
 
   errors.forEach((error, index) => {
-    const { owner = "", name = "" } = repos[index] ?? {};
+    const { owner = "", name = "" } = repositories[index] ?? {};
     log(`${owner}/${name}`, "secondary", 1);
     log(error, "warn", 2);
   });
@@ -127,51 +133,52 @@ export const getRepositories = async (coreProjects: string[]) => {
     ) || 0;
 
   /** transform data into desired format, with fallbacks */
-  const transformed = repoDetails.map((repo) => ({
-    coreProject: repo.coreProject,
-    id: repo.id,
-    owner: repo.owner?.login ?? "",
-    name: repo.name,
-    description: repo.description ?? "",
-    topics: (repo.topics ?? []).filter(
-      (topic) => !topic.match(new RegExp(repo.coreProject, "i")),
+  const transformed = repoDetails.map((repository) => ({
+    coreProject: repository.coreProject,
+    id: repository.id,
+    owner: repository.owner?.login ?? "",
+    name: repository.name,
+    description: repository.description ?? "",
+    topics: (repository.topics ?? []).filter(
+      (topic) => !topic.match(new RegExp(repository.coreProject, "i")),
     ),
-    created: repo.created_at,
-    modified: repo.pushed_at,
-    stars: repo.stars.map((star) => ({ date: star.starred_at ?? "" })),
-    forks: repo.forks.map((fork) => ({ date: fork.created_at ?? "" })),
-    watchers: repo.subscribers_count,
-    commits: repo.commits.map((commit) => ({
+    created: repository.created_at,
+    modified: repository.pushed_at,
+    stars: repository.stars.map((star) => ({ date: star.starred_at ?? "" })),
+    forks: repository.forks.map((fork) => ({ date: fork.created_at ?? "" })),
+    watchers: repository.subscribers_count,
+    commits: repository.commits.map((commit) => ({
       date: commit.commit?.committer?.date ?? "",
     })),
-    issues: repo.issues.map(mapIssue),
-    openIssues: repo.issues.filter((issue) => issue.state === "open").length,
-    closedIssues: repo.issues.filter((issue) => issue.state === "closed")
+    issues: repository.issues.map(mapIssue),
+    openIssues: repository.issues.filter((issue) => issue.state === "open")
       .length,
-    issueTimeOpen: getOpenTime(repo.issues),
-    pullRequests: repo.pullRequests.map(mapIssue),
-    openPullRequests: repo.pullRequests.filter(
+    closedIssues: repository.issues.filter((issue) => issue.state === "closed")
+      .length,
+    issueTimeOpen: getOpenTime(repository.issues),
+    pullRequests: repository.pullRequests.map(mapIssue),
+    openPullRequests: repository.pullRequests.filter(
       (pullRequest) => pullRequest.state === "open",
     ).length,
-    closedPullRequests: repo.pullRequests.filter(
+    closedPullRequests: repository.pullRequests.filter(
       (pullRequest) => pullRequest.state === "closed",
     ).length,
-    pullRequestTimeOpen: getOpenTime(repo.pullRequests),
-    readme: repo.readme,
-    contributing: repo.contributing,
-    codeOfConduct: !!repo.code_of_conduct,
-    license: repo.license?.name ?? "",
-    contributors: repo.contributors.map((contributor) => ({
+    pullRequestTimeOpen: getOpenTime(repository.pullRequests),
+    readme: repository.readme,
+    contributing: repository.contributing,
+    codeOfConduct: !!repository.code_of_conduct,
+    license: repository.license?.name ?? "",
+    contributors: repository.contributors.map((contributor) => ({
       name: contributor.login ?? contributor.name ?? "",
       contributions: contributor.contributions,
     })),
     languages: orderBy(
-      toPairs(repo.languages).map(([name, bytes]) => ({ name, bytes })),
+      toPairs(repository.languages).map(([name, bytes]) => ({ name, bytes })),
       ({ bytes }) => bytes,
       "desc",
     ),
     dependencies: Object.fromEntries(
-      repo.dependencies.repository.dependencyGraphManifests?.nodes?.map(
+      repository.dependencies.repository.dependencyGraphManifests?.nodes?.map(
         (node) => [
           /** get manifest file path: /OWNER/REPO/blob/BRANCH/PATH-TO-FILE */
           (node?.blobPath ?? "").split("/").slice(5).join("/"),
@@ -182,35 +189,43 @@ export const getRepositories = async (coreProjects: string[]) => {
     ),
   }));
 
-  log(`${count(transformed)} repos`, "success");
+  log(`${count(transformed)} repositories`, "success");
 
   return transformed;
 };
 
-/** aggregate various stats for all repos */
+/** aggregate various stats for all repositories */
 export const getRepositoriesOverview = (
-  repos: Awaited<ReturnType<typeof getRepositories>>,
+  repositories: Awaited<ReturnType<typeof getRepositories>>,
 ) => ({
-  repos: repos.length,
-  stars: sumBy(repos, (repo) => repo.stars.length),
-  forks: sumBy(repos, (repo) => repo.forks.length),
-  watchers: sumBy(repos, (repo) => repo.watchers ?? 0),
-  commits: sumBy(repos, (repo) => repo.commits.length),
-  openIssues: sumBy(repos, (repo) => repo.openIssues),
-  closedIssues: sumBy(repos, (repo) => repo.closedIssues),
-  openPullRequests: sumBy(repos, (repo) => repo.openPullRequests),
-  closedPullRequests: sumBy(repos, (repo) => repo.closedPullRequests),
-  readme: repos.filter((repo) => repo.readme).length,
-  contributing: repos.filter((repo) => repo.contributing).length,
-  codeOfConduct: repos.filter((repo) => repo.codeOfConduct).length,
+  repositories: repositories.length,
+  stars: sumBy(repositories, (repository) => repository.stars.length),
+  forks: sumBy(repositories, (repository) => repository.forks.length),
+  watchers: sumBy(repositories, (repository) => repository.watchers ?? 0),
+  commits: sumBy(repositories, (repository) => repository.commits.length),
+  openIssues: sumBy(repositories, (repository) => repository.openIssues),
+  closedIssues: sumBy(repositories, (repository) => repository.closedIssues),
+  openPullRequests: sumBy(
+    repositories,
+    (repository) => repository.openPullRequests,
+  ),
+  closedPullRequests: sumBy(
+    repositories,
+    (repository) => repository.closedPullRequests,
+  ),
+  readme: repositories.filter((repository) => repository.readme).length,
+  contributing: repositories.filter((repository) => repository.contributing)
+    .length,
+  codeOfConduct: repositories.filter((repository) => repository.codeOfConduct)
+    .length,
   contributors: new Set(
-    repos
+    repositories
       .map(({ contributors }) => contributors.map(({ name }) => name))
       .flat(),
   ).size,
   licenses: (() => {
     const counts: Record<string, number> = {};
-    for (const { license } of repos)
+    for (const { license } of repositories)
       counts[license] = (counts[license] ?? 0) + 1;
     return Object.fromEntries(
       orderBy(Object.entries(counts), ([, count]) => count, "desc"),
@@ -218,7 +233,7 @@ export const getRepositoriesOverview = (
   })(),
   languages: (() => {
     const counts: Record<string, number> = {};
-    for (const { languages } of repos)
+    for (const { languages } of repositories)
       for (const { name, bytes } of languages)
         counts[name] = (counts[name] ?? 0) + bytes;
     return Object.fromEntries(
