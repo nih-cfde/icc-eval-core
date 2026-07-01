@@ -56,8 +56,6 @@ export const getAnalytics = async () => {
       const topOSes = await getTopOSes(property);
       log(`${displayName} - Page views`, "secondary", 1);
       const pageViews = await getEvents(property);
-      log(`${displayName} - Scroll events`, "secondary", 1);
-      const scrollEvents = await getEvents(property, "scroll");
 
       return {
         property,
@@ -72,7 +70,6 @@ export const getAnalytics = async () => {
         topDevices,
         topOSes,
         pageViews,
-        scrollEvents,
       };
     },
   );
@@ -83,20 +80,6 @@ export const getAnalytics = async () => {
   });
 
   if (errors.length) log(`${count(errors)} errors`, "error");
-
-  /** map "top dimension" data */
-  const mapTop = (reports: Awaited<ReturnType<typeof getTopRegions>>) =>
-    Object.fromEntries(
-      reports.map((report) => [
-        `by${upperFirst(report.metricHeaders?.[0]?.name ?? "")}`,
-        Object.fromEntries(
-          report.rows?.map((row) => [
-            row.dimensionValues?.[0]?.value ?? "",
-            Number(row.metricValues?.[0]?.value) || 0,
-          ]) ?? [],
-        ),
-      ]) ?? [],
-    );
 
   /** map "over time" data */
   const mapOverTime = (reports: Awaited<ReturnType<typeof getOverTime>>) => {
@@ -132,29 +115,54 @@ export const getAnalytics = async () => {
     );
   };
 
-  /** map event data */
-  const mapEvents = (reports: Awaited<ReturnType<typeof getEvents>>) => {
-    const report = reports[0];
-    if (!report) throw Error("No analytics report response");
-
-    /** breakdown of event counts by page */
-    const events: { total: number } & Record<string, number> = { total: 0 };
-
-    /** for each page */
-    for (const row of report?.rows ?? []) {
-      const page = row.dimensionValues?.[0]?.value ?? "";
-      /** count events */
-      const count = parseInt(row.metricValues?.[0]?.value ?? "0");
-      events[page] = count;
-      events.total += count;
-    }
-
-    /** sort highest counts first */
-    const sorted = Object.fromEntries(
-      orderBy(Object.entries(events), ([, count]) => count, "desc"),
+  /** map "top dimension" data */
+  const mapTop = (reports: Awaited<ReturnType<typeof getTopRegions>>) =>
+    Object.fromEntries(
+      reports.map((report) => [
+        `by${upperFirst(report.metricHeaders?.[0]?.name ?? "")}`,
+        Object.fromEntries(
+          report.rows?.map((row) => [
+            row.dimensionValues?.[0]?.value ?? "",
+            Number(row.metricValues?.[0]?.value) || 0,
+          ]) ?? [],
+        ),
+      ]) ?? [],
     );
 
-    return sorted;
+  /** map event data */
+  const mapEvents = (reports: Awaited<ReturnType<typeof getEvents>>) => {
+    /** separate reports */
+    const [activeUsers, newUsers, returningUsers] = reports;
+
+    if (!activeUsers || !newUsers || !returningUsers)
+      throw Error("No analytics report response");
+
+    const mapReport = (report: Awaited<ReturnType<typeof getEvents>>[0]) => {
+      /** breakdown of event counts by page */
+      const events: { total: number } & Record<string, number> = { total: 0 };
+
+      /** for each page */
+      for (const row of report?.rows ?? []) {
+        const page = row.dimensionValues?.[0]?.value ?? "";
+        /** count events */
+        const count = parseInt(row.metricValues?.[0]?.value ?? "0");
+        events[page] = count;
+        events.total += count;
+      }
+
+      /** sort highest counts first */
+      const sorted = Object.fromEntries(
+        orderBy(Object.entries(events), ([, count]) => count, "desc"),
+      );
+
+      return sorted;
+    };
+
+    return {
+      byActiveUsers: mapReport(activeUsers),
+      byNewUsers: mapReport(newUsers),
+      byReturningUsers: mapReport(returningUsers),
+    };
   };
 
   /** transform data into desired format, with fallbacks */
@@ -172,7 +180,6 @@ export const getAnalytics = async () => {
       topDevices,
       topOSes,
       pageViews,
-      scrollEvents,
     }) => ({
       property,
       propertyName: propertyName ?? "",
@@ -186,7 +193,6 @@ export const getAnalytics = async () => {
       topDevices: mapTop(topDevices),
       topOSes: mapTop(topOSes),
       pageViews: mapEvents(pageViews),
-      scrollEvents: mapEvents(scrollEvents),
     }),
   );
 
@@ -211,7 +217,12 @@ export const getAnalyticsOverview = async (
     end: max(allDates),
   }).map((date) => format(date, "yyyy-MM-dd"));
 
-  const metrics = ["activeUsers", "newUsers", "engagedSessions"] as const;
+  const metrics = [
+    "activeUsers",
+    "newUsers",
+    "returningUsers",
+    "engagedSessions",
+  ] as const;
   const overTime = Object.fromEntries(
     metrics.map((metric) => {
       const datesTotaled = Object.fromEntries(
@@ -239,6 +250,7 @@ export const getAnalyticsOverview = async (
   const topMetrics = [
     "byActiveUsers",
     "byNewUsers",
+    "byReturningUsers",
     "byEngagedSessions",
   ] as const;
   const tops = Object.fromEntries(

@@ -204,7 +204,7 @@
         See this readme for how to add your repositories </a
       >.
     </strong>
-    
+
     <div class="col">
       <AppHeading level="3">Notes</AppHeading>
 

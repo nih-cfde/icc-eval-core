@@ -42,7 +42,7 @@ const request = async <Results>(
   const response = await window.fetch(url, options);
   /** if not authorized, fail gracefully */
   if (response.status === 401) return notAuthed;
-  if (!response.ok) throw new Error(`Response not OK`);
+  if (!response.ok) throw Error(`Response not OK`);
   event(`api_${endpoint}`, { params });
   /** paginated */
   if ("limit" in params)
