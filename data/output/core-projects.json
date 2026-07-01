@@ -107,8 +107,8 @@
     "id": "OT2OD037936",
     "name": "The CFDE Cloud Workspace",
     "activityCode": "OT2",
-    "projects": ["3OT2OD037936-01S1", "1OT2OD037936-01"],
-    "awardAmount": 4352171,
+    "projects": ["3OT2OD037936-01S1", "1OT2OD037936-01", "3OT2OD037936-01S2"],
+    "awardAmount": 4852171,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -245,10 +245,15 @@
   },
   {
     "id": "OT2OD036440",
-    "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to a diverse biomedical research community.",
+    "name": "The Common Fund Knowledge Center (CFKC): providing scientifically valid knowledge from the Common Fund Data Ecosystem to the biomedical research community",
     "activityCode": "OT2",
-    "projects": ["3OT2OD036440-01S2", "1OT2OD036440-01", "3OT2OD036440-01S1"],
-    "awardAmount": 7956517,
+    "projects": [
+      "3OT2OD036440-01S2",
+      "1OT2OD036440-01",
+      "3OT2OD036440-01S1",
+      "3OT2OD036440-01S3"
+    ],
+    "awardAmount": 8376517,
     "publications": 2,
     "repos": 0,
     "analytics": 0
@@ -287,8 +292,8 @@
     "id": "OT2OD037922",
     "name": "Fostering Meaningful Use of Common Fund Data",
     "activityCode": "OT2",
-    "projects": ["1OT2OD037922-01", "3OT2OD037922-01S1"],
-    "awardAmount": 4119781,
+    "projects": ["3OT2OD037922-01S2", "1OT2OD037922-01", "3OT2OD037922-01S1"],
+    "awardAmount": 5449767,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -367,8 +372,8 @@
     "id": "R25OD039835",
     "name": "Human Microbiome Data Discovery: A short course on unveiling microbial insights to human health through Common Fund Data",
     "activityCode": "R25",
-    "projects": ["1R25OD039835-01"],
-    "awardAmount": 256325,
+    "projects": ["4R25OD039835-02", "1R25OD039835-01"],
+    "awardAmount": 829259,
     "publications": 0,
     "repos": 0,
     "analytics": 0
@@ -412,8 +417,8 @@
       "3OT2OD030546-01S4",
       "4OT2OD030546-02",
       "3OT2OD030546-01S3",
-      "3OT2OD030546-01S1",
-      "1OT2OD030546-01"
+      "1OT2OD030546-01",
+      "3OT2OD030546-01S1"
     ],
     "awardAmount": 2810622,
     "publications": 5,
@@ -719,7 +724,7 @@
       "3OT2OD030162-01S4"
     ],
     "awardAmount": 10663836,
-    "publications": 2,
+    "publications": 1,
     "repos": 0,
     "analytics": 0
   },
@@ -781,8 +786,8 @@
       "3OT2OD030544-01S4",
       "3OT2OD030544-01S2",
       "1OT2OD030544-01",
-      "3OT2OD030544-01S3",
-      "3OT2OD030544-01S1"
+      "3OT2OD030544-01S1",
+      "3OT2OD030544-01S3"
     ],
     "awardAmount": 3229346,
     "publications": 96,
@@ -795,7 +800,7 @@
     "activityCode": "R03",
     "projects": ["1R03OD030600-01"],
     "awardAmount": 363306,
-    "publications": 1,
+    "publications": 2,
     "repos": 0,
     "analytics": 0
   },
