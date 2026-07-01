@@ -103,9 +103,9 @@ export const getRepositories = async (coreProjects: string[]) => {
     log(error, "warn", 2);
   });
 
-  type Repo = Exclude<(typeof repoDetails)[number], Error>;
-  type Issue = Repo["issues"][number];
-  type PullRequest = Repo["pullRequests"][number];
+  type Repository = Exclude<(typeof repoDetails)[number], Error>;
+  type Issue = Repository["issues"][number];
+  type PullRequest = Repository["pullRequests"][number];
 
   /** transform issue (or pull request, which gh considers sub-type of issue) */
   const mapIssue = (issue: Issue | PullRequest) => ({
