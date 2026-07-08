@@ -1,7 +1,18 @@
 volumes:
   caddy_data:
+  frontend_static:
 
 services:
+  frontend:
+    build: ./frontend/
+    command: sh -c "bun install && bun run build --emptyOutDir --outDir /tmp/dist && rm -rf /opt/frontend/* && mv /tmp/dist /opt/frontend"
+    volumes:
+      - frontend_static:/opt/frontend/
+    env_file:
+      - .env
+    depends_on:
+      - backend
+
   backend:
     environment:
       - DJANGO_DEBUG=0
@@ -17,6 +28,7 @@ services:
     env_file:
       - .env
     volumes:
+      - frontend_static:/opt/frontend/
       - django_static:/opt/static/
       - ./services/caddy/:/etc/caddy/
       - caddy_data:/data/
