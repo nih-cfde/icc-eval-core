@@ -141,13 +141,14 @@ class AnalyticsSerializer(serializers.ModelSerializer):
             'property_name',
             'core_project',
             'over_time',
-            'top_continents',
-            'top_countries',
-            'top_regions',
-            'top_cities',
-            'top_languages',
-            'top_devices',
-            'top_oses',
+            'continents',
+            'countries',
+            'regions',
+            'cities',
+            'languages',
+            'devices',
+            'operating_systems',
+            'page_views',
         ]
 
 

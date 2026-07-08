@@ -344,14 +344,15 @@ class Analytics(models.Model):
     # Time-series data
     over_time = models.JSONField(default=dict)
     
-    # Top metrics
-    top_continents = models.JSONField(default=dict)
-    top_countries = models.JSONField(default=dict)
-    top_regions = models.JSONField(default=dict)
-    top_cities = models.JSONField(default=dict)
-    top_languages = models.JSONField(default=dict)
-    top_devices = models.JSONField(default=dict)
-    top_oses = models.JSONField(default=dict)
+    # Dimension metrics
+    continents = models.JSONField(default=dict)
+    countries = models.JSONField(default=dict)
+    regions = models.JSONField(default=dict)
+    cities = models.JSONField(default=dict)
+    languages = models.JSONField(default=dict)
+    devices = models.JSONField(default=dict)
+    operating_systems = models.JSONField(default=dict)
+    page_views = models.JSONField(default=dict)
 
     class Meta:
         db_table = 'analytics'

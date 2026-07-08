@@ -148,7 +148,7 @@ class Command(BaseCommand):
                 if not os.path.exists(file_path):
                     raise FileNotFoundError('repos.json')
 
-        except FileNotFoundError as ex:
+        except FileNotFoundError:
             self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
             return
         
@@ -399,13 +399,14 @@ class Command(BaseCommand):
                         'property_name': item['propertyName'],
                         'core_project': core_project,
                         'over_time': item.get('overTime', {}),
-                        'top_continents': item.get('topContinents', {}),
-                        'top_countries': item.get('topCountries', {}),
-                        'top_regions': item.get('topRegions', {}),
-                        'top_cities': item.get('topCities', {}),
-                        'top_languages': item.get('topLanguages', {}),
-                        'top_devices': item.get('topDevices', {}),
-                        'top_oses': item.get('topOSes', {}),
+                        'continents': item.get('continents', item.get('topContinents', {})),
+                        'countries': item.get('countries', item.get('topCountries', {})),
+                        'regions': item.get('regions', item.get('topRegions', {})),
+                        'cities': item.get('cities', item.get('topCities', {})),
+                        'languages': item.get('languages', item.get('topLanguages', {})),
+                        'devices': item.get('devices', item.get('topDevices', {})),
+                        'operating_systems': item.get('operatingSystems', item.get('topOSes', {})),
+                        'page_views': item.get('pageViews', {}),
                     }
                 )
                 count += 1
