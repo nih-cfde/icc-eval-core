@@ -10,12 +10,20 @@
 }
 
 # Production (HTTPS + automatic certs)
-{$DOMAIN} {
+{$DOMAIN}, {$ALT_DOMAIN} {
+	@backend_paths {
+		path /api/* /admin/* /api-auth/* /accounts/*
+	}
 	handle_path /static/* {
 		root * /opt/static
 		file_server
 	}
-	handle {
+	handle @backend_paths {
 		reverse_proxy backend:8000
+	}
+	handle {
+		reverse_proxy https://cfde-eval.netlify.app {
+			header_up Host cfde-eval.netlify.app
+		}
 	}
 }
