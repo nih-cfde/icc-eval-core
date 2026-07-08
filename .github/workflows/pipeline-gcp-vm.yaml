@@ -45,7 +45,8 @@ jobs:
             fi
 
             echo "::group::Pipeline logs"
-            ./run_stack.sh --profile pipeline run --rm pipeline 2>&1 | tee pipeline.log
+            ./run_stack.sh --profile pipeline build --pull
+            ./run_stack.sh --profile pipeline run --rm -T pipeline 2>&1 | tee pipeline.log
             echo "::endgroup::"
           ) 200>"$LOCK_FILE"
 

@@ -26,9 +26,10 @@ services:
     profiles:
       - pipeline
     build: ./data/
-    command: bun run gather
+    command: /bin/bash -c 'bun install playwright ; bun run gather'
     volumes:
-      - ./data/:/data/
+      - ./data/output/:/data/output/
+      - ./data/.ga-credentials.json:/data/.ga-credentials.json:ro
     environment:
       - HEADLESS_BROWSER=true
     env_file:
