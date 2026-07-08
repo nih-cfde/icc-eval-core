@@ -5,11 +5,12 @@ WORKDIR /data
 # copy in package.json and bun.lock
 COPY package.json bun.lock ./
 
-# install playwright
-RUN bun run install-playwright
+# Install JS dependencies first
+RUN --mount=type=cache,target=/root/.bun/install/cache \
+    bun install --frozen-lockfile
 
-# install dependencies
-RUN bun install
+# Then install Playwright browsers and Linux dependencies
+RUN bunx playwright install --with-deps chromium
 
 # copy in app code
 COPY . .
