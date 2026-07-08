@@ -5,7 +5,7 @@ volumes:
 services:
   frontend:
     build: ./frontend/
-    command: sh -c "bun install && bun run build --emptyOutDir --outDir /tmp/dist && rm -rf /opt/frontend/* && mv /tmp/dist /opt/frontend"
+    command: sh -c "bun install && bun run build --emptyOutDir --outDir /tmp/dist && rm -rf /opt/frontend/* && mv /tmp/dist/* /opt/frontend/"
     volumes:
       - frontend_static:/opt/frontend/
     env_file:

@@ -4,15 +4,6 @@ volumes:
   django_static:
 
 services:
-  frontend:
-    build: ./frontend/
-    volumes:
-      - ./frontend/:/app/
-    env_file:
-      - .env
-    depends_on:
-      - backend
-
   backend:
     build: ./backend/
     volumes:

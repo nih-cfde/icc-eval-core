@@ -74,6 +74,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
     "http://127.0.0.1:5173",
+    "http://127.0.0.1:5175",
     "http://127.0.0.1:3000",
     "https://cfde-eval.netlify.app",
     "https://cfde-api.cu-dbmi.dev",
@@ -87,6 +88,7 @@ CORS_ALLOWED_ORIGIN_REGEXES = [
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:5173",
+    "http://localhost:5175",
     "http://127.0.0.1:3000",
     "https://cfde-eval.netlify.app",
     "https://cfde-api.cu-dbmi.dev",

@@ -7,12 +7,12 @@ services:
     environment:
       - DJANGO_DEBUG=1
       - ORCID_USE_SANDBOX=1
-      - FRONTEND_APP_URL=http://127.0.0.1:5173
+      - FRONTEND_APP_URL=http://127.0.0.1:5175
 
   frontend:
     build: ./frontend/
     ports:
-      - 5173:5173
+      - 5175:5173
     volumes:
       - ./frontend/src/:/app/src/
       - ./frontend/public/:/app/public/
