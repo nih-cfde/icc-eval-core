@@ -223,19 +223,57 @@ class DRCFile(models.Model):
     def __str__(self):
         return self.name
 
+class AnalyticsBreakdownBase(models.Model):
+    """
+    Represents breakdown of single analytics metric
+    """
+    active_users = models.JSONField(default=dict)
+    new_users = models.JSONField(default=dict)
+    returning_users = models.JSONField(default=dict)
+
+    class Meta:
+        abstract = True
+
+
+class AnalyticsBreakdownUsers(AnalyticsBreakdownBase):
+    """
+    Represents breakdown of single analytics metric by type of users
+    """
+
+    class Meta:
+        db_table = 'analytics_breakdown_users'
+        verbose_name_plural = 'Analytics Breakdown Users'
+
+    def __str__(self):
+        return f"AnalyticsBreakdownUsers {self.pk}"
+
+class AnalyticsBreakdownUsersEvents(AnalyticsBreakdownBase):
+    """
+    Represents breakdown of single analytics metric by type of users and events
+    """
+    engaged_sessions = models.JSONField(default=dict)
+
+    class Meta:
+        db_table = 'analytics_breakdown_users_events'
+        verbose_name_plural = 'Analytics Breakdown Users Events'
+
+    def __str__(self):
+        return f"AnalyticsBreakdownUsersEvents {self.pk}"
+
 
 class AnalyticsOverview(models.Model):
     """
     Represents aggregate analytics metrics from analytics-overview.json.
     """
-    over_time = models.JSONField(default=dict)
-    continents = models.JSONField(default=dict)
-    countries = models.JSONField(default=dict)
-    regions = models.JSONField(default=dict)
-    cities = models.JSONField(default=dict)
-    languages = models.JSONField(default=dict)
-    devices = models.JSONField(default=dict)
-    operatingSystems = models.JSONField(default=dict)
+    over_time = models.OneToOneField(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    continents = models.OneToOneField(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    countries = models.OneToOneField(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    regions = models.OneToOneField(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    cities = models.OneToOneField(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    languages = models.OneToOneField(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    devices = models.OneToOneField(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    operating_systems = models.OneToOneField(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    page_views = models.OneToOneField(AnalyticsBreakdownUsers, on_delete=models.CASCADE, related_name='+')
 
     class Meta:
         db_table = 'analytics_overview'
@@ -341,18 +379,15 @@ class Analytics(models.Model):
         null=True,
     )
     
-    # Time-series data
-    over_time = models.JSONField(default=dict)
-    
-    # Dimension metrics
-    continents = models.JSONField(default=dict)
-    countries = models.JSONField(default=dict)
-    regions = models.JSONField(default=dict)
-    cities = models.JSONField(default=dict)
-    languages = models.JSONField(default=dict)
-    devices = models.JSONField(default=dict)
-    operating_systems = models.JSONField(default=dict)
-    page_views = models.JSONField(default=dict)
+    over_time = models.ForeignKey(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    continents = models.ForeignKey(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    countries = models.ForeignKey(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    regions = models.ForeignKey(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    cities = models.ForeignKey(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    languages = models.ForeignKey(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    devices = models.ForeignKey(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    operating_systems = models.ForeignKey(AnalyticsBreakdownUsersEvents, on_delete=models.CASCADE, related_name='+')
+    page_views = models.ForeignKey(AnalyticsBreakdownUsers, on_delete=models.CASCADE, related_name='+')
 
     class Meta:
         db_table = 'analytics'

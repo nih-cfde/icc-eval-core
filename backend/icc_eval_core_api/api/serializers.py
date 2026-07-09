@@ -2,6 +2,8 @@ from rest_framework import serializers
 from datetime import datetime
 from .models import (
     Analytics,
+    AnalyticsBreakdownUsers,
+    AnalyticsBreakdownUsersEvents,
     AnalyticsOverview,
     CoreProject,
     DRCDCC,
@@ -127,12 +129,41 @@ class RepositorySerializer(serializers.ModelSerializer):
         ]
 
 
+class AnalyticsBreakdownUsersSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the AnalyticsBreakdownUsers model.
+    """
+
+    class Meta:
+        model = AnalyticsBreakdownUsers
+        fields = ['active_users', 'new_users', 'returning_users']
+
+
+class AnalyticsBreakdownUsersEventsSerializer(AnalyticsBreakdownUsersSerializer):
+    """
+    Serializer for the AnalyticsBreakdownUsersEvents model.
+    """
+
+    class Meta(AnalyticsBreakdownUsersSerializer.Meta):
+        model = AnalyticsBreakdownUsersEvents
+        fields = AnalyticsBreakdownUsersSerializer.Meta.fields + ['engaged_sessions']
+
+
 class AnalyticsSerializer(serializers.ModelSerializer):
     """
     Serializer for the Analytics model.
     """
     core_project = serializers.CharField(source='core_project.id', read_only=True)
-    
+    over_time = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    continents = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    countries = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    regions = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    cities = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    languages = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    devices = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    operating_systems = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    page_views = AnalyticsBreakdownUsersSerializer(read_only=True)
+
     class Meta:
         model = Analytics
         fields = [
@@ -283,6 +314,15 @@ class AnalyticsOverviewSerializer(serializers.ModelSerializer):
     """
     Serializer for the AnalyticsOverview model.
     """
+    over_time = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    continents = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    countries = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    regions = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    cities = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    languages = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    devices = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    operating_systems = AnalyticsBreakdownUsersEventsSerializer(read_only=True)
+    page_views = AnalyticsBreakdownUsersSerializer(read_only=True)
 
     class Meta:
         model = AnalyticsOverview
@@ -295,5 +335,6 @@ class AnalyticsOverviewSerializer(serializers.ModelSerializer):
             'cities',
             'languages',
             'devices',
-            'operatingSystems',
+            'operating_systems',
+            'page_views',
         ]

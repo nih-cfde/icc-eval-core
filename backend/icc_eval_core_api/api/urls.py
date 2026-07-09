@@ -81,10 +81,3 @@ urlpatterns = router.urls +[
     )
     for i in single_views
 ]
-
-# alias /repo-overview to /repositories-overview for backwards compatibility
-urlpatterns += [
-    path(
-        'repo-overview/', RepoOverviewViewSet.as_view({'get': 'list'}), name='repo-overview'
-    ),
-]

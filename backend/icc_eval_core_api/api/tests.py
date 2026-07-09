@@ -135,7 +135,8 @@ class APIEndpointSmokeTests(TestCase):
 			cities={},
 			languages={},
 			devices={},
-			operatingSystems={},
+			operating_systems={},
+			page_views={},
 		)
 
 		DRCCode.objects.create(
@@ -193,7 +194,8 @@ class APIEndpointSmokeTests(TestCase):
 			cities={},
 			languages={},
 			devices={},
-			operatingSystems={},
+			operating_systems={},
+			page_views={},
 		)
 
 	def setUp(self):
@@ -445,7 +447,7 @@ class CoreProjectAccessPermissionTests(TestCase):
 			cities={},
 			languages={},
 			devices={},
-			operatingSystems={},
+			operating_systems={},
 		)
 		cls.analytics_cp2 = Analytics.objects.create(
 			property='properties/2',
@@ -458,7 +460,7 @@ class CoreProjectAccessPermissionTests(TestCase):
 			cities={},
 			languages={},
 			devices={},
-			operatingSystems={},
+			operating_systems={},
 		)
 
 	def setUp(self):

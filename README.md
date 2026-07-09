@@ -23,7 +23,7 @@ To launch the app, you can use the `run_stack.sh` helper script:
 This will launch the backend, frontend, and any required services in a Docker environment.
 
 Once everything has launched, you can access the services at these URLs:
-- Frontend: http://127.0.0.1:5173
+- Frontend: http://127.0.0.1:5175
 - Backend API: http://127.0.0.1:8015/api/
 - Backend Admin UI: http://127.0.0.1:8015/admin/
 

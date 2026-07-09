@@ -8,6 +8,8 @@ from django.utils.dateparse import parse_date, parse_datetime
 from api.models import (
     Analytics,
     AnalyticsOverview,
+    AnalyticsBreakdownUsers,
+    AnalyticsBreakdownUsersEvents,
     CoreProject,
     DRCDCC,
     DRCCode,
@@ -47,6 +49,8 @@ class Command(BaseCommand):
         if options['clear']:
             self.stdout.write(self.style.WARNING('Clearing existing data...'))
             with transaction.atomic():
+                AnalyticsBreakdownUsers.objects.all().delete()
+                AnalyticsBreakdownUsersEvents.objects.all().delete()
                 AnalyticsOverview.objects.all().delete()
                 Analytics.objects.all().delete()
                 RepositoryOverview.objects.all().delete()
@@ -69,6 +73,8 @@ class Command(BaseCommand):
         self.import_journals(folder_path)
         self.import_publications(folder_path)
         self.import_repositories(folder_path)
+        AnalyticsBreakdownUsersEvents.objects.all().delete()
+        AnalyticsBreakdownUsers.objects.all().delete()
         self.import_analytics(folder_path)
         self.import_repository_overview(folder_path)
         self.import_analytics_overview(folder_path)
@@ -107,6 +113,23 @@ class Command(BaseCommand):
         if timezone.is_naive(dt):
             return timezone.make_aware(dt, timezone.get_default_timezone())
         return dt
+
+    def get_analytics_breakdown_users(self, item, key):
+        data = item.get(key, {})
+        return AnalyticsBreakdownUsers.objects.create(
+            active_users=data.get('activeUsers', {}),
+            new_users=data.get('newUsers', {}),
+            returning_users=data.get('returningUsers', {}),
+        )
+
+    def get_analytics_breakdown_users_events(self, item, key):
+        data = item.get(key, {})
+        return AnalyticsBreakdownUsersEvents.objects.create(
+            active_users=data.get('activeUsers', {}),
+            new_users=data.get('newUsers', {}),
+            returning_users=data.get('returningUsers', {}),
+            engaged_sessions=data.get('engagedSessions', {}),
+        )
 
     def import_core_projects(self, folder_path):
         file_path = os.path.join(folder_path, 'core-projects.json')
@@ -391,24 +414,27 @@ class Command(BaseCommand):
                         )
                     )
                     core_project = None
-                
+
+
+
                 Analytics.objects.update_or_create(
                     property=item['property'],
                     defaults={
                         'property': item['property'],
                         'property_name': item['propertyName'],
                         'core_project': core_project,
-                        'over_time': item.get('overTime', {}),
-                        'continents': item.get('continents', item.get('topContinents', {})),
-                        'countries': item.get('countries', item.get('topCountries', {})),
-                        'regions': item.get('regions', item.get('topRegions', {})),
-                        'cities': item.get('cities', item.get('topCities', {})),
-                        'languages': item.get('languages', item.get('topLanguages', {})),
-                        'devices': item.get('devices', item.get('topDevices', {})),
-                        'operating_systems': item.get('operatingSystems', item.get('topOSes', {})),
-                        'page_views': item.get('pageViews', {}),
+                        'over_time': self.get_analytics_breakdown_users_events(item, 'overTime'),
+                        'continents': self.get_analytics_breakdown_users_events(item, 'continents'),
+                        'countries': self.get_analytics_breakdown_users_events(item, 'countries'),
+                        'regions': self.get_analytics_breakdown_users_events(item, 'regions'),
+                        'cities': self.get_analytics_breakdown_users_events(item, 'cities'),
+                        'languages': self.get_analytics_breakdown_users_events(item, 'languages'),
+                        'devices': self.get_analytics_breakdown_users_events(item, 'devices'),
+                        'operating_systems': self.get_analytics_breakdown_users_events(item, 'operatingSystems'),
+                        'page_views': self.get_analytics_breakdown_users(item, 'pageViews'),
                     }
                 )
+
                 count += 1
         
         self.stdout.write(self.style.SUCCESS(f'Imported {count} analytics records'))
@@ -487,14 +513,15 @@ class Command(BaseCommand):
         AnalyticsOverview.objects.update_or_create(
             id=1,
             defaults={
-                'over_time': item.get('overTime', {}),
-                'continents': item.get('topContinents', {}),
-                'countries': item.get('topCountries', {}),
-                'regions': item.get('topRegions', {}),
-                'cities': item.get('topCities', {}),
-                'languages': item.get('topLanguages', {}),
-                'devices': item.get('topDevices', {}),
-                'operatingSystems': item.get('topOSes', {}),
+                'over_time': self.get_analytics_breakdown_users_events(item, 'overTime'),
+                'continents': self.get_analytics_breakdown_users_events(item, 'continents'),
+                'countries': self.get_analytics_breakdown_users_events(item, 'countries'),
+                'regions': self.get_analytics_breakdown_users_events(item, 'regions'),
+                'cities': self.get_analytics_breakdown_users_events(item, 'cities'),
+                'languages': self.get_analytics_breakdown_users_events(item, 'languages'),
+                'devices': self.get_analytics_breakdown_users_events(item, 'devices'),
+                'operating_systems': self.get_analytics_breakdown_users_events(item, 'operatingSystems'),
+                'page_views': self.get_analytics_breakdown_users(item, 'pageViews'),
             }
         )
 
