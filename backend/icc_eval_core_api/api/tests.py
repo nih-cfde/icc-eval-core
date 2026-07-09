@@ -129,13 +129,13 @@ class APIEndpointSmokeTests(TestCase):
 			property_name='Smoke Analytics',
 			core_project=core_project,
 			over_time={'activeUsers': []},
-			top_continents={},
-			top_countries={},
-			top_regions={},
-			top_cities={},
-			top_languages={},
-			top_devices={},
-			top_oses={},
+			continents={},
+			countries={},
+			regions={},
+			cities={},
+			languages={},
+			devices={},
+			operatingSystems={},
 		)
 
 		DRCCode.objects.create(
@@ -187,13 +187,13 @@ class APIEndpointSmokeTests(TestCase):
 
 		AnalyticsOverview.objects.create(
 			over_time={'activeUsers': []},
-			top_continents={},
-			top_countries={},
-			top_regions={},
-			top_cities={},
-			top_languages={},
-			top_devices={},
-			top_oses={},
+			continents={},
+			countries={},
+			regions={},
+			cities={},
+			languages={},
+			devices={},
+			operatingSystems={},
 		)
 
 	def setUp(self):
@@ -439,26 +439,26 @@ class CoreProjectAccessPermissionTests(TestCase):
 			property_name='Analytics 1',
 			core_project=cls.cp1,
 			over_time={},
-			top_continents={},
-			top_countries={},
-			top_regions={},
-			top_cities={},
-			top_languages={},
-			top_devices={},
-			top_oses={},
+			continents={},
+			countries={},
+			regions={},
+			cities={},
+			languages={},
+			devices={},
+			operatingSystems={},
 		)
 		cls.analytics_cp2 = Analytics.objects.create(
 			property='properties/2',
 			property_name='Analytics 2',
 			core_project=cls.cp2,
 			over_time={},
-			top_continents={},
-			top_countries={},
-			top_regions={},
-			top_cities={},
-			top_languages={},
-			top_devices={},
-			top_oses={},
+			continents={},
+			countries={},
+			regions={},
+			cities={},
+			languages={},
+			devices={},
+			operatingSystems={},
 		)
 
 	def setUp(self):

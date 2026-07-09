@@ -488,13 +488,13 @@ class Command(BaseCommand):
             id=1,
             defaults={
                 'over_time': item.get('overTime', {}),
-                'top_continents': item.get('topContinents', {}),
-                'top_countries': item.get('topCountries', {}),
-                'top_regions': item.get('topRegions', {}),
-                'top_cities': item.get('topCities', {}),
-                'top_languages': item.get('topLanguages', {}),
-                'top_devices': item.get('topDevices', {}),
-                'top_oses': item.get('topOSes', {}),
+                'continents': item.get('topContinents', {}),
+                'countries': item.get('topCountries', {}),
+                'regions': item.get('topRegions', {}),
+                'cities': item.get('topCities', {}),
+                'languages': item.get('topLanguages', {}),
+                'devices': item.get('topDevices', {}),
+                'operatingSystems': item.get('topOSes', {}),
             }
         )
 

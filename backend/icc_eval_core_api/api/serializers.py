@@ -289,11 +289,11 @@ class AnalyticsOverviewSerializer(serializers.ModelSerializer):
         fields = [
             # 'id',
             'over_time',
-            'top_continents',
-            'top_countries',
-            'top_regions',
-            'top_cities',
-            'top_languages',
-            'top_devices',
-            'top_oses',
+            'continents',
+            'countries',
+            'regions',
+            'cities',
+            'languages',
+            'devices',
+            'operatingSystems',
         ]

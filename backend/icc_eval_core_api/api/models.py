@@ -229,13 +229,13 @@ class AnalyticsOverview(models.Model):
     Represents aggregate analytics metrics from analytics-overview.json.
     """
     over_time = models.JSONField(default=dict)
-    top_continents = models.JSONField(default=dict)
-    top_countries = models.JSONField(default=dict)
-    top_regions = models.JSONField(default=dict)
-    top_cities = models.JSONField(default=dict)
-    top_languages = models.JSONField(default=dict)
-    top_devices = models.JSONField(default=dict)
-    top_oses = models.JSONField(default=dict)
+    continents = models.JSONField(default=dict)
+    countries = models.JSONField(default=dict)
+    regions = models.JSONField(default=dict)
+    cities = models.JSONField(default=dict)
+    languages = models.JSONField(default=dict)
+    devices = models.JSONField(default=dict)
+    operatingSystems = models.JSONField(default=dict)
 
     class Meta:
         db_table = 'analytics_overview'
