@@ -102,142 +102,144 @@
       Sorry, you're not authorized to view this data
     </p>
 
-    <AppTable
-      :cols="repositoryColumns"
-      :rows="repositories ?? []"
-      :sort="[{ id: 'id', desc: true }]"
-    >
-      <template #owner="{ row }">
-        <AppLink :to="`https://github.com/${row.owner}`">
-          {{ row.owner }}
-        </AppLink>
-      </template>
+    <template v-else>
+      <AppTable
+        :cols="repositoryColumns"
+        :rows="repositories ?? []"
+        :sort="[{ id: 'id', desc: true }]"
+      >
+        <template #owner="{ row }">
+          <AppLink :to="`https://github.com/${row.owner}`">
+            {{ row.owner }}
+          </AppLink>
+        </template>
 
-      <template #name="{ row }">
-        <AppLink :to="`https://github.com/${row.owner}/${row.name}`">
-          {{ row.name }}
-        </AppLink>
-      </template>
+        <template #name="{ row }">
+          <AppLink :to="`https://github.com/${row.owner}/${row.name}`">
+            {{ row.name }}
+          </AppLink>
+        </template>
 
-      <template #topics="{ row }">
-        {{ limit(row.topics, 5).join(", ") }}
-      </template>
+        <template #topics="{ row }">
+          {{ limit(row.topics, 5).join(", ") }}
+        </template>
 
-      <template #modified="{ row }">
-        {{ format(row.modified) }}
-        <br />
-        {{ ago(row.modified) }} ago
-      </template>
+        <template #modified="{ row }">
+          {{ format(row.modified) }}
+          <br />
+          {{ ago(row.modified) }} ago
+        </template>
 
-      <template #issues="{ row }">
-        Closed: {{ format(row.closedIssues, true) }}
-        <br />
-        Open: {{ format(row.openIssues, true) }}
-      </template>
+        <template #issues="{ row }">
+          Closed: {{ format(row.closedIssues, true) }}
+          <br />
+          Open: {{ format(row.openIssues, true) }}
+        </template>
 
-      <template #pull-requests="{ row }">
-        Closed: {{ format(row.closedPullRequests, true) }}
-        <br />
-        Open: {{ format(row.openPullRequests, true) }}
-      </template>
+        <template #pull-requests="{ row }">
+          Closed: {{ format(row.closedPullRequests, true) }}
+          <br />
+          Open: {{ format(row.openPullRequests, true) }}
+        </template>
 
-      <template #issue-time-open="{ row }">
-        {{ span(row.issueTimeOpen) }}
-      </template>
+        <template #issue-time-open="{ row }">
+          {{ span(row.issueTimeOpen) }}
+        </template>
 
-      <template #pull-request-time-open="{ row }">
-        {{ span(row.pullRequestTimeOpen) }}
-      </template>
+        <template #pull-request-time-open="{ row }">
+          {{ span(row.pullRequestTimeOpen) }}
+        </template>
 
-      <template #languages="{ row }">
-        {{
-          limit(
-            row.languages.map(({ name }) => name),
-            3,
-          ).join(", ")
-        }}
-      </template>
-    </AppTable>
+        <template #languages="{ row }">
+          {{
+            limit(
+              row.languages.map(({ name }) => name),
+              3,
+            ).join(", ")
+          }}
+        </template>
+      </AppTable>
 
-    <div class="charts">
-      <AppTimeChart
-        class="chart"
-        title="Stars"
-        :data="starsOverTime"
-        :cumulative="cumulative"
-        by="month"
-      />
-      <AppTimeChart
-        class="chart"
-        title="Forks"
-        :data="forksOverTime"
-        :cumulative="cumulative"
-        by="month"
-      />
-      <AppTimeChart
-        class="chart"
-        title="Issues"
-        :data="issuesOverTime"
-        :cumulative="cumulative"
-        by="month"
-      />
-      <AppTimeChart
-        class="chart"
-        title="Pull Requests"
-        :data="pullRequestsOverTime"
-        :cumulative="cumulative"
-        by="month"
-      />
-      <AppTimeChart
-        class="chart"
-        title="Commits"
-        :data="commitsOverTime"
-        :cumulative="cumulative"
-        by="month"
-      />
-    </div>
+      <div class="charts">
+        <AppTimeChart
+          class="chart"
+          title="Stars"
+          :data="starsOverTime"
+          :cumulative="cumulative"
+          by="month"
+        />
+        <AppTimeChart
+          class="chart"
+          title="Forks"
+          :data="forksOverTime"
+          :cumulative="cumulative"
+          by="month"
+        />
+        <AppTimeChart
+          class="chart"
+          title="Issues"
+          :data="issuesOverTime"
+          :cumulative="cumulative"
+          by="month"
+        />
+        <AppTimeChart
+          class="chart"
+          title="Pull Requests"
+          :data="pullRequestsOverTime"
+          :cumulative="cumulative"
+          by="month"
+        />
+        <AppTimeChart
+          class="chart"
+          title="Commits"
+          :data="commitsOverTime"
+          :cumulative="cumulative"
+          by="month"
+        />
+      </div>
 
-    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
-    <strong v-if="repositories?.length === 0">
-      <a href="https://nih-cfde.github.io/icc-eval-coordination/">
-        See this readme for how to add your repositories </a
-      >.
-    </strong>
+      <strong v-if="repositories?.length === 0">
+        <a href="https://nih-cfde.github.io/icc-eval-coordination/">
+          See this readme for how to add your repositories </a
+        >.
+      </strong>
 
-    <div class="col">
-      <AppHeading level="3">Notes</AppHeading>
+      <div class="col">
+        <AppHeading level="3">Notes</AppHeading>
 
-      <dl class="mini-table">
-        <dt>Repository</dt>
-        <dd>
-          For storing, tracking changes to, and collaborating on a piece of
-          software.
-        </dd>
-        <dt>PR</dt>
-        <dd>
-          "Pull request", a draft change (new feature, bug fix, etc.) to a
-          repository.
-        </dd>
-        <dt>Closed/Open</dt>
-        <dd>Resolved/unresolved.</dd>
-        <dt>Issue/PR Avg</dt>
-        <dd>
-          Average time issues/pull requests stay open for before being closed.
-        </dd>
-      </dl>
+        <dl class="mini-table">
+          <dt>Repository</dt>
+          <dd>
+            For storing, tracking changes to, and collaborating on a piece of
+            software.
+          </dd>
+          <dt>PR</dt>
+          <dd>
+            "Pull request", a draft change (new feature, bug fix, etc.) to a
+            repository.
+          </dd>
+          <dt>Closed/Open</dt>
+          <dd>Resolved/unresolved.</dd>
+          <dt>Issue/PR Avg</dt>
+          <dd>
+            Average time issues/pull requests stay open for before being closed.
+          </dd>
+        </dl>
 
-      <p>
-        Only the <code>main</code>/default branch is considered for metrics like
-        # of commits.
-      </p>
+        <p>
+          Only the <code>main</code>/default branch is considered for metrics
+          like # of commits.
+        </p>
 
-      <p>
-        # of dependencies is totaled from all manifests in repository, direct
-        and transitive, e.g.
-        <code>package.json</code> + <code>package-lock.json</code>.
-      </p>
-    </div>
+        <p>
+          # of dependencies is totaled from all manifests in repository, direct
+          and transitive, e.g.
+          <code>package.json</code> + <code>package-lock.json</code>.
+        </p>
+      </div>
+    </template>
   </section>
 
   <!-- analytics -->
@@ -250,104 +252,112 @@
       Sorry, you're not authorized to view this data
     </p>
 
-    <dl class="details">
-      <div>
-        <dt>Websites</dt>
-        <dd class="mini-table">
-          <template
-            v-for="({ property, propertyName }, index) of analytics"
-            :key="index"
-          >
-            <span>
-              {{ startCase(propertyName) }}
-            </span>
-            <span>#{{ property.replace("properties/", "") }}</span>
-          </template>
-        </dd>
-      </div>
-    </dl>
-
-    <div class="charts">
-      <template v-for="({ metric, data }, key) in overTimeAnalytics" :key="key">
-        <AppTimeChart
-          :title="startCase(metric)"
-          :data="data"
-          :cumulative="cumulative"
-          by="week"
-          group="group"
-        />
-      </template>
-    </div>
-
-    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
-
-    <dl class="details">
-      <div v-for="(metrics, dimension) in dimensionsAnalytics" :key="dimension">
-        <template
-          v-if="typeof metrics === 'object' && 'engagedSessions' in metrics"
-        >
-          <dt>{{ dimension }}</dt>
+    <template v-else>
+      <dl class="details">
+        <div>
+          <dt>Websites</dt>
           <dd class="mini-table">
             <template
-              v-for="[key, value] in Object.entries(
-                metrics.engagedSessions,
-              ).slice(0, 5)"
-              :key="key"
+              v-for="({ property, propertyName }, index) of analytics"
+              :key="index"
             >
               <span>
-                {{ key }}
+                {{ startCase(propertyName) }}
               </span>
-              <span>
-                {{ format(value, true) }}
-              </span>
+              <span>#{{ property.replace("properties/", "") }}</span>
             </template>
           </dd>
-        </template>
-      </div>
-    </dl>
-
-    <strong v-if="analytics?.length === 0">
-      <a href="https://nih-cfde.github.io/icc-eval-coordination/">
-        See this readme for how to add your analytics</a
-      >.
-    </strong>
-
-    <div class="col">
-      <AppHeading level="3">Notes</AppHeading>
-
-      <dl class="mini-table">
-        <dt>Active Users</dt>
-        <dd>
-          <AppLink
-            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=activeUsers"
-            >Distinct users who visited the website</AppLink
-          >.
-        </dd>
-        <dt>New Users</dt>
-        <dd>
-          <AppLink
-            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=newUsers"
-            >Users who visited the website for the first time</AppLink
-          >.
-        </dd>
-        <dt>Returning Users</dt>
-        <dd>
-          <AppLink
-            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=returningUsers"
-            >Users who have visited the website before</AppLink
-          >.
-        </dd>
-        <dt>Engaged Sessions</dt>
-        <dd>
-          <AppLink
-            to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=engagedSessions"
-            >Visits that had significant interaction</AppLink
-          >.
-        </dd>
+        </div>
       </dl>
 
-      <p>Dimensions are measured by number of engaged sessions.</p>
-    </div>
+      <div class="charts">
+        <template
+          v-for="({ metric, data }, key) in overTimeAnalytics"
+          :key="key"
+        >
+          <AppTimeChart
+            :title="startCase(metric)"
+            :data="data"
+            :cumulative="cumulative"
+            by="week"
+            group="group"
+          />
+        </template>
+      </div>
+
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+      <dl class="details">
+        <div
+          v-for="(metrics, dimension) in dimensionsAnalytics"
+          :key="dimension"
+        >
+          <template
+            v-if="typeof metrics === 'object' && 'engagedSessions' in metrics"
+          >
+            <dt>{{ dimension }}</dt>
+            <dd class="mini-table">
+              <template
+                v-for="[key, value] in Object.entries(
+                  metrics.engagedSessions,
+                ).slice(0, 5)"
+                :key="key"
+              >
+                <span>
+                  {{ key }}
+                </span>
+                <span>
+                  {{ format(value, true) }}
+                </span>
+              </template>
+            </dd>
+          </template>
+        </div>
+      </dl>
+
+      <strong v-if="analytics?.length === 0">
+        <a href="https://nih-cfde.github.io/icc-eval-coordination/">
+          See this readme for how to add your analytics</a
+        >.
+      </strong>
+
+      <div class="col">
+        <AppHeading level="3">Notes</AppHeading>
+
+        <dl class="mini-table">
+          <dt>Active Users</dt>
+          <dd>
+            <AppLink
+              to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=activeUsers"
+              >Distinct users who visited the website</AppLink
+            >.
+          </dd>
+          <dt>New Users</dt>
+          <dd>
+            <AppLink
+              to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=newUsers"
+              >Users who visited the website for the first time</AppLink
+            >.
+          </dd>
+          <dt>Returning Users</dt>
+          <dd>
+            <AppLink
+              to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=returningUsers"
+              >Users who have visited the website before</AppLink
+            >.
+          </dd>
+          <dt>Engaged Sessions</dt>
+          <dd>
+            <AppLink
+              to="https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema#:~:text=engagedSessions"
+              >Visits that had significant interaction</AppLink
+            >.
+          </dd>
+        </dl>
+
+        <p>Dimensions are measured by number of engaged sessions.</p>
+      </div>
+    </template>
   </section>
 </template>
 

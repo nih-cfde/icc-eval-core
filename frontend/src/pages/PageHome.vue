@@ -160,7 +160,7 @@
       Sorry, you're not authorized to view this data
     </p>
 
-    <dl class="details">
+    <dl v-else class="details">
       <div
         v-for="(value, key, index) in repositoriesOverview"
         :key="index"
@@ -197,49 +197,57 @@
       Sorry, you're not authorized to view this data
     </p>
 
-    <div class="charts">
-      <template
-        v-for="(data, metric, index) in analyticsOverview?.overTime"
-        :key="index"
-      >
-        <AppTimeChart
-          :title="startCase(metric)"
-          :data="
-            Object.entries(data).map(([date, value]) => [new Date(date), value])
-          "
-          :cumulative="cumulative"
-          by="week"
-          group="group"
-        />
-      </template>
-    </div>
-    <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+    <template v-else>
+      <div class="charts">
+        <template
+          v-for="(data, metric, index) in analyticsOverview?.overTime"
+          :key="index"
+        >
+          <AppTimeChart
+            :title="startCase(metric)"
+            :data="
+              Object.entries(data).map(([date, value]) => [
+                new Date(date),
+                value,
+              ])
+            "
+            :cumulative="cumulative"
+            by="week"
+            group="group"
+          />
+        </template>
+      </div>
 
-    <dl class="details">
-      <template
-        v-for="(metrics, dimension) in omit(analyticsOverview, 'overTime')"
-        :key="dimension"
-      >
-        <div v-if="typeof metrics === 'object' && 'engagedSessions' in metrics">
-          <dt>{{ startCase(dimension) }}</dt>
-          <dd class="mini-table">
-            <template
-              v-for="[key, value] in Object.entries(
-                metrics.engagedSessions,
-              ).slice(0, 5)"
-              :key="key"
-            >
-              <span>
-                {{ key || "none" }}
-              </span>
-              <span>
-                {{ format(value, true) }}
-              </span>
-            </template>
-          </dd>
-        </div>
-      </template>
-    </dl>
+      <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
+
+      <dl class="details">
+        <template
+          v-for="(metrics, dimension) in omit(analyticsOverview, 'overTime')"
+          :key="dimension"
+        >
+          <div
+            v-if="typeof metrics === 'object' && 'engagedSessions' in metrics"
+          >
+            <dt>{{ startCase(dimension) }}</dt>
+            <dd class="mini-table">
+              <template
+                v-for="[key, value] in Object.entries(
+                  metrics.engagedSessions,
+                ).slice(0, 5)"
+                :key="key"
+              >
+                <span>
+                  {{ key || "none" }}
+                </span>
+                <span>
+                  {{ format(value, true) }}
+                </span>
+              </template>
+            </dd>
+          </div>
+        </template>
+      </dl>
+    </template>
   </section>
 </template>
 
