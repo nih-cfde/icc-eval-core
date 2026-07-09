@@ -165,11 +165,7 @@ class Command(BaseCommand):
             file_path = os.path.join(folder_path, 'repositories.json')
 
             if not os.path.exists(file_path):
-                # try the old repos.json
-                file_path = os.path.join(folder_path, 'repos.json')
-
-                if not os.path.exists(file_path):
-                    raise FileNotFoundError('repos.json')
+                raise FileNotFoundError('repositories.json')
 
         except FileNotFoundError:
             self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
@@ -405,7 +401,7 @@ class Command(BaseCommand):
             for item in data:
                 # Get or skip if core project doesn't exist
                 try:
-                    core_project = CoreProject.objects.get(id__iexact=item['coreProject'])
+                    core_project = CoreProject.objects.get(id=item['coreProject'])
                 except CoreProject.DoesNotExist:
                     self.stdout.write(
                         self.style.WARNING(
@@ -440,13 +436,10 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(f'Imported {count} analytics records'))
 
     def import_orcid_project_map(self, folder_path):
-        file_path = os.path.join(folder_path, 'orcid-project-map.json')
-        if not os.path.exists(file_path):
-            # data/output uses users.json for this mapping
-            file_path = os.path.join(folder_path, 'users.json')
+        file_path = os.path.join(folder_path, 'users.json')
 
         if not os.path.exists(file_path):
-            self.stdout.write(self.style.WARNING('Skipping ORCID map: neither orcid-project-map.json nor users.json found'))
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
             return
         
         self.stdout.write(f'Importing ORCID project map from {file_path}...')
@@ -464,7 +457,7 @@ class Command(BaseCommand):
         self.stdout.write(self.style.SUCCESS(f'Imported ORCID project map for {len(data)} ORCID identifiers'))
 
     def import_repository_overview(self, folder_path):
-        file_path = os.path.join(folder_path, 'repos-overview.json')
+        file_path = os.path.join(folder_path, 'repositories-overview.json')
 
         if not os.path.exists(file_path):
             self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))

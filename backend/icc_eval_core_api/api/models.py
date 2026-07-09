@@ -285,7 +285,7 @@ class AnalyticsOverview(models.Model):
 
 class RepositoryOverview(models.Model):
     """
-    Represents aggregate repository metrics from repos-overview.json.
+    Represents aggregate repository metrics from repositories-overview.json.
     """
     repos = models.IntegerField(default=0)
     stars = models.IntegerField(default=0)
@@ -313,7 +313,7 @@ class RepositoryOverview(models.Model):
 
 class Repository(models.Model):
     """
-    Represents a repository from repos.json.
+    Represents a repository from repositories.json.
     """
     core_project = models.ForeignKey(
         CoreProject,

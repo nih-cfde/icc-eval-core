@@ -603,7 +603,7 @@ class ImportDatasetIdempotencyTests(TestCase):
 					'citationsPerYear': 5,
 				}
 			],
-			'repos.json': [
+			'repositories.json': [
 				{
 					'id': 8000001,
 					'coreProject': 'U54OD000001',
@@ -649,7 +649,7 @@ class ImportDatasetIdempotencyTests(TestCase):
 					'topOSes': {},
 				}
 			],
-			'repos-overview.json': {
+			'repositories-overview.json': {
 				'repos': 1,
 				'stars': 2,
 				'forks': 3,
