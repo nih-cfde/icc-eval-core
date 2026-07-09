@@ -1,0 +1,22 @@
+[project]
+name = "cfde-api"
+version = "0.1.0"
+description = "API for serving ICC Evaluation Core data"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dj-rest-auth>=7.1.0",
+    "django>=6.0.2",
+    "django-allauth>=65.14.3",
+    "django-cors-headers>=4.9.0",
+    "django-filter>=25.2",
+    "django-rest-framework>=0.1.0",
+    "djangorestframework-camel-case>=1.4.2",
+    "djangorestframework-simplejwt>=5.5.1",
+    "drf-spectacular>=0.29.0",
+    "gunicorn>=25.0.3",
+    "psycopg2-binary>=2.9.11",
+    "requests>=2.32.5",
+    "uvicorn>=0.40.0",
+    "uvicorn-worker>=0.4.0",
+]

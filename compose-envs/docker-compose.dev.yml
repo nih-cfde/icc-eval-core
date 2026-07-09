@@ -1,0 +1,23 @@
+services:
+  backend:
+    ports:
+     - 8015:8000
+    volumes:
+      - ./backend/icc_eval_core_api/:/app/icc_eval_core_api/
+    environment:
+      - DJANGO_DEBUG=1
+      - ORCID_USE_SANDBOX=1
+      - FRONTEND_APP_URL=http://127.0.0.1:5175
+
+  frontend:
+    build: ./frontend/
+    ports:
+      - 5175:5173
+    volumes:
+      - ./frontend/src/:/app/src/
+      - ./frontend/public/:/app/public/
+    environment:
+      - VITE_API=http://127.0.0.1:8015
+      - VITE_MOCK=false
+    depends_on:
+      - backend

@@ -1,81 +1,58 @@
-# CFDE ICC Evaluation Core
+# Common Fund Data Ecosystem (CFDE) ICC Evaluation Core Site
 
-[![Run pipeline](https://github.com/nih-cfde/icc-eval-core/actions/workflows/pipeline.yaml/badge.svg)](https://github.com/nih-cfde/icc-eval-core/actions/workflows/pipeline.yaml)
-[![Run tests](https://github.com/nih-cfde/icc-eval-core/actions/workflows/test.yaml/badge.svg)](https://github.com/nih-cfde/icc-eval-core/actions/workflows/test.yaml)
+This repo contains implementations of the frontend and backend for the ICC Evaluation Core site, which provides a dashboard for tracking CFDE-affiliated projects.
 
-## Overview
+The structure of the repo is as follows:
+- `frontend/`: This is the React frontend for the ICC Evaluation Core site. It consumes the API provided by the backend and renders the dashboard UI.
+- `data/`: This directory contains the data harvester pipeline implementation, which gathers data from various sources and writes them to `/data/output/` in a format that can be imported into the backend database.
+- `backend/`: This is the Django REST Framework API backend for the ICC Evaluation Core site. It defines the data models, serializers, and API views for serving data to the frontend.
+  - `icc_eval_core_api/api/`: Contains the actual implementation of the API, i.e. the views that the frontend consumes to render its dashboard.
+  - `icc_eval_core_api/icc_eval_core_api/`: Contains Django configuration for the site.
+- `services/`: Contains configuration for running services that are required by the app stack, but not implemented in this repo (e.g., postgresql, caddy)
 
-The ICC is tasked with (among other things) gathering and presenting information about CFDE projects.
-We want to allow project groups and the NIH to easily see the activity and impact of their work in a simple and centralized way.
-This repo contains the core code for gathering and presenting this info on a dashboard.
+## Running The App
 
-For more about what we're doing, why we're doing it, and how it works, see these resources:
+First, you should have Docker and Docker Compose installed. To obtain docker, visit the following link: https://docs.docker.com/get-docker/
 
-https://nih-cfde.github.io/icc-eval-coordination
-https://github.com/nih-cfde/icc-eval-core/blob/main/data/poster/poster.pdf
+To launch the app, you can use the `run_stack.sh` helper script:
 
-## Requirements
+```bash
+./run_stack.sh
+```
 
-- Linux or MacOS system
-- [Node](https://nodejs.org/) v22+
-- [Bun](https://bun.sh/) (_for package management only_, as faster/smaller replacement for Yarn)
+This will launch the backend, frontend, and any required services in a Docker environment.
 
-## Commands
+Once everything has launched, you can access the services at these URLs:
+- Frontend: http://127.0.0.1:5175
+- Backend API: http://127.0.0.1:8015/api/
+- Backend Admin UI: http://127.0.0.1:8015/admin/
 
-Use `./run.sh` with a `--flag` to conveniently run scripts of the same name in `/data/package.json` and `/app/package.json` (if they exist) from the root of this repo.
+You can find the credentials for the admin UI in the `.env` file, as `DJANGO_SUPERUSER_USERNAME` and
+`DJANGO_SUPERUSER_PASSWORD`.
 
-| Flag                      | Description                        |
-| ------------------------- | ---------------------------------- |
-| `--install`               | Install packages and dependencies  |
-| `--install-playwright`    | Install Playwright                 |
-| _no flag_                 | Run main pipeline steps in order   |
-| `--gather`                | Run "gather data" pipeline step    |
-| `--print`                 | Run "print PDFs" pipeline step     |
-| `--dev`                   | Run dashboard in dev mode          |
-| `--build`                 | Build dashboard for production     |
-| `--preview`               | Preview production dashboard build |
-| `--lint`                  | Auto-fix linting/formatting        |
-| `--test:lint`             | Check linting and formatting       |
-| `--test:types`            | Check types                        |
-| `--test:e2e`              | Run custom tests                   |
-| `--test`                  | Run all tests above                |
-| `--clean`                 | Hard uninstall packages            |
-| `--script ./some-file.ts` | Run arbitrary ts file              |
+(Note that you must access the frontend from `127.0.0.1` and not `localhost` due to ORCID, our OAuth provider, only whitelisting `127.0.0.1` explicitly.)
 
-## Pipeline
+## Running the Pipeline
 
-The automated steps in this repo are roughly as follows:
+To run the pipeline on the host, you can use the `run_pipeline.sh` helper script:
 
-1. _Gather_
-   1. Get _raw_ data from an external resource, e.g. scraping an HTML page, downloading/parsing a PDF/CSV, making a request to an API, etc.
-   1. Save _raw_ data exactly as-is for provenance and caching.
-   1. Collate most important information from _raw_ data into common high-level _output_ data format suited to making desired dashboard _pages_ and PDF _reports_.
-   1. Repeat previous steps in order of dependency (e.g. opportunity number -> grant numbers) until all needed info is gathered.
-1. _Print_
-   1. Run dashboard webapp.
-   1. Import _output_ data from _gather_ step, and do some minimal final processing (e.g. combine journal info with each publication listing).
-   1. Render select dashboard _pages_ (e.g. `/core-project/abc123`) to PDF _reports_.
-1. Deploy dashboard and PDFs to private web addresses.
+```bash
+./run_pipeline.sh --gather
+```
 
-## Repo content
+To run it in a container, you can use the following command:
 
-- `/app` - Dashboard webapp made with Vue.
-  Also used for generating PDF reports.
-  - `/public/pdfs` - Outputted PDF reports.
-- `/data` - All other functionality involving data.
-  - `/api` - Types and functions for getting raw data from external APIs.
-  - `/raw` - Raw data gathered from external sources, for provenance.
-  - `/gather` - Functions for gathering data and putting it in a common format.
-  - `/output` - Gathered data in format for making desired reports.
-  - `/print` - Functions specific to making printed reports.
-  - `/util` - Small-scope general purpose functions.
+```bash
+./run_stack.sh --profile pipeline run --rm -it pipeline
+```
 
-## Technology
+In both cases, once the pipeline completes you'll find the resulting output under `./data/output/`.
 
-- TypeScript - Language used to provide type-safety from beginning to end of pipeline.
-- Playwright - Tool used for scraping public web pages and rendering dashboard _pages_ to PDF _reports_.
-- Netlify - Service used for privately hosting dashboard webapp (and PR previews).
+### Importing Pipeline Results into Backend
 
-The pipeline is optimized wherever possible and appropriate.
-Things like network requests and rendering are parallelized (e.g. PDF reports are printed simultaneously in separate tabs of the same Playwright browser instance).
-External resources are cached in their _raw_ format to speed up subsequent runs, and to avoid being rate-limited or blocked by those providers.
+To import the results of the pipeline into the backend, you'll run the `import_dataset` command from within
+the backend container, which allows it to write to the database. You can do this with the following command:
+
+```bash
+./run_stack.sh run --rm -it backend uv run /app/icc_eval_core_api/manage.py import_dataset /data/output/
+```

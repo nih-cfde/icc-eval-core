@@ -1,4 +1,3 @@
-import { chunk } from "lodash-es";
 import { AnalyticsAdminServiceClient } from "@google-analytics/admin";
 import type { protos as AdminTypes } from "@google-analytics/admin";
 import type { protos as DataTypes } from "@google-analytics/data";
@@ -19,8 +18,8 @@ type PropertyDetails =
   };
 type BatchReportRequest =
   DataTypes.google.analytics.data.v1beta.IBatchRunReportsRequest;
-type BatchReportResponse =
-  DataTypes.google.analytics.data.v1beta.IBatchRunReportsResponse;
+type FilterExpression =
+  DataTypes.google.analytics.data.v1beta.IFilterExpression;
 
 /** api clients */
 const adminClient = new AnalyticsAdminServiceClient();
@@ -35,7 +34,9 @@ const handleError =
     try {
       return await func(...params);
     } catch (error) {
-      throw Error((error as { details: string }).details ?? error);
+      throw Error((error as { details: string }).details ?? error, {
+        cause: error,
+      });
     }
   };
 
@@ -65,86 +66,117 @@ export const getCoreProject = memoize(
   }),
 );
 
-/** make unlimited batch requests */
-const batchReports = memoize(
-  async (property: PropertyId, requests: BatchReportRequest["requests"]) => {
-    /** google limits us to only a few requests at a time */
-    const chunks = chunk(requests, 5);
-
-    /** all reports */
-    const reports: BatchReportResponse["reports"] = [];
-
-    /** perform batch reports, chunk by chunk */
-    for (const requests of chunks) {
-      const [response] = await dataClient.batchRunReports({
+/** run reports */
+const runReports = memoize(
+  async (property: PropertyId, requests: BatchReportRequest["requests"]) =>
+    (
+      await dataClient.batchRunReports({
         property,
         requests,
-      });
-      reports.push(...(response?.reports ?? []));
-    }
-
-    return reports;
-  },
+      })
+    )[0]?.reports ?? [],
 );
 
 /** earliest allowed (~launch of google analytics) to present */
-const defaultDateRange = {
-  startDate: "2015-08-14",
-  endDate: new Date().toISOString().slice(0, 10),
-};
-
-/** default set of metrics */
-const metrics = [
-  "activeUsers",
-  "newUsers",
-  "engagedSessions",
-  // "sessions",
-  // "screenPageViews",
+const dateRanges = [
+  {
+    startDate: "2015-08-14",
+    endDate: new Date().toISOString().slice(0, 10),
+  },
 ];
 
-/** get metric value over time */
+/** make exact match dimension filter */
+const exactFilter = (fieldName: string, value: string) => ({
+  filter: { fieldName, stringFilter: { matchType: "EXACT" as const, value } },
+});
+
+/** get metric values over time */
 export const getOverTime = async (property: PropertyId) => {
-  const [result] = await batchReports(property, [
-    {
-      dateRanges: [defaultDateRange],
-      dimensions: [{ name: "date" }],
-      metrics: metrics.map((metric) => ({ name: metric })),
-      orderBys: [{ desc: false, dimension: { dimensionName: "date" } }],
-    },
+  /** make options for one report */
+  const report = (metric: string, filter?: FilterExpression) => ({
+    dateRanges,
+    metrics: [{ name: metric }],
+    dimensions: [{ name: "date" }],
+    ...(filter ? { dimensionFilter: filter } : {}),
+    orderBys: [{ desc: false, dimension: { dimensionName: "date" } }],
+  });
+
+  /** run reports */
+  const [
+    activeUsers = {},
+    newUsers = {},
+    returningUsers = {},
+    engagedSessions = {},
+  ] = await runReports(property, [
+    report("activeUsers"),
+    report("newUsers"),
+    report("activeUsers", exactFilter("newVsReturning", "returning")),
+    report("engagedSessions"),
   ]);
 
-  return { dateRange: defaultDateRange, result };
+  /** pretend "returningUsers" is real metric */
+  returningUsers.metricHeaders = [
+    { name: "returningUsers", type: "TYPE_INTEGER" },
+  ];
+
+  return [activeUsers, newUsers, returningUsers, engagedSessions];
 };
 
-/** get "top" (by different metrics) dimensions (regions/languages/etc.) */
-export const getTopDimension = async (
-  property: PropertyId,
-  dimension: string,
-) =>
-  batchReports(
-    property,
-    metrics.map((metric) => ({
-      dateRanges: [defaultDateRange],
-      dimensions: [{ name: dimension }],
-      metrics: [{ name: metric }],
-      orderBys: [{ desc: true, metric: { metricName: metric } }],
-      limit: 5,
-    })),
-  );
+/** get dimensions (regions/languages/etc.) by different metrics */
+export const getDimension = async (property: PropertyId, dimension: string) => {
+  /** make options for one report */
+  const report = (metric: string, filter?: FilterExpression) => ({
+    dateRanges,
+    metrics: [{ name: metric }],
+    dimensions: [{ name: dimension }],
+    ...(filter ? { dimensionFilter: filter } : {}),
+    orderBys: [{ desc: true, metric: { metricName: metric } }],
+    limit: 100,
+  });
 
-/** get top various dimensions */
+  /** run reports */
+  const [
+    activeUsers = {},
+    newUsers = {},
+    returningUsers = {},
+    engagedSessions = {},
+  ] = await runReports(property, [
+    report("activeUsers"),
+    report("newUsers"),
+    report("activeUsers", exactFilter("newVsReturning", "returning")),
+    report("engagedSessions"),
+  ]);
 
-export const getTopContinents = (property: PropertyId) =>
-  getTopDimension(property, "continent");
-export const getTopCountries = (property: PropertyId) =>
-  getTopDimension(property, "country");
-export const getTopRegions = (property: PropertyId) =>
-  getTopDimension(property, "region");
-export const getTopCities = (property: PropertyId) =>
-  getTopDimension(property, "city");
-export const getTopLanguages = (property: PropertyId) =>
-  getTopDimension(property, "language");
-export const getTopDevices = (property: PropertyId) =>
-  getTopDimension(property, "deviceCategory");
-export const getTopOSes = (property: PropertyId) =>
-  getTopDimension(property, "operatingSystem");
+  /** pretend "returningUsers" is real metric */
+  returningUsers.metricHeaders = [
+    { name: "returningUsers", type: "TYPE_INTEGER" },
+  ];
+
+  return [activeUsers, newUsers, returningUsers, engagedSessions];
+};
+
+/** get event counts by page path */
+export const getEvents = async (property: PropertyId, eventName: string) => {
+  /** make options for one report */
+  const report = (filter?: FilterExpression) => ({
+    dateRanges,
+    metrics: [{ name: "eventCount" }],
+    dimensions: [{ name: "pagePath" }],
+    dimensionFilter: {
+      andGroup: {
+        expressions: [
+          ...(filter ? [filter] : []),
+          exactFilter("eventName", eventName),
+        ],
+      },
+    },
+    orderBys: [{ desc: true, metric: { metricName: "eventCount" } }],
+    limit: 100,
+  });
+
+  return runReports(property, [
+    report(),
+    report(exactFilter("newVsReturning", "new")),
+    report(exactFilter("newVsReturning", "returning")),
+  ]);
+};

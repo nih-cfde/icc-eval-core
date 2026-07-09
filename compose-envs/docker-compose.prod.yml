@@ -1,0 +1,34 @@
+volumes:
+  caddy_data:
+  frontend_static:
+
+services:
+  frontend:
+    build: ./frontend/
+    command: sh -c "bun install && bun run build --emptyOutDir --outDir /tmp/dist && rm -rf /opt/frontend/* && mv /tmp/dist/* /opt/frontend/"
+    volumes:
+      - frontend_static:/opt/frontend/
+    env_file:
+      - .env
+    depends_on:
+      - backend
+
+  backend:
+    environment:
+      - DJANGO_DEBUG=0
+      - ORCID_USE_SANDBOX=0
+      - FRONTEND_APP_URL=https://cfde-eval.netlify.app
+      # - FRONTEND_APP_URL=https://deploy-preview-43--cfde-eval-public.netlify.app/
+
+  caddy:
+    image: caddy:2.11
+    ports:
+      - 80:80
+      - 443:443
+    env_file:
+      - .env
+    volumes:
+      - frontend_static:/opt/frontend/
+      - django_static:/opt/static/
+      - ./services/caddy/:/etc/caddy/
+      - caddy_data:/data/

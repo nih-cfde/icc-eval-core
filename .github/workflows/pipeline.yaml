@@ -1,58 +1,100 @@
 name: Run pipeline
 
 on:
+  workflow_dispatch:
+  push:
+    branches: [main]
   schedule:
     - cron: "0 12 * * *"
 
-  workflow_dispatch:
-
-env:
-  FORCE_COLOR: true
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
 
 jobs:
   pipeline:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, Linux, X64, cfde]
+
+    permissions:
+      contents: read
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - name: Show runner context
+        run: |
+          set -euo pipefail
+          hostname
+          whoami
+          docker --version
+          docker compose version
 
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - name: Update repo on VM
+        working-directory: /srv/projects/icc-eval-core
+        run: |
+          set -euo pipefail
+          git pull
+
+      - name: Run pipeline in Compose stack
+        working-directory: /srv/projects/icc-eval-core
+        run: |
+          set -euo pipefail
+
+          LOCK_FILE=/tmp/icc-eval-core-api-pipeline.lock
+
+          (
+            if ! flock -n 200; then
+              echo "Another pipeline run is already active on this VM. Exiting without starting a new run."
+              exit 78
+            fi
+
+            echo "::group::Pipeline logs"
+            ./run_stack.sh --profile pipeline run --rm -T pipeline 2>&1 | tee pipeline.log
+            echo "::endgroup::"
+          ) 200>"$LOCK_FILE"
+
+      - name: Upload pipeline log
+        uses: actions/upload-artifact@v4
+        if: always()
         with:
-          node-version: lts/*
+          name: pipeline-log
+          path: /srv/projects/icc-eval-core/pipeline.log
 
-      - name: Set up Bun
-        uses: oven-sh/setup-bun@v2
+      - name: Import results into backend database
+        working-directory: /srv/projects/icc-eval-core
+        run: |
+          set -euo pipefail
+
+          LOCK_FILE=/tmp/icc-eval-core-api-pipeline.lock
+
+          (
+            if ! flock -n 200; then
+              echo "Another pipeline run is already active on this VM. Exiting without starting a new run."
+              exit 78
+            fi
+
+            echo "::group::Pipeline logs"
+            ./run_stack.sh run --rm -w '/app/icc_eval_core_api' backend 'uv run python manage.py import_dataset /data/output/' 2>&1 | tee import.log
+            echo "::endgroup::"
+          ) 200>"$LOCK_FILE"
+
+      - name: Upload import log
+        uses: actions/upload-artifact@v4
+        if: always()
         with:
-          bun-version: latest
+          name: import-log
+          path: /srv/projects/icc-eval-core/import.log
 
-      - name: SSH debug
-        if: runner.debug == '1'
-        uses: mxschmitt/action-tmate@v3
-
-      - name: Install packages
-        run: ./run.sh --install
-
-      - name: Install Playwright
-        timeout-minutes: 5
-        run: ./run.sh --install-playwright
-
-      - name: Run pipeline
-        run: xvfb-run ./run.sh
-        env:
-          AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
-          CACHE: ${{ inputs.cache && 'true' || '' }}
-
-      - name: Commit files
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: Update files
-          commit_author: "Bot <>"
-
-      - name: Trigger private repo
-        uses: peter-evans/repository-dispatch@v3
-        with:
-          token: ${{ secrets.AUTH_PRIVATE }}
-          repository: nih-cfde/icc-eval-core-private
-          event-type: pipeline
+      - name: Write job summary
+        if: always()
+        run: |
+          {
+            echo "## Pipeline run"
+            echo ""
+            echo "- VM: $(hostname)"
+            echo "- Repo path: /srv/projects/icc-eval-core"
+            echo "- Commit: $GITHUB_SHA"
+            echo ""
+            echo "### Last 80 log lines"
+            echo '```'
+            tail -n 80 /srv/projects/icc-eval-core/pipeline.log || true
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

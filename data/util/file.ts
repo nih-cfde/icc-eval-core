@@ -1,5 +1,3 @@
-import { spawn as nodeSpawn } from "child_process";
-import { existsSync } from "fs";
 import { mkdir, readFile, stat, writeFile } from "fs/promises";
 import { parse } from "path";
 import {
@@ -18,13 +16,9 @@ import { HttpRangeReader, ZipReader } from "@zip.js/zip.js";
 import { log } from "@/util/log";
 import { memoize } from "@/util/memoize";
 import { request } from "@/util/request";
-import { formatDate, midTrunc } from "@/util/string";
-
-const { RAW_PATH, OUTPUT_PATH, CACHE } = process.env;
+import { formatDate } from "@/util/string";
 
 type Extensions = "json" | "csv" | "tsv" | "txt";
-
-export type Filename = `${string}.${Extensions}`;
 
 /** get file stats in standard format */
 const getStats = async (path: string) => {
@@ -35,38 +29,23 @@ const getStats = async (path: string) => {
 export type Stats = Awaited<ReturnType<typeof getStats>>;
 
 /** download file from url (if filename not already present) */
-export const downloadFile = async (
-  url: string,
-  path: string,
-  onProgress?: (percent: number) => void,
-) => {
-  /** always download to raw */
-  path = `${RAW_PATH}/${path}`;
-
+export const downloadFile = async (url: string, path: string) => {
   /** create folders if needed */
   await mkdir(parse(path).dir, { recursive: true });
 
-  /** will we be using existing/cached file */
-  const cached = CACHE && existsSync(path);
+  /** create downloader */
+  const downloader = new Downloader({
+    url,
+    fileName: path,
+    skipExistingFileName: true,
+    cloneFiles: false,
+    maxAttempts: 3,
+  });
 
-  if (cached) log(`Using cache ${midTrunc(path, 40)}`, "secondary");
-  else {
-    /** create downloader */
-    const downloader = new Downloader({
-      url,
-      fileName: path,
-      cloneFiles: false,
-      maxAttempts: 3,
-      onProgress: (percentage) =>
-        /** call provided progress callback */
-        onProgress?.(Number(percentage) / 100),
-    });
+  /** trigger download */
+  await downloader.download();
 
-    /** trigger download */
-    await downloader.download();
-  }
-
-  return { path, ...(await getStats(path)), cached };
+  return { path, ...(await getStats(path)) };
 };
 
 /** get info of remote file without downloading */
@@ -83,10 +62,9 @@ export const loadFile = async <Data>(
   format?: Extensions,
   options?: ParseOptions,
 ) => {
-  let contents = "";
-  let data: Data | null = null;
+  const contents = await readFile(path, "utf-8");
 
-  contents = await readFile(path, "utf-8");
+  let data: Data;
 
   if (format === "json" || path.endsWith(".json"))
     data = parseJson<Data>(contents);
@@ -102,58 +80,14 @@ export const loadFile = async <Data>(
 };
 
 /** get file listing of remote zip file without downloading entire file */
-export const liteUnzip = memoize(
-  async (url: string, onProgress?: (percent: number) => void) =>
-    (
-      await new ZipReader(new HttpRangeReader(url)).getEntries({
-        onprogress: async (progress, total) => onProgress?.(progress / total),
-      })
-    ).map((entry) => ({
-      url,
-      path: entry.filename,
-      size: entry.uncompressedSize,
-      date: formatDate(entry.lastModDate),
-    })),
+export const liteUnzip = memoize(async (url: string) =>
+  (await new ZipReader(new HttpRangeReader(url)).getEntries()).map((entry) => ({
+    url,
+    path: entry.filename,
+    size: entry.uncompressedSize,
+    date: formatDate(entry.lastModDate),
+  })),
 );
-
-// eslint-disable-next-line
-type AsyncFunc = (...args: any) => Promise<unknown>;
-export type Result<Func extends AsyncFunc> = Awaited<ReturnType<Func>>;
-
-/** load existing data from output folder */
-export const loadOutput = async <Data>(file: string) => {
-  const path = `${OUTPUT_PATH}/${file}`;
-  try {
-    return (await loadFile<Data>(path)).data;
-  } catch (error) {
-    throw Error(`Couldn't load ${file}`);
-  }
-};
-
-type Spawn = Parameters<typeof nodeSpawn>;
-
-/** https://stackoverflow.com/questions/72862197/how-to-use-promisify-with-the-spawn-function-for-the-child-process */
-export const spawn = (
-  cmd: Spawn[0],
-  args: Spawn[1] = [],
-  options: Spawn[2] = {},
-) =>
-  new Promise((resolve, reject) => {
-    setTimeout(
-      () => reject(`Spawn process timeout ${cmd} ${args.join(" ")}`),
-      60 * 1000,
-    );
-    const process = nodeSpawn(cmd, args, options);
-    const errors: string[] = [];
-    const stdout: string[] = [];
-    process.stdout?.on("data", (data) => stdout.push(String(data)));
-    process.on("error", (error) =>
-      errors.push([cmd, ...args, error].join(" ")),
-    );
-    process.on("close", () =>
-      errors.length ? reject(errors.join(" ")) : resolve(stdout.join("")),
-    );
-  });
 
 /** save data to file */
 export const saveFile = async (data: unknown, path: string) => {

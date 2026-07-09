@@ -3,11 +3,15 @@ import { getFullJournalName } from "@/api/entrez";
 import type { Rank } from "@/api/types/scimago-ranks";
 import { downloadFile, loadFile } from "@/util/file";
 import { log } from "@/util/log";
-import { query, queryMulti } from "@/util/request";
+import { settled } from "@/util/misc";
 import { count } from "@/util/string";
+
+const { MANUAL_PATH } = process.env;
 
 /** ranks data download url */
 const ranksUrl = "https://www.scimagojr.com/journalrank.php?out=xls";
+/** fallback manual ranks file path */
+const manualRanksPath = `${MANUAL_PATH}/scimago-ranks.csv`;
 
 /** get journal info */
 export const getJournals = async (abbrevs: string[]) => {
@@ -19,36 +23,35 @@ export const getJournals = async (abbrevs: string[]) => {
   log(`Downloading from ${ranksUrl}`);
 
   /** get journal rank data */
-  const ranks = await query(async (progress) => {
-    const { path, cached } = await downloadFile(
-      ranksUrl,
-      "scimago-ranks.csv",
-      progress,
-    );
-    const { data } = await loadFile<Rank[]>(
-      path,
-      "csv",
-      /**
-       * raw file delimited with semi-colon (incorrectly), but query func saves
-       * csv with comma delimiter (correctly), so on next run downloadFile will
-       * return path to comma-delimited file
-       */
-      cached ? undefined : { delimiter: ";" },
-    );
-    return data;
-  }, "scimago-ranks.csv");
+  const ranksFile = await downloadFile(ranksUrl, manualRanksPath)
+    .then(({ path }) => path)
+    .catch(() => manualRanksPath);
+  const { data: ranks } = await loadFile<Rank[]>(ranksFile, "csv", {
+    delimiter: ";",
+  });
 
-  log("Getting journal names");
+  log("Getting full journal details");
 
-  const journals = await queryMulti(
-    abbrevs.map((id) => () => getFullJournalName(id)),
-    "entrez-journals.json",
-    /** one at a time ends up being faster due to rate-limiting */
+  /** look up full journal info */
+  const [journals, errors] = await settled(
+    abbrevs,
+    (abbrev) => {
+      log(abbrev, "secondary", 1);
+      return getFullJournalName(abbrev);
+    },
+    /** avoid rate-limiting */
     1,
   );
 
+  errors.forEach((error, index) => {
+    log(abbrevs[index], "secondary", 1);
+    log(error, "warn", 2);
+  });
+
+  if (errors.length) log(`${count(errors)} errors`, "error");
+
   /** transform data into desired format, with fallbacks */
-  let transformed = journals.map((journal, index) => {
+  let transformedJournals = journals.map((journal, index) => {
     if (journal instanceof Error) {
       const abbrev = abbrevs[index]!;
       return { abbrev, name: abbrev, title: abbrev, rank: 0 };
@@ -64,7 +67,14 @@ export const getJournals = async (abbrevs: string[]) => {
   });
 
   /** de-dupe */
-  transformed = uniqBy(transformed, (journal) => journal.abbrev);
+  transformedJournals = uniqBy(
+    transformedJournals,
+    (journal) => journal.abbrev,
+  );
 
-  return transformed;
+  log(`${count(transformedJournals)} journals`, "success");
+
+  return transformedJournals;
 };
+
+export type Journals = Awaited<ReturnType<typeof getJournals>>;

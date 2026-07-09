@@ -1,0 +1,89 @@
+<template>
+  <section>
+    <AppHeading level="1"><Data />Data Resource Center</AppHeading>
+  </section>
+
+  <template
+    v-for="([label, { count, size, types }], index) in overview"
+    :key="index"
+  >
+    <section class="narrow">
+      <AppHeading level="2">{{ label }}</AppHeading>
+
+      <dl class="details">
+        <div>
+          <dt>Files</dt>
+          <dd>{{ format(count, true) }}</dd>
+        </div>
+        <div>
+          <dt>Size</dt>
+          <dd>{{ bytes(size) }}</dd>
+        </div>
+        <div>
+          <dt>Types</dt>
+          <dd>
+            <span v-for="[type, number] in types" :key="type" class="file-type">
+              {{ format(number, true) }}
+              <template v-if="type">.{{ type }}</template>
+              <i v-else>no ext</i>
+            </span>
+          </dd>
+        </div>
+      </dl>
+    </section>
+  </template>
+</template>
+
+<script setup lang="ts">
+import { computed } from "vue";
+import { countBy, orderBy, sumBy } from "lodash";
+import { useDrcData, type DRC } from "@/api";
+import Data from "@/assets/data.svg";
+import AppHeading from "@/components/AppHeading.vue";
+import { bytes, format } from "@/util/string";
+
+/** fetch drc data */
+const { data: drc } = useDrcData();
+
+/** get total values for resources */
+const getTotals = (resources: (DRC | undefined)[]) => {
+  const files = resources
+    .filter((drc) => drc !== undefined)
+    .map((resource) => resource.map((entry) => entry.files))
+    .flat()
+    .flat();
+
+  return {
+    /** number of files */
+    count: files.length,
+    /** uncompressed size of files */
+    size: sumBy(files, (file) => file.size),
+    /** extensions/types of files */
+    types: orderBy(
+      Object.entries(countBy(files, (file) => file.path.ext)),
+      ([, count]) => count,
+      "desc",
+    ),
+  };
+};
+
+const overview = computed(() => [
+  [
+    "Total",
+    getTotals([drc.value?.code, drc.value?.dcc, drc.value?.file]),
+  ] as const,
+  ["DCC", getTotals([drc.value?.dcc])] as const,
+  ["File", getTotals([drc.value?.file])] as const,
+]);
+</script>
+
+<style scoped>
+.file-type {
+  display: inline-block;
+  margin: 2px 2px;
+  padding: 0 4px;
+  border-radius: var(--rounded);
+  background: var(--light-gray);
+  white-space: nowrap;
+}
+</style>

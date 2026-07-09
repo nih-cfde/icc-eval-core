@@ -1,9 +1,10 @@
 import { uniq, uniqBy } from "lodash-es";
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
+import manualOpportunities from "@/manual/opportunities.json";
 import { newPage } from "@/util/browser";
 import { log } from "@/util/log";
 import { memoize } from "@/util/memoize";
-import { filterErrors, query, queryMulti, type Progress } from "@/util/request";
+import { settled } from "@/util/misc";
 import { count } from "@/util/string";
 
 /** page to scrape */
@@ -41,86 +42,100 @@ export const getDocuments = memoize(async () => {
 });
 
 /** get funding opportunity details from document */
-export const getOpportunity = memoize(
-  async (document: string, progress: Progress) => {
-    const page = await newPage();
-    progress(0.25);
+export const getOpportunity = memoize(async (document: string) => {
+  const page = await newPage();
 
-    /** html document */
-    if (document.endsWith(".html")) {
-      await page.goto(document);
-      progress(0.5);
+  /** html document */
+  if (document.endsWith(".html")) {
+    await page.goto(document);
 
-      /** main opportunity number */
-      const id = (await page.locator(".noticenum").innerText()).trim();
-      progress(0.75);
+    /** main opportunity number */
+    const id = (await page.locator(".noticenum").innerText()).trim();
 
-      /** opportunity number prefix */
-      const prefix = getPrefix(id);
+    /** opportunity number prefix */
+    const prefix = getPrefix(id);
 
-      /** activity code */
-      const activityCode = await page
-        .locator(activityCodeSelector)
-        .first()
-        .innerText({ timeout: 100 })
-        .catch(() => "");
+    /** activity code */
+    const activityCode = await page
+      .locator(activityCodeSelector)
+      .first()
+      .innerText({ timeout: 100 })
+      .catch(() => "");
 
-      /** validate number */
-      if (id.match(numberPattern)) return { id, prefix, activityCode };
-      else throw Error(`${id} does not seem like a valid opportunity number`);
-    }
+    /** validate number */
+    if (id.match(numberPattern)) return { id, prefix, activityCode };
+    else throw Error(`${id} does not seem like a valid opportunity number`);
+  }
 
-    /** pdf document */
-    if (document.endsWith(".pdf")) {
-      /** parse pdf */
-      const pdf = await getDocument({
-        url: new URL(document, opportunitiesUrl).href,
-        verbosity: 0,
-      }).promise;
-      progress(0.5);
-      const firstPage = await pdf.getPage(1);
-      const text = (await firstPage.getTextContent()).items
-        .map((item) => ("str" in item ? item.str : ""))
-        .join("");
-      progress(0.75);
+  /** pdf document */
+  if (document.endsWith(".pdf")) {
+    /** parse pdf */
+    const pdf = await getDocument({
+      url: new URL(document, opportunitiesUrl).href,
+      verbosity: 0,
+    }).promise;
+    const firstPage = await pdf.getPage(1);
+    const text = (await firstPage.getTextContent()).items
+      .map((item) => ("str" in item ? item.str : ""))
+      .join("");
 
-      /** main opportunity number */
-      const id = text.match(numberPattern)?.[1] || "";
+    /** main opportunity number */
+    const id = text.match(numberPattern)?.[1] || "";
 
-      /** opportunity number prefix */
-      const prefix = getPrefix(id);
+    /** opportunity number prefix */
+    const prefix = getPrefix(id);
 
-      /** activity code */
-      const activityCode = "";
+    /** activity code */
+    const activityCode = "";
 
-      /** validate number */
-      if (id) return { id, prefix, activityCode };
-      else throw Error("Doesn't seem to have opportunity number");
-    }
+    /** validate number */
+    if (id) return { id, prefix, activityCode };
+    else throw Error("Doesn't seem to have opportunity number");
+  }
 
-    throw Error("Invalid document extension");
-  },
-);
+  throw Error("Invalid document extension");
+});
 
 /** get common fund funding opportunities, past and present */
 export const getOpportunities = async () => {
   log(`Scraping ${opportunitiesUrl} for documents`);
 
-  let documents = await query(getDocuments, "documents.json");
+  /** get list of documents on funding opportunities page */
+  let documents = await getDocuments();
 
   /** de-dupe */
   documents = uniq(documents);
 
-  log(`Parsing ${count(documents)} HTML/PDF documents for opportunities`);
+  log(`Parsing ${count(documents)} documents for opportunities`);
 
-  const opportunities = await queryMulti(
-    documents.map(
-      (document) => async (progress) => getOpportunity(document, progress),
-    ),
-    "opportunities.json",
-    1,
+  /** extract opportunity details from each document */
+  let [opportunities, errors] = await settled(documents, getOpportunity, 1);
+
+  opportunities.forEach((opportunity, index) => {
+    log(documents[index], "secondary", 1);
+    log(opportunity.id, "secondary", 2);
+  });
+
+  errors.forEach((error, index) => {
+    log(documents[index], "secondary", 1);
+    log(error, "warn", 2);
+  });
+
+  if (!opportunities.length) log("No opportunities found", "error");
+
+  log(`Including ${count(manualOpportunities)} manual opportunities`);
+
+  /** add manually specified opportunities */
+  opportunities.push(...manualOpportunities);
+
+  manualOpportunities.forEach((opportunity) =>
+    log(opportunity.id, "secondary", 1),
   );
 
   /** de-dupe */
-  return uniqBy(filterErrors(opportunities), (opportunity) => opportunity.id);
+  opportunities = uniqBy(opportunities, (opportunity) => opportunity.id);
+
+  log(`${count(opportunities)} opportunities`, "success");
+
+  return opportunities;
 };

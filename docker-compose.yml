@@ -1,0 +1,36 @@
+
+volumes:
+  pgdata:
+  django_static:
+
+services:
+  backend:
+    build: ./backend/
+    volumes:
+      - ./data/:/data/
+      - django_static:/opt/static/
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:18
+    env_file:
+      - .env
+    volumes:
+      - pgdata:/var/lib/postgresql/18/docker
+      - ./db-exports/:/db-exports/
+
+  pipeline:
+    profiles:
+      - pipeline
+    build: ./data/
+    command: /bin/bash -c 'bun run gather'
+    volumes:
+      - ./data/output/:/data/output/
+      - ./data/.ga-credentials.json:/data/.ga-credentials.json:ro
+    environment:
+      - HEADLESS_BROWSER=true
+    env_file:
+      - .env

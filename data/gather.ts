@@ -1,153 +1,79 @@
 import { mkdirSync } from "fs";
-import { eachDayOfInterval, format, max, min } from "date-fns";
-import { isEqual, orderBy, sumBy, uniq, uniqWith } from "lodash-es";
-import { getAnalytics } from "@/gather/analytics";
+import { getAnalytics, getAnalyticsOverview } from "@/gather/analytics";
 import { getDrc } from "@/gather/drc";
 import { getJournals } from "@/gather/journals";
 import { getOpportunities } from "@/gather/opportunities";
 import { getProjects } from "@/gather/projects";
 import { getPublications } from "@/gather/publications";
-import { getRepos } from "@/gather/repos";
+import {
+  getRepositories,
+  getRepositoriesOverview,
+} from "@/gather/repositories";
+import { getUsers } from "@/gather/users";
 import { browser } from "@/util/browser";
-import { loadFile, loadOutput, saveFile, type Result } from "@/util/file";
-import { divider, log } from "@/util/log";
+import { saveFile } from "@/util/file";
+import { divider } from "@/util/log";
 import { match } from "@/util/string";
 
-const { PRIVATE, CACHE, RAW_PATH, OUTPUT_PATH, CI } = process.env;
-
-log(`Running in ${PRIVATE ? "PRIVATE" : "PUBLIC"} mode`);
-log(`Cache ${CACHE ? "ON" : "OFF"}`);
-
-/** output file names */
-const opportunitiesFile = "opportunities.json";
-const coreProjectsFile = "core-projects.json";
-const projectsFile = "projects.json";
-const publicationsFile = "publications.json";
-const journalsFile = "journals.json";
-const analyticsFile = "analytics.json";
-const analyticsOverviewFile = "analytics-overview.json";
-const reposFile = "repos.json";
-const repoOverviewFile = "repo-overview.json";
-const drcDccFile = "drc-dcc.json";
-const drcFileFile = "drc-file.json";
-const drcCodeFile = "drc-code.json";
+const { MANUAL_PATH, RAW_PATH, OUTPUT_PATH } = process.env;
 
 /** make folders if needed */
+mkdirSync(MANUAL_PATH, { recursive: true });
 mkdirSync(RAW_PATH, { recursive: true });
 mkdirSync(OUTPUT_PATH, { recursive: true });
 
 /** ========================================================================= */
 
 divider("Opportunities");
-
-/** funding opportunities */
-let opportunities: Result<typeof getOpportunities> = [];
-
-/** get opportunities */
-try {
-  opportunities = PRIVATE
-    ? /** PRIVATE MODE */
-      await loadOutput(opportunitiesFile)
-    : /** PUBLIC MODE */
-      await getOpportunities();
-} catch (error) {
-  log("Couldn't get opportunities", "warn");
-}
-
-/** get manual opportunities */
-const manualOpportunities = (
-  await loadFile<Result<typeof getOpportunities>>(
-    `${RAW_PATH}/manual-opportunities.json`,
-  )
-).data;
-
-/** merge fetched and manual data */
-opportunities = uniqWith(opportunities.concat(manualOpportunities), isEqual);
-
-log(`${opportunities.length} opportunities`);
+const opportunities = await getOpportunities();
+saveFile(opportunities, `${OUTPUT_PATH}/opportunities.json`);
 
 /** ========================================================================= */
 
 divider("Projects");
-
-/** get manual projects */
-const manualCoreProjects = (
-  await loadFile<string[]>(`${RAW_PATH}/manual-core-projects.json`)
-).data;
-
-/** get projects from opportunities */
-const { coreProjects, projects }: Result<typeof getProjects> = PRIVATE
-  ? /** PRIVATE MODE */
-    {
-      coreProjects: await loadOutput(coreProjectsFile),
-      projects: await loadOutput(projectsFile),
-    }
-  : /** PUBLIC MODE */
-    await getProjects(
-      opportunities.map((opportunity) => opportunity.id),
-      manualCoreProjects,
-    );
-
-log(`${coreProjects.length} core projects`);
-log(`${projects.length} projects`);
+const { coreProjects, projects } = await getProjects(
+  opportunities.map((opportunity) => opportunity.id),
+);
+saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
+saveFile(projects, `${OUTPUT_PATH}/projects.json`);
 
 /** ========================================================================= */
 
 divider("Publications");
-
-/** get publications from projects */
-const publications: Result<typeof getPublications> = PRIVATE
-  ? /** PRIVATE MODE */
-    await loadOutput(publicationsFile)
-  : /** PUBLIC MODE */
-    await getPublications(projects.map((project) => project.coreProject));
-
-log(`${publications.length} publications`);
+const publications = await getPublications(
+  projects.map((project) => project.coreProject),
+);
+saveFile(publications, `${OUTPUT_PATH}/publications.json`);
 
 /** ========================================================================= */
 
 divider("Journals");
-
-/** get journals from publications */
-const journals: Result<typeof getJournals> =
-  /** scimago banning/limiting us when running on gh-actions */
-  PRIVATE || CI
-    ? /** PRIVATE MODE */
-      await loadOutput(journalsFile)
-    : /** PUBLIC MODE */
-      await getJournals(publications.map((publication) => publication.journal));
-
-log(`${journals.length} journals`);
+const journals = await getJournals(
+  publications.map((publication) => publication.journal),
+);
+saveFile(journals, `${OUTPUT_PATH}/journals.json`);
 
 /** ========================================================================= */
 
 divider("Analytics");
-
-/** get website analytics data */
-const analytics = PRIVATE
-  ? /** PRIVATE MODE */ await getAnalytics()
-  : /** PUBLIC MODE */ [];
-
-log(`${analytics.length} analytics`);
+const analytics = await getAnalytics();
+saveFile(analytics, `${OUTPUT_PATH}/analytics.json`);
+const analyticsOverview = await getAnalyticsOverview(analytics);
+saveFile(analyticsOverview, `${OUTPUT_PATH}/analytics-overview.json`);
 
 /** ========================================================================= */
 
-divider("Repos");
-
-/** get software repo data */
-const repos = PRIVATE
-  ? /** PRIVATE MODE */
-    await getRepos(coreProjects.map((coreProject) => coreProject.id))
-  : /** PUBLIC MODE */
-    [];
-
-log(`${repos.length} repos`);
+divider("Repositories");
+const repositories = await getRepositories(
+  coreProjects.map((coreProject) => coreProject.id),
+);
+saveFile(repositories, `${OUTPUT_PATH}/repositories.json`);
+const repositoriesOverview = await getRepositoriesOverview(repositories);
+saveFile(repositoriesOverview, `${OUTPUT_PATH}/repositories-overview.json`);
 
 /** ========================================================================= */
 
 divider("Core project counts");
-
-/** calculate various counts for each core project */
 for (const coreProject of coreProjects) {
   coreProject.publications = publications.filter((publication) =>
     match(publication.coreProject, coreProject.id),
@@ -155,164 +81,26 @@ for (const coreProject of coreProjects) {
   coreProject.analytics = analytics.filter((analytic) =>
     match(analytic.coreProject, coreProject.id),
   ).length;
-  coreProject.repos = repos.filter((repo) =>
-    match(repo.coreProject, coreProject.id),
+  coreProject.repositories = repositories.filter((repository) =>
+    match(repository.coreProject, coreProject.id),
   ).length;
 }
-
-/** ========================================================================= */
-
-divider("Analytics overview");
-
-/** aggregate various stats for all analytics */
-
-const allDates = analytics
-  .map(({ overTime }) =>
-    Object.values(overTime)
-      .map((dates) => Object.keys(dates))
-      .flat(),
-  )
-  .flat();
-const dates = eachDayOfInterval({
-  start: min(allDates),
-  end: max(allDates),
-}).map((date) => format(date, "yyyy-MM-dd"));
-
-const metrics = ["activeUsers", "newUsers", "engagedSessions"] as const;
-const overTime = Object.fromEntries(
-  metrics.map((metric) => {
-    const datesTotaled = Object.fromEntries(
-      dates.map((date) => {
-        const total = sumBy(
-          analytics,
-          (analytic) => analytic.overTime[metric][date] ?? 0,
-        );
-        return [date, total];
-      }),
-    );
-    return [metric, datesTotaled];
-  }),
-);
-
-const topFields = [
-  "topContinents",
-  "topCountries",
-  "topRegions",
-  "topCities",
-  "topLanguages",
-  "topDevices",
-  "topOSes",
-] as const;
-const topMetrics = [
-  "byActiveUsers",
-  "byNewUsers",
-  "byEngagedSessions",
-] as const;
-const tops = Object.fromEntries(
-  topFields.map((field) => {
-    const fieldTotaled = Object.fromEntries(
-      topMetrics.map((metric) => {
-        const keys = uniq(
-          analytics
-            .map((analytic) => Object.keys(analytic[field][metric] ?? {}))
-            .flat(),
-        );
-        const metricTotaled = Object.fromEntries(
-          keys.map((key) => {
-            const total = sumBy(
-              analytics,
-              (analytic) => analytic[field][metric]?.[key] ?? 0,
-            );
-            return [key, total];
-          }),
-        );
-        return [metric, metricTotaled];
-      }),
-    );
-    return [field, fieldTotaled];
-  }),
-);
-
-const analyticsOverview = {
-  overTime,
-  ...tops,
-};
-
-/** ========================================================================= */
-
-divider("Repo overview");
-
-/** aggregate various stats for all repos */
-const repoOverview = {
-  repos: repos.length,
-  stars: sumBy(repos, (repo) => repo.stars.length),
-  forks: sumBy(repos, (repo) => repo.forks.length),
-  watchers: sumBy(repos, (repo) => repo.watchers ?? 0),
-  commits: sumBy(repos, (repo) => repo.commits.length),
-  openIssues: sumBy(repos, (repo) => repo.openIssues),
-  closedIssues: sumBy(repos, (repo) => repo.closedIssues),
-  openPullRequests: sumBy(repos, (repo) => repo.openPullRequests),
-  closedPullRequests: sumBy(repos, (repo) => repo.closedPullRequests),
-  readme: repos.filter((repo) => repo.readme).length,
-  contributing: repos.filter((repo) => repo.contributing).length,
-  codeOfConduct: repos.filter((repo) => repo.codeOfConduct).length,
-  contributors: new Set(
-    repos
-      .map(({ contributors }) => contributors.map(({ name }) => name))
-      .flat(),
-  ).size,
-  licenses: (() => {
-    const counts: Record<string, number> = {};
-    for (const { license } of repos)
-      counts[license] = (counts[license] ?? 0) + 1;
-    return Object.fromEntries(
-      orderBy(Object.entries(counts), (item) => item[1], "desc"),
-    );
-  })(),
-  languages: (() => {
-    const counts: Record<string, number> = {};
-    for (const { languages } of repos)
-      for (const { name, bytes } of languages)
-        counts[name] = (counts[name] ?? 0) + bytes;
-    return Object.fromEntries(
-      orderBy(Object.entries(counts), (count) => count[1], "desc"),
-    );
-  })(),
-};
+saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
 
 /** ========================================================================= */
 
 divider("DRC");
-
-/** get drc data */
-const { dcc, file, code }: Result<typeof getDrc> = PRIVATE
-  ? /** PRIVATE MODE */
-    {
-      dcc: await loadOutput(drcDccFile),
-      file: await loadOutput(drcFileFile),
-      code: await loadOutput(drcCodeFile),
-    }
-  : /** PUBLIC MODE */
-    await getDrc();
+const { dcc, file, code } = await getDrc();
+saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
+saveFile(file, `${OUTPUT_PATH}/drc-file.json`);
+saveFile(code, `${OUTPUT_PATH}/drc-code.json`);
 
 /** ========================================================================= */
 
-divider("Saving");
+divider("Users");
+const users = await getUsers();
+saveFile(users, `${OUTPUT_PATH}/users.json`);
 
-/** save output data */
-saveFile(opportunities, `${OUTPUT_PATH}/${opportunitiesFile}`);
-saveFile(coreProjects, `${OUTPUT_PATH}/${coreProjectsFile}`);
-saveFile(projects, `${OUTPUT_PATH}/${projectsFile}`);
-saveFile(publications, `${OUTPUT_PATH}/${publicationsFile}`);
-saveFile(journals, `${OUTPUT_PATH}/${journalsFile}`);
-saveFile(dcc, `${OUTPUT_PATH}/${drcDccFile}`);
-saveFile(file, `${OUTPUT_PATH}/${drcFileFile}`);
-saveFile(code, `${OUTPUT_PATH}/${drcCodeFile}`);
-if (PRIVATE) {
-  saveFile(analytics, `${OUTPUT_PATH}/${analyticsFile}`);
-  saveFile(analyticsOverview, `${OUTPUT_PATH}/${analyticsOverviewFile}`);
-  saveFile(repos, `${OUTPUT_PATH}/${reposFile}`);
-  saveFile(repoOverview, `${OUTPUT_PATH}/${repoOverviewFile}`);
-}
+/** ========================================================================= */
 
 await browser.close();
