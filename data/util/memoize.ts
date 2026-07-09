@@ -90,7 +90,15 @@ if (existsSync(cachePath))
   cache = JSON.parse(readFileSync(cachePath, "utf-8")) as Cache;
 
 /** save memory cache to disk cache */
-const saveCache = throttle(
-  () => writeFileSync(cachePath, JSON.stringify(cache)),
-  10000,
-);
+const saveCache = throttle(() => {
+  for (let attempt = 0; attempt < 100; attempt++) {
+    try {
+      return writeFileSync(cachePath, JSON.stringify(cache));
+    } catch {
+      /** remove oldest entry and retry */
+      const oldest = Object.keys(cache)[0];
+      if (!oldest) return;
+      delete cache[oldest];
+    }
+  }
+}, 10000);
