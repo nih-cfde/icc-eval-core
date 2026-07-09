@@ -2,50 +2,56 @@
 
 ## Background
 
-See https://nih-cfde.github.io/icc-eval-coordination/
+The Common Fund Data Ecosystem (CFDE) is an effort to bring together knowledge across NIH Common Fund programs into a cohesive resource.
+
+We are the Integration and Coordination Center (ICC), a center within the CFDE.
+We are responsible for (among other things) gathering info associated with Common Fund projects and sharing it with the NIH.
+We also aim to make already-public info more accessible by presenting it in a centralized way.
+
+See https://nih-cfde.github.io/icc-eval-coordination/ for more context.
 
 ## Contents
 
-- `/frontend`: A dashboard written in Vue that shows basic metrics about the CFDE ecosystem. It uses a backend API to display its data.
-- `/data`: A pipeline written in TypeScript that gathers information from various sources, exports them as JSON, which then get imported into the backend database.
-- `/backend`: A REST API written in Python using Django that provides programmatic access to all of the information gathered by the pipeline.
-- `/services`: Configuration files for other services needed to run the stack.
+- `/frontend`: A dashboard written in Vue that shows basic metrics about CFDE ecosystem. Uses backend API to display its data.
+- `/data`: A pipeline written in TypeScript that gathers information from various sources and exports them as JSON files which then get imported into backend database.
+- `/backend`: A REST API written in Python using Django that provides programmatic access to all of information gathered by pipeline. Private info only viewable by authorized users via ORCID authentication.
+- `/services`: Configuration files for other services needed to run stack.
 
-## Run the application
+## Run application
 
 Install Docker and Docker Compose: https://docs.docker.com/get-docker/
 
-Launch the backend, frontend, and other required services in a Docker environment:
+Launch backend, frontend, and other required services in a Docker environment:
 
 ```bash
 ./run_stack.sh
 ```
 
-Once everything has launched, access the services at:
+Once everything has launched, access services at:
 
 - Frontend: http://127.0.0.1:5175
 - Backend API: http://127.0.0.1:8015/api/
 - Backend Admin UI: http://127.0.0.1:8015/admin/
 
-## Run the pipeline
+## Run pipeline
 
-Run the main info gathering pipeline, outside of the container:
+Run main info gathering pipeline, outside of container:
 
 ```bash
 ./run_pipeline.sh --gather
 ```
 
-Run the main info gathering pipeline, inside the container:
+Run main info gathering pipeline, inside container:
 
 ```bash
 ./run_stack.sh --profile pipeline run --rm -it pipeline
 ```
 
-The pipeline should output JSON files under `/data/output` and `/data/raw`.
+Pipeline should output JSON files under `/data/output` and `/data/raw`.
 
 ### Import info into backend
 
-Import the results of the pipeline into the backend database (runs `import_dataset` inside the backend container):
+Import results of pipeline into backend database (runs `import_dataset` inside backend container):
 
 ```bash
 ./run_stack.sh run --rm -it backend uv run /app/icc_eval_core_api/manage.py import_dataset /data/output/
