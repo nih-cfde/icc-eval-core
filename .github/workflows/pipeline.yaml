@@ -40,6 +40,10 @@ jobs:
 
           LOCK_FILE=/tmp/icc-eval-core-api-pipeline.lock
 
+          # clear log files so we don't upload old logs from previous runs
+          rm -f /srv/projects/icc-eval-core/pipeline.log \
+                /srv/projects/icc-eval-core/import.log
+
           (
             if ! flock -n 200; then
               echo "Another pipeline run is already active on this VM. Exiting without starting a new run."
