@@ -1,6 +1,6 @@
 import json
 import tempfile
-from datetime import date
+from datetime import datetime
 from pathlib import Path
 
 from django.core.management import call_command
@@ -8,8 +8,10 @@ from django.test import TestCase
 from django.utils import timezone
 from rest_framework.test import APIClient
 
-from .models import (
+from api.models import (
 	Analytics,
+	AnalyticsBreakdownUsers,
+	AnalyticsBreakdownUsersEvents,
 	AnalyticsOverview,
 	CoreProject,
 	DRCDCC,
@@ -24,6 +26,32 @@ from .models import (
 	RepositoryOverview,
 	User,
 )
+
+
+def create_users_events_breakdown(
+	active_users=None,
+	new_users=None,
+	returning_users=None,
+	engaged_sessions=None,
+):
+	return AnalyticsBreakdownUsersEvents.objects.create(
+		active_users=active_users or {},
+		new_users=new_users or {},
+		returning_users=returning_users or {},
+		engaged_sessions=engaged_sessions or {},
+	)
+
+
+def create_users_breakdown(
+	active_users=None,
+	new_users=None,
+	returning_users=None,
+):
+	return AnalyticsBreakdownUsers.objects.create(
+		active_users=active_users or {},
+		new_users=new_users or {},
+		returning_users=returning_users or {},
+	)
 
 
 class APIEndpointSmokeTests(TestCase):
@@ -66,8 +94,8 @@ class APIEndpointSmokeTests(TestCase):
 			award_amount='123456.78',
 			activity_code='U54',
 			agency_code='NIH',
-			date_start=date(2025, 1, 1),
-			date_end=date(2026, 1, 1),
+			date_start=timezone.make_aware(datetime(2025, 1, 1)),
+			date_end=timezone.make_aware(datetime(2026, 1, 1)),
 			is_active=True,
 		)
 
@@ -128,15 +156,15 @@ class APIEndpointSmokeTests(TestCase):
 			property='properties/123456789',
 			property_name='Smoke Analytics',
 			core_project=core_project,
-			over_time={'activeUsers': []},
-			continents={},
-			countries={},
-			regions={},
-			cities={},
-			languages={},
-			devices={},
-			operating_systems={},
-			page_views={},
+			over_time=create_users_events_breakdown(active_users={'activeUsers': []}),
+			continents=create_users_events_breakdown(),
+			countries=create_users_events_breakdown(),
+			regions=create_users_events_breakdown(),
+			cities=create_users_events_breakdown(),
+			languages=create_users_events_breakdown(),
+			devices=create_users_events_breakdown(),
+			operating_systems=create_users_events_breakdown(),
+			page_views=create_users_breakdown(),
 		)
 
 		DRCCode.objects.create(
@@ -187,15 +215,15 @@ class APIEndpointSmokeTests(TestCase):
 		)
 
 		AnalyticsOverview.objects.create(
-			over_time={'activeUsers': []},
-			continents={},
-			countries={},
-			regions={},
-			cities={},
-			languages={},
-			devices={},
-			operating_systems={},
-			page_views={},
+			over_time=create_users_events_breakdown(active_users={'activeUsers': []}),
+			continents=create_users_events_breakdown(),
+			countries=create_users_events_breakdown(),
+			regions=create_users_events_breakdown(),
+			cities=create_users_events_breakdown(),
+			languages=create_users_events_breakdown(),
+			devices=create_users_events_breakdown(),
+			operating_systems=create_users_events_breakdown(),
+			page_views=create_users_breakdown(),
 		)
 
 	def setUp(self):
@@ -322,8 +350,8 @@ class CoreProjectAccessPermissionTests(TestCase):
 			award_amount='100.00',
 			activity_code='U54',
 			agency_code='NIH',
-			date_start=date(2025, 1, 1),
-			date_end=date(2026, 1, 1),
+			date_start=timezone.make_aware(datetime(2025, 1, 1)),
+			date_end=timezone.make_aware(datetime(2026, 1, 1)),
 			is_active=True,
 		)
 		Project.objects.create(
@@ -335,8 +363,8 @@ class CoreProjectAccessPermissionTests(TestCase):
 			award_amount='200.00',
 			activity_code='U54',
 			agency_code='NIH',
-			date_start=date(2025, 1, 1),
-			date_end=date(2026, 1, 1),
+			date_start=timezone.make_aware(datetime(2025, 1, 1)),
+			date_end=timezone.make_aware(datetime(2026, 1, 1)),
 			is_active=True,
 		)
 
@@ -440,27 +468,29 @@ class CoreProjectAccessPermissionTests(TestCase):
 			property='properties/1',
 			property_name='Analytics 1',
 			core_project=cls.cp1,
-			over_time={},
-			continents={},
-			countries={},
-			regions={},
-			cities={},
-			languages={},
-			devices={},
-			operating_systems={},
+			over_time=create_users_events_breakdown(),
+			continents=create_users_events_breakdown(),
+			countries=create_users_events_breakdown(),
+			regions=create_users_events_breakdown(),
+			cities=create_users_events_breakdown(),
+			languages=create_users_events_breakdown(),
+			devices=create_users_events_breakdown(),
+			operating_systems=create_users_events_breakdown(),
+			page_views=create_users_breakdown(),
 		)
 		cls.analytics_cp2 = Analytics.objects.create(
 			property='properties/2',
 			property_name='Analytics 2',
 			core_project=cls.cp2,
-			over_time={},
-			continents={},
-			countries={},
-			regions={},
-			cities={},
-			languages={},
-			devices={},
-			operating_systems={},
+			over_time=create_users_events_breakdown(),
+			continents=create_users_events_breakdown(),
+			countries=create_users_events_breakdown(),
+			regions=create_users_events_breakdown(),
+			cities=create_users_events_breakdown(),
+			languages=create_users_events_breakdown(),
+			devices=create_users_events_breakdown(),
+			operating_systems=create_users_events_breakdown(),
+			page_views=create_users_breakdown(),
 		)
 
 	def setUp(self):
