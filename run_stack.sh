@@ -42,6 +42,7 @@ fi
 replace_env_var_with_secret POSTGRES_PASSWORD
 replace_env_var_with_secret DJANGO_SUPERUSER_PASSWORD 12
 replace_env_var_with_secret DJANGO_SECRET_KEY 32
+replace_env_var_with_secret POSTGRES_MCP_READER_PASSWORD 32
 
 # load contents of .env into the environment
 set -a
