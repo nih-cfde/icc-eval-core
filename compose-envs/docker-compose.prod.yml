@@ -32,3 +32,8 @@ services:
       - django_static:/opt/static/
       - ./services/caddy/:/etc/caddy/
       - caddy_data:/data/
+
+  # uncomment to allow the prod db to be accessed externally
+  # db:
+  #   ports:
+  #     - 5432:5432

@@ -25,5 +25,8 @@ EXPOSE 8000
 # copy in the run command
 COPY ./launch_api.sh /opt/launch_api.sh
 
+# resets the working dir for convenience when shelling in
+WORKDIR /app/icc_eval_core_api
+
 # Run the app
 CMD ["/opt/launch_api.sh"]
