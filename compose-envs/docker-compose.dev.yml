@@ -21,3 +21,7 @@ services:
       - VITE_MOCK=false
     depends_on:
       - backend
+
+  db:
+    ports:
+      - 5435:5432
