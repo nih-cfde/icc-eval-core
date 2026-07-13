@@ -119,3 +119,10 @@ class TestMCPReaderAccess(TestCase):
             with self.subTest(table=table):
                 with self.assertRaises(Exception):
                     self.cursor.execute(f"SELECT * FROM {table} LIMIT 1;")
+
+    # test that we can't write to the allowed tables
+    def test_write_allowed_tables(self):
+        for table in MCP_READER_TABLES_ALLOWED:
+            with self.subTest(table=table):
+                with self.assertRaises(Exception):
+                    self.cursor.execute(f"INSERT INTO {table} DEFAULT VALUES;")
