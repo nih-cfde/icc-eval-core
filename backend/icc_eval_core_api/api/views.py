@@ -56,7 +56,7 @@ class CoreProjectViewSet(viewsets.ReadOnlyModelViewSet):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['activity_code']
     search_fields = ['id', 'name', 'activity_code']
-    ordering_fields = ['id', 'name', 'award_amount', 'publications', 'repos', 'analytics']
+    ordering_fields = ['id', 'name', 'award_amount', 'publications', 'repositories', 'analytics']
     ordering = ['id']
 
 
@@ -201,7 +201,7 @@ class RepoOverviewViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = RepositoryOverview.objects.all()
     serializer_class = RepositoryOverviewSerializer
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter]
-    ordering_fields = ['repos', 'stars', 'forks', 'watchers', 'commits']
+    ordering_fields = ['repositories', 'stars', 'forks', 'watchers', 'commits']
     ordering = ['id']
 
     # disable pagination for this endpoint since it only returns one object

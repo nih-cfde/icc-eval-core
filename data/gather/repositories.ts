@@ -58,6 +58,7 @@ export const getRepositories = async (coreProjects: string[]) => {
     repositories,
     async ({ owner, name, coreProject }) => {
       const label = `${owner}/${name}`;
+      log(`${label} - Stars`, "secondary", 1);
       const repository = await getRepository(owner, name);
       log(`${label} - Stars`, "secondary", 1);
       const stars = await getStars(owner, name);

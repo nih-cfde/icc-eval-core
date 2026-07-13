@@ -45,7 +45,7 @@ class CoreProjectSerializer(serializers.ModelSerializer):
             'projects',
             'award_amount',
             'publications',
-            'repos',
+            'repositories',
             'analytics',
         ]
 
@@ -53,7 +53,7 @@ class RepositoryListSerializer(serializers.ModelSerializer):
     """
     Serializer for the Repository model (list view).
 
-    Removes the followng lengthy list fields for a faster response:
+    Removes the following lengthy list fields for a faster response:
     - stars
     - forks
     - commits
@@ -292,7 +292,7 @@ class RepositoryOverviewSerializer(serializers.ModelSerializer):
         model = RepositoryOverview
         fields = [
             # 'id',
-            'repos',
+            'repositories',
             'stars',
             'forks',
             'watchers',

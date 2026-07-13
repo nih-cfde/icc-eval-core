@@ -153,7 +153,7 @@ class Command(BaseCommand):
                         'projects': item['projects'],
                         'award_amount': item['awardAmount'],
                         'publications': item.get('publications', 0),
-                        'repos': item.get('repos', 0),
+                        'repositories': item.get('repositories', 0),
                         'analytics': item.get('analytics', 0),
                     }
                 )
@@ -471,7 +471,7 @@ class Command(BaseCommand):
         RepositoryOverview.objects.update_or_create(
             id=1,
             defaults={
-                'repos': item.get('repos', 0),
+                'repositories': item.get('repositories', 0),
                 'stars': item.get('stars', 0),
                 'forks': item.get('forks', 0),
                 'watchers': item.get('watchers', 0),

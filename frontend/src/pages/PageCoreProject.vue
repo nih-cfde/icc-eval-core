@@ -295,7 +295,7 @@
           <template
             v-if="typeof metrics === 'object' && 'engagedSessions' in metrics"
           >
-            <dt>{{ dimension }}</dt>
+            <dt>{{ startCase(dimension) }}</dt>
             <dd class="mini-table">
               <template
                 v-for="[key, value] in Object.entries(
