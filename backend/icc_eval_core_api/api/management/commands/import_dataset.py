@@ -153,7 +153,7 @@ class Command(BaseCommand):
                         'projects': item['projects'],
                         'award_amount': item['awardAmount'],
                         'publications': item.get('publications', 0),
-                        'repos': item.get('repos', 0),
+                        'repositories': item.get('repositories', 0),
                         'analytics': item.get('analytics', 0),
                     }
                 )
@@ -202,9 +202,9 @@ class Command(BaseCommand):
                         'topics': item.get('topics', []),
                         'created': self._to_datetime_or_none(item.get('created')),
                         'modified': self._to_datetime_or_none(item.get('modified')),
-                        'stars': item.get('stars', []),
+                        'stars': item.get('stars', 0),
                         'forks': item.get('forks', []),
-                        'watchers': item.get('watchers', []),
+                        'watchers': item.get('watchers', 0),
                         'commits': item.get('commits', []),
                         'issues': item.get('issues', []),
                         'pull_requests': item.get('pullRequests', []),
@@ -471,7 +471,7 @@ class Command(BaseCommand):
         RepositoryOverview.objects.update_or_create(
             id=1,
             defaults={
-                'repos': item.get('repos', 0),
+                'repositories': item.get('repositories', 0),
                 'stars': item.get('stars', 0),
                 'forks': item.get('forks', 0),
                 'watchers': item.get('watchers', 0),

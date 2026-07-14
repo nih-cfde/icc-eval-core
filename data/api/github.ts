@@ -80,11 +80,6 @@ export const getRepository = memoize(
     (await octokit.rest.repos.get({ owner, repo })).data,
 );
 
-/** get commits for repository */
-export const getCommits = memoize((owner: string, repo: string) =>
-  octokit.paginate(octokit.rest.repos.listCommits, { owner, repo }),
-);
-
 /** get stars for repository */
 export const getStars = memoize((owner: string, repo: string) =>
   octokit.paginate(octokit.rest.activity.listStargazersForRepo, {
@@ -103,6 +98,11 @@ export const getStars = memoize((owner: string, repo: string) =>
 /** get forks for repository */
 export const getForks = memoize((owner: string, repo: string) =>
   octokit.paginate(octokit.rest.repos.listForks, { owner, repo }),
+);
+
+/** get commits for repository */
+export const getCommits = memoize((owner: string, repo: string) =>
+  octokit.paginate(octokit.rest.repos.listCommits, { owner, repo }),
 );
 
 /** get issues for repository */

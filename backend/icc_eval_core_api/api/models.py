@@ -51,7 +51,7 @@ class CoreProject(models.Model):
     projects = models.JSONField(default=list)
     award_amount = models.DecimalField(max_digits=15, decimal_places=2)
     publications = models.IntegerField(default=0)
-    repos = models.IntegerField(default=0)
+    repositories = models.IntegerField(default=0)
     analytics = models.IntegerField(default=0)
 
     class Meta:
@@ -287,7 +287,7 @@ class RepositoryOverview(models.Model):
     """
     Represents aggregate repository metrics from repositories-overview.json.
     """
-    repos = models.IntegerField(default=0)
+    repositories = models.IntegerField(default=0)
     stars = models.IntegerField(default=0)
     forks = models.IntegerField(default=0)
     watchers = models.IntegerField(default=0)
@@ -318,7 +318,7 @@ class Repository(models.Model):
     core_project = models.ForeignKey(
         CoreProject,
         on_delete=models.CASCADE,
-        related_name='repositories',
+        related_name='+',
         db_column='core_project_id'
     )
     id = models.BigIntegerField(primary_key=True)

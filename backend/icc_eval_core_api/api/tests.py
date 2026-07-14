@@ -47,7 +47,7 @@ class APIEndpointSmokeTests(TestCase):
 			projects=['1U54OD000001-01'],
 			award_amount='123456.78',
 			publications=1,
-			repos=1,
+			repositories=1,
 			analytics=1,
 		)
 
@@ -103,9 +103,9 @@ class APIEndpointSmokeTests(TestCase):
 			topics=['smoke'],
 			created=timezone.now(),
 			modified=timezone.now(),
-			stars=[],
+			stars=0,
 			forks=[],
-			watchers=[],
+			watchers=0,
 			commits=[],
 			issues=[],
 			pull_requests=[],
@@ -169,7 +169,7 @@ class APIEndpointSmokeTests(TestCase):
 		)
 
 		RepositoryOverview.objects.create(
-			repos=1,
+			repositories=1,
 			stars=2,
 			forks=3,
 			watchers=4,
@@ -293,7 +293,7 @@ class CoreProjectAccessPermissionTests(TestCase):
 			projects=['P1'],
 			award_amount='100.00',
 			publications=1,
-			repos=1,
+			repositories=1,
 			analytics=1,
 		)
 		cls.cp2 = CoreProject.objects.create(
@@ -303,7 +303,7 @@ class CoreProjectAccessPermissionTests(TestCase):
 			projects=['P2'],
 			award_amount='200.00',
 			publications=1,
-			repos=1,
+			repositories=1,
 			analytics=1,
 		)
 
@@ -386,9 +386,9 @@ class CoreProjectAccessPermissionTests(TestCase):
 			topics=['one'],
 			created=timezone.now(),
 			modified=timezone.now(),
-			stars=[],
+			stars=0,
 			forks=[],
-			watchers=[],
+			watchers=0,
 			commits=[],
 			issues=[],
 			pull_requests=[],
@@ -415,9 +415,9 @@ class CoreProjectAccessPermissionTests(TestCase):
 			topics=['two'],
 			created=timezone.now(),
 			modified=timezone.now(),
-			stars=[],
+			stars=0,
 			forks=[],
-			watchers=[],
+			watchers=0,
 			commits=[],
 			issues=[],
 			pull_requests=[],
@@ -552,7 +552,7 @@ class ImportDatasetIdempotencyTests(TestCase):
 					'projects': ['1U54OD000001-01'],
 					'awardAmount': '123456.78',
 					'publications': 1,
-					'repos': 1,
+					'repositories': 1,
 					'analytics': 1,
 				}
 			],
@@ -613,7 +613,7 @@ class ImportDatasetIdempotencyTests(TestCase):
 					'topics': ['topic'],
 					'created': '2026-01-01T00:00:00Z',
 					'modified': '2026-01-02T00:00:00Z',
-					'stars': [],
+					'stars': 0,
 					'forks': [],
 					'watchers': [],
 					'commits': [],
@@ -650,7 +650,7 @@ class ImportDatasetIdempotencyTests(TestCase):
 				}
 			],
 			'repositories-overview.json': {
-				'repos': 1,
+				'repositories': 1,
 				'stars': 2,
 				'forks': 3,
 				'watchers': 4,
