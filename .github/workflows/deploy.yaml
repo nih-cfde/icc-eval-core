@@ -1,9 +1,7 @@
-name: Run pipeline
+name: Deploy
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
   schedule:
     - cron: "0 12 * * *"
 
@@ -32,6 +30,12 @@ jobs:
         run: |
           set -euo pipefail
           git pull
+
+      - name: Re-build images
+        working-directory: /srv/projects/icc-eval-core
+        run: |
+          set -euo pipefail
+          ./run_stack.sh build
 
       - name: Run pipeline in Compose stack
         working-directory: /srv/projects/icc-eval-core
