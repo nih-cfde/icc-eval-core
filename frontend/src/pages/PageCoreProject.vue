@@ -286,13 +286,16 @@
           :key="dimension"
         >
           <template
-            v-if="typeof metrics === 'object' && 'engagedSessions' in metrics"
+            v-if="
+              typeof metrics === 'object' &&
+              ('engagedSessions' in metrics || 'activeUsers' in metrics)
+            "
           >
             <dt>{{ startCase(dimension) }}</dt>
             <dd class="mini-table">
               <template
                 v-for="[key, value] in Object.entries(
-                  metrics.engagedSessions,
+                  metrics.engagedSessions || metrics.activeUsers || {},
                 ).slice(0, 5)"
                 :key="key"
               >

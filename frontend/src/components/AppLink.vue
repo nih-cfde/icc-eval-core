@@ -1,7 +1,7 @@
 <template>
   <component :is="component" :[toAttr]="to" :target="target" class="link">
     <slot />
-    <External v-if="external" />
+    <External v-if="arrow ?? external" />
   </component>
 </template>
 
@@ -12,14 +12,14 @@ import External from "@/assets/external.svg";
 type Props = {
   /** internal route or external url to link to */
   to: string;
-  /** force external link or not */
-  external?: boolean;
+  /** force arrow icon or not */
+  arrow?: boolean;
   /** force new tab or not */
   newTab?: boolean;
 };
 
 const props = withDefaults(defineProps<Props>(), {
-  external: undefined,
+  arrow: undefined,
   newTab: undefined,
 });
 
@@ -30,12 +30,8 @@ type Slots = {
 defineSlots<Slots>();
 
 /** is link to internal route or external url */
-const external = computed(
-  () =>
-    props.external ??
-    ["https:", "http:", "mailto:"].some((prefix) =>
-      props.to.startsWith(prefix),
-    ),
+const external = computed(() =>
+  ["https:", "http:", "mailto:"].some((prefix) => props.to.startsWith(prefix)),
 );
 
 const component = computed(() =>

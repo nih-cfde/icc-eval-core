@@ -8,8 +8,12 @@
     </div>
 
     <nav>
-      <AppLink v-if="!user && userStatus !== 'pending'" :to="loginLink">
-        Login
+      <AppLink
+        v-if="!user && userStatus !== 'pending'"
+        :to="loginLink"
+        :new-tab="false"
+      >
+        Log In
       </AppLink>
       <template v-if="user && userStatus === 'success'">
         <div
@@ -27,7 +31,7 @@
             }}
           </div>
         </div>
-        <AppLink :to="logoutLink">Logout</AppLink>
+        <AppLink :to="logoutLink" :new-tab="false">Log Out</AppLink>
       </template>
 
       <AppLink to="/">Home</AppLink>
