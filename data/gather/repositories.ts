@@ -9,7 +9,6 @@ import {
   getLanguages,
   getPullRequests,
   getRepository,
-  getStars,
   hasReadme,
   searchRepositories,
 } from "@/api/github";
@@ -60,8 +59,6 @@ export const getRepositories = async (coreProjects: string[]) => {
       const label = `${owner}/${name}`;
       log(`${label} - Stars`, "secondary", 1);
       const repository = await getRepository(owner, name);
-      log(`${label} - Stars`, "secondary", 1);
-      const stars = await getStars(owner, name);
       log(`${label} - Forks`, "secondary", 1);
       const forks = await getForks(owner, name);
       log(`${label} - Commits`, "secondary", 1);
@@ -84,7 +81,6 @@ export const getRepositories = async (coreProjects: string[]) => {
       return {
         ...repository,
         coreProject,
-        stars,
         forks,
         commits,
         issues,
@@ -145,7 +141,7 @@ export const getRepositories = async (coreProjects: string[]) => {
     ),
     created: repository.created_at,
     modified: repository.pushed_at,
-    stars: repository.stars.map((star) => ({ date: star.starred_at ?? "" })),
+    stars: repository.stargazers_count,
     forks: repository.forks.map((fork) => ({ date: fork.created_at ?? "" })),
     watchers: repository.subscribers_count,
     commits: repository.commits.map((commit) => ({
@@ -200,9 +196,9 @@ export const getRepositoriesOverview = (
   repositories: Awaited<ReturnType<typeof getRepositories>>,
 ) => ({
   repositories: repositories.length,
-  stars: sumBy(repositories, (repository) => repository.stars.length),
+  stars: sumBy(repositories, (repository) => repository.stars),
   forks: sumBy(repositories, (repository) => repository.forks.length),
-  watchers: sumBy(repositories, (repository) => repository.watchers ?? 0),
+  watchers: sumBy(repositories, (repository) => repository.watchers),
   commits: sumBy(repositories, (repository) => repository.commits.length),
   openIssues: sumBy(repositories, (repository) => repository.openIssues),
   closedIssues: sumBy(repositories, (repository) => repository.closedIssues),

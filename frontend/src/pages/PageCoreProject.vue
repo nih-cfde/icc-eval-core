@@ -163,13 +163,6 @@
       <div class="charts">
         <AppTimeChart
           class="chart"
-          title="Stars"
-          :data="starsOverTime"
-          :cumulative="cumulative"
-          by="month"
-        />
-        <AppTimeChart
-          class="chart"
           title="Forks"
           :data="forksOverTime"
           :cumulative="cumulative"
@@ -425,7 +418,7 @@ const details = computed(() => [
     `${format(repositories.value, true)} repositories`,
     [
       format(
-        sumBy(repositories.value, (repository) => repository.stars.length),
+        sumBy(repositories.value, (repository) => repository.stars),
         true,
       ),
       "stars",
@@ -711,16 +704,6 @@ const repositoryColumns: Cols<NonNullable<typeof repositories.value>> = [
     }),
   },
 ];
-
-/** star chart data */
-const starsOverTime = computed(
-  () =>
-    repositories.value
-      ?.map(({ stars }) =>
-        stars.map((star) => [new Date(star.date), 1] as const),
-      )
-      .flat() ?? [],
-);
 
 /** fork chart data */
 const forksOverTime = computed(
