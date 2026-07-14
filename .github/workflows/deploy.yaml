@@ -1,4 +1,4 @@
-name: Run pipeline
+name: Deploy
 
 on:
   workflow_dispatch:
