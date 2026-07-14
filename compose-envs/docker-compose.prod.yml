@@ -18,7 +18,6 @@ services:
       - DJANGO_DEBUG=0
       - ORCID_USE_SANDBOX=0
       - FRONTEND_APP_URL=https://cfde-eval.netlify.app
-      # - FRONTEND_APP_URL=https://deploy-preview-43--cfde-eval-public.netlify.app/
 
   caddy:
     image: caddy:2.11

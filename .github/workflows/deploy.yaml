@@ -36,6 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           ./run_stack.sh build
+          ./run_stack.sh --profile pipeline build
 
       - name: Run pipeline in Compose stack
         working-directory: /srv/projects/icc-eval-core
