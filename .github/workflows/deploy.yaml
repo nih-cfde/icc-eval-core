@@ -86,6 +86,24 @@ jobs:
             echo "::endgroup::"
           ) 200>"$LOCK_FILE"
 
+      - name: Relaunch the stack for serving
+        working-directory: /srv/projects/icc-eval-core
+        run: |
+          set -euo pipefail
+
+          LOCK_FILE=/tmp/icc-eval-core-api-pipeline.lock
+
+          (
+            if ! flock -n 200; then
+              echo "Another pipeline run is already active on this VM. Exiting without starting a new run."
+              exit 78
+            fi
+
+            echo "::group::Pipeline logs"
+            ./run_stack.sh 2>&1 | tee launch.log
+            echo "::endgroup::"
+          ) 200>"$LOCK_FILE"
+
       - name: Upload import log
         uses: actions/upload-artifact@v4
         if: always()
