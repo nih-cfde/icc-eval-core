@@ -214,10 +214,26 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    # causes keys to be rewritten as camelCase in the JSON response
     'DEFAULT_RENDERER_CLASSES': [
         'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
         'djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer',
     ],
+    "JSON_UNDERSCOREIZE": {
+        # causes fields with this name to not have underscores in their keys converted
+        # to camelCase in the JSON response
+        "ignore_fields": (
+            "overTime",
+            "continents",
+            "countries",
+            "regions",
+            "cities",
+            "languages",
+            "devices",
+            "operatingSystems",
+            "pageViews",
+        ),
+    },
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 100,
 }
