@@ -63,20 +63,19 @@ INSTALLED_APPS = [
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'cfde-api.cu-dbmi.dev',
     'cfde-eval.netlify.app',
     'metrics.cfdeconnect.org',
     os.environ.get("DOMAIN", ""),
-    os.environ.get("ALT_DOMAIN", ""),
 ]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
     "http://localhost:5175",
     "http://127.0.0.1:5175",
     "https://cfde-eval.netlify.app",
-    "https://cfde-api.cu-dbmi.dev",
     "https://metrics.cfdeconnect.org",
 ]
 
@@ -92,7 +91,6 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://127.0.0.1:5175",
     "https://cfde-eval.netlify.app",
-    "https://cfde-api.cu-dbmi.dev",
     "https://metrics.cfdeconnect.org",
 ]
 
@@ -216,10 +214,26 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    # causes keys to be rewritten as camelCase in the JSON response
     'DEFAULT_RENDERER_CLASSES': [
         'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
         'djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer',
     ],
+    "JSON_UNDERSCOREIZE": {
+        # causes fields with this name to not have underscores in their keys converted
+        # to camelCase in the JSON response
+        "ignore_fields": (
+            "overTime",
+            "continents",
+            "countries",
+            "regions",
+            "cities",
+            "languages",
+            "devices",
+            "operatingSystems",
+            "pageViews",
+        ),
+    },
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 100,
 }
