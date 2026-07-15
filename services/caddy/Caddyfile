@@ -10,7 +10,7 @@
 }
 
 # Production (HTTPS + automatic certs)
-{$DOMAIN}, {$ALT_DOMAIN} {
+{$DOMAIN} {
 	@backend_paths {
 		path /api/* /admin/* /api-auth/* /accounts/*
 	}
