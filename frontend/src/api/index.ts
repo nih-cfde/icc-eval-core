@@ -91,7 +91,6 @@ export const getProjects = async (coreProject?: string) => {
     ? projects
     : await request<typeof projects>("projects", {
         limit: 999,
-        all: true,
         coreProject,
       });
   if (data === notAuthed) return notAuthed;
@@ -111,7 +110,6 @@ export const getPublications = async (
     ? publications
     : await request<typeof publications>("publications", {
         limit: 999,
-        all: true,
         coreProject,
       });
   if (data === notAuthed) return notAuthed;
@@ -147,7 +145,6 @@ export const getAnalytics = (coreProject?: string) =>
     ? analytics
     : request<typeof analytics>("analytics", {
         limit: 999,
-        all: true,
         coreProject,
       });
 
@@ -163,7 +160,6 @@ export const getRepositories = async (coreProject?: string) => {
     ? repositories
     : await request<typeof repositories>("repositories", {
         limit: 999,
-        all: true,
         coreProject,
       });
   if (data === notAuthed) return notAuthed;

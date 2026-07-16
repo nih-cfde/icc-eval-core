@@ -1,4 +1,4 @@
-from rest_framework import viewsets, filters
+from rest_framework import mixins, viewsets, filters
 from rest_framework.response import Response
 from django_filters.rest_framework import DjangoFilterBackend
 from .permissions import CoreProjectAccessPermission, CoreProjectAccessQuerysetMixin
@@ -47,7 +47,7 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
     ordering = ['username']
 
 
-class CoreProjectViewSet(viewsets.ReadOnlyModelViewSet):
+class CoreProjectViewSet(mixins.ListModelMixin, viewsets.GenericViewSet):
     """
     ReadOnly API endpoint for core projects.
     """
@@ -59,14 +59,19 @@ class CoreProjectViewSet(viewsets.ReadOnlyModelViewSet):
     ordering_fields = ['id', 'name', 'award_amount', 'publications', 'repositories', 'analytics']
     ordering = ['id']
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        core_project_id = (
+            self.request.query_params.get('core_project')
+        )
+        if core_project_id:
+            queryset = queryset.filter(id=core_project_id)
+        return queryset
+
 
 class RepositoryViewSet(CoreProjectAccessQuerysetMixin, viewsets.ReadOnlyModelViewSet):
     """
     ReadOnly API endpoint for repositories.
-
-    The detail view includes a few large lists that aren't included in the list
-    view for performance reasons, specifically: `stars`, `forks`, `commits`,
-    `issues`, `pull_requests`
     """
     queryset = Repository.objects.select_related('core_project').all()
     serializer_class = RepositorySerializer
@@ -76,15 +81,6 @@ class RepositoryViewSet(CoreProjectAccessQuerysetMixin, viewsets.ReadOnlyModelVi
     search_fields = ['name', 'owner', 'description']
     ordering_fields = ['name', 'owner', 'created', 'modified', 'open_issues', 'open_pull_requests']
     ordering = ['-created']
-
-    def get_serializer_class(self):
-        # if the request came with the query param all=true, use the full serializer with all fields
-        if self.request.query_params.get('all', 'false').lower() == 'true':
-            return RepositorySerializer
-        
-        if self.action == 'list':
-            return RepositoryListSerializer
-        return RepositorySerializer
 
 
 class AnalyticsViewSet(CoreProjectAccessQuerysetMixin, viewsets.ReadOnlyModelViewSet):
