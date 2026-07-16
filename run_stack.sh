@@ -74,6 +74,8 @@ case "$ENV" in
         ;;
     prod)
         COMPOSE_FILES="-f docker-compose.yml -f compose-envs/docker-compose.prod.yml"
+		# don't tail logs after, since the prod stack is expected to run in the background
+		COMPOSE_POST_CMD=":"
         ;;
     *)
         echo "Error: unknown environment '$ENV'. Supported environments are 'dev' and 'prod'."
