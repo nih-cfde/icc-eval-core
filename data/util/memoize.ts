@@ -1,67 +1,68 @@
 import { createHash } from "crypto";
-import { existsSync, readFileSync, writeFileSync } from "fs";
-import { throttle } from "lodash-es";
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
 
 const { RAW_PATH } = process.env;
 
-/**
- * make simple cache mechanism with: persistent/disk cache, func memoization,
- * per-func ttl, single cache file. explored third party libraries: cacache,
- * memoize, memoize-fs, memoizee, file-system-cache, and more. none met all
- * requirements.
- */
+/** cache folder */
+const cache = `${RAW_PATH}/cache`;
+
+/** make folders if needed */
+mkdirSync(cache, { recursive: true });
+
+/** persistent func memoization with per-entry files on disk */
 export const memoize =
   <Args extends unknown[], Return>(
     func: (...args: Args) => Promise<Return>,
     options: Options = {},
   ) =>
   async (...args: Args) => {
-    /** set options defaults */
-    options.maxAge ??= 7 * 24 * 60 * 60;
-
-    /** get cache key unique to function and arguments */
-    const key = func.name + func.toString() + JSON.stringify(args);
-    /** make shorter unique cache key */
-    const hash = createHash("md5").update(key).digest("hex");
+    /** set default options */
+    options.maxAge ??= 1 * 24 * 60 * 60;
 
     /** current timestamp */
     const now = Date.now();
-    /** remove expired entry */
-    if (now - (cache[hash]?.timestamp ?? 0) > options.maxAge * 1000)
-      delete cache[hash];
 
-    /** return value */
-    let result: Return;
+    /** func properties */
+    const name = func.name || "anonymous";
+    const params = stringify(args);
+    const body = func.toString() || "";
+    /** hash of properties */
+    const hash = createHash("md5")
+      .update(name + params + body)
+      .digest("hex");
 
-    /** cached entry */
-    const { data, error } = cache[hash] ?? {};
+    /** specific cache file for this func */
+    const path = `${cache}/${hash}.json`;
 
-    if (data !== undefined) {
-      /** use cached data value */
-      result = data as Return;
-    } else if (error !== undefined) {
-      /** use cached error value */
-      throw Error(error);
-    } else {
-      try {
-        /** run function */
-        result = await func(...args);
-        /** set cache data value */
-        cache[hash] = { timestamp: now, data: result };
-      } catch (error) {
-        /** set cache error value */
-        cache[hash] = {
-          timestamp: now,
-          error: error instanceof Error ? error.message : String(error),
-        };
-        throw error;
+    /** get cached value */
+    const cached = readCache<Return>(path);
+
+    /** cached value */
+    if (cached) {
+      /** remove stale */
+      if (now - cached.timestamp > options.maxAge * 1000) deleteCache(path);
+      else {
+        /** return cached data */
+        if (cached.data !== undefined) return cached.data;
+        /** throw cached error */
+        if (cached.error !== undefined) throw Error(cached.error);
       }
     }
 
-    /** update cache */
-    saveCache();
-
-    return result;
+    try {
+      /** execute func */
+      const result = await func(...args);
+      /** write successful data */
+      writeCache(path, { timestamp: now, name, params, body, data: result });
+      return result;
+    } catch (error) {
+      /** write error */
+      writeCache(path, {
+        timestamp: now,
+        error: error instanceof Error ? error.message : String(error),
+      });
+      throw error;
+    }
   };
 
 type Options = {
@@ -69,36 +70,48 @@ type Options = {
   maxAge?: number;
 };
 
-/** on-disk cache */
-const cachePath = `${RAW_PATH}/cache.json`;
+type Entry<Data = unknown> = {
+  timestamp: number;
+  name?: string;
+  params?: string;
+  body?: string;
+  data?: Data;
+  error?: string;
+};
 
-/** global in-memory cache */
-let cache: Cache = {};
-
-/** cache store */
-type Cache = Record<
-  string,
-  {
-    timestamp: number;
-    data?: unknown;
-    error?: string;
+/** read from cache file */
+const readCache = <Data>(path: string): Entry<Data> | undefined => {
+  try {
+    const raw = readFileSync(path, "utf-8");
+    return JSON.parse(raw) as Entry<Data>;
+  } catch {
+    return undefined;
   }
->;
+};
 
-/** load disk cache into memory cache */
-if (existsSync(cachePath))
-  cache = JSON.parse(readFileSync(cachePath, "utf-8")) as Cache;
-
-/** save memory cache to disk cache */
-const saveCache = throttle(() => {
-  for (let attempt = 0; attempt < 100; attempt++) {
-    try {
-      return writeFileSync(cachePath, JSON.stringify(cache));
-    } catch {
-      /** remove oldest entry and retry */
-      const oldest = Object.keys(cache)[0];
-      if (!oldest) return;
-      delete cache[oldest];
-    }
+/** write to cache file */
+const writeCache = (path: string, entry: Entry) => {
+  try {
+    writeFileSync(path, JSON.stringify(entry));
+  } catch {
+    /** skip caching and allow func to run as normal */
   }
-}, 10000);
+};
+
+/** delete cache file */
+const deleteCache = (path: string) => {
+  try {
+    rmSync(path, { force: true });
+  } catch {
+    /** ignore error */
+  }
+};
+
+/** safely stringify */
+const stringify = (value: unknown) => {
+  try {
+    return JSON.stringify(value);
+  } catch {
+    return "[unserializable-args]";
+  }
+};

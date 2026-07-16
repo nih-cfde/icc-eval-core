@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  pipeline:
+  deploy:
     runs-on: [self-hosted, Linux, X64, cfde]
 
     permissions:
@@ -32,7 +32,7 @@ jobs:
           git pull
 
       - name: Re-build images
-        timeout-minutes: 30
+        timeout-minutes: 15
         working-directory: /srv/projects/icc-eval-core
         run: |
           set -euo pipefail
