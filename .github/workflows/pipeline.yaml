@@ -1,12 +1,84 @@
-name: Run pipeline
+name: Run Pipeline
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * *"
+
+concurrency:
+  group: pipeline-output-to-gcs
+  cancel-in-progress: false
 
 jobs:
-  pipeline:
+  pipeline-output:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+
     steps:
-      - name: Say Hello
-        run: echo "Hello, world!"
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build pipeline image with GitHub cache
+        uses: docker/build-push-action@v6
+        with:
+          context: ./data
+          file: ./data/Dockerfile
+          tags: icc-eval-core-pipeline:ci
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Prepare pipeline credentials file
+        run: |
+          set -euo pipefail
+          mkdir -p data/output
+          printf '%s' "${{ secrets.GA_CREDENTIALS }}" > data/.ga-credentials.json
+
+      - name: Run pipeline image
+        env:
+          AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
+          AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
+        run: |
+          set -euo pipefail
+          docker run --rm \
+            -e AUTH_ENTREZ \
+            -e AUTH_GITHUB \
+            -e HEADLESS_BROWSER=true \
+            -e MANUAL_PATH=./manual \
+            -e RAW_PATH=./raw \
+            -e OUTPUT_PATH=./output \
+            -e GOOGLE_APPLICATION_CREDENTIALS=/data/.ga-credentials.json \
+            -v "$PWD/data/output:/data/output" \
+            -v "$PWD/data/.ga-credentials.json:/data/.ga-credentials.json:ro" \
+            icc-eval-core-pipeline:ci
+
+      - name: Ensure output files exist
+        run: |
+          set -euo pipefail
+          if [ -z "$(ls -A data/output)" ]; then
+            echo "No files were produced in data/output"
+            exit 1
+          fi
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCS_CREDENTIALS }}
+
+      - name: Set up gcloud
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Upload output to GCS
+        run: |
+          set -euo pipefail
+          CURRENT_DATE=$(date +%Y-%m-%d)
+          gcloud storage cp --recursive data/output/. gs://icc-eval-core/pipeline-output/${CURRENT_DATE}/
+
+      - name: Remove temporary credentials file
+        if: always()
+        run: rm -f data/.ga-credentials.json
