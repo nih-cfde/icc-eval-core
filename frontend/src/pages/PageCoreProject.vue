@@ -105,7 +105,7 @@
     <strong v-else-if="repositories?.length === 0">
       <a href="https://nih-cfde.github.io/icc-eval-coordination/">
         See this readme for how to add your repositories</a
-      >.
+      >
     </strong>
 
     <template v-else>
@@ -248,7 +248,7 @@
     <strong v-else-if="analytics?.length === 0">
       <a href="https://nih-cfde.github.io/icc-eval-coordination/">
         See this readme for how to add your analytics</a
-      >.
+      >
     </strong>
 
     <template v-else>
