@@ -499,8 +499,13 @@ class CoreProjectAccessPermissionTests(TestCase):
 		self.assertEqual(self.client.get(f'/api/repositories/{self.repo_cp2.id}/').status_code, 404)
 		self.assertEqual(self.client.get(f'/api/analytics/{self.analytics_cp2.id}/').status_code, 404)
 
+		filtered = self.client.get('/api/core-projects/?coreProject=CP2')
+		self.assertEqual(filtered.status_code, 200)
+		filtered_items = filtered.json().get('results', filtered.json())
+		self.assertEqual(len(filtered_items), 1)
+		self.assertEqual(filtered_items[0]['id'], 'CP2')
+
 		# Unrestricted detail routes should remain accessible.
-		self.assertEqual(self.client.get('/api/core-projects/CP2/').status_code, 200)
 		self.assertEqual(self.client.get('/api/projects/P2/').status_code, 200)
 
 	def test_wildcard_mapping_user_sees_all_core_project_data(self):

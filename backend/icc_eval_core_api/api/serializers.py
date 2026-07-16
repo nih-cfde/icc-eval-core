@@ -134,9 +134,13 @@ class AnalyticsBreakdownUsersSerializer(serializers.ModelSerializer):
     Serializer for the AnalyticsBreakdownUsers model.
     """
 
+    activeUsers = serializers.JSONField(source='active_users', read_only=True)
+    newUsers = serializers.JSONField(source='new_users', read_only=True)
+    returningUsers = serializers.JSONField(source='returning_users', read_only=True)
+
     class Meta:
         model = AnalyticsBreakdownUsers
-        fields = ['active_users', 'new_users', 'returning_users']
+        fields = ['activeUsers', 'newUsers', 'returningUsers']
 
 
 class AnalyticsBreakdownUsersEventsSerializer(AnalyticsBreakdownUsersSerializer):
@@ -144,9 +148,11 @@ class AnalyticsBreakdownUsersEventsSerializer(AnalyticsBreakdownUsersSerializer)
     Serializer for the AnalyticsBreakdownUsersEvents model.
     """
 
+    engagedSessions = serializers.JSONField(source='engaged_sessions', read_only=True)
+
     class Meta(AnalyticsBreakdownUsersSerializer.Meta):
         model = AnalyticsBreakdownUsersEvents
-        fields = AnalyticsBreakdownUsersSerializer.Meta.fields + ['engaged_sessions']
+        fields = AnalyticsBreakdownUsersSerializer.Meta.fields + ['engagedSessions']
 
 
 class AnalyticsSerializer(serializers.ModelSerializer):

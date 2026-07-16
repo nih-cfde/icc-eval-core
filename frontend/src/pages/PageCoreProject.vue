@@ -102,6 +102,12 @@
       Sorry, you're not authorized to view this data
     </p>
 
+    <strong v-else-if="repositories?.length === 0">
+      <a href="https://nih-cfde.github.io/icc-eval-coordination/">
+        See this readme for how to add your repositories</a
+      >
+    </strong>
+
     <template v-else>
       <AppTable
         :cols="repositoryColumns"
@@ -193,12 +199,6 @@
 
       <AppCheckbox v-model="cumulative">Cumulative</AppCheckbox>
 
-      <strong v-if="repositories?.length === 0">
-        <a href="https://nih-cfde.github.io/icc-eval-coordination/">
-          See this readme for how to add your repositories </a
-        >.
-      </strong>
-
       <div class="col">
         <AppHeading level="3">Notes</AppHeading>
 
@@ -244,6 +244,12 @@
     <p v-if="analytics === notAuthed" class="error">
       Sorry, you're not authorized to view this data
     </p>
+
+    <strong v-else-if="analytics?.length === 0">
+      <a href="https://nih-cfde.github.io/icc-eval-coordination/">
+        See this readme for how to add your analytics</a
+      >
+    </strong>
 
     <template v-else>
       <dl class="details">
@@ -310,12 +316,6 @@
           </template>
         </div>
       </dl>
-
-      <strong v-if="analytics?.length === 0">
-        <a href="https://nih-cfde.github.io/icc-eval-coordination/">
-          See this readme for how to add your analytics</a
-        >.
-      </strong>
 
       <div class="col">
         <AppHeading level="3">Notes</AppHeading>
