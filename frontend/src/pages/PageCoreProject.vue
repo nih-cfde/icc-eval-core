@@ -360,12 +360,13 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-import { orderBy, startCase, sumBy, uniq } from "lodash";
+import { groupBy, orderBy, startCase, sumBy, uniq } from "lodash";
 import { useTitle } from "@vueuse/core";
 import {
   notAuthed,
   useAnalytics,
   useCoreProjects,
+  useProjects,
   usePublications,
   useRepositories,
 } from "@/api";
@@ -397,6 +398,7 @@ useTitle(computed(() => `${id.value} | ${VITE_TITLE}`));
 /** fetch data for currently viewed core project */
 const { data: coreProjects } = useCoreProjects(id);
 const coreProject = computed(() => coreProjects.value?.[0]);
+const { data: projects } = useProjects(id);
 const { data: publications } = usePublications(id);
 const { data: analytics } = useAnalytics(id);
 const { data: repositories } = useRepositories(id);
@@ -404,16 +406,37 @@ const { data: repositories } = useRepositories(id);
 /** whether charts should be shown in cumulative mode */
 const cumulative = ref(true);
 
+/** award amount per fiscal year, most recent first */
+const awardsByYear = computed(() =>
+  orderBy(
+    Object.entries(
+      groupBy(
+        projects.value?.filter((project) => project.fiscalYear),
+        "fiscalYear",
+      ),
+    ),
+    ([year]) => year,
+    "desc",
+  ).map(([year, group]) => [year, sumBy(group, "awardAmount")] as const),
+);
+
 /** top-level details */
 const details = computed(() => [
   ["Projects", ...(coreProject.value?.projects ?? [])],
   ["Name", coreProject.value?.name],
   [
     "Award",
-    format(coreProject.value?.awardAmount, true, {
-      style: "currency",
-      currency: "USD",
-    }),
+    [
+      format(coreProject.value?.awardAmount, true, {
+        style: "currency",
+        currency: "USD",
+      }),
+      "total",
+    ],
+    ...awardsByYear.value.map(([year, amount]) => [
+      format(amount, true, { style: "currency", currency: "USD" }),
+      `in FY ${year}`,
+    ]),
   ],
   ["Publications", `${format(publications.value, true)} publications`],
   [

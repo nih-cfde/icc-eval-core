@@ -216,6 +216,7 @@ class ProjectSerializer(serializers.ModelSerializer):
             'opportunity',
             'application',
             'award_amount',
+            'fiscal_year',
             'activity_code',
             'agency_code',
             'date_start',

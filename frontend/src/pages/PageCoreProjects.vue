@@ -100,8 +100,8 @@ const baseCols: Cols<Rows> = [
   {
     slot: "award-amount",
     key: "awardAmount",
-    name: "Award",
-    attrs: { title: "Total award amount across all projects" },
+    name: "Total Award",
+    attrs: { title: "Total award amount across all project years" },
   },
   {
     key: "publications",
