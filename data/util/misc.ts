@@ -1,5 +1,9 @@
-import { availableParallelism as cores } from "os";
+import { availableParallelism } from "os";
 import pSettle, { isFulfilled, isRejected } from "p-settle";
+
+/** cpu utilization */
+const cores = Math.ceil(availableParallelism() / 2);
+console.debug({ cores });
 
 /** wait */
 export const sleep = (ms = 0) =>
@@ -9,7 +13,7 @@ export const sleep = (ms = 0) =>
 export const settled = async <Value, Result>(
   items: Value[],
   mapper: (item: Value, index: number) => Result,
-  concurrency = Math.ceil(cores() / 2),
+  concurrency = cores,
 ) => {
   const results = await pSettle(items, { mapper, concurrency });
   const successes = results.filter(isFulfilled).map(({ value }) => value);
