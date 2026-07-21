@@ -9,7 +9,7 @@ export const sleep = (ms = 0) =>
 export const settled = async <Value, Result>(
   items: Value[],
   mapper: (item: Value, index: number) => Result,
-  concurrency = cores(),
+  concurrency = Math.ceil(cores() / 2),
 ) => {
   const results = await pSettle(items, { mapper, concurrency });
   const successes = results.filter(isFulfilled).map(({ value }) => value);
