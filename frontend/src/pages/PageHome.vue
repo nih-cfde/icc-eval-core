@@ -63,7 +63,7 @@
       />
 
       <AppTimeChart
-        title="Award Amount (by fiscal year)"
+        title="Fiscal Year Awards"
         :data="awardsOverTime"
         :cumulative="cumulative"
         :y-format="

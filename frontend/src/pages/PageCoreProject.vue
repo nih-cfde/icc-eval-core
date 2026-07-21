@@ -412,12 +412,15 @@ const awardsByYear = computed(() =>
     Object.entries(
       groupBy(
         projects.value?.filter((project) => project.fiscalYear),
-        "fiscalYear",
+        (project) => project.fiscalYear,
       ),
     ),
     ([year]) => year,
     "desc",
-  ).map(([year, group]) => [year, sumBy(group, "awardAmount")] as const),
+  ).map(
+    ([year, projects]) =>
+      [year, sumBy(projects, (project) => project.awardAmount)] as const,
+  ),
 );
 
 /** top-level details */
