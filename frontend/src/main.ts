@@ -3,6 +3,7 @@ import { configure } from "vue-gtag";
 import { createRouter, createWebHistory } from "vue-router";
 import { VueQueryPlugin } from "@tanstack/vue-query";
 import App from "./App.vue";
+import PageAbout from "./pages/PageAbout.vue";
 import PageCoreProject from "./pages/PageCoreProject.vue";
 import PageCoreProjects from "./pages/PageCoreProjects.vue";
 import PageDrc from "./pages/PageDrc.vue";
@@ -32,6 +33,7 @@ const routes = [
   { path: "/core-projects", component: PageCoreProjects },
   { path: "/core-project/:id", component: PageCoreProject },
   { path: "/drc", component: PageDrc },
+  { path: "/about", component: PageAbout },
 ];
 
 const router = createRouter({ history: createWebHistory(), routes });

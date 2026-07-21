@@ -55,19 +55,12 @@ onUpdated(updateLink);
 <style scoped>
 .anchor {
   position: relative;
-  left: 0.75em;
-  width: 0;
-  height: 0.75em;
-  margin-left: -0.75em;
+  top: 0.1em;
   padding: 0;
   opacity: 0;
   transition:
     opacity var(--fast),
     color var(--fast);
-}
-
-.anchor > svg {
-  height: 100%;
 }
 
 .anchor:hover {

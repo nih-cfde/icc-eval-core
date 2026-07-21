@@ -46,7 +46,9 @@ const target = computed(() =>
 </script>
 
 <style scoped>
-.link > svg + svg {
-  display: none;
+.link > svg {
+  position: relative;
+  top: 0.05em;
+  margin-left: 0.35em;
 }
 </style>
