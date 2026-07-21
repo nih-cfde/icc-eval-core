@@ -39,6 +39,12 @@ jobs:
           mkdir -p data/output
           printf '%s' "${{ secrets.GA_CREDENTIALS }}" > data/.ga-credentials.json
 
+          # check that the credentials file is valid JSON
+          if ! jq -e . data/.ga-credentials.json > /dev/null; then
+            echo "Invalid JSON in GA_CREDENTIALS secret"
+            exit 1
+          fi
+
       - name: Run pipeline image
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
