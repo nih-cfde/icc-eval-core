@@ -180,15 +180,18 @@ export const getRepositoriesOverview = () =>
 
 /** get drc data from api */
 export const getDrcData = async () => {
-  const data = mock
-    ? { code: drcCode, dcc: drcDcc, file: drcFile }
-    : await request<{
-        code: typeof drcCode;
-        dcc: typeof drcDcc;
-        file: typeof drcFile;
-      }>("drc");
-
-  return data;
+  const code = mock
+    ? drcCode
+    : await request<typeof drcCode>("drc-code", { limit: 999 });
+  const dcc = mock
+    ? drcDcc
+    : await request<typeof drcDcc>("drc-dcc", { limit: 999 });
+  const file = mock
+    ? drcFile
+    : await request<typeof drcFile>("drc-file", { limit: 999 });
+  if (code === notAuthed || dcc === notAuthed || file === notAuthed)
+    return notAuthed;
+  return { code, dcc, file };
 };
 
 export type DRC = typeof drcCode | typeof drcDcc | typeof drcFile;
