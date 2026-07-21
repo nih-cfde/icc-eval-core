@@ -34,13 +34,15 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Prepare pipeline credentials file
+        env:
+          GA_CREDENTIALS: ${{ secrets.GA_CREDENTIALS }}
         run: |
           set -euo pipefail
-          mkdir -p data/output
-          printf '%s' "${{ secrets.GA_CREDENTIALS }}" > data/.ga-credentials.json
 
-          # check that the credentials file is valid JSON
-          if ! jq -e . data/.ga-credentials.json > /dev/null; then
+          mkdir -p data/output
+          printf '%s' "$GA_CREDENTIALS" > data/.ga-credentials.json
+
+          if ! jq -e . data/.ga-credentials.json >/dev/null; then
             echo "Invalid JSON in GA_CREDENTIALS secret"
             exit 1
           fi
