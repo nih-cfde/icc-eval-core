@@ -1,3 +1,4 @@
+import { availableParallelism as cores } from "os";
 import pSettle, { isFulfilled, isRejected } from "p-settle";
 
 /** wait */
@@ -8,7 +9,7 @@ export const sleep = (ms = 0) =>
 export const settled = async <Value, Result>(
   items: Value[],
   mapper: (item: Value, index: number) => Result,
-  concurrency = 10,
+  concurrency = cores(),
 ) => {
   const results = await pSettle(items, { mapper, concurrency });
   const successes = results.filter(isFulfilled).map(({ value }) => value);
