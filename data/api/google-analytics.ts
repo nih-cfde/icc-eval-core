@@ -131,7 +131,6 @@ export const getDimension = async (property: PropertyId, dimension: string) => {
     dimensions: [{ name: dimension }],
     ...(filter ? { dimensionFilter: filter } : {}),
     orderBys: [{ desc: true, metric: { metricName: metric } }],
-    limit: 100,
   });
 
   /** run reports */
@@ -171,7 +170,6 @@ export const getEvents = async (property: PropertyId, eventName: string) => {
       },
     },
     orderBys: [{ desc: true, metric: { metricName: "eventCount" } }],
-    limit: 100,
   });
 
   return runReports(property, [
