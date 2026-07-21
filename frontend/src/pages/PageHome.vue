@@ -63,7 +63,7 @@
       />
 
       <AppTimeChart
-        title="Award Amount"
+        title="Fiscal Year Awards"
         :data="awardsOverTime"
         :cumulative="cumulative"
         :y-format="
@@ -74,7 +74,7 @@
               notation: 'compact',
             })
         "
-        by="month"
+        by="year"
         group="group"
       />
 
@@ -291,12 +291,15 @@ const projectsOverTime = computed(
   () => projects.value?.map(({ dateStart }) => [dateStart, 1] as const) || [],
 );
 
-/** chart award amount over time */
+/** chart award amount per fiscal year */
 const awardsOverTime = computed(
   () =>
-    projects.value?.map(
-      ({ dateStart, awardAmount }) => [dateStart, awardAmount] as const,
-    ) || [],
+    projects.value
+      ?.filter(({ fiscalYear }) => fiscalYear)
+      .map(
+        ({ fiscalYear, awardAmount }) =>
+          [new Date(fiscalYear, 0, 1), awardAmount] as const,
+      ) || [],
 );
 
 /** chart number of publications over time */

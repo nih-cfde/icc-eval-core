@@ -37,6 +37,7 @@
       <AppLink to="/">Home</AppLink>
       <AppLink to="/core-projects">Core Projects</AppLink>
       <AppLink to="/drc">DRC</AppLink>
+      <AppLink to="/about">About</AppLink>
     </nav>
   </header>
 </template>
@@ -77,7 +78,13 @@ header {
 }
 
 header a {
+  padding: 0 5px;
   text-decoration: none;
+}
+
+header a:hover {
+  background: var(--theme);
+  color: white;
 }
 
 @media (max-width: 800px) {

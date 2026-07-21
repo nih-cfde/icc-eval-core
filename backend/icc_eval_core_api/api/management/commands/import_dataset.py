@@ -296,6 +296,7 @@ class Command(BaseCommand):
                         'opportunity': opportunity,
                         'application': item['application'],
                         'award_amount': item.get('awardAmount', 0),
+                        'fiscal_year': item.get('fiscalYear', 0),
                         'activity_code': item.get('activityCode', ''),
                         'agency_code': item.get('agencyCode', ''),
                         'date_start': self._to_datetime_or_none(item.get('dateStart')),

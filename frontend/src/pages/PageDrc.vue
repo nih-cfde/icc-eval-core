@@ -7,7 +7,7 @@
     v-for="([label, { count, size, types }], index) in overview"
     :key="index"
   >
-    <section class="narrow">
+    <section>
       <AppHeading level="2">{{ label }}</AppHeading>
 
       <dl class="details">
@@ -78,6 +78,10 @@ const overview = computed(() => [
 </script>
 
 <style scoped>
+section {
+  --content: 600px;
+}
+
 .file-type {
   display: inline-block;
   margin: 2px 2px;

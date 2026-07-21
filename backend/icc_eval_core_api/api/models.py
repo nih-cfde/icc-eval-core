@@ -98,6 +98,7 @@ class Project(models.Model):
     )
     application = models.BigIntegerField(unique=True)
     award_amount = models.DecimalField(max_digits=15, decimal_places=2)
+    fiscal_year = models.IntegerField(default=0)
     activity_code = models.CharField(max_length=20)
     agency_code = models.CharField(max_length=20)
     date_start = models.DateTimeField()

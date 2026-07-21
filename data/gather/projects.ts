@@ -40,6 +40,7 @@ export const getProjects = async (opportunities: string[]) => {
     opportunity: project.opportunity_number ?? "",
     application: project.appl_id ?? 0,
     awardAmount: project.award_amount ?? 0,
+    fiscalYear: project.fiscal_year ?? 0,
     activityCode: project.activity_code ?? "",
     agencyCode: project.agency_code ?? "",
     dateStart: project.project_start_date ?? "",

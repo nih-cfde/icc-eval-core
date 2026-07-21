@@ -1,5 +1,11 @@
 <template>
-  <v-chart ref="chart" class="chart" :option="options" :group="group" />
+  <v-chart
+    ref="chart"
+    v-if="props.data.length"
+    class="chart"
+    :option="options"
+    :group="group"
+  />
 </template>
 
 <script setup lang="ts">

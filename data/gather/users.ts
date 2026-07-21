@@ -1,6 +1,7 @@
 import { uniq } from "lodash-es";
 import { downloadFile, loadFile } from "@/util/file";
 import { log } from "@/util/log";
+import { memoize } from "@/util/memoize";
 import { count } from "@/util/string";
 
 const { MANUAL_PATH } = process.env;
@@ -10,7 +11,7 @@ const spreadsheet =
   "https://docs.google.com/spreadsheets/d/1klXsMhLYCb3E5SKYDutWFCRymLfR-RtbNyKafz3lVw4/export?format=csv";
 
 /** for each core project, get list of users who are allowed to access it */
-export const getUsers = async () => {
+export const getUsers = memoize(async () => {
   log(`Getting user map from ${spreadsheet}`);
 
   const { path: mapFile } = await downloadFile(
@@ -57,4 +58,4 @@ export const getUsers = async () => {
   log(`${count(uniq(Object.values(map).flat()))} users`, "success");
 
   return map;
-};
+});

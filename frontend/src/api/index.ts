@@ -180,15 +180,18 @@ export const getRepositoriesOverview = () =>
 
 /** get drc data from api */
 export const getDrcData = async () => {
-  const data = mock
-    ? { code: drcCode, dcc: drcDcc, file: drcFile }
-    : await request<{
-        code: typeof drcCode;
-        dcc: typeof drcDcc;
-        file: typeof drcFile;
-      }>("drc");
-
-  return data;
+  const code = mock
+    ? drcCode
+    : await request<typeof drcCode>("drc-code", { limit: 999 });
+  const dcc = mock
+    ? drcDcc
+    : await request<typeof drcDcc>("drc-dcc", { limit: 999 });
+  const file = mock
+    ? drcFile
+    : await request<typeof drcFile>("drc-file", { limit: 999 });
+  if (code === notAuthed || dcc === notAuthed || file === notAuthed)
+    return notAuthed;
+  return { code, dcc, file };
 };
 
 export type DRC = typeof drcCode | typeof drcDcc | typeof drcFile;
@@ -196,14 +199,14 @@ export type DRC = typeof drcCode | typeof drcDcc | typeof drcFile;
 /** load and use core project data */
 export const useCoreProjects = (coreProject?: Ref<string | undefined>) =>
   useQuery({
-    queryKey: ["getCoreProjects", coreProject],
+    queryKey: ["getCoreProjects", coreProject?.value],
     queryFn: () => getCoreProjects(coreProject?.value),
   });
 
 /** load and use project data */
 export const useProjects = (coreProject?: Ref<string | undefined>) =>
   useQuery({
-    queryKey: ["getProjects", coreProject],
+    queryKey: ["getProjects", coreProject?.value],
     queryFn: () => getProjects(coreProject?.value),
   });
 
@@ -211,7 +214,7 @@ export const useProjects = (coreProject?: Ref<string | undefined>) =>
 export const usePublications = (coreProject?: Ref<string | undefined>) => {
   const { data: journals } = useJournals();
   return useQuery({
-    queryKey: ["getPublications", coreProject, journals],
+    queryKey: ["getPublications", coreProject?.value, journals.value],
     queryFn: () => getPublications(coreProject?.value, journals.value ?? []),
   });
 };
@@ -226,7 +229,7 @@ export const useJournals = () =>
 /** load and use analytics data */
 export const useAnalytics = (coreProject?: Ref<string | undefined>) =>
   useQuery({
-    queryKey: ["getAnalytics", coreProject],
+    queryKey: ["getAnalytics", coreProject?.value],
     queryFn: () => getAnalytics(coreProject?.value),
   });
 
@@ -240,7 +243,7 @@ export const useAnalyticsOverview = () =>
 /** load and use repository data */
 export const useRepositories = (coreProject?: Ref<string | undefined>) =>
   useQuery({
-    queryKey: ["getRepositories", coreProject],
+    queryKey: ["getRepositories", coreProject?.value],
     queryFn: () => getRepositories(coreProject?.value),
   });
 
