@@ -10,6 +10,10 @@ namespace NodeJS {
     readonly OUTPUT_PATH: string;
     /** run playwright in headless mode */
     readonly HEADLESS_BROWSER: string;
+    /** enable or disable cache */
+    readonly CACHE: string;
+    /** path to google credentials */
+    readonly GOOGLE_APPLICATION_CREDENTIALS: string;
 
     /** .env.local */
 

@@ -4,10 +4,6 @@
       Learn more
     </AppLink>
 
-    <span>Built on {{ builtOn }}</span>
-
-    <span class="spacer" />
-
     <span>
       Developed with support from NIH Award
       <AppLink to="/core-project/U54OD036472">U54 OD036472</AppLink>
@@ -19,6 +15,8 @@
 import AppLink from "@/components/AppLink.vue";
 
 const builtOn = BUILT_ON;
+
+console.info(`Frontend built on ${builtOn}`);
 </script>
 
 <style scoped>

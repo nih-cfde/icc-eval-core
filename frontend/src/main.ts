@@ -1,13 +1,14 @@
+import "./styles.css";
 import { createApp } from "vue";
 import { configure } from "vue-gtag";
 import { createRouter, createWebHistory } from "vue-router";
 import { VueQueryPlugin } from "@tanstack/vue-query";
 import App from "./App.vue";
+import PageAbout from "./pages/PageAbout.vue";
 import PageCoreProject from "./pages/PageCoreProject.vue";
 import PageCoreProjects from "./pages/PageCoreProjects.vue";
 import PageDrc from "./pages/PageDrc.vue";
 import PageHome from "./pages/PageHome.vue";
-import "./styles.css";
 
 /** app pages */
 const routes = [
@@ -32,9 +33,15 @@ const routes = [
   { path: "/core-projects", component: PageCoreProjects },
   { path: "/core-project/:id", component: PageCoreProject },
   { path: "/drc", component: PageDrc },
+  { path: "/about", component: PageAbout },
 ];
 
 const router = createRouter({ history: createWebHistory(), routes });
+
+router.afterEach(async (to) => {
+  const id = to.hash.slice(1);
+  if (id) document.getElementById(id)?.scrollIntoView();
+});
 
 const app = createApp(App);
 app.use(router);
