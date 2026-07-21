@@ -66,7 +66,7 @@
   </section>
 
   <section>
-    <AppHeading level="2" id="contact">Who can see this info?</AppHeading>
+    <AppHeading level="2">Who can see this info?</AppHeading>
 
     <p>
       First, there are two types of info we gather: <em>standard info</em> and

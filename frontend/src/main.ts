@@ -1,3 +1,4 @@
+import "./styles.css";
 import { createApp } from "vue";
 import { configure } from "vue-gtag";
 import { createRouter, createWebHistory } from "vue-router";
@@ -8,7 +9,6 @@ import PageCoreProject from "./pages/PageCoreProject.vue";
 import PageCoreProjects from "./pages/PageCoreProjects.vue";
 import PageDrc from "./pages/PageDrc.vue";
 import PageHome from "./pages/PageHome.vue";
-import "./styles.css";
 
 /** app pages */
 const routes = [
@@ -37,6 +37,11 @@ const routes = [
 ];
 
 const router = createRouter({ history: createWebHistory(), routes });
+
+router.afterEach(async (to) => {
+  const id = to.hash.slice(1);
+  if (id) document.getElementById(id)?.scrollIntoView();
+});
 
 const app = createApp(App);
 app.use(router);
