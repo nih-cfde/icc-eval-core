@@ -121,7 +121,7 @@ export const getOpportunities = async () => {
     log(error, "warn", 2);
   });
 
-  if (!opportunities.length) log("No opportunities found", "error");
+  if (!opportunities.length) log("No opportunities found", "warn");
 
   log(`Including ${count(manualOpportunities)} manual opportunities`);
 

@@ -2,8 +2,9 @@ import { availableParallelism } from "os";
 import pSettle, { isFulfilled, isRejected } from "p-settle";
 
 /** cpu utilization */
-const cores = Math.ceil(availableParallelism() / 2);
-console.debug({ cores });
+const cores = availableParallelism();
+const defaultConcurrency = Math.ceil(cores / 2);
+console.debug(`${cores} cores, ${defaultConcurrency} concurrency`);
 
 /** wait */
 export const sleep = (ms = 0) =>

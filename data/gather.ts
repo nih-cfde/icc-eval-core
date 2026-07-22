@@ -12,7 +12,7 @@ import {
 import { getUsers } from "@/gather/users";
 import { browser } from "@/util/browser";
 import { saveFile } from "@/util/file";
-import { divider } from "@/util/log";
+import { divider, timeEnd, timeStart } from "@/util/log";
 import { match } from "@/util/string";
 
 const { MANUAL_PATH, RAW_PATH, OUTPUT_PATH } = process.env;
@@ -25,55 +25,69 @@ mkdirSync(OUTPUT_PATH, { recursive: true });
 /** ========================================================================= */
 
 divider("Opportunities");
+timeStart();
 const opportunities = await getOpportunities();
 saveFile(opportunities, `${OUTPUT_PATH}/opportunities.json`);
+// saveFile(opportunities, `${MANUAL_PATH}/opportunities.json`);
+timeEnd();
 
 /** ========================================================================= */
 
 divider("Projects");
+timeStart();
 const { coreProjects, projects } = await getProjects(
   opportunities.map((opportunity) => opportunity.id),
 );
 saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
 saveFile(projects, `${OUTPUT_PATH}/projects.json`);
+timeEnd();
 
 /** ========================================================================= */
 
 divider("Publications");
+timeStart();
 const publications = await getPublications(
   projects.map((project) => project.coreProject),
 );
 saveFile(publications, `${OUTPUT_PATH}/publications.json`);
+timeEnd();
 
 /** ========================================================================= */
 
 divider("Journals");
+timeStart();
 const journals = await getJournals(
   publications.map((publication) => publication.journal),
 );
 saveFile(journals, `${OUTPUT_PATH}/journals.json`);
+timeEnd();
 
 /** ========================================================================= */
 
 divider("Analytics");
+timeStart();
 const analytics = await getAnalytics();
 saveFile(analytics, `${OUTPUT_PATH}/analytics.json`);
 const analyticsOverview = await getAnalyticsOverview(analytics);
 saveFile(analyticsOverview, `${OUTPUT_PATH}/analytics-overview.json`);
+timeEnd();
 
 /** ========================================================================= */
 
 divider("Repositories");
+timeStart();
 const repositories = await getRepositories(
   coreProjects.map((coreProject) => coreProject.id),
 );
 saveFile(repositories, `${OUTPUT_PATH}/repositories.json`);
 const repositoriesOverview = await getRepositoriesOverview(repositories);
 saveFile(repositoriesOverview, `${OUTPUT_PATH}/repositories-overview.json`);
+timeEnd();
 
 /** ========================================================================= */
 
 divider("Core project counts");
+timeStart();
 for (const coreProject of coreProjects) {
   coreProject.publications = publications.filter((publication) =>
     match(publication.coreProject, coreProject.id),
@@ -86,20 +100,25 @@ for (const coreProject of coreProjects) {
   ).length;
 }
 saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
+timeEnd();
 
 /** ========================================================================= */
 
 divider("DRC");
+timeStart();
 const { dcc, file, code } = await getDrc();
 saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
 saveFile(file, `${OUTPUT_PATH}/drc-file.json`);
 saveFile(code, `${OUTPUT_PATH}/drc-code.json`);
+timeEnd();
 
 /** ========================================================================= */
 
 divider("Users");
+timeStart();
 const users = await getUsers();
 saveFile(users, `${OUTPUT_PATH}/users.json`);
+timeEnd();
 
 /** ========================================================================= */
 

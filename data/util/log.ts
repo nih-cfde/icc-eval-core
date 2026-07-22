@@ -36,3 +36,29 @@ export const divider = (message: Message) => {
   log(message, "primary");
   log(hr, "secondary");
 };
+
+/** singleton start timestamp */
+let start = 0;
+
+/** log start timestamp */
+export const timeStart = () => {
+  const now = Date.now();
+  start = now;
+  log(`Timer started ${now}`, "secondary");
+};
+
+/** log end timestamp */
+export const timeEnd = () => {
+  const now = Date.now();
+  const took = now - start;
+  start = 0;
+  log(`Timer ended ${now}, took ${formatTime(took)}ms`, "secondary");
+};
+
+/** format ms to minutes and seconds */
+const formatTime = (ms: number) => {
+  const totalSeconds = Math.floor(ms / 1000);
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+  return `${minutes}m${seconds}s`;
+};
