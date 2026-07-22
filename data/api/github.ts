@@ -2,15 +2,17 @@ import { uniq, uniqBy } from "lodash-es";
 import { Octokit, type RequestError } from "octokit";
 import { type Repository } from "@octokit/graphql-schema";
 import { throttling } from "@octokit/plugin-throttling";
-import { log } from "@/util/log";
+import { formatDuration, log } from "@/util/log";
 import { memoize } from "@/util/memoize";
 
 const { AUTH_GITHUB } = process.env;
 
-/** number of times to retry after being rate limited */
-const retries = 4;
+/** max number of request attempts */
+const attempts = 2;
 /** multiply retry wait time for extra safety */
 const waitFactor = 2;
+/** max retry time, in ms */
+const maxRetry = 10 * 60 * 1000;
 
 /** use provided rate-limiting middleware */
 const withPlugins = Octokit.plugin(throttling);
@@ -20,16 +22,28 @@ export const octokit = new withPlugins({
   auth: AUTH_GITHUB,
   /** https://github.com/octokit/plugin-throttling.js */
   throttle: {
-    onRateLimit: (retryAfter, options, octokit, retryCount) => {
-      log(`Request quota exhausted for request`, "warn");
+    onRateLimit: (retryAfter, options, octokit, attempt) => {
+      log(`RateLimit on ${options.url}`, "warn");
 
-      if (retryCount <= retries) {
-        log(`Retrying in ${retryAfter}s, retry ${retryCount + 1}`, "warn");
-        return true;
+      attempt++;
+      log(`Attempt ${attempt} of ${attempts}`, "warn");
+
+      if (attempt >= attempts) {
+        log("Exceeded attempt count", "error");
+        return false;
       }
+
+      log(`Retrying after ${formatDuration(retryAfter * 1000)}`, "warn");
+
+      if (retryAfter > maxRetry) {
+        log(`Exceeded max retry time of ${formatDuration(maxRetry)}`, "error");
+        return false;
+      }
+
+      return true;
     },
     onSecondaryRateLimit: (retryAfter, options) => {
-      log(`SecondaryRateLimit detected for request ${options.url}`, "warn");
+      log(`SecondaryRateLimit on ${options.url}`, "warn");
     },
   },
 

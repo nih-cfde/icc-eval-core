@@ -15,6 +15,9 @@ import { saveFile } from "@/util/file";
 import { divider, log, timeEnd, timeStart } from "@/util/log";
 import { match } from "@/util/string";
 
+divider("Start");
+
+log("Env vars:");
 log(process.env);
 timeStart("Total");
 

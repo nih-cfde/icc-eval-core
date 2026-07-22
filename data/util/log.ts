@@ -46,7 +46,7 @@ const timers: Record<string, number> = {};
 export const timeStart = (label = "default") => {
   const now = Date.now();
   timers[label] = now;
-  log(`${label} timer started, ${formatTimestamp(now)}`, "secondary");
+  log(`${label} timer started, ${formatTimestamp(now)}`, "secondary", 1);
 };
 
 /** log end timestamp */
@@ -59,15 +59,16 @@ export const timeEnd = (label = "default") => {
   log(
     `${label} timer ended, ${formatTimestamp(now)}, took ${formatDuration(took)}`,
     "secondary",
+    1,
   );
 };
 
 /** format timestamp */
-const formatTimestamp = (timestamp: number) =>
+export const formatTimestamp = (timestamp: number) =>
   new Date(timestamp).toLocaleString();
 
 /** format duration in ms to minutes and seconds */
-const formatDuration = (ms: number) => {
+export const formatDuration = (ms: number) => {
   const totalSeconds = Math.floor(ms / 1000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
