@@ -53,7 +53,7 @@ export const timeEnd = () => {
   const took = now - start;
   start = 0;
   log(
-    `Timer ended ${formatTimestamp(now)}, took ${formatDuration(took)}ms`,
+    `Timer ended ${formatTimestamp(now)}, took ${formatDuration(took)}`,
     "secondary",
   );
 };
@@ -67,5 +67,5 @@ const formatDuration = (ms: number) => {
   const totalSeconds = Math.floor(ms / 1000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
-  return `${minutes}m${seconds}s`;
+  return `${minutes}m ${seconds}s`;
 };
