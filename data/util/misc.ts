@@ -1,10 +1,15 @@
 import { availableParallelism } from "os";
+import { clamp } from "lodash-es";
 import pSettle, { isFulfilled, isRejected } from "p-settle";
+import { log } from "@/util/log";
+
+const { CONCURRENCY } = process.env;
 
 /** cpu utilization */
 const cores = availableParallelism();
-const defaultConcurrency = Math.ceil(cores / 2);
-console.debug(`${cores} cores, ${defaultConcurrency} concurrency`);
+let defaultConcurrency = Math.ceil(Number(CONCURRENCY) || cores / 2);
+defaultConcurrency = clamp(defaultConcurrency, 1, 24);
+log(`${cores} cores, ${defaultConcurrency} default concurrency`, "secondary");
 
 /** wait */
 export const sleep = (ms = 0) =>

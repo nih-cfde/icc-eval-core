@@ -12,8 +12,11 @@ import {
 import { getUsers } from "@/gather/users";
 import { browser } from "@/util/browser";
 import { saveFile } from "@/util/file";
-import { divider, timeEnd, timeStart } from "@/util/log";
+import { divider, log, timeEnd, timeStart } from "@/util/log";
 import { match } from "@/util/string";
+
+log(process.env);
+timeStart("Total");
 
 const { MANUAL_PATH, RAW_PATH, OUTPUT_PATH } = process.env;
 
@@ -25,69 +28,69 @@ mkdirSync(OUTPUT_PATH, { recursive: true });
 /** ========================================================================= */
 
 divider("Opportunities");
-timeStart();
+timeStart("Opportunities");
 const opportunities = await getOpportunities();
 saveFile(opportunities, `${OUTPUT_PATH}/opportunities.json`);
 // saveFile(opportunities, `${MANUAL_PATH}/opportunities.json`);
-timeEnd();
+timeEnd("Opportunities");
 
 /** ========================================================================= */
 
 divider("Projects");
-timeStart();
+timeStart("Projects");
 const { coreProjects, projects } = await getProjects(
   opportunities.map((opportunity) => opportunity.id),
 );
 saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
 saveFile(projects, `${OUTPUT_PATH}/projects.json`);
-timeEnd();
+timeEnd("Projects");
 
 /** ========================================================================= */
 
 divider("Publications");
-timeStart();
+timeStart("Publications");
 const publications = await getPublications(
   projects.map((project) => project.coreProject),
 );
 saveFile(publications, `${OUTPUT_PATH}/publications.json`);
-timeEnd();
+timeEnd("Publications");
 
 /** ========================================================================= */
 
 divider("Journals");
-timeStart();
+timeStart("Journals");
 const journals = await getJournals(
   publications.map((publication) => publication.journal),
 );
 saveFile(journals, `${OUTPUT_PATH}/journals.json`);
-timeEnd();
+timeEnd("Journals");
 
 /** ========================================================================= */
 
 divider("Analytics");
-timeStart();
+timeStart("Analytics");
 const analytics = await getAnalytics();
 saveFile(analytics, `${OUTPUT_PATH}/analytics.json`);
 const analyticsOverview = await getAnalyticsOverview(analytics);
 saveFile(analyticsOverview, `${OUTPUT_PATH}/analytics-overview.json`);
-timeEnd();
+timeEnd("Analytics");
 
 /** ========================================================================= */
 
 divider("Repositories");
-timeStart();
+timeStart("Repositories");
 const repositories = await getRepositories(
   coreProjects.map((coreProject) => coreProject.id),
 );
 saveFile(repositories, `${OUTPUT_PATH}/repositories.json`);
 const repositoriesOverview = await getRepositoriesOverview(repositories);
 saveFile(repositoriesOverview, `${OUTPUT_PATH}/repositories-overview.json`);
-timeEnd();
+timeEnd("Repositories");
 
 /** ========================================================================= */
 
 divider("Core project counts");
-timeStart();
+timeStart("Core project counts");
 for (const coreProject of coreProjects) {
   coreProject.publications = publications.filter((publication) =>
     match(publication.coreProject, coreProject.id),
@@ -100,26 +103,27 @@ for (const coreProject of coreProjects) {
   ).length;
 }
 saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
-timeEnd();
+timeEnd("Core project counts");
 
 /** ========================================================================= */
 
 divider("DRC");
-timeStart();
+timeStart("DRC");
 const { dcc, file, code } = await getDrc();
 saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
 saveFile(file, `${OUTPUT_PATH}/drc-file.json`);
 saveFile(code, `${OUTPUT_PATH}/drc-code.json`);
-timeEnd();
+timeEnd("DRC");
 
 /** ========================================================================= */
 
 divider("Users");
-timeStart();
+timeStart("Users");
 const users = await getUsers();
 saveFile(users, `${OUTPUT_PATH}/users.json`);
-timeEnd();
+timeEnd("Users");
 
 /** ========================================================================= */
 
 await browser.close();
+timeEnd("Total");

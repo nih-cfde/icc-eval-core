@@ -12,6 +12,8 @@ namespace NodeJS {
     readonly HEADLESS_BROWSER: string;
     /** enable or disable cache */
     readonly CACHE: string;
+    /** default concurrency of async operations */
+    readonly CONCURRENCY: string;
     /** path to google credentials */
     readonly GOOGLE_APPLICATION_CREDENTIALS: string;
 

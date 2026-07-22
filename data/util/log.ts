@@ -25,7 +25,9 @@ export const log = (
   indent = 0,
 ) => {
   const { color, icon } = levels[level];
-  console.log("  ".repeat(indent) + color(icon, message));
+  if (["string", "number", "boolean"].includes(typeof message))
+    console.log("  ".repeat(indent) + color(icon, message));
+  else console.log(message);
   if (level === "error") throw Error(message);
 };
 
@@ -37,23 +39,25 @@ export const divider = (message: Message) => {
   log(hr, "secondary");
 };
 
-/** singleton start timestamp */
-let start = 0;
+/** timer timestamps */
+const timers: Record<string, number> = {};
 
 /** log start timestamp */
-export const timeStart = () => {
+export const timeStart = (label = "default") => {
   const now = Date.now();
-  start = now;
-  log(`Timer started ${formatTimestamp(now)}`, "secondary");
+  timers[label] = now;
+  log(`${label} timer started, ${formatTimestamp(now)}`, "secondary");
 };
 
 /** log end timestamp */
-export const timeEnd = () => {
+export const timeEnd = (label = "default") => {
+  const start = timers[label];
+  if (!start) return;
   const now = Date.now();
   const took = now - start;
-  start = 0;
+  timers[label] = 0;
   log(
-    `Timer ended ${formatTimestamp(now)}, took ${formatDuration(took)}`,
+    `${label} timer ended, ${formatTimestamp(now)}, took ${formatDuration(took)}`,
     "secondary",
   );
 };
