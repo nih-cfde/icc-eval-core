@@ -81,6 +81,7 @@ CORS_ALLOWED_ORIGINS = [
 
 CORS_ALLOWED_ORIGIN_REGEXES = [
     "^https://deploy-preview-[0-9]+--cfde-eval-public.netlify.app$",
+    "^https://deploy-preview-[0-9]+--cfde-eval.netlify.app$",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
