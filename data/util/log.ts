@@ -44,7 +44,7 @@ let start = 0;
 export const timeStart = () => {
   const now = Date.now();
   start = now;
-  log(`Timer started ${now}`, "secondary");
+  log(`Timer started ${formatTimestamp(now)}`, "secondary");
 };
 
 /** log end timestamp */
@@ -52,11 +52,18 @@ export const timeEnd = () => {
   const now = Date.now();
   const took = now - start;
   start = 0;
-  log(`Timer ended ${now}, took ${formatTime(took)}ms`, "secondary");
+  log(
+    `Timer ended ${formatTimestamp(now)}, took ${formatDuration(took)}ms`,
+    "secondary",
+  );
 };
 
-/** format ms to minutes and seconds */
-const formatTime = (ms: number) => {
+/** format timestamp */
+const formatTimestamp = (timestamp: number) =>
+  new Date(timestamp).toLocaleString();
+
+/** format duration in ms to minutes and seconds */
+const formatDuration = (ms: number) => {
   const totalSeconds = Math.floor(ms / 1000);
   const minutes = Math.floor(totalSeconds / 60);
   const seconds = totalSeconds % 60;
