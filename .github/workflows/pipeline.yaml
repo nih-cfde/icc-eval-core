@@ -45,6 +45,9 @@ jobs:
             exit 1
           fi
 
+          # set an env var with the realpath of the credentials file so that the pipeline can use it
+          echo "GOOGLE_APPLICATION_CREDENTIALS=$(realpath data/.ga-credentials.json)" >> "$GITHUB_ENV"
+
       - name: Install packages
         working-directory: data
         run: bun install
@@ -59,7 +62,6 @@ jobs:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
           AUTH_FAIRSHAKE: ${{ secrets.AUTH_FAIRSHAKE }}
-          GOOGLE_APPLICATION_CREDENTIALS: data/.ga-credentials.json
         run: ./run_pipeline.sh --gather
 
       - name: Ensure output files exist
