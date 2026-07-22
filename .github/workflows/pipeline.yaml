@@ -31,23 +31,6 @@ jobs:
         if: runner.debug == '1'
         uses: mxschmitt/action-tmate@v3
 
-      - name: Prepare pipeline credentials file
-        env:
-          GA_CREDENTIALS: ${{ secrets.GA_CREDENTIALS }}
-        run: |
-          set -euo pipefail
-
-          mkdir -p data/output
-          printf '%s' "$GA_CREDENTIALS" > data/.ga-credentials.json
-
-          if ! jq -e . data/.ga-credentials.json >/dev/null; then
-            echo "Invalid JSON in GA_CREDENTIALS secret"
-            exit 1
-          fi
-
-          # set an env var with the realpath of the credentials file so that the pipeline can use it
-          echo "GOOGLE_APPLICATION_CREDENTIALS=$(realpath data/.ga-credentials.json)" >> "$GITHUB_ENV"
-
       - name: Install packages
         working-directory: data
         run: bun install
@@ -57,11 +40,15 @@ jobs:
         working-directory: data
         run: bun run install-playwright
 
+      - name: Authenticate to Google Cloud for GA queries
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GA_CREDENTIALS }}
+
       - name: Run pipeline
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
-          AUTH_FAIRSHAKE: ${{ secrets.AUTH_FAIRSHAKE }}
         run: ./run_pipeline.sh --gather
 
       - name: Ensure output files exist
@@ -72,7 +59,7 @@ jobs:
             exit 1
           fi
 
-      - name: Authenticate to Google Cloud
+      - name: Authenticate to Google Cloud for GCS upload
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.GCS_CREDENTIALS }}
