@@ -49,7 +49,7 @@ jobs:
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
-        run: ./run_pipeline.sh --gather
+        run: ./run_bun.sh --gather
 
       - name: Ensure output files exist
         run: |
