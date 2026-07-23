@@ -46,6 +46,7 @@ jobs:
           credentials_json: ${{ secrets.GA_CREDENTIALS }}
 
       - name: Run pipeline
+        timeout-minutes: 30
         env:
           AUTH_ENTREZ: ${{ secrets.AUTH_ENTREZ }}
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
