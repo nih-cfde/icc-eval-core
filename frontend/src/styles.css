@@ -17,7 +17,8 @@
   --sans: "Open Sans", sans-serif;
   --mono: "IBM Plex Mono", monospace;
   --regular: 400;
-  --bold: 600;
+  --medium: 525;
+  --bold: 650;
 
   --shadow: 0 0 2px 0 #00000020, 1px 3px 10px -2px #00000020;
   --rounded: 5px;
@@ -88,7 +89,7 @@ h4 {
   margin: 0;
   gap: 0.65em;
   color: var(--dark-gray);
-  font-weight: var(--bold);
+  font-weight: var(--medium);
   text-align: center;
 }
 
@@ -217,12 +218,12 @@ tr {
 
 th {
   background: var(--off-white);
-  font-weight: var(--bold);
+  font-weight: var(--medium);
 }
 
 th,
 td {
-  padding: 0;
+  padding: 5px;
 }
 
 /** list */
@@ -319,7 +320,7 @@ dd {
 
 .details > * > :first-child {
   color: var(--dark-gray);
-  font-weight: var(--bold);
+  font-weight: var(--medium);
 }
 
 /* chart layout */

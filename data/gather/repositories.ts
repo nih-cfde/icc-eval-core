@@ -12,7 +12,7 @@ import {
   hasReadme,
   searchRepositories,
 } from "@/api/github";
-import { log } from "@/util/log";
+import { log, timeEnd, timeStart } from "@/util/log";
 import { settled } from "@/util/misc";
 import { count } from "@/util/string";
 
@@ -22,6 +22,7 @@ export const getRepositories = async (coreProjects: string[]) => {
   coreProjects = uniq(coreProjects);
 
   log(`Getting repositories for ${count(coreProjects)} core projects`);
+  timeStart("Repositories");
 
   /**
    * search for all repositories tagged with core project number. gets base,
@@ -51,6 +52,8 @@ export const getRepositories = async (coreProjects: string[]) => {
     log(`${owner}/${name}`, "secondary", 1),
   );
 
+  timeEnd("Repositories");
+  timeStart("Repository details");
   log(`Getting details for ${count(repositories)} repositories`);
 
   const [repoDetails, errors] = await settled(
@@ -186,6 +189,7 @@ export const getRepositories = async (coreProjects: string[]) => {
     ),
   }));
 
+  timeEnd("Repository details");
   log(`${count(transformed)} repositories`, "success");
 
   return transformed;

@@ -3,7 +3,7 @@
 # steps that should be run periodically to update data, reports, etc.
 
 # usage:
-# ./run_pipeline.sh --some-script param1 param2
+# ./run_bun.sh --some-script param1 param2
 # runs script of same name in /data/package.json and /frontend/package.json if they exist
 
 set -e

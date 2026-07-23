@@ -38,7 +38,7 @@ Once everything has launched, access services at:
 Run main info gathering pipeline, outside of container:
 
 ```bash
-./run_pipeline.sh --gather
+./run_bun.sh --gather
 ```
 
 Run main info gathering pipeline, inside container:

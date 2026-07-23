@@ -22,17 +22,17 @@
 		reverse_proxy backend:8000
 	}
 
-	# old handler for proxying to netlify
-	# handle {
-	# 	reverse_proxy https://cfde-eval.netlify.app {
-	# 		header_up Host cfde-eval.netlify.app
-	# 	}
-	# }
-
-	# serve frontend static files for all other paths
+	# proxy to netlify for the frontend
 	handle {
-		root * /opt/frontend
-		file_server
-		try_files {path} /index.html
+		reverse_proxy https://cfde-eval.netlify.app {
+			header_up Host cfde-eval.netlify.app
+		}
 	}
+
+	# # serve frontend static files for all other paths
+	# handle {
+	# 	root * /opt/frontend
+	# 	file_server
+	# 	try_files {path} /index.html
+	# }
 }

@@ -32,7 +32,7 @@ jobs:
           git pull
 
       - name: Re-build images
-        timeout-minutes: 15
+        timeout-minutes: 10
         working-directory: /srv/projects/icc-eval-core
         run: |
           set -euo pipefail
@@ -40,7 +40,7 @@ jobs:
           ./run_stack.sh --profile pipeline build
 
       - name: Run pipeline in Compose stack
-        timeout-minutes: 60
+        timeout-minutes: 20
         working-directory: /srv/projects/icc-eval-core
         run: |
           set -euo pipefail
@@ -70,7 +70,7 @@ jobs:
           path: /srv/projects/icc-eval-core/pipeline.log
 
       - name: Import results into backend database
-        timeout-minutes: 15
+        timeout-minutes: 10
         working-directory: /srv/projects/icc-eval-core
         run: |
           set -euo pipefail
@@ -89,7 +89,7 @@ jobs:
           ) 200>"$LOCK_FILE"
 
       - name: Relaunch the stack for serving
-        timeout-minutes: 15
+        timeout-minutes: 10
         working-directory: /srv/projects/icc-eval-core
         run: |
           set -euo pipefail

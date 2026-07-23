@@ -14,7 +14,7 @@
       <template #repositoriesAnalytics="{ row }">
         <template v-if="row.repositories || row.analytics">
           <AppLink
-            :to="readmeLink"
+            to="/about"
             class="score good"
             title="Owners have completed the submission process"
           >
@@ -23,7 +23,7 @@
         </template>
         <template v-else>
           <AppLink
-            :to="readmeLink"
+            to="/about"
             title="Owners have NOT completed the submission process"
             class="score bad"
           >
@@ -65,9 +65,6 @@ import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import { format } from "@/util/string";
-
-const readmeLink =
-  "https://github.com/nih-cfde/icc-eval-core?tab=readme-ov-file#submit-your-project";
 
 /** fetch data */
 const { data: coreProjects } = useCoreProjects();

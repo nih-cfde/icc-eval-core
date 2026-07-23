@@ -317,6 +317,11 @@ const cellAttrs = (col?: Cols[number], row?: Row) => {
   }
 }
 
+th,
+td {
+  padding: 0;
+}
+
 .th,
 .td {
   display: flex;

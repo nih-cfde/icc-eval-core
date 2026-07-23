@@ -1,5 +1,5 @@
 import { uniq, uniqBy } from "lodash-es";
-import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
+import { PDFParse } from "pdf-parse";
 import manualOpportunities from "@/manual/opportunities.json";
 import { newPage } from "@/util/browser";
 import { log } from "@/util/log";
@@ -43,10 +43,9 @@ export const getDocuments = memoize(async () => {
 
 /** get funding opportunity details from document */
 export const getOpportunity = memoize(async (document: string) => {
-  const page = await newPage();
-
   /** html document */
   if (document.endsWith(".html")) {
+    const page = await newPage();
     await page.goto(document);
 
     /** main opportunity number */
@@ -70,14 +69,18 @@ export const getOpportunity = memoize(async (document: string) => {
   /** pdf document */
   if (document.endsWith(".pdf")) {
     /** parse pdf */
-    const pdf = await getDocument({
-      url: new URL(document, opportunitiesUrl).href,
-      verbosity: 0,
-    }).promise;
-    const firstPage = await pdf.getPage(1);
-    const text = (await firstPage.getTextContent()).items
-      .map((item) => ("str" in item ? item.str : ""))
-      .join("");
+    const pdf = new PDFParse({ url: new URL(document, opportunitiesUrl).href });
+
+    let text = "";
+
+    /** get first page text content */
+    try {
+      text = (await pdf.getText({ first: 1 })).text;
+    } catch (error) {
+      log(`Error parsing ${document}`, "warn");
+    } finally {
+      await pdf.destroy();
+    }
 
     /** main opportunity number */
     const id = text.match(numberPattern)?.[1] || "";
@@ -121,7 +124,7 @@ export const getOpportunities = async () => {
     log(error, "warn", 2);
   });
 
-  if (!opportunities.length) log("No opportunities found", "error");
+  if (!opportunities.length) log("No opportunities found", "warn");
 
   log(`Including ${count(manualOpportunities)} manual opportunities`);
 
