@@ -2,6 +2,43 @@ import { sleep } from "@/util/misc";
 
 export type Params = Record<string, unknown | unknown[]>;
 
+/**
+ * Per-domain rate limits in requests per second.
+ * Domains not listed here are not rate-limited.
+ */
+export const requestRateLimits: Record<string, number> = {
+  "eutils.ncbi.nlm.nih.gov": 10,
+};
+
+type RateLimitState = {
+  nextAllowedAt: number;
+  queue: Promise<void>;
+};
+
+const rateLimitStateByDomain = new Map<string, RateLimitState>();
+
+/** wait for domain-specific rate limit slot, if configured */
+const waitForRateLimitSlot = async (url: URL) => {
+  const requestsPerSecond = requestRateLimits[url.hostname];
+  if (!requestsPerSecond || requestsPerSecond <= 0) return;
+
+  const intervalMs = Math.ceil(1000 / requestsPerSecond);
+  const state =
+    rateLimitStateByDomain.get(url.hostname) ??
+    ({ nextAllowedAt: 0, queue: Promise.resolve() } as RateLimitState);
+
+  const wait = async () => {
+    const now = Date.now();
+    const waitMs = Math.max(0, state.nextAllowedAt - now);
+    if (waitMs > 0) await sleep(waitMs);
+    state.nextAllowedAt = Date.now() + intervalMs;
+  };
+
+  state.queue = state.queue.then(wait, wait);
+  rateLimitStateByDomain.set(url.hostname, state);
+  await state.queue;
+};
+
 /** request */
 type Url = string | URL;
 type Options = Omit<RequestInit, "body"> & {
@@ -37,6 +74,7 @@ export const request: Request = async <Parsed>(
 
   /** make request */
   const request = new Request(url, { ...options, body });
+  await waitForRateLimitSlot(url);
   let response = await fetch(request);
 
   /** if rate limited, retry a few times */
@@ -45,6 +83,7 @@ export const request: Request = async <Parsed>(
     const timeout = parseInt(response.headers.get("retry-after") ?? "1") + 1;
     console.debug(`Retrying (${retry}) after ${timeout}s`);
     await sleep(timeout * 1000);
+    await waitForRateLimitSlot(url);
     response = await fetch(request.clone());
   }
   if (!response.ok)
