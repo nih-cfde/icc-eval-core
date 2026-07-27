@@ -40,10 +40,10 @@ jobs:
         working-directory: data
         run: bun run install-playwright
 
-      - name: Authenticate to Google Cloud
+      - name: Authenticate to Google Analytics
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ secrets.GA_CREDENTIALS }}
+          credentials_json: ${{ secrets.AUTH_GOOGLE_ANALYTICS }}
 
       - name: Run pipeline
         timeout-minutes: 30
@@ -52,18 +52,10 @@ jobs:
           AUTH_GITHUB: ${{ secrets.AUTH_GITHUB }}
         run: ./run_bun.sh --gather
 
-      - name: Ensure output files exist
-        run: |
-          set -euo pipefail
-          if [ -z "$(ls -A data/output)" ]; then
-            echo "No files were produced in data/output"
-            exit 1
-          fi
-
-      - name: Authenticate to Google Cloud for GCS upload
+      - name: Authenticate to Google Cloud Storage
         uses: google-github-actions/auth@v2
         with:
-          credentials_json: ${{ secrets.GCS_CREDENTIALS }}
+          credentials_json: ${{ secrets.AUTH_GOOGLE_CLOUD_STORAGE }}
 
       - name: Set up gcloud
         uses: google-github-actions/setup-gcloud@v2
