@@ -83,7 +83,7 @@ export const getOpportunity = memoize(async (document: string) => {
       const url = new URL(document, opportunitiesUrl).href;
       const buffer = await request<ArrayBuffer>(url, {
         parse: "arrayBuffer",
-        timeout: 10 * 1000,
+        timeout: 20 * 1000,
       });
       const pdf = await PDF.load(new Uint8Array(buffer));
       text = pdf.getPages()[0]?.extractText().text ?? "";
