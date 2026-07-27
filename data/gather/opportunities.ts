@@ -101,10 +101,10 @@ export const getOpportunity = memoize(async (document: string) => {
 
     /** validate number */
     if (id) return { id, prefix, activityCode };
-    else throw Error("Doesn't seem to have opportunity number");
+    else log("Doesn't seem to have opportunity number", "warn");
   }
 
-  throw Error("Invalid document extension");
+  throw log("Invalid document extension", "error");
 });
 
 /** get common fund funding opportunities, past and present */

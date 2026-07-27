@@ -51,7 +51,7 @@ timeEnd("Projects");
 /** ========================================================================= */
 
 divider("Publications");
-timeStart("Publications", 30 * 1000);
+timeStart("Publications", 60 * 1000);
 const publications = await getPublications(
   projects.map((project) => project.coreProject),
 );
