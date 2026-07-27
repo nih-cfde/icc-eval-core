@@ -39,29 +39,6 @@ jobs:
           ./run_stack.sh build
           ./run_stack.sh --profile pipeline build
 
-      - name: Run pipeline in Compose stack
-        timeout-minutes: 20
-        working-directory: /srv/projects/icc-eval-core
-        run: |
-          set -euo pipefail
-
-          LOCK_FILE=/tmp/icc-eval-core-api-pipeline.lock
-
-          # clear log files so we don't upload old logs from previous runs
-          rm -f /srv/projects/icc-eval-core/pipeline.log \
-                /srv/projects/icc-eval-core/import.log
-
-          (
-            if ! flock -n 200; then
-              echo "Another pipeline run is already active on this VM. Exiting without starting a new run."
-              exit 78
-            fi
-
-            echo "::group::Pipeline logs"
-            ./run_stack.sh --profile pipeline run --rm -T pipeline 2>&1 | tee pipeline.log
-            echo "::endgroup::"
-          ) 200>"$LOCK_FILE"
-
       - name: Upload pipeline log
         uses: actions/upload-artifact@v4
         if: always()
