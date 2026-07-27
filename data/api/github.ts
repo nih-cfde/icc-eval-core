@@ -25,7 +25,7 @@ export const octokit = new withPlugins({
   request: {
     /** apply hard timeout to every request */
     fetch: (url: string, options: RequestInit) =>
-      fetchWithTimeout(new Request(url, options)),
+      fetchWithTimeout(new Request(url, options), maxWait),
   },
 
   /** https://github.com/octokit/plugin-throttling.js */

@@ -5,8 +5,6 @@ import { sleep } from "@/util/misc";
 const maxAttempts = 3;
 /** multiply retry wait time for extra safety */
 const waitFactor = 1.1;
-/** max retry time, in ms */
-const maxWait = 60 * 1000;
 
 export type Params = Record<string, unknown | unknown[]>;
 
@@ -16,6 +14,7 @@ type Options = Omit<RequestInit, "body"> & {
   params?: Params;
   body?: unknown;
   parse?: "json" | "text" | "arrayBuffer" | "raw";
+  timeout?: number;
 };
 type RequestFunc = {
   <Parsed>(url: Url, options: Options): Promise<Parsed>;
@@ -29,6 +28,7 @@ export const request: RequestFunc = async <Parsed>(
 ) => {
   /** options defaults */
   options.parse ??= "json";
+  options.timeout ??= 60 * 1000;
 
   /** construct request url */
   url = new URL(url);
@@ -43,7 +43,7 @@ export const request: RequestFunc = async <Parsed>(
 
   /** make request */
   const request = new Request(url, { ...options, body });
-  let response = await fetchWithTimeout(request);
+  let response = await fetchWithTimeout(request, options.timeout);
 
   /** if rate limited, retry a few times */
   for (let attempt = 1; response.status === 429; attempt++) {
@@ -56,12 +56,12 @@ export const request: RequestFunc = async <Parsed>(
     /** check wait */
     const wait = parseInt(response.headers.get("retry-after") || "") || 1;
     log(`Waiting ${formatDuration(wait * 1000)}`, "warn");
-    if (wait > maxWait) throw Error("Exceeded max wait");
+    if (wait * 1000 > options.timeout) throw Error("Exceeded max wait");
 
     /** wait */
     await sleep(wait * waitFactor * 1000);
     /** retry */
-    response = await fetchWithTimeout(request.clone());
+    response = await fetchWithTimeout(request.clone(), options.timeout);
   }
 
   if (!response.ok)
@@ -83,10 +83,7 @@ export const request: RequestFunc = async <Parsed>(
 };
 
 /** fetch, with hard-failure on connection stall */
-export const fetchWithTimeout = async (
-  request: Request,
-  timeout = 60 * 1000,
-) => {
+export const fetchWithTimeout = async (request: Request, timeout: number) => {
   try {
     /** combine passed abort signal with timeout */
     const signal = AbortSignal.any(
