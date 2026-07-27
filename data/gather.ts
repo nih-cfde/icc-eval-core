@@ -31,7 +31,7 @@ mkdirSync(OUTPUT_PATH, { recursive: true });
 /** ========================================================================= */
 
 divider("Opportunities");
-timeStart("Opportunities");
+timeStart("Opportunities", 60 * 1000);
 const opportunities = await getOpportunities();
 saveFile(opportunities, `${OUTPUT_PATH}/opportunities.json`);
 // saveFile(opportunities, `${MANUAL_PATH}/opportunities.json`);
@@ -40,7 +40,7 @@ timeEnd("Opportunities");
 /** ========================================================================= */
 
 divider("Projects");
-timeStart("Projects");
+timeStart("Projects", 30 * 1000);
 const { coreProjects, projects } = await getProjects(
   opportunities.map((opportunity) => opportunity.id),
 );
@@ -51,7 +51,7 @@ timeEnd("Projects");
 /** ========================================================================= */
 
 divider("Publications");
-timeStart("Publications");
+timeStart("Publications", 30 * 1000);
 const publications = await getPublications(
   projects.map((project) => project.coreProject),
 );
@@ -61,7 +61,7 @@ timeEnd("Publications");
 /** ========================================================================= */
 
 divider("Journals");
-timeStart("Journals");
+timeStart("Journals", 3 * 60 * 1000);
 const journals = await getJournals(
   publications.map((publication) => publication.journal),
 );
@@ -71,7 +71,7 @@ timeEnd("Journals");
 /** ========================================================================= */
 
 divider("Analytics");
-timeStart("Analytics");
+timeStart("Analytics", 5 * 60 * 1000);
 const analytics = await getAnalytics();
 saveFile(analytics, `${OUTPUT_PATH}/analytics.json`);
 const analyticsOverview = await getAnalyticsOverview(analytics);
@@ -81,7 +81,7 @@ timeEnd("Analytics");
 /** ========================================================================= */
 
 divider("Repositories");
-timeStart("Repositories");
+timeStart("Repositories", 15 * 60 * 1000);
 const repositories = await getRepositories(
   coreProjects.map((coreProject) => coreProject.id),
 );
@@ -93,7 +93,6 @@ timeEnd("Repositories");
 /** ========================================================================= */
 
 divider("Core project counts");
-timeStart("Core project counts");
 for (const coreProject of coreProjects) {
   coreProject.publications = publications.filter((publication) =>
     match(publication.coreProject, coreProject.id),
@@ -106,12 +105,11 @@ for (const coreProject of coreProjects) {
   ).length;
 }
 saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
-timeEnd("Core project counts");
 
 /** ========================================================================= */
 
 divider("DRC");
-timeStart("DRC");
+timeStart("DRC", 2 * 60 * 1000);
 const { dcc, file, code } = await getDrc();
 saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
 saveFile(file, `${OUTPUT_PATH}/drc-file.json`);
@@ -121,7 +119,7 @@ timeEnd("DRC");
 /** ========================================================================= */
 
 divider("Users");
-timeStart("Users");
+timeStart("Users", 60 * 1000);
 const users = await getUsers();
 saveFile(users, `${OUTPUT_PATH}/users.json`);
 timeEnd("Users");

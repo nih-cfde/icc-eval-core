@@ -40,24 +40,36 @@ export const divider = (message: Message) => {
 };
 
 /** timer timestamps */
-const timers: Record<string, number> = {};
+const timestamps: Record<string, number> = {};
+/** timer timeouts */
+const timeouts: Record<string, ReturnType<typeof setTimeout>> = {};
 
 /** log start timestamp */
-export const timeStart = (label = "default") => {
+export const timeStart = (label = "default", timeout?: number) => {
   const now = Date.now();
-  timers[label] = now;
+  timestamps[label] = now;
   log(`${label} timer started, ${formatTimestamp(now)}`, "secondary", 1);
+  if (timeout)
+    timeouts[label] = setTimeout(() => {
+      log(`${label} timer timed out after ${formatDuration(timeout)}`, "error");
+    }, timeout);
 };
 
 /** log end timestamp */
 export const timeEnd = (label = "default") => {
-  const start = timers[label];
+  const start = timestamps[label];
   if (!start) return;
   const now = Date.now();
   const took = now - start;
-  timers[label] = 0;
+  delete timestamps[label];
+  clearTimeout(timeouts[label]);
+  delete timeouts[label];
   log(
-    `${label} timer ended, ${formatTimestamp(now)}, took ${formatDuration(took)}`,
+    [
+      `${label} timer ended`,
+      formatTimestamp(now),
+      `took ${formatDuration(took)}`,
+    ].join(" | "),
     "secondary",
     1,
   );
