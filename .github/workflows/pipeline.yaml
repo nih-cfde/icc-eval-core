@@ -65,7 +65,3 @@ jobs:
           set -euo pipefail
           CURRENT_DATE=$(date +%Y-%m-%d)
           gcloud storage cp --recursive data/output/. gs://icc-eval-core/pipeline-output/${CURRENT_DATE}/
-
-      - name: Remove temporary credentials file
-        if: always()
-        run: rm -f data/.ga-credentials.json
