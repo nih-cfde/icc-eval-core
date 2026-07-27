@@ -15,6 +15,7 @@
   "dependencies": {
     "@google-analytics/admin": "^9.1.0",
     "@google-analytics/data": "^5.2.2",
+    "@libpdf/core": "^0.4.1",
     "@playwright/test": "^1.59.1",
     "@zip.js/zip.js": "^2.8.26",
     "chalk": "^5.6.2",
@@ -23,8 +24,7 @@
     "lodash-es": "^4.18.1",
     "nodejs-file-downloader": "^4.13.0",
     "octokit": "^5.0.5",
-    "p-settle": "^5.2.1",
-    "pdf-parse": "^2.4.5"
+    "p-settle": "^5.2.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

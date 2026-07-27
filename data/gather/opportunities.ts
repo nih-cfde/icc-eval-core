@@ -1,10 +1,11 @@
 import { uniq, uniqBy } from "lodash-es";
-import { PDFParse } from "pdf-parse";
+import { PDF } from "@libpdf/core";
 import manualOpportunities from "@/manual/opportunities.json";
 import { newPage } from "@/util/browser";
 import { log } from "@/util/log";
 import { memoize } from "@/util/memoize";
 import { settled } from "@/util/misc";
+import { request } from "@/util/request";
 import { count } from "@/util/string";
 
 /** page to scrape */
@@ -76,18 +77,15 @@ export const getOpportunity = memoize(async (document: string) => {
 
   /** pdf document */
   if (document.endsWith(".pdf")) {
-    /** parse pdf */
-    const pdf = new PDFParse({ url: new URL(document, opportunitiesUrl).href });
-
-    let text = "";
-
     /** get first page text content */
+    let text = "";
     try {
-      text = (await pdf.getText({ first: 1 })).text;
+      const url = new URL(document, opportunitiesUrl).href;
+      const buffer = await request<ArrayBuffer>(url, { parse: "arrayBuffer" });
+      const pdf = await PDF.load(new Uint8Array(buffer));
+      text = pdf.getPages()[0]?.extractText().text ?? "";
     } catch (error) {
       log(`Error parsing ${document}`, "warn");
-    } finally {
-      await pdf.destroy();
     }
 
     /** main opportunity number */

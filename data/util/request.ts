@@ -15,19 +15,17 @@ type Url = string | URL;
 type Options = Omit<RequestInit, "body"> & {
   params?: Params;
   body?: unknown;
-  parse?: "json" | "text";
+  parse?: "json" | "text" | "arrayBuffer" | "raw";
 };
 type RequestFunc = {
   <Parsed>(url: Url, options: Options): Promise<Parsed>;
   (url: Url, options: Options, raw: true): Promise<Response>;
 };
 
-/** generic request wrapper */
+/** generic request wrapper with conveniences */
 export const request: RequestFunc = async <Parsed>(
   url: Url,
   options: Options,
-  /** whether to return raw response object */
-  raw = false,
 ) => {
   /** options defaults */
   options.parse ??= "json";
@@ -45,7 +43,6 @@ export const request: RequestFunc = async <Parsed>(
 
   /** make request */
   const request = new Request(url, { ...options, body });
-
   let response = await fetchWithTimeout(request);
 
   /** if rate limited, retry a few times */
@@ -73,10 +70,12 @@ export const request: RequestFunc = async <Parsed>(
     );
 
   /** parse response */
-  if (raw) return response;
   try {
     if (options.parse === "json") return (await response.json()) as Parsed;
     if (options.parse === "text") return (await response.text()) as Parsed;
+    if (options.parse === "arrayBuffer")
+      return (await response.arrayBuffer()) as Parsed;
+    if (options.parse === "raw") return response as Parsed;
     throw Error(`Unknown parse option`);
   } catch (error) {
     throw Error(`Problem parsing ${url} as ${options.parse}`, { cause: error });
