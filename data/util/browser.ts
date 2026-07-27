@@ -6,8 +6,13 @@ const { HEADLESS_BROWSER } = process.env;
 
 export const browser = await playwright.chromium.launch({
   headless: HEADLESS_BROWSER == "true",
+  args: [
+    // https://github.com/actions/runner-images/issues/10015
+    // https://ubuntu.com/blog/ubuntu-23-10-restricted-unprivileged-user-namespaces
+    "--no-sandbox",
+  ],
 });
-export const context = await browser.newContext();
+const context = await browser.newContext();
 
 /** options */
 context.setDefaultTimeout(10 * 1000);
