@@ -65,59 +65,16 @@ octokit.request = octokit.request.defaults({ per_page: 100 });
 
 /** search for repositories that have topic */
 export const searchRepositories = memoize(async (topic: string) => {
-  /** use graph ql instead of rest to speed up query and reduce rate limit */
-  const { search } = await octokit.graphql.paginate<{
-    search: {
-      nodes: {
-        databaseId: number;
-        name: string;
-        owner: { login: string } | null;
-        repositoryTopics: { nodes: { topic: { name: string } }[] };
-      }[];
-    };
-  }>(
-    `
-  query searchRepositories($topicQuery: String!, $cursor: String) {
-    search(query: $topicQuery, type: REPOSITORY, first: 100, after: $cursor) {
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
-      nodes {
-        ... on Repository {
-          databaseId
-          name
-          owner {
-            login
-          }
-          repositoryTopics(first: 25) {
-            nodes {
-              topic {
-                name
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`,
-    { topicQuery: `topic:${topic}` },
-  );
-
-  const repositories = search.nodes.map((node) => ({
-    id: node.databaseId,
-    name: node.name,
-    owner: node.owner,
-    topics: node.repositoryTopics.nodes.map(({ topic }) => topic.name),
-  }));
+  const repositories = await octokit.paginate(octokit.rest.search.repos, {
+    q: `topic:${topic}`,
+  });
 
   /** if flag set, get all other repositories in organization */
   const organizationRepositories = (
     await Promise.all(
       uniq(
         repositories
-          .filter((repository) => repository.topics.includes("tag-all"))
+          .filter((repository) => repository.topics?.includes("tag-all"))
           .map((repository) => repository.owner?.login ?? ""),
       )
         .filter(Boolean)
