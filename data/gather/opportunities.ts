@@ -29,16 +29,20 @@ const getPrefix = (id: string) => {
 /** get full list of opportunity html/pdf docs */
 export const getDocuments = memoize(async () => {
   const page = await newPage();
-  await page.goto(opportunitiesUrl);
-  await page.waitForSelector(documentsSelector);
-  const links = await page.locator(documentsSelector).all();
-  return await Promise.all(
-    links.map(async (link) => {
-      const href = await link.getAttribute("href");
-      if (href) return href;
-      else throw Error("No href");
-    }),
-  );
+  try {
+    await page.goto(opportunitiesUrl);
+    await page.waitForSelector(documentsSelector);
+    const links = await page.locator(documentsSelector).all();
+    return await Promise.all(
+      links.map(async (link) => {
+        const href = await link.getAttribute("href");
+        if (href) return href;
+        else throw Error("No href");
+      }),
+    );
+  } finally {
+    await page.close();
+  }
 });
 
 /** get funding opportunity details from document */
@@ -46,24 +50,28 @@ export const getOpportunity = memoize(async (document: string) => {
   /** html document */
   if (document.endsWith(".html")) {
     const page = await newPage();
-    await page.goto(document);
+    try {
+      await page.goto(document);
 
-    /** main opportunity number */
-    const id = (await page.locator(".noticenum").innerText()).trim();
+      /** main opportunity number */
+      const id = (await page.locator(".noticenum").innerText()).trim();
 
-    /** opportunity number prefix */
-    const prefix = getPrefix(id);
+      /** opportunity number prefix */
+      const prefix = getPrefix(id);
 
-    /** activity code */
-    const activityCode = await page
-      .locator(activityCodeSelector)
-      .first()
-      .innerText({ timeout: 100 })
-      .catch(() => "");
+      /** activity code */
+      const activityCode = await page
+        .locator(activityCodeSelector)
+        .first()
+        .innerText({ timeout: 100 })
+        .catch(() => "");
 
-    /** validate number */
-    if (id.match(numberPattern)) return { id, prefix, activityCode };
-    else throw Error(`${id} does not seem like a valid opportunity number`);
+      /** validate number */
+      if (id.match(numberPattern)) return { id, prefix, activityCode };
+      else throw Error(`${id} does not seem like a valid opportunity number`);
+    } finally {
+      await page.close();
+    }
   }
 
   /** pdf document */
