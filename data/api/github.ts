@@ -36,17 +36,11 @@ export const octokit = new withPlugins({
       /** check attempts */
       attempt++;
       log(`Attempt ${attempt}`, "warn");
-      if (attempt >= maxAttempts) {
-        log("Exceeded max attempts", "warn");
-        return false;
-      }
+      if (attempt >= maxAttempts) throw Error("Exceeded max attempts");
 
       /** check wait */
       log(`Waiting ${formatDuration(wait * 1000)}`, "warn");
-      if (wait > maxWait) {
-        log("Exceeded max wait", "warn");
-        return false;
-      }
+      if (wait > maxWait) throw Error("Exceeded max wait");
 
       return true;
     },
