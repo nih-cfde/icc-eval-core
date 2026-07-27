@@ -86,7 +86,7 @@ export const request: RequestFunc = async <Parsed>(
 /** fetch, with hard-failure on connection stall */
 export const fetchWithTimeout = async (
   request: Request,
-  timeout = 30 * 1000,
+  timeout = 60 * 1000,
 ) => {
   try {
     /** combine passed abort signal with timeout */

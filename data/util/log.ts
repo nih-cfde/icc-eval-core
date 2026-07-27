@@ -62,8 +62,8 @@ export const timeEnd = (label = "default") => {
   if (!start) return;
   const now = Date.now();
   const took = now - start;
-  delete timestamps[label];
   clearTimeout(timeouts[label]);
+  delete timestamps[label];
   delete timeouts[label];
   log(
     [
