@@ -42,7 +42,7 @@ const handleError =
       const { code, details } = error as ServiceError;
       if (code === Status.DEADLINE_EXCEEDED)
         log(`Timed out after ${formatDuration(timeout)}`, "warn");
-      throw Error(details ?? error, { cause: error });
+      throw Error(details, { cause: error });
     }
   };
 

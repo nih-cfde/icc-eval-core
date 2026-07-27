@@ -28,7 +28,7 @@ export const log = (
   if (["string", "number", "boolean"].includes(typeof message))
     console.log("  ".repeat(indent) + color(icon, message));
   else console.log(message);
-  if (level === "error") throw Error(message);
+  return message;
 };
 
 /** print horizontal divider. use as major/higher-level divider. */
@@ -51,7 +51,7 @@ export const timeStart = (label = "default", timeout?: number) => {
   log(`${label} timer started, ${formatTimestamp(now)}`, "secondary", 1);
   if (timeout)
     timeouts[label] = setTimeout(() => {
-      log(`${label} timer timed out after ${formatDuration(timeout)}`, "error");
+      throw Error(`${label} timer timed out after ${formatDuration(timeout)}`);
     }, timeout);
 };
 

@@ -99,16 +99,10 @@ export const saveFile = async (data: unknown, path: string) => {
   if (path.endsWith(".tsv"))
     contents = stringifyCsv([data].flat(), { delimiter: "\t" });
 
-  try {
-    /** create folders if needed */
-    await mkdir(parse(path).dir, { recursive: true });
-    /** save file */
-    await writeFile(path, contents);
-    return true;
-  } catch (error) {
-    log(error, "error");
-    return false;
-  }
+  /** create folders if needed */
+  await mkdir(parse(path).dir, { recursive: true });
+  /** save file */
+  await writeFile(path, contents);
 };
 
 /** parse json */

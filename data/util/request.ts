@@ -54,12 +54,12 @@ export const request: RequestFunc = async <Parsed>(
 
     /** check attempts */
     log(`Attempt ${attempt}`, "warn");
-    if (attempt >= maxAttempts) throw log("Exceeded max attempts", "error");
+    if (attempt >= maxAttempts) throw Error("Exceeded max attempts");
 
     /** check wait */
     const wait = parseInt(response.headers.get("retry-after") || "") || 1;
     log(`Waiting ${formatDuration(wait * 1000)}`, "warn");
-    if (wait > maxWait) throw log("Exceeded max wait", "error");
+    if (wait > maxWait) throw Error("Exceeded max wait");
 
     /** wait */
     await sleep(wait * waitFactor * 1000);
@@ -69,7 +69,7 @@ export const request: RequestFunc = async <Parsed>(
 
   if (!response.ok)
     throw Error(
-      [url, response.status, response.statusText].filter(Boolean).join(" "),
+      [url, response.status, response.statusText].filter(Boolean).join(" | "),
     );
 
   /** parse response */
@@ -77,7 +77,7 @@ export const request: RequestFunc = async <Parsed>(
   try {
     if (options.parse === "json") return (await response.json()) as Parsed;
     if (options.parse === "text") return (await response.text()) as Parsed;
-    throw Error();
+    throw Error(`Unknown parse option`);
   } catch (error) {
     throw Error(`Problem parsing ${url} as ${options.parse}`, { cause: error });
   }
@@ -99,7 +99,9 @@ export const fetchWithTimeout = async (
     /** handle timeout error */
     if (error instanceof Error && error.name === "TimeoutError") {
       log(request.url, "warn");
-      throw log(`Timed out after ${formatDuration(timeout)}`, "error");
+      throw Error(`Timed out after ${formatDuration(timeout)}`, {
+        cause: error,
+      });
     }
     throw error;
   }

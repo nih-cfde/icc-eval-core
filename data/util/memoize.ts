@@ -1,5 +1,6 @@
 import { createHash } from "crypto";
 import { mkdirSync, readFileSync, rmSync, writeFileSync } from "fs";
+import { log } from "@/util/log";
 
 const { RAW_PATH, CACHE } = process.env;
 
