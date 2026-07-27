@@ -51,7 +51,8 @@ export const timeStart = (label = "default", timeout?: number) => {
   log(`${label} timer started, ${formatTimestamp(now)}`, "secondary", 1);
   if (timeout)
     timeouts[label] = setTimeout(() => {
-      throw Error(`${label} timer timed out after ${formatDuration(timeout)}`);
+      log(`${label} timer timed out after ${formatDuration(timeout)}`, "error");
+      process.exit(1);
     }, timeout);
 };
 
