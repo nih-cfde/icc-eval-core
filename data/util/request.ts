@@ -17,13 +17,13 @@ type Options = Omit<RequestInit, "body"> & {
   body?: unknown;
   parse?: "json" | "text";
 };
-type Request = {
+type RequestFunc = {
   <Parsed>(url: Url, options: Options): Promise<Parsed>;
   (url: Url, options: Options, raw: true): Promise<Response>;
 };
 
 /** generic request wrapper */
-export const request: Request = async <Parsed>(
+export const request: RequestFunc = async <Parsed>(
   url: Url,
   options: Options,
   /** whether to return raw response object */
@@ -45,7 +45,8 @@ export const request: Request = async <Parsed>(
 
   /** make request */
   const request = new Request(url, { ...options, body });
-  let response = await fetch(request);
+
+  let response = await fetchWithTimeout(request);
 
   /** if rate limited, retry a few times */
   for (let attempt = 1; response.status === 429; attempt++) {
@@ -63,7 +64,7 @@ export const request: Request = async <Parsed>(
     /** wait */
     await sleep(wait * waitFactor * 1000);
     /** retry */
-    response = await fetch(request.clone());
+    response = await fetchWithTimeout(request.clone());
   }
 
   if (!response.ok)
@@ -79,5 +80,27 @@ export const request: Request = async <Parsed>(
     throw Error();
   } catch (error) {
     throw Error(`Problem parsing ${url} as ${options.parse}`, { cause: error });
+  }
+};
+
+/** fetch, with hard-failure on connection stall */
+export const fetchWithTimeout = async (
+  request: Request,
+  timeout = 30 * 1000,
+) => {
+  try {
+    /** combine passed abort signal with timeout */
+    const signal = AbortSignal.any(
+      [request.signal, AbortSignal.timeout(timeout)].filter(Boolean),
+    );
+    /** make request */
+    return await fetch(new Request(request.clone(), { signal }));
+  } catch (error) {
+    /** handle timeout error */
+    if (error instanceof Error && error.name === "TimeoutError") {
+      log(request.url, "warn");
+      throw log(`Timed out after ${formatDuration(timeout)}`, "error");
+    }
+    throw error;
   }
 };

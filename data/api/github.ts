@@ -4,6 +4,7 @@ import { type Repository } from "@octokit/graphql-schema";
 import { throttling } from "@octokit/plugin-throttling";
 import { formatDuration, log } from "@/util/log";
 import { memoize } from "@/util/memoize";
+import { fetchWithTimeout } from "@/util/request";
 
 const { AUTH_GITHUB } = process.env;
 
@@ -20,6 +21,12 @@ const withPlugins = Octokit.plugin(throttling);
 /** github rest api client */
 export const octokit = new withPlugins({
   auth: AUTH_GITHUB,
+
+  request: {
+    /** apply hard timeout to every request */
+    fetch: (url: string, options: RequestInit) =>
+      fetchWithTimeout(new Request(url, options)),
+  },
 
   /** https://github.com/octokit/plugin-throttling.js */
   throttle: {
@@ -44,7 +51,7 @@ export const octokit = new withPlugins({
       return true;
     },
 
-    onSecondaryRateLimit: (retryAfter, options) => {
+    onSecondaryRateLimit: (wait, options) => {
       log(`SecondaryRateLimit on ${options.url}`, "warn");
     },
   },
