@@ -28,22 +28,31 @@ export const getRepositories = async (coreProjects: string[]) => {
    * search for all repositories tagged with core project number. gets base,
    * top-level details.
    */
-  const [repoResults] = await settled(coreProjects, async (coreProject) => {
-    log(
-      `Searching for repositories tagged with "${coreProject}"`,
-      "secondary",
-      1,
-    );
-    return (await searchRepositories(coreProject)).map((repository) => ({
-      owner: repository.owner?.login ?? "",
-      name: repository.name,
-      id: repository.id,
-      coreProject,
-    }));
+  const [repositoryResults, repositoryErrors] = await settled(
+    coreProjects,
+    async (coreProject) => {
+      log(
+        `Searching for repositories tagged with "${coreProject}"`,
+        "secondary",
+        1,
+      );
+      return (await searchRepositories(coreProject)).map((repository) => ({
+        owner: repository.owner?.login ?? "",
+        name: repository.name,
+        id: repository.id,
+        coreProject,
+      }));
+    },
+  );
+
+  repositoryErrors.forEach((error, index) => {
+    const coreProject = coreProjects[index] ?? "";
+    log(coreProject, "secondary", 1);
+    log(error, "warn", 2);
   });
 
   /** flatten */
-  let repositories = repoResults.flat();
+  let repositories = repositoryResults.flat();
 
   /** de-dupe */
   repositories = uniqBy(repositories, (repository) => repository.id);
@@ -56,7 +65,7 @@ export const getRepositories = async (coreProjects: string[]) => {
   timeStart("Repository details");
   log(`Getting details for ${count(repositories)} repositories`);
 
-  const [repoDetails, errors] = await settled(
+  const [details, detailErrors] = await settled(
     repositories,
     async ({ owner, name, coreProject }) => {
       const label = `${owner}/${name}`;
@@ -97,13 +106,13 @@ export const getRepositories = async (coreProjects: string[]) => {
     },
   );
 
-  errors.forEach((error, index) => {
+  detailErrors.forEach((error, index) => {
     const { owner = "", name = "" } = repositories[index] ?? {};
     log(`${owner}/${name}`, "secondary", 1);
     log(error, "warn", 2);
   });
 
-  type Repository = Exclude<(typeof repoDetails)[number], Error>;
+  type Repository = Exclude<(typeof details)[number], Error>;
   type Issue = Repository["issues"][number];
   type PullRequest = Repository["pullRequests"][number];
 
@@ -133,7 +142,7 @@ export const getRepositories = async (coreProjects: string[]) => {
     ) || 0;
 
   /** transform data into desired format, with fallbacks */
-  const transformed = repoDetails.map((repository) => ({
+  const transformed = details.map((repository) => ({
     coreProject: repository.coreProject,
     id: repository.id,
     owner: repository.owner?.login ?? "",
