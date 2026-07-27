@@ -49,6 +49,15 @@ Run main info gathering pipeline, inside container:
 
 Pipeline should output JSON files under `/data/output` and `/data/raw`.
 
+### Upload to Google Cloud Storage
+
+The pipeline workflow, `pipeline.yaml`, uploads the results of the pipeline run to this Google Cloud Storage (GCS) bucket path `gs://icc-eval-core/pipeline-output/`.
+
+In order for it to have permission to write to that bucket, you'll need to obtain a service account credentials key JSON file with permissions to write to the bucket.
+Visit https://console.cloud.google.com/iam-admin/serviceaccounts under a project that has access to the bucket, create a new service account, and download the JSON key file.
+You'll then set the GitHub repo secret `AUTH_GOOGLE_CLOUD_STORAGE` to the contents of that JSON file.
+The pipeline will then use that secret to authenticate with GCS and upload the results.
+
 ### Import info into backend
 
 Import results of pipeline into backend database (runs `import_dataset` inside backend container):
