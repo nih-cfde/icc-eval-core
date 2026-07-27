@@ -8,11 +8,11 @@ import { memoize } from "@/util/memoize";
 const { AUTH_GITHUB } = process.env;
 
 /** max number of request attempts */
-const attempts = 2;
+const maxAttempts = 3;
 /** multiply retry wait time for extra safety */
-const waitFactor = 2;
-/** max retry time, in ms */
-const maxRetry = 10 * 60 * 1000;
+const waitFactor = 1.1;
+/** max wait time, in ms */
+const maxWait = 60 * 1000;
 
 /** use provided rate-limiting middleware */
 const withPlugins = Octokit.plugin(throttling);
@@ -20,28 +20,30 @@ const withPlugins = Octokit.plugin(throttling);
 /** github rest api client */
 export const octokit = new withPlugins({
   auth: AUTH_GITHUB,
+
   /** https://github.com/octokit/plugin-throttling.js */
   throttle: {
-    onRateLimit: (retryAfter, options, octokit, attempt) => {
+    onRateLimit: (wait, options, octokit, attempt) => {
       log(`RateLimit on ${options.url}`, "warn");
 
+      /** check attempts */
       attempt++;
-      log(`Attempt ${attempt} of ${attempts}`, "warn");
-
-      if (attempt >= attempts) {
-        log("Exceeded attempt count", "error");
+      log(`Attempt ${attempt}`, "warn");
+      if (attempt >= maxAttempts) {
+        log("Exceeded max attempts", "error");
         return false;
       }
 
-      log(`Retrying after ${formatDuration(retryAfter * 1000)}`, "warn");
-
-      if (retryAfter > maxRetry) {
-        log(`Exceeded max retry time of ${formatDuration(maxRetry)}`, "error");
+      /** check wait */
+      log(`Waiting ${formatDuration(wait * 1000)}`, "warn");
+      if (wait > maxWait) {
+        log("Exceeded max wait", "error");
         return false;
       }
 
       return true;
     },
+
     onSecondaryRateLimit: (retryAfter, options) => {
       log(`SecondaryRateLimit on ${options.url}`, "warn");
     },

@@ -1,43 +1,14 @@
+import { formatDuration, log } from "@/util/log";
 import { sleep } from "@/util/misc";
 
+/** max number of request attempts */
+const maxAttempts = 3;
+/** multiply retry wait time for extra safety */
+const waitFactor = 1.1;
+/** max retry time, in ms */
+const maxWait = 60 * 1000;
+
 export type Params = Record<string, unknown | unknown[]>;
-
-/**
- * Per-domain rate limits in requests per second.
- * Domains not listed here are not rate-limited.
- */
-export const requestRateLimits: Record<string, number> = {
-  "eutils.ncbi.nlm.nih.gov": 10,
-};
-
-type RateLimitState = {
-  nextAllowedAt: number;
-  queue: Promise<void>;
-};
-
-const rateLimitStateByDomain = new Map<string, RateLimitState>();
-
-/** wait for domain-specific rate limit slot, if configured */
-const waitForRateLimitSlot = async (url: URL) => {
-  const requestsPerSecond = requestRateLimits[url.hostname];
-  if (!requestsPerSecond || requestsPerSecond <= 0) return;
-
-  const intervalMs = Math.ceil(1000 / requestsPerSecond);
-  const state =
-    rateLimitStateByDomain.get(url.hostname) ??
-    ({ nextAllowedAt: 0, queue: Promise.resolve() } as RateLimitState);
-
-  const wait = async () => {
-    const now = Date.now();
-    const waitMs = Math.max(0, state.nextAllowedAt - now);
-    if (waitMs > 0) await sleep(waitMs);
-    state.nextAllowedAt = Date.now() + intervalMs;
-  };
-
-  state.queue = state.queue.then(wait, wait);
-  rateLimitStateByDomain.set(url.hostname, state);
-  await state.queue;
-};
 
 /** request */
 type Url = string | URL;
@@ -74,25 +45,34 @@ export const request: Request = async <Parsed>(
 
   /** make request */
   const request = new Request(url, { ...options, body });
-  await waitForRateLimitSlot(url);
   let response = await fetch(request);
 
   /** if rate limited, retry a few times */
-  let retry = 5;
-  while (response.status === 429 && retry-- > 0) {
-    const timeout = parseInt(response.headers.get("retry-after") ?? "1") + 1;
-    console.debug(`Retrying (${retry}) after ${timeout}s`);
-    await sleep(timeout * 1000);
-    await waitForRateLimitSlot(url);
+  for (let attempt = 1; response.status === 429; attempt++) {
+    log(`RateLimit on ${url}`, "warn");
+
+    /** check attempts */
+    log(`Attempt ${attempt}`, "warn");
+    if (attempt >= maxAttempts) throw log("Exceeded max attempts", "error");
+
+    /** check wait */
+    const wait = parseInt(response.headers.get("retry-after") || "") || 1;
+    log(`Waiting ${formatDuration(wait * 1000)}`, "warn");
+    if (wait > maxWait) throw log("Exceeded max wait", "error");
+
+    /** wait */
+    await sleep(wait * waitFactor * 1000);
+    /** retry */
     response = await fetch(request.clone());
   }
+
   if (!response.ok)
     throw Error(
       [url, response.status, response.statusText].filter(Boolean).join(" "),
     );
-  if (raw) return response;
 
   /** parse response */
+  if (raw) return response;
   try {
     if (options.parse === "json") return (await response.json()) as Parsed;
     if (options.parse === "text") return (await response.text()) as Parsed;
