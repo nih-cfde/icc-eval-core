@@ -14,13 +14,18 @@ services:
       - backend
 
   backend:
+    restart: unless-stopped
     environment:
       - DJANGO_DEBUG=0
       - ORCID_USE_SANDBOX=0
       - FRONTEND_APP_URL=https://cfde-eval.netlify.app
 
+  db:
+    restart: unless-stopped
+
   caddy:
     image: caddy:2.11
+    restart: unless-stopped
     ports:
       - 80:80
       - 443:443
