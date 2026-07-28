@@ -2,3 +2,66 @@ name: Refresh database from Google Cloud Storage
 
 on:
   workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: [self-hosted, Linux, X64, cfde]
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Show runner context
+        run: |
+          set -euo pipefail
+          hostname
+          whoami
+          docker --version
+          docker compose version
+
+      - name: Authenticate to Google Cloud Storage
+        uses: google-github-actions/auth@v3
+        with:
+          credentials_json: ${{ secrets.AUTH_GOOGLE_CLOUD_STORAGE }}
+
+      - name: Download from GCS
+        run: |
+          set -euo pipefail
+          # list the bucket and find the most recent folder under pipeline-output by date
+          LATEST_PATH=$(
+            gcloud storage ls 'gs://icc-eval-core/pipeline-output/' |
+              grep -E '/[0-9]{4}-[0-9]{2}-[0-9]{2}/$' |
+              sort |
+              tail -n 1
+          )
+          # prep the destination
+          mkdir -p data/output
+          rm -rf data/output/*
+          # download the new pipeline output
+          gcloud storage cp --recursive ${LATEST_PATH}output/ data/output/
+
+      - name: Import results into backend database
+        timeout-minutes: 10
+        working-directory: /srv/projects/icc-eval-core
+        run: |
+          set -euo pipefail
+
+          LOCK_FILE=/tmp/icc-eval-core-api-import.lock
+
+          (
+            if ! flock -n 200; then
+              echo "Another data import run is already active on this VM. Exiting without starting a new run."
+              exit 78
+            fi
+
+            echo "::group::Import logs"
+            ./run_stack.sh run --rm -w '/app/icc_eval_core_api' backend 'uv run python manage.py import_dataset /data/output/' 2>&1 | tee import.log
+            echo "::endgroup::"
+          ) 200>"$LOCK_FILE"
+
+      - name: Upload import log
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: import-log
+          path: /srv/projects/icc-eval-core/import.log

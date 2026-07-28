@@ -66,3 +66,15 @@ Import results of pipeline into backend database (runs `import_dataset` inside b
 ```bash
 ./run_stack.sh run --rm -it backend uv run /app/icc_eval_core_api/manage.py import_dataset /data/output/
 ```
+
+## Workflows
+
+This repo contains a few workflows that keep the code and database on our production instance up to date:
+
+- `gather-info.yaml`: Runs the pipeline to gather info and upload results to GCS bucket.
+- `update-database.yaml`: Downloads the latest results from GCS bucket and imports them into backend database.
+- `deploy-stack.yaml`: Deploys the stack to a VM, which updates just the code
+
+The pipeline runs daily and, if successful, launches the refresh workflow to update the backend database with the latest results.
+
+The deploy workflow runs when code is pushed to the main branch, which updates the code on the VM without affecting the database.

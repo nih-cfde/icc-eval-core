@@ -2,11 +2,44 @@ name: Deploy stack
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+
+# only allow one instance of this workflow to run at a time, but queue
+# them up if there are multiple commits to main to run one after another
+concurrency:
+  group: deploy-stack-main
+  queue: max
 
 jobs:
-  update-database:
-    runs-on: ubuntu-latest
+  deploy:
+    runs-on: [self-hosted, Linux, X64, cfde]
+
+    permissions:
+      contents: read
 
     steps:
-      - name: Hello, World
-        run: echo "Hello, world!"
+      - name: Show runner context
+        run: |
+          set -euo pipefail
+          hostname
+          whoami
+          docker --version
+          docker compose version
+
+      - name: Update repo on VM
+        working-directory: /srv/projects/icc-eval-core
+        run: |
+          set -euo pipefail
+          # ensure that we pull the commit associated with this workflow
+          # execution, not just the latest commit on main
+          git fetch origin
+          git reset --hard "${{ github.sha }}"
+
+      - name: Relaunch the stack for serving
+        timeout-minutes: 10
+        working-directory: /srv/projects/icc-eval-core
+        run: |
+          set -euo pipefail
+          ./run_stack.sh
