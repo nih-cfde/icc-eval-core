@@ -2,9 +2,13 @@ name: Refresh database from Google Cloud Storage
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Run pipeline"]
+    types: [completed]
 
 jobs:
   refresh:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: [self-hosted, Linux, X64, cfde]
 
     permissions:
