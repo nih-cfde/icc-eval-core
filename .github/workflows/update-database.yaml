@@ -1,4 +1,4 @@
-name: Refresh database from Google Cloud Storage
+name: Update database from Google Cloud Storage
 
 on:
   workflow_dispatch:
@@ -7,8 +7,8 @@ on:
     types: [completed]
 
 jobs:
-  refresh:
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+  update-db:
+    if: ${{ github.event_name == 'workflow_dispatch' || ( github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success' ) }}
     runs-on: [self-hosted, Linux, X64, cfde]
 
     permissions:
