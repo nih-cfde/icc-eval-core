@@ -22,13 +22,13 @@ export const getRepositories = async (coreProjects: string[]) => {
   coreProjects = uniq(coreProjects);
 
   log(`Getting repositories for ${count(coreProjects)} core projects`);
-  timeStart("Repositories");
+  timeStart("Repository search");
 
   /**
    * search for all repositories tagged with core project number. gets base,
    * top-level details.
    */
-  const [repositoryResults, repositoryErrors] = await settled(
+  const [search, searchErrors] = await settled(
     coreProjects,
     async (coreProject) => {
       log(
@@ -45,14 +45,14 @@ export const getRepositories = async (coreProjects: string[]) => {
     },
   );
 
-  repositoryErrors.forEach((error, index) => {
+  searchErrors.forEach((error, index) => {
     const coreProject = coreProjects[index] ?? "";
     log(coreProject, "secondary", 1);
     log(error, "warn", 2);
   });
 
   /** flatten */
-  let repositories = repositoryResults.flat();
+  let repositories = search.flat();
 
   /** de-dupe */
   repositories = uniqBy(repositories, (repository) => repository.id);
@@ -61,7 +61,7 @@ export const getRepositories = async (coreProjects: string[]) => {
     log(`${owner}/${name}`, "secondary", 1),
   );
 
-  timeEnd("Repositories");
+  timeEnd("Repository search");
   timeStart("Repository details");
   log(`Getting details for ${count(repositories)} repositories`);
 

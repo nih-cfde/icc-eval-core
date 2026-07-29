@@ -4,15 +4,16 @@ import { type Repository } from "@octokit/graphql-schema";
 import { throttling } from "@octokit/plugin-throttling";
 import { formatDuration, log } from "@/util/log";
 import { memoize } from "@/util/memoize";
+import { fetchWithTimeout } from "@/util/request";
 
 const { AUTH_GITHUB } = process.env;
 
 /** max number of request attempts */
-const attempts = 2;
+const maxAttempts = 3;
 /** multiply retry wait time for extra safety */
-const waitFactor = 2;
-/** max retry time, in ms */
-const maxRetry = 10 * 60 * 1000;
+const waitFactor = 1.1;
+/** max wait time, in ms */
+const maxWait = 60 * 1000;
 
 /** use provided rate-limiting middleware */
 const withPlugins = Octokit.plugin(throttling);
@@ -20,29 +21,31 @@ const withPlugins = Octokit.plugin(throttling);
 /** github rest api client */
 export const octokit = new withPlugins({
   auth: AUTH_GITHUB,
+
+  request: {
+    /** apply hard timeout to every request */
+    fetch: (url: string, options: RequestInit) =>
+      fetchWithTimeout(new Request(url, options), maxWait),
+  },
+
   /** https://github.com/octokit/plugin-throttling.js */
   throttle: {
-    onRateLimit: (retryAfter, options, octokit, attempt) => {
+    onRateLimit: (wait, options, octokit, attempt) => {
       log(`RateLimit on ${options.url}`, "warn");
 
+      /** check attempts */
       attempt++;
-      log(`Attempt ${attempt} of ${attempts}`, "warn");
+      log(`Attempt ${attempt}`, "warn");
+      if (attempt >= maxAttempts) throw Error("Exceeded max attempts");
 
-      if (attempt >= attempts) {
-        log("Exceeded attempt count", "error");
-        return false;
-      }
-
-      log(`Retrying after ${formatDuration(retryAfter * 1000)}`, "warn");
-
-      if (retryAfter > maxRetry) {
-        log(`Exceeded max retry time of ${formatDuration(maxRetry)}`, "error");
-        return false;
-      }
+      /** check wait */
+      log(`Waiting ${formatDuration(wait * 1000)}`, "warn");
+      if (wait > maxWait) throw Error("Exceeded max wait");
 
       return true;
     },
-    onSecondaryRateLimit: (retryAfter, options) => {
+
+    onSecondaryRateLimit: (wait, options) => {
       log(`SecondaryRateLimit on ${options.url}`, "warn");
     },
   },
@@ -62,59 +65,16 @@ octokit.request = octokit.request.defaults({ per_page: 100 });
 
 /** search for repositories that have topic */
 export const searchRepositories = memoize(async (topic: string) => {
-  /** use graph ql instead of rest to speed up query and reduce rate limit */
-  const { search } = await octokit.graphql.paginate<{
-    search: {
-      nodes: {
-        databaseId: number;
-        name: string;
-        owner: { login: string } | null;
-        repositoryTopics: { nodes: { topic: { name: string } }[] };
-      }[];
-    };
-  }>(
-    `
-  query searchRepositories($topicQuery: String!, $cursor: String) {
-    search(query: $topicQuery, type: REPOSITORY, first: 100, after: $cursor) {
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
-      nodes {
-        ... on Repository {
-          databaseId
-          name
-          owner {
-            login
-          }
-          repositoryTopics(first: 25) {
-            nodes {
-              topic {
-                name
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`,
-    { topicQuery: `topic:${topic}` },
-  );
-
-  const repositories = search.nodes.map((node) => ({
-    id: node.databaseId,
-    name: node.name,
-    owner: node.owner,
-    topics: node.repositoryTopics.nodes.map(({ topic }) => topic.name),
-  }));
+  const repositories = await octokit.paginate(octokit.rest.search.repos, {
+    q: `topic:${topic}`,
+  });
 
   /** if flag set, get all other repositories in organization */
   const organizationRepositories = (
     await Promise.all(
       uniq(
         repositories
-          .filter((repository) => repository.topics.includes("tag-all"))
+          .filter((repository) => repository.topics?.includes("tag-all"))
           .map((repository) => repository.owner?.login ?? ""),
       )
         .filter(Boolean)

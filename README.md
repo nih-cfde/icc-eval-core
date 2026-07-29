@@ -49,6 +49,16 @@ Run main info gathering pipeline, inside container:
 
 Pipeline should output JSON files under `/data/output` and `/data/raw`.
 
+### Upload to Google Cloud Storage
+
+The pipeline workflow, `pipeline.yaml`, uploads the results of the pipeline run to this Google Cloud Storage (GCS) bucket path `gs://icc-eval-core/pipeline-output/`.
+Later steps in the deploy workflow will then download the results from that bucket and import them into the backend database.
+
+In order for it to have permission to write to that bucket, you'll need to obtain a service account credentials key JSON file with permissions to write to the bucket.
+Visit https://console.cloud.google.com/iam-admin/serviceaccounts under a project that has access to the bucket, create a new service account, and download the JSON key file.
+You'll then set the GitHub repo secret `AUTH_GOOGLE_CLOUD_STORAGE` to the contents of that JSON file.
+The pipeline will then use that secret to authenticate with GCS and upload the results.
+
 ### Import info into backend
 
 Import results of pipeline into backend database (runs `import_dataset` inside backend container):
@@ -56,3 +66,15 @@ Import results of pipeline into backend database (runs `import_dataset` inside b
 ```bash
 ./run_stack.sh run --rm -it backend uv run /app/icc_eval_core_api/manage.py import_dataset /data/output/
 ```
+
+## Workflows
+
+This repo contains a few workflows that keep the code and database on our production instance up to date:
+
+- `gather-info.yaml`: Runs the pipeline to gather info and upload results to GCS bucket.
+- `update-database.yaml`: Downloads the latest results from GCS bucket and imports them into backend database.
+- `deploy-stack.yaml`: Deploys the stack to a VM, which updates just the code
+
+The pipeline runs daily and, if successful, launches the refresh workflow to update the backend database with the latest results.
+
+The deploy workflow runs when code is pushed to the main branch, which updates the code on the VM without affecting the database.

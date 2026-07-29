@@ -73,7 +73,7 @@ export const getAnalytics = async () => {
     log(error, "warn", 1);
   });
 
-  if (errors.length) log(`${count(errors)} errors`, "error");
+  if (errors.length) throw Error(`${count(errors)} errors`);
 
   /** map time data */
   const mapOverTime = (reports: Awaited<ReturnType<typeof getOverTime>>) => {

@@ -28,7 +28,7 @@ export const log = (
   if (["string", "number", "boolean"].includes(typeof message))
     console.log("  ".repeat(indent) + color(icon, message));
   else console.log(message);
-  if (level === "error") throw Error(message);
+  return message;
 };
 
 /** print horizontal divider. use as major/higher-level divider. */
@@ -40,24 +40,37 @@ export const divider = (message: Message) => {
 };
 
 /** timer timestamps */
-const timers: Record<string, number> = {};
+const timestamps: Record<string, number> = {};
+/** timer timeouts */
+const timeouts: Record<string, ReturnType<typeof setTimeout>> = {};
 
 /** log start timestamp */
-export const timeStart = (label = "default") => {
+export const timeStart = (label = "default", timeout?: number) => {
   const now = Date.now();
-  timers[label] = now;
+  timestamps[label] = now;
   log(`${label} timer started, ${formatTimestamp(now)}`, "secondary", 1);
+  if (timeout)
+    timeouts[label] = setTimeout(() => {
+      log(`${label} timer timed out after ${formatDuration(timeout)}`, "error");
+      process.exit(1);
+    }, timeout);
 };
 
 /** log end timestamp */
 export const timeEnd = (label = "default") => {
-  const start = timers[label];
+  const start = timestamps[label];
   if (!start) return;
   const now = Date.now();
   const took = now - start;
-  timers[label] = 0;
+  clearTimeout(timeouts[label]);
+  delete timestamps[label];
+  delete timeouts[label];
   log(
-    `${label} timer ended, ${formatTimestamp(now)}, took ${formatDuration(took)}`,
+    [
+      `${label} timer ended`,
+      formatTimestamp(now),
+      `took ${formatDuration(took)}`,
+    ].join(" | "),
     "secondary",
     1,
   );

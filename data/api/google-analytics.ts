@@ -2,6 +2,8 @@ import { AnalyticsAdminServiceClient } from "@google-analytics/admin";
 import type { protos as AdminTypes } from "@google-analytics/admin";
 import type { protos as DataTypes } from "@google-analytics/data";
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
+import { status as Status, type ServiceError } from "@grpc/grpc-js";
+import { formatDuration, log } from "@/util/log";
 import { memoize } from "@/util/memoize";
 
 /**
@@ -10,6 +12,9 @@ import { memoize } from "@/util/memoize";
  * https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema
  * https://googleapis.dev/nodejs/analytics-data/latest/google.analytics.data.v1beta.BetaAnalyticsData.html
  */
+
+/** max time to wait for response */
+const timeout = 30 * 1000;
 
 type PropertyId = `properties/${string}`;
 type PropertyDetails =
@@ -34,9 +39,10 @@ const handleError =
     try {
       return await func(...params);
     } catch (error) {
-      throw Error((error as { details: string }).details ?? error, {
-        cause: error,
-      });
+      const { code, details } = error as ServiceError;
+      if (code === Status.DEADLINE_EXCEEDED)
+        log(`Timed out after ${formatDuration(timeout)}`, "warn");
+      throw Error(details, { cause: error });
     }
   };
 
@@ -46,7 +52,7 @@ export const getProperties = memoize(
     const properties: PropertyDetails[] = [];
     for await (const account of adminClient.listAccountSummariesAsync(
       {},
-      { autoPaginate: false },
+      { autoPaginate: false, timeout },
     ))
       for (const property of account.propertySummaries ?? [])
         if (property.property)
@@ -58,9 +64,10 @@ export const getProperties = memoize(
 /** extract core project id from custom field that property owner defines */
 export const getCoreProject = memoize(
   handleError(async (property: PropertyId) => {
-    const metadata = await dataClient.getMetadata({
-      name: `${property}/metadata`,
-    });
+    const metadata = await dataClient.getMetadata(
+      { name: `${property}/metadata` },
+      { timeout },
+    );
     const json = JSON.stringify(metadata);
     return json.match(/cfde_(.*?)"/i)?.[1] ?? "";
   }),
@@ -68,13 +75,11 @@ export const getCoreProject = memoize(
 
 /** run reports */
 const runReports = memoize(
-  async (property: PropertyId, requests: BatchReportRequest["requests"]) =>
-    (
-      await dataClient.batchRunReports({
-        property,
-        requests,
-      })
-    )[0]?.reports ?? [],
+  handleError(
+    async (property: PropertyId, requests: BatchReportRequest["requests"]) =>
+      (await dataClient.batchRunReports({ property, requests }, { timeout }))[0]
+        ?.reports ?? [],
+  ),
 );
 
 /** earliest allowed (~launch of google analytics) to present */

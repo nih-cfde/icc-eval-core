@@ -39,7 +39,7 @@ export const getDrc = async () => {
     return data;
   });
 
-  if (errors.length) log(`${count(errors)} errors`, "error");
+  if (errors.length) throw Error(`${count(errors)} errors`);
 
   const [dcc, file, code] = lists as [DCC, File, Code];
 

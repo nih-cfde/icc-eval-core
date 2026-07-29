@@ -50,7 +50,10 @@ export const downloadFile = async (url: string, path: string) => {
 
 /** get info of remote file without downloading */
 export const liteDownloadFile = memoize(async (url: string) => {
-  const response = await request(url, { method: "HEAD" }, true);
+  const response = await request<Response>(url, {
+    method: "HEAD",
+    parse: "raw",
+  });
   const size = Number(response.headers.get("Content-Length"));
   const date = formatDate(response.headers.get("Last-Modified") ?? "");
   return { url, path: "", size, date };
@@ -99,16 +102,10 @@ export const saveFile = async (data: unknown, path: string) => {
   if (path.endsWith(".tsv"))
     contents = stringifyCsv([data].flat(), { delimiter: "\t" });
 
-  try {
-    /** create folders if needed */
-    await mkdir(parse(path).dir, { recursive: true });
-    /** save file */
-    await writeFile(path, contents);
-    return true;
-  } catch (error) {
-    log(error, "error");
-    return false;
-  }
+  /** create folders if needed */
+  await mkdir(parse(path).dir, { recursive: true });
+  /** save file */
+  await writeFile(path, contents);
 };
 
 /** parse json */

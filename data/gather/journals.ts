@@ -48,7 +48,7 @@ export const getJournals = async (abbrevs: string[]) => {
     log(error, "warn", 2);
   });
 
-  if (errors.length) log(`${count(errors)} errors`, "error");
+  if (errors.length) throw Error(`${count(errors)} errors`);
 
   /** transform data into desired format, with fallbacks */
   let transformedJournals = journals.map((journal, index) => {

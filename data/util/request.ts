@@ -1,4 +1,10 @@
+import { formatDuration, log } from "@/util/log";
 import { sleep } from "@/util/misc";
+
+/** max number of request attempts */
+const maxAttempts = 3;
+/** multiply retry wait time for extra safety */
+const waitFactor = 1.1;
 
 export type Params = Record<string, unknown | unknown[]>;
 
@@ -7,22 +13,22 @@ type Url = string | URL;
 type Options = Omit<RequestInit, "body"> & {
   params?: Params;
   body?: unknown;
-  parse?: "json" | "text";
+  parse?: "json" | "text" | "arrayBuffer" | "raw";
+  timeout?: number;
 };
-type Request = {
+type RequestFunc = {
   <Parsed>(url: Url, options: Options): Promise<Parsed>;
   (url: Url, options: Options, raw: true): Promise<Response>;
 };
 
-/** generic request wrapper */
-export const request: Request = async <Parsed>(
+/** generic request wrapper with conveniences */
+export const request: RequestFunc = async <Parsed>(
   url: Url,
   options: Options,
-  /** whether to return raw response object */
-  raw = false,
 ) => {
   /** options defaults */
   options.parse ??= "json";
+  options.timeout ??= 60 * 1000;
 
   /** construct request url */
   url = new URL(url);
@@ -37,28 +43,62 @@ export const request: Request = async <Parsed>(
 
   /** make request */
   const request = new Request(url, { ...options, body });
-  let response = await fetch(request);
+  let response = await fetchWithTimeout(request, options.timeout);
 
   /** if rate limited, retry a few times */
-  let retry = 5;
-  while (response.status === 429 && retry-- > 0) {
-    const timeout = parseInt(response.headers.get("retry-after") ?? "1") + 1;
-    console.debug(`Retrying (${retry}) after ${timeout}s`);
-    await sleep(timeout * 1000);
-    response = await fetch(request.clone());
+  for (let attempt = 1; response.status === 429; attempt++) {
+    log(`RateLimit on ${url}`, "warn");
+
+    /** check attempts */
+    log(`Attempt ${attempt}`, "warn");
+    if (attempt >= maxAttempts) throw Error("Exceeded max attempts");
+
+    /** check wait */
+    const wait = parseInt(response.headers.get("retry-after") || "") || 1;
+    log(`Waiting ${formatDuration(wait * 1000)}`, "warn");
+    if (wait * 1000 > options.timeout) throw Error("Exceeded max wait");
+
+    /** wait */
+    await sleep(wait * waitFactor * 1000);
+    /** retry */
+    response = await fetchWithTimeout(request.clone(), options.timeout);
   }
+
   if (!response.ok)
     throw Error(
-      [url, response.status, response.statusText].filter(Boolean).join(" "),
+      [url, response.status, response.statusText].filter(Boolean).join(" | "),
     );
-  if (raw) return response;
 
   /** parse response */
   try {
     if (options.parse === "json") return (await response.json()) as Parsed;
     if (options.parse === "text") return (await response.text()) as Parsed;
-    throw Error();
+    if (options.parse === "arrayBuffer")
+      return (await response.arrayBuffer()) as Parsed;
+    if (options.parse === "raw") return response as Parsed;
+    throw Error(`Unknown parse option`);
   } catch (error) {
     throw Error(`Problem parsing ${url} as ${options.parse}`, { cause: error });
+  }
+};
+
+/** fetch, with hard-failure on connection stall */
+export const fetchWithTimeout = async (request: Request, timeout: number) => {
+  try {
+    /** combine passed abort signal with timeout */
+    const signal = AbortSignal.any(
+      [request.signal, AbortSignal.timeout(timeout)].filter(Boolean),
+    );
+    /** make request */
+    return await fetch(new Request(request.clone(), { signal }));
+  } catch (error) {
+    /** handle timeout error */
+    if (error instanceof Error && error.name === "TimeoutError") {
+      log(request.url, "warn");
+      throw Error(`Timed out after ${formatDuration(timeout)}`, {
+        cause: error,
+      });
+    }
+    throw error;
   }
 };

@@ -20,10 +20,10 @@
 1. Go to "IAM & Admin".
 1. Create a service account with name "API Access" and id "api-access".
 1. Create a JSON key for the service account.
-1. _(For running the pipeline locally)_ Download the JSON key, move it to the root of this repopository, rename it to "ga-credentials.json", and ensure it's being ignored by `.gitignore`.
+1. _(For running the pipeline locally)_ Download the JSON key, move it to the root of this repository, rename it to "ga-credentials.json", and ensure it's being ignored by `.gitignore`.
 1. Go back to the Google Console welcome page, then to "API & Services".
 1. Disable any APIs (one-by-one) that were enabled by default.
 1. Enable "Google Analytics Data API" and "Google Analytics Admin API".
 1. Find the service account email in the Google Console dashboard or in the JSON key.
 1. In the Google Analytics instructions of this repository's readme, update the email account that submitters need to grant access to.
-1. _(For running the pipeline on GitHub Actions)_ Create an actions repository secret in this repository with the name `AUTH_GOOGLE` and value of the JSON key file contents.
+1. _(For running the pipeline on GitHub Actions)_ Create an actions repository secret in this repository with the name `AUTH_GOOGLE_ANALYTICS` and value of the JSON key file contents.
