@@ -1,4 +1,4 @@
-name: Run pipeline
+name: Gather info, push to Google Cloud Storage
 
 on:
   schedule:

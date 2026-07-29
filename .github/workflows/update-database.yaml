@@ -3,7 +3,7 @@ name: Refresh database from Google Cloud Storage
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Run pipeline"]
+    workflows: ["Gather info, push to Google Cloud Storage"]
     types: [completed]
 
 jobs:
