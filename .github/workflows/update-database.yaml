@@ -2,3 +2,11 @@ name: Refresh database from Google Cloud Storage
 
 on:
   workflow_dispatch:
+
+jobs:
+  update-database:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hello, World
+        run: echo "Hello, world!"
