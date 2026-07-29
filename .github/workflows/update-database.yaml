@@ -1,0 +1,4 @@
+name: Refresh database from Google Cloud Storage
+
+on:
+  workflow_dispatch:

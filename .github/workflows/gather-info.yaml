@@ -1,0 +1,4 @@
+name: Run pipeline
+
+on:
+  workflow_dispatch:
