@@ -109,7 +109,7 @@ saveFile(coreProjects, `${OUTPUT_PATH}/core-projects.json`);
 /** ========================================================================= */
 
 divider("DRC");
-timeStart("DRC", 2 * 60 * 1000);
+timeStart("DRC", 3 * 60 * 1000);
 const { dcc, file, code } = await getDrc();
 saveFile(dcc, `${OUTPUT_PATH}/drc-dcc.json`);
 saveFile(file, `${OUTPUT_PATH}/drc-file.json`);
