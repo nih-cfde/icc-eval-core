@@ -81,7 +81,7 @@ timeEnd("Analytics");
 /** ========================================================================= */
 
 divider("Repositories");
-timeStart("Repositories", 20 * 60 * 1000);
+timeStart("Repositories", 30 * 60 * 1000);
 const repositories = await getRepositories(
   coreProjects.map((coreProject) => coreProject.id),
 );
