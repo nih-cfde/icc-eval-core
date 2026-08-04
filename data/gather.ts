@@ -71,7 +71,7 @@ timeEnd("Journals");
 /** ========================================================================= */
 
 divider("Analytics");
-timeStart("Analytics", 5 * 60 * 1000);
+timeStart("Analytics", 10 * 60 * 1000);
 const analytics = await getAnalytics();
 saveFile(analytics, `${OUTPUT_PATH}/analytics.json`);
 const analyticsOverview = await getAnalyticsOverview(analytics);
