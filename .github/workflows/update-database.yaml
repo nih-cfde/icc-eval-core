@@ -1,9 +1,9 @@
-name: Update database from Google Cloud Storage
+name: Update database
 
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Gather info, push to Google Cloud Storage"]
+    workflows: ["Gather info"]
     types: [completed]
 
 jobs:
