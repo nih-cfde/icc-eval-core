@@ -14,7 +14,7 @@ import { memoize } from "@/util/memoize";
  */
 
 /** max time to wait for response */
-const timeout = 30 * 1000;
+const timeout = 2 * 60 * 1000;
 
 type PropertyId = `properties/${string}`;
 type PropertyDetails =
