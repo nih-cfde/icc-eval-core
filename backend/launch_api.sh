@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd icc_eval_core_api
-
 # run collectstatic
 uv run python manage.py collectstatic --noinput
 
