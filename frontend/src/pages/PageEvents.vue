@@ -21,9 +21,23 @@
 
     <div class="charts">
       <AppTimeChart title="Events" :data="overTime" by="month" />
+      <AppHistoChart
+        title="Attendance"
+        x-label="Attendees"
+        y-label="Events"
+        :data="byAttendance"
+        :bin-size="10"
+      />
       <AppPieChart title="Organizer" :data="byOrganizer" />
       <AppPieChart title="Involved" :data="byInvolved" />
       <AppPieChart title="Length" :data="byLength" />
+      <AppHistoChart
+        title="Length (work hours)"
+        x-label="Length (work hours)"
+        y-label="Events"
+        :data="byLengthAbs"
+        :bin-size="4"
+      />
       <AppPieChart title="Format" :data="byFormat" />
       <AppPieChart title="Purpose" :data="purpose" />
       <AppPieChart title="Tags" :data="byTag" />
@@ -33,13 +47,13 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { mean } from "lodash";
+import { eachHourOfInterval, getHours, isWeekend, max, min } from "date-fns";
 import { Calendar } from "@lucide/vue";
 import { useEvents } from "@/api";
 import AppHeading from "@/components/AppHeading.vue";
+import AppHistoChart from "@/components/AppHistoChart.vue";
 import AppPieChart from "@/components/AppPieChart.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
-import { median } from "@/util/array";
 import { format } from "@/util/string";
 
 const postEventKeys = [
@@ -55,7 +69,8 @@ const postEventKeys = [
 /** fetch event data */
 const { data: events } = useEvents();
 
-const attendance = computed(
+/** attendance breakdown */
+const byAttendance = computed(
   () => events.value?.flatMap((event) => event.attendanceOutcome || []) ?? [0],
 );
 
@@ -74,6 +89,26 @@ const byInvolved = computed(() =>
 /** event counts by length */
 const byLength = computed(() =>
   (events.value ?? []).map((event) => [event.length, 1] as const),
+);
+
+/** event length, actual end minus start */
+const byLengthAbs = computed(() =>
+  (events.value ?? [])
+    .flatMap(({ start, end }) => {
+      if (!start || !end) return [];
+      /** guard against end before start */
+      const interval = { start: min([start, end]), end: max([start, end]) };
+      return eachHourOfInterval(interval).filter(
+        (hour) =>
+          /** only during normal work hours */
+          getHours(hour) >= 9 &&
+          getHours(hour) < 9 + 8 &&
+          /** discount weekends */
+          !isWeekend(hour),
+      ).length;
+    })
+    /** remove outliers */
+    .filter((length) => length < 200),
 );
 
 /** event counts by format */
@@ -112,13 +147,8 @@ const details = computed(() => [
           postEventKeys.some((key) => event[key as keyof typeof event]),
         ).length ?? 0,
       ),
-      "events",
+      "surveys",
     ],
-  ],
-  [
-    "Attendance",
-    [mean(attendance.value), "average"],
-    [median(attendance.value), "median"],
   ],
 ]);
 </script>
