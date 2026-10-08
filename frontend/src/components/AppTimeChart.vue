@@ -1,7 +1,7 @@
 <template>
   <v-chart
     ref="chart"
-    v-if="props.data.length"
+    v-if="data.length"
     class="chart"
     :option="options"
     :group="group"
@@ -56,11 +56,14 @@ type Props = {
   group?: string;
 };
 
-const props = withDefaults(defineProps<Props>(), {
-  cumulative: false,
-  yFormat: (value: number) => format(value, true),
-  group: undefined,
-});
+const {
+  title,
+  data,
+  cumulative = false,
+  yFormat = (value: number) => format(value, true),
+  by,
+  group = undefined,
+} = defineProps<Props>();
 
 const chart = ref<ComponentInstance<typeof VChart>>();
 const { width, height } = useElementSize(() => chart.value?.root);
@@ -89,14 +92,14 @@ const sans = getCssVar("--sans");
 const options = ref<EChartsOption>({});
 
 /** connect chart zooms together */
-watchEffect(() => props.group && connect(props.group));
+watchEffect(() => group && connect(group));
 
 watchEffect(() => {
   /** sum all values */
-  const total = sum(props.data.map(([, value]) => value));
+  const total = sum(data.map(([, value]) => value));
 
   /** sort dates from earliest to latest */
-  const inputData = orderBy(props.data, ([date]) => date);
+  const inputData = orderBy(data, ([date]) => date);
 
   /** get range of passed dates */
   const inputDates = inputData.map(([date]) => date);
@@ -106,14 +109,14 @@ watchEffect(() => {
   /** get date bins */
   let bins: Date[] = [];
   if (start && end) {
-    if (props.by === "year") bins = eachYearOfInterval({ start, end }, {});
-    if (props.by === "month") bins = eachMonthOfInterval({ start, end });
-    if (props.by === "week") bins = eachWeekOfInterval({ start, end });
-    if (props.by === "day") bins = eachDayOfInterval({ start, end });
+    if (by === "year") bins = eachYearOfInterval({ start, end }, {});
+    if (by === "month") bins = eachMonthOfInterval({ start, end });
+    if (by === "week") bins = eachWeekOfInterval({ start, end });
+    if (by === "day") bins = eachDayOfInterval({ start, end });
   }
 
   /** init bin values to 0 */
-  const data: [Date, number][] = bins.map((date) => [date, 0]);
+  const binned: [Date, number][] = bins.map((date) => [date, 0]);
 
   /** total values for binned dates, assume sorted */
   let index = 0;
@@ -122,20 +125,20 @@ watchEffect(() => {
     while (date >= (bins[index + 1] ?? Infinity) && index < bins.length - 1)
       index++;
     /** accumulate value */
-    const bin = data[index];
+    const bin = binned[index];
     if (bin) bin[1] += value;
   }
 
   /** accumulate values */
-  if (props.cumulative)
-    for (let index = 1; index < data.length; index++) {
-      const bin = data[index];
-      const prev = data[index - 1];
+  if (cumulative)
+    for (let index = 1; index < binned.length; index++) {
+      const bin = binned[index];
+      const prev = binned[index - 1];
       if (bin && prev) bin[1] += prev[1];
     }
 
   /** whether to enable zoom controls */
-  const zoom = props.data.length > 20;
+  const zoom = data.length > 20;
 
   options.value.animation = false;
 
@@ -144,8 +147,8 @@ watchEffect(() => {
   };
 
   options.value.title = {
-    text: `${props.title}${props.cumulative ? " (cumulative)" : ""}`,
-    subtext: `Total: ${props.yFormat(total)}`,
+    text: `${title}${cumulative ? " (cumulative)" : ""}`,
+    subtext: `Total: ${yFormat(total)}`,
     right: "center",
     top: 15,
     textStyle: { fontSize: 16 },
@@ -172,7 +175,7 @@ watchEffect(() => {
   options.value.yAxis = {
     type: "value",
     axisLabel: {
-      formatter: props.yFormat,
+      formatter: yFormat,
     },
   } satisfies YAXisComponentOption;
 
@@ -189,14 +192,14 @@ watchEffect(() => {
         color: theme,
       },
       type: "line",
-      data,
+      data: binned,
     } satisfies SeriesOption,
   ];
 
   options.value.tooltip = {
     trigger: "axis",
     valueFormatter: (value: unknown) =>
-      typeof value === "number" ? props.yFormat(value) : String(value),
+      typeof value === "number" ? yFormat(value) : String(value),
   } satisfies TooltipComponentOption;
 });
 </script>
