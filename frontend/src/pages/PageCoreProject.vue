@@ -237,7 +237,7 @@
 
   <!-- analytics -->
   <section>
-    <AppHeading level="2"><Analytics />Analytics</AppHeading>
+    <AppHeading level="2"><ChartLine />Analytics</AppHeading>
 
     <p>Website metrics associated with this project.</p>
 
@@ -358,6 +358,7 @@
 </template>
 
 <script setup lang="ts">
+import { Book, ChartLine, Code, Eye, Microscope } from "@lucide/vue";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { groupBy, orderBy, startCase, sumBy, uniq } from "lodash";
@@ -370,11 +371,6 @@ import {
   usePublications,
   useRepositories,
 } from "@/api";
-import Analytics from "@/assets/analytics.svg";
-import Book from "@/assets/book.svg";
-import Code from "@/assets/code.svg";
-import Eye from "@/assets/eye.svg";
-import Microscope from "@/assets/microscope.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";

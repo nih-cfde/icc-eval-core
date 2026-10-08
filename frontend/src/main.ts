@@ -8,6 +8,7 @@ import PageAbout from "./pages/PageAbout.vue";
 import PageCoreProject from "./pages/PageCoreProject.vue";
 import PageCoreProjects from "./pages/PageCoreProjects.vue";
 import PageDrc from "./pages/PageDrc.vue";
+import PageEvents from "./pages/PageEvents.vue";
 import PageHome from "./pages/PageHome.vue";
 
 /** app pages */
@@ -32,6 +33,7 @@ const routes = [
   },
   { path: "/core-projects", component: PageCoreProjects },
   { path: "/core-project/:id", component: PageCoreProject },
+  { path: "/events", component: PageEvents },
   { path: "/drc", component: PageDrc },
   { path: "/about", component: PageAbout },
 ];

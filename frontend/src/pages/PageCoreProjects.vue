@@ -27,7 +27,7 @@
             title="Owners have NOT completed the submission process"
             class="score bad"
           >
-            <Xmark />
+            <X />
           </AppLink>
         </template>
       </template>
@@ -56,11 +56,9 @@
 </template>
 
 <script setup lang="ts">
+import { Check, Microscope, X } from "@lucide/vue";
 import { computed } from "vue";
 import { useCoreProjects } from "@/api";
-import Check from "@/assets/check.svg";
-import Microscope from "@/assets/microscope.svg";
-import Xmark from "@/assets/xmark.svg";
 import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";

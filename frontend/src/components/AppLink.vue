@@ -1,13 +1,13 @@
 <template>
   <component :is="component" :[toAttr]="to" :target="target" class="link">
     <slot />
-    <External v-if="arrow ?? external" />
+    <ExternalLink v-if="arrow ?? external" />
   </component>
 </template>
 
 <script setup lang="ts">
+import { ExternalLink } from "@lucide/vue";
 import { computed } from "vue";
-import External from "@/assets/external.svg";
 
 type Props = {
   /** internal route or external url to link to */

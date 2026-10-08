@@ -1,6 +1,5 @@
 import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
-import svgLoader from "vite-svg-loader";
 import vue from "@vitejs/plugin-vue";
 
 // https://vitejs.dev/config/
@@ -10,20 +9,7 @@ export default defineConfig({
       new Date().toLocaleString(undefined, { dateStyle: "medium" }),
     ),
   },
-  plugins: [
-    vue(),
-    svgLoader({
-      defaultImport: "component",
-      svgoConfig: {
-        plugins: [
-          {
-            name: "addAttributesToSVGElement",
-            params: { attributes: [{ height: "1em" }] },
-          },
-        ],
-      },
-    }),
-  ],
+  plugins: [vue()],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),

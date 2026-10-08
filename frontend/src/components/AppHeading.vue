@@ -14,9 +14,9 @@
 </template>
 
 <script setup lang="ts">
+import { Link } from "@lucide/vue";
 import { computed, onMounted, onUpdated, ref } from "vue";
 import { kebabCase } from "lodash";
-import Link from "@/assets/link.svg";
 import AppLink from "@/components/AppLink.vue";
 
 type Props = {

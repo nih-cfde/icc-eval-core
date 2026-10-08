@@ -36,6 +36,7 @@
 
       <AppLink to="/">Home</AppLink>
       <AppLink to="/core-projects">Core Projects</AppLink>
+      <AppLink to="/events">Events</AppLink>
       <AppLink to="/drc">DRC</AppLink>
       <AppLink to="/about">About</AppLink>
     </nav>
