@@ -207,8 +207,8 @@ export const getEvents = async () => {
     ...event,
     /** derive extra props */
     timestamp: new Date(event.timestamp),
-    start: new Date(event.start),
-    end: new Date(event.end),
+    start: event.start ? new Date(event.start) : null,
+    end: event.end ? new Date(event.end) : null,
   }));
 };
 

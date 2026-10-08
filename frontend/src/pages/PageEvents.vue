@@ -20,6 +20,7 @@
     </dl>
 
     <div class="charts">
+      <AppTimeChart title="Events" :data="overTime" by="month" />
       <AppPieChart title="Organizer" :data="byOrganizer" />
       <AppPieChart title="Involved" :data="byInvolved" />
       <AppPieChart title="Length" :data="byLength" />
@@ -37,6 +38,7 @@ import { Calendar } from "@lucide/vue";
 import { useEvents } from "@/api";
 import AppHeading from "@/components/AppHeading.vue";
 import AppPieChart from "@/components/AppPieChart.vue";
+import AppTimeChart from "@/components/AppTimeChart.vue";
 import { median } from "@/util/array";
 import { format } from "@/util/string";
 
@@ -89,6 +91,14 @@ const byTag = computed(() =>
   (events.value ?? []).flatMap((event) =>
     event.tags.split(",").map((tag) => [tag.trim(), 1] as const),
   ),
+);
+
+/** event counts over time by start date */
+const overTime = computed(() =>
+  (events.value ?? [])
+    .map((event) => event.start)
+    .filter((start) => start !== null)
+    .map((start) => [start, 1] as const),
 );
 
 /** top-level details */
