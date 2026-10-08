@@ -252,9 +252,9 @@
 </template>
 
 <script setup lang="ts">
-import { Book, ChartColumn, Code, Eye, House } from "@lucide/vue";
 import { computed, ref } from "vue";
 import { omit, startCase, sum } from "lodash";
+import { Book, ChartColumn, Code, Eye, House } from "@lucide/vue";
 import {
   notAuthed,
   useAnalyticsOverview,

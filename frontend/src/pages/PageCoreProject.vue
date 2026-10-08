@@ -358,10 +358,10 @@
 </template>
 
 <script setup lang="ts">
-import { Book, ChartLine, Code, Eye, Microscope } from "@lucide/vue";
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { groupBy, orderBy, startCase, sumBy, uniq } from "lodash";
+import { Book, ChartLine, Code, Eye, Microscope } from "@lucide/vue";
 import { useTitle } from "@vueuse/core";
 import {
   notAuthed,

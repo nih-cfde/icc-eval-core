@@ -56,8 +56,8 @@
 </template>
 
 <script setup lang="ts">
-import { Check, Microscope, X } from "@lucide/vue";
 import { computed } from "vue";
+import { Check, Microscope, X } from "@lucide/vue";
 import { useCoreProjects } from "@/api";
 import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";

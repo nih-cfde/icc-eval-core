@@ -6,8 +6,8 @@
 </template>
 
 <script setup lang="ts">
-import { ExternalLink } from "@lucide/vue";
 import { computed } from "vue";
+import { ExternalLink } from "@lucide/vue";
 
 type Props = {
   /** internal route or external url to link to */

@@ -153,13 +153,21 @@ declare module "@tanstack/vue-table" {
 </script>
 
 <script setup lang="ts" generic="Rows extends Cell[]">
-import { ArrowDown, ArrowUp, ArrowUpDown, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from "@lucide/vue";
 import {
   computed,
   type CSSProperties,
   type HTMLAttributes,
   type VNode,
 } from "vue";
+import {
+  ArrowDown,
+  ArrowUp,
+  ArrowUpDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  ChevronsRight,
+} from "@lucide/vue";
 import {
   createColumnHelper,
   FlexRender,

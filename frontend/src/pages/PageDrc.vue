@@ -35,9 +35,9 @@
 </template>
 
 <script setup lang="ts">
-import { Database } from "@lucide/vue";
 import { computed } from "vue";
 import { countBy, orderBy, sumBy } from "lodash";
+import { Database } from "@lucide/vue";
 import { useDrcData, type DRC } from "@/api";
 import AppHeading from "@/components/AppHeading.vue";
 import { bytes, format } from "@/util/string";
