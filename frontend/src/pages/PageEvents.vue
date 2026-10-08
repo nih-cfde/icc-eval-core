@@ -18,15 +18,21 @@
         </dd>
       </div>
     </dl>
+
+    <div class="charts">
+      <AppPieChart title="Organizer" :data="organizers" />
+      <AppPieChart title="Involved" :data="involved" />
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { groupBy, mean, orderBy } from "lodash";
+import { mean } from "lodash";
 import { Calendar } from "@lucide/vue";
 import { useEvents } from "@/api";
 import AppHeading from "@/components/AppHeading.vue";
+import AppPieChart from "@/components/AppPieChart.vue";
 import { median } from "@/util/array";
 import { format } from "@/util/string";
 
@@ -45,6 +51,18 @@ const { data: events } = useEvents();
 
 const attendance = computed(
   () => events.value?.flatMap((event) => event.attendanceOutcome || []) ?? [],
+);
+
+/** event counts by organizer */
+const organizers = computed(() =>
+  (events.value ?? []).map((event) => [event.organizer, 1] as const),
+);
+
+/** event counts by involved groups */
+const involved = computed(() =>
+  (events.value ?? []).flatMap((event) =>
+    event.involved.split(",").map((group) => [group.trim(), 1] as const),
+  ),
 );
 
 /** top-level details */
@@ -66,12 +84,5 @@ const details = computed(() => [
     [mean(attendance.value), "average"],
     [median(attendance.value), "median"],
   ],
-  ...orderBy(
-    Object.entries(groupBy(events.value ?? [], (event) => event.organizer)),
-    ([, value]) => value,
-    "desc",
-  )
-    .filter(([organizer]) => organizer)
-    .map(([organizer, events]) => [organizer, format(events.length)]),
 ]);
 </script>

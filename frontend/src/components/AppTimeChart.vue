@@ -84,6 +84,7 @@ use([
 provide(THEME_KEY, "light");
 
 const theme = getCssVar("--theme");
+const sans = getCssVar("--sans");
 
 const options = ref<EChartsOption>({});
 
@@ -137,6 +138,10 @@ watchEffect(() => {
   const zoom = props.data.length > 20;
 
   options.value.animation = false;
+
+  options.value.textStyle = {
+    fontFamily: sans,
+  };
 
   options.value.title = {
     text: `${props.title}${props.cumulative ? " (cumulative)" : ""}`,
