@@ -20,8 +20,12 @@
     </dl>
 
     <div class="charts">
-      <AppPieChart title="Organizer" :data="organizers" />
-      <AppPieChart title="Involved" :data="involved" />
+      <AppPieChart title="Organizer" :data="byOrganizer" />
+      <AppPieChart title="Involved" :data="byInvolved" />
+      <AppPieChart title="Length" :data="byLength" />
+      <AppPieChart title="Format" :data="byFormat" />
+      <AppPieChart title="Purpose" :data="purpose" />
+      <AppPieChart title="Tags" :data="byTag" />
     </div>
   </section>
 </template>
@@ -50,18 +54,40 @@ const postEventKeys = [
 const { data: events } = useEvents();
 
 const attendance = computed(
-  () => events.value?.flatMap((event) => event.attendanceOutcome || []) ?? [],
+  () => events.value?.flatMap((event) => event.attendanceOutcome || []) ?? [0],
 );
 
 /** event counts by organizer */
-const organizers = computed(() =>
+const byOrganizer = computed(() =>
   (events.value ?? []).map((event) => [event.organizer, 1] as const),
 );
 
 /** event counts by involved groups */
-const involved = computed(() =>
+const byInvolved = computed(() =>
   (events.value ?? []).flatMap((event) =>
     event.involved.split(",").map((group) => [group.trim(), 1] as const),
+  ),
+);
+
+/** event counts by length */
+const byLength = computed(() =>
+  (events.value ?? []).map((event) => [event.length, 1] as const),
+);
+
+/** event counts by format */
+const byFormat = computed(() =>
+  (events.value ?? []).map((event) => [event.format, 1] as const),
+);
+
+/** event counts by purpose */
+const purpose = computed(() =>
+  (events.value ?? []).map((event) => [event.purpose, 1] as const),
+);
+
+/** event counts by tag */
+const byTag = computed(() =>
+  (events.value ?? []).flatMap((event) =>
+    event.tags.split(",").map((tag) => [tag.trim(), 1] as const),
   ),
 );
 
