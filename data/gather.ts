@@ -1,6 +1,7 @@
 import { mkdirSync } from "fs";
 import { getAnalytics, getAnalyticsOverview } from "@/gather/analytics";
 import { getDrc } from "@/gather/drc";
+import { getEvents } from "@/gather/events";
 import { getJournals } from "@/gather/journals";
 import { getOpportunities } from "@/gather/opportunities";
 import { getProjects } from "@/gather/projects";
@@ -119,10 +120,18 @@ timeEnd("DRC");
 /** ========================================================================= */
 
 divider("Users");
-timeStart("Users", 60 * 1000);
+timeStart("Users", 20 * 1000);
 const users = await getUsers();
 saveFile(users, `${OUTPUT_PATH}/users.json`);
 timeEnd("Users");
+
+/** ========================================================================= */
+
+divider("Events");
+timeStart("Events", 20 * 1000);
+const events = await getEvents();
+saveFile(events, `${OUTPUT_PATH}/events.json`);
+timeEnd("Events");
 
 /** ========================================================================= */
 
