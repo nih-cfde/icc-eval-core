@@ -15,6 +15,7 @@ from .views import (
     AnalyticsViewSet,
     RepoOverviewViewSet,
     AnalyticsOverviewViewSet,
+    EventViewSet,
 )
 
 from .auth_views import get_user_info, get_or_create_token, revoke_token
@@ -74,6 +75,7 @@ router.register(r'repositories', RepositoryViewSet, basename='repository')
 router.register(r'analytics', AnalyticsViewSet, basename='analytics')
 router.register(r'repositories-overview', RepoOverviewViewSet, basename='repositories-overview')
 router.register(r'analytics-overview', AnalyticsOverviewViewSet, basename='analytics-overview')
+router.register(r'events', EventViewSet, basename='event')
 
 urlpatterns = router.urls +[
     re_path(

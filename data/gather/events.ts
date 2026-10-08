@@ -3,7 +3,7 @@ import { kebabCase } from "lodash-es";
 import { downloadFile, loadFile } from "@/util/file";
 import { log } from "@/util/log";
 import { memoize } from "@/util/memoize";
-import { count } from "@/util/string";
+import { count, formatDate } from "@/util/string";
 
 const { MANUAL_PATH } = process.env;
 
@@ -28,7 +28,7 @@ export const getEvents = memoize(async () => {
   type Event = {
     status: string;
     edit: string;
-    id: string;
+    calendarId: string;
     timestamp: string;
     emailAddress: string;
     title: string;
@@ -56,7 +56,7 @@ export const getEvents = memoize(async () => {
   const columns = {
     status: { obfuscate: false },
     edit: { obfuscate: true },
-    id: { obfuscate: true },
+    calendarId: { obfuscate: true },
     timestamp: { obfuscate: false, cast: "date" },
     emailAddress: { obfuscate: true },
     title: { obfuscate: false },
@@ -104,15 +104,8 @@ export const getEvents = memoize(async () => {
 
         /** cast types */
         if ("cast" in options) {
-          if (options.cast === "number") value = Number(value);
-          else if (options.cast === "date") {
-            try {
-              value = new Date(value).toISOString();
-            } catch (error) {
-              log(`Failed to cast date "${value}"`, "warn", 2);
-              value = "";
-            }
-          }
+          if (options.cast === "number") value = Number(value) || 0;
+          else if (options.cast === "date") value = formatDate(value);
         }
 
         /** trim */
