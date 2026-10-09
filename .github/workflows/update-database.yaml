@@ -42,7 +42,7 @@ jobs:
           mkdir -p data/output
           rm -rf data/output/*
           # download the new pipeline output
-          gcloud storage cp --recursive ${LATEST_PATH}output/ data/output/
+          gcloud storage cp --recursive "${LATEST_PATH}output/*" data/output/
 
       - name: Import results into backend database
         timeout-minutes: 10
