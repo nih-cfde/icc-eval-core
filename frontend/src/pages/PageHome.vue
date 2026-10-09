@@ -1,6 +1,6 @@
 <template>
   <section>
-    <AppHeading level="1"><Home />Home</AppHeading>
+    <AppHeading level="1"><House />Home</AppHeading>
   </section>
 
   <!-- overview -->
@@ -49,7 +49,7 @@
 
   <!-- over time -->
   <section>
-    <AppHeading level="2"><Chart />Over Time</AppHeading>
+    <AppHeading level="2"><ChartColumn />Over Time</AppHeading>
 
     <p>How CFDE stats have changed over time.</p>
 
@@ -189,7 +189,7 @@
 
   <!-- analytics -->
   <section>
-    <AppHeading level="2"><Chart />Analytics</AppHeading>
+    <AppHeading level="2"><ChartColumn />Analytics</AppHeading>
 
     <p>High-level info about CFDE website usage.</p>
 
@@ -254,6 +254,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { omit, startCase, sum } from "lodash";
+import { Book, ChartColumn, Code, Eye, House } from "@lucide/vue";
 import {
   notAuthed,
   useAnalyticsOverview,
@@ -262,11 +263,6 @@ import {
   usePublications,
   useRepositoriesOverview,
 } from "@/api";
-import Book from "@/assets/book.svg";
-import Chart from "@/assets/chart.svg";
-import Code from "@/assets/code.svg";
-import Eye from "@/assets/eye.svg";
-import Home from "@/assets/home.svg";
 import AppCheckbox from "@/components/AppCheckbox.vue";
 import AppHeading from "@/components/AppHeading.vue";
 import AppLink from "@/components/AppLink.vue";

@@ -364,3 +364,8 @@ dd {
   top: 0 !important;
   left: 0 !important;
 }
+
+svg.lucide {
+  width: auto;
+  height: 1em;
+}

@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import { computed, onMounted, onUpdated, ref } from "vue";
 import { kebabCase } from "lodash";
-import Link from "@/assets/link.svg";
+import { Link } from "@lucide/vue";
 import AppLink from "@/components/AppLink.vue";
 
 type Props = {

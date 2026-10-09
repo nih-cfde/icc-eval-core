@@ -6,14 +6,14 @@
         aria-label="First page"
         @click="table.setPageIndex(0)"
       >
-        <AnglesLeft />
+        <ChevronsLeft />
       </AppButton>
       <AppButton
         :disabled="!table.getCanPreviousPage()"
         aria-label="Previous page"
         @click="table.previousPage()"
       >
-        <AngleLeft />
+        <ChevronLeft />
       </AppButton>
 
       {{ table.getState().pagination.pageIndex + 1 }} of
@@ -24,14 +24,14 @@
         aria-label="Next page"
         @click="table.nextPage()"
       >
-        <AngleRight />
+        <ChevronRight />
       </AppButton>
       <AppButton
         :disabled="!table.getCanNextPage()"
         aria-label="Last page"
         @click="table.setPageIndex(table.getPageCount() - 1)"
       >
-        <AnglesRight />
+        <ChevronsRight />
       </AppButton>
 
       <label>
@@ -76,15 +76,15 @@
                   :render="header.column.columnDef.header"
                   :props="header.getContext()"
                 />
-                <SortDown
+                <ArrowDown
                   v-if="header.column.getIsSorted() === 'desc'"
                   class="icon-active"
                 />
-                <SortUp
+                <ArrowUp
                   v-else-if="header.column.getIsSorted() === 'asc'"
                   class="icon-active"
                 />
-                <Sort v-else class="icon-inactive" />
+                <ArrowUpDown v-else class="icon-inactive" />
               </button>
             </th>
           </tr>
@@ -160,6 +160,15 @@ import {
   type VNode,
 } from "vue";
 import {
+  ArrowDown,
+  ArrowUp,
+  ArrowUpDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  ChevronsRight,
+} from "@lucide/vue";
+import {
   createColumnHelper,
   FlexRender,
   getCoreRowModel,
@@ -173,13 +182,6 @@ import {
   type Row as TanstackRow,
 } from "@tanstack/vue-table";
 import type { RowData, SortingFn, SortingState } from "@tanstack/vue-table";
-import AngleLeft from "@/assets/angle-left.svg";
-import AngleRight from "@/assets/angle-right.svg";
-import AnglesLeft from "@/assets/angles-left.svg";
-import AnglesRight from "@/assets/angles-right.svg";
-import SortDown from "@/assets/sort-down.svg";
-import SortUp from "@/assets/sort-up.svg";
-import Sort from "@/assets/sort.svg";
 import AppButton from "@/components/AppButton.vue";
 import AppSelect from "@/components/AppSelect.vue";
 import { format } from "@/util/string";

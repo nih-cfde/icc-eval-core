@@ -396,3 +396,41 @@ class Analytics(models.Model):
 
     def __str__(self):
         return f"{self.property_name} - {self.core_project_id}"
+
+class Event(models.Model):
+    """
+    Represents an event from events.json.
+    """
+    id = models.CharField(max_length=255, primary_key=True)
+    status = models.CharField(max_length=255, blank=True, default='')
+    edit = models.TextField(blank=True, default='')
+    calendar_id = models.CharField(max_length=255, blank=True, default='')
+    timestamp = models.DateTimeField(null=True, blank=True)
+    email_address = models.CharField(max_length=255, blank=True, default='')
+    title = models.TextField(blank=True, default='')
+    description = models.TextField(blank=True, default='')
+    organizer = models.TextField(blank=True, default='')
+    involved = models.TextField(blank=True, default='')
+    length = models.CharField(max_length=255, blank=True, default='')
+    start = models.DateTimeField(null=True, blank=True)
+    end = models.DateTimeField(null=True, blank=True)
+    link = models.TextField(blank=True, default='')
+    format = models.CharField(max_length=255, blank=True, default='')
+    location = models.TextField(blank=True, default='')
+    purpose = models.CharField(max_length=255, blank=True, default='')
+    tags = models.TextField(blank=True, default='')
+    attendance_outcome = models.IntegerField(default=0)
+    engagement_outcome = models.TextField(blank=True, default='')
+    awareness_outcome = models.TextField(blank=True, default='')
+    resources_outcome = models.TextField(blank=True, default='')
+    timing_outcome = models.TextField(blank=True, default='')
+    platform_outcome = models.TextField(blank=True, default='')
+    conclusion = models.TextField(blank=True, default='')
+
+    class Meta:
+        db_table = 'events'
+        verbose_name_plural = "Events"
+
+    def __str__(self):
+        return self.id
+    

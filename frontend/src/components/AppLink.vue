@@ -1,13 +1,13 @@
 <template>
   <component :is="component" :[toAttr]="to" :target="target" class="link">
     <slot />
-    <External v-if="arrow ?? external" />
+    <ExternalLink v-if="arrow ?? external" />
   </component>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
-import External from "@/assets/external.svg";
+import { ExternalLink } from "@lucide/vue";
 
 type Props = {
   /** internal route or external url to link to */
@@ -18,10 +18,7 @@ type Props = {
   newTab?: boolean;
 };
 
-const props = withDefaults(defineProps<Props>(), {
-  arrow: undefined,
-  newTab: undefined,
-});
+const { to, arrow = undefined, newTab = undefined } = defineProps<Props>();
 
 type Slots = {
   default?: () => unknown;
@@ -31,18 +28,16 @@ defineSlots<Slots>();
 
 /** is link to internal route or external url */
 const external = computed(() =>
-  ["https:", "http:", "mailto:"].some((prefix) => props.to.startsWith(prefix)),
+  ["https:", "http:", "mailto:"].some((prefix) => to.startsWith(prefix)),
 );
 
 const component = computed(() =>
-  props.to ? (external.value ? "a" : "router-link") : "span",
+  to ? (external.value ? "a" : "router-link") : "span",
 );
 
 const toAttr = computed(() => (external.value ? "href" : "to"));
 
-const target = computed(() =>
-  (props.newTab ?? external.value) ? "_blank" : "",
-);
+const target = computed(() => ((newTab ?? external.value) ? "_blank" : ""));
 </script>
 
 <style scoped>

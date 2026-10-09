@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from datetime import datetime
 from .models import (
+    User,
     Analytics,
     AnalyticsBreakdownUsers,
     AnalyticsBreakdownUsersEvents,
@@ -9,17 +10,31 @@ from .models import (
     DRCDCC,
     DRCCode,
     DRCFile,
+    Event,
     Journal,
     Opportunity,
     Project,
     Publication,
     Repository,
-    RepositoryOverview,
-    User,
+    RepositoryOverview
 )
 
 
-class UserSerializer(serializers.ModelSerializer):
+class BaseModelSerializer(serializers.ModelSerializer):
+    """
+    Base serializer to override return values for certain field types.
+    """
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        for name, field in self.fields.items():
+            # Allow consumers to always rely on date fields being strings
+            if isinstance(field, serializers.DateTimeField) and data.get(name) is None:
+                data[name] = ''
+        return data
+
+
+class UserSerializer(BaseModelSerializer):
     """
     Serializer for the User model.
     """
@@ -29,7 +44,7 @@ class UserSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'date_joined', 'orcid']
 
 
-class CoreProjectSerializer(serializers.ModelSerializer):
+class CoreProjectSerializer(BaseModelSerializer):
     """
     Serializer for the CoreProject model.
     """
@@ -49,7 +64,7 @@ class CoreProjectSerializer(serializers.ModelSerializer):
             'analytics',
         ]
 
-class RepositoryListSerializer(serializers.ModelSerializer):
+class RepositoryListSerializer(BaseModelSerializer):
     """
     Serializer for the Repository model (list view).
 
@@ -90,7 +105,7 @@ class RepositoryListSerializer(serializers.ModelSerializer):
         ]
 
 
-class RepositorySerializer(serializers.ModelSerializer):
+class RepositorySerializer(BaseModelSerializer):
     """
     Serializer for the Repository model.
     """
@@ -129,7 +144,7 @@ class RepositorySerializer(serializers.ModelSerializer):
         ]
 
 
-class AnalyticsBreakdownUsersSerializer(serializers.ModelSerializer):
+class AnalyticsBreakdownUsersSerializer(BaseModelSerializer):
     """
     Serializer for the AnalyticsBreakdownUsers model.
     """
@@ -155,7 +170,7 @@ class AnalyticsBreakdownUsersEventsSerializer(AnalyticsBreakdownUsersSerializer)
         fields = AnalyticsBreakdownUsersSerializer.Meta.fields + ['engagedSessions']
 
 
-class AnalyticsSerializer(serializers.ModelSerializer):
+class AnalyticsSerializer(BaseModelSerializer):
     """
     Serializer for the Analytics model.
     """
@@ -189,7 +204,7 @@ class AnalyticsSerializer(serializers.ModelSerializer):
         ]
 
 
-class OpportunitySerializer(serializers.ModelSerializer):
+class OpportunitySerializer(BaseModelSerializer):
     """
     Serializer for the Opportunity model.
     """
@@ -199,7 +214,7 @@ class OpportunitySerializer(serializers.ModelSerializer):
         fields = ['id', 'prefix', 'activity_code']
 
 
-class ProjectSerializer(serializers.ModelSerializer):
+class ProjectSerializer(BaseModelSerializer):
     """
     Serializer for the Project model.
     """
@@ -225,7 +240,7 @@ class ProjectSerializer(serializers.ModelSerializer):
         ]
 
 
-class JournalSerializer(serializers.ModelSerializer):
+class JournalSerializer(BaseModelSerializer):
     """
     Serializer for the Journal model.
     """
@@ -235,7 +250,7 @@ class JournalSerializer(serializers.ModelSerializer):
         fields = ['abbrev', 'name', 'issn', 'title', 'rank']
 
 
-class PublicationSerializer(serializers.ModelSerializer):
+class PublicationSerializer(BaseModelSerializer):
     """
     Serializer for the Publication model.
     """
@@ -260,7 +275,7 @@ class PublicationSerializer(serializers.ModelSerializer):
         ]
 
 
-class DRCCodeSerializer(serializers.ModelSerializer):
+class DRCCodeSerializer(BaseModelSerializer):
     """
     Serializer for the DRCCode model.
     """
@@ -270,7 +285,7 @@ class DRCCodeSerializer(serializers.ModelSerializer):
         fields = ['id', 'url', 'dir', 'name', 'ext', 'type', 'date', 'files']
 
 
-class DRCDCCSerializer(serializers.ModelSerializer):
+class DRCDCCSerializer(BaseModelSerializer):
     """
     Serializer for the DRCDCC model.
     """
@@ -280,7 +295,7 @@ class DRCDCCSerializer(serializers.ModelSerializer):
         fields = ['id', 'url', 'dir', 'name', 'ext', 'date', 'files']
 
 
-class DRCFileSerializer(serializers.ModelSerializer):
+class DRCFileSerializer(BaseModelSerializer):
     """
     Serializer for the DRCFile model.
     """
@@ -290,7 +305,7 @@ class DRCFileSerializer(serializers.ModelSerializer):
         fields = ['id', 'url', 'dir', 'name', 'ext', 'size', 'date', 'files']
 
 
-class RepositoryOverviewSerializer(serializers.ModelSerializer):
+class RepositoryOverviewSerializer(BaseModelSerializer):
     """
     Serializer for the RepositoryOverview model.
     """
@@ -317,7 +332,7 @@ class RepositoryOverviewSerializer(serializers.ModelSerializer):
         ]
 
 
-class AnalyticsOverviewSerializer(serializers.ModelSerializer):
+class AnalyticsOverviewSerializer(BaseModelSerializer):
     """
     Serializer for the AnalyticsOverview model.
     """
@@ -344,4 +359,40 @@ class AnalyticsOverviewSerializer(serializers.ModelSerializer):
             'devices',
             'operating_systems',
             'page_views',
+        ]
+
+
+class EventSerializer(BaseModelSerializer):
+    """
+    Serializer for the Event model.
+    """
+
+    class Meta:
+        model = Event
+        fields = [
+            'id',
+            'status',
+            'edit',
+            'calendar_id',
+            'timestamp',
+            'email_address',
+            'title',
+            'description',
+            'organizer',
+            'involved',
+            'length',
+            'start',
+            'end',
+            'link',
+            'format',
+            'location',
+            'purpose',
+            'tags',
+            'attendance_outcome',
+            'engagement_outcome',
+            'awareness_outcome',
+            'resources_outcome',
+            'timing_outcome',
+            'platform_outcome',
+            'conclusion',
         ]

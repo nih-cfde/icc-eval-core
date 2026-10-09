@@ -9,6 +9,7 @@ from .models import (
     DRCDCC,
     DRCCode,
     DRCFile,
+    Event,
     Journal,
     Opportunity,
     Project,
@@ -32,6 +33,7 @@ from .serializers import (
     CoreProjectSerializer,
     RepositorySerializer,
     AnalyticsSerializer,
+    EventSerializer,
 )
 
 
@@ -209,6 +211,7 @@ class RepoOverviewViewSet(viewsets.ReadOnlyModelViewSet):
         serializer = self.get_serializer(overview)
         return Response(serializer.data)
 
+
 class AnalyticsOverviewViewSet(viewsets.ReadOnlyModelViewSet):
     """
     ReadOnly API endpoint for analytics overview.
@@ -230,3 +233,14 @@ class AnalyticsOverviewViewSet(viewsets.ReadOnlyModelViewSet):
         overview = AnalyticsOverview.objects.first()
         serializer = self.get_serializer(overview)
         return Response(serializer.data)
+
+
+class EventViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    ReadOnly API endpoint for events.
+    """
+    queryset = Event.objects.all()
+    serializer_class = EventSerializer
+    filter_backends = [filters.OrderingFilter]
+    ordering_fields = ['timestamp', 'start', 'end']
+    ordering = ['start']

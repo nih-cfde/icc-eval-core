@@ -8,6 +8,7 @@ import coreProjects from "./types/core-projects.json";
 import drcCode from "./types/drc-code.json";
 import drcDcc from "./types/drc-dcc.json";
 import drcFile from "./types/drc-file.json";
+import events from "./types/events.json";
 import journals from "./types/journals.json";
 import projects from "./types/projects.json";
 import publications from "./types/publications.json";
@@ -196,6 +197,21 @@ export const getDrcData = async () => {
 
 export type DRC = typeof drcCode | typeof drcDcc | typeof drcFile;
 
+/** get event data from api */
+export const getEvents = async () => {
+  const data = mock
+    ? events
+    : await request<typeof events>("events", { limit: 999 });
+  if (data === notAuthed) return notAuthed;
+  return data.map((event) => ({
+    ...event,
+    /** derive extra props */
+    timestamp: new Date(event.timestamp),
+    start: event.start ? new Date(event.start) : null,
+    end: event.end ? new Date(event.end) : null,
+  }));
+};
+
 /** load and use core project data */
 export const useCoreProjects = (coreProject?: Ref<string | undefined>) =>
   useQuery({
@@ -259,4 +275,11 @@ export const useDrcData = () =>
   useQuery({
     queryKey: ["getDrcData"],
     queryFn: getDrcData,
+  });
+
+/** load and use event data */
+export const useEvents = () =>
+  useQuery({
+    queryKey: ["getEvents"],
+    queryFn: getEvents,
   });

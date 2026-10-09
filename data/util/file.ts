@@ -13,7 +13,6 @@ import { isEmpty } from "lodash-es";
 import Downloader from "nodejs-file-downloader";
 import * as prettier from "prettier";
 import { HttpRangeReader, ZipReader } from "@zip.js/zip.js";
-import { log } from "@/util/log";
 import { memoize } from "@/util/memoize";
 import { request } from "@/util/request";
 import { formatDate } from "@/util/string";

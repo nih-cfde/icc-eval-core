@@ -1,6 +1,6 @@
 <template>
   <section>
-    <AppHeading level="1"><Data />Data Resource Center</AppHeading>
+    <AppHeading level="1"><Database />Data Resource Center</AppHeading>
   </section>
 
   <template
@@ -37,8 +37,8 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { countBy, orderBy, sumBy } from "lodash";
+import { Database } from "@lucide/vue";
 import { useDrcData, type DRC } from "@/api";
-import Data from "@/assets/data.svg";
 import AppHeading from "@/components/AppHeading.vue";
 import { bytes, format } from "@/util/string";
 

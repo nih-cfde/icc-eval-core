@@ -14,6 +14,7 @@ from api.models import (
     DRCDCC,
     DRCCode,
     DRCFile,
+    Event,
     Journal,
     Opportunity,
     ORCIDProjectMap,
@@ -64,6 +65,7 @@ class Command(BaseCommand):
                 DRCFile.objects.all().delete()
                 ORCIDProjectMap.objects.all().delete()
                 CoreProject.objects.all().delete()
+                Event.objects.all().delete()
             self.stdout.write(self.style.SUCCESS('Existing data cleared'))
         
         # Import in order of dependencies
@@ -82,6 +84,7 @@ class Command(BaseCommand):
         self.import_drc_dcc(folder_path)
         self.import_drc_file(folder_path)
         self.import_orcid_project_map(folder_path)
+        self.import_events(folder_path)
         
         self.stdout.write(self.style.SUCCESS('All data imported successfully'))
 
@@ -603,3 +606,56 @@ class Command(BaseCommand):
                 )
 
         self.stdout.write(self.style.SUCCESS(f'Imported {len(data)} DRC file entries'))
+
+    def import_events(self, folder_path):
+        file_path = os.path.join(folder_path, 'events.json')
+
+        if not os.path.exists(file_path):
+            self.stdout.write(self.style.WARNING(f'Skipping: {file_path} not found'))
+            return
+
+        self.stdout.write(f'Importing events from {file_path}...')
+
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+
+        count = 0
+
+        with transaction.atomic():
+            for item in data:
+                # legacy rows have no timestamp
+                if not item.get('timestamp'):
+                    continue
+
+                count += 1
+                Event.objects.update_or_create(
+                    id=item['timestamp'],
+                    defaults={
+                        'status': item.get('status', ''),
+                        'edit': item.get('edit', ''),
+                        'calendar_id': item.get('calendarId', ''),
+                        'timestamp': self._to_datetime_or_none(item.get('timestamp')),
+                        'email_address': item.get('emailAddress', ''),
+                        'title': item.get('title', ''),
+                        'description': item.get('description', ''),
+                        'organizer': item.get('organizer', ''),
+                        'involved': item.get('involved', ''),
+                        'length': item.get('length', ''),
+                        'start': self._to_datetime_or_none(item.get('start')),
+                        'end': self._to_datetime_or_none(item.get('end')),
+                        'link': item.get('link', ''),
+                        'format': item.get('format', ''),
+                        'location': item.get('location', ''),
+                        'purpose': item.get('purpose', ''),
+                        'tags': item.get('tags', ''),
+                        'attendance_outcome': item.get('attendanceOutcome', 0),
+                        'engagement_outcome': item.get('engagementOutcome', ''),
+                        'awareness_outcome': item.get('awarenessOutcome', ''),
+                        'resources_outcome': item.get('resourcesOutcome', ''),
+                        'timing_outcome': item.get('timingOutcome', ''),
+                        'platform_outcome': item.get('platformOutcome', ''),
+                        'conclusion': item.get('conclusion', ''),
+                    }
+                )
+
+        self.stdout.write(self.style.SUCCESS(f'Imported {count} events (skipped {len(data) - count} without timestamp)'))
