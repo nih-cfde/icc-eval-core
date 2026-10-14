@@ -300,9 +300,9 @@
             <dt>{{ startCase(dimension) }}</dt>
             <dd class="mini-table">
               <template
-                v-for="[key, value] in Object.entries(
+                v-for="[key, value] in getTop(
                   metrics.engagedSessions || metrics.activeUsers || {},
-                ).slice(0, 5)"
+                )"
                 :key="key"
               >
                 <span>
@@ -377,6 +377,7 @@ import AppLink from "@/components/AppLink.vue";
 import AppTable, { type Cols } from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve, limit } from "@/util/array";
+import { getTop } from "@/util/misc";
 import { ago, bytes, format, printObject, span } from "@/util/string";
 import { getEntries } from "@/util/types";
 
@@ -610,12 +611,7 @@ const dimensionsAnalytics = computed(() => {
   /** sort and limit counts */
   for (const [dimension, metrics] of getEntries(total))
     for (const [metric, entries] of getEntries(metrics))
-      total[dimension]![metric] = Object.fromEntries(
-        orderBy(Object.entries(entries), ([, value]) => value, "desc").slice(
-          0,
-          5,
-        ),
-      );
+      total[dimension]![metric] = Object.fromEntries(getTop(entries));
 
   return total;
 });

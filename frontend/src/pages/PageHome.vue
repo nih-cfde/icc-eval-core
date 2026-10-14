@@ -174,7 +174,7 @@
         </dd>
         <dd v-else class="mini-table">
           <template
-            v-for="([key, _value], index) of Object.entries(value).slice(0, 5)"
+            v-for="([key, _value], index) of getTop(value)"
             :key="index"
           >
             <span>{{ key || "none" }}</span>
@@ -231,9 +231,7 @@
             <dt>{{ startCase(dimension) }}</dt>
             <dd class="mini-table">
               <template
-                v-for="[key, value] in Object.entries(
-                  metrics.engagedSessions,
-                ).slice(0, 5)"
+                v-for="[key, value] in getTop(metrics.engagedSessions)"
                 :key="key"
               >
                 <span>
@@ -270,6 +268,7 @@ import type { Cols } from "@/components/AppTable.vue";
 import AppTable from "@/components/AppTable.vue";
 import AppTimeChart from "@/components/AppTimeChart.vue";
 import { carve } from "@/util/array";
+import { getTop } from "@/util/misc";
 import { bytes, format } from "@/util/string";
 
 /** fetch data */
