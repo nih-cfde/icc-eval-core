@@ -1,5 +1,5 @@
 import { eachDayOfInterval, format, max, min } from "date-fns";
-import { orderBy, sumBy, uniq, uniqBy } from "lodash-es";
+import { inRange, orderBy, pickBy, sumBy, uniq, uniqBy } from "lodash-es";
 import {
   getCoreProject,
   getDimension,
@@ -85,9 +85,9 @@ export const getAnalytics = async () => {
 
     /** transform one report */
     const mapReport = (report: Awaited<ReturnType<typeof getOverTime>>[0]) =>
-      Object.fromEntries(
-        report.rows
-          ?.map((row) => [
+      pickBy(
+        Object.fromEntries(
+          report.rows?.map((row) => [
             /** date */
             (row.dimensionValues?.[0]?.value ?? "").replace(
               /(\d\d\d\d)(\d\d)(\d\d)/,
@@ -95,15 +95,62 @@ export const getAnalytics = async () => {
             ),
             /** value */
             Number(row.metricValues?.[0]?.value ?? ""),
-          ])
-          .filter(([, value]) => value) ?? [],
+          ]) ?? [],
+        ),
+        (value) => !!value,
       );
+
+    /** transform engaged sessions */
+    const mapEngagedSessions = (
+      report: Awaited<ReturnType<typeof getOverTime>>[0],
+    ) => {
+      /** groups of sessions */
+      const groups = (report.rows ?? []).map(
+        ({ dimensionValues, metricValues }) => {
+          /** extract dimensions */
+          let [date = "", source = "", medium = "", resolution = ""] = (
+            dimensionValues ?? []
+          ).map(({ value }) => value ?? "");
+
+          /** parse date */
+          date = date.replace(/(\d\d\d\d)(\d\d)(\d\d)/, "$1-$2-$3");
+          /** parse screen resolution */
+          const [width = 0, height = 0] = resolution
+            .split("x")
+            .map((part) => Number(part) || 0);
+          const sessions = Number(metricValues?.[0]?.value) || 0;
+          const engagementSeconds = Number(metricValues?.[1]?.value) || 0;
+          /** average engagement time per session in group */
+          const seconds = sessions ? engagementSeconds / sessions : 0;
+
+          return { date, source, medium, width, height, sessions, seconds };
+        },
+      );
+
+      /** keep only groups that look like real humans, not bots */
+      const real = groups.filter(
+        ({ source, medium, width, height, seconds }) =>
+          /** has defined referral */
+          !["", "(direct)", "(not set)"].includes(source) &&
+          !["", "(none)", "(not set)"].includes(medium) &&
+          /** non-square, known resolution */
+          !inRange(width / height, 0.9, 1.1) &&
+          /** lasted at least a few seconds */
+          seconds >= 10,
+      );
+
+      /** total real sessions by date */
+      const byDate: Record<string, number> = {};
+      for (const { date, sessions } of real)
+        byDate[date] = (byDate[date] ?? 0) + sessions;
+      return byDate;
+    };
 
     return {
       activeUsers: mapReport(activeUsers),
       newUsers: mapReport(newUsers),
       returningUsers: mapReport(returningUsers),
-      engagedSessions: mapReport(engagedSessions),
+      engagedSessions: mapEngagedSessions(engagedSessions),
     };
   };
 

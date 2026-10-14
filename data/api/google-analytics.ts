@@ -106,6 +106,19 @@ export const getOverTime = async (property: PropertyId) => {
     orderBys: [{ desc: false, dimension: { dimensionName: "date" } }],
   });
 
+  const engagedSessionsReport = {
+    dateRanges,
+    metrics: [{ name: "sessions" }, { name: "userEngagementDuration" }],
+    dimensions: [
+      { name: "date" },
+      { name: "sessionSource" },
+      { name: "sessionMedium" },
+      { name: "screenResolution" },
+    ],
+    orderBys: [{ desc: false, dimension: { dimensionName: "date" } }],
+    limit: 250000,
+  };
+
   /** run reports */
   const [
     activeUsers = {},
@@ -116,7 +129,7 @@ export const getOverTime = async (property: PropertyId) => {
     report("activeUsers"),
     report("newUsers"),
     report("activeUsers", exactFilter("newVsReturning", "returning")),
-    report("engagedSessions"),
+    engagedSessionsReport,
   ]);
 
   /** pretend "returningUsers" is real metric */
