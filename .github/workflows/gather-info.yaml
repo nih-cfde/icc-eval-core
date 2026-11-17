@@ -59,5 +59,5 @@ jobs:
         run: |
           set -euo pipefail
           CURRENT_DATE=$(date +%Y-%m-%d)
-          gcloud storage cp --recursive data/output/. gs://icc-eval-core/pipeline-output/${CURRENT_DATE}/
-          gcloud storage cp --recursive data/raw/. gs://icc-eval-core/pipeline-output/${CURRENT_DATE}/
+          gcloud storage cp --recursive data/output/. gs://icc-eval-core-data/pipeline-output/${CURRENT_DATE}/
+          gcloud storage cp --recursive data/raw/. gs://icc-eval-core-data/pipeline-output/${CURRENT_DATE}/

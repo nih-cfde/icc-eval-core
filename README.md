@@ -51,7 +51,7 @@ Pipeline should output JSON files under `/data/output` and `/data/raw`.
 
 ### Upload to Google Cloud Storage
 
-The pipeline workflow, `pipeline.yaml`, uploads the results of the pipeline run to this Google Cloud Storage (GCS) bucket path `gs://icc-eval-core/pipeline-output/`.
+The pipeline workflow, `pipeline.yaml`, uploads the results of the pipeline run to this Google Cloud Storage (GCS) bucket path `gs://icc-eval-core-data/pipeline-output/`.
 Later steps in the deploy workflow will then download the results from that bucket and import them into the backend database.
 
 In order for it to have permission to write to that bucket, you'll need to obtain a service account credentials key JSON file with permissions to write to the bucket.
